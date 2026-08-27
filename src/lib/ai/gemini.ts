@@ -11,7 +11,7 @@ export async function callGemini<T>(prompt: string, schema: z.ZodType<T>): Promi
   }
 
   // Convert Zod schema to JSON schema to pass to the model
-  const jsonSchema = zodToJsonSchema(schema, "responseSchema");
+  const jsonSchema = zodToJsonSchema(schema as any, "responseSchema");
   const schemaString = JSON.stringify(jsonSchema);
 
   // Instruct Gemini to return JSON that matches the schema exactly
