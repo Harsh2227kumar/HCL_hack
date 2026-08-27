@@ -1,9 +1,12 @@
 import { z } from 'zod';
+import { callGemini } from './gemini';
+import { callGroq } from './groq';
 
 /**
  * The single unified AI abstraction layer for the Adaptive Learning Intelligence Engine.
+ * Implements fallback and retry logic per Master Plan §6.4 & §6.5.
  * 
- * @param role 'understanding' (Gemini) or 'writing' (Groq)
+ * @param role 'understanding' (Gemini primary) or 'writing' (Groq primary)
  * @param prompt The system/user prompt combined
  * @param schema The Zod schema that the LLM response must strictly adhere to
  * @returns A parsed object matching the Zod schema
@@ -13,27 +16,32 @@ export async function callAI<T>(
   prompt: string,
   schema: z.ZodType<T>
 ): Promise<T> {
-  // STUB IMPLEMENTATION
-  // This is a placeholder so Rudrakshi and Sameera can build against this signature immediately.
-  // It logs the request and returns a "fake" successful parse of empty/default data.
-  // TODO: Implement actual Gemini 2.5 Flash and Groq Llama 3.3 70B provider wiring,
-  // circuit breakers, failover, and structured output parsing.
+  const primaryProvider = role === 'understanding' ? callGemini : callGroq;
+  const fallbackProvider = role === 'understanding' ? callGroq : callGemini;
+  const primaryName = role === 'understanding' ? 'Gemini' : 'Groq';
+  const fallbackName = role === 'understanding' ? 'Groq' : 'Gemini';
 
-  console.log(`[callAI Stub] Role: ${role}`);
-  console.log(`[callAI Stub] Prompt snippet: ${prompt.substring(0, 100)}...`);
-
-  // To prevent downstream code from crashing, we attempt to generate a "safe" empty object
-  // that satisfies the schema, or throw an error if we can't stub it easily.
-  // In a real hackathon scenario, you might just throw an error here to force real wiring,
-  // but for unblocking, returning any dummy data is better.
-  
   try {
-    // We try to parse an empty object. If the schema has defaults or is deeply optional, this works.
-    // Otherwise, it throws. This is just for the stub!
-    return schema.parse({});
-  } catch (e) {
-    console.warn("[callAI Stub] Could not automatically stub the Zod schema. Returning casted empty object.");
-    // Force cast to T to keep TypeScript happy.
-    return {} as T;
+    console.log(`[callAI] Attempting ${primaryName} for role: ${role}`);
+    return await primaryProvider(prompt, schema);
+  } catch (error: any) {
+    console.warn(`[callAI] ${primaryName} failed:`, error.message);
+    console.warn(`[callAI] Falling back to ${fallbackName}...`);
+
+    try {
+      return await fallbackProvider(prompt, schema);
+    } catch (fallbackError: any) {
+      console.error(`[callAI] ${fallbackName} also failed:`, fallbackError.message);
+      
+      // Master Plan §6.5: "Final fallback: deterministic template/keyword-parse response if both providers are down."
+      // To implement this generically across all schemas without crashing, we attempt an empty parse.
+      console.error('[callAI] ALL PROVIDERS DOWN. Returning emergency template fallback.');
+      try {
+        return schema.parse({});
+      } catch (templateError) {
+        // If the schema requires specific fields and we can't stub them easily, we throw a structured error.
+        throw new Error('All AI providers failed and emergency template could not satisfy the strict schema.');
+      }
+    }
   }
 }
