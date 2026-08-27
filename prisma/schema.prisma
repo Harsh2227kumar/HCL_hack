@@ -1,0 +1,141 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+  extensions = [vector]
+}
+
+model User {
+  id               String           @id @default(uuid())
+  email            String?          @unique
+  createdAt        DateTime         @default(now())
+  profile          LearnerProfile?
+  skills           LearnerSkill[]
+  evidence         SkillEvidence[]
+  paths            LearningPath[]
+  progressEvents   ProgressEvent[]
+}
+
+model LearnerProfile {
+  id             String   @id @default(uuid())
+  userId         String   @unique
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  goal           String?
+  weeklyHours    Int?
+  learningStyle  String?
+  notes          String?
+  updatedAt      DateTime @updatedAt
+}
+
+model LearnerSkill {
+  id               String   @id @default(uuid())
+  userId           String
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skillName        String
+  selfRatedLevel   Int      // 0-5
+  observedLevel    Int?     // 0-5
+  confidenceScore  Float    // 0.0 - 1.0
+  finalEstimate    Float    // Computed value 0-5
+  targetLevel      Int      // 0-5
+  velocity         Float    @default(0.0)
+  lastAssessed     DateTime @default(now())
+
+  @@unique([userId, skillName])
+}
+
+model SkillEvidence {
+  id              String   @id @default(uuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skillName       String
+  source          String   // self_report, diagnostic, project, course_completion
+  score           Float
+  reliability     Float
+  recencyWeight   Float
+  timestamp       DateTime @default(now())
+}
+
+model SkillDependency {
+  id                 String @id @default(uuid())
+  skillName          String
+  dependsOnSkillName String
+
+  @@unique([skillName, dependsOnSkillName])
+}
+
+model GoalTemplate {
+  id             String   @id @default(uuid())
+  goalName       String   @unique
+  requiredSkills Json     // [{ skill: string, min_level: number }]
+}
+
+model LearningResource {
+  id                 String   @id @default(uuid())
+  title              String
+  type               String   // course, project, assessment, article
+  provider           String?
+  description        String?
+  url                String?
+  skillsTaught       Json     // string[]
+  prerequisiteSkills Json     // string[]
+  difficulty         Int      // 1-5
+  durationHours      Float?
+  format             String?
+  embedding          Unsupported("vector(768)")? // Gemini embeddings are 768 dims
+
+  pathItems          LearningPathItem[]
+  progressEvents     ProgressEvent[]
+}
+
+model Diagnostic {
+  id          String @id @default(uuid())
+  skillName   String @unique
+  questions   Json   // Structured array of questions
+  difficulty  Int    // 1-5
+}
+
+model LearningPath {
+  id                    String   @id @default(uuid())
+  userId                String
+  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  version               Int
+  triggerReason         String   // initial, too_easy, too_hard, goal_change, diagnostic_result
+  estimatedWeeksToGoal  Float?
+  generatedAt           DateTime @default(now())
+
+  items                 LearningPathItem[]
+
+  @@unique([userId, version])
+}
+
+model LearningPathItem {
+  id               String           @id @default(uuid())
+  pathId           String
+  path             LearningPath     @relation(fields: [pathId], references: [id], onDelete: Cascade)
+  resourceId       String
+  resource         LearningResource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+  phase            Int
+  position         Int
+  status           String           // pending, started, completed, skipped
+  reason           String?
+  score            Float?
+  scoreBreakdown   Json?
+
+  @@unique([pathId, resourceId])
+}
+
+model ProgressEvent {
+  id          String           @id @default(uuid())
+  userId      String
+  user        User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  resourceId  String
+  resource    LearningResource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+  eventType   String           // started, completed, too_easy, too_hard, skipped, diagnostic_taken
+  score       Float?
+  createdAt   DateTime         @default(now())
+}
