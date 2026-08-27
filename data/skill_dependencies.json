@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dep_ml_la",
+    "skill_name": "Machine Learning",
+    "depends_on_skill_name": "Linear Algebra"
+  },
+  {
+    "id": "dep_dl_la",
+    "skill_name": "Deep Learning",
+    "depends_on_skill_name": "Linear Algebra"
+  },
+  {
+    "id": "dep_ml_calc",
+    "skill_name": "Machine Learning",
+    "depends_on_skill_name": "Calculus"
+  },
+  {
+    "id": "dep_dl_calc",
+    "skill_name": "Deep Learning",
+    "depends_on_skill_name": "Calculus"
+  },
+  {
+    "id": "dep_dl_ml",
+    "skill_name": "Deep Learning",
+    "depends_on_skill_name": "Machine Learning"
+  },
+  {
+    "id": "dep_ml_stats",
+    "skill_name": "Machine Learning",
+    "depends_on_skill_name": "Statistics"
+  },
+  {
+    "id": "dep_ml_pandas",
+    "skill_name": "Machine Learning",
+    "depends_on_skill_name": "Pandas"
+  },
+  {
+    "id": "dep_pandas_py",
+    "skill_name": "Pandas",
+    "depends_on_skill_name": "Python"
+  },
+  {
+    "id": "dep_datavis_pandas",
+    "skill_name": "Data Visualization",
+    "depends_on_skill_name": "Pandas"
+  },
+  {
+    "id": "dep_dataclean_pandas",
+    "skill_name": "Data Cleaning",
+    "depends_on_skill_name": "Pandas"
+  },
+  {
+    "id": "dep_dataclean_sql",
+    "skill_name": "Data Cleaning",
+    "depends_on_skill_name": "SQL"
+  },
+  {
+    "id": "dep_stats_py",
+    "skill_name": "Statistics",
+    "depends_on_skill_name": "Python"
+  }
+]

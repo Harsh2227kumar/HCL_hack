@@ -1,0 +1,78 @@
+[
+  {
+    "id": "goal_data_analyst",
+    "goal_name": "Data Analyst",
+    "required_skills": [
+      {
+        "skill": "Python",
+        "min_level": 3
+      },
+      {
+        "skill": "SQL",
+        "min_level": 4
+      },
+      {
+        "skill": "Statistics",
+        "min_level": 3
+      },
+      {
+        "skill": "Pandas",
+        "min_level": 4
+      },
+      {
+        "skill": "Data Visualization",
+        "min_level": 4
+      },
+      {
+        "skill": "Excel",
+        "min_level": 4
+      },
+      {
+        "skill": "Data Cleaning",
+        "min_level": 4
+      }
+    ]
+  },
+  {
+    "id": "goal_ml_engineer",
+    "goal_name": "ML Engineer",
+    "required_skills": [
+      {
+        "skill": "Python",
+        "min_level": 4
+      },
+      {
+        "skill": "SQL",
+        "min_level": 3
+      },
+      {
+        "skill": "Statistics",
+        "min_level": 4
+      },
+      {
+        "skill": "Linear Algebra",
+        "min_level": 4
+      },
+      {
+        "skill": "Calculus",
+        "min_level": 3
+      },
+      {
+        "skill": "Pandas",
+        "min_level": 4
+      },
+      {
+        "skill": "Machine Learning",
+        "min_level": 5
+      },
+      {
+        "skill": "Deep Learning",
+        "min_level": 4
+      },
+      {
+        "skill": "Data Cleaning",
+        "min_level": 4
+      }
+    ]
+  }
+]
