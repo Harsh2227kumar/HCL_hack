@@ -1,21 +1,35 @@
 import { z } from 'zod';
-import { callGemini } from './gemini';
+import { callGemini, getGeminiEmbedding } from './gemini';
 import { callGroq } from './groq';
 
 /**
  * The single unified AI abstraction layer for the Adaptive Learning Intelligence Engine.
  * Implements fallback and retry logic per Master Plan §6.4 & §6.5.
  * 
- * @param role 'understanding' (Gemini primary) or 'writing' (Groq primary)
- * @param prompt The system/user prompt combined
- * @param schema The Zod schema that the LLM response must strictly adhere to
- * @returns A parsed object matching the Zod schema
+ * @param role 'understanding' (Gemini primary), 'writing' (Groq primary), or 'embedding' (Gemini text-embedding-004)
+ * @param prompt The system/user prompt combined, or target text for embedding
+ * @param schema The Zod schema that the LLM response must strictly adhere to (optional for embedding)
+ * @returns A parsed object matching the Zod schema, or a number[] vector for embedding
  */
 export async function callAI<T>(
-  role: 'understanding' | 'writing',
+  role: 'understanding' | 'writing' | 'embedding',
   prompt: string,
-  schema: z.ZodType<T>
+  schema?: z.ZodType<T>
 ): Promise<T> {
+  if (role === 'embedding') {
+    try {
+      console.log(`[callAI] Attempting Gemini embedding for text: ${prompt.substring(0, 60)}...`);
+      return await getGeminiEmbedding(prompt) as unknown as T;
+    } catch (error: any) {
+      console.error(`[callAI] Gemini embedding failed:`, error.message);
+      throw error;
+    }
+  }
+
+  if (!schema) {
+    throw new Error('Schema is required for understanding or writing roles');
+  }
+
   const primaryProvider = role === 'understanding' ? callGemini : callGroq;
   const fallbackProvider = role === 'understanding' ? callGroq : callGemini;
   const primaryName = role === 'understanding' ? 'Gemini' : 'Groq';

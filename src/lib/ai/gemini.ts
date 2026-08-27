@@ -31,3 +31,20 @@ export async function callGemini<T>(prompt: string, schema: z.ZodType<T>): Promi
     throw new Error('Gemini response failed schema validation');
   }
 }
+
+export async function getGeminiEmbedding(text: string): Promise<number[]> {
+  if (!process.env.GEMINI_API_KEY) {
+    throw new Error('GEMINI_API_KEY is missing');
+  }
+
+  // Use the same generative AI instance or initialize one
+  const genAIInstance = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+  const embedModel = genAIInstance.getGenerativeModel({ model: 'text-embedding-004' });
+  
+  const result = await embedModel.embedContent(text);
+  if (!result.embedding || !result.embedding.values) {
+    throw new Error('No embedding values returned from Gemini text-embedding-004');
+  }
+  
+  return result.embedding.values;
+}
