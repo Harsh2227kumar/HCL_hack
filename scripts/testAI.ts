@@ -1,7 +1,14 @@
 import { z } from 'zod';
 import { callAI } from '../src/lib/ai/callAI';
 import { config } from 'dotenv';
-config({ path: '.env.local' });
+import * as fs from 'fs';
+
+// Falls back to .env if .env.local doesn't exist
+if (fs.existsSync('.env.local')) {
+  config({ path: '.env.local' });
+} else {
+  config({ path: '.env' });
+}
 
 const TestSchema = z.object({
   extractedName: z.string().describe("The person's name"),

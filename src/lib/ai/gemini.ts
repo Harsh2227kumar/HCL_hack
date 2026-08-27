@@ -37,13 +37,18 @@ export async function getGeminiEmbedding(text: string): Promise<number[]> {
     throw new Error('GEMINI_API_KEY is missing');
   }
 
-  // Use the same generative AI instance or initialize one
+  // Use gemini-embedding-001 with outputDimensionality: 768 to ensure compatibility
+  // with all types of Gemini developer API keys, including preview-tier keys.
   const genAIInstance = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-  const embedModel = genAIInstance.getGenerativeModel({ model: 'text-embedding-004' });
+  const embedModel = genAIInstance.getGenerativeModel({ model: 'gemini-embedding-001' });
   
-  const result = await embedModel.embedContent(text);
+  const result = await embedModel.embedContent({
+    content: { parts: [{ text }] },
+    outputDimensionality: 768
+  });
+  
   if (!result.embedding || !result.embedding.values) {
-    throw new Error('No embedding values returned from Gemini text-embedding-004');
+    throw new Error('No embedding values returned from Gemini');
   }
   
   return result.embedding.values;

@@ -4,8 +4,12 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { config } from 'dotenv';
 
-// Load variables from local environment file
-config({ path: '.env.local' });
+// Load variables from local environment file (falls back to .env if .env.local doesn't exist)
+if (fs.existsSync('.env.local')) {
+  config({ path: '.env.local' });
+} else {
+  config({ path: '.env' });
+}
 
 async function seed() {
   console.log("=== Starting Learning Resources Embedding Seeding ===");
