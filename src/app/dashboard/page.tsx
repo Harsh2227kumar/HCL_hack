@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
@@ -16,12 +16,17 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [provider, setProvider] = useState<string | null>(null);
+  const hasFetched = useRef(false);
 
   useEffect(() => {
+    if (hasFetched.current) return;
+    hasFetched.current = true;
+    
     async function fetchDashboard() {
       const raw = sessionStorage.getItem('learnerProfile');
       const aiProv = sessionStorage.getItem('aiProvider');
       if (aiProv) setProvider(aiProv);
+
       
       if (!raw) {
         router.replace('/onboarding');
