@@ -16,6 +16,11 @@ One entry per person per push. Add new entries at the **top** of the log (newest
 ---
 
 ## Log
+### 2026-08-28 — Sameera
+- What I built/changed: Onboarding chat UI (ChatBubble, QuickReplyChips, ChatInput) with redesigned styling, /api/chat sequencing logic, /api/profile/extract (Gemini-based extraction), prerequisiteSort.ts + impactEvaluator.ts (deterministic, 13/13 unit tests passing), /api/path/generate, /api/path/history, /api/progress, /api/goal/change, ResourceCard.tsx, ProgressToggle.tsx, DecisionTraceModal.tsx (with fallback for missing /api/explain/trace)
+- Files touched: src/app/onboarding/, src/components/chat/, src/components/resource/, src/lib/core/prerequisiteSort.ts, src/lib/core/impactEvaluator.ts, src/app/api/chat/, src/app/api/profile/extract/, src/app/api/path/, src/app/api/progress/, src/app/api/goal/, tests/unit/prerequisiteSort.test.ts, tests/unit/impactEvaluator.test.ts
+- Blocked on: DB connection (P1001 — can't verify actual Prisma writes yet), prisma.config.ts version mismatch (prisma/config import needs Prisma 6, currently on 5.22.0)
+- Next up: Verify end-to-end once DB connection is fixed, integration testing against Rudrakshi's real /api/recommend output once available
 
 ### 2026-08-27 — Yash
 - What I built/changed: Not started yet — initial repo scaffold complete
