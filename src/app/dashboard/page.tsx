@@ -8,24 +8,65 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, CheckCircle2, Clock, Map, Target, AlertCircle, PlayCircle } from "lucide-react";
 
+import { useRouter } from "next/navigation";
+
 export default function DashboardPage() {
+  const router = useRouter();
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-  // We are hardcoding a test user ID for now since we don't have auth yet
-  const USER_ID = "test_user_123"; 
+  const [provider, setProvider] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchDashboard() {
+      const raw = sessionStorage.getItem('learnerProfile');
+      const aiProv = sessionStorage.getItem('aiProvider');
+      if (aiProv) setProvider(aiProv);
+      
+      if (!raw) {
+        router.replace('/onboarding');
+        return;
+      }
+      
+      const profile = JSON.parse(raw);
+      
       try {
-        const res = await fetch(`/api/dashboard?userId=${USER_ID}`);
-        if (!res.ok) {
-          if (res.status === 404) {
-            throw new Error("No profile found. Please complete onboarding.");
+        // Strategy: try reading stored state first (returning user),
+        // fall back to generation (first visit after onboarding).
+        
+        // 1. Try GET /api/dashboard — reads existing path from DB
+        //    This is the fast, stable path for returning users.
+        const userId = profile.userId || sessionStorage.getItem('userId');
+        if (userId) {
+          const dashRes = await fetch(`/api/dashboard?userId=${userId}`);
+          if (dashRes.ok) {
+            const dashJson = await dashRes.json();
+            // Only use if there's an actual stored path
+            if (dashJson.activePath) {
+              setData(dashJson);
+              setLoading(false);
+              return;
+            }
           }
-          throw new Error("Failed to load dashboard data");
+          // 404 or no stored path → fall through to generation
         }
+
+        // 2. Fall back to POST /api/recommend — generates a new path
+        //    Used on first visit after onboarding when no path is stored yet.
+        const res = await fetch("/api/recommend", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ 
+            goal: profile.goal,
+            userId: userId || undefined,
+            learnerContext: profile
+          }),
+        });
+        
+        if (!res.ok) {
+          throw new Error("Failed to load adaptive path");
+        }
+        
         const json = await res.json();
         setData(json);
       } catch (err: any) {
@@ -36,7 +77,7 @@ export default function DashboardPage() {
     }
 
     fetchDashboard();
-  }, []);
+  }, [router]);
 
   if (loading) {
     return <DashboardSkeleton />;
@@ -66,6 +107,15 @@ export default function DashboardPage() {
             <div className="flex items-center gap-2 text-zinc-500 mb-2">
               <Target className="w-4 h-4" />
               <span className="text-sm font-medium tracking-wide uppercase">Current Goal</span>
+              {provider && (
+                <Badge variant="outline" className={`ml-2 text-[10px] uppercase tracking-wider ${
+                  provider === 'mock' ? 'border-orange-200 text-orange-600 bg-orange-50' :
+                  provider === 'gemini' ? 'border-blue-200 text-blue-600 bg-blue-50' :
+                  'border-green-200 text-green-600 bg-green-50'
+                }`}>
+                  Powered by: {provider === 'mock' ? 'Offline Mode' : provider}
+                </Badge>
+              )}
             </div>
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-zinc-900">
               {data.goal}

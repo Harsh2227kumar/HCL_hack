@@ -1,85 +1,108 @@
-import { describe, it, expect } from "vitest";
-import { detectBottleneck, SkillGap, SkillDependency } from "../../src/lib/core/bottleneckDetection";
+import { describe, it, expect } from 'vitest';
+import {
+  detectBottleneck,
+  SkillMastery,
+  SkillDependency,
+} from '../../src/lib/core/bottleneckDetection';
 
-describe("detectBottleneck", () => {
-  it("should return empty list when gaps are empty", () => {
-    expect(detectBottleneck([], [])).toEqual([]);
+describe('detectBottleneck', () => {
+  // Shared dependency graph:
+  // Linear Algebra → Machine Learning → Deep Learning
+  //                                   → Computer Vision
+  // Calculus       → Machine Learning
+  // Python         → Pandas → Data Visualization
+  //                         → Data Cleaning
+  const dependencies: SkillDependency[] = [
+    { skill_name: 'Machine Learning', depends_on_skill_name: 'Linear Algebra' },
+    { skill_name: 'Deep Learning', depends_on_skill_name: 'Machine Learning' },
+    { skill_name: 'Computer Vision', depends_on_skill_name: 'Machine Learning' },
+    { skill_name: 'Machine Learning', depends_on_skill_name: 'Calculus' },
+    { skill_name: 'Pandas', depends_on_skill_name: 'Python' },
+    { skill_name: 'Data Visualization', depends_on_skill_name: 'Pandas' },
+    { skill_name: 'Data Cleaning', depends_on_skill_name: 'Pandas' },
+  ];
+
+  it('Scenario 1 — clear bottleneck: Linear Algebra blocks 3 downstream skills', () => {
+    // Linear Algebra (low) blocks: ML → DL, CV (3 total)
+    // Python (low) blocks: Pandas → DataVis, DataClean (3 total)
+    // Calculus (low) blocks: ML → DL, CV (3 total, same as LA)
+    // But LA has lowest pKnown → wins the tie-break
+    const masteries: SkillMastery[] = [
+      { skillName: 'Linear Algebra', pKnown: 0.15 },
+      { skillName: 'Calculus', pKnown: 0.25 },
+      { skillName: 'Python', pKnown: 0.45 },
+      { skillName: 'Machine Learning', pKnown: 0.8 },  // above threshold
+      { skillName: 'Deep Learning', pKnown: 0.7 },      // above threshold
+    ];
+
+    const result = detectBottleneck(masteries, dependencies);
+
+    expect(result.skill_name).toBe('Linear Algebra');
+    expect(result.downstream_count).toBe(3); // ML, DL, CV
+    expect(result.pKnown).toBe(0.15);
+    expect(result.allCandidates.length).toBe(3); // LA, Calculus, Python
   });
 
-  it("should prioritize a skill with a small gap but high downstream blockage over a skill with a large gap but no blockage", () => {
-    const gaps: SkillGap[] = [
-      { skill_name: "Linear Algebra", gap: 1.0 }, // Small gap
-      { skill_name: "Excel", gap: 3.0 },           // Large gap
-      { skill_name: "Machine Learning", gap: 0.0 }, // No gap, just in graph
-      { skill_name: "Deep Learning", gap: 0.0 },
-      { skill_name: "Computer Vision", gap: 0.0 },
-      { skill_name: "NLP", gap: 0.0 },
+  it('Scenario 2 — tie-breaking: same downstream count, lowest P(known) wins', () => {
+    // Both Linear Algebra and Calculus block ML → DL, CV (3 downstream each)
+    // Calculus has lower pKnown → should be the bottleneck
+    const masteries: SkillMastery[] = [
+      { skillName: 'Linear Algebra', pKnown: 0.35 },
+      { skillName: 'Calculus', pKnown: 0.10 },
     ];
 
-    // Dependency structure where Linear Algebra blocks 4 downstream skills:
-    // ML -> Linear Algebra
-    // DL -> Linear Algebra
-    // CV -> ML -> Linear Algebra
-    // NLP -> DL -> Linear Algebra
-    const dependencies: SkillDependency[] = [
-      { skill_name: "Machine Learning", depends_on_skill_name: "Linear Algebra" },
-      { skill_name: "Deep Learning", depends_on_skill_name: "Linear Algebra" },
-      { skill_name: "Computer Vision", depends_on_skill_name: "Machine Learning" },
-      { skill_name: "NLP", depends_on_skill_name: "Deep Learning" },
-    ];
+    const result = detectBottleneck(masteries, dependencies);
 
-    // Downstream count verification:
-    // Linear Algebra blocks: Machine Learning, Deep Learning, Computer Vision, NLP (4 downstream)
-    // Excel blocks: 0 downstream
-    //
-    // Scores:
-    // Linear Algebra: gap (1.0) * count (4) = 4.0
-    // Excel: gap (3.0) * count (0) = 0.0
-    const result = detectBottleneck(gaps, dependencies);
-
-    expect(result.length).toBeGreaterThan(0);
-    
-    // Linear Algebra should rank #1
-    expect(result[0].skill_name).toBe("Linear Algebra");
-    expect(result[0].bottleneck_score).toBe(4.0);
-    expect(result[0].downstream_count).toBe(4);
-
-    // Excel should rank below Linear Algebra
-    const excelResult = result.find((r) => r.skill_name === "Excel")!;
-    expect(excelResult.bottleneck_score).toBe(0.0);
-    expect(excelResult.downstream_count).toBe(0);
-
-    // Linear Algebra ranks above Excel even though its gap (1.0) is smaller than Excel's gap (3.0)
-    const laIndex = result.findIndex((r) => r.skill_name === "Linear Algebra");
-    const excelIndex = result.findIndex((r) => r.skill_name === "Excel");
-    expect(laIndex).toBeLessThan(excelIndex);
+    expect(result.skill_name).toBe('Calculus');
+    expect(result.downstream_count).toBe(3);
+    expect(result.pKnown).toBe(0.10);
   });
 
-  it("should not cause infinite recursion/loop when cyclic dependencies are present", () => {
-    const gaps: SkillGap[] = [
-      { skill_name: "SkillA", gap: 2.0 },
-      { skill_name: "SkillB", gap: 2.0 },
-      { skill_name: "SkillC", gap: 1.0 },
+  it('Scenario 3 — no bottleneck: all skills above mastery threshold', () => {
+    const masteries: SkillMastery[] = [
+      { skillName: 'Linear Algebra', pKnown: 0.85 },
+      { skillName: 'Calculus', pKnown: 0.75 },
+      { skillName: 'Python', pKnown: 0.90 },
+      { skillName: 'Machine Learning', pKnown: 0.60 },
     ];
 
-    // Cycle: SkillA -> SkillB -> SkillC -> SkillA
-    const dependencies: SkillDependency[] = [
-      { skill_name: "SkillA", depends_on_skill_name: "SkillB" },
-      { skill_name: "SkillB", depends_on_skill_name: "SkillC" },
-      { skill_name: "SkillC", depends_on_skill_name: "SkillA" },
+    const result = detectBottleneck(masteries, dependencies);
+
+    expect(result.skill_name).toBeNull();
+    expect(result.downstream_count).toBe(0);
+    expect(result.allCandidates.length).toBe(0);
+  });
+
+  it('should handle empty skill masteries', () => {
+    const result = detectBottleneck([], dependencies);
+    expect(result.skill_name).toBeNull();
+    expect(result.allCandidates.length).toBe(0);
+  });
+
+  it('should handle a skill with no downstream dependents', () => {
+    // Only Deep Learning is low, and nothing depends on it → downstream = 0
+    const masteries: SkillMastery[] = [
+      { skillName: 'Deep Learning', pKnown: 0.2 },
     ];
 
-    // The execution should complete successfully without throws or hangs
-    const execute = () => detectBottleneck(gaps, dependencies);
-    expect(execute).not.toThrow();
+    const result = detectBottleneck(masteries, dependencies);
+    expect(result.skill_name).toBe('Deep Learning');
+    expect(result.downstream_count).toBe(0);
+  });
 
-    const result = execute();
-    expect(result.length).toBe(3);
+  it('should support custom mastery threshold', () => {
+    const masteries: SkillMastery[] = [
+      { skillName: 'Linear Algebra', pKnown: 0.6 },  // above 0.5, below 0.7
+      { skillName: 'Calculus', pKnown: 0.55 },         // above 0.5, below 0.7
+    ];
 
-    // Verify all nodes are processed and have valid numbers
-    for (const res of result) {
-      expect(res.downstream_count).toBeLessThan(3); // should at most block the other 2 skills, not itself
-      expect(res.bottleneck_score).toBeGreaterThanOrEqual(0);
-    }
+    // With default threshold (0.5), both are above → no bottleneck
+    const defaultResult = detectBottleneck(masteries, dependencies);
+    expect(defaultResult.skill_name).toBeNull();
+
+    // With higher threshold (0.7), both are below → LA or Calculus is bottleneck
+    const strictResult = detectBottleneck(masteries, dependencies, 0.7);
+    expect(strictResult.skill_name).not.toBeNull();
+    expect(strictResult.allCandidates.length).toBe(2);
   });
 });

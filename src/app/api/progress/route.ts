@@ -59,6 +59,49 @@ export async function POST(request: Request) {
       }
     });
 
+    // 2.5 Real BKT Wiring — Update skills based on this progress event
+    // Map eventType to correct/incorrect for BKT
+    // Note: Upfront diagnostic quiz wiring is out of scope for Part 1. 
+    // This uses progress events to post-hoc update BKT using the cold-start prior if no row exists yet.
+    let bktEvent: { correct: boolean } | null = null;
+    if (eventType === 'completed') bktEvent = { correct: true };
+    else if (eventType === 'too_hard' || eventType === 'struggling') bktEvent = { correct: false };
+    
+    if (bktEvent && resource?.skillsTaught) {
+      const { bktUpdate, BKT_PARAMS } = await import('@/lib/core/reconciliation');
+      const skillsTaught = resource.skillsTaught as string[];
+      
+      for (const skillName of skillsTaught) {
+        let existingSkill = userSkills.find(s => s.skillName === skillName);
+        
+        let priorKnown = existingSkill ? (existingSkill.finalEstimate / 5) : BKT_PARAMS.P_L0;
+        let newPKnown = bktUpdate(priorKnown, bktEvent.correct);
+        let newFinalEstimate = newPKnown * 5; // Scale [0,1] back to 0-5
+        
+        if (existingSkill) {
+          await prisma.learnerSkill.update({
+            where: { id: existingSkill.id },
+            data: { 
+              finalEstimate: newFinalEstimate,
+              lastAssessed: new Date()
+            }
+          });
+        } else {
+          await prisma.learnerSkill.create({
+            data: {
+              userId,
+              skillName,
+              selfRatedLevel: 0,
+              finalEstimate: newFinalEstimate,
+              targetLevel: 5,
+              confidenceScore: 0.5,
+              lastAssessed: new Date()
+            }
+          });
+        }
+      }
+    }
+
     const context: LearnerContext = {
       hasPrereqGap,
       recentDiagnosticScore: recentDiagnostic?.score ?? (score ?? null),
@@ -91,8 +134,8 @@ Write 1 clear, encouraging 1-2 sentence adaptation banner.`;
     let adaptationReason = `Path adapted (${impact.cause}): updated resource sequence.`;
     try {
       const aiBanner = await callAI('writing', prompt, AdaptationBannerSchema);
-      if (aiBanner?.banner) {
-        adaptationReason = aiBanner.banner;
+      if (!Array.isArray(aiBanner) && aiBanner?.data?.banner) {
+        adaptationReason = aiBanner.data.banner;
       }
     } catch (e) {
       console.warn('[progress] Fallback adaptation banner used.');

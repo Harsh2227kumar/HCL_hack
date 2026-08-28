@@ -2,14 +2,15 @@ import Groq from 'groq-sdk';
 import { z } from 'zod';
 import { zodToJsonSchema } from 'zod-to-json-schema';
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY || '',
-});
+const GROQ_MODEL = 'openai/gpt-oss-120b';
 
 export async function callGroq<T>(prompt: string, schema: z.ZodType<T>): Promise<T> {
-  if (!process.env.GROQ_API_KEY) {
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) {
     throw new Error('GROQ_API_KEY is missing');
   }
+
+  const groq = new Groq({ apiKey });
 
   // Convert Zod schema to JSON schema
   const jsonSchema = zodToJsonSchema(schema as any, "responseSchema");
@@ -28,7 +29,7 @@ export async function callGroq<T>(prompt: string, schema: z.ZodType<T>): Promise
         content: fullPrompt,
       },
     ],
-    model: 'llama-3.3-70b-versatile', // using the latest Llama 3 model on Groq
+    model: GROQ_MODEL,
     response_format: { type: 'json_object' },
     temperature: 0.1, // low temp for deterministic JSON
   });

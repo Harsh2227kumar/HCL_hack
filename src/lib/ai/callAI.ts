@@ -15,11 +15,11 @@ export async function callAI<T>(
   role: 'understanding' | 'writing' | 'embedding',
   prompt: string,
   schema?: z.ZodType<T>
-): Promise<T> {
+): Promise<{ data: T; provider: 'gemini' | 'groq' | 'mock' } | number[]> {
   if (role === 'embedding') {
     try {
       console.log(`[callAI] Attempting Gemini embedding for text: ${prompt.substring(0, 60)}...`);
-      return await getGeminiEmbedding(prompt) as unknown as T;
+      return await getGeminiEmbedding(prompt);
     } catch (error: any) {
       console.error(`[callAI] Gemini embedding failed:`, error.message);
       throw error;
@@ -32,28 +32,28 @@ export async function callAI<T>(
 
   const primaryProvider = role === 'understanding' ? callGemini : callGroq;
   const fallbackProvider = role === 'understanding' ? callGroq : callGemini;
-  const primaryName = role === 'understanding' ? 'Gemini' : 'Groq';
-  const fallbackName = role === 'understanding' ? 'Groq' : 'Gemini';
+  const primaryName = role === 'understanding' ? 'gemini' : 'groq';
+  const fallbackName = role === 'understanding' ? 'groq' : 'gemini';
 
   try {
     console.log(`[callAI] Attempting ${primaryName} for role: ${role}`);
-    return await primaryProvider(prompt, schema);
+    const data = await primaryProvider(prompt, schema);
+    return { data, provider: primaryName };
   } catch (error: any) {
     console.warn(`[callAI] ${primaryName} failed:`, error.message);
     console.warn(`[callAI] Falling back to ${fallbackName}...`);
 
     try {
-      return await fallbackProvider(prompt, schema);
+      const data = await fallbackProvider(prompt, schema);
+      return { data, provider: fallbackName };
     } catch (fallbackError: any) {
       console.error(`[callAI] ${fallbackName} also failed:`, fallbackError.message);
       
-      // Master Plan §6.5: "Final fallback: deterministic template/keyword-parse response if both providers are down."
-      // To implement this generically across all schemas without crashing, we attempt an empty parse.
       console.error('[callAI] ALL PROVIDERS DOWN. Returning emergency template fallback.');
       try {
-        return schema.parse({});
+        const data = schema.parse({});
+        return { data, provider: 'mock' };
       } catch (templateError) {
-        // If the schema requires specific fields and we can't stub them easily, we throw a structured error.
         throw new Error('All AI providers failed and emergency template could not satisfy the strict schema.');
       }
     }

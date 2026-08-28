@@ -15,7 +15,7 @@ export async function getResourceEmbedding(
   skillsTaught: string[]
 ): Promise<number[]> {
   const combinedText = `Title: ${title}\nDescription: ${description}\nSkills: ${skillsTaught.join(', ')}`;
-  return await callAI<number[]>('embedding', combinedText);
+  return (await callAI<number[]>('embedding', combinedText)) as number[];
 }
 
 /**
@@ -25,5 +25,5 @@ export async function getResourceEmbedding(
  * @returns Promise<number[]> 768-dimensional embedding vector
  */
 export async function getQueryEmbedding(text: string): Promise<number[]> {
-  return await callAI<number[]>('embedding', text);
+  return (await callAI<number[]>('embedding', text)) as number[];
 }

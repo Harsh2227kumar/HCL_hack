@@ -2,13 +2,14 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import { z } from 'zod';
 import { zodToJsonSchema } from 'zod-to-json-schema';
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
-const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
-
 export async function callGemini<T>(prompt: string, schema: z.ZodType<T>): Promise<T> {
-  if (!process.env.GEMINI_API_KEY) {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
     throw new Error('GEMINI_API_KEY is missing');
   }
+
+  const genAI = new GoogleGenerativeAI(apiKey);
+  const model = genAI.getGenerativeModel({ model: 'gemini-3.6-flash' });
 
   // Convert Zod schema to JSON schema to pass to the model
   const jsonSchema = zodToJsonSchema(schema as any, "responseSchema");
@@ -43,9 +44,9 @@ export async function getGeminiEmbedding(text: string): Promise<number[]> {
   const embedModel = genAIInstance.getGenerativeModel({ model: 'gemini-embedding-001' });
   
   const result = await embedModel.embedContent({
-    content: { parts: [{ text }] },
+    content: { role: 'user', parts: [{ text }] },
     outputDimensionality: 768
-  });
+  } as any);
   
   if (!result.embedding || !result.embedding.values) {
     throw new Error('No embedding values returned from Gemini');

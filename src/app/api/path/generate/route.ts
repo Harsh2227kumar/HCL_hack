@@ -43,8 +43,8 @@ Skills taught: ${JSON.stringify(candidate?.skillsTaught || [])}`;
         let reason = `Recommended for ${item.phase} phase based on prerequisite ordering and skill score.`;
         try {
           const aiResponse = await callAI('writing', prompt, ReasonSchema);
-          if (aiResponse?.reason) {
-            reason = aiResponse.reason;
+          if (!Array.isArray(aiResponse) && aiResponse?.data?.reason) {
+            reason = aiResponse.data.reason;
           }
         } catch (e) {
           console.warn(`[path/generate] Fallback reason used for ${item.resourceId}`);

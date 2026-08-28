@@ -1,100 +1,163 @@
-import { describe, it, expect } from "vitest";
-import { reconcileSkillEstimate, SkillEvidence } from "../../src/lib/core/reconciliation";
+import { describe, it, expect } from 'vitest';
+import {
+  bktUpdate,
+  reconcileSkillFromEvidence,
+  reconcileSkillEstimate,
+  BKT_PARAMS,
+  SkillEvidence,
+  SkillEvidenceEvent,
+} from '../../src/lib/core/reconciliation';
 
-describe("reconcileSkillEstimate", () => {
-  const now = new Date("2026-08-28T00:00:00Z");
+describe('bktUpdate — single-step BKT update', () => {
+  it('should increase P(known) after a correct observation', () => {
+    const prior = BKT_PARAMS.P_L0; // 0.3
+    const posterior = bktUpdate(prior, true);
+    expect(posterior).toBeGreaterThan(prior);
+  });
 
-  it("should handle zero evidence records", () => {
-    const result = reconcileSkillEstimate([]);
+  it('should produce a higher P(known) after correct than after incorrect from the same prior', () => {
+    const prior = BKT_PARAMS.P_L0; // 0.3
+    const afterCorrect = bktUpdate(prior, true);
+    const afterIncorrect = bktUpdate(prior, false);
+
+    // Correct observation should always produce a higher posterior than incorrect
+    expect(afterCorrect).toBeGreaterThan(afterIncorrect);
+
+    // Correct should increase from prior
+    expect(afterCorrect).toBeGreaterThan(prior);
+
+    // Incorrect may decrease from prior (Bayesian posterior drops),
+    // but P_T softens the drop compared to pure Bayes without learning transition
+    const { P_slip, P_guess } = BKT_PARAMS;
+    const pIncorrect = P_slip * prior + (1 - P_guess) * (1 - prior);
+    const pureBayesPosterior = (P_slip * prior) / pIncorrect;
+    // With P_T applied, the result is higher than pure Bayes posterior
+    expect(afterIncorrect).toBeGreaterThan(pureBayesPosterior);
+  });
+
+  it('should approach but not meaningfully exceed 1.0 — P(known) saturates near 1', () => {
+    let pKnown: number = BKT_PARAMS.P_L0;
+    // Run 20 consecutive correct observations (enough to saturate)
+    for (let i = 0; i < 20; i++) {
+      pKnown = bktUpdate(pKnown, true);
+    }
+    // Should be very high
+    expect(pKnown).toBeGreaterThan(0.99);
+    // The value is <= 1.0 (may hit 1.0 exactly due to IEEE 754 rounding)
+    expect(pKnown).toBeLessThanOrEqual(1.0);
+  });
+
+  it('should never reach exactly 0.0 — P(known) approaches but never equals 0', () => {
+    let pKnown: number = BKT_PARAMS.P_L0;
+    // Run 100 consecutive incorrect observations
+    for (let i = 0; i < 100; i++) {
+      pKnown = bktUpdate(pKnown, false);
+    }
+    expect(pKnown).toBeGreaterThan(0.0);
+    // Even after many wrongs, P_T ensures it doesn't collapse to 0
+    expect(pKnown).toBeGreaterThan(0.15);
+  });
+
+  it('should handle the slip boundary: high P(known) + incorrect = modest decrease', () => {
+    // If learner is very likely to know (0.95), a single wrong answer
+    // should not obliterate their mastery — slips happen
+    const highPrior = 0.95;
+    const afterWrong = bktUpdate(highPrior, false);
+
+    // Should drop but not catastrophically (slip protection)
+    expect(afterWrong).toBeLessThan(highPrior);
+    expect(afterWrong).toBeGreaterThan(0.5);
+  });
+
+  it('should handle the guess boundary: low P(known) + correct = moderate increase', () => {
+    // If learner probably doesn't know (0.1), a single correct answer
+    // should help but not vault them to mastery — could be guessing
+    const lowPrior = 0.1;
+    const afterCorrect = bktUpdate(lowPrior, true);
+
+    expect(afterCorrect).toBeGreaterThan(lowPrior);
+    // Guess rate means they shouldn't jump too high from one correct
+    expect(afterCorrect).toBeLessThan(0.7);
+  });
+
+  it('should produce reproducible, deterministic results', () => {
+    const a = bktUpdate(0.5, true);
+    const b = bktUpdate(0.5, true);
+    expect(a).toBe(b);
+  });
+});
+
+describe('reconcileSkillFromEvidence — multi-event BKT', () => {
+  it('should return the initial P_L0 with zero confidence when no events', () => {
+    const result = reconcileSkillFromEvidence([]);
+    expect(result.finalEstimate).toBe(BKT_PARAMS.P_L0);
+    expect(result.confidenceScore).toBe(0);
+  });
+
+  it('should increase P(known) over a sequence of mostly-correct events', () => {
+    const events: SkillEvidenceEvent[] = [
+      { correct: true },
+      { correct: true },
+      { correct: false },
+      { correct: true },
+      { correct: true },
+    ];
+    const result = reconcileSkillFromEvidence(events);
+    expect(result.finalEstimate).toBeGreaterThan(BKT_PARAMS.P_L0);
+    expect(result.finalEstimate).toBeGreaterThan(0.7);
+  });
+
+  it('should increase confidence with more events', () => {
+    const oneEvent = reconcileSkillFromEvidence([{ correct: true }]);
+    const fiveEvents = reconcileSkillFromEvidence([
+      { correct: true },
+      { correct: true },
+      { correct: true },
+      { correct: true },
+      { correct: true },
+    ]);
+    expect(fiveEvents.confidenceScore).toBeGreaterThan(oneEvent.confidenceScore);
+  });
+
+  it('should converge toward P_T floor after many incorrect events', () => {
+    const events: SkillEvidenceEvent[] = Array(20).fill({ correct: false });
+    const result = reconcileSkillFromEvidence(events);
+    // Should be low but not zero, stabilizing around P_T / (1 - (1-P_T)) region
+    expect(result.finalEstimate).toBeGreaterThan(0.15);
+    expect(result.finalEstimate).toBeLessThan(0.35);
+  });
+});
+
+describe('reconcileSkillEstimate — legacy adapter', () => {
+  const now = new Date('2026-08-28T00:00:00Z');
+
+  it('should handle zero evidence records', () => {
+    const result = reconcileSkillEstimate([], now);
     expect(result).toEqual({ final_estimate: null, confidence_score: 0 });
   });
 
-  it("should calculate correct estimate and confidence for normal case with 3 mixed-source evidence records", () => {
+  it('should scale output to 0–5 range', () => {
     const evidence: SkillEvidence[] = [
-      {
-        score: 4,
-        source: "self_report", // reliability default = 0.3
-        timestamp: new Date("2026-08-28T00:00:00Z"), // age = 0 days, recency_weight = 1
-      },
-      {
-        score: 3,
-        source: "diagnostic", // reliability default = 0.7
-        timestamp: new Date("2026-08-13T00:00:00Z"), // age = 15 days, recency_weight = 0.7071
-      },
-      {
-        score: 5,
-        source: "project_completion", // reliability default = 0.6
-        timestamp: new Date("2026-07-29T00:00:00Z"), // age = 30 days, recency_weight = 0.5
-      },
+      { score: 4, source: 'diagnostic', timestamp: new Date('2026-08-27T00:00:00Z') },
+      { score: 5, source: 'project_completion', timestamp: new Date('2026-08-28T00:00:00Z') },
     ];
-
     const result = reconcileSkillEstimate(evidence, now);
-
-    // Manual Calculation Verification:
-    // W1 = 0.3 * 1.0 = 0.3
-    // W2 = 0.7 * Math.exp(-Math.LN2 * 15 / 30) = 0.7 * 0.70710678 = 0.49497474
-    // W3 = 0.6 * Math.exp(-Math.LN2 * 30 / 30) = 0.6 * 0.5 = 0.3
-    // Total Weight = 0.3 + 0.49497474 + 0.3 = 1.09497474
-    // Weighted Score Sum = 4 * 0.3 + 3 * 0.49497474 + 5 * 0.3 = 1.2 + 1.48492422 + 1.5 = 4.18492422
-    // Expected Estimate = 4.18492422 / 1.09497474 = 3.8219368
-    expect(result.final_estimate).toBeCloseTo(3.8219, 4);
-
-    // Confidence Verification:
-    // S = 1.09497474
-    // confidence_score = 1 - Math.exp(-0.75 * 1.09497474) = 1 - Math.exp(-0.821231) = 1 - 0.4398897 = 0.56011
-    // Rounded to 4 decimal places: 0.5601
-    expect(result.confidence_score).toBe(0.5601);
+    expect(result.final_estimate).not.toBeNull();
+    expect(result.final_estimate!).toBeGreaterThanOrEqual(0);
+    expect(result.final_estimate!).toBeLessThanOrEqual(5);
   });
 
-  it("should return low confidence for a single self-report record", () => {
-    const evidence: SkillEvidence[] = [
-      {
-        score: 4,
-        source: "self_report",
-        timestamp: now,
-      },
+  it('should produce higher estimates from high-scoring evidence', () => {
+    const highEvidence: SkillEvidence[] = [
+      { score: 5, source: 'diagnostic', timestamp: now },
+      { score: 4, source: 'diagnostic', timestamp: now },
     ];
-
-    const result = reconcileSkillEstimate(evidence, now);
-
-    // Final estimate is exactly the single score when only one source exists
-    expect(result.final_estimate).toBe(4);
-
-    // Confidence Verification:
-    // S = 0.3 * 1.0 = 0.3
-    // confidence_score = 1 - exp(-0.75 * 0.3) = 1 - exp(-0.225) = 1 - 0.798516 = 0.20148 => 0.2015
-    expect(result.confidence_score).toBe(0.2015);
-  });
-
-  it("should have different confidence between fresh evidence and heavily decayed old evidence of the same score", () => {
-    const freshEvidence: SkillEvidence[] = [
-      {
-        score: 4,
-        source: "diagnostic",
-        timestamp: now, // age = 0 days, recency_weight = 1
-      },
+    const lowEvidence: SkillEvidence[] = [
+      { score: 1, source: 'diagnostic', timestamp: now },
+      { score: 0, source: 'diagnostic', timestamp: now },
     ];
-
-    const oldEvidence: SkillEvidence[] = [
-      {
-        score: 4,
-        source: "diagnostic",
-        timestamp: new Date("2026-05-30T00:00:00Z"), // age = 90 days (3 half-lives), recency_weight = 0.125
-      },
-    ];
-
-    const freshResult = reconcileSkillEstimate(freshEvidence, now);
-    const oldResult = reconcileSkillEstimate(oldEvidence, now);
-
-    expect(freshResult.final_estimate).toBe(4);
-    expect(oldResult.final_estimate).toBe(4);
-
-    // Fresh confidence: S = 0.7 => 1 - exp(-0.525) = 0.4084
-    expect(freshResult.confidence_score).toBe(0.4084);
-
-    // Old confidence: S = 0.7 * 0.125 = 0.0875 => 1 - exp(-0.065625) = 0.0635
-    expect(oldResult.confidence_score).toBe(0.0635);
-
-    expect(freshResult.confidence_score).toBeGreaterThan(oldResult.confidence_score);
+    const highResult = reconcileSkillEstimate(highEvidence, now);
+    const lowResult = reconcileSkillEstimate(lowEvidence, now);
+    expect(highResult.final_estimate!).toBeGreaterThan(lowResult.final_estimate!);
   });
 });

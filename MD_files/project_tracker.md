@@ -23,10 +23,10 @@ One entry per person per push. Add new entries at the **top** of the log (newest
 - Next up: Verify end-to-end once DB connection is fixed, integration testing against Rudrakshi's real /api/recommend output once available
 
 ### 2026-08-28 — Yash
-- What I built/changed: Completed Phase 0 (Supabase, schema.prisma, types/index.ts). Completed Phase 1 /api/dashboard route with Prisma singleton. Completed Phase 1 AI wiring (Gemini & Groq orchestration in callAI.ts). Built the minimalist Frontend Dashboard UI (`src/app/dashboard/page.tsx`) mapping to F10/F14 requirements using shadcn/ui.
-- Files touched: `schema.prisma`, `.env.local`, `types/index.ts`, `src/lib/prisma.ts`, `src/app/api/dashboard/route.ts`, `src/lib/ai/gemini.ts`, `src/lib/ai/groq.ts`, `src/lib/ai/callAI.ts`, `src/app/dashboard/page.tsx`, `components/ui/*`
-- Blocked on: Nothing, but API keys for Groq/Gemini seem to be throwing 401/403 errors when tested. Waiting on Sameera to build the Onboarding UI to get real data into the Dashboard.
-- Next up: Reviewing PRs from Rudrakshi/Sameera, fullFlow.test.ts.
+- What I built/changed: Completed Phase 0 (Supabase, schema.prisma, types/index.ts). Completed Phase 1 /api/dashboard route with Prisma singleton. Completed Phase 1 AI wiring (Gemini & Groq orchestration in callAI.ts). Built the minimalist Frontend Dashboard UI (`src/app/dashboard/page.tsx`) mapping to F10/F14 requirements using shadcn/ui. Merged Sameera's `onboarding-path-generation` branch into dev. Wrote `groundingCheck.ts` to prevent AI hallucinations. Ran `scripts/seedEmbeddings.ts` to populate Supabase with AI-generated vectors.
+- Files touched: `schema.prisma`, `.env.local`, `types/index.ts`, `src/lib/prisma.ts`, `src/app/api/dashboard/route.ts`, `src/lib/ai/gemini.ts`, `src/lib/ai/groq.ts`, `src/lib/ai/callAI.ts`, `src/app/dashboard/page.tsx`, `components/ui/*`, `src/lib/validation/groundingCheck.ts`
+- Blocked on: Nothing. All code is integrated on `dev`.
+- Next up: Postman / Browser end-to-end testing, Vercel Deployment, and Demo Video.
 
 ---
 
