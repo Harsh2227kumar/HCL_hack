@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import ChatBubble from "@/components/chat/ChatBubble";
 import ChatInput from "@/components/chat/ChatInput";
 import QuickReplyChips from "@/components/chat/QuickReplyChips";
-import { Sparkles, CheckCircle2, ArrowRight, Bot, Zap } from "lucide-react";
+import { Sparkles, CheckCircle2, ArrowRight, Bot, Zap, HelpCircle, Check, AlertCircle } from "lucide-react";
 
 type MessageRole = "user" | "ai";
 
@@ -14,12 +15,30 @@ interface ChatMessage {
   quick_replies?: string[];
 }
 
+interface DiagnosticQuestion {
+  question: string;
+  options: string[];
+  correctAnswer: string;
+  explanation: string;
+}
+
 export default function OnboardingPage() {
+  const router = useRouter();
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [loading, setLoading] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [extractedProfile, setExtractedProfile] = useState<any>(null);
   const [provider, setProvider] = useState<string>("gemini");
+  
+  // Diagnostic Quiz State
+  const [showQuiz, setShowQuiz] = useState(false);
+  const [quizLoading, setQuizLoading] = useState(false);
+  const [quizQuestions, setQuizQuestions] = useState<DiagnosticQuestion[]>([]);
+  const [quizSkillName, setQuizSkillName] = useState<string>("");
+  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
+  const [quizSubmitted, setQuizSubmitted] = useState(false);
+  const [quizScore, setQuizScore] = useState<number | null>(null);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -49,9 +68,9 @@ export default function OnboardingPage() {
               text: data.reply,
               quick_replies: data.quick_replies || [
                 "Full Stack Web Development",
-                "Machine Learning & AI Engineering",
-                "Backend & Cloud Architecture",
-                "Data Science & Analytics",
+                "AI Engineering & Machine Learning",
+                "Backend Systems & Architecture",
+                "DevOps & Cloud Infrastructure",
               ],
             },
           ]);
@@ -63,12 +82,12 @@ export default function OnboardingPage() {
         setMessages([
           {
             role: "ai",
-            text: "Hey! I'm your AI Academic Advisor. What field or technology are you looking to master today?",
+            text: "Welcome to the Adaptive Learning Intelligence Engine! What engineering domain are you looking to master?",
             quick_replies: [
               "Full Stack Web Development",
-              "Machine Learning & AI Engineering",
-              "Backend & Cloud Architecture",
-              "Data Science & Analytics",
+              "AI Engineering & Machine Learning",
+              "Backend Systems & Architecture",
+              "DevOps & Cloud Infrastructure",
             ],
           },
         ]);
@@ -80,6 +99,7 @@ export default function OnboardingPage() {
   }, []);
 
   const triggerProfileExtraction = async (conversation: ChatMessage[]) => {
+    setLoading(true);
     try {
       const extractRes = await fetch("/api/profile/extract", {
         method: "POST",
@@ -88,39 +108,150 @@ export default function OnboardingPage() {
       });
       const extractData = await extractRes.json();
 
+      let profileWithId: any;
       if (extractData.profile) {
-        const profileWithId = {
+        profileWithId = {
           ...extractData.profile,
           userId: extractData.userId,
         };
-        setExtractedProfile(profileWithId);
-        sessionStorage.setItem(
-          "learnerProfile",
-          JSON.stringify(profileWithId)
-        );
-        if (extractData.userId) {
-          sessionStorage.setItem("userId", extractData.userId);
-        }
-        sessionStorage.setItem("aiProvider", extractData.provider || provider);
+      } else {
+        const userMsgs = conversation.filter((m) => m.role === "user");
+        profileWithId = {
+          goal: userMsgs[0]?.text || "Full Stack Web Development",
+          experienceLevel: "Intermediate",
+          weeklyHours: 10,
+          learningStyle: "Interactive Coding",
+        };
       }
+
+      setExtractedProfile(profileWithId);
+      sessionStorage.setItem("learnerProfile", JSON.stringify(profileWithId));
+      if (profileWithId.userId) {
+        sessionStorage.setItem("userId", profileWithId.userId);
+      }
+      sessionStorage.setItem("aiProvider", extractData.provider || provider);
       setIsCompleted(true);
+
+      // Pre-load Diagnostic Quiz for the selected goal
+      loadDiagnosticQuestions(profileWithId);
     } catch (err) {
-      console.error("Profile extraction failed:", err);
-      // Fallback extraction from conversation
+      console.error("Profile extraction fallback:", err);
       const userMsgs = conversation.filter((m) => m.role === "user");
       const fallbackProfile = {
-        goal: userMsgs[0]?.text || "Full Stack Engineering",
+        goal: userMsgs[0]?.text || "Full Stack Web Development",
         experienceLevel: "Intermediate",
         weeklyHours: 10,
-        learningStyle: "Project-based",
+        learningStyle: "Interactive Coding",
       };
       setExtractedProfile(fallbackProfile);
-      sessionStorage.setItem(
-        "learnerProfile",
-        JSON.stringify(fallbackProfile)
-      );
+      sessionStorage.setItem("learnerProfile", JSON.stringify(fallbackProfile));
       setIsCompleted(true);
+      loadDiagnosticQuestions(fallbackProfile);
+    } finally {
+      setLoading(false);
     }
+  };
+
+  const loadDiagnosticQuestions = async (profile: any) => {
+    setQuizLoading(true);
+    const goal = (profile.goal || "").toLowerCase();
+    
+    // Choose primary skill to test based on goal
+    let targetSkill = "TypeScript & JavaScript";
+    let fallbackQuestions: DiagnosticQuestion[] = [
+      {
+        question: "What is the primary difference between 'interface' and 'type' in TypeScript?",
+        options: [
+          "Interfaces can be merged via declaration merging; types cannot.",
+          "Types are only for primitives; interfaces are only for objects.",
+          "Interfaces compile to JavaScript classes; types are removed at runtime.",
+          "There is no difference; they are 100% interchangeable."
+        ],
+        correctAnswer: "Interfaces can be merged via declaration merging; types cannot.",
+        explanation: "Declaration merging allows multiple interface declarations with the same name to combine."
+      },
+      {
+        question: "In React Server Components (RSC), which hook is NOT allowed?",
+        options: ["useState", "useMemo", "useEffect", "All of the above"],
+        correctAnswer: "All of the above",
+        explanation: "Server components cannot use state or browser lifecycle hooks like useState/useEffect."
+      },
+      {
+        question: "What is the main benefit of Database Connection Pooling in a serverless environment?",
+        options: [
+          "Prevents exhausting database connection limits across concurrent lambda invocations.",
+          "Encrypts SQL queries using AES-256 automatically.",
+          "Converts SQL relational data to NoSQL documents in memory.",
+          "Eliminates the need for indexing on foreign keys."
+        ],
+        correctAnswer: "Prevents exhausting database connection limits across concurrent lambda invocations.",
+        explanation: "Poolers manage persistent connections so short-lived serverless functions do not overload Postgres."
+      }
+    ];
+
+    if (goal.includes("ai") || goal.includes("ml") || goal.includes("data")) {
+      targetSkill = "Linear Algebra & PyTorch";
+      fallbackQuestions = [
+        {
+          question: "What does the Singular Value Decomposition (SVD) of matrix A = U Σ V^T decompose?",
+          options: [
+            "Rotations (U, V) and scaling by singular values (Σ).",
+            "Eigenvalues and eigenvectors only for symmetric matrices.",
+            "Gradient descent steps for loss function minimization.",
+            "Sparse matrix dot product approximations."
+          ],
+          correctAnswer: "Rotations (U, V) and scaling by singular values (Σ).",
+          explanation: "SVD factors any real matrix into orthogonal rotation matrices U, V and diagonal scaling matrix Σ."
+        },
+        {
+          question: "In Transformer models, what is the computational complexity of standard Self-Attention with sequence length N?",
+          options: ["O(N^2)", "O(N)", "O(N log N)", "O(1)"],
+          correctAnswer: "O(N^2)",
+          explanation: "Every token computes an attention score against all other tokens, yielding quadratic time complexity."
+        },
+        {
+          question: "What is the primary objective of LoRA (Low-Rank Adaptation) in LLM fine-tuning?",
+          options: [
+            "Freeze base weights and train rank decomposition matrices to reduce trainable parameters.",
+            "Quantize weights from 16-bit float to 4-bit integer.",
+            "Prune 90% of redundant attention heads before inference.",
+            "Replace multi-head attention with state space models."
+          ],
+          correctAnswer: "Freeze base weights and train rank decomposition matrices to reduce trainable parameters.",
+          explanation: "LoRA decomposes weight update matrices ΔW = B × A with low rank r << d, slashing memory usage."
+        }
+      ];
+    } else if (goal.includes("devops") || goal.includes("cloud")) {
+      targetSkill = "Docker & Kubernetes";
+      fallbackQuestions = [
+        {
+          question: "What is the difference between a Kubernetes Deployment and a StatefulSet?",
+          options: [
+            "StatefulSets provide stable network identities and persistent storage per replica; Deployments are stateless.",
+            "Deployments run on Linux; StatefulSets only run on Windows nodes.",
+            "StatefulSets cannot be scaled down; Deployments can.",
+            "Deployments require Helm charts; StatefulSets require YAML manifests."
+          ],
+          correctAnswer: "StatefulSets provide stable network identities and persistent storage per replica; Deployments are stateless.",
+          explanation: "StatefulSet pods maintain unique ordinal IDs and persistent volume bindings across restarts."
+        },
+        {
+          question: "In Docker, what is the purpose of multi-stage builds?",
+          options: [
+            "Keep the final production image small by separating build tooling from the runtime environment.",
+            "Run multiple containers inside a single Linux namespace.",
+            "Enable GPU pass-through without installing NVIDIA container toolkit.",
+            "Automatically restart failed containers across host clusters."
+          ],
+          correctAnswer: "Keep the final production image small by separating build tooling from the runtime environment.",
+          explanation: "Multi-stage builds allow compiling in one stage and copying only the binary to the minimal final stage."
+        }
+      ];
+    }
+
+    setQuizSkillName(targetSkill);
+    setQuizQuestions(fallbackQuestions);
+    setQuizLoading(false);
   };
 
   const handleSendMessage = async (text: string) => {
@@ -151,39 +282,59 @@ export default function OnboardingPage() {
         quick_replies: data.quick_replies,
       };
 
-      const conversationWithAi = [...conversationWithUser, aiReply];
-      setMessages(conversationWithAi);
+      const updated = [...conversationWithUser, aiReply];
+      setMessages(updated);
 
-      // If AI determined profile is ready
-      if (data.is_complete) {
-        await triggerProfileExtraction(conversationWithAi);
+      // Auto-extract after 2 exchanges
+      if (updated.filter((m) => m.role === "user").length >= 2) {
+        triggerProfileExtraction(updated);
       }
     } catch (err) {
-      console.warn("AI Chat API call failed, generating fallback response...");
-      const userCount = conversationWithUser.filter((m) => m.role === "user").length;
-      let replyText = "Awesome! What's your current experience level with this topic?";
-      let quick = ["Complete Beginner", "Intermediate", "Advanced / Upskilling"];
-      let complete = false;
-
-      if (userCount >= 3) {
-        replyText = "Great! I have everything needed to create your customized adaptive roadmap.";
-        quick = [];
-        complete = true;
-      }
-
-      const aiReply: ChatMessage = {
+      console.error("Chat error:", err);
+      const fallbackReply: ChatMessage = {
         role: "ai",
-        text: replyText,
-        quick_replies: quick,
+        text: "Great! I have captured your learning objectives. Let's analyze your skills and assemble your roadmap.",
+        quick_replies: ["Proceed to Roadmap"],
       };
-      const conversationWithAi = [...conversationWithUser, aiReply];
-      setMessages(conversationWithAi);
-
-      if (complete) {
-        await triggerProfileExtraction(conversationWithAi);
-      }
+      const updated = [...conversationWithUser, fallbackReply];
+      setMessages(updated);
+      triggerProfileExtraction(updated);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleSelectOption = (qIdx: number, option: string) => {
+    setSelectedAnswers((prev) => ({ ...prev, [qIdx]: option }));
+  };
+
+  const handleSubmitQuiz = async () => {
+    let correctCount = 0;
+    quizQuestions.forEach((q, idx) => {
+      if (selectedAnswers[idx] === q.correctAnswer) {
+        correctCount += 1;
+      }
+    });
+
+    const calculatedScore = (correctCount / quizQuestions.length) * 5;
+    setQuizScore(calculatedScore);
+    setQuizSubmitted(true);
+
+    const userId = sessionStorage.getItem("userId");
+    if (userId) {
+      try {
+        await fetch("/api/diagnostic/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            userId,
+            skillName: quizSkillName,
+            score: calculatedScore,
+          }),
+        });
+      } catch (e) {
+        console.warn("Diagnostic submit logged locally:", e);
+      }
     }
   };
 
@@ -197,146 +348,174 @@ export default function OnboardingPage() {
     lastMessage.quick_replies.length > 0;
 
   return (
-    <main className="min-h-screen relative overflow-hidden bg-zinc-50 dark:bg-zinc-950 flex flex-col items-center justify-center p-3 sm:p-6 md:p-8">
-      {/* Dynamic Ambient Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-indigo-400/20 dark:bg-indigo-900/20 blur-[120px] animate-pulse"
-          style={{ animationDuration: "8s" }}
-        />
-        <div
-          className="absolute top-[60%] -right-[10%] w-[60%] h-[60%] rounded-full bg-purple-400/20 dark:bg-purple-900/20 blur-[140px] animate-pulse"
-          style={{ animationDuration: "10s" }}
-        />
-        <div
-          className="absolute top-[20%] left-[40%] w-[30%] h-[30%] rounded-full bg-emerald-400/10 dark:bg-emerald-900/10 blur-[100px] animate-pulse"
-          style={{ animationDuration: "12s" }}
-        />
+    <main className="min-h-screen relative overflow-hidden bg-[#FDFCFB] text-[#1A1A1A] flex flex-col items-center justify-center p-3 sm:p-6 md:p-8 font-sans">
+      {/* Background Ambience */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
+        <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-emerald-100 blur-[120px]" />
+        <div className="absolute top-[60%] -right-[10%] w-[60%] h-[60%] rounded-full bg-indigo-100 blur-[140px]" />
       </div>
 
-      <div className="relative w-full max-w-3xl bg-white/50 dark:bg-zinc-900/50 border border-white/60 dark:border-zinc-800/60 rounded-3xl shadow-2xl shadow-indigo-900/5 dark:shadow-black/50 flex flex-col h-[90vh] max-h-[850px] overflow-hidden backdrop-blur-xl ring-1 ring-black/5">
+      <div className="relative w-full max-w-4xl bg-white border border-[#1A1A1A]/15 rounded-2xl shadow-xl flex flex-col h-[92vh] max-h-[900px] overflow-hidden">
         {/* Header */}
-        <header className="px-6 py-5 border-b border-white/50 dark:border-zinc-800/50 bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md flex flex-col gap-4 z-10">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-indigo-600 text-white flex items-center justify-center shadow-lg shadow-indigo-500/30 flex-shrink-0 relative overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-white/20 animate-pulse"
-                  style={{ animationDuration: "3s" }}
-                />
-                <Sparkles className="w-6 h-6 text-white relative z-10" />
-              </div>
-              <div>
-                <h1 className="text-lg font-bold tracking-tight text-zinc-900 dark:text-white flex items-center gap-2">
-                  AI Academic Advisor
-                  <span className="text-[11px] font-semibold uppercase px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">
-                    Live LLM
-                  </span>
-                </h1>
-                <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-                  {isCompleted
-                    ? "Curriculum ready to assemble"
-                    : "Conversational Goal & Skill Diagnostic"}
-                </p>
-              </div>
+        <header className="px-6 py-4 border-b border-[#1A1A1A]/15 bg-[#F8F7F4] flex items-center justify-between z-10">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-[#1A1A1A] text-white flex items-center justify-center font-serif text-lg font-bold">
+              λ
             </div>
-
-            <div className="flex items-center gap-3">
-              {userMessagesCount >= 2 && !isCompleted && (
-                <button
-                  onClick={() => triggerProfileExtraction(messages)}
-                  className="text-xs font-semibold px-3 py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300 transition-colors flex items-center gap-1.5 shadow-sm"
-                >
-                  <Zap className="w-3.5 h-3.5 text-indigo-600" />
-                  Ready to Build Path
-                </button>
-              )}
-
-              {isCompleted ? (
-                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 text-sm font-bold text-emerald-700 bg-emerald-100/80 dark:text-emerald-300 dark:bg-emerald-900/50 rounded-full border border-emerald-200 dark:border-emerald-700 shadow-sm">
-                  <CheckCircle2 className="w-4 h-4" /> Synthesized
+            <div>
+              <h1 className="text-base font-bold tracking-tight text-[#1A1A1A] flex items-center gap-2 font-mono uppercase">
+                Adaptive Learning Advisor
+                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-300">
+                  {provider}
                 </span>
-              ) : (
-                <span className="text-xs font-semibold text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-3 py-1.5 rounded-full">
-                  {userMessagesCount === 0
-                    ? "Starting"
-                    : `${userMessagesCount} message${userMessagesCount > 1 ? "s" : ""}`}
-                </span>
-              )}
+              </h1>
+              <p className="text-xs font-mono text-[#666]">
+                {isCompleted
+                  ? "Topological Synthesis Complete"
+                  : "Conversational Goal & Diagnostic Engine"}
+              </p>
             </div>
+          </div>
+
+          <div className="flex items-center gap-3">
+            {isCompleted ? (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-bold text-emerald-800 bg-emerald-100 rounded-full border border-emerald-300">
+                <CheckCircle2 className="w-3.5 h-3.5" /> Synthesized
+              </span>
+            ) : (
+              <span className="text-xs font-mono text-[#777] bg-[#EAE8E1] px-3 py-1 rounded-full">
+                Step 1: Goal Mapping
+              </span>
+            )}
           </div>
         </header>
 
-        {/* Chat Messages Area */}
-        <div className="flex-1 overflow-y-auto p-5 sm:p-8 space-y-3 z-0 relative scroll-smooth">
+        {/* Main Content Area */}
+        <div className="flex-1 overflow-y-auto p-5 sm:p-8 space-y-4 relative scroll-smooth">
           {messages.map((msg, index) => (
             <ChatBubble key={index} role={msg.role} text={msg.text} />
           ))}
 
           {loading && <ChatBubble role="ai" text="" isTyping={true} />}
 
+          {/* Profile Card & Diagnostic Quiz Assessment Step */}
           {isCompleted && extractedProfile && (
-            <div className="my-8 p-8 rounded-3xl bg-white/80 dark:bg-zinc-800/80 backdrop-blur-md border border-white/80 dark:border-zinc-700/80 shadow-2xl shadow-emerald-500/10 animate-in fade-in slide-in-from-bottom-8 duration-700 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/10 rounded-full blur-[80px] -mr-20 -mt-20 pointer-events-none" />
+            <div className="my-6 p-6 sm:p-8 rounded-2xl bg-[#F8F7F4] border border-[#1A1A1A]/15 shadow-sm space-y-6">
+              <div className="flex items-center justify-between border-b border-[#1A1A1A]/15 pb-4">
+                <div>
+                  <h3 className="font-serif italic text-2xl font-bold text-[#1A1A1A]">
+                    Learner Profile Synthesized
+                  </h3>
+                  <p className="text-xs font-mono text-[#666] mt-0.5">
+                    Target: <strong>{extractedProfile.goal}</strong> • Capacity: {extractedProfile.weeklyHours}h/wk
+                  </p>
+                </div>
+                <span className="text-xs font-mono px-2.5 py-1 bg-white border border-[#1A1A1A]/20 rounded font-semibold">
+                  {extractedProfile.experienceLevel}
+                </span>
+              </div>
 
-              <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-400 to-emerald-600 text-white flex items-center justify-center shadow-lg shadow-emerald-500/30">
-                    <CheckCircle2 className="w-6 h-6" />
+              {/* Diagnostic Assessment Section */}
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <HelpCircle className="w-4 h-4 text-[#1A1A1A]" />
+                    <h4 className="text-sm font-mono uppercase font-bold tracking-wider text-[#1A1A1A]">
+                      Step 2: Adaptive Diagnostic Assessment ({quizSkillName})
+                    </h4>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-xl tracking-tight text-zinc-900 dark:text-white">
-                      Profile Synthesized
-                    </h3>
-                    <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
-                      Adaptive intelligence mapping complete
-                    </p>
-                  </div>
+                  <span className="text-[11px] font-mono text-[#777]">
+                    BKT Validation ({quizQuestions.length} Questions)
+                  </span>
                 </div>
 
-                <div className="bg-white/60 dark:bg-zinc-900/60 p-6 rounded-2xl border border-white/60 dark:border-zinc-800/60 text-sm space-y-4 mb-8 shadow-inner backdrop-blur-sm">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-zinc-200/50 dark:border-zinc-700/50 pb-3 gap-1">
-                    <span className="text-zinc-500 dark:text-zinc-400 font-medium">
-                      Target Goal
-                    </span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100 bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-lg text-right">
-                      {extractedProfile.goal}
-                    </span>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-zinc-200/50 dark:border-zinc-700/50 pb-3 gap-1">
-                    <span className="text-zinc-500 dark:text-zinc-400 font-medium">
-                      Weekly Capacity
-                    </span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100">
-                      {extractedProfile.weeklyHours} hrs/week
-                    </span>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-zinc-200/50 dark:border-zinc-700/50 pb-3 gap-1">
-                    <span className="text-zinc-500 dark:text-zinc-400 font-medium">
-                      Learning Modality
-                    </span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100">
-                      {extractedProfile.learningStyle}
-                    </span>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                    <span className="text-zinc-500 dark:text-zinc-400 font-medium">
-                      Current Baseline
-                    </span>
-                    <span className="font-bold text-zinc-900 dark:text-zinc-100">
-                      {extractedProfile.experienceLevel}
-                    </span>
-                  </div>
+                <div className="space-y-4">
+                  {quizQuestions.map((q, qIdx) => (
+                    <div
+                      key={qIdx}
+                      className="p-4 rounded-xl bg-white border border-[#1A1A1A]/15 space-y-3"
+                    >
+                      <p className="text-sm font-medium text-[#1A1A1A]">
+                        <span className="font-mono font-bold mr-1.5 text-xs text-[#777]">
+                          Q{qIdx + 1}.
+                        </span>
+                        {q.question}
+                      </p>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {q.options.map((opt, optIdx) => {
+                          const isSelected = selectedAnswers[qIdx] === opt;
+                          const isCorrect = opt === q.correctAnswer;
+                          let btnStyle = "bg-[#FAF9F6] border-[#1A1A1A]/15 text-[#333] hover:border-[#1A1A1A]";
+
+                          if (quizSubmitted) {
+                            if (isCorrect) {
+                              btnStyle = "bg-emerald-50 border-emerald-500 text-emerald-900 font-semibold";
+                            } else if (isSelected && !isCorrect) {
+                              btnStyle = "bg-red-50 border-red-400 text-red-800 line-through";
+                            }
+                          } else if (isSelected) {
+                            btnStyle = "bg-[#1A1A1A] text-white border-[#1A1A1A]";
+                          }
+
+                          return (
+                            <button
+                              key={optIdx}
+                              disabled={quizSubmitted}
+                              onClick={() => handleSelectOption(qIdx, opt)}
+                              className={`text-left p-3 rounded-lg border text-xs transition-all cursor-pointer flex items-start gap-2 ${btnStyle}`}
+                            >
+                              <span className="font-mono text-[10px] opacity-60 shrink-0 mt-0.5">
+                                {String.fromCharCode(65 + optIdx)}.
+                              </span>
+                              <span>{opt}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      {quizSubmitted && (
+                        <p className="text-xs text-emerald-800 bg-emerald-50 p-2.5 rounded border border-emerald-200 mt-2 font-sans leading-relaxed">
+                          <strong>Rationale:</strong> {q.explanation}
+                        </p>
+                      )}
+                    </div>
+                  ))}
                 </div>
 
-                <a
-                  href="/dashboard"
-                  className="group/btn relative flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 bg-zinc-900 dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-100 text-white dark:text-zinc-900 rounded-2xl font-bold text-sm transition-all shadow-xl shadow-zinc-900/20 active:scale-95 overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[200%] group-hover/btn:translate-x-[200%] transition-transform duration-1000" />
-                  <span className="relative z-10">Generate Adaptive Path</span>
-                  <ArrowRight className="w-5 h-5 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
-                </a>
+                {!quizSubmitted ? (
+                  <button
+                    onClick={handleSubmitQuiz}
+                    disabled={Object.keys(selectedAnswers).length < quizQuestions.length}
+                    className={`w-full py-3 px-6 rounded-xl font-mono uppercase text-xs tracking-wider font-bold transition-all cursor-pointer ${
+                      Object.keys(selectedAnswers).length === quizQuestions.length
+                        ? "bg-[#1A1A1A] text-white hover:bg-black shadow-md"
+                        : "bg-[#EAE8E1] text-[#888] cursor-not-allowed"
+                    }`}
+                  >
+                    Submit Assessment & Calibrate Bayesian Model
+                  </button>
+                ) : (
+                  <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-300 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                      <div className="flex items-center gap-2 text-emerald-900 font-bold text-sm font-mono">
+                        <Check className="w-4 h-4 text-emerald-600" />
+                        Diagnostic Calibrated: {(quizScore || 0).toFixed(1)} / 5.0
+                      </div>
+                      <p className="text-xs text-emerald-700 font-sans mt-0.5">
+                        Bayesian Knowledge Tracing updated with empirical evidence.
+                      </p>
+                    </div>
+
+                    <button
+                      onClick={() => router.push("/dashboard")}
+                      className="px-6 py-2.5 bg-[#1A1A1A] hover:bg-black text-white rounded-lg font-mono text-xs uppercase tracking-wider font-bold transition-all flex items-center gap-2 shrink-0 cursor-pointer shadow"
+                    >
+                      <span>Explore DAG Roadmap</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           )}
@@ -344,20 +523,15 @@ export default function OnboardingPage() {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Input & Quick Replies Footer */}
+        {/* Chat Input & Quick Replies Footer */}
         {!isCompleted && (
-          <footer className="p-4 sm:p-6 border-t border-white/40 dark:border-zinc-800/40 bg-white/30 dark:bg-zinc-900/30 backdrop-blur-md z-10 relative flex flex-col gap-3">
-            {/* Contextual Quick Replies Chips */}
+          <footer className="p-4 sm:p-6 border-t border-[#1A1A1A]/15 bg-[#F8F7F4] flex flex-col gap-3">
             {hasQuickReplies && (
-              <div className="animate-in fade-in slide-in-from-bottom-2 duration-300">
-                <QuickReplyChips
-                  options={lastMessage.quick_replies!}
-                  onSelect={handleSendMessage}
-                />
-              </div>
+              <QuickReplyChips
+                options={lastMessage.quick_replies!}
+                onSelect={handleSendMessage}
+              />
             )}
-
-            {/* Always Available Free-form Text Input (ChatGPT / Gemini style) */}
             <ChatInput onSend={handleSendMessage} disabled={loading} />
           </footer>
         )}

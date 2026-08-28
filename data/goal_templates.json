@@ -1,77 +1,233 @@
 [
   {
-    "id": "goal_data_analyst",
-    "goal_name": "Data Analyst",
+    "id": "goal_full_stack",
+    "goal_name": "Full Stack Web Development",
     "required_skills": [
       {
+        "skill": "HTML & CSS",
+        "min_level": 4
+      },
+      {
+        "skill": "JavaScript",
+        "min_level": 4
+      },
+      {
+        "skill": "TypeScript",
+        "min_level": 4
+      },
+      {
+        "skill": "React",
+        "min_level": 4
+      },
+      {
+        "skill": "Next.js",
+        "min_level": 4
+      },
+      {
+        "skill": "Node.js",
+        "min_level": 4
+      },
+      {
+        "skill": "PostgreSQL & SQL",
+        "min_level": 3
+      },
+      {
+        "skill": "REST & GraphQL APIs",
+        "min_level": 4
+      },
+      {
+        "skill": "Authentication & Security",
+        "min_level": 3
+      },
+      {
+        "skill": "Docker & Deployment",
+        "min_level": 3
+      }
+    ]
+  },
+  {
+    "id": "goal_frontend",
+    "goal_name": "Frontend Development",
+    "required_skills": [
+      {
+        "skill": "HTML & CSS",
+        "min_level": 5
+      },
+      {
+        "skill": "JavaScript",
+        "min_level": 5
+      },
+      {
+        "skill": "TypeScript",
+        "min_level": 4
+      },
+      {
+        "skill": "React",
+        "min_level": 5
+      },
+      {
+        "skill": "Next.js",
+        "min_level": 4
+      },
+      {
+        "skill": "State Management",
+        "min_level": 4
+      },
+      {
+        "skill": "Web Performance & Core Web Vitals",
+        "min_level": 4
+      },
+      {
+        "skill": "Testing & QA (Jest/Cypress)",
+        "min_level": 3
+      }
+    ]
+  },
+  {
+    "id": "goal_backend",
+    "goal_name": "Backend Systems & Architecture",
+    "required_skills": [
+      {
+        "skill": "Node.js",
+        "min_level": 4
+      },
+      {
         "skill": "Python",
+        "min_level": 4
+      },
+      {
+        "skill": "PostgreSQL & SQL",
+        "min_level": 5
+      },
+      {
+        "skill": "REST & GraphQL APIs",
+        "min_level": 4
+      },
+      {
+        "skill": "Redis & Caching",
+        "min_level": 4
+      },
+      {
+        "skill": "Message Queues & Kafka",
         "min_level": 3
       },
       {
-        "skill": "SQL",
+        "skill": "Distributed Systems & Scalability",
         "min_level": 4
       },
       {
-        "skill": "Statistics",
+        "skill": "Docker & Deployment",
         "min_level": 3
-      },
-      {
-        "skill": "Pandas",
-        "min_level": 4
-      },
-      {
-        "skill": "Data Visualization",
-        "min_level": 4
-      },
-      {
-        "skill": "Excel",
-        "min_level": 4
-      },
-      {
-        "skill": "Data Cleaning",
-        "min_level": 4
       }
     ]
   },
   {
     "id": "goal_ml_engineer",
-    "goal_name": "ML Engineer",
+    "goal_name": "AI Engineering & Machine Learning",
     "required_skills": [
       {
         "skill": "Python",
-        "min_level": 4
-      },
-      {
-        "skill": "SQL",
-        "min_level": 3
-      },
-      {
-        "skill": "Statistics",
-        "min_level": 4
+        "min_level": 5
       },
       {
         "skill": "Linear Algebra",
         "min_level": 4
       },
       {
-        "skill": "Calculus",
+        "skill": "Calculus & Optimization",
         "min_level": 3
       },
       {
-        "skill": "Pandas",
+        "skill": "Statistics & Probability",
         "min_level": 4
       },
       {
-        "skill": "Machine Learning",
+        "skill": "Pandas & Data Processing",
+        "min_level": 4
+      },
+      {
+        "skill": "Machine Learning (Scikit-Learn)",
         "min_level": 5
       },
       {
-        "skill": "Deep Learning",
+        "skill": "Deep Learning & PyTorch",
         "min_level": 4
       },
       {
-        "skill": "Data Cleaning",
+        "skill": "RAG & Vector Embeddings",
         "min_level": 4
+      },
+      {
+        "skill": "LLM Agents & Tool Calling",
+        "min_level": 4
+      }
+    ]
+  },
+  {
+    "id": "goal_devops",
+    "goal_name": "DevOps & Cloud Engineering",
+    "required_skills": [
+      {
+        "skill": "Linux & Shell Scripting",
+        "min_level": 4
+      },
+      {
+        "skill": "Networking & Protocols",
+        "min_level": 4
+      },
+      {
+        "skill": "Docker & Containers",
+        "min_level": 5
+      },
+      {
+        "skill": "CI/CD (GitHub Actions)",
+        "min_level": 4
+      },
+      {
+        "skill": "Terraform & IaC",
+        "min_level": 4
+      },
+      {
+        "skill": "Kubernetes & Orchestration",
+        "min_level": 4
+      },
+      {
+        "skill": "Monitoring & Observability",
+        "min_level": 3
+      }
+    ]
+  },
+  {
+    "id": "goal_data_analyst",
+    "goal_name": "Data Analytics & Engineering",
+    "required_skills": [
+      {
+        "skill": "SQL",
+        "min_level": 5
+      },
+      {
+        "skill": "Python",
+        "min_level": 4
+      },
+      {
+        "skill": "Pandas & Data Processing",
+        "min_level": 5
+      },
+      {
+        "skill": "Data Visualization & Dashboards",
+        "min_level": 4
+      },
+      {
+        "skill": "Data Cleaning & Transformation",
+        "min_level": 4
+      },
+      {
+        "skill": "dbt & Data Modeling",
+        "min_level": 3
+      },
+      {
+        "skill": "Data Warehousing (Snowflake/BigQuery)",
+        "min_level": 3
       }
     ]
   }

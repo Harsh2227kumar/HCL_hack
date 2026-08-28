@@ -1,62 +1,142 @@
 [
   {
-    "id": "dep_ml_la",
-    "skill_name": "Machine Learning",
-    "depends_on_skill_name": "Linear Algebra"
+    "id": "dep_js_html",
+    "skill_name": "JavaScript",
+    "depends_on_skill_name": "HTML & CSS"
   },
   {
-    "id": "dep_dl_la",
-    "skill_name": "Deep Learning",
+    "id": "dep_ts_js",
+    "skill_name": "TypeScript",
+    "depends_on_skill_name": "JavaScript"
+  },
+  {
+    "id": "dep_react_js",
+    "skill_name": "React",
+    "depends_on_skill_name": "JavaScript"
+  },
+  {
+    "id": "dep_react_ts",
+    "skill_name": "React",
+    "depends_on_skill_name": "TypeScript"
+  },
+  {
+    "id": "dep_next_react",
+    "skill_name": "Next.js",
+    "depends_on_skill_name": "React"
+  },
+  {
+    "id": "dep_node_js",
+    "skill_name": "Node.js",
+    "depends_on_skill_name": "JavaScript"
+  },
+  {
+    "id": "dep_api_node",
+    "skill_name": "REST & GraphQL APIs",
+    "depends_on_skill_name": "Node.js"
+  },
+  {
+    "id": "dep_auth_api",
+    "skill_name": "Authentication & Security",
+    "depends_on_skill_name": "REST & GraphQL APIs"
+  },
+  {
+    "id": "dep_fs_next",
+    "skill_name": "Full Stack Architecture",
+    "depends_on_skill_name": "Next.js"
+  },
+  {
+    "id": "dep_fs_sql",
+    "skill_name": "Full Stack Architecture",
+    "depends_on_skill_name": "PostgreSQL & SQL"
+  },
+  {
+    "id": "dep_redis_node",
+    "skill_name": "Redis & Caching",
+    "depends_on_skill_name": "Node.js"
+  },
+  {
+    "id": "dep_kafka_node",
+    "skill_name": "Message Queues & Kafka",
+    "depends_on_skill_name": "Node.js"
+  },
+  {
+    "id": "dep_dist_redis",
+    "skill_name": "Distributed Systems & Scalability",
+    "depends_on_skill_name": "Redis & Caching"
+  },
+  {
+    "id": "dep_dist_kafka",
+    "skill_name": "Distributed Systems & Scalability",
+    "depends_on_skill_name": "Message Queues & Kafka"
+  },
+  {
+    "id": "dep_pandas_py",
+    "skill_name": "Pandas & Data Processing",
+    "depends_on_skill_name": "Python"
+  },
+  {
+    "id": "dep_ml_la",
+    "skill_name": "Machine Learning (Scikit-Learn)",
     "depends_on_skill_name": "Linear Algebra"
   },
   {
     "id": "dep_ml_calc",
-    "skill_name": "Machine Learning",
-    "depends_on_skill_name": "Calculus"
-  },
-  {
-    "id": "dep_dl_calc",
-    "skill_name": "Deep Learning",
-    "depends_on_skill_name": "Calculus"
-  },
-  {
-    "id": "dep_dl_ml",
-    "skill_name": "Deep Learning",
-    "depends_on_skill_name": "Machine Learning"
+    "skill_name": "Machine Learning (Scikit-Learn)",
+    "depends_on_skill_name": "Calculus & Optimization"
   },
   {
     "id": "dep_ml_stats",
-    "skill_name": "Machine Learning",
-    "depends_on_skill_name": "Statistics"
+    "skill_name": "Machine Learning (Scikit-Learn)",
+    "depends_on_skill_name": "Statistics & Probability"
   },
   {
     "id": "dep_ml_pandas",
-    "skill_name": "Machine Learning",
-    "depends_on_skill_name": "Pandas"
+    "skill_name": "Machine Learning (Scikit-Learn)",
+    "depends_on_skill_name": "Pandas & Data Processing"
   },
   {
-    "id": "dep_pandas_py",
-    "skill_name": "Pandas",
-    "depends_on_skill_name": "Python"
+    "id": "dep_dl_ml",
+    "skill_name": "Deep Learning & PyTorch",
+    "depends_on_skill_name": "Machine Learning (Scikit-Learn)"
   },
   {
-    "id": "dep_datavis_pandas",
-    "skill_name": "Data Visualization",
-    "depends_on_skill_name": "Pandas"
+    "id": "dep_rag_dl",
+    "skill_name": "RAG & Vector Embeddings",
+    "depends_on_skill_name": "Deep Learning & PyTorch"
   },
   {
-    "id": "dep_dataclean_pandas",
-    "skill_name": "Data Cleaning",
-    "depends_on_skill_name": "Pandas"
+    "id": "dep_agents_rag",
+    "skill_name": "LLM Agents & Tool Calling",
+    "depends_on_skill_name": "RAG & Vector Embeddings"
   },
   {
-    "id": "dep_dataclean_sql",
-    "skill_name": "Data Cleaning",
-    "depends_on_skill_name": "SQL"
+    "id": "dep_docker_linux",
+    "skill_name": "Docker & Containers",
+    "depends_on_skill_name": "Linux & Shell Scripting"
   },
   {
-    "id": "dep_stats_py",
-    "skill_name": "Statistics",
-    "depends_on_skill_name": "Python"
+    "id": "dep_cicd_docker",
+    "skill_name": "CI/CD (GitHub Actions)",
+    "depends_on_skill_name": "Docker & Containers"
+  },
+  {
+    "id": "dep_tf_cloud",
+    "skill_name": "Terraform & IaC",
+    "depends_on_skill_name": "Linux & Shell Scripting"
+  },
+  {
+    "id": "dep_k8s_docker",
+    "skill_name": "Kubernetes & Orchestration",
+    "depends_on_skill_name": "Docker & Containers"
+  },
+  {
+    "id": "dep_k8s_tf",
+    "skill_name": "Kubernetes & Orchestration",
+    "depends_on_skill_name": "Terraform & IaC"
+  },
+  {
+    "id": "dep_obs_k8s",
+    "skill_name": "Monitoring & Observability",
+    "depends_on_skill_name": "Kubernetes & Orchestration"
   }
 ]
