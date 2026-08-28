@@ -185,7 +185,7 @@
     "type": "course",
     "provider": "Stanford Online",
     "description": "Random variables, probability distributions, Bayes theorem, p-values, confidence intervals, and regression analysis.",
-    "url": "https://online.stanford.edu/courses/stats-110-introduction-probability",
+    "url": "https://stats110.org",
     "skills_taught": [
       "Statistics & Probability"
     ],
@@ -364,5 +364,494 @@
     "difficulty": "intermediate",
     "duration_hours": 15.0,
     "format": "project"
+  },
+  {
+    "id": "res_fe_01",
+    "title": "CSS Grid & Flexbox Layout Engine Masterclass",
+    "type": "course",
+    "provider": "MDN / web.dev",
+    "description": "Deep dive into CSS grid, subgrids, flexbox, alignment, media queries, container queries, and responsive web design.",
+    "url": "https://web.dev/learn/css/",
+    "skills_taught": [
+      "HTML & CSS"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "beginner",
+    "duration_hours": 15.0,
+    "format": "text"
+  },
+  {
+    "id": "res_fe_02",
+    "title": "Advanced React State Orchestration (Redux & Zustand)",
+    "type": "course",
+    "provider": "Zustand Official Docs",
+    "description": "Learn state management paradigms, context API vs atomic state, Redux Toolkit, and Zustand for highly interactive frontends.",
+    "url": "https://zustand-demo.pmnd.rs/",
+    "skills_taught": [
+      "State Management"
+    ],
+    "prerequisite_skills": [
+      "React"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 12.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_fe_03",
+    "title": "Testing React Applications with Vitest & Cypress",
+    "type": "course",
+    "provider": "Cypress Academy",
+    "description": "Unit testing components, mock network requests with MSW, and writing end-to-end integration tests using Cypress.",
+    "url": "https://docs.cypress.io/",
+    "skills_taught": [
+      "Testing & QA (Jest/Cypress)"
+    ],
+    "prerequisite_skills": [
+      "React",
+      "JavaScript"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 18.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_fe_04",
+    "title": "Web Performance & Core Web Vitals Optimization",
+    "type": "course",
+    "provider": "Google Developer Group",
+    "description": "Master INP, LCP, CLS, bundle optimization, tree-shaking, lazy-loading, and browser paint rendering loops.",
+    "url": "https://web.dev/vitals/",
+    "skills_taught": [
+      "Web Performance & Core Web Vitals"
+    ],
+    "prerequisite_skills": [
+      "JavaScript",
+      "HTML & CSS"
+    ],
+    "difficulty": "advanced",
+    "duration_hours": 10.0,
+    "format": "video"
+  },
+  {
+    "id": "res_be_01",
+    "title": "Database Systems: Relational Internals & Index Optimization",
+    "type": "course",
+    "provider": "Carnegie Mellon University",
+    "description": "Deep dive into B-Trees, LSM-Trees, buffer pool managers, concurrency control, WAL logs, and EXPLAIN query analysis.",
+    "url": "https://15445.courses.cs.cmu.edu/",
+    "skills_taught": [
+      "PostgreSQL & SQL"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "advanced",
+    "duration_hours": 45.0,
+    "format": "video"
+  },
+  {
+    "id": "res_be_02",
+    "title": "Redis Architecture, Caching Patterns & Distributed Locks",
+    "type": "course",
+    "provider": "Redis University",
+    "description": "Cache-Aside, Write-Through, Write-Behind, Redlock algorithm, sliding window rate limiters, and cluster sharding.",
+    "url": "https://university.redis.com/",
+    "skills_taught": [
+      "Redis & Caching"
+    ],
+    "prerequisite_skills": [
+      "Node.js"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 16.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_be_03",
+    "title": "Apache Kafka: Event-Driven Architectures and Event Sourcing",
+    "type": "course",
+    "provider": "Confluent Developer",
+    "description": "Consumer groups, partition rebalancing, exactly-once processing (EOS), Schema Registry, and stream processing with ksqlDB.",
+    "url": "https://developer.confluent.io/",
+    "skills_taught": [
+      "Message Queues & Kafka"
+    ],
+    "prerequisite_skills": [
+      "Node.js"
+    ],
+    "difficulty": "advanced",
+    "duration_hours": 22.0,
+    "format": "video"
+  },
+  {
+    "id": "res_be_04",
+    "title": "Distributed Systems Patterns: Consensus, Raft & Partitioning",
+    "type": "course",
+    "provider": "MIT OpenCourseWare (6.824)",
+    "description": "CAP theorem, PACELC, vector clocks, Raft consensus protocol, split-brain resolution, and dynamic partitioning.",
+    "url": "https://pdos.csail.mit.edu/6.824/",
+    "skills_taught": [
+      "Distributed Systems & Scalability"
+    ],
+    "prerequisite_skills": [
+      "PostgreSQL & SQL",
+      "Redis & Caching",
+      "Message Queues & Kafka"
+    ],
+    "difficulty": "advanced",
+    "duration_hours": 38.0,
+    "format": "video"
+  },
+  {
+    "id": "res_data_01",
+    "title": "SQL for Data Science & Advanced Analytical Queries",
+    "type": "course",
+    "provider": "LeetCode / Mode Analytics",
+    "description": "Window functions, common table expressions (CTEs), cumulative aggregations, query profiling, and data formatting.",
+    "url": "https://mode.com/sql-tutorial/",
+    "skills_taught": [
+      "SQL",
+      "PostgreSQL & SQL"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "intermediate",
+    "duration_hours": 20.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_data_02",
+    "title": "Data Cleaning, Imputation, & Feature Engineering",
+    "type": "course",
+    "provider": "Kaggle Learning",
+    "description": "Handling missing values, outlier detection, data normalization, encoding categorical variables, and automated transformation pipelines.",
+    "url": "https://www.kaggle.com/learn/data-cleaning",
+    "skills_taught": [
+      "Data Cleaning & Transformation"
+    ],
+    "prerequisite_skills": [
+      "Python",
+      "Pandas & Data Processing"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 12.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_data_03",
+    "title": "dbt (Data Build Tool) & Analytics Engineering Workflows",
+    "type": "course",
+    "provider": "dbt Labs",
+    "description": "Transforming raw warehouse data into clean models using SELECT statements, writing schema tests, and documenting lineage.",
+    "url": "https://courses.getdbt.com/",
+    "skills_taught": [
+      "dbt & Data Modeling"
+    ],
+    "prerequisite_skills": [
+      "SQL"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 14.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_data_04",
+    "title": "Data Warehousing Internals (Snowflake & Google BigQuery)",
+    "type": "course",
+    "provider": "Snowflake University",
+    "description": "Cloud data warehouse architecture, micro-partitioning, clustering keys, materialized views, and storage compression models.",
+    "url": "https://quickstarts.snowflake.com/",
+    "skills_taught": [
+      "Data Warehousing (Snowflake/BigQuery)"
+    ],
+    "prerequisite_skills": [
+      "SQL"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 18.0,
+    "format": "text"
+  },
+  {
+    "id": "res_data_05",
+    "title": "Data Visualization Best Practices & Interactive Dashboards",
+    "type": "course",
+    "provider": "Tableau / Grafana Labs",
+    "description": "Design principles, selecting chart types, visual hierarchy, dashboard user experience, and streaming dashboard configuration.",
+    "url": "https://www.tableau.com/learn/training",
+    "skills_taught": [
+      "Data Visualization & Dashboards"
+    ],
+    "prerequisite_skills": [
+      "SQL"
+    ],
+    "difficulty": "beginner",
+    "duration_hours": 15.0,
+    "format": "video"
+  },
+  {
+    "id": "res_sec_01",
+    "title": "Foundations of Cryptography & Private Key Infrastructure",
+    "type": "course",
+    "provider": "Stanford Online",
+    "description": "Symmetric and asymmetric encryption, public key cryptography, SHA hashing algorithms, digital signatures, and PKI setups.",
+    "url": "https://online.stanford.edu/courses/cs255-introduction-cryptography",
+    "skills_taught": [
+      "Authentication & Security"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "intermediate",
+    "duration_hours": 28.0,
+    "format": "video"
+  },
+  {
+    "id": "res_sec_02",
+    "title": "Practical Application Security & Code Vulnerability Scanning",
+    "type": "course",
+    "provider": "Snyk Academy",
+    "description": "Writing secure code, analyzing dependency trees for CVEs, using SAST/DAST tools, and automating scanning in pipelines.",
+    "url": "https://learn.snyk.io/",
+    "skills_taught": [
+      "Authentication & Security"
+    ],
+    "prerequisite_skills": [
+      "Linux & Shell Scripting"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 14.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_sec_03",
+    "title": "OAuth 2.0 and OpenID Connect (OIDC) Protocols",
+    "type": "course",
+    "provider": "Okta Developer",
+    "description": "Grant types, authorization code flow with PKCE, identity tokens vs access tokens, scope boundaries, and JWT signing verification.",
+    "url": "https://developer.okta.com/docs/concepts/oauth-openid/",
+    "skills_taught": [
+      "Authentication & Security"
+    ],
+    "prerequisite_skills": [
+      "REST & GraphQL APIs"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 10.0,
+    "format": "text"
+  },
+  {
+    "id": "res_sec_04",
+    "title": "Infrastructure & Network Security Auditing",
+    "type": "project",
+    "provider": "Offensive Security / Kali Labs",
+    "description": "Port scanning with nmap, auditing firewalls, configuring network policies in Kubernetes, and tracing packet routes.",
+    "url": "https://www.offsec.com/",
+    "skills_taught": [
+      "Authentication & Security"
+    ],
+    "prerequisite_skills": [
+      "Networking & Protocols",
+      "Linux & Shell Scripting"
+    ],
+    "difficulty": "advanced",
+    "duration_hours": 24.0,
+    "format": "project"
+  },
+  {
+    "id": "res_fs_09",
+    "title": "Modern CSS Frameworks (Tailwind CSS & PostCSS)",
+    "type": "course",
+    "provider": "Tailwind Official Guide",
+    "description": "Utility-first layout, custom design tokens, responsive breakpoints, transitions, state modifiers, and bundle pruning.",
+    "url": "https://tailwindcss.com/docs",
+    "skills_taught": [
+      "HTML & CSS"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "beginner",
+    "duration_hours": 8.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_fs_10",
+    "title": "GraphQL API Design with Apollo Server & Client",
+    "type": "course",
+    "provider": "Apollo Odyssey",
+    "description": "Schemas, queries, mutations, resolvers, DataLoader pattern for N+1 queries, subscriptions, and federated graphs.",
+    "url": "https://odyssey.apollographql.com/",
+    "skills_taught": [
+      "REST & GraphQL APIs"
+    ],
+    "prerequisite_skills": [
+      "Node.js",
+      "TypeScript"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 16.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_fs_11",
+    "title": "Relational Database Design & SQL Optimization",
+    "type": "course",
+    "provider": "PostgreSQL Official Tutorial",
+    "description": "Normal forms, transactional integrity, foreign key constraints, index selection, CTEs, and trigger functions.",
+    "url": "https://www.postgresql.org/docs/current/index.html",
+    "skills_taught": [
+      "PostgreSQL & SQL"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "intermediate",
+    "duration_hours": 15.0,
+    "format": "text"
+  },
+  {
+    "id": "res_ai_09",
+    "title": "Probability & Stochastic Processes for Machine Learning",
+    "type": "course",
+    "provider": "MIT OpenCourseWare",
+    "description": "Markov chains, Gaussian processes, Bayesian inference, maximum likelihood estimation (MLE), and random walks.",
+    "url": "https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/",
+    "skills_taught": [
+      "Statistics & Probability"
+    ],
+    "prerequisite_skills": [
+      "Calculus & Optimization"
+    ],
+    "difficulty": "advanced",
+    "duration_hours": 32.0,
+    "format": "video"
+  },
+  {
+    "id": "res_ai_10",
+    "title": "Optimization Algorithms & Gradient Descent Methods",
+    "type": "course",
+    "provider": "Stanford Online",
+    "description": "Convex optimization, stochastic gradient descent (SGD), Adam, RMSprop, learning rate schedules, and convergence bounds.",
+    "url": "https://online.stanford.edu/courses/ee364a-convex-optimization-i",
+    "skills_taught": [
+      "Calculus & Optimization"
+    ],
+    "prerequisite_skills": [
+      "Linear Algebra"
+    ],
+    "difficulty": "advanced",
+    "duration_hours": 28.0,
+    "format": "video"
+  },
+  {
+    "id": "res_ai_11",
+    "title": "Advanced Pandas: Time Series & Large Dataset Operations",
+    "type": "course",
+    "provider": "Pandas Official Tutorials",
+    "description": "Resampling, rolling windows, memory optimization chunking, category types, multi-indexing, and query optimizations.",
+    "url": "https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html",
+    "skills_taught": [
+      "Pandas & Data Processing"
+    ],
+    "prerequisite_skills": [
+      "Python"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 10.0,
+    "format": "text"
+  },
+  {
+    "id": "res_ai_12",
+    "title": "Practical ML Ops: Model Deployment & Monitoring",
+    "type": "course",
+    "provider": "Google Cloud Skills Boost",
+    "description": "ML pipelines (TFX), model registries (Vertex AI), prediction serialization, drift detection, and automated CI/CD retraining.",
+    "url": "https://www.cloudskillsboost.google/paths/17",
+    "skills_taught": [
+      "Machine Learning (Scikit-Learn)"
+    ],
+    "prerequisite_skills": [
+      "Machine Learning (Scikit-Learn)",
+      "Docker & Containers"
+    ],
+    "difficulty": "advanced",
+    "duration_hours": 24.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_ai_13",
+    "title": "Hugging Face Transformers Masterclass",
+    "type": "course",
+    "provider": "Hugging Face Course",
+    "description": "Fine-tuning pre-trained models, text classification, NER, question-answering, tokenizers, and model hub deployment.",
+    "url": "https://huggingface.co/course/chapter1",
+    "skills_taught": [
+      "Deep Learning & PyTorch"
+    ],
+    "prerequisite_skills": [
+      "Deep Learning & PyTorch"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 18.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_devops_06",
+    "title": "Shell Scripting and Command Line Productivity",
+    "type": "course",
+    "provider": "MIT Missing Semester",
+    "description": "Bash customization, environment variables, command pipeline compositions, sed/awk parsing, and cron job scheduling.",
+    "url": "https://missing.csail.mit.edu/",
+    "skills_taught": [
+      "Linux & Shell Scripting"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "beginner",
+    "duration_hours": 10.0,
+    "format": "video"
+  },
+  {
+    "id": "res_devops_07",
+    "title": "Monitoring Systems: Prometheus, Alertmanager & Grafana",
+    "type": "course",
+    "provider": "Grafana University",
+    "description": "Scrape configurations, writing PromQL queries, Alertmanager routes, SLA/SLO metric tracking, and visualizing cluster dashboards.",
+    "url": "https://grafana.com/tutorials/",
+    "skills_taught": [
+      "Monitoring & Observability"
+    ],
+    "prerequisite_skills": [
+      "Kubernetes & Orchestration"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 15.0,
+    "format": "interactive"
+  },
+  {
+    "id": "res_devops_08",
+    "title": "Distributed Logging & Tracing with OpenTelemetry",
+    "type": "course",
+    "provider": "OpenTelemetry Official Tutorials",
+    "description": "Instrumenting microservices, trace propagation across network requests, log aggregations, and exporting to Jaeger/Loki.",
+    "url": "https://opentelemetry.io/docs/concepts/signals/",
+    "skills_taught": [
+      "Monitoring & Observability"
+    ],
+    "prerequisite_skills": [
+      "Networking & Protocols",
+      "Docker & Containers"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 12.0,
+    "format": "text"
+  },
+  {
+    "id": "res_devops_09",
+    "title": "Helm Package Manager for Kubernetes",
+    "type": "course",
+    "provider": "Helm Official Docs",
+    "description": "Writing templates, value overrides, dependency management, releasing deployments, and version rollbacks.",
+    "url": "https://helm.sh/docs/",
+    "skills_taught": [
+      "Kubernetes & Orchestration"
+    ],
+    "prerequisite_skills": [
+      "Kubernetes & Orchestration"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 8.0,
+    "format": "text"
   }
 ]

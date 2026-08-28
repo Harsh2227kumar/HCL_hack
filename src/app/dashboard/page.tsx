@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { ROADMAPS, RoadmapPath, RoadmapNode } from '@/data/roadmapsData';
 import { Header, ActiveTab } from '@/components/roadmap/Header';
@@ -13,7 +13,52 @@ import { TeamMatrixView } from '@/components/roadmap/TeamMatrixView';
 import { PlaybookView } from '@/components/roadmap/PlaybookView';
 import { DesignSystemView } from '@/components/roadmap/DesignSystemView';
 import { NodeDetailDrawer } from '@/components/roadmap/NodeDetailDrawer';
-import { Sparkles, Target, AlertCircle, Clock, CheckCircle2, Zap, ArrowRight, Loader2, RefreshCw } from 'lucide-react';
+import { Sparkles, AlertCircle, Loader2 } from 'lucide-react';
+
+interface LearnerProfile {
+  userId?: string;
+  goal?: string;
+  weeklyHours?: number;
+  learningStyle?: string;
+  experienceLevel?: string;
+}
+
+interface MilestoneResource {
+  title?: string;
+  durationHours?: number;
+  format?: string;
+  skillsTaught?: string[];
+  prerequisiteSkills?: string[];
+}
+
+interface MilestoneItem {
+  id: string;
+  title?: string;
+  phase?: string;
+  status?: string;
+  reason?: string;
+  resource?: MilestoneResource;
+  score?: number;
+  scoreBreakdown?: any;
+  recommendation_status?: string;
+}
+
+interface RecommendationData {
+  goal?: string;
+  weeklyHours?: number;
+  timeToGoalWeeks?: number;
+  bottleneck?: string | null;
+  aiInsight?: string;
+  activePath?: {
+    id?: string;
+    version?: number;
+    triggerReason?: string;
+    generatedAt?: string | Date;
+    milestones?: MilestoneItem[];
+  };
+  recommendations?: unknown[];
+  reason?: string;
+}
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -22,97 +67,50 @@ export default function DashboardPage() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('dag');
   const [selectedNode, setSelectedNode] = useState<RoadmapNode | null>(null);
   
-  const [learnerProfile, setLearnerProfile] = useState<any>(null);
-  const [activeRecommendation, setActiveRecommendation] = useState<any>(null);
+  const [learnerProfile, setLearnerProfile] = useState<LearnerProfile | null>(null);
+  const [activeRecommendation, setActiveRecommendation] = useState<RecommendationData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [provider, setProvider] = useState<string | null>(null);
+  const [adaptationBanner, setAdaptationBanner] = useState<string | null>(null);
+  const [apiWarning, setApiWarning] = useState<string | null>(null);
 
-  useEffect(() => {
-    async function loadDashboardData() {
-      setLoading(true);
-      setError(null);
-
-      const rawProfile = sessionStorage.getItem('learnerProfile');
-      const rawRec = sessionStorage.getItem('activeRecommendation');
-      const aiProv = sessionStorage.getItem('aiProvider');
-      if (aiProv) setProvider(aiProv);
-
-      let profileObj = null;
-      if (rawProfile) {
-        try {
-          profileObj = JSON.parse(rawProfile);
-          setLearnerProfile(profileObj);
-        } catch (e) {
-          console.error("Failed to parse learnerProfile:", e);
-        }
-      }
-
-      // 1. Check if activeRecommendation exists in sessionStorage
-      if (rawRec) {
-        try {
-          const recObj = JSON.parse(rawRec);
-          setActiveRecommendation(recObj);
-          buildAndSetPersonalizedRoadmap(recObj, profileObj);
-          setLoading(false);
-          return;
-        } catch (e) {
-          console.error("Failed to parse activeRecommendation:", e);
-        }
-      }
-
-      // 2. If not in sessionStorage but profile exists, call /api/recommend
-      if (profileObj) {
-        try {
-          const userId = sessionStorage.getItem('userId') || profileObj.userId;
-          const res = await fetch('/api/recommend', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              userId: userId || undefined,
-              goal: profileObj.goal || 'Full Stack Web Development',
-              learnerContext: {
-                weeklyHours: profileObj.weeklyHours || 10,
-                learningStyle: profileObj.learningStyle || 'Interactive Coding',
-                experienceLevel: profileObj.experienceLevel || 'Intermediate',
-              },
-            }),
-          });
-
-          if (res.ok) {
-            const recData = await res.json();
-            setActiveRecommendation(recData);
-            sessionStorage.setItem('activeRecommendation', JSON.stringify(recData));
-            buildAndSetPersonalizedRoadmap(recData, profileObj);
-            setLoading(false);
-            return;
-          } else {
-            throw new Error(`Recommendation API responded with status ${res.status}`);
-          }
-        } catch (err: any) {
-          console.warn("Failed to fetch live recommendation, falling back to static roadmap:", err.message);
-          setError("Personalized path generation timed out. Showing fallback curriculum.");
-        }
-      }
-
-      // 3. Fallback: select static roadmap matching keyword
-      fallbackToStaticRoadmap(profileObj);
-      setLoading(false);
+  const fallbackToStaticRoadmap = useCallback((profile: LearnerProfile | null) => {
+    const goalLower = (profile?.goal || '').toLowerCase();
+    let matched = ROADMAPS[0];
+    
+    if (goalLower.includes('full') || goalLower.includes('stack') || goalLower.includes('web')) {
+      matched = ROADMAPS.find(r => r.id === 'fullstack-engineer') || ROADMAPS[0];
+    } else if (goalLower.includes('front') || goalLower.includes('react') || goalLower.includes('ui')) {
+      matched = ROADMAPS.find(r => r.id === 'frontend-developer') || ROADMAPS[0];
+    } else if (goalLower.includes('back') || goalLower.includes('system') || goalLower.includes('api')) {
+      matched = ROADMAPS.find(r => r.id === 'backend-systems') || ROADMAPS[0];
+    } else if (goalLower.includes('ai') || goalLower.includes('ml') || goalLower.includes('machine') || goalLower.includes('deep')) {
+      matched = ROADMAPS.find(r => r.id === 'ai-ml-engineer') || ROADMAPS[0];
+    } else if (goalLower.includes('devops') || goalLower.includes('cloud') || goalLower.includes('docker') || goalLower.includes('k8s')) {
+      matched = ROADMAPS.find(r => r.id === 'devops-engineer') || ROADMAPS[0];
+    } else if (goalLower.includes('sec') || goalLower.includes('cyber') || goalLower.includes('auth')) {
+      matched = ROADMAPS.find(r => r.id === 'cyber-security') || ROADMAPS[0];
+    } else if (goalLower.includes('data') || goalLower.includes('sql') || goalLower.includes('analyst')) {
+      matched = ROADMAPS.find(r => r.id === 'cloud-data-architect') || ROADMAPS[0];
+    } else if (goalLower.includes('python')) {
+      matched = ROADMAPS.find(r => r.id === 'python-developer') || ROADMAPS[0];
     }
 
-    loadDashboardData();
+    setSelectedRoadmap(matched);
   }, []);
 
-  const buildAndSetPersonalizedRoadmap = (recData: any, profile: any) => {
+  const buildAndSetPersonalizedRoadmap = useCallback((recData: RecommendationData, profile: LearnerProfile | null) => {
     const milestones = recData.activePath?.milestones || [];
     
     if (milestones.length === 0) {
+      setActiveRecommendation(null);
       fallbackToStaticRoadmap(profile);
       return;
     }
 
     // Convert real backend recommendation milestones into DAG RoadmapNode objects
-    const dynamicNodes: RoadmapNode[] = milestones.map((m: any, idx: number) => {
+    const dynamicNodes: RoadmapNode[] = milestones.map((m: MilestoneItem, idx: number) => {
       // Create dependency chain based on topological position
       const prereqs: string[] = [];
       if (idx > 0 && milestones[idx - 1]) {
@@ -138,6 +136,12 @@ export default function DashboardPage() {
         companyStandardStack: m.resource?.title || 'Production Engineering Standard',
         evaluationRubric: `Complete the ${m.resource?.title || 'module'} project challenge and verify all test assertions.`,
         status: m.status === 'completed' ? 'mastered' : m.status === 'started' ? 'in-progress' : 'not-started',
+        sourceResourceId: m.id,
+        scoreBreakdown: m.scoreBreakdown || {},
+        skillsTaught: m.resource?.skillsTaught || [],
+        prerequisiteSkills: m.resource?.prerequisiteSkills || [],
+        reason: m.reason,
+        recommendation_status: m.recommendation_status,
       };
     });
 
@@ -156,35 +160,99 @@ export default function DashboardPage() {
     // Prepend personalized track as the first and active roadmap
     setRoadmaps([personalizedTrack, ...ROADMAPS]);
     setSelectedRoadmap(personalizedTrack);
-  };
+  }, [fallbackToStaticRoadmap]);
 
-  const fallbackToStaticRoadmap = (profile: any) => {
-    const goalLower = (profile?.goal || '').toLowerCase();
-    let matched = ROADMAPS[0];
-    
-    if (goalLower.includes('full') || goalLower.includes('stack') || goalLower.includes('web')) {
-      matched = ROADMAPS.find(r => r.id === 'fullstack-engineer') || ROADMAPS[0];
-    } else if (goalLower.includes('front') || goalLower.includes('react') || goalLower.includes('ui')) {
-      matched = ROADMAPS.find(r => r.id === 'frontend-developer') || ROADMAPS[0];
-    } else if (goalLower.includes('back') || goalLower.includes('system') || goalLower.includes('api')) {
-      matched = ROADMAPS.find(r => r.id === 'backend-systems') || ROADMAPS[0];
-    } else if (goalLower.includes('ai') || goalLower.includes('ml') || goalLower.includes('machine') || goalLower.includes('deep')) {
-      matched = ROADMAPS.find(r => r.id === 'ai-ml-engineer') || ROADMAPS[0];
-    } else if (goalLower.includes('devops') || goalLower.includes('cloud') || goalLower.includes('docker') || goalLower.includes('k8s')) {
-      matched = ROADMAPS.find(r => r.id === 'devops-engineer') || ROADMAPS[0];
-    } else if (goalLower.includes('sec') || goalLower.includes('cyber') || goalLower.includes('auth')) {
-      matched = ROADMAPS.find(r => r.id === 'cyber-security') || ROADMAPS[0];
-    } else if (goalLower.includes('data') || goalLower.includes('sql') || goalLower.includes('analyst')) {
-      matched = ROADMAPS.find(r => r.id === 'cloud-data-architect') || ROADMAPS[0];
-    } else if (goalLower.includes('python')) {
-      matched = ROADMAPS.find(r => r.id === 'python-developer') || ROADMAPS[0];
+  useEffect(() => {
+    async function loadDashboardData() {
+      setLoading(true);
+      setError(null);
+
+      const rawProfile = sessionStorage.getItem('learnerProfile');
+      const rawRec = sessionStorage.getItem('activeRecommendation');
+      const aiProv = sessionStorage.getItem('aiProvider');
+      if (aiProv) setProvider(aiProv);
+
+      let profileObj: LearnerProfile | null = null;
+      if (rawProfile) {
+        try {
+          profileObj = JSON.parse(rawProfile);
+          setLearnerProfile(profileObj);
+        } catch (e) {
+          console.error("Failed to parse learnerProfile:", e);
+        }
+      }
+
+      // 1. Check if activeRecommendation exists in sessionStorage
+      if (rawRec) {
+        try {
+          const recObj: RecommendationData = JSON.parse(rawRec);
+          if (recObj.activePath?.milestones && recObj.activePath.milestones.length > 0) {
+            setActiveRecommendation(recObj);
+            buildAndSetPersonalizedRoadmap(recObj, profileObj);
+            setLoading(false);
+            return;
+          } else {
+            sessionStorage.removeItem('activeRecommendation');
+            setActiveRecommendation(null);
+            setError("Saved recommendation had no valid milestones. Showing fallback curriculum.");
+          }
+        } catch (e) {
+          console.error("Failed to parse activeRecommendation:", e);
+        }
+      }
+
+      // 2. If not in sessionStorage but profile exists, call /api/recommend
+      if (profileObj) {
+        try {
+          const userId = sessionStorage.getItem('userId') || profileObj.userId;
+          const res = await fetch('/api/recommend', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              userId: userId || undefined,
+              goal: profileObj.goal || 'Full Stack Web Development',
+              learnerContext: {
+                weeklyHours: profileObj.weeklyHours || 10,
+                learningStyle: profileObj.learningStyle || 'Interactive Coding',
+                experienceLevel: profileObj.experienceLevel || 'Intermediate',
+              },
+            }),
+          });
+
+          if (res.ok) {
+            const recData: RecommendationData = await res.json();
+            if (recData.activePath?.milestones && recData.activePath.milestones.length > 0) {
+              setActiveRecommendation(recData);
+              sessionStorage.setItem('activeRecommendation', JSON.stringify(recData));
+              buildAndSetPersonalizedRoadmap(recData, profileObj);
+              setLoading(false);
+              return;
+            } else {
+              sessionStorage.removeItem('activeRecommendation');
+              setActiveRecommendation(null);
+              throw new Error(recData.reason || "Recommendation returned no active path milestones.");
+            }
+          } else {
+            throw new Error(`Recommendation API responded with status ${res.status}`);
+          }
+        } catch (err: unknown) {
+          const errMsg = err instanceof Error ? err.message : String(err);
+          console.warn("Failed to fetch live recommendation, falling back to static roadmap:", errMsg);
+          setError("Personalized path generation returned no milestones. Showing fallback curriculum.");
+        }
+      }
+
+      // 3. Fallback: select static roadmap matching keyword
+      setActiveRecommendation(null);
+      fallbackToStaticRoadmap(profileObj);
+      setLoading(false);
     }
 
-    setSelectedRoadmap(matched);
-  };
+    loadDashboardData();
+  }, [buildAndSetPersonalizedRoadmap, fallbackToStaticRoadmap]);
 
-  // Handle status toggle (Not Started, In Progress, Mastered)
-  const handleToggleStatus = (nodeId: string, status: 'not-started' | 'in-progress' | 'mastered') => {
+  // Handle status toggle (Not Started, In Progress, Mastered, Skip, Too Hard)
+  const handleToggleStatus = (nodeId: string, status: 'not-started' | 'in-progress' | 'mastered' | 'too-hard' | 'skipped') => {
     setRoadmaps(prevRoadmaps => {
       return prevRoadmaps.map(r => {
         if (r.id === selectedRoadmap.id) {
@@ -205,18 +273,80 @@ export default function DashboardPage() {
       });
     });
 
-    // Record progress event to backend if user is authenticated
-    const userId = sessionStorage.getItem('userId');
-    if (userId) {
-      fetch('/api/progress', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          userId,
-          resourceId: nodeId,
-          eventType: status === 'mastered' ? 'completed' : 'started'
+    const isPersonalized = selectedRoadmap.id === 'personalized-engine-path';
+    const targetNode = selectedRoadmap.nodes.find(n => n.id === nodeId);
+    const sourceResourceId = targetNode?.sourceResourceId;
+
+    const shouldSync = isPersonalized || !!sourceResourceId;
+
+    if (shouldSync) {
+      const userId = sessionStorage.getItem('userId') || learnerProfile?.userId;
+      if (userId) {
+        let eventType = 'started';
+        if (status === 'mastered') eventType = 'completed';
+        else if (status === 'too-hard') eventType = 'too_hard';
+        else if (status === 'skipped') eventType = 'skipped';
+        else if (status === 'in-progress') eventType = 'started';
+        else if (status === 'not-started') eventType = 'started';
+
+        fetch('/api/progress', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            userId,
+            resourceId: sourceResourceId || nodeId,
+            eventType
+          })
         })
-      }).catch(err => console.warn('Progress update logged locally:', err));
+        .then(async (res) => {
+          if (!res.ok) {
+            throw new Error(`Progress API responded with status ${res.status}`);
+          }
+          const data = await res.json();
+          if (data.replanned) {
+            // Re-fetch the updated path/dashboard state from the database
+            const dashRes = await fetch(`/api/dashboard?userId=${userId}`);
+            if (dashRes.ok) {
+              const recData = await dashRes.json();
+              setActiveRecommendation(recData);
+              sessionStorage.setItem('activeRecommendation', JSON.stringify(recData));
+              buildAndSetPersonalizedRoadmap(recData, learnerProfile);
+              setAdaptationBanner(data.adaptationReason || "Your learning path has been adapted based on your latest activity.");
+              setApiWarning(null);
+            } else {
+              throw new Error(`Failed to load updated dashboard data (Status ${dashRes.status})`);
+            }
+          } else {
+            // Not replanned, but since we updated status on DB LearningPathItem when replanned is false,
+            // we should also update sessionStorage to make sure it matches if user refreshes.
+            const storedRecRaw = sessionStorage.getItem('activeRecommendation');
+            if (storedRecRaw) {
+              try {
+                const storedRec = JSON.parse(storedRecRaw);
+                if (storedRec?.activePath?.milestones) {
+                  storedRec.activePath.milestones = storedRec.activePath.milestones.map((m: any) => {
+                    if (m.id === (sourceResourceId || nodeId)) {
+                      return { ...m, status: status === 'mastered' ? 'completed' : status === 'too-hard' ? 'too-hard' : status === 'skipped' ? 'skipped' : status === 'in-progress' ? 'started' : 'pending' };
+                    }
+                    return m;
+                  });
+                  sessionStorage.setItem('activeRecommendation', JSON.stringify(storedRec));
+                  setActiveRecommendation(storedRec);
+                }
+              } catch (err) {
+                console.error("Failed to update cached milestones status:", err);
+              }
+            }
+            setApiWarning(null);
+          }
+        })
+        .catch(err => {
+          console.warn('Progress update error:', err);
+          setApiWarning(`Offline warning: Failed to sync status update to backend server. Event was cached locally.`);
+        });
+      }
+    } else {
+      console.warn(`Skipped backend progress sync for static fallback node: ${nodeId}`);
     }
   };
 
@@ -310,7 +440,7 @@ export default function DashboardPage() {
           <div className="flex items-center gap-2.5">
             <Sparkles className="w-4 h-4 text-emerald-700 shrink-0" />
             <span className="font-serif italic text-sm text-[#222]">
-              <strong>AI Recommendation Trace:</strong> "{activeRecommendation.aiInsight}"
+              <strong>AI Recommendation Trace:</strong> &quot;{activeRecommendation.aiInsight}&quot;
             </span>
           </div>
           {activeRecommendation.bottleneck && (
@@ -339,17 +469,88 @@ export default function DashboardPage() {
       {/* Main Tab Content Display */}
       <main className="flex-1 flex flex-col overflow-hidden relative">
         {activeTab === 'dag' && (
-          <DAGVisualizer
-            roadmaps={roadmaps}
-            selectedRoadmap={selectedRoadmap}
-            onSelectRoadmap={(r) => {
-              setSelectedRoadmap(r);
-              setSelectedNode(null);
-            }}
-            selectedNode={selectedNode}
-            onSelectNode={setSelectedNode}
-            onToggleStatus={handleToggleStatus}
-          />
+          <>
+            {/* Engine Summary Panel / Fallback Banner */}
+            {activeRecommendation ? (
+              <div className="bg-[#E8F5E9] border-b border-[#2E7D32]/30 px-4 sm:px-8 py-3.5 text-xs font-mono text-[#1B5E20] flex flex-wrap gap-x-6 gap-y-2 items-center justify-between shadow-sm shrink-0">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                  <span className="font-bold uppercase tracking-wider text-emerald-800 bg-emerald-200 px-2 py-0.5 rounded text-[10px] animate-pulse">
+                    Generated by hybrid recommendation engine
+                  </span>
+                  <span><strong>Goal:</strong> {activeRecommendation.goal}</span>
+                  <span><strong>Weekly Hours:</strong> {activeRecommendation.weeklyHours || 10}h/wk</span>
+                  <span><strong>Est. Weeks:</strong> {activeRecommendation.timeToGoalWeeks || 12}</span>
+                  <span><strong>Milestones Count:</strong> {activeRecommendation.activePath?.milestones?.length || 0}</span>
+                  {activeRecommendation.bottleneck && (
+                    <span className="text-[#B71C1C] font-semibold bg-red-100 px-1.5 py-0.5 rounded">
+                      <strong>Bottleneck:</strong> {activeRecommendation.bottleneck}
+                    </span>
+                  )}
+                </div>
+                {activeRecommendation.activePath?.milestones && activeRecommendation.activePath.milestones.length > 0 && (
+                  <div className="text-[11px] font-sans text-emerald-950 font-medium">
+                    🎯 <strong>Next Best Action:</strong> {activeRecommendation.activePath.milestones[0].resource?.title || activeRecommendation.activePath.milestones[0].title || 'Start path'}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="bg-[#FFF8E1] border-b border-[#F57F17]/30 px-4 sm:px-8 py-2.5 text-xs font-mono text-[#F57F17] flex items-center justify-between shrink-0">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold uppercase bg-amber-200 text-amber-900 px-2 py-0.5 rounded text-[10px]">
+                    Fallback static curriculum
+                  </span>
+                  <span>This curriculum is a standardized template. Take a diagnostic to generate a personalized learning path.</span>
+                </div>
+              </div>
+            )}
+
+            {adaptationBanner && (
+              <div className="bg-indigo-50 border-b border-indigo-200 px-4 sm:px-8 py-3 text-xs font-mono text-indigo-900 flex items-center justify-between shrink-0 animate-in slide-in-from-top duration-300">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold uppercase bg-indigo-100 text-indigo-900 border border-indigo-300 px-2 py-0.5 rounded text-[10px] flex items-center gap-1">
+                    <Sparkles className="w-3.5 h-3.5 text-indigo-650" /> Path Adapted
+                  </span>
+                  <span>{adaptationBanner}</span>
+                </div>
+                <button
+                  onClick={() => setAdaptationBanner(null)}
+                  className="text-indigo-500 hover:text-indigo-800 font-bold ml-4 cursor-pointer"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
+
+            {apiWarning && (
+              <div className="bg-rose-50 border-b border-rose-200 px-4 sm:px-8 py-3 text-xs font-mono text-rose-950 flex items-center justify-between shrink-0 animate-in slide-in-from-top duration-300">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold uppercase bg-rose-200 text-rose-900 px-2 py-0.5 rounded text-[10px] flex items-center gap-1">
+                    <AlertCircle className="w-3.5 h-3.5 text-rose-700" /> Offline Mode
+                  </span>
+                  <span>{apiWarning}</span>
+                </div>
+                <button
+                  onClick={() => setApiWarning(null)}
+                  className="text-rose-500 hover:text-rose-800 font-bold ml-4 cursor-pointer"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
+
+            <DAGVisualizer
+              roadmaps={roadmaps}
+              selectedRoadmap={selectedRoadmap}
+              onSelectRoadmap={(r) => {
+                setSelectedRoadmap(r);
+                setSelectedNode(null);
+              }}
+              selectedNode={selectedNode}
+              onSelectNode={setSelectedNode}
+              onToggleStatus={handleToggleStatus}
+              activeRecommendation={activeRecommendation}
+            />
+          </>
         )}
 
         {activeTab === 'knowledge-graph' && <KnowledgeGraph />}

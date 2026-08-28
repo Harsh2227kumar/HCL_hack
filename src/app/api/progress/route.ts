@@ -119,6 +119,22 @@ export async function POST(request: Request) {
     const impact = evaluateImpact(coreEvent, context);
 
     if (!impact.replan) {
+      const latestPath = await prisma.learningPath.findFirst({
+        where: { userId },
+        orderBy: { version: 'desc' },
+      });
+      if (latestPath) {
+        await prisma.learningPathItem.updateMany({
+          where: {
+            pathId: latestPath.id,
+            resourceId: resourceId,
+          },
+          data: {
+            status: eventType === 'completed' ? 'completed' : eventType === 'skipped' ? 'skipped' : 'started',
+          },
+        });
+      }
+
       return NextResponse.json({
         event: progressRecord,
         replanned: false,
@@ -195,7 +211,23 @@ Write 1 clear, encouraging 1-2 sentence adaptation banner.`;
         },
       },
       include: {
-        items: { orderBy: { position: 'asc' } },
+        items: {
+          orderBy: { position: 'asc' },
+          include: {
+            resource: {
+              select: {
+                id: true,
+                title: true,
+                type: true,
+                difficulty: true,
+                durationHours: true,
+                format: true,
+                skillsTaught: true,
+                prerequisiteSkills: true,
+              },
+            },
+          },
+        },
       },
     });
 

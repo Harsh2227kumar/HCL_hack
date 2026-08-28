@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { X, CheckCircle2, Clock, AlertCircle, ArrowRight, ArrowLeft, ExternalLink, ShieldCheck, Terminal, Award, Sparkles, Bot } from 'lucide-react';
+import { X, CheckCircle2, Clock, AlertCircle, ArrowRight, ArrowLeft, ExternalLink, ShieldCheck, Terminal, Award, Sparkles } from 'lucide-react';
 import { RoadmapNode, RoadmapPath } from '@/data/roadmapsData';
 
 interface NodeDetailDrawerProps {
@@ -9,8 +9,62 @@ interface NodeDetailDrawerProps {
   roadmap: RoadmapPath;
   onClose: () => void;
   onSelectNode: (nodeId: string) => void;
-  onToggleStatus: (nodeId: string, status: 'not-started' | 'in-progress' | 'mastered') => void;
+  onToggleStatus: (nodeId: string, status: 'not-started' | 'in-progress' | 'mastered' | 'too-hard' | 'skipped') => void;
 }
+
+const getExplanationFromBreakdown = (scoreBreakdown: any) => {
+  if (!scoreBreakdown) return '';
+  
+  const skillGap = scoreBreakdown.skill_gap_match ?? 0;
+  const prereqFit = scoreBreakdown.prerequisite_fit ?? 0;
+  const semanticFit = (scoreBreakdown.retrievalSimilarity !== undefined ? scoreBreakdown.retrievalSimilarity : scoreBreakdown.retrieval_similarity) ?? 0;
+  const difficultyFit = scoreBreakdown.difficulty_fit ?? 0;
+  const timeFit = scoreBreakdown.time_fit ?? 0;
+  const styleFit = scoreBreakdown.learning_style_fit ?? 0;
+
+  const points: string[] = [];
+  if (skillGap >= 0.7) {
+    points.push("it directly targets major gaps in your technical skill profile");
+  } else if (skillGap >= 0.4) {
+    points.push("it helps bridge your intermediate skill gaps");
+  }
+
+  if (prereqFit >= 0.8) {
+    points.push("you possess strong foundational prerequisites for it");
+  } else if (prereqFit >= 0.4) {
+    points.push("you meet the necessary prerequisites to start this topic");
+  } else {
+    points.push("it builds fundamental concepts to prepare you for subsequent steps");
+  }
+
+  if (semanticFit >= 0.7) {
+    points.push("it is highly relevant to your overall track goal");
+  }
+
+  if (difficultyFit >= 0.7) {
+    points.push("the challenge level matches your estimated capability");
+  }
+
+  if (timeFit >= 0.7) {
+    points.push("the duration fits well within your weekly study hours");
+  }
+
+  if (styleFit >= 0.7) {
+    points.push("it aligns with your preferred mode of instruction");
+  }
+
+  if (points.length === 0) {
+    return "This module is recommended based on your overall personalized goal track and skill profile.";
+  }
+
+  if (points.length === 1) {
+    return `Recommended because ${points[0]}.`;
+  }
+  if (points.length === 2) {
+    return `Recommended because ${points[0]} and ${points[1]}.`;
+  }
+  return `Recommended because ${points.slice(0, -1).join(", ")}, and ${points[points.length - 1]}.`;
+};
 
 export const NodeDetailDrawer: React.FC<NodeDetailDrawerProps> = ({
   node,
@@ -36,6 +90,10 @@ export const NodeDetailDrawer: React.FC<NodeDetailDrawerProps> = ({
         return <span className="bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs px-2.5 py-1 font-mono uppercase font-bold flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" /> Mastered</span>;
       case 'in-progress':
         return <span className="bg-amber-100 text-amber-900 border border-amber-300 text-xs px-2.5 py-1 font-mono uppercase font-bold flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-amber-700" /> In Progress</span>;
+      case 'skipped':
+        return <span className="bg-blue-100 text-blue-900 border border-blue-300 text-xs px-2.5 py-1 font-mono uppercase font-bold flex items-center gap-1.5"><ArrowRight className="w-3.5 h-3.5 text-blue-700" /> Skipped</span>;
+      case 'too-hard':
+        return <span className="bg-rose-100 text-rose-900 border border-rose-300 text-xs px-2.5 py-1 font-mono uppercase font-bold flex items-center gap-1.5"><AlertCircle className="w-3.5 h-3.5 text-rose-700" /> Too Hard</span>;
       default:
         return <span className="bg-[#EAE8E1] text-[#555] border border-[#D5D2C9] text-xs px-2.5 py-1 font-mono uppercase font-bold flex items-center gap-1.5"><AlertCircle className="w-3.5 h-3.5 text-[#777]" /> Not Started</span>;
     }
@@ -44,19 +102,14 @@ export const NodeDetailDrawer: React.FC<NodeDetailDrawerProps> = ({
   const handleFetchAiTrace = async () => {
     setLoadingAi(true);
     try {
-      // Explainability rationale based on topological position and prerequisites
-      const prereqLabels = prerequisiteNodes.map(p => p.label).join(', ') || 'None (Foundational Entry Point)';
-      const downstreamLabels = dependentNodes.map(d => d.label).join(', ') || 'Track Capstone';
-
-      const prompt = `Explain why "${node.label}" is recommended in the ${roadmap.title} curriculum. 
-Prerequisites required: ${prereqLabels}. 
-Downstream skills unlocked: ${downstreamLabels}. 
-Importance: ${node.importance}.`;
-
-      setAiExplanation(
-        `[Grounded Decision Trace] "${node.label}" is sequenced at Tier ${prerequisiteNodes.length === 0 ? '0 (Entry Baseline)' : 'Prerequisite Resolved'}. Completing this module resolves downstream bottlenecks for ${downstreamLabels} while enforcing enterprise standard ${node.companyStandardStack || 'curriculum guidelines'}.`
-      );
-    } catch (e) {
+      const res = await fetch(`/api/explain/trace?resourceId=${encodeURIComponent(node.id)}`);
+      if (res.ok) {
+        const data = await res.json();
+        setAiExplanation(data.traceExplanation || `Recommended based on prerequisite hierarchy and ${node.importance.toLowerCase()} track alignment.`);
+      } else {
+        throw new Error('Trace unavailable');
+      }
+    } catch {
       setAiExplanation(`Recommended based on prerequisite hierarchy and ${node.importance.toLowerCase()} track alignment.`);
     } finally {
       setLoadingAi(false);
@@ -117,29 +170,90 @@ Importance: ${node.importance}.`;
           </div>
         </div>
 
-        {/* AI Explainability Banner */}
-        <div className="p-4 bg-emerald-50/70 border border-emerald-300 rounded-lg space-y-2">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-emerald-900 uppercase">
+        {/* Why Recommended / Recommendation Trace Section */}
+        {node.scoreBreakdown && Object.keys(node.scoreBreakdown).length > 0 ? (
+          <div className="space-y-3 p-4 bg-emerald-50 border border-emerald-300 rounded-lg">
+            <h3 className="text-xs font-mono uppercase tracking-wider text-emerald-900 font-bold flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-emerald-700" />
-              <span>Explainability Trace (F11 / F13)</span>
+              <span>00 / Why Recommended? (Engine Decision Trace)</span>
+            </h3>
+            <p className="text-xs font-sans text-emerald-950 font-medium">
+              {getExplanationFromBreakdown(node.scoreBreakdown) || node.reason || 'This resource is recommended to target your current skill gaps and align with your learning goals.'}
+            </p>
+            <div className="pt-2 grid grid-cols-2 gap-2 text-[11px] font-mono border-t border-emerald-300/40">
+              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
+                <span className="text-emerald-800">Skill Gap Match:</span>
+                <span className="font-bold text-emerald-950">
+                  {Math.round((node.scoreBreakdown.skill_gap_match ?? 0) * 100)}%
+                </span>
+              </div>
+              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
+                <span className="text-emerald-800">Prerequisite Fit:</span>
+                <span className="font-bold text-emerald-950">
+                  {Math.round((node.scoreBreakdown.prerequisite_fit ?? 0) * 100)}%
+                </span>
+              </div>
+              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
+                <span className="text-emerald-800">Semantic Fit:</span>
+                <span className="font-bold text-emerald-950">
+                  {Math.round(((node.scoreBreakdown.retrievalSimilarity !== undefined ? node.scoreBreakdown.retrievalSimilarity : node.scoreBreakdown.retrieval_similarity) ?? 0) * 100)}%
+                </span>
+              </div>
+              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
+                <span className="text-emerald-800">Difficulty Fit:</span>
+                <span className="font-bold text-emerald-950">
+                  {Math.round((node.scoreBreakdown.difficulty_fit ?? 0) * 100)}%
+                </span>
+              </div>
+              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
+                <span className="text-emerald-800">Time Fit:</span>
+                <span className="font-bold text-emerald-950">
+                  {Math.round((node.scoreBreakdown.time_fit ?? 0) * 100)}%
+                </span>
+              </div>
+              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
+                <span className="text-emerald-800">Style Fit:</span>
+                <span className="font-bold text-emerald-950">
+                  {Math.round((node.scoreBreakdown.learning_style_fit ?? 0) * 100)}%
+                </span>
+              </div>
             </div>
-            {!aiExplanation && (
-              <button
-                onClick={handleFetchAiTrace}
-                disabled={loadingAi}
-                className="text-[11px] font-mono bg-[#1A1A1A] text-white px-2.5 py-1 rounded hover:bg-black uppercase cursor-pointer"
-              >
-                {loadingAi ? 'Tracing...' : 'Explain Recommendation'}
-              </button>
+            {node.skillsTaught && node.skillsTaught.length > 0 && (
+              <div className="text-[11px] font-sans text-emerald-950 mt-1">
+                📚 <strong>Skills Taught:</strong> {node.skillsTaught.join(', ')}
+              </div>
+            )}
+            {node.prerequisiteSkills && node.prerequisiteSkills.length > 0 && (
+              <div className="text-[11px] font-sans text-emerald-950">
+                🔑 <strong>Prerequisite Skills:</strong> {node.prerequisiteSkills.join(', ')}
+              </div>
             )}
           </div>
-          {aiExplanation && (
-            <p className="text-xs font-sans text-emerald-900 bg-white p-3 rounded border border-emerald-200 leading-relaxed animate-in fade-in">
-              {aiExplanation}
-            </p>
-          )}
-        </div>
+        ) : (
+          /* Fallback AI Explainability Banner when scoreBreakdown doesn't exist */
+          <div className="p-4 bg-emerald-50/70 border border-emerald-300 rounded-lg space-y-2">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-xs font-mono font-bold text-emerald-900 uppercase">
+                <Sparkles className="w-4 h-4 text-emerald-700" />
+                <span>Explainability Trace</span>
+              </div>
+              {!aiExplanation && (
+                <button
+                  onClick={handleFetchAiTrace}
+                  disabled={loadingAi}
+                  className="text-[11px] font-mono bg-[#1A1A1A] text-white px-2.5 py-1 rounded hover:bg-black uppercase cursor-pointer"
+                >
+                  {loadingAi ? 'Tracing...' : 'Explain Recommendation'}
+                </button>
+              )}
+            </div>
+            {aiExplanation && (
+              <p className="text-xs font-sans text-emerald-900 bg-white p-3 rounded border border-emerald-200 leading-relaxed animate-in fade-in">
+                {aiExplanation}
+              </p>
+            )}
+          </div>
+        )}
 
         {/* Status Switcher Action Bar */}
         <div className="border border-[#1A1A1A] p-4 bg-white space-y-2">
@@ -174,6 +288,28 @@ Importance: ${node.importance}.`;
               }`}
             >
               Mastered ✓
+            </button>
+          </div>
+          <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#1A1A1A]/10">
+            <button
+              onClick={() => onToggleStatus(node.id, 'skipped')}
+              className={`py-2 px-2 text-xs font-mono uppercase border transition-all cursor-pointer ${
+                node.status === 'skipped'
+                  ? 'bg-blue-800 text-white border-blue-900 font-bold'
+                  : 'bg-white text-[#555] border-[#D5D2C9] hover:border-[#1A1A1A]'
+              }`}
+            >
+              Skip Node
+            </button>
+            <button
+              onClick={() => onToggleStatus(node.id, 'too-hard')}
+              className={`py-2 px-2 text-xs font-mono uppercase border transition-all cursor-pointer ${
+                node.status === 'too-hard'
+                  ? 'bg-rose-800 text-white border-rose-900 font-bold'
+                  : 'bg-white text-[#555] border-[#D5D2C9] hover:border-[#1A1A1A]'
+              }`}
+            >
+              Too Hard?
             </button>
           </div>
         </div>
@@ -299,7 +435,7 @@ Importance: ${node.importance}.`;
               <span>05 / Hands-On Evaluation Rubric</span>
             </div>
             <p className="text-xs sm:text-sm font-serif italic text-[#EEE] leading-relaxed">
-              "{node.evaluationRubric}"
+              &quot;{node.evaluationRubric}&quot;
             </p>
             <div className="pt-2 flex items-center gap-2 text-[10px] font-mono text-[#AAA]">
               <Terminal className="w-3 h-3 text-emerald-400" />

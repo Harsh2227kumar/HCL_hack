@@ -5,7 +5,7 @@ import { reconcileSkillEstimate, SkillEvidence } from '@/lib/core/reconciliation
 export async function POST(request: Request) {
   try {
     const { userId, skillName, score } = await request.json(); // score 0-5
-    if (!userId || !skillName || typeof score !== 'number') {
+    if (!userId || !skillName || typeof score !== 'number' || score < 0 || score > 5) {
       return NextResponse.json({ error: 'Invalid input' }, { status: 400 });
     }
 
@@ -28,28 +28,43 @@ export async function POST(request: Request) {
 
     const evidenceRecords: SkillEvidence[] = allEvidence.map(e => ({
       score: e.score,
-      reliability: e.reliability,
+      reliability: e.reliability ?? undefined,
       source: e.source,
       timestamp: e.timestamp
     }));
 
     const reconciled = reconcileSkillEstimate(evidenceRecords);
 
-    // 3. Update LearnerSkill
-    const updatedSkill = await prisma.learnerSkill.update({
+    // 3. Upsert LearnerSkill
+    const finalEstimate = reconciled.final_estimate ?? score;
+    const confidenceScore = reconciled.confidence_score;
+    const roundedScore = Math.round(score);
+
+    const updatedSkill = await prisma.learnerSkill.upsert({
       where: { userId_skillName: { userId, skillName } },
-      data: {
-        finalEstimate: reconciled.final_estimate ?? score,
-        confidenceScore: reconciled.confidence_score,
-        observedLevel: Math.round(score),
+      update: {
+        finalEstimate,
+        confidenceScore,
+        observedLevel: roundedScore,
+        lastAssessed: new Date()
+      },
+      create: {
+        userId,
+        skillName,
+        selfRatedLevel: roundedScore,
+        observedLevel: roundedScore,
+        confidenceScore,
+        finalEstimate,
+        targetLevel: 5,
         lastAssessed: new Date()
       }
     });
 
     return NextResponse.json({ success: true, updatedSkill });
 
-  } catch (error: any) {
-    console.error('Error submitting diagnostic:', error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Error submitting diagnostic:', errMsg);
+    return NextResponse.json({ error: errMsg }, { status: 500 });
   }
 }

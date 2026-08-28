@@ -69,6 +69,8 @@ export async function GET(request: Request) {
                 difficulty: true,
                 durationHours: true,
                 format: true,
+                skillsTaught: true,
+                prerequisiteSkills: true,
               },
             },
           },
@@ -88,10 +90,31 @@ export async function GET(request: Request) {
       },
     });
 
+    const phaseNames = ['Foundations', 'Core', 'Applied Project', 'Specialization', 'Capstone'];
+
     // 5. Next Best Action (first pending item in path)
-    const nextBestAction = latestPath?.items.find(
+    const nextBestActionItem = latestPath?.items.find(
       (item) => item.status === 'pending'
     ) || null;
+
+    const nextBestAction = nextBestActionItem
+      ? {
+          id: nextBestActionItem.resourceId,
+          status: nextBestActionItem.status,
+          phase: phaseNames[nextBestActionItem.phase - 1] || 'Foundations',
+          resource: {
+            title: (nextBestActionItem as any).resource?.title || 'Unknown Resource',
+            durationHours: (nextBestActionItem as any).resource?.durationHours || 5,
+            format: (nextBestActionItem as any).resource?.format || 'course',
+            skillsTaught: (nextBestActionItem as any).resource?.skillsTaught || [],
+            prerequisiteSkills: (nextBestActionItem as any).resource?.prerequisiteSkills || [],
+          },
+          reason: nextBestActionItem.reason,
+          score: nextBestActionItem.score,
+          scoreBreakdown: nextBestActionItem.scoreBreakdown || {},
+          recommendation_status: nextBestActionItem.reason,
+        }
+      : null;
 
     // 6. Real bottleneck detection using BKT-derived P(known) values
     const skillGaps = skills.map((skill) => ({
@@ -135,7 +158,22 @@ export async function GET(request: Request) {
             version: latestPath.version,
             triggerReason: latestPath.triggerReason,
             generatedAt: latestPath.generatedAt,
-            milestones: latestPath.items,
+            milestones: latestPath.items.map((item) => ({
+              id: item.resourceId,
+              status: item.status,
+              phase: phaseNames[item.phase - 1] || 'Foundations',
+              resource: {
+                title: (item as any).resource?.title || 'Unknown Resource',
+                durationHours: (item as any).resource?.durationHours || 5,
+                format: (item as any).resource?.format || 'course',
+                skillsTaught: (item as any).resource?.skillsTaught || [],
+                prerequisiteSkills: (item as any).resource?.prerequisiteSkills || [],
+              },
+              reason: item.reason,
+              score: item.score,
+              scoreBreakdown: item.scoreBreakdown || {},
+              recommendation_status: item.reason,
+            })),
           }
         : null,
       recentActivity: recentEvents,

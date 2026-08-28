@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import ChatBubble from "@/components/chat/ChatBubble";
 import ChatInput from "@/components/chat/ChatInput";
 import QuickReplyChips from "@/components/chat/QuickReplyChips";
-import { Sparkles, CheckCircle2, ArrowRight, Bot, Zap, HelpCircle, Check, AlertCircle, Loader2 } from "lucide-react";
+import { CheckCircle2, ArrowRight, HelpCircle, Check, AlertCircle, Loader2 } from "lucide-react";
 
 type MessageRole = "user" | "ai";
 
@@ -22,22 +22,56 @@ interface DiagnosticQuestion {
   explanation: string;
 }
 
+interface LearnerProfile {
+  userId?: string;
+  goal?: string;
+  weeklyHours?: number;
+  learningStyle?: string;
+  experienceLevel?: string;
+}
+
+interface RecommendationResponse {
+  goal?: string;
+  weeklyHours?: number;
+  timeToGoalWeeks?: number;
+  bottleneck?: string | null;
+  aiInsight?: string;
+  activePath?: {
+    id?: string;
+    version?: number;
+    triggerReason?: string;
+    generatedAt?: string | Date;
+    milestones?: Array<{
+      id: string;
+      status?: string;
+      phase?: string;
+      resource?: {
+        title?: string;
+        durationHours?: number;
+        format?: string;
+      };
+      reason?: string;
+    }>;
+  };
+  recommendations?: unknown[];
+  reason?: string;
+}
+
 export default function OnboardingPage() {
   const router = useRouter();
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [loading, setLoading] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
-  const [extractedProfile, setExtractedProfile] = useState<any>(null);
+  const [extractedProfile, setExtractedProfile] = useState<LearnerProfile | null>(null);
   const [provider, setProvider] = useState<string>("gemini");
   
   // Diagnostic Quiz State
-  const [showQuiz, setShowQuiz] = useState(false);
-  const [quizLoading, setQuizLoading] = useState(false);
   const [quizQuestions, setQuizQuestions] = useState<DiagnosticQuestion[]>([]);
   const [quizSkillName, setQuizSkillName] = useState<string>("");
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [quizScore, setQuizScore] = useState<number | null>(null);
+  const [diagnosticMode, setDiagnosticMode] = useState<"ai" | "fallback" | null>(null);
 
   // Recommendation Engine State
   const [isGeneratingPath, setIsGeneratingPath] = useState(false);
@@ -83,7 +117,7 @@ export default function OnboardingPage() {
         } else {
           throw new Error("Invalid response");
         }
-      } catch (err) {
+      } catch {
         setMessages([
           {
             role: "ai",
@@ -103,62 +137,7 @@ export default function OnboardingPage() {
     initChat();
   }, []);
 
-  const triggerProfileExtraction = async (conversation: ChatMessage[]) => {
-    setLoading(true);
-    try {
-      const extractRes = await fetch("/api/profile/extract", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: conversation }),
-      });
-      const extractData = await extractRes.json();
-
-      let profileWithId: any;
-      if (extractData.profile) {
-        profileWithId = {
-          ...extractData.profile,
-          userId: extractData.userId,
-        };
-      } else {
-        const userMsgs = conversation.filter((m) => m.role === "user");
-        profileWithId = {
-          goal: userMsgs[0]?.text || "Full Stack Web Development",
-          experienceLevel: "Intermediate",
-          weeklyHours: 10,
-          learningStyle: "Interactive Coding",
-        };
-      }
-
-      setExtractedProfile(profileWithId);
-      sessionStorage.setItem("learnerProfile", JSON.stringify(profileWithId));
-      if (profileWithId.userId) {
-        sessionStorage.setItem("userId", profileWithId.userId);
-      }
-      sessionStorage.setItem("aiProvider", extractData.provider || provider);
-      setIsCompleted(true);
-
-      // Pre-load Diagnostic Quiz for the selected goal
-      loadDiagnosticQuestions(profileWithId);
-    } catch (err) {
-      console.error("Profile extraction fallback:", err);
-      const userMsgs = conversation.filter((m) => m.role === "user");
-      const fallbackProfile = {
-        goal: userMsgs[0]?.text || "Full Stack Web Development",
-        experienceLevel: "Intermediate",
-        weeklyHours: 10,
-        learningStyle: "Interactive Coding",
-      };
-      setExtractedProfile(fallbackProfile);
-      sessionStorage.setItem("learnerProfile", JSON.stringify(fallbackProfile));
-      setIsCompleted(true);
-      loadDiagnosticQuestions(fallbackProfile);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const loadDiagnosticQuestions = async (profile: any) => {
-    setQuizLoading(true);
+  const loadDiagnosticQuestions = async (profile: LearnerProfile) => {
     const goal = (profile.goal || "").toLowerCase();
     
     // Choose primary skill to test based on goal
@@ -254,9 +233,92 @@ export default function OnboardingPage() {
       ];
     }
 
-    setQuizSkillName(targetSkill);
-    setQuizQuestions(fallbackQuestions);
-    setQuizLoading(false);
+    let apiSuccess = false;
+
+    if (profile.userId) {
+      setLoading(true);
+      try {
+        const res = await fetch("/api/diagnostic/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ userId: profile.userId })
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          if (data.skillName && data.questions && Array.isArray(data.questions) && data.questions.length > 0) {
+            setQuizSkillName(data.skillName);
+            setQuizQuestions(data.questions);
+            setDiagnosticMode("ai");
+            apiSuccess = true;
+          }
+        }
+      } catch (err) {
+        console.warn("Failed to generate diagnostic via API, falling back to local questions:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    if (!apiSuccess) {
+      setQuizSkillName(targetSkill);
+      setQuizQuestions(fallbackQuestions);
+      setDiagnosticMode("fallback");
+    }
+  };
+
+  const triggerProfileExtraction = async (conversation: ChatMessage[]) => {
+    setLoading(true);
+    try {
+      const extractRes = await fetch("/api/profile/extract", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: conversation }),
+      });
+      const extractData = await extractRes.json();
+
+      let profileWithId: LearnerProfile;
+      if (extractData.profile) {
+        profileWithId = {
+          ...extractData.profile,
+          userId: extractData.userId,
+        };
+      } else {
+        const userMsgs = conversation.filter((m) => m.role === "user");
+        profileWithId = {
+          goal: userMsgs[0]?.text || "Full Stack Web Development",
+          experienceLevel: "Intermediate",
+          weeklyHours: 10,
+          learningStyle: "Interactive Coding",
+        };
+      }
+
+      setExtractedProfile(profileWithId);
+      sessionStorage.setItem("learnerProfile", JSON.stringify(profileWithId));
+      if (profileWithId.userId) {
+        sessionStorage.setItem("userId", profileWithId.userId);
+      }
+      sessionStorage.setItem("aiProvider", extractData.provider || provider);
+      setIsCompleted(true);
+
+      // Pre-load Diagnostic Quiz for the selected goal
+      await loadDiagnosticQuestions(profileWithId);
+    } catch (err) {
+      console.error("Profile extraction fallback:", err);
+      const userMsgs = conversation.filter((m) => m.role === "user");
+      const fallbackProfile: LearnerProfile = {
+        goal: userMsgs[0]?.text || "Full Stack Web Development",
+        experienceLevel: "Intermediate",
+        weeklyHours: 10,
+        learningStyle: "Interactive Coding",
+      };
+      setExtractedProfile(fallbackProfile);
+      sessionStorage.setItem("learnerProfile", JSON.stringify(fallbackProfile));
+      setIsCompleted(true);
+      await loadDiagnosticQuestions(fallbackProfile);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleSendMessage = async (text: string) => {
@@ -313,7 +375,7 @@ export default function OnboardingPage() {
     setSelectedAnswers((prev) => ({ ...prev, [qIdx]: option }));
   };
 
-  const callRecommendationEngine = async (userId: string | null, profile: any) => {
+  const callRecommendationEngine = async (userId: string | null, profile: LearnerProfile) => {
     setIsGeneratingPath(true);
     setGenerationError(null);
 
@@ -336,12 +398,21 @@ export default function OnboardingPage() {
         throw new Error(`Failed to generate recommendation path (Status ${recRes.status})`);
       }
 
-      const recData = await recRes.json();
-      sessionStorage.setItem("activeRecommendation", JSON.stringify(recData));
-      setPathGenerated(true);
-    } catch (err: any) {
-      console.error("Recommendation generation error:", err);
-      setGenerationError(err.message || "Failed to generate path");
+      const recData: RecommendationResponse = await recRes.json();
+      if (recData?.activePath?.milestones && Array.isArray(recData.activePath.milestones) && recData.activePath.milestones.length > 0) {
+        sessionStorage.setItem("activeRecommendation", JSON.stringify(recData));
+        setPathGenerated(true);
+      } else {
+        sessionStorage.removeItem("activeRecommendation");
+        setPathGenerated(false);
+        setGenerationError(recData.reason || "No personalized milestones were returned. A standard fallback curriculum will be used.");
+      }
+    } catch (err: unknown) {
+      const errMsg = err instanceof Error ? err.message : "Failed to generate path";
+      console.error("Recommendation generation error:", errMsg);
+      sessionStorage.removeItem("activeRecommendation");
+      setPathGenerated(false);
+      setGenerationError(errMsg);
     } finally {
       setIsGeneratingPath(false);
     }
@@ -385,8 +456,6 @@ export default function OnboardingPage() {
   const handleProceedToDashboard = () => {
     router.push("/dashboard");
   };
-
-  const userMessagesCount = messages.filter((m) => m.role === "user").length;
   const lastMessage = messages[messages.length - 1];
   const hasQuickReplies =
     !loading &&
@@ -465,12 +534,21 @@ export default function OnboardingPage() {
 
               {/* Diagnostic Assessment Section */}
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <div className="flex items-center gap-2 flex-wrap">
                     <HelpCircle className="w-4 h-4 text-[#1A1A1A]" />
                     <h4 className="text-sm font-mono uppercase font-bold tracking-wider text-[#1A1A1A]">
                       Step 2: Adaptive Diagnostic Assessment ({quizSkillName})
                     </h4>
+                    {diagnosticMode === "ai" ? (
+                      <span className="text-[9px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold tracking-wider animate-pulse">
+                        AI-generated diagnostic
+                      </span>
+                    ) : diagnosticMode === "fallback" ? (
+                      <span className="text-[9px] font-mono uppercase px-2 py-0.5 rounded bg-amber-100 text-amber-800 border border-amber-300 font-bold tracking-wider">
+                        Fallback diagnostic
+                      </span>
+                    ) : null}
                   </div>
                   <span className="text-[11px] font-mono text-[#777]">
                     BKT Validation ({quizQuestions.length} Questions)

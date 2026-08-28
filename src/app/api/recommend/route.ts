@@ -167,8 +167,13 @@ export async function POST(request: Request) {
           title: candidateData?.title || 'Unknown Resource',
           durationHours: candidateData?.durationHours || 5,
           format: candidateData?.format || 'course',
+          skillsTaught: candidateData?.skillsTaught || [],
+          prerequisiteSkills: candidateData?.prerequisiteSkills || [],
         },
         reason: scoreData?.recommendation_status || 'Recommended based on your profile',
+        score: scoreData?.score || 0,
+        scoreBreakdown: scoreData?.scoreBreakdown || {},
+        recommendation_status: scoreData?.recommendation_status || 'Recommended based on your profile',
       };
     });
 
@@ -254,6 +259,7 @@ export async function POST(request: Request) {
                 select: {
                   id: true, title: true, type: true,
                   difficulty: true, durationHours: true, format: true,
+                  skillsTaught: true, prerequisiteSkills: true,
                 }
               }
             }
@@ -276,8 +282,13 @@ export async function POST(request: Request) {
           title: (item as any).resource?.title || 'Unknown Resource',
           durationHours: (item as any).resource?.durationHours || 5,
           format: (item as any).resource?.format || 'course',
+          skillsTaught: (item as any).resource?.skillsTaught || [],
+          prerequisiteSkills: (item as any).resource?.prerequisiteSkills || [],
         },
         reason: item.reason,
+        score: item.score,
+        scoreBreakdown: item.scoreBreakdown || {},
+        recommendation_status: item.reason,
       }));
     } else {
       displayMilestones = milestones;

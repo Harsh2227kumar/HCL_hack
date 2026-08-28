@@ -12,7 +12,13 @@ export interface RoadmapNode {
   companyStandardStack?: string;
   evaluationRubric?: string;
   internalDocUrl?: string;
-  status?: 'not-started' | 'in-progress' | 'mastered';
+  status?: 'not-started' | 'in-progress' | 'mastered' | 'too-hard' | 'skipped';
+  sourceResourceId?: string;
+  scoreBreakdown?: any;
+  skillsTaught?: string[];
+  prerequisiteSkills?: string[];
+  reason?: string;
+  recommendation_status?: string;
 }
 
 export interface RoadmapPath {

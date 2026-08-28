@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import { callAI } from '@/lib/ai/callAI';
 import { prisma } from '@/lib/prisma';
+import goalTemplates from '../../../../../data/goal_templates.json';
 
 const ExtractedProfileSchema = z.object({
   goal: z
@@ -36,13 +37,56 @@ const ExtractedProfileSchema = z.object({
     .transform((val) => val || undefined),
 });
 
+// Map experienceLevel string → selfRatedLevel integer (0-5 scale)
+function experienceToSelfRated(experienceLevel: string): number {
+  const lower = experienceLevel.toLowerCase();
+  if (lower.includes('beginner') || lower.includes('novice') || lower.includes('no experience')) return 1;
+  if (lower.includes('advanced') || lower.includes('senior') || lower.includes('expert')) return 3;
+  return 2; // intermediate default
+}
+
+// Find the closest matching goal template by keyword overlap
+function findBestTemplate(goal: string): typeof goalTemplates[0] | null {
+  const goalLower = goal.toLowerCase();
+
+  // Try keyword-based matching first (covers partial matches)
+  const keywordMap: Array<{ keywords: string[]; id: string }> = [
+    { keywords: ['full stack', 'fullstack', 'full-stack', 'web development', 'web dev'], id: 'goal_full_stack' },
+    { keywords: ['frontend', 'front-end', 'front end', 'react', 'ui developer'], id: 'goal_frontend' },
+    { keywords: ['backend', 'back-end', 'back end', 'systems', 'architecture', 'api'], id: 'goal_backend' },
+    { keywords: ['ai', 'ml', 'machine learning', 'deep learning', 'nlp', 'llm', 'genai'], id: 'goal_ml_engineer' },
+    { keywords: ['devops', 'cloud', 'kubernetes', 'docker', 'infrastructure', 'devsecops'], id: 'goal_devops' },
+    { keywords: ['data analyst', 'data engineer', 'analytics', 'data analytics', 'sql analyst'], id: 'goal_data_analyst' },
+  ];
+
+  for (const { keywords, id } of keywordMap) {
+    if (keywords.some((kw) => goalLower.includes(kw))) {
+      return goalTemplates.find((t) => t.id === id) || null;
+    }
+  }
+
+  // Fallback: score every template by word overlap
+  let bestTemplate: typeof goalTemplates[0] | null = null;
+  let bestScore = 0;
+  for (const template of goalTemplates) {
+    const templateWords = template.goal_name.toLowerCase().split(/\s+/);
+    const overlap = templateWords.filter((w) => goalLower.includes(w)).length;
+    if (overlap > bestScore) {
+      bestScore = overlap;
+      bestTemplate = template;
+    }
+  }
+
+  return bestTemplate;
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const messages = body.messages || [];
 
     const conversationText = messages
-      .map((m: any) => `${m.role === 'user' ? 'Learner' : 'Advisor'}: ${m.text}`)
+      .map((m: { role: string; text: string }) => `${m.role === 'user' ? 'Learner' : 'Advisor'}: ${m.text}`)
       .join('\n');
 
     const prompt = `You are an expert educational analyst. Extract the learner's synthesized profile from this conversation transcript:
@@ -79,14 +123,60 @@ Extract and return a clean JSON object satisfying this schema:
       },
     });
 
+    // ── Initialize LearnerSkill rows from goal template ──────────────────
+    const selfRatedLevel = experienceToSelfRated(profileData.experienceLevel);
+    const matchedTemplate = findBestTemplate(profileData.goal);
+
+    let initializedSkills = 0;
+
+    if (matchedTemplate && matchedTemplate.required_skills.length > 0) {
+      // Use createMany with skipDuplicates to avoid collisions on (userId, skillName)
+      const result = await prisma.learnerSkill.createMany({
+        data: matchedTemplate.required_skills.map((rs) => ({
+          userId: newUser.id,
+          skillName: rs.skill,
+          selfRatedLevel,
+          observedLevel: null,
+          confidenceScore: 0.25,
+          finalEstimate: selfRatedLevel,
+          targetLevel: rs.min_level,
+        })),
+        skipDuplicates: true,
+      });
+      initializedSkills = result.count;
+    } else {
+      // Generic fallback: 3 foundational skills when no template matches
+      const fallbackSkills = [
+        { skillName: 'Programming Fundamentals', targetLevel: 3 },
+        { skillName: 'Problem Solving & Algorithms', targetLevel: 3 },
+        { skillName: 'Version Control (Git)', targetLevel: 3 },
+      ];
+      const result = await prisma.learnerSkill.createMany({
+        data: fallbackSkills.map((s) => ({
+          userId: newUser.id,
+          skillName: s.skillName,
+          selfRatedLevel,
+          observedLevel: null,
+          confidenceScore: 0.25,
+          finalEstimate: selfRatedLevel,
+          targetLevel: s.targetLevel,
+        })),
+        skipDuplicates: true,
+      });
+      initializedSkills = result.count;
+    }
+
     return NextResponse.json({
       success: true,
       profile: profileData,
       userId: newUser.id,
       provider: response.provider,
+      initializedSkills,
+      matchedTemplate: matchedTemplate?.goal_name || 'fallback',
     });
-  } catch (error: any) {
-    console.error('Error in /api/profile/extract:', error.message);
+  } catch (error: unknown) {
+    const msg = error instanceof Error ? error.message : 'Unknown error';
+    console.error('Error in /api/profile/extract:', msg);
     return NextResponse.json(
       { success: false, error: 'Failed to extract profile' },
       { status: 500 }

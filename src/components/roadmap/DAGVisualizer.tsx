@@ -25,7 +25,8 @@ interface DAGVisualizerProps {
   onSelectRoadmap: (roadmap: RoadmapPath) => void;
   selectedNode: RoadmapNode | null;
   onSelectNode: (node: RoadmapNode | null) => void;
-  onToggleStatus: (nodeId: string, status: 'not-started' | 'in-progress' | 'mastered') => void;
+  onToggleStatus: (nodeId: string, status: 'not-started' | 'in-progress' | 'mastered' | 'too-hard' | 'skipped') => void;
+  activeRecommendation?: any;
 }
 
 interface LayoutNode extends RoadmapNode {
@@ -41,7 +42,8 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
   onSelectRoadmap,
   selectedNode,
   onSelectNode,
-  onToggleStatus
+  onToggleStatus,
+  activeRecommendation
 }) => {
   const [viewMode, setViewMode] = useState<'graph' | 'list'>('graph');
   const [searchQuery, setSearchQuery] = useState('');
@@ -353,6 +355,94 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
             "{selectedRoadmap.description}"
           </div>
         </div>
+ 
+        {/* Personalized Skill Gaps Analysis */}
+        {selectedRoadmap.id === 'personalized-engine-path' && activeRecommendation?.skillGaps && activeRecommendation.skillGaps.length > 0 && (
+          <div className="border border-[#1A1A1A] bg-white p-4 space-y-3 shadow-xs">
+            <div className="text-[10px] font-mono uppercase tracking-widest text-[#777] font-bold border-b border-[#1A1A1A]/10 pb-1 flex justify-between items-center">
+              <span>02 / Skill Gap Analysis</span>
+              <span className="font-bold text-emerald-800 uppercase text-[9px] bg-emerald-100 px-1.5 py-0.5 animate-pulse">
+                Active BKT Engine
+              </span>
+            </div>
+
+            <div className="space-y-2.5 max-h-[300px] overflow-y-auto pr-1">
+              {activeRecommendation.skillGaps.map((gapItem: any) => {
+                const current = gapItem.current ?? 0;
+                const target = gapItem.target ?? 5;
+                const gap = gapItem.gap ?? 0;
+                const confidence = gapItem.confidence;
+                
+                const isBottleneck = activeRecommendation.bottleneck?.toLowerCase() === gapItem.skillName?.toLowerCase();
+                
+                // Find largest gap
+                const largestGapValue = Math.max(...activeRecommendation.skillGaps.map((g: any) => g.gap ?? 0));
+                const isLargestGap = gap > 0 && gap === largestGapValue;
+
+                // Percent calculations (assuming 5.0 is the max rating scale)
+                const currentPercent = Math.min(100, Math.round((current / 5) * 100));
+                const targetPercent = Math.min(100, Math.round((target / 5) * 100));
+
+                return (
+                  <div key={gapItem.skillName} className={`p-2 border text-[11px] font-mono space-y-1.5 transition-all ${
+                    isBottleneck
+                      ? 'border-rose-500 bg-rose-50/50 shadow-[2px_2px_0px_#f43f5e]'
+                      : isLargestGap
+                      ? 'border-amber-500 bg-amber-50/30'
+                      : 'border-[#1A1A1A]/10 bg-[#F8F7F4]/50'
+                  }`}>
+                    <div className="flex justify-between items-start">
+                      <span className="font-bold text-[#1A1A1A] max-w-[170px] truncate">
+                        {gapItem.skillName}
+                      </span>
+                      {isBottleneck ? (
+                        <span className="text-[8px] uppercase tracking-wider font-bold bg-rose-600 text-white px-1 py-0.2">
+                          Bottleneck
+                        </span>
+                      ) : isLargestGap ? (
+                        <span className="text-[8px] uppercase tracking-wider font-bold bg-amber-600 text-white px-1 py-0.2">
+                          Largest Gap
+                        </span>
+                      ) : null}
+                    </div>
+
+                    {/* Progress visual bar */}
+                    <div className="relative w-full h-3 bg-[#EAE8E1] border border-[#1A1A1A]/15 overflow-hidden flex">
+                      {/* Current level */}
+                      <div
+                        className="h-full bg-emerald-600 border-r border-[#1A1A1A]/10"
+                        style={{ width: `${currentPercent}%` }}
+                        title={`Current: ${current.toFixed(1)}`}
+                      />
+                      {/* Gap level to target */}
+                      <div
+                        className="h-full bg-amber-400/40"
+                        style={{ width: `${Math.max(0, targetPercent - currentPercent)}%` }}
+                        title={`Gap to Target: ${gap.toFixed(1)}`}
+                      />
+                    </div>
+
+                    <div className="flex justify-between items-center text-[9px] text-[#666]">
+                      <span>
+                        Current: <strong className="text-[#1A1A1A]">{current.toFixed(1)}</strong> / Target: <strong className="text-[#1A1A1A]">{target}</strong>
+                      </span>
+                      <span>
+                        Gap: <strong className="text-[#1A1A1A]">{gap.toFixed(1)}</strong>
+                      </span>
+                    </div>
+
+                    {confidence !== undefined && (
+                      <div className="text-[8px] text-[#888] flex justify-between items-center pt-0.5 border-t border-[#1A1A1A]/5">
+                        <span>BKT Confidence:</span>
+                        <span className="font-bold text-[#444]">{Math.round(confidence * 100)}%</span>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Search & Filters */}
         <div className="space-y-3 pt-2">
