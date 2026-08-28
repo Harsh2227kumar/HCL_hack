@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import ChatBubble from "@/components/chat/ChatBubble";
 import ChatInput from "@/components/chat/ChatInput";
 import QuickReplyChips from "@/components/chat/QuickReplyChips";
-import { Sparkles, CheckCircle2, ArrowRight, Bot, Zap, HelpCircle, Check, AlertCircle } from "lucide-react";
+import { Sparkles, CheckCircle2, ArrowRight, Bot, Zap, HelpCircle, Check, AlertCircle, Loader2 } from "lucide-react";
 
 type MessageRole = "user" | "ai";
 
@@ -39,6 +39,11 @@ export default function OnboardingPage() {
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [quizScore, setQuizScore] = useState<number | null>(null);
 
+  // Recommendation Engine State
+  const [isGeneratingPath, setIsGeneratingPath] = useState(false);
+  const [pathGenerated, setPathGenerated] = useState(false);
+  const [generationError, setGenerationError] = useState<string | null>(null);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -47,7 +52,7 @@ export default function OnboardingPage() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages, loading]);
+  }, [messages, loading, isGeneratingPath]);
 
   useEffect(() => {
     // Initial dynamic greeting from the AI Advisor
@@ -308,6 +313,40 @@ export default function OnboardingPage() {
     setSelectedAnswers((prev) => ({ ...prev, [qIdx]: option }));
   };
 
+  const callRecommendationEngine = async (userId: string | null, profile: any) => {
+    setIsGeneratingPath(true);
+    setGenerationError(null);
+
+    try {
+      const recRes = await fetch("/api/recommend", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId: userId || undefined,
+          goal: profile.goal || "Full Stack Web Development",
+          learnerContext: {
+            weeklyHours: profile.weeklyHours || 10,
+            learningStyle: profile.learningStyle || "Interactive Coding",
+            experienceLevel: profile.experienceLevel || "Intermediate",
+          },
+        }),
+      });
+
+      if (!recRes.ok) {
+        throw new Error(`Failed to generate recommendation path (Status ${recRes.status})`);
+      }
+
+      const recData = await recRes.json();
+      sessionStorage.setItem("activeRecommendation", JSON.stringify(recData));
+      setPathGenerated(true);
+    } catch (err: any) {
+      console.error("Recommendation generation error:", err);
+      setGenerationError(err.message || "Failed to generate path");
+    } finally {
+      setIsGeneratingPath(false);
+    }
+  };
+
   const handleSubmitQuiz = async () => {
     let correctCount = 0;
     quizQuestions.forEach((q, idx) => {
@@ -321,6 +360,8 @@ export default function OnboardingPage() {
     setQuizSubmitted(true);
 
     const userId = sessionStorage.getItem("userId");
+    
+    // 1. Submit diagnostic to database
     if (userId) {
       try {
         await fetch("/api/diagnostic/submit", {
@@ -336,6 +377,13 @@ export default function OnboardingPage() {
         console.warn("Diagnostic submit logged locally:", e);
       }
     }
+
+    // 2. Call real Recommendation Engine
+    await callRecommendationEngine(userId, extractedProfile || { goal: "Full Stack Web Development" });
+  };
+
+  const handleProceedToDashboard = () => {
+    router.push("/dashboard");
   };
 
   const userMessagesCount = messages.filter((m) => m.role === "user").length;
@@ -371,7 +419,7 @@ export default function OnboardingPage() {
               </h1>
               <p className="text-xs font-mono text-[#666]">
                 {isCompleted
-                  ? "Topological Synthesis Complete"
+                  ? "Topological Synthesis & Diagnostic"
                   : "Conversational Goal & Diagnostic Engine"}
               </p>
             </div>
@@ -461,7 +509,7 @@ export default function OnboardingPage() {
                           return (
                             <button
                               key={optIdx}
-                              disabled={quizSubmitted}
+                              disabled={quizSubmitted || isGeneratingPath}
                               onClick={() => handleSelectOption(qIdx, opt)}
                               className={`text-left p-3 rounded-lg border text-xs transition-all cursor-pointer flex items-start gap-2 ${btnStyle}`}
                             >
@@ -483,35 +531,68 @@ export default function OnboardingPage() {
                   ))}
                 </div>
 
+                {/* Submitting / Generating Path States */}
+                {isGeneratingPath && (
+                  <div className="p-5 bg-indigo-50 border border-indigo-200 rounded-xl flex items-center gap-3 text-indigo-900 animate-pulse">
+                    <Loader2 className="w-5 h-5 animate-spin text-indigo-600" />
+                    <div>
+                      <div className="text-xs font-mono font-bold uppercase tracking-wider">
+                        Running Recommendation Engine (/api/recommend)...
+                      </div>
+                      <p className="text-xs text-indigo-700 mt-0.5 font-sans">
+                        Executing semantic pgvector retrieval, topological sorting, and bottleneck calculation.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {generationError && (
+                  <div className="p-4 bg-amber-50 border border-amber-300 rounded-xl flex items-center gap-3 text-amber-900">
+                    <AlertCircle className="w-5 h-5 text-amber-600 shrink-0" />
+                    <div className="text-xs font-mono">
+                      <strong>Notice:</strong> {generationError}. Fallback standard roadmap will be activated.
+                    </div>
+                  </div>
+                )}
+
                 {!quizSubmitted ? (
                   <button
                     onClick={handleSubmitQuiz}
-                    disabled={Object.keys(selectedAnswers).length < quizQuestions.length}
-                    className={`w-full py-3 px-6 rounded-xl font-mono uppercase text-xs tracking-wider font-bold transition-all cursor-pointer ${
-                      Object.keys(selectedAnswers).length === quizQuestions.length
+                    disabled={Object.keys(selectedAnswers).length < quizQuestions.length || isGeneratingPath}
+                    className={`w-full py-3.5 px-6 rounded-xl font-mono uppercase text-xs tracking-wider font-bold transition-all cursor-pointer flex items-center justify-center gap-2 ${
+                      Object.keys(selectedAnswers).length === quizQuestions.length && !isGeneratingPath
                         ? "bg-[#1A1A1A] text-white hover:bg-black shadow-md"
                         : "bg-[#EAE8E1] text-[#888] cursor-not-allowed"
                     }`}
                   >
-                    Submit Assessment & Calibrate Bayesian Model
+                    {isGeneratingPath ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        <span>Generating Personalized Roadmap...</span>
+                      </>
+                    ) : (
+                      <span>Submit Assessment & Generate Personalized Path</span>
+                    )}
                   </button>
                 ) : (
-                  <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-300 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div className="p-5 rounded-xl bg-emerald-50 border border-emerald-300 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
                       <div className="flex items-center gap-2 text-emerald-900 font-bold text-sm font-mono">
                         <Check className="w-4 h-4 text-emerald-600" />
                         Diagnostic Calibrated: {(quizScore || 0).toFixed(1)} / 5.0
                       </div>
                       <p className="text-xs text-emerald-700 font-sans mt-0.5">
-                        Bayesian Knowledge Tracing updated with empirical evidence.
+                        {pathGenerated 
+                          ? "✓ Personalized roadmap successfully generated and stored in active session."
+                          : "Empirical BKT evidence recorded. Ready to explore."}
                       </p>
                     </div>
 
                     <button
-                      onClick={() => router.push("/dashboard")}
-                      className="px-6 py-2.5 bg-[#1A1A1A] hover:bg-black text-white rounded-lg font-mono text-xs uppercase tracking-wider font-bold transition-all flex items-center gap-2 shrink-0 cursor-pointer shadow"
+                      onClick={handleProceedToDashboard}
+                      className="px-6 py-3 bg-[#1A1A1A] hover:bg-black text-white rounded-xl font-mono text-xs uppercase tracking-wider font-bold transition-all flex items-center gap-2 shrink-0 cursor-pointer shadow-lg hover:shadow-xl"
                     >
-                      <span>Explore DAG Roadmap</span>
+                      <span>Explore Personalized DAG Roadmap</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
