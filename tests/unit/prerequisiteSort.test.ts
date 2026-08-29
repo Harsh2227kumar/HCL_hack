@@ -110,8 +110,8 @@ describe('prerequisiteSort', () => {
     const result = prerequisiteSort(candidates, 10);
     expect(result.items.length).toBe(4);
 
-    const posA = result.items.find((item) => item.resourceId === 'res-A')?.position!;
-    const posD = result.items.find((item) => item.resourceId === 'res-D')?.position!;
+    const posA = result.items.find((item) => item.resourceId === 'res-A')!.position;
+    const posD = result.items.find((item) => item.resourceId === 'res-D')!.position;
 
     // Res-A must come before Res-D because Res-A was chosen as the provider
     expect(posA).toBeLessThan(posD);

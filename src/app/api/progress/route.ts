@@ -5,8 +5,7 @@ import { Prisma } from '@prisma/client';
 import { evaluateImpact, LearnerContext as ImpactLearnerContext, ProgressEvent as CoreProgressEvent, ProgressEventType } from '../../../lib/core/impactEvaluator';
 import { callAI } from '../../../lib/ai/callAI';
 import { prerequisiteSort, RankedResource, PhaseName } from '../../../lib/core/prerequisiteSort';
-import { scoreResource, LearnerContext as ScoringLearnerContext } from '../../../lib/core/hybridScoring';
-import skillDependenciesData from '../../../../data/skill_dependencies.json';
+import { LearnerContext as ScoringLearnerContext } from '../../../lib/core/hybridScoring';
 
 const AdaptationBannerSchema = z.object({
   banner: z.string().default('Your learning path has been adapted based on your latest activity.'),

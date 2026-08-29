@@ -3,7 +3,7 @@ import { prisma } from '../../../../lib/prisma';
 import { Prisma } from '@prisma/client';
 import { getQueryEmbedding } from '../../../../lib/ai/embeddings';
 import { scoreResource, LearnerContext as ScoringLearnerContext } from '../../../../lib/core/hybridScoring';
-import { prerequisiteSort, RankedResource } from '../../../../lib/core/prerequisiteSort';
+import { prerequisiteSort } from '../../../../lib/core/prerequisiteSort';
 import learningResourcesData from '../../../../../data/learning_resources.json';
 import { groundingCheck } from '../../../../lib/validation/groundingCheck';
 
@@ -287,7 +287,6 @@ export async function POST(request: Request) {
       Capstone: 5,
     };
 
-    const candidateLookup = new Map(candidates.map((c) => [c.id, c]));
     const scoreLookup = new Map(scoredCandidates.map((c) => [c.resourceId, c]));
 
     const newPath = await prisma.learningPath.create({

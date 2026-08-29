@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { prisma } from '../../src/lib/prisma';
 import { POST } from '../../src/app/api/progress/route';
-import { bktUpdate, BKT_PARAMS } from '../../src/lib/core/reconciliation';
+import { bktUpdate } from '../../src/lib/core/reconciliation';
 
 vi.mock('../../src/lib/prisma', () => ({
   prisma: {
