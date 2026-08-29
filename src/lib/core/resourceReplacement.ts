@@ -14,6 +14,11 @@ export interface HarderAlternativeResult {
   targetSkill: string | null;
 }
 
+export interface DifferentFormatResult {
+  replacementResource: DbResource;
+  targetSkill: string | null;
+}
+
 /**
  * Searches LearningResource for an easier resource teaching the weakest prerequisite
  * or foundational skill for the learner, excluding items already present in the current path.
@@ -240,6 +245,97 @@ export async function findHarderAlternative(
     );
 
     const priorityScore = hybrid.score + (candDiff - currentDifficulty) * 0.5;
+
+    return {
+      resource: cand,
+      priorityScore,
+    };
+  });
+
+  scoredCandidates.sort((a, b) => b.priorityScore - a.priorityScore);
+
+  return {
+    replacementResource: scoredCandidates[0].resource,
+    targetSkill,
+  };
+}
+
+/**
+ * Searches LearningResource for an alternative resource teaching the same skills
+ * but in a DIFFERENT format (or fallback same skill) when a resource is skipped.
+ */
+export async function findDifferentFormatAlternative(
+  currentResource: DbResource | { prerequisiteSkills?: unknown; skillsTaught?: unknown; difficulty?: unknown; title?: string; format?: string } | null,
+  userSkills: Array<{ skillName: string; finalEstimate: number; targetLevel: number; confidenceScore: number }>,
+  excludeResourceIds: Set<string>,
+  learnerContext: ScoringLearnerContext
+): Promise<DifferentFormatResult> {
+  const skillsTaught: string[] = (currentResource?.skillsTaught as string[]) || [];
+  const currentDifficulty = typeof currentResource?.difficulty === 'number' ? currentResource.difficulty : 3;
+  const currentFormat = (currentResource?.format as string)?.toLowerCase() || '';
+  const targetSkill = skillsTaught.length > 0 ? skillsTaught[0] : null;
+
+  const candidates = await prisma.learningResource.findMany({
+    where: {
+      id: {
+        notIn: Array.from(excludeResourceIds),
+      },
+    },
+  });
+
+  if (!candidates.length || skillsTaught.length === 0) {
+    return { replacementResource: null, targetSkill };
+  }
+
+  // Filter candidates teaching at least one of the same skills
+  const sameSkillCandidates = candidates.filter((cand) => {
+    const candSkillsTaught = (cand.skillsTaught as string[]) || [];
+    return skillsTaught.some((st) =>
+      candSkillsTaught.some(
+        (cs) =>
+          cs.toLowerCase() === st.toLowerCase() ||
+          cs.toLowerCase().includes(st.toLowerCase()) ||
+          st.toLowerCase().includes(cs.toLowerCase())
+      )
+    );
+  });
+
+  if (!sameSkillCandidates.length) {
+    return { replacementResource: null, targetSkill };
+  }
+
+  // Score candidate resources, prioritizing different format & similar difficulty (+/- 1)
+  const scoredCandidates = sameSkillCandidates.map((cand) => {
+    const candSkillsTaught = (cand.skillsTaught as string[]) || [];
+    const candDiff = typeof cand.difficulty === 'number' ? cand.difficulty : 3;
+    const candFormat = (cand.format as string)?.toLowerCase() || '';
+
+    const hybrid = scoreResource(
+      {
+        id: cand.id,
+        skills_taught: candSkillsTaught,
+        prerequisite_skills: (cand.prerequisiteSkills as string[]) || [],
+        difficulty: candDiff,
+        duration_hours: cand.durationHours ?? undefined,
+        format: cand.format ?? undefined,
+      },
+      learnerContext,
+      0.8
+    );
+
+    let priorityScore = hybrid.score;
+
+    // Bonus for different format
+    const isDifferentFormat = candFormat && currentFormat && candFormat !== currentFormat;
+    if (isDifferentFormat) {
+      priorityScore += 3.0;
+    }
+
+    // Bonus for similar difficulty (+/- 1)
+    const diffDelta = Math.abs(candDiff - currentDifficulty);
+    if (diffDelta <= 1) {
+      priorityScore += 1.0;
+    }
 
     return {
       resource: cand,

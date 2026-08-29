@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { prisma } from '@/lib/prisma';
+import { prisma } from '../../../lib/prisma';
 import { Prisma } from '@prisma/client';
-import { evaluateImpact, LearnerContext as ImpactLearnerContext, ProgressEvent as CoreProgressEvent, ProgressEventType } from '@/lib/core/impactEvaluator';
-import { callAI } from '@/lib/ai/callAI';
-import { prerequisiteSort, RankedResource, PhaseName } from '@/lib/core/prerequisiteSort';
-import { scoreResource, LearnerContext as ScoringLearnerContext } from '@/lib/core/hybridScoring';
+import { evaluateImpact, LearnerContext as ImpactLearnerContext, ProgressEvent as CoreProgressEvent, ProgressEventType } from '../../../lib/core/impactEvaluator';
+import { callAI } from '../../../lib/ai/callAI';
+import { prerequisiteSort, RankedResource, PhaseName } from '../../../lib/core/prerequisiteSort';
+import { scoreResource, LearnerContext as ScoringLearnerContext } from '../../../lib/core/hybridScoring';
 import skillDependenciesData from '../../../../data/skill_dependencies.json';
 
 const AdaptationBannerSchema = z.object({
@@ -28,7 +28,11 @@ const PHASES: PhaseName[] = [
   'Capstone',
 ];
 
-import { findRemedialPrerequisiteResource } from '@/lib/core/resourceReplacement';
+import {
+  findRemedialPrerequisiteResource,
+  findHarderAlternative,
+  findDifferentFormatAlternative,
+} from '../../../lib/core/resourceReplacement';
 
 function computeFormatFit(learningStyle: string | null | undefined, resourceFormat: string | null | undefined): number {
   if (!learningStyle || !resourceFormat) return 0.7; // unknown = assume acceptable
@@ -99,7 +103,7 @@ export async function POST(request: Request) {
     else if (eventType === 'too_hard' || eventType === 'struggling') bktEvent = { correct: false };
 
     if (bktEvent && resource?.skillsTaught) {
-      const { bktUpdate, BKT_PARAMS } = await import('@/lib/core/reconciliation');
+      const { bktUpdate, BKT_PARAMS } = await import('../../../lib/core/reconciliation');
       const skillsTaught = resource.skillsTaught as string[];
 
       for (const skillName of skillsTaught) {
@@ -157,7 +161,9 @@ export async function POST(request: Request) {
     const impact = evaluateImpact(coreEvent, context);
 
     const isTooHard = eventType === 'too_hard';
-    const shouldReplan = isTooHard || impact.replan;
+    const isTooEasy = eventType === 'too_easy';
+    const isSkipped = eventType === 'skipped';
+    const shouldReplan = isTooHard || isTooEasy || isSkipped || impact.replan;
 
     if (!shouldReplan) {
       const latestPath = await prisma.learningPath.findFirst({
@@ -210,7 +216,9 @@ export async function POST(request: Request) {
     };
 
     let insertedResource: Awaited<ReturnType<typeof findRemedialPrerequisiteResource>>['insertedResource'] = null;
+    let replacementResource: Awaited<ReturnType<typeof findHarderAlternative>>['replacementResource'] = null;
     let weakestSkill: string | null = null;
+    let targetSkill: string | null = null;
 
     if (isTooHard) {
       const searchResult = await findRemedialPrerequisiteResource(
@@ -221,10 +229,28 @@ export async function POST(request: Request) {
       );
       insertedResource = searchResult.insertedResource;
       weakestSkill = searchResult.weakestSkill;
+    } else if (isTooEasy) {
+      const searchResult = await findHarderAlternative(
+        resource,
+        userSkills,
+        existingResourceIds,
+        scoringLearnerCtx
+      );
+      replacementResource = searchResult.replacementResource;
+      targetSkill = searchResult.targetSkill;
+    } else if (isSkipped) {
+      const searchResult = await findDifferentFormatAlternative(
+        resource,
+        userSkills,
+        existingResourceIds,
+        scoringLearnerCtx
+      );
+      replacementResource = searchResult.replacementResource;
+      targetSkill = searchResult.targetSkill;
     }
 
     // 5. Convert items into candidates for prerequisiteSort
-    const candidates: RankedResource[] = (currentPath?.items || []).map((item) => ({
+    let candidates: RankedResource[] = (currentPath?.items || []).map((item) => ({
       resourceId: item.resourceId,
       score: item.score ?? 0.8,
       scoreBreakdown: (item.scoreBreakdown as object) ?? {},
@@ -249,6 +275,27 @@ export async function POST(request: Request) {
         prerequisiteSkills: (insertedResource.prerequisiteSkills as string[]) || [],
         durationHours: insertedResource.durationHours ?? 5,
         difficulty: insertedResource.difficulty ?? 2,
+      });
+    } else if (replacementResource) {
+      candidates = candidates.map((cand) => {
+        if (cand.resourceId === resourceId) {
+          return {
+            resourceId: replacementResource!.id,
+            score: 0.9,
+            scoreBreakdown: {
+              skill_gap_match: 1.0,
+              prerequisite_fit: 1.0,
+              difficulty_fit: 1.0,
+              time_fit: 1.0,
+              learning_style_fit: 1.0,
+            },
+            skillsTaught: (replacementResource!.skillsTaught as string[]) || [],
+            prerequisiteSkills: (replacementResource!.prerequisiteSkills as string[]) || [],
+            durationHours: replacementResource!.durationHours ?? 5,
+            difficulty: replacementResource!.difficulty ?? 3,
+          };
+        }
+        return cand;
       });
     }
 
@@ -286,8 +333,40 @@ Write 1 encouraging, concise 1-2 sentence adaptation banner.`;
       } catch {
         console.warn('[progress] Fallback adaptation banner used.');
       }
+    } else if (replacementResource && isTooEasy) {
+      adaptationReason = `Adapted path: Replaced "${resource?.title || resourceId}" with advanced resource "${replacementResource.title}" to match your accelerated pace.`;
+      try {
+        const prompt = `Explain why the learner's path is being adapted.
+Event: Marked as too easy on resource "${resource?.title || resourceId}".
+Action taken: Replaced with advanced resource "${replacementResource.title}" teaching ${targetSkill || 'advanced skills'}.
+Write 1 encouraging, concise 1-2 sentence adaptation banner.`;
+        const aiBanner = await callAI('writing', prompt, AdaptationBannerSchema);
+        if (!Array.isArray(aiBanner) && aiBanner?.data?.banner) {
+          adaptationReason = aiBanner.data.banner;
+        }
+      } catch {
+        console.warn('[progress] Fallback adaptation banner used.');
+      }
+    } else if (replacementResource && isSkipped) {
+      adaptationReason = `Adapted path: Replaced skipped resource "${resource?.title || resourceId}" with alternative resource "${replacementResource.title}" in a different format.`;
+      try {
+        const prompt = `Explain why the learner's path is being adapted.
+Event: Skipped resource "${resource?.title || resourceId}".
+Action taken: Replaced with alternative format resource "${replacementResource.title}" teaching ${targetSkill || 'key skills'}.
+Write 1 encouraging, concise 1-2 sentence adaptation banner.`;
+        const aiBanner = await callAI('writing', prompt, AdaptationBannerSchema);
+        if (!Array.isArray(aiBanner) && aiBanner?.data?.banner) {
+          adaptationReason = aiBanner.data.banner;
+        }
+      } catch {
+        console.warn('[progress] Fallback adaptation banner used.');
+      }
     } else if (isTooHard) {
       adaptationReason = `No new prerequisite resource found; reordered learning path to optimize prerequisite flow after "${resource?.title || resourceId}".`;
+    } else if (isTooEasy) {
+      adaptationReason = `No advanced alternative found; updated sequence for "${resource?.title || resourceId}".`;
+    } else if (isSkipped) {
+      adaptationReason = `No alternative format resource found; updated sequence after skipping "${resource?.title || resourceId}".`;
     } else {
       adaptationReason = `Path adapted (${impact.cause || 'progress update'}): updated resource sequence.`;
       try {
@@ -321,6 +400,26 @@ Write 1 clear, encouraging 1-2 sentence adaptation banner.`;
                 status: 'pending',
                 reason: `Prerequisite reinforcement: Focuses on foundational ${weakestSkill || 'skills'} to prepare for ${resource?.title || 'next topics'}.`,
                 score: 0.95,
+                scoreBreakdown: {
+                  skill_gap_match: 1.0,
+                  prerequisite_fit: 1.0,
+                  difficulty_fit: 1.0,
+                  time_fit: 1.0,
+                  learning_style_fit: 1.0,
+                },
+              };
+            }
+
+            if (replacementResource && item.resourceId === replacementResource.id) {
+              return {
+                resourceId: item.resourceId,
+                phase: PHASE_NUMBERS[item.phase] || 1,
+                position: item.position,
+                status: 'pending',
+                reason: isTooEasy
+                  ? `Advanced replacement: Upgraded to match higher level in ${targetSkill || 'skills'}.`
+                  : `Format adaptation: Alternative format resource replacing skipped content.`,
+                score: 0.9,
                 scoreBreakdown: {
                   skill_gap_match: 1.0,
                   prerequisite_fit: 1.0,
