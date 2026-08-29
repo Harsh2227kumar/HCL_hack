@@ -3,8 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import ChatBubble from "@/components/chat/ChatBubble";
-import ChatInput from "@/components/chat/ChatInput";
-import QuickReplyChips from "@/components/chat/QuickReplyChips";
+import DynamicAdvisorInput, { DynamicInputConfig } from "@/components/chat/DynamicAdvisorInput";
 import { CheckCircle2, ArrowRight, HelpCircle, Check, AlertCircle, Loader2, Clock } from "lucide-react";
 
 type MessageRole = "user" | "ai";
@@ -12,6 +11,8 @@ type MessageRole = "user" | "ai";
 interface ChatMessage {
   role: MessageRole;
   text: string;
+  thought?: string;
+  input?: DynamicInputConfig;
   quick_replies?: string[];
 }
 
@@ -78,6 +79,7 @@ export default function OnboardingPage() {
   const [generationError, setGenerationError] = useState<string | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const lastAiMessage = [...messages].reverse().find((m) => m.role === "ai");
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -99,17 +101,20 @@ export default function OnboardingPage() {
         });
         const data = await res.json();
 
-        if (data.reply) {
+        const messageText = data.message || data.reply;
+        if (messageText) {
           setMessages([
             {
               role: "ai",
-              text: data.reply,
-              quick_replies: data.quick_replies || [
+              text: messageText,
+              thought: data.thought,
+              input: data.input,
+              quick_replies: data.quick_replies || data.input?.options || [
+                "AI Engineering & LLMs",
                 "Full Stack Web Development",
-                "AI Engineering & Machine Learning",
                 "Backend Systems & Architecture",
-                "DevOps & Cloud Engineering",
-                "Data Analytics & Engineering"
+                "Cloud & DevOps Architecture",
+                "Data Science & Analytics"
               ],
             },
           ]);
@@ -121,13 +126,26 @@ export default function OnboardingPage() {
         setMessages([
           {
             role: "ai",
-            text: "Welcome to the Adaptive Learning Intelligence Engine! What engineering domain are you looking to master?",
+            text: "Hey! I'm your AI Learning Path & Career Advisor. What domain or technology are you looking to master?",
+            thought: "Assessing target domain and learner ambitions.",
+            input: {
+              type: "single_select_with_text",
+              options: [
+                "AI Engineering & LLMs",
+                "Full Stack Web Development",
+                "Backend Systems & Architecture",
+                "Cloud & DevOps Architecture",
+                "Data Science & Analytics"
+              ],
+              allow_custom: true,
+              placeholder: "Or tell me your dream career target..."
+            },
             quick_replies: [
+              "AI Engineering & LLMs",
               "Full Stack Web Development",
-              "AI Engineering & Machine Learning",
               "Backend Systems & Architecture",
-              "DevOps & Cloud Engineering",
-              "Data Analytics & Engineering"
+              "Cloud & DevOps Architecture",
+              "Data Science & Analytics"
             ],
           },
         ]);
@@ -390,7 +408,8 @@ export default function OnboardingPage() {
       });
       const data = await res.json();
 
-      if (!res.ok || !data.reply) {
+      const messageText = data.message || data.reply;
+      if (!res.ok || !messageText) {
         throw new Error("Chat API failed");
       }
 
@@ -398,16 +417,18 @@ export default function OnboardingPage() {
 
       const aiReply: ChatMessage = {
         role: "ai",
-        text: data.reply,
-        quick_replies: data.quick_replies,
+        text: messageText,
+        thought: data.thought,
+        input: data.input,
+        quick_replies: data.quick_replies || data.input?.options || [],
       };
 
       const updated = [...conversationWithUser, aiReply];
       setMessages(updated);
 
-      // Complete extraction when advisor marks complete or sufficient detail is gathered
+      // Complete extraction when advisor marks ready for roadmap or sufficient detail is gathered
       const userCount = updated.filter((m) => m.role === "user").length;
-      if (data.is_complete || userCount >= 4) {
+      if (data.is_ready_for_roadmap || data.is_complete || userCount >= 4) {
         triggerProfileExtraction(updated);
       }
     } catch (err) {
@@ -415,6 +436,7 @@ export default function OnboardingPage() {
       const fallbackReply: ChatMessage = {
         role: "ai",
         text: "Captured! I am assembling your personalized learning profile and diagnostic assessment.",
+        thought: "Processing complete conversation context.",
         quick_replies: [],
       };
       const updated = [...conversationWithUser, fallbackReply];
@@ -517,13 +539,6 @@ export default function OnboardingPage() {
     router.push("/dashboard");
   };
 
-  const lastMessage = messages[messages.length - 1];
-  const hasQuickReplies =
-    lastMessage &&
-    lastMessage.role === "ai" &&
-    lastMessage.quick_replies &&
-    lastMessage.quick_replies.length > 0;
-
   return (
     <main className="min-h-screen relative overflow-hidden bg-[#FDFCFB] text-[#1A1A1A] flex flex-col items-center justify-center p-3 sm:p-6 md:p-8 font-sans">
       {/* Background Ambience */}
@@ -579,7 +594,12 @@ export default function OnboardingPage() {
         {/* Main Content Area */}
         <div className="flex-1 overflow-y-auto p-5 sm:p-8 space-y-4 relative scroll-smooth">
           {messages.map((msg, index) => (
-            <ChatBubble key={index} role={msg.role} text={msg.text} />
+            <ChatBubble
+              key={index}
+              role={msg.role}
+              text={msg.text}
+              thought={msg.thought}
+            />
           ))}
 
           {loading && <ChatBubble role="ai" text="" isTyping={true} />}
@@ -775,20 +795,21 @@ export default function OnboardingPage() {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Quick Reply Suggestions */}
-        {!isCompleted && hasQuickReplies && (
-          <div className="px-6 py-2 bg-[#F8F7F4]/50 border-t border-[#1A1A1A]/10">
-            <QuickReplyChips
-              options={lastMessage.quick_replies || []}
-              onSelect={handleSendMessage}
-            />
-          </div>
-        )}
-
-        {/* Input Bar */}
+        {/* Dynamic Advisor Input Area */}
         {!isCompleted && (
           <div className="p-4 sm:p-6 border-t border-[#1A1A1A]/15 bg-[#F8F7F4]">
-            <ChatInput onSend={handleSendMessage} disabled={loading} />
+            <DynamicAdvisorInput
+              config={
+                lastAiMessage?.input || {
+                  type: 'single_select_with_text',
+                  options: lastAiMessage?.quick_replies || [],
+                  allow_custom: true,
+                  placeholder: 'Type your answer or describe in your own words...',
+                }
+              }
+              onSend={handleSendMessage}
+              disabled={loading}
+            />
           </div>
         )}
       </div>
