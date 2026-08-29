@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { X, CheckCircle2, Clock, AlertCircle, ArrowRight, ArrowLeft, ExternalLink, ShieldCheck, Terminal, Award, Sparkles } from 'lucide-react';
+import { X, CheckCircle2, Clock, AlertCircle, ArrowRight, ArrowLeft, ExternalLink, ShieldCheck, Terminal, Award, Sparkles, BookOpen } from 'lucide-react';
 import { RoadmapNode, RoadmapPath } from '@/data/roadmapsData';
 import { DecisionTraceCard } from './DecisionTraceCard';
 
@@ -208,9 +208,22 @@ export const NodeDetailDrawer: React.FC<NodeDetailDrawerProps> = ({
         )}
 
         {/* Status Switcher Action Bar */}
-        <div className="border border-[#1A1A1A] p-4 bg-white space-y-2">
-          <span className="text-[11px] font-mono uppercase tracking-wider text-[#555] block font-bold">Update Skill Status:</span>
-          <div className="grid grid-cols-3 gap-2">
+        <div className="border border-[#1A1A1A] p-4 bg-white space-y-3">
+          <div className="flex items-center justify-between">
+            <span className="text-[11px] font-mono uppercase tracking-wider text-[#555] block font-bold">Skill Mastery Actions:</span>
+            {getStatusBadge(node.status)}
+          </div>
+
+          <a
+            href={`/course/${encodeURIComponent(node.sourceResourceId || node.id)}`}
+            className="w-full py-2.5 px-3 bg-[#1A1A1A] hover:bg-black text-white rounded-lg text-xs font-mono uppercase font-bold tracking-wider flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer"
+          >
+            <BookOpen className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Open Interactive Lab & Practice</span>
+            <ExternalLink className="w-3 h-3" />
+          </a>
+
+          <div className="grid grid-cols-3 gap-2 pt-1 border-t border-[#1A1A1A]/10">
             <button
               onClick={() => onToggleStatus(node.id, 'not-started')}
               className={`py-2 px-2 text-xs font-mono uppercase border transition-all cursor-pointer ${
