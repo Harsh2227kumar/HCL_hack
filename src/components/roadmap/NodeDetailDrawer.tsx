@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { X, CheckCircle2, Clock, AlertCircle, ArrowRight, ArrowLeft, ExternalLink, ShieldCheck, Terminal, Award, Sparkles } from 'lucide-react';
 import { RoadmapNode, RoadmapPath } from '@/data/roadmapsData';
+import { DecisionTraceCard } from './DecisionTraceCard';
 
 interface NodeDetailDrawerProps {
   node: RoadmapNode | null;
@@ -14,7 +15,7 @@ interface NodeDetailDrawerProps {
   onToggleStatus: (nodeId: string, status: 'not-started' | 'in-progress' | 'mastered' | 'too-hard' | 'skipped') => void;
 }
 
-const getExplanationFromBreakdown = (scoreBreakdown?: Record<string, number | undefined>) => {
+export const getExplanationFromBreakdown = (scoreBreakdown?: Record<string, number | undefined>) => {
   if (!scoreBreakdown) return '';
   
   const skillGap = scoreBreakdown.skill_gap_match ?? 0;
@@ -186,87 +187,23 @@ export const NodeDetailDrawer: React.FC<NodeDetailDrawerProps> = ({
         </div>
 
         {/* Why Recommended / Recommendation Trace Section */}
-        {node.scoreBreakdown && Object.keys(node.scoreBreakdown).length > 0 ? (
-          <div className="space-y-3 p-4 bg-emerald-50 border border-emerald-300 rounded-lg">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-emerald-900 font-bold flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-emerald-700" />
-              <span>00 / Why Recommended? (Engine Decision Trace)</span>
-            </h3>
-            <p className="text-xs font-sans text-emerald-950 font-medium">
-              {getExplanationFromBreakdown(node.scoreBreakdown) || node.reason || 'This resource is recommended to target your current skill gaps and align with your learning goals.'}
-            </p>
-            <div className="pt-2 grid grid-cols-2 gap-2 text-[11px] font-mono border-t border-emerald-300/40">
-              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
-                <span className="text-emerald-800">Skill Gap Match:</span>
-                <span className="font-bold text-emerald-950">
-                  {Math.round((node.scoreBreakdown.skill_gap_match ?? 0) * 100)}%
-                </span>
-              </div>
-              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
-                <span className="text-emerald-800">Prerequisite Fit:</span>
-                <span className="font-bold text-emerald-950">
-                  {Math.round((node.scoreBreakdown.prerequisite_fit ?? 0) * 100)}%
-                </span>
-              </div>
-              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
-                <span className="text-emerald-800">Semantic Fit:</span>
-                <span className="font-bold text-emerald-950">
-                  {Math.round(((node.scoreBreakdown.retrievalSimilarity !== undefined ? node.scoreBreakdown.retrievalSimilarity : node.scoreBreakdown.retrieval_similarity) ?? 0) * 100)}%
-                </span>
-              </div>
-              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
-                <span className="text-emerald-800">Difficulty Fit:</span>
-                <span className="font-bold text-emerald-950">
-                  {Math.round((node.scoreBreakdown.difficulty_fit ?? 0) * 100)}%
-                </span>
-              </div>
-              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
-                <span className="text-emerald-800">Time Fit:</span>
-                <span className="font-bold text-emerald-950">
-                  {Math.round((node.scoreBreakdown.time_fit ?? 0) * 100)}%
-                </span>
-              </div>
-              <div className="flex justify-between items-center bg-white px-2 py-1 rounded border border-emerald-200">
-                <span className="text-emerald-800">Style Fit:</span>
-                <span className="font-bold text-emerald-950">
-                  {Math.round((node.scoreBreakdown.learning_style_fit ?? 0) * 100)}%
-                </span>
-              </div>
-            </div>
-            {node.skillsTaught && node.skillsTaught.length > 0 && (
-              <div className="text-[11px] font-sans text-emerald-950 mt-1">
-                📚 <strong>Skills Taught:</strong> {node.skillsTaught.join(', ')}
-              </div>
-            )}
-            {node.prerequisiteSkills && node.prerequisiteSkills.length > 0 && (
-              <div className="text-[11px] font-sans text-emerald-950">
-                🔑 <strong>Prerequisite Skills:</strong> {node.prerequisiteSkills.join(', ')}
-              </div>
-            )}
-          </div>
-        ) : (
-          /* Fallback AI Explainability Banner when scoreBreakdown doesn't exist */
-          <div className="p-4 bg-emerald-50/70 border border-emerald-300 rounded-lg space-y-2">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-xs font-mono font-bold text-emerald-900 uppercase">
-                <Sparkles className="w-4 h-4 text-emerald-700" />
-                <span>Explainability Trace</span>
-              </div>
-              {!aiExplanation && (
-                <button
-                  onClick={handleFetchAiTrace}
-                  disabled={loadingAi}
-                  className="text-[11px] font-mono bg-[#1A1A1A] text-white px-2.5 py-1 rounded hover:bg-black uppercase cursor-pointer"
-                >
-                  {loadingAi ? 'Tracing...' : 'Explain Recommendation'}
-                </button>
-              )}
-            </div>
-            {aiExplanation && (
-              <p className="text-xs font-sans text-emerald-900 bg-white p-3 rounded border border-emerald-200 leading-relaxed animate-in fade-in">
-                {aiExplanation}
-              </p>
-            )}
+        <DecisionTraceCard
+          resourceTitle={node.label}
+          score={(node as { score?: number }).score}
+          scoreBreakdown={node.scoreBreakdown}
+          reason={node.reason}
+          traceExplanation={aiExplanation}
+        />
+        {!node.scoreBreakdown && !aiExplanation && (
+          <div className="flex justify-end pt-1">
+            <button
+              onClick={handleFetchAiTrace}
+              disabled={loadingAi}
+              className="text-[11px] font-mono bg-[#1A1A1A] text-white px-3 py-1.5 rounded hover:bg-black uppercase cursor-pointer disabled:opacity-50 flex items-center gap-1.5"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+              <span>{loadingAi ? 'Tracing API...' : 'Fetch Trace Explanation'}</span>
+            </button>
           </div>
         )}
 
