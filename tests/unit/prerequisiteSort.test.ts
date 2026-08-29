@@ -71,30 +71,80 @@ describe('prerequisiteSort', () => {
     }).not.toThrow();
   });
 
-  test('buckets 10 items correctly into 5 phases', () => {
-    const tenCandidates: RankedResource[] = Array.from({ length: 10 }, (_, i) => ({
-      resourceId: `res-${i + 1}`,
-      score: 1 - i * 0.05,
-      skillsTaught: [`Skill-${i + 1}`],
-      prerequisiteSkills: i > 0 ? [`Skill-${i}`] : [],
-      durationHours: 4,
-      difficulty: Math.min(5, Math.floor(i / 2) + 1),
-    }));
+  test('selects only the single best provider when multiple resources teach a prerequisite skill', () => {
+    const candidates: RankedResource[] = [
+      {
+        resourceId: 'res-A', // Best provider for Skill-X (score 0.9)
+        score: 0.9,
+        skillsTaught: ['Skill-X'],
+        prerequisiteSkills: [],
+        durationHours: 5,
+        difficulty: 2,
+      },
+      {
+        resourceId: 'res-B', // Lower score provider for Skill-X (score 0.6)
+        score: 0.6,
+        skillsTaught: ['Skill-X'],
+        prerequisiteSkills: [],
+        durationHours: 5,
+        difficulty: 2,
+      },
+      {
+        resourceId: 'res-C', // Lowest score provider for Skill-X (score 0.4)
+        score: 0.4,
+        skillsTaught: ['Skill-X'],
+        prerequisiteSkills: [],
+        durationHours: 5,
+        difficulty: 2,
+      },
+      {
+        resourceId: 'res-D', // Requires Skill-X
+        score: 0.95,
+        skillsTaught: ['Advanced Topic'],
+        prerequisiteSkills: ['Skill-X'],
+        durationHours: 10,
+        difficulty: 3,
+      },
+    ];
 
-    const result = prerequisiteSort(tenCandidates, 10);
-    expect(result.items.length).toBe(10);
+    const result = prerequisiteSort(candidates, 10);
+    expect(result.items.length).toBe(4);
 
-    const phases = result.items.map((item) => item.phase);
-    expect(phases[0]).toBe('Foundations');
-    expect(phases[1]).toBe('Foundations');
-    expect(phases[2]).toBe('Core');
-    expect(phases[3]).toBe('Core');
-    expect(phases[4]).toBe('Applied Project');
-    expect(phases[5]).toBe('Applied Project');
-    expect(phases[6]).toBe('Specialization');
-    expect(phases[7]).toBe('Specialization');
-    expect(phases[8]).toBe('Capstone');
-    expect(phases[9]).toBe('Capstone');
+    const posA = result.items.find((item) => item.resourceId === 'res-A')?.position!;
+    const posD = result.items.find((item) => item.resourceId === 'res-D')?.position!;
+
+    // Res-A must come before Res-D because Res-A was chosen as the provider
+    expect(posA).toBeLessThan(posD);
+  });
+
+  test('assigns semantic phases based on depth and resource metadata', () => {
+    const candidates: RankedResource[] = [
+      {
+        resourceId: 'res-foundations',
+        score: 0.9,
+        skillsTaught: ['Foundational Skill'],
+        prerequisiteSkills: [],
+        durationHours: 5,
+        difficulty: 1,
+        type: 'course',
+      },
+      {
+        resourceId: 'res-project',
+        score: 0.85,
+        skillsTaught: ['Applied Skill'],
+        prerequisiteSkills: ['Foundational Skill'],
+        durationHours: 10,
+        difficulty: 3,
+        type: 'project',
+      },
+    ];
+
+    const result = prerequisiteSort(candidates, 10);
+    const itemFoundations = result.items.find((i) => i.resourceId === 'res-foundations');
+    const itemProject = result.items.find((i) => i.resourceId === 'res-project');
+
+    expect(itemFoundations?.phase).toBe('Foundations');
+    expect(itemProject?.phase).toBe('Applied Project');
   });
 
   test('computes estimatedWeeksToGoal correctly for known duration/hours input', () => {

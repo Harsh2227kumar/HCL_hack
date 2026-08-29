@@ -1,3 +1,5 @@
+import { assignPhase, Phase } from './phaseAssignment';
+
 export interface RankedResource {
   resourceId: string;
   score: number;
@@ -6,14 +8,10 @@ export interface RankedResource {
   prerequisiteSkills: string[];
   durationHours: number;
   difficulty: number;
+  type?: string;
 }
 
-export type PhaseName =
-  | 'Foundations'
-  | 'Core'
-  | 'Applied Project'
-  | 'Specialization'
-  | 'Capstone';
+export type PhaseName = Phase;
 
 export interface SortedPathItem {
   resourceId: string;
@@ -26,16 +24,8 @@ export interface SortedPath {
   estimatedWeeksToGoal: number;
 }
 
-const PHASES: PhaseName[] = [
-  'Foundations',
-  'Core',
-  'Applied Project',
-  'Specialization',
-  'Capstone',
-];
-
 /**
- * Pure deterministic topological sort of ranked candidates into 5 phased milestones.
+ * Pure deterministic topological sort of ranked candidates into phased milestones.
  *
  * @param candidates Array of ranked learning resources from recommendation engine
  * @param weeklyHours Learner's available weekly study hours
@@ -54,40 +44,86 @@ export function prerequisiteSort(
 
   const n = candidates.length;
   const resourceMap = new Map<string, RankedResource>();
-  candidates.forEach((c) => resourceMap.set(c.resourceId, c));
+  const candidateIndexMap = new Map<string, number>();
+  candidates.forEach((c, idx) => {
+    resourceMap.set(c.resourceId, c);
+    candidateIndexMap.set(c.resourceId, idx);
+  });
 
-  // Build skill provider mapping: skill -> list of resourceIds teaching it
-  const skillProviders = new Map<string, string[]>();
+  // Build skill provider mapping: skill -> list of RankedResource candidates teaching it
+  const skillProviders = new Map<string, RankedResource[]>();
   candidates.forEach((c) => {
     (c.skillsTaught || []).forEach((skill) => {
       if (!skillProviders.has(skill)) {
         skillProviders.set(skill, []);
       }
-      skillProviders.get(skill)!.push(c.resourceId);
+      skillProviders.get(skill)!.push(c);
     });
   });
 
+  // Helper: compute providerScore for candidate selection
+  function getProviderScore(cand: RankedResource): number {
+    const candIndex = candidateIndexMap.get(cand.resourceId) ?? 0;
+    const prereqs = cand.prerequisiteSkills || [];
+    let bonus = 0;
+    if (prereqs.length === 0) {
+      bonus = 0.05;
+    } else {
+      const earlierSkills = new Set<string>();
+      for (let i = 0; i < candIndex; i++) {
+        (candidates[i].skillsTaught || []).forEach((s) => earlierSkills.add(s));
+      }
+      if (prereqs.every((p) => earlierSkills.has(p))) {
+        bonus = 0.05;
+      }
+    }
+    return cand.score + bonus;
+  }
+
   // Graph adjacency list (A -> B means A is a prerequisite for B) and in-degree counter
   const adj = new Map<string, Set<string>>();
+  const reverseAdj = new Map<string, Set<string>>();
   const inDegree = new Map<string, number>();
 
   candidates.forEach((c) => {
     adj.set(c.resourceId, new Set<string>());
+    reverseAdj.set(c.resourceId, new Set<string>());
     inDegree.set(c.resourceId, 0);
   });
 
+  // For each resource b and each prerequisite skill it needs, select only the SINGLE BEST provider
   candidates.forEach((b) => {
     (b.prerequisiteSkills || []).forEach((prereqSkill) => {
-      const providers = skillProviders.get(prereqSkill) || [];
-      providers.forEach((aId) => {
-        if (aId !== b.resourceId) {
-          const targets = adj.get(aId)!;
-          if (!targets.has(b.resourceId)) {
-            targets.add(b.resourceId);
-            inDegree.set(b.resourceId, (inDegree.get(b.resourceId) || 0) + 1);
+      const providers = (skillProviders.get(prereqSkill) || []).filter(
+        (a) => a.resourceId !== b.resourceId
+      );
+
+      if (providers.length > 0) {
+        // Pick best provider by highest providerScore, tie-broken by lower difficulty
+        let bestProvider = providers[0];
+        let bestScore = getProviderScore(bestProvider);
+
+        for (let i = 1; i < providers.length; i++) {
+          const cand = providers[i];
+          const candScore = getProviderScore(cand);
+
+          if (
+            candScore > bestScore ||
+            (Math.abs(candScore - bestScore) < 1e-6 && cand.difficulty < bestProvider.difficulty)
+          ) {
+            bestProvider = cand;
+            bestScore = candScore;
           }
         }
-      });
+
+        const aId = bestProvider.resourceId;
+        const targets = adj.get(aId)!;
+        if (!targets.has(b.resourceId)) {
+          targets.add(b.resourceId);
+          reverseAdj.get(b.resourceId)!.add(aId);
+          inDegree.set(b.resourceId, (inDegree.get(b.resourceId) || 0) + 1);
+        }
+      }
     });
   });
 
@@ -95,12 +131,10 @@ export function prerequisiteSort(
   const sortedResult: string[] = [];
   const processed = new Set<string>();
 
-  // Queue of nodes with inDegree === 0, prioritized by resource score (descending)
   const readyNodes = candidates
     .filter((c) => (inDegree.get(c.resourceId) || 0) === 0)
     .map((c) => c.resourceId);
 
-  // Helper to sort ready nodes by score descending for optimal ordering
   const sortReadyNodes = (nodes: string[]) => {
     nodes.sort((a, b) => {
       const scoreA = resourceMap.get(a)?.score ?? 0;
@@ -130,7 +164,7 @@ export function prerequisiteSort(
       });
       sortReadyNodes(readyNodes);
     } else {
-      // Cycle detected: remaining unprocessed nodes all have inDegree > 0
+      // Cycle detected
       const remaining = candidates
         .map((c) => c.resourceId)
         .filter((id) => !processed.has(id));
@@ -141,7 +175,6 @@ export function prerequisiteSort(
         `[prerequisiteSort] Cycle detected among remaining ${remaining.length} resources. Removing lowest-score edge.`
       );
 
-      // Find all active edges between remaining unprocessed nodes
       interface Edge {
         from: string;
         to: string;
@@ -155,7 +188,6 @@ export function prerequisiteSort(
           if (!processed.has(toId)) {
             const scoreFrom = resourceMap.get(fromId)?.score ?? 0;
             const scoreTo = resourceMap.get(toId)?.score ?? 0;
-            // Edge score can be combined score of target or provider
             activeEdges.push({
               from: fromId,
               to: toId,
@@ -166,12 +198,11 @@ export function prerequisiteSort(
       });
 
       if (activeEdges.length > 0) {
-        // Pick edge with lowest score to break cycle
         activeEdges.sort((e1, e2) => e1.score - e2.score);
         const lowestEdge = activeEdges[0];
 
-        // Break edge lowestEdge.from -> lowestEdge.to
         adj.get(lowestEdge.from)?.delete(lowestEdge.to);
+        reverseAdj.get(lowestEdge.to)?.delete(lowestEdge.from);
         const currentDeg = inDegree.get(lowestEdge.to) || 1;
         const newDeg = Math.max(0, currentDeg - 1);
         inDegree.set(lowestEdge.to, newDeg);
@@ -185,7 +216,6 @@ export function prerequisiteSort(
           sortReadyNodes(readyNodes);
         }
       } else {
-        // Fallback if no edges found: force push remaining node with highest score
         remaining.sort((a, b) => {
           const scoreA = resourceMap.get(a)?.score ?? 0;
           const scoreB = resourceMap.get(b)?.score ?? 0;
@@ -198,14 +228,37 @@ export function prerequisiteSort(
     }
   }
 
-  // Bucket sorted items into 5 phases
-  const totalItems = sortedResult.length;
+  // Calculate prerequisiteDepth for each node in sorted order
+  const depthMap = new Map<string, number>();
+  for (const id of sortedResult) {
+    const preds = reverseAdj.get(id);
+    if (!preds || preds.size === 0) {
+      depthMap.set(id, 0);
+    } else {
+      let maxPredDepth = 0;
+      for (const pId of preds) {
+        const pDepth = depthMap.get(pId) ?? 0;
+        if (pDepth > maxPredDepth) {
+          maxPredDepth = pDepth;
+        }
+      }
+      depthMap.set(id, maxPredDepth + 1);
+    }
+  }
+
+  // Assign semantic phases using assignPhase module
   const items: SortedPathItem[] = sortedResult.map((resourceId, index) => {
-    // Determine phase index 0..4 evenly
-    const phaseIndex = Math.min(Math.floor((index / totalItems) * 5), 4);
+    const cand = resourceMap.get(resourceId)!;
+    const depth = depthMap.get(resourceId) ?? 0;
+    const phase = assignPhase({
+      resourceId: cand.resourceId,
+      type: cand.type || 'course',
+      difficulty: cand.difficulty,
+      prerequisiteDepth: depth,
+    });
     return {
       resourceId,
-      phase: PHASES[phaseIndex],
+      phase,
       position: index + 1,
     };
   });
