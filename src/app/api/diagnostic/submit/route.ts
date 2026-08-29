@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
-import { reconcileSkillEstimate, SkillEvidence } from '@/lib/core/reconciliation';
+import {
+  bktUpdate,
+  BKT_PARAMS,
+  reconcileSkillEstimate,
+  SkillEvidence
+} from '@/lib/core/reconciliation';
 
 interface AnswerInput {
   questionId: string;
@@ -16,8 +21,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid input' }, { status: 400 });
     }
 
-    // 1. Create Evidence for each answer
-    for (const answer of answers as AnswerInput[]) {
+    // 1. Create Evidence for each answer with distinct 1ms sequential timestamps
+    const baseTime = Date.now();
+    for (let index = 0; index < answers.length; index++) {
+      const answer = answers[index] as AnswerInput;
       if (!answer.skillName || typeof answer.correct !== 'boolean') {
         return NextResponse.json({ error: 'Invalid input' }, { status: 400 });
       }
@@ -29,26 +36,31 @@ export async function POST(request: Request) {
           score: answer.correct ? 5 : 0,
           reliability: 0.7,
           recencyWeight: 1.0,
-          timestamp: new Date(),
+          timestamp: new Date(baseTime + index),
         }
       });
     }
 
-    // 2. Group answers by skillName
-    const uniqueSkillNames = Array.from(
-      new Set((answers as AnswerInput[]).map(a => a.skillName))
-    );
+    // 2. Group answers by skillName in original arrival order
+    const uniqueSkillNames: string[] = [];
+    for (const answer of answers as AnswerInput[]) {
+      if (!uniqueSkillNames.includes(answer.skillName)) {
+        uniqueSkillNames.push(answer.skillName);
+      }
+    }
 
     const skillResults: Array<{
       skillName: string;
       finalEstimate: number;
       confidenceScore: number;
+      trajectory: number[];
     }> = [];
 
     // 3 & 4. Reconcile evidence and upsert LearnerSkill per skill
     for (const skillName of uniqueSkillNames) {
       const allEvidence = await prisma.skillEvidence.findMany({
-        where: { userId, skillName }
+        where: { userId, skillName },
+        orderBy: { timestamp: 'asc' }
       });
 
       const evidenceRecords: SkillEvidence[] = allEvidence.map(e => ({
@@ -59,6 +71,15 @@ export async function POST(request: Request) {
       }));
 
       const reconciled = reconcileSkillEstimate(evidenceRecords);
+
+      // Compute sequential trajectory of P(known) after each evidence observation
+      let pKnown: number = BKT_PARAMS.P_L0;
+      const trajectory: number[] = [];
+      for (const e of evidenceRecords) {
+        const isCorrect = e.score >= 2.5;
+        pKnown = bktUpdate(pKnown, isCorrect);
+        trajectory.push(Number(pKnown.toFixed(4)));
+      }
 
       const finalEstimate = reconciled.final_estimate ?? 0;
       const confidenceScore = reconciled.confidence_score;
@@ -87,11 +108,12 @@ export async function POST(request: Request) {
       skillResults.push({
         skillName,
         finalEstimate,
-        confidenceScore
+        confidenceScore,
+        trajectory
       });
     }
 
-    // 5. Return response summarizing per-skill results
+    // 5. Return response summarizing per-skill results and trajectory
     return NextResponse.json({ success: true, skillResults });
 
   } catch (error: unknown) {
@@ -100,4 +122,5 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: errMsg }, { status: 500 });
   }
 }
+
 
