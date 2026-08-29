@@ -4,14 +4,14 @@ import { prisma } from '@/lib/prisma';
 import { selectSkillsForDiagnostic, ClaimedSkill, SkillDependency } from '@/lib/core/diagnosticSelection';
 import skillDependenciesData from '../../../../../data/skill_dependencies.json';
 import { callAI } from '@/lib/ai/callAI';
+import { BKT_PARAMS } from '@/lib/core/reconciliation';
+import { selectDifficulty, difficultyToNumber } from '@/lib/core/adaptiveDiagnostic';
 
-const QuestionSchema = z.object({
-  questions: z.array(z.object({
-    question: z.string(),
-    options: z.array(z.string()),
-    correctAnswer: z.string(),
-    explanation: z.string()
-  }))
+const SingleQuestionSchema = z.object({
+  question: z.string(),
+  options: z.array(z.string()),
+  correctAnswer: z.string(),
+  explanation: z.string()
 });
 
 function getQuestionCount(totalSkills: number, index: number): number {
@@ -51,72 +51,86 @@ export async function POST(request: Request) {
 
     for (let i = 0; i < selected.length; i++) {
       const targetSkill = selected[i];
-      const count = getQuestionCount(selected.length, i);
-      const prompt = `Generate ${count} multiple-choice questions to assess a learner's knowledge in "${targetSkill}". Include 4 options per question, the correct answer, and a short explanation.`;
+      const skillRecord = skills.find(s => s.skillName === targetSkill);
+      const currentFinalEstimate = (skillRecord && typeof skillRecord.finalEstimate === 'number')
+        ? skillRecord.finalEstimate
+        : (BKT_PARAMS.P_L0 * 5.0);
+      const pKnown = currentFinalEstimate / 5.0;
 
-      let rawQuestions: Array<{ question: string; options: string[]; correctAnswer: string; explanation: string }> = [];
+      const count = getQuestionCount(selected.length, i);
+      const questionsForSkill = [];
       let isFallback = false;
 
-      try {
-        const aiRes = await callAI('understanding', prompt, QuestionSchema);
-        if (!Array.isArray(aiRes) && aiRes?.data?.questions?.length > 0) {
-          rawQuestions = aiRes.data.questions.slice(0, count);
-        } else {
-          throw new Error('AI response empty');
-        }
-      } catch {
-        console.warn(`[diagnostic/generate] AI generation failed for ${targetSkill}, using curated fallback.`);
-        isFallback = true;
-        const fallbackPool = [
-          {
-            question: `What is the core principle or purpose of ${targetSkill}?`,
-            options: [
-              `To establish structured patterns, reliable execution, and core abstractions in ${targetSkill}.`,
-              `To bypass all safety checks and compilation stages in production environments.`,
-              `To execute unverified bytecode directly without memory management.`,
-              `To convert synchronous relational schemas into flat binary streams.`
-            ],
-            correctAnswer: `To establish structured patterns, reliable execution, and core abstractions in ${targetSkill}.`,
-            explanation: `Understanding the fundamental design principles and abstractions of ${targetSkill} is critical for robust application development.`
-          },
-          {
-            question: `When implementing ${targetSkill}, which consideration is most important for maintainability?`,
-            options: [
-              `Adhering to deterministic interfaces, modular isolation, and testable boundaries.`,
-              `Hardcoding environment parameters directly inside root modules.`,
-              `Disabling error logging to reduce disk write cycles.`,
-              `Duplicating domain state across independent worker nodes without synchronization.`
-            ],
-            correctAnswer: `Adhering to deterministic interfaces, modular isolation, and testable boundaries.`,
-            explanation: `Modular isolation and clear interfaces prevent regression and decouple complex dependencies.`
-          },
-          {
-            question: `How does intermediate mastery in ${targetSkill} translate to system reliability?`,
-            options: [
-              `Ensures proper error handling, resource lifecycle management, and predictable latency.`,
-              `Guarantees that no CPU cycles will be consumed during peak workloads.`,
-              `Automatically resolves cross-origin network failures at the OS kernel level.`,
-              `Replaces database transaction guarantees with local in-memory caches.`
-            ],
-            correctAnswer: `Ensures proper error handling, resource lifecycle management, and predictable latency.`,
-            explanation: `Reliable systems depend on disciplined error recovery and proper lifecycle resource management.`
-          }
-        ];
-        rawQuestions = fallbackPool.slice(0, count);
-      }
+      for (let qIndex = 0; qIndex < count; qIndex++) {
+        const difficultyLevel = selectDifficulty(pKnown);
+        const numDifficulty = difficultyToNumber(difficultyLevel);
 
-      const formattedQuestions = rawQuestions.map((q, qIndex) => ({
-        questionId: `${targetSkill}-q${qIndex}`,
-        skillName: targetSkill,
-        question: q.question,
-        options: q.options,
-        correctAnswer: q.correctAnswer,
-        explanation: q.explanation
-      }));
+        const prompt = `Generate a single multiple-choice question of ${difficultyLevel} difficulty to assess a learner's knowledge in "${targetSkill}". Include 4 options, the correct answer, and a short explanation.`;
+
+        let qObj: { question: string; options: string[]; correctAnswer: string; explanation: string } | null = null;
+
+        try {
+          const aiRes = await callAI('understanding', prompt, SingleQuestionSchema);
+          if (!Array.isArray(aiRes) && aiRes?.data?.question) {
+            qObj = aiRes.data;
+          } else {
+            throw new Error('AI response invalid');
+          }
+        } catch {
+          console.warn(`[diagnostic/generate] AI generation failed for ${targetSkill} q${qIndex}, using curated fallback.`);
+          isFallback = true;
+          const fallbackPool = [
+            {
+              question: `What is the core principle or purpose of ${targetSkill}?`,
+              options: [
+                `To establish structured patterns, reliable execution, and core abstractions in ${targetSkill}.`,
+                `To bypass all safety checks and compilation stages in production environments.`,
+                `To execute unverified bytecode directly without memory management.`,
+                `To convert synchronous relational schemas into flat binary streams.`
+              ],
+              correctAnswer: `To establish structured patterns, reliable execution, and core abstractions in ${targetSkill}.`,
+              explanation: `Understanding the fundamental design principles and abstractions of ${targetSkill} is critical for robust application development.`
+            },
+            {
+              question: `When implementing ${targetSkill}, which consideration is most important for maintainability?`,
+              options: [
+                `Adhering to deterministic interfaces, modular isolation, and testable boundaries.`,
+                `Hardcoding environment parameters directly inside root modules.`,
+                `Disabling error logging to reduce disk write cycles.`,
+                `Duplicating domain state across independent worker nodes without synchronization.`
+              ],
+              correctAnswer: `Adhering to deterministic interfaces, modular isolation, and testable boundaries.`,
+              explanation: `Modular isolation and clear interfaces prevent regression and decouple complex dependencies.`
+            },
+            {
+              question: `How does intermediate mastery in ${targetSkill} translate to system reliability?`,
+              options: [
+                `Ensures proper error handling, resource lifecycle management, and predictable latency.`,
+                `Guarantees that no CPU cycles will be consumed during peak workloads.`,
+                `Automatically resolves cross-origin network failures at the OS kernel level.`,
+                `Replaces database transaction guarantees with local in-memory caches.`
+              ],
+              correctAnswer: `Ensures proper error handling, resource lifecycle management, and predictable latency.`,
+              explanation: `Reliable systems depend on disciplined error recovery and proper lifecycle resource management.`
+            }
+          ];
+          qObj = fallbackPool[qIndex % fallbackPool.length];
+        }
+
+        questionsForSkill.push({
+          questionId: `${targetSkill}-q${qIndex}`,
+          skillName: targetSkill,
+          question: qObj.question,
+          options: qObj.options,
+          correctAnswer: qObj.correctAnswer,
+          explanation: qObj.explanation,
+          difficulty: numDifficulty
+        });
+      }
 
       skillBatches.push({
         skillName: targetSkill,
-        questions: formattedQuestions,
+        questions: questionsForSkill,
         isFallback
       });
     }
@@ -129,4 +143,5 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: errMsg }, { status: 500 });
   }
 }
+
 
