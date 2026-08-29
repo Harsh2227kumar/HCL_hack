@@ -29,7 +29,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
         return {
           label: 'Assessment',
           icon: <Award className="w-3.5 h-3.5" />,
-          style: 'bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800',
+          style: 'bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-200 border-purple-300 dark:border-purple-700 font-bold',
         };
       case 'article':
         return {
@@ -47,13 +47,23 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
   };
 
   const badge = getTypeBadge(type);
+  const isAssessment = type?.toLowerCase() === 'assessment';
 
   return (
-    <div className="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-xs hover:shadow-md transition-all space-y-3">
+    <div className={`p-5 rounded-2xl bg-white dark:bg-zinc-900 border shadow-xs hover:shadow-md transition-all space-y-3 ${
+      isAssessment ? 'border-purple-300 dark:border-purple-800/80 ring-1 ring-purple-500/10' : 'border-zinc-200/80 dark:border-zinc-800'
+    }`}>
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 leading-snug">
-          {title}
-        </h3>
+        <div className="space-y-1">
+          <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 leading-snug">
+            {title}
+          </h3>
+          {isAssessment && (
+            <span className="inline-block text-[10px] font-mono text-purple-700 dark:text-purple-300 uppercase tracking-wider">
+              Skill Evaluation & Benchmarking
+            </span>
+          )}
+        </div>
         <span
           className={`inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold rounded-full border ${badge.style}`}
         >
@@ -87,10 +97,14 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
         </div>
 
         {/* Status Badge */}
-        <span className="text-xs font-medium text-zinc-500 capitalize flex items-center gap-1">
-          {status === 'completed' ? (
+        <span className="text-xs font-medium capitalize flex items-center gap-1">
+          {status === 'completed' || status === 'mastered' ? (
             <span className="text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-semibold">
               <CheckCircle2 className="w-3.5 h-3.5" /> Completed
+            </span>
+          ) : status === 'too_hard' || status === 'too-hard' ? (
+            <span className="text-rose-600 dark:text-rose-400 flex items-center gap-1 font-semibold">
+              Too Hard
             </span>
           ) : (
             <span className="text-zinc-500 flex items-center gap-1">

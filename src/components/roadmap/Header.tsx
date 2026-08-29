@@ -60,7 +60,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, selecte
             Roadmap Engine &amp; DAG Architecture
           </h1>
           <p className="mt-3 text-sm sm:text-base text-[#555] font-serif leading-relaxed max-w-3xl">
-            Transforming raw GitHub developer roadmaps into deterministic Directed Acyclic Graphs, 
+            Transforming structured skill ontologies and goal templates into deterministic Directed Acyclic Graphs, 
             production JSON schemas, cross-discipline knowledge graphs, and hybrid <span className="font-semibold text-[#1A1A1A]">GraphRAG + OKF</span> architectures for enterprise engineering teams.
           </p>
         </div>

@@ -47,7 +47,7 @@ export const TeamMatrixView: React.FC = () => {
         </h2>
 
         <p className="text-base sm:text-lg font-serif text-[#333] leading-relaxed">
-          A developer roadmap is not a static PDF to be admired once and forgotten. 
+          A personalized learning path is not a static document to be admired once and forgotten. 
           It is an <span className="font-semibold text-[#1A1A1A]">active operating contract</span> that synchronizes four key organizational stakeholders: 
           Engineering Leads, Individual Developers, Technical Recruiters, and AI Automation Systems.
         </p>

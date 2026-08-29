@@ -63,7 +63,7 @@ export const VisualizationPlanView: React.FC = () => {
         </h2>
 
         <p className="text-base sm:text-lg font-serif text-[#333] leading-relaxed">
-          Comprehensive blueprint for transforming raw developer roadmap JSON schemas into multi-perspective interactive representations: <span className="font-semibold text-[#1A1A1A]">Topological DAGs, Radial Mind Maps, Milestone Timelines, Chord Matrices, and Radar Diagnostics</span>.
+          Comprehensive blueprint for transforming raw learning path JSON schemas into multi-perspective interactive representations: <span className="font-semibold text-[#1A1A1A]">Topological DAGs, Radial Mind Maps, Milestone Timelines, Chord Matrices, and Radar Diagnostics</span>.
         </p>
 
         {/* Method Selector Tabs */}

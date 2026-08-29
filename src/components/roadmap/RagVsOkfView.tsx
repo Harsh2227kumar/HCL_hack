@@ -140,7 +140,7 @@ export const RagVsOkfView: React.FC = () => {
               </span>
             </div>
             <p className="text-sm font-serif text-[#444] leading-relaxed">
-              To ingest developer roadmaps into a vector search system without losing prerequisite relationships, raw JSON files must pass through a 4-step pipeline: <strong>AST Preprocessing</strong> $\to$ <strong>Hybrid Dense/Sparse Embedding</strong> $\to$ <strong>HNSW Vector Indexing</strong> $\to$ <strong>Topological Re-ranking Orchestration</strong>.
+              To ingest structured learning paths into a vector search system without losing prerequisite relationships, raw JSON files must pass through a 4-step pipeline: <strong>AST Preprocessing</strong> $\to$ <strong>Hybrid Dense/Sparse Embedding</strong> $\to$ <strong>HNSW Vector Indexing</strong> $\to$ <strong>Topological Re-ranking Orchestration</strong>.
             </p>
 
             {/* Step Selection Tabs */}

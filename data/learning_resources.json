@@ -16,7 +16,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "intermediate",
-    "duration_hours": 60.0,
+    "duration_hours": 60,
     "format": "interactive"
   },
   {
@@ -33,7 +33,7 @@
       "HTML & CSS"
     ],
     "difficulty": "beginner",
-    "duration_hours": 20.0,
+    "duration_hours": 20,
     "format": "video"
   },
   {
@@ -50,7 +50,7 @@
       "JavaScript"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 8.0,
+    "duration_hours": 8,
     "format": "text"
   },
   {
@@ -69,7 +69,7 @@
       "TypeScript"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 24.0,
+    "duration_hours": 24,
     "format": "interactive"
   },
   {
@@ -91,7 +91,7 @@
       "Node.js"
     ],
     "difficulty": "advanced",
-    "duration_hours": 35.0,
+    "duration_hours": 35,
     "format": "project"
   },
   {
@@ -111,7 +111,7 @@
       "TypeScript"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 15.0,
+    "duration_hours": 15,
     "format": "interactive"
   },
   {
@@ -129,7 +129,7 @@
       "REST & GraphQL APIs"
     ],
     "difficulty": "advanced",
-    "duration_hours": 6.0,
+    "duration_hours": 6,
     "format": "text"
   },
   {
@@ -146,7 +146,7 @@
       "Node.js"
     ],
     "difficulty": "beginner",
-    "duration_hours": 10.0,
+    "duration_hours": 10,
     "format": "video"
   },
   {
@@ -161,7 +161,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "intermediate",
-    "duration_hours": 35.0,
+    "duration_hours": 35,
     "format": "video"
   },
   {
@@ -176,7 +176,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "intermediate",
-    "duration_hours": 30.0,
+    "duration_hours": 30,
     "format": "video"
   },
   {
@@ -191,7 +191,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "intermediate",
-    "duration_hours": 25.0,
+    "duration_hours": 25,
     "format": "interactive"
   },
   {
@@ -207,7 +207,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "beginner",
-    "duration_hours": 20.0,
+    "duration_hours": 20,
     "format": "interactive"
   },
   {
@@ -227,7 +227,7 @@
       "Statistics & Probability"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 40.0,
+    "duration_hours": 40,
     "format": "video"
   },
   {
@@ -245,7 +245,7 @@
       "Linear Algebra"
     ],
     "difficulty": "advanced",
-    "duration_hours": 45.0,
+    "duration_hours": 45,
     "format": "interactive"
   },
   {
@@ -263,7 +263,7 @@
       "Python"
     ],
     "difficulty": "advanced",
-    "duration_hours": 18.0,
+    "duration_hours": 18,
     "format": "project"
   },
   {
@@ -280,7 +280,7 @@
       "RAG & Vector Embeddings"
     ],
     "difficulty": "advanced",
-    "duration_hours": 20.0,
+    "duration_hours": 20,
     "format": "project"
   },
   {
@@ -295,7 +295,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "beginner",
-    "duration_hours": 20.0,
+    "duration_hours": 20,
     "format": "interactive"
   },
   {
@@ -310,7 +310,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "intermediate",
-    "duration_hours": 12.0,
+    "duration_hours": 12,
     "format": "text"
   },
   {
@@ -328,7 +328,7 @@
       "Linux & Shell Scripting"
     ],
     "difficulty": "advanced",
-    "duration_hours": 40.0,
+    "duration_hours": 40,
     "format": "interactive"
   },
   {
@@ -345,7 +345,7 @@
       "Linux & Shell Scripting"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 18.0,
+    "duration_hours": 18,
     "format": "interactive"
   },
   {
@@ -362,7 +362,7 @@
       "Docker & Containers"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 15.0,
+    "duration_hours": 15,
     "format": "project"
   },
   {
@@ -377,7 +377,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "beginner",
-    "duration_hours": 15.0,
+    "duration_hours": 15,
     "format": "text"
   },
   {
@@ -394,7 +394,7 @@
       "React"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 12.0,
+    "duration_hours": 12,
     "format": "interactive"
   },
   {
@@ -412,7 +412,7 @@
       "JavaScript"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 18.0,
+    "duration_hours": 18,
     "format": "interactive"
   },
   {
@@ -430,7 +430,7 @@
       "HTML & CSS"
     ],
     "difficulty": "advanced",
-    "duration_hours": 10.0,
+    "duration_hours": 10,
     "format": "video"
   },
   {
@@ -445,7 +445,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "advanced",
-    "duration_hours": 45.0,
+    "duration_hours": 45,
     "format": "video"
   },
   {
@@ -462,7 +462,7 @@
       "Node.js"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 16.0,
+    "duration_hours": 16,
     "format": "interactive"
   },
   {
@@ -479,7 +479,7 @@
       "Node.js"
     ],
     "difficulty": "advanced",
-    "duration_hours": 22.0,
+    "duration_hours": 22,
     "format": "video"
   },
   {
@@ -498,7 +498,7 @@
       "Message Queues & Kafka"
     ],
     "difficulty": "advanced",
-    "duration_hours": 38.0,
+    "duration_hours": 38,
     "format": "video"
   },
   {
@@ -514,7 +514,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "intermediate",
-    "duration_hours": 20.0,
+    "duration_hours": 20,
     "format": "interactive"
   },
   {
@@ -532,7 +532,7 @@
       "Pandas & Data Processing"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 12.0,
+    "duration_hours": 12,
     "format": "interactive"
   },
   {
@@ -549,7 +549,7 @@
       "SQL"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 14.0,
+    "duration_hours": 14,
     "format": "interactive"
   },
   {
@@ -566,7 +566,7 @@
       "SQL"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 18.0,
+    "duration_hours": 18,
     "format": "text"
   },
   {
@@ -583,7 +583,7 @@
       "SQL"
     ],
     "difficulty": "beginner",
-    "duration_hours": 15.0,
+    "duration_hours": 15,
     "format": "video"
   },
   {
@@ -598,7 +598,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "intermediate",
-    "duration_hours": 28.0,
+    "duration_hours": 28,
     "format": "video"
   },
   {
@@ -615,7 +615,7 @@
       "Linux & Shell Scripting"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 14.0,
+    "duration_hours": 14,
     "format": "interactive"
   },
   {
@@ -632,7 +632,7 @@
       "REST & GraphQL APIs"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 10.0,
+    "duration_hours": 10,
     "format": "text"
   },
   {
@@ -650,7 +650,7 @@
       "Linux & Shell Scripting"
     ],
     "difficulty": "advanced",
-    "duration_hours": 24.0,
+    "duration_hours": 24,
     "format": "project"
   },
   {
@@ -665,7 +665,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "beginner",
-    "duration_hours": 8.0,
+    "duration_hours": 8,
     "format": "interactive"
   },
   {
@@ -683,7 +683,7 @@
       "TypeScript"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 16.0,
+    "duration_hours": 16,
     "format": "interactive"
   },
   {
@@ -698,7 +698,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "intermediate",
-    "duration_hours": 15.0,
+    "duration_hours": 15,
     "format": "text"
   },
   {
@@ -715,7 +715,7 @@
       "Calculus & Optimization"
     ],
     "difficulty": "advanced",
-    "duration_hours": 32.0,
+    "duration_hours": 32,
     "format": "video"
   },
   {
@@ -732,7 +732,7 @@
       "Linear Algebra"
     ],
     "difficulty": "advanced",
-    "duration_hours": 28.0,
+    "duration_hours": 28,
     "format": "video"
   },
   {
@@ -749,7 +749,7 @@
       "Python"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 10.0,
+    "duration_hours": 10,
     "format": "text"
   },
   {
@@ -767,7 +767,7 @@
       "Docker & Containers"
     ],
     "difficulty": "advanced",
-    "duration_hours": 24.0,
+    "duration_hours": 24,
     "format": "interactive"
   },
   {
@@ -784,7 +784,7 @@
       "Deep Learning & PyTorch"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 18.0,
+    "duration_hours": 18,
     "format": "interactive"
   },
   {
@@ -799,7 +799,7 @@
     ],
     "prerequisite_skills": [],
     "difficulty": "beginner",
-    "duration_hours": 10.0,
+    "duration_hours": 10,
     "format": "video"
   },
   {
@@ -816,7 +816,7 @@
       "Kubernetes & Orchestration"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 15.0,
+    "duration_hours": 15,
     "format": "interactive"
   },
   {
@@ -834,7 +834,7 @@
       "Docker & Containers"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 12.0,
+    "duration_hours": 12,
     "format": "text"
   },
   {
@@ -851,7 +851,253 @@
       "Kubernetes & Orchestration"
     ],
     "difficulty": "intermediate",
-    "duration_hours": 8.0,
+    "duration_hours": 8,
     "format": "text"
+  },
+  {
+    "id": "res_eval_py_01",
+    "title": "HackerRank Python Skills Certification Assessment",
+    "type": "assessment",
+    "provider": "HackerRank",
+    "description": "Timed skill assessment testing Python syntax, data structures, control flow, functions, and object-oriented programming.",
+    "url": "https://www.hackerrank.com/skills-verification/python_basic",
+    "skills_taught": [
+      "Python"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "beginner",
+    "duration_hours": 1.5,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_sql_01",
+    "title": "HackerRank SQL (Intermediate) Skill Assessment",
+    "type": "assessment",
+    "provider": "HackerRank",
+    "description": "Practical SQL assessment evaluating complex JOINs, aggregate functions, window functions, and subqueries.",
+    "url": "https://www.hackerrank.com/skills-verification/sql_intermediate",
+    "skills_taught": [
+      "PostgreSQL & SQL"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "intermediate",
+    "duration_hours": 1.5,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_react_01",
+    "title": "HackerRank React (Basic) Skill Certification Test",
+    "type": "assessment",
+    "provider": "HackerRank",
+    "description": "Hands-on React coding test assessing component state, props, hooks, event handling, and rendering performance.",
+    "url": "https://www.hackerrank.com/skills-verification/react_basic",
+    "skills_taught": [
+      "React"
+    ],
+    "prerequisite_skills": [
+      "JavaScript"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 1.5,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_ml_01",
+    "title": "Kaggle Machine Learning Competitions & Benchmark Evaluation",
+    "type": "assessment",
+    "provider": "Kaggle",
+    "description": "Benchmark coding evaluation measuring model performance (RMSE, F1-score) using Scikit-Learn pipelines and cross-validation.",
+    "url": "https://www.kaggle.com/learn/intro-to-machine-learning",
+    "skills_taught": [
+      "Machine Learning (Scikit-Learn)"
+    ],
+    "prerequisite_skills": [
+      "Python",
+      "Pandas & Data Processing"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 2,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_docker_01",
+    "title": "KodeKloud Docker Certified Associate (DCA) Practice Assessment",
+    "type": "assessment",
+    "provider": "KodeKloud",
+    "description": "Hands-on terminal assessment evaluating Dockerfile writing, multi-stage builds, volume mounts, and network bridges.",
+    "url": "https://kodekloud.com/courses/docker-certified-associate-dca-practice-tests/",
+    "skills_taught": [
+      "Docker & Containers"
+    ],
+    "prerequisite_skills": [
+      "Linux & Shell Scripting"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 2,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_stats_01",
+    "title": "Khan Academy AP Statistics Unit Assessments",
+    "type": "assessment",
+    "provider": "Khan Academy",
+    "description": "Comprehensive problem-solving assessment covering probability distributions, hypothesis testing, p-values, and confidence intervals.",
+    "url": "https://www.khanacademy.org/math/ap-statistics",
+    "skills_taught": [
+      "Statistics & Probability"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "intermediate",
+    "duration_hours": 2,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_js_01",
+    "title": "HackerRank JavaScript (Intermediate) Skill Assessment",
+    "type": "assessment",
+    "provider": "HackerRank",
+    "description": "Coding challenge assessing closures, promises, async/await, prototype chain, and event loop behavior.",
+    "url": "https://www.hackerrank.com/skills-verification/javascript_intermediate",
+    "skills_taught": [
+      "JavaScript"
+    ],
+    "prerequisite_skills": [
+      "HTML & CSS"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 1.5,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_node_01",
+    "title": "HackerRank Node.js (Basic) Skill Certification",
+    "type": "assessment",
+    "provider": "HackerRank",
+    "description": "Practical Node.js assessment evaluating Express server routing, middleware execution, HTTP status handling, and event emitters.",
+    "url": "https://www.hackerrank.com/skills-verification/nodejs_basic",
+    "skills_taught": [
+      "Node.js"
+    ],
+    "prerequisite_skills": [
+      "JavaScript"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 1.5,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_dl_01",
+    "title": "Kaggle Deep Learning & Computer Vision Assessment",
+    "type": "assessment",
+    "provider": "Kaggle",
+    "description": "Hands-on assessment building, training, and evaluating PyTorch neural network architectures and loss convergence.",
+    "url": "https://www.kaggle.com/learn/deep-learning",
+    "skills_taught": [
+      "Deep Learning & PyTorch"
+    ],
+    "prerequisite_skills": [
+      "Machine Learning (Scikit-Learn)",
+      "Python"
+    ],
+    "difficulty": "advanced",
+    "duration_hours": 3,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_k8s_01",
+    "title": "KodeKloud CKA (Certified Kubernetes Administrator) Hands-on Challenge",
+    "type": "assessment",
+    "provider": "KodeKloud",
+    "description": "Performance-based CLI assessment testing pod creation, deployment rollouts, ingress controllers, and cluster troubleshooting.",
+    "url": "https://kodekloud.com/courses/certified-kubernetes-administrator-cka/",
+    "skills_taught": [
+      "Kubernetes & Orchestration"
+    ],
+    "prerequisite_skills": [
+      "Docker & Containers"
+    ],
+    "difficulty": "advanced",
+    "duration_hours": 2.5,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_rag_01",
+    "title": "DeepLearning.AI Building & Evaluating Advanced RAG Applications Assessment",
+    "type": "assessment",
+    "provider": "DeepLearning.AI",
+    "description": "Interactive coding evaluation assessing RAG retrieval accuracy, chunking strategies, vector similarity search, and RAGAS evaluation metrics.",
+    "url": "https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/",
+    "skills_taught": [
+      "RAG & Vector Embeddings"
+    ],
+    "prerequisite_skills": [
+      "Deep Learning & PyTorch",
+      "Python"
+    ],
+    "difficulty": "advanced",
+    "duration_hours": 2,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_pandas_01",
+    "title": "LeetCode Pandas Study Plan & Assessment Challenges",
+    "type": "assessment",
+    "provider": "LeetCode",
+    "description": "Timed problem-solving set evaluating DataFrame manipulation, grouping, merging, pivot tables, and missing data imputation.",
+    "url": "https://leetcode.com/studyplan/30-days-of-pandas/",
+    "skills_taught": [
+      "Pandas & Data Processing"
+    ],
+    "prerequisite_skills": [
+      "Python"
+    ],
+    "difficulty": "intermediate",
+    "duration_hours": 2,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_calc_01",
+    "title": "Khan Academy Multivariable Calculus & Optimization Assessments",
+    "type": "assessment",
+    "provider": "Khan Academy",
+    "description": "Problem-solving assessment covering partial derivatives, gradients, Jacobians, Hessians, and gradient descent optimization.",
+    "url": "https://www.khanacademy.org/math/multivariable-calculus",
+    "skills_taught": [
+      "Calculus & Optimization"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "intermediate",
+    "duration_hours": 2,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_la_01",
+    "title": "Khan Academy Linear Algebra Mastery Assessments",
+    "type": "assessment",
+    "provider": "Khan Academy",
+    "description": "Mathematical assessment testing matrix transformations, eigenvalues, eigenvectors, dot products, and vector spaces.",
+    "url": "https://www.khanacademy.org/math/linear-algebra",
+    "skills_taught": [
+      "Linear Algebra"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "intermediate",
+    "duration_hours": 2,
+    "format": "interactive"
+  },
+  {
+    "id": "res_eval_linux_01",
+    "title": "OverTheWire Bandit Linux & Command Line Challenge",
+    "type": "assessment",
+    "provider": "OverTheWire",
+    "description": "Interactive terminal wargame assessing shell navigation, file permissions, grep filtering, SSH keys, and process management.",
+    "url": "https://overthewire.org/wargames/bandit/",
+    "skills_taught": [
+      "Linux & Shell Scripting"
+    ],
+    "prerequisite_skills": [],
+    "difficulty": "intermediate",
+    "duration_hours": 3,
+    "format": "interactive"
   }
 ]

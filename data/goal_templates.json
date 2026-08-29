@@ -40,7 +40,7 @@
         "min_level": 3
       },
       {
-        "skill": "Docker & Deployment",
+        "skill": "Docker & Containers",
         "min_level": 3
       }
     ]
@@ -116,7 +116,7 @@
         "min_level": 4
       },
       {
-        "skill": "Docker & Deployment",
+        "skill": "Docker & Containers",
         "min_level": 3
       }
     ]
@@ -202,7 +202,7 @@
     "goal_name": "Data Analytics & Engineering",
     "required_skills": [
       {
-        "skill": "SQL",
+        "skill": "PostgreSQL & SQL",
         "min_level": 5
       },
       {

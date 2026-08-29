@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "seed": "tsx prisma/seed.ts",
+    "validate:data": "tsx scripts/validateLearningGraph.ts",
     "postinstall": "prisma generate"
   },
   "prisma": {
