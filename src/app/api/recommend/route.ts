@@ -10,6 +10,7 @@ import {
 } from '@/lib/core/bottleneckDetection';
 import skillDependenciesData from '../../../../data/skill_dependencies.json';
 import learningResourcesData from '../../../../data/learning_resources.json';
+import { groundingCheck } from '../../../lib/validation/groundingCheck';
 
 export async function POST(request: Request) {
   try {
@@ -271,6 +272,26 @@ export async function POST(request: Request) {
       };
     });
 
+    // ── 8.5 Grounding check validation ───────────────────────────────────
+    const rawResourceIds = milestones.map((m) => m.id);
+    const validGroundedIds = await groundingCheck(rawResourceIds);
+    const validGroundedSet = new Set(validGroundedIds);
+
+    const groundedMilestones = milestones.filter((m) => validGroundedSet.has(m.id));
+
+    if (rawResourceIds.length > groundedMilestones.length) {
+      console.warn(
+        `[Recommend API] Grounding check removed ${rawResourceIds.length - groundedMilestones.length} ungrounded resource IDs.`
+      );
+    }
+
+    if (groundedMilestones.length === 0 && rawResourceIds.length > 0) {
+      return NextResponse.json(
+        { error: 'No grounded resources available for this recommendation' },
+        { status: 500 }
+      );
+    }
+
     // ── 9. If userId provided, persist LearningPath & items in Prisma ────
     let savedPath = null;
     if (userId) {
@@ -295,7 +316,7 @@ export async function POST(request: Request) {
           triggerReason: 'recommendation_api',
           estimatedWeeksToGoal,
           items: {
-            create: milestones.map((m) => ({
+            create: groundedMilestones.map((m) => ({
               resourceId: m.id,
               phase: phaseToNumber[m.phase] || 1,
               position: m.position,

@@ -33,6 +33,7 @@ import {
   findHarderAlternative,
   findDifferentFormatAlternative,
 } from '../../../lib/core/resourceReplacement';
+import { groundingCheck } from '../../../lib/validation/groundingCheck';
 
 function computeFormatFit(learningStyle: string | null | undefined, resourceFormat: string | null | undefined): number {
   if (!learningStyle || !resourceFormat) return 0.7; // unknown = assume acceptable
@@ -383,6 +384,26 @@ Write 1 clear, encouraging 1-2 sentence adaptation banner.`;
       }
     }
 
+    // 6.5. Grounding check validation
+    const rawResourceIds = sortedPath.items.map((item) => item.resourceId);
+    const validGroundedIds = await groundingCheck(rawResourceIds);
+    const validGroundedSet = new Set(validGroundedIds);
+
+    const groundedItems = sortedPath.items.filter((item) => validGroundedSet.has(item.resourceId));
+
+    if (rawResourceIds.length > groundedItems.length) {
+      console.warn(
+        `[Progress API] Grounding check removed ${rawResourceIds.length - groundedItems.length} ungrounded resource IDs.`
+      );
+    }
+
+    if (groundedItems.length === 0 && rawResourceIds.length > 0) {
+      return NextResponse.json(
+        { error: 'No grounded resources available for this recommendation' },
+        { status: 500 }
+      );
+    }
+
     // 7. Persist new learning path in database
     const newPath = await prisma.learningPath.create({
       data: {
@@ -391,7 +412,7 @@ Write 1 clear, encouraging 1-2 sentence adaptation banner.`;
         triggerReason: eventType,
         estimatedWeeksToGoal: sortedPath.estimatedWeeksToGoal,
         items: {
-          create: sortedPath.items.map((item) => {
+          create: groundedItems.map((item) => {
             if (insertedResource && item.resourceId === insertedResource.id) {
               return {
                 resourceId: item.resourceId,

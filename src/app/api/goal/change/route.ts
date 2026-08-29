@@ -5,6 +5,7 @@ import { getQueryEmbedding } from '../../../../lib/ai/embeddings';
 import { scoreResource, LearnerContext as ScoringLearnerContext } from '../../../../lib/core/hybridScoring';
 import { prerequisiteSort, RankedResource } from '../../../../lib/core/prerequisiteSort';
 import learningResourcesData from '../../../../../data/learning_resources.json';
+import { groundingCheck } from '../../../../lib/validation/groundingCheck';
 
 interface CandidateResource {
   id: string;
@@ -257,6 +258,26 @@ export async function POST(request: Request) {
     const sortedPath = prerequisiteSort(candidatesToSort, learnerContext.weeklyHours);
     const estimatedWeeksToGoal = sortedPath.estimatedWeeksToGoal;
 
+    // 9.5. Grounding check validation
+    const rawResourceIds = sortedPath.items.map((item) => item.resourceId);
+    const validGroundedIds = await groundingCheck(rawResourceIds);
+    const validGroundedSet = new Set(validGroundedIds);
+
+    const groundedItems = sortedPath.items.filter((item) => validGroundedSet.has(item.resourceId));
+
+    if (rawResourceIds.length > groundedItems.length) {
+      console.warn(
+        `[Goal Change API] Grounding check removed ${rawResourceIds.length - groundedItems.length} ungrounded resource IDs.`
+      );
+    }
+
+    if (groundedItems.length === 0 && rawResourceIds.length > 0) {
+      return NextResponse.json(
+        { error: 'No grounded resources available for this recommendation' },
+        { status: 500 }
+      );
+    }
+
     // 10. Persist new LearningPath & items in Prisma with completed status preserved
     const phaseToNumber: Record<string, number> = {
       Foundations: 1,
@@ -276,7 +297,7 @@ export async function POST(request: Request) {
         triggerReason: 'goal_change',
         estimatedWeeksToGoal,
         items: {
-          create: sortedPath.items.map((item) => {
+          create: groundedItems.map((item) => {
             const scored = scoreLookup.get(item.resourceId);
             const isCompleted = previousCompletedResourceIds.has(item.resourceId);
 

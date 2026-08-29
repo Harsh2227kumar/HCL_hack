@@ -148,7 +148,7 @@ describe('Progress Adaptation Preservation', () => {
 
     vi.mocked(prisma.learningPath.findFirst).mockResolvedValue(mockCurrentPath as any);
 
-    // Mock learningResource.findMany for remedial candidate lookup
+    // Mock learningResource.findMany for remedial candidate lookup & grounding check
     const remedialCandidate = {
       id: 'res-remedial-1',
       title: 'Linear Algebra Foundations',
@@ -158,7 +158,12 @@ describe('Progress Adaptation Preservation', () => {
       durationHours: 5,
       format: 'text',
     };
-    vi.mocked(prisma.learningResource.findMany).mockResolvedValue([remedialCandidate as any]);
+    vi.mocked(prisma.learningResource.findMany).mockResolvedValue([
+      remedialCandidate,
+      mockCurrentPath.items[0].resource,
+      mockCurrentPath.items[1].resource,
+      mockCurrentPath.items[2].resource,
+    ] as any);
 
     (prisma.learningPath.create as any).mockImplementation(async (args: any) => {
       return {
