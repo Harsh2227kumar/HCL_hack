@@ -28,167 +28,19 @@ const PHASES: PhaseName[] = [
   'Capstone',
 ];
 
-type DbResource = Awaited<ReturnType<typeof prisma.learningResource.findFirst>>;
+import { findRemedialPrerequisiteResource } from '@/lib/core/resourceReplacement';
 
-interface PrerequisiteSearchResult {
-  insertedResource: DbResource;
-  weakestSkill: string | null;
-}
-
-/**
- * Searches LearningResource for an easier resource teaching the weakest prerequisite
- * or foundational skill for the learner, excluding items already present in the current path.
- */
-async function findRemedialPrerequisiteResource(
-  currentResource: DbResource | { prerequisiteSkills?: unknown; skillsTaught?: unknown; difficulty?: unknown; title?: string },
-  userSkills: Array<{ skillName: string; finalEstimate: number; targetLevel: number; confidenceScore: number }>,
-  existingResourceIds: Set<string>,
-  learnerContext: ScoringLearnerContext
-): Promise<PrerequisiteSearchResult> {
-  const prereqSkills: string[] = (currentResource?.prerequisiteSkills as string[]) || [];
-  const skillsTaught: string[] = (currentResource?.skillsTaught as string[]) || [];
-  const currentDifficulty = typeof currentResource?.difficulty === 'number' ? currentResource.difficulty : 3;
-
-  // 1. Identify weakest prerequisite skill
-  let weakestSkill: string | null = null;
-  let lowestScore = Infinity;
-
-  // Check explicit prerequisite skills first
-  if (prereqSkills.length > 0) {
-    for (const p of prereqSkills) {
-      const sk = userSkills.find((s) => s.skillName.toLowerCase() === p.toLowerCase());
-      const est = sk ? sk.finalEstimate : 0;
-      if (est < lowestScore) {
-        lowestScore = est;
-        weakestSkill = p;
-      }
-    }
-  }
-
-  // If no explicit prerequisite skills, look up graph dependencies of skills taught
-  if (!weakestSkill && skillsTaught.length > 0) {
-    const deps = (skillDependenciesData as Array<{ skill_name: string; depends_on_skill_name: string }>)
-      .filter((d) => skillsTaught.some((st) => st.toLowerCase() === d.skill_name.toLowerCase()))
-      .map((d) => d.depends_on_skill_name);
-
-    for (const dep of deps) {
-      const sk = userSkills.find((s) => s.skillName.toLowerCase() === dep.toLowerCase());
-      const est = sk ? sk.finalEstimate : 0;
-      if (est < lowestScore) {
-        lowestScore = est;
-        weakestSkill = dep;
-      }
-    }
-  }
-
-  // If still no weakestSkill, check foundational skills taught by current resource
-  if (!weakestSkill && skillsTaught.length > 0) {
-    for (const st of skillsTaught) {
-      const sk = userSkills.find((s) => s.skillName.toLowerCase() === st.toLowerCase());
-      const est = sk ? sk.finalEstimate : 0;
-      if (est < lowestScore) {
-        lowestScore = est;
-        weakestSkill = st;
-      }
-    }
-  }
-
-  // 2. Query available resources not already in current path
-  const candidates = await prisma.learningResource.findMany({
-    where: {
-      id: {
-        notIn: Array.from(existingResourceIds),
-      },
-    },
-  });
-
-  if (!candidates.length) {
-    return { insertedResource: null, weakestSkill };
-  }
-
-  // Skills we want to remediate
-  const targetSkills = [weakestSkill, ...prereqSkills].filter(Boolean) as string[];
-
-  // 3. Score and rank candidates
-  const scoredCandidates = candidates.map((cand) => {
-    const candSkillsTaught = (cand.skillsTaught as string[]) || [];
-    const candDiff = typeof cand.difficulty === 'number' ? cand.difficulty : 3;
-
-    // Check if candidate teaches any targeted skill
-    const teachesTarget = targetSkills.some((ts) =>
-      candSkillsTaught.some(
-        (cs) =>
-          cs.toLowerCase() === ts.toLowerCase() ||
-          cs.toLowerCase().includes(ts.toLowerCase()) ||
-          ts.toLowerCase().includes(cs.toLowerCase())
-      )
-    );
-
-    // Check if candidate teaches exact weakest skill
-    const teachesWeakest = weakestSkill
-      ? candSkillsTaught.some(
-          (cs) =>
-            cs.toLowerCase() === weakestSkill!.toLowerCase() ||
-            cs.toLowerCase().includes(weakestSkill!.toLowerCase()) ||
-            weakestSkill!.toLowerCase().includes(cs.toLowerCase())
-        )
-      : false;
-
-    // Is candidate easier?
-    const isEasier = candDiff < currentDifficulty;
-    const isSameDiffIfBeginner = currentDifficulty <= 2 && candDiff <= currentDifficulty;
-    const diffBonus = isEasier ? 2.0 : isSameDiffIfBeginner ? 1.0 : -1.0;
-
-    // Score using hybrid scoring
-    const hybrid = scoreResource(
-      {
-        id: cand.id,
-        skills_taught: candSkillsTaught,
-        prerequisite_skills: (cand.prerequisiteSkills as string[]) || [],
-        difficulty: candDiff,
-        duration_hours: cand.durationHours ?? undefined,
-        format: cand.format ?? undefined,
-      },
-      learnerContext,
-      0.8
-    );
-
-    let priorityScore = hybrid.score;
-    if (teachesWeakest) priorityScore += 4.0;
-    else if (teachesTarget) priorityScore += 2.0;
-    priorityScore += diffBonus;
-
-    return {
-      resource: cand,
-      teachesTarget: teachesTarget || teachesWeakest,
-      isEasier: isEasier || isSameDiffIfBeginner,
-      priorityScore,
-      hybridScore: hybrid.score,
-    };
-  });
-
-  // Filter to candidates that teach target skills
-  const validMatches = scoredCandidates.filter((c) => c.teachesTarget);
-
-  if (validMatches.length > 0) {
-    validMatches.sort((a, b) => b.priorityScore - a.priorityScore);
-    return {
-      insertedResource: validMatches[0].resource,
-      weakestSkill,
-    };
-  }
-
-  // If no direct target skill match, look for any easier foundational resource
-  const foundationalMatches = scoredCandidates.filter((c) => c.isEasier && c.priorityScore > 0);
-  if (foundationalMatches.length > 0) {
-    foundationalMatches.sort((a, b) => b.priorityScore - a.priorityScore);
-    return {
-      insertedResource: foundationalMatches[0].resource,
-      weakestSkill,
-    };
-  }
-
-  return { insertedResource: null, weakestSkill };
+function computeFormatFit(learningStyle: string | null | undefined, resourceFormat: string | null | undefined): number {
+  if (!learningStyle || !resourceFormat) return 0.7; // unknown = assume acceptable
+  const style = learningStyle.toLowerCase();
+  const format = resourceFormat.toLowerCase();
+  const goodMatches: Record<string, string[]> = {
+    visual: ['video'],
+    reading: ['article', 'text'],
+    'hands-on': ['project', 'interactive'],
+  };
+  if (goodMatches[style]?.includes(format)) return 1.0;
+  return 0.4; // mismatch
 }
 
 export async function POST(request: Request) {
@@ -286,12 +138,14 @@ export async function POST(request: Request) {
 
     const rawDiagScore = recentDiagnostic?.score ?? (score ?? null);
 
+    const formatFit = computeFormatFit(profile?.learningStyle, resource?.format);
+
     const context: ImpactLearnerContext = {
       hasPrereqGap,
       recentDiagnosticNormalizedScore: rawDiagScore != null ? rawDiagScore / 5 : null,
       resourceDifficulty: resource?.difficulty ?? 3,
       learnerExperienceLevel: profile?.experienceLevel || 'Intermediate',
-      formatMismatch: false,
+      formatMismatch: formatFit <= 0.4,
     };
 
     // 3. Evaluate impact with deterministic impactEvaluator
