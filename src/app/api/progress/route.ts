@@ -99,11 +99,65 @@ export async function POST(request: Request) {
     });
 
     // 2.5 Real BKT Wiring — Update skills based on this progress event
+    const isAssessmentCompletion = eventType === 'completed' && resource?.type === 'assessment' && score != null;
     let bktEvent: { correct: boolean } | null = null;
     if (eventType === 'completed') bktEvent = { correct: true };
     else if (eventType === 'too_hard' || eventType === 'struggling') bktEvent = { correct: false };
 
-    if (bktEvent && resource?.skillsTaught) {
+    if (isAssessmentCompletion && resource?.skillsTaught) {
+      // Score normalization assumption:
+      // If score > 5 (e.g. percentage 0-100), convert via score / 20 to 0-5 scale.
+      // If score <= 5, use score directly as 0-5 scale.
+      const normalizedScore = score > 5 ? score / 20 : score;
+      const isCorrect = normalizedScore >= 2.5;
+
+      const { bktUpdate, BKT_PARAMS } = await import('../../../lib/core/reconciliation');
+      const skillsTaught = resource.skillsTaught as string[];
+
+      for (const skillName of skillsTaught) {
+        // Create SkillEvidence record for assessment
+        await prisma.skillEvidence.create({
+          data: {
+            userId,
+            skillName,
+            source: 'assessment',
+            score: normalizedScore,
+            reliability: 0.6,
+            recencyWeight: 1.0,
+          },
+        });
+
+        const existingSkill = userSkills.find((s) => s.skillName.toLowerCase() === skillName.toLowerCase());
+
+        const priorKnown = existingSkill ? existingSkill.finalEstimate / 5 : BKT_PARAMS.P_L0;
+        const newPKnown = bktUpdate(priorKnown, isCorrect);
+        const newFinalEstimate = newPKnown * 5; // Scale [0,1] back to 0-5
+
+        if (existingSkill) {
+          await prisma.learnerSkill.update({
+            where: { id: existingSkill.id },
+            data: {
+              finalEstimate: newFinalEstimate,
+              lastAssessed: new Date(),
+            },
+          });
+          existingSkill.finalEstimate = newFinalEstimate;
+        } else {
+          const createdSkill = await prisma.learnerSkill.create({
+            data: {
+              userId,
+              skillName,
+              selfRatedLevel: 0,
+              finalEstimate: newFinalEstimate,
+              targetLevel: 5,
+              confidenceScore: 0.5,
+              lastAssessed: new Date(),
+            },
+          });
+          userSkills.push(createdSkill);
+        }
+      }
+    } else if (bktEvent && resource?.skillsTaught) {
       const { bktUpdate, BKT_PARAMS } = await import('../../../lib/core/reconciliation');
       const skillsTaught = resource.skillsTaught as string[];
 
