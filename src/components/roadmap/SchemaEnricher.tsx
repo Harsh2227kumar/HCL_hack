@@ -10,8 +10,6 @@ import {
   Database, 
   FileText, 
   Edit3, 
-  CheckCircle2,
-  ArrowRight,
   Code2
 } from 'lucide-react';
 import { RoadmapPath, RoadmapNode } from '@/data/roadmapsData';
@@ -155,7 +153,7 @@ export const SchemaEnricher: React.FC<SchemaEnricherProps> = ({ roadmap, onUpdat
               <span className="font-mono font-bold text-[#1A1A1A] min-w-[20px]">01.</span>
               <div>
                 <strong className="text-[#1A1A1A] font-serif block text-sm">Add Explicit Prerequisite DAG Edges</strong>
-                <span className="text-[#555]">Replace flat arrays with <code>prerequisites: ["node-id"]</code> to guarantee topological integrity.</span>
+                <span className="text-[#555]">Replace flat arrays with <code>prerequisites: [&quot;node-id&quot;]</code> to guarantee topological integrity.</span>
               </div>
             </div>
 
@@ -163,7 +161,7 @@ export const SchemaEnricher: React.FC<SchemaEnricherProps> = ({ roadmap, onUpdat
               <span className="font-mono font-bold text-[#1A1A1A] min-w-[20px]">02.</span>
               <div>
                 <strong className="text-[#1A1A1A] font-serif block text-sm">Replace Generic Tech with Company Approved Stacks</strong>
-                <span className="text-[#555]">Map "Web Framework" $\to$ "FastAPI + Pydantic v2" or "CSS Framework" $\to$ "Tailwind v4".</span>
+                <span className="text-[#555]">Map &ldquo;Web Framework&rdquo; &rarr; &ldquo;FastAPI + Pydantic v2&rdquo; or &ldquo;CSS Framework&rdquo; &rarr; &ldquo;Tailwind v4&rdquo;.</span>
               </div>
             </div>
 
@@ -179,7 +177,7 @@ export const SchemaEnricher: React.FC<SchemaEnricherProps> = ({ roadmap, onUpdat
               <span className="font-mono font-bold text-[#1A1A1A] min-w-[20px]">04.</span>
               <div>
                 <strong className="text-[#1A1A1A] font-serif block text-sm">Embed Internal Wiki &amp; Starter Template URLs</strong>
-                <span className="text-[#555]">Point learners directly to your company's internal repos and Confluence docs.</span>
+                <span className="text-[#555]">Point learners directly to your company&apos;s internal repos and Confluence docs.</span>
               </div>
             </div>
           </div>
@@ -349,7 +347,7 @@ export const SchemaEnricher: React.FC<SchemaEnricherProps> = ({ roadmap, onUpdat
               Export Production Artifacts
             </h3>
             <p className="text-xs font-mono text-[#666] mt-1">
-              Download the complete enriched roadmap in your team's preferred format
+              Download the complete enriched roadmap in your team&apos;s preferred format
             </p>
           </div>
           <span className="text-xs font-mono font-bold text-[#1A1A1A] bg-[#EAE8E1] px-2 py-0.5">

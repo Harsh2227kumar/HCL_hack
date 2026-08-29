@@ -91,8 +91,9 @@ async function seed() {
       );
 
       console.log(`✓ Successfully seeded resource: ${res.id}`);
-    } catch (e: any) {
-      console.error(`✗ Failed to seed resource ${res.id}:`, e.message);
+    } catch (e: unknown) {
+      const errMsg = e instanceof Error ? e.message : String(e);
+      console.error(`✗ Failed to seed resource ${res.id}:`, errMsg);
     }
   }
 

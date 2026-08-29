@@ -3,29 +3,16 @@
 import React, { useState } from 'react';
 import { 
   Layers, 
-  GitBranch, 
   Sparkles, 
   AlertTriangle, 
   CheckCircle2, 
-  ArrowRight, 
-  HelpCircle, 
-  Database, 
   Cpu, 
-  Bot, 
-  ShieldAlert,
   Send,
   RefreshCw,
   Code2,
-  FileCode,
-  Check,
-  X,
-  Zap,
-  BookOpen,
-  Filter,
-  Terminal,
-  Binary
+  Check
 } from 'lucide-react';
-import { ARCHITECTURE_COMPARISONS, SIMULATION_QUERIES, SimulationQuery } from '@/data/architecturalComparison';
+import { SIMULATION_QUERIES, SimulationQuery } from '@/data/architecturalComparison';
 import { RAG_INTEGRATION_PIPELINE, SYSTEM_COMPARISON_TABLE } from '@/data/ragStrategyData';
 
 type SubView = 'strategy' | 'comparison' | 'simulator';
@@ -279,7 +266,7 @@ export const RagVsOkfView: React.FC = () => {
                   OKF: Directed Acyclic Graph (G = (V, E))
                 </strong>
                 <p className="space-y-1">
-                  <span>Ontological Knowledge Frameworks store skill nodes V and directed prerequisite edges E. Prerequisite resolution computes topological sorting via Kahn's algorithm or adjacency matrix powers:</span>
+                  <span>Ontological Knowledge Frameworks store skill nodes V and directed prerequisite edges E. Prerequisite resolution computes topological sorting via Kahn&apos;s algorithm or adjacency matrix powers:</span>
                   <code className="block p-1.5 bg-white border border-[#1A1A1A]/20 font-mono text-[10px] my-1">
                     {'Prereqs(v) = { u ∈ V | (u, v) ∈ E+ }'}
                   </code>
@@ -408,7 +395,7 @@ export const RagVsOkfView: React.FC = () => {
                     Test 0{idx + 1}: {sq.category}
                   </div>
                   <div className="text-xs text-[#1A1A1A] line-clamp-2">
-                    "{sq.query}"
+                    &ldquo;{sq.query}&rdquo;
                   </div>
                 </button>
               ))}
@@ -437,7 +424,7 @@ export const RagVsOkfView: React.FC = () => {
           {/* Active Query Display */}
           <div className="p-4 bg-[#F8F7F4] border border-[#1A1A1A]/20 text-xs font-mono flex items-center gap-2">
             <strong className="text-[#1A1A1A] uppercase">Active Test Query:</strong>
-            <span className="text-[#333] font-serif italic">"{activeSimulation.query}"</span>
+            <span className="text-[#333] font-serif italic">&ldquo;{activeSimulation.query}&rdquo;</span>
           </div>
 
           {/* 3-Column Simulator Output */}

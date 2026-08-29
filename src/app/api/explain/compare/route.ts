@@ -32,8 +32,9 @@ Explain briefly why a learner might choose A over B, or B over A based on their 
 
     return NextResponse.json({ success: true, explanation: aiRes.data.explanation });
 
-  } catch (error: any) {
-    console.error('Error comparing resources:', error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Error comparing resources:', errMsg);
+    return NextResponse.json({ error: errMsg }, { status: 500 });
   }
 }

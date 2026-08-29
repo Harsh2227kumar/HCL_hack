@@ -2,18 +2,13 @@
 
 import React, { useState } from 'react';
 import { 
-  BookOpen, 
   Terminal, 
   Copy, 
   Check, 
   CheckCircle2, 
-  Code2, 
-  Sparkles, 
-  Lightbulb, 
-  ArrowRight,
-  ShieldCheck
+  Lightbulb
 } from 'lucide-react';
-import { PLAYBOOK_STEPS, PlaybookStep } from '@/data/bestPractices';
+import { PLAYBOOK_STEPS } from '@/data/bestPractices';
 
 export const PlaybookView: React.FC = () => {
   const [selectedStepIndex, setSelectedStepIndex] = useState<number>(0);

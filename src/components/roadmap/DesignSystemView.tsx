@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Palette, Type, Layout, Hexagon, Component, Maximize, MousePointer2 } from 'lucide-react';
+import { Palette, Type, Layout, Hexagon, Component, MousePointer2 } from 'lucide-react';
 
 export const DesignSystemView: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ export const DesignSystemView: React.FC = () => {
         </div>
 
         <h2 className="text-3xl sm:text-5xl font-serif italic text-[#1A1A1A] leading-tight">
-          "Technical Blueprint" Design Theme
+          &ldquo;Technical Blueprint&rdquo; Design Theme
         </h2>
 
         <p className="text-base sm:text-lg font-serif text-[#333] leading-relaxed max-w-3xl">
@@ -35,7 +35,7 @@ export const DesignSystemView: React.FC = () => {
           <div className="p-5 bg-white border border-[#1A1A1A] shadow-[3px_3px_0px_#1A1A1A]">
             <h4 className="font-serif font-bold text-lg mb-2">Maximum Signal, Zero Slop</h4>
             <p className="text-xs font-serif text-[#555] leading-relaxed">
-              No generic gradients, no soft frosted glassmorphism, no rounded-corner "app-like" fluff. 
+              No generic gradients, no soft frosted glassmorphism, no rounded-corner &ldquo;app-like&rdquo; fluff. 
               Every line, border, and background color exists to separate data strata mathematically.
             </p>
           </div>
@@ -50,7 +50,7 @@ export const DesignSystemView: React.FC = () => {
             <h4 className="font-serif font-bold text-lg mb-2">Tactile Interactions</h4>
             <p className="text-xs font-serif text-[#555] leading-relaxed">
               Hover states rely on physical metaphors—inset shadows simulating mechanical button depressions, 
-              or borders thickening to denote focus, rejecting modern "floating" elevations.
+              or borders thickening to denote focus, rejecting modern &ldquo;floating&rdquo; elevations.
             </p>
           </div>
         </div>
@@ -186,7 +186,7 @@ export const DesignSystemView: React.FC = () => {
               </div>
               <p className="text-xs font-serif text-[#555]">
                 Monospace handles UI elements, tags, tabs, and technical IDs. Heavily tracked uppercase creates 
-                a "machine readable" aesthetic that contrasts sharply with the elegant serif.
+                a &ldquo;machine readable&rdquo; aesthetic that contrasts sharply with the elegant serif.
               </p>
             </div>
           </div>

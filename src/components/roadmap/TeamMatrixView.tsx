@@ -7,14 +7,11 @@ import {
   Compass, 
   ShieldCheck, 
   Cpu, 
-  ArrowRight, 
   CheckCircle2, 
-  Network, 
   Share2, 
-  Layers,
-  Terminal
+  Layers
 } from 'lucide-react';
-import { TEAM_STAKEHOLDERS, StakeholderRole } from '@/data/teamStakeholders';
+import { TEAM_STAKEHOLDERS } from '@/data/teamStakeholders';
 
 export const TeamMatrixView: React.FC = () => {
   const [selectedStakeholderId, setSelectedStakeholderId] = useState<string>(TEAM_STAKEHOLDERS[0].id);

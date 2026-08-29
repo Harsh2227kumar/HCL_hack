@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Network, Layers, FileCode2, Users2, Sparkles, BookOpen, GitBranch, Share2, Compass } from 'lucide-react';
+import { Network, Layers, FileCode2, Users2, Sparkles, BookOpen, GitBranch, Compass } from 'lucide-react';
 
 export type ActiveTab = 
   | 'dag' 

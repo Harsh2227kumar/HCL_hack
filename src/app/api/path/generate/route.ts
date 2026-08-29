@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import { prisma } from '@/lib/prisma';
+import { Prisma } from '@prisma/client';
 import { prerequisiteSort, RankedResource } from '@/lib/core/prerequisiteSort';
 import { callAI } from '@/lib/ai/callAI';
 
@@ -46,7 +47,7 @@ Skills taught: ${JSON.stringify(candidate?.skillsTaught || [])}`;
           if (!Array.isArray(aiResponse) && aiResponse?.data?.reason) {
             reason = aiResponse.data.reason;
           }
-        } catch (e) {
+        } catch {
           console.warn(`[path/generate] Fallback reason used for ${item.resourceId}`);
         }
 
@@ -57,7 +58,7 @@ Skills taught: ${JSON.stringify(candidate?.skillsTaught || [])}`;
           status: 'pending',
           reason,
           score: candidate?.score ?? 0,
-          scoreBreakdown: (candidate?.scoreBreakdown as any) ?? {},
+          scoreBreakdown: (candidate?.scoreBreakdown as Prisma.InputJsonValue) ?? {},
         };
       })
     );

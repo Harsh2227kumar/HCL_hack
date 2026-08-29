@@ -2,25 +2,13 @@
 
 import React, { useState } from 'react';
 import { 
-  GitBranch, 
-  Layers, 
-  Clock, 
   Network, 
   Target, 
   Code2, 
   Users2, 
-  CheckCircle2, 
-  Sparkles, 
-  ArrowRight, 
-  Sliders, 
-  Calendar, 
-  BarChart3, 
-  Compass, 
-  FileJson, 
-  Play,
-  RotateCcw
+  Sparkles
 } from 'lucide-react';
-import { VISUALIZATION_METHODS, VisualizationMethod } from '@/data/visualizationPlanData';
+import { VISUALIZATION_METHODS } from '@/data/visualizationPlanData';
 import { ROADMAPS, RoadmapNode } from '@/data/roadmapsData';
 
 export const VisualizationPlanView: React.FC = () => {

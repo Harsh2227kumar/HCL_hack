@@ -4,7 +4,7 @@ import { Check, AlertTriangle, SkipForward } from 'lucide-react';
 export interface ProgressToggleProps {
   resourceId: string;
   userId?: string;
-  onUpdate?: (response: any) => void;
+  onUpdate?: (response: unknown) => void;
 }
 
 export const ProgressToggle: React.FC<ProgressToggleProps> = ({

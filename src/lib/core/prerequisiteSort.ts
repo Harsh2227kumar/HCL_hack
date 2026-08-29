@@ -96,7 +96,7 @@ export function prerequisiteSort(
   const processed = new Set<string>();
 
   // Queue of nodes with inDegree === 0, prioritized by resource score (descending)
-  let readyNodes = candidates
+  const readyNodes = candidates
     .filter((c) => (inDegree.get(c.resourceId) || 0) === 0)
     .map((c) => c.resourceId);
 

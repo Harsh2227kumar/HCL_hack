@@ -30,8 +30,9 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, updatedSkill });
 
-  } catch (error: any) {
-    console.error('Error reconciling skill:', error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Error reconciling skill:', errMsg);
+    return NextResponse.json({ error: errMsg }, { status: 500 });
   }
 }

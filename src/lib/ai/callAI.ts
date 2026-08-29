@@ -20,8 +20,9 @@ export async function callAI<T>(
     try {
       console.log(`[callAI] Attempting Gemini embedding for text: ${prompt.substring(0, 60)}...`);
       return await getGeminiEmbedding(prompt);
-    } catch (error: any) {
-      console.error(`[callAI] Gemini embedding failed:`, error.message);
+    } catch (error: unknown) {
+      const errMsg = error instanceof Error ? error.message : String(error);
+      console.error(`[callAI] Gemini embedding failed:`, errMsg);
       throw error;
     }
   }
@@ -39,21 +40,23 @@ export async function callAI<T>(
     console.log(`[callAI] Attempting ${primaryName} for role: ${role}`);
     const data = await primaryProvider(prompt, schema);
     return { data, provider: primaryName };
-  } catch (error: any) {
-    console.warn(`[callAI] ${primaryName} failed:`, error.message);
+  } catch (error: unknown) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.warn(`[callAI] ${primaryName} failed:`, errMsg);
     console.warn(`[callAI] Falling back to ${fallbackName}...`);
 
     try {
       const data = await fallbackProvider(prompt, schema);
       return { data, provider: fallbackName };
-    } catch (fallbackError: any) {
-      console.error(`[callAI] ${fallbackName} also failed:`, fallbackError.message);
+    } catch (fallbackError: unknown) {
+      const fallbackErrMsg = fallbackError instanceof Error ? fallbackError.message : String(fallbackError);
+      console.error(`[callAI] ${fallbackName} also failed:`, fallbackErrMsg);
       
       console.error('[callAI] ALL PROVIDERS DOWN. Returning emergency template fallback.');
       try {
         const data = schema.parse({});
         return { data, provider: 'mock' };
-      } catch (templateError) {
+      } catch {
         throw new Error('All AI providers failed and emergency template could not satisfy the strict schema.');
       }
     }

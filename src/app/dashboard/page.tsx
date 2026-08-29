@@ -39,7 +39,7 @@ interface MilestoneItem {
   reason?: string;
   resource?: MilestoneResource;
   score?: number;
-  scoreBreakdown?: any;
+  scoreBreakdown?: Record<string, number | undefined>;
   recommendation_status?: string;
 }
 
@@ -49,6 +49,13 @@ interface RecommendationData {
   timeToGoalWeeks?: number;
   bottleneck?: string | null;
   aiInsight?: string;
+  skillGaps?: Array<{
+    skillName: string;
+    current: number;
+    target: number;
+    gap: number;
+    confidence?: number;
+  }>;
   activePath?: {
     id?: string;
     version?: number;
@@ -324,7 +331,7 @@ export default function DashboardPage() {
               try {
                 const storedRec = JSON.parse(storedRecRaw);
                 if (storedRec?.activePath?.milestones) {
-                  storedRec.activePath.milestones = storedRec.activePath.milestones.map((m: any) => {
+                  storedRec.activePath.milestones = storedRec.activePath.milestones.map((m: MilestoneItem) => {
                     if (m.id === (sourceResourceId || nodeId)) {
                       return { ...m, status: status === 'mastered' ? 'completed' : status === 'too-hard' ? 'too-hard' : status === 'skipped' ? 'skipped' : status === 'in-progress' ? 'started' : 'pending' };
                     }
@@ -548,7 +555,7 @@ export default function DashboardPage() {
               selectedNode={selectedNode}
               onSelectNode={setSelectedNode}
               onToggleStatus={handleToggleStatus}
-              activeRecommendation={activeRecommendation}
+              activeRecommendation={activeRecommendation || undefined}
             />
           </>
         )}
@@ -578,6 +585,8 @@ export default function DashboardPage() {
         <NodeDetailDrawer
           node={selectedNode}
           roadmap={selectedRoadmap}
+          pathId={activeRecommendation?.activePath?.id}
+          userId={learnerProfile?.userId || undefined}
           onClose={() => setSelectedNode(null)}
           onSelectNode={handleSelectNodeById}
           onToggleStatus={handleToggleStatus}
@@ -589,7 +598,7 @@ export default function DashboardPage() {
         <div className="flex items-center gap-3">
           <span>DEVELOPER ROADMAP TOPOLOGICAL RUNTIME</span>
           <span>•</span>
-          <span>BASED ON KAMRANAHMEDSE/DEVELOPER-ROADMAP</span>
+          <span>SKILL ONTOLOGY ENGINE V2.4</span>
         </div>
         <div className="flex items-center gap-4">
           <span>DAG ENGINE V2.4</span>

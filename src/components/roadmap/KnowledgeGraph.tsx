@@ -7,36 +7,23 @@ import {
   Layers, 
   ArrowRight, 
   Search, 
-  Filter, 
   Sparkles, 
-  Share2, 
   Code2, 
-  ShieldCheck, 
-  Terminal, 
-  Server, 
-  Cpu, 
-  Maximize2, 
-  Minimize2, 
   RotateCcw, 
   ZoomIn, 
   ZoomOut, 
   CheckCircle2, 
-  HelpCircle,
-  ExternalLink,
-  ChevronRight,
   Info
 } from 'lucide-react';
 import { 
   DISCIPLINES, 
   CROSS_DISCIPLINE_EDGES, 
   DisciplineId, 
-  DisciplineMeta, 
   CrossDisciplineEdge, 
   RelationshipType, 
-  findGlobalNode,
   findCrossDisciplinePath
 } from '@/data/crossDisciplineGraph';
-import { ROADMAPS, RoadmapNode } from '@/data/roadmapsData';
+import { ROADMAPS } from '@/data/roadmapsData';
 
 type ViewMode = 'graph' | 'matrix' | 'pathfinder' | 'contracts';
 
@@ -336,7 +323,7 @@ export const KnowledgeGraph: React.FC = () => {
 
             <select
               value={selectedRelationship}
-              onChange={(e) => setSelectedRelationship(e.target.value as any)}
+              onChange={(e) => setSelectedRelationship(e.target.value as RelationshipType | 'ALL')}
               className="px-2 py-1 bg-white border border-[#1A1A1A]/30 text-xs font-mono focus:outline-none"
               aria-label="Filter by relationship type"
             >

@@ -14,7 +14,7 @@ export interface RoadmapNode {
   internalDocUrl?: string;
   status?: 'not-started' | 'in-progress' | 'mastered' | 'too-hard' | 'skipped';
   sourceResourceId?: string;
-  scoreBreakdown?: any;
+  scoreBreakdown?: Record<string, number | undefined>;
   skillsTaught?: string[];
   prerequisiteSkills?: string[];
   reason?: string;

@@ -7,12 +7,14 @@ import { RoadmapNode, RoadmapPath } from '@/data/roadmapsData';
 interface NodeDetailDrawerProps {
   node: RoadmapNode | null;
   roadmap: RoadmapPath;
+  pathId?: string;
+  userId?: string;
   onClose: () => void;
   onSelectNode: (nodeId: string) => void;
   onToggleStatus: (nodeId: string, status: 'not-started' | 'in-progress' | 'mastered' | 'too-hard' | 'skipped') => void;
 }
 
-const getExplanationFromBreakdown = (scoreBreakdown: any) => {
+const getExplanationFromBreakdown = (scoreBreakdown?: Record<string, number | undefined>) => {
   if (!scoreBreakdown) return '';
   
   const skillGap = scoreBreakdown.skill_gap_match ?? 0;
@@ -69,6 +71,8 @@ const getExplanationFromBreakdown = (scoreBreakdown: any) => {
 export const NodeDetailDrawer: React.FC<NodeDetailDrawerProps> = ({
   node,
   roadmap,
+  pathId,
+  userId,
   onClose,
   onSelectNode,
   onToggleStatus
@@ -102,7 +106,18 @@ export const NodeDetailDrawer: React.FC<NodeDetailDrawerProps> = ({
   const handleFetchAiTrace = async () => {
     setLoadingAi(true);
     try {
-      const res = await fetch(`/api/explain/trace?resourceId=${encodeURIComponent(node.id)}`);
+      const activePathId = pathId;
+      const storedUserId = userId || (typeof window !== 'undefined' ? sessionStorage.getItem('userId') : null);
+
+      const params = new URLSearchParams();
+      params.append('resourceId', node.sourceResourceId || node.id);
+      if (activePathId) {
+        params.append('pathId', activePathId);
+      } else if (storedUserId) {
+        params.append('userId', storedUserId);
+      }
+
+      const res = await fetch(`/api/explain/trace?${params.toString()}`);
       if (res.ok) {
         const data = await res.json();
         setAiExplanation(data.traceExplanation || `Recommended based on prerequisite hierarchy and ${node.importance.toLowerCase()} track alignment.`);

@@ -21,8 +21,9 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, evidence });
 
-  } catch (error: any) {
-    console.error('Error adding evidence:', error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Error adding evidence:', errMsg);
+    return NextResponse.json({ error: errMsg }, { status: 500 });
   }
 }

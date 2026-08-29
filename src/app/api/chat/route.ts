@@ -94,8 +94,9 @@ Respond with valid JSON satisfying the schema: { "reply": "...", "quick_replies"
       is_complete: isComplete,
       provider: aiResult.provider,
     });
-  } catch (error: any) {
-    console.error('Error in /api/chat route:', error.message);
+  } catch (error: unknown) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Error in /api/chat route:', errMsg);
 
     const body = await request.clone().json().catch(() => ({ messages: [] }));
     const messages: ChatMessage[] = body.messages || [];

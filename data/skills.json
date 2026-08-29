@@ -1,0 +1,146 @@
+[
+  {
+    "canonical": "HTML & CSS",
+    "aliases": ["HTML", "CSS", "Responsive Web Design", "Tailwind CSS"]
+  },
+  {
+    "canonical": "JavaScript",
+    "aliases": ["JS", "ES6", "ECMAScript"]
+  },
+  {
+    "canonical": "TypeScript",
+    "aliases": ["TS", "Typed JavaScript"]
+  },
+  {
+    "canonical": "React",
+    "aliases": ["React.js", "React 19"]
+  },
+  {
+    "canonical": "Next.js",
+    "aliases": ["NextJS", "Next.js App Router", "Vercel Next.js"]
+  },
+  {
+    "canonical": "Node.js",
+    "aliases": ["Node", "Express", "Node.js APIs"]
+  },
+  {
+    "canonical": "PostgreSQL & SQL",
+    "aliases": ["PostgreSQL", "SQL", "Relational Databases", "Database Design"]
+  },
+  {
+    "canonical": "REST & GraphQL APIs",
+    "aliases": ["REST APIs", "GraphQL", "API Design", "Apollo GraphQL"]
+  },
+  {
+    "canonical": "Authentication & Security",
+    "aliases": ["Auth", "OAuth", "OIDC", "JWT", "OWASP", "Application Security"]
+  },
+  {
+    "canonical": "Docker & Containers",
+    "aliases": ["Docker", "Containers", "Containerization", "Docker & Deployment"]
+  },
+  {
+    "canonical": "State Management",
+    "aliases": ["Redux", "Zustand", "Client State"]
+  },
+  {
+    "canonical": "Web Performance & Core Web Vitals",
+    "aliases": ["Core Web Vitals", "Web Performance", "LCP", "INP", "CLS"]
+  },
+  {
+    "canonical": "Testing & QA (Jest/Cypress)",
+    "aliases": ["Testing", "QA", "Jest", "Vitest", "Cypress", "E2E Testing"]
+  },
+  {
+    "canonical": "Python",
+    "aliases": ["Python Programming", "Python Fundamentals"]
+  },
+  {
+    "canonical": "Linear Algebra",
+    "aliases": ["Vectors", "Matrices", "Matrix Algebra"]
+  },
+  {
+    "canonical": "Calculus & Optimization",
+    "aliases": ["Calculus", "Optimization", "Gradient Descent"]
+  },
+  {
+    "canonical": "Statistics & Probability",
+    "aliases": ["Statistics", "Probability", "Statistical Inference"]
+  },
+  {
+    "canonical": "Pandas & Data Processing",
+    "aliases": ["Pandas", "NumPy", "Data Processing", "Data Wrangling"]
+  },
+  {
+    "canonical": "Machine Learning (Scikit-Learn)",
+    "aliases": ["Machine Learning", "ML", "Scikit-Learn", "sklearn"]
+  },
+  {
+    "canonical": "Deep Learning & PyTorch",
+    "aliases": ["Deep Learning", "PyTorch", "Neural Networks", "Transformers"]
+  },
+  {
+    "canonical": "RAG & Vector Embeddings",
+    "aliases": ["RAG", "Vector Embeddings", "Vector Databases", "Semantic Search"]
+  },
+  {
+    "canonical": "LLM Agents & Tool Calling",
+    "aliases": ["LLM Agents", "Tool Calling", "Function Calling", "Agentic AI"]
+  },
+  {
+    "canonical": "Linux & Shell Scripting",
+    "aliases": ["Linux", "Shell", "Bash", "CLI"]
+  },
+  {
+    "canonical": "Networking & Protocols",
+    "aliases": ["Networking", "TCP/IP", "DNS", "TLS", "HTTP"]
+  },
+  {
+    "canonical": "CI/CD (GitHub Actions)",
+    "aliases": ["CI/CD", "GitHub Actions", "Pipelines", "GitOps"]
+  },
+  {
+    "canonical": "Terraform & IaC",
+    "aliases": ["Terraform", "Infrastructure as Code", "IaC"]
+  },
+  {
+    "canonical": "Kubernetes & Orchestration",
+    "aliases": ["Kubernetes", "K8s", "Orchestration", "Helm"]
+  },
+  {
+    "canonical": "Monitoring & Observability",
+    "aliases": ["Monitoring", "Observability", "Prometheus", "Grafana", "OpenTelemetry"]
+  },
+  {
+    "canonical": "Redis & Caching",
+    "aliases": ["Redis", "Caching", "Distributed Locks"]
+  },
+  {
+    "canonical": "Message Queues & Kafka",
+    "aliases": ["Kafka", "Message Queues", "Event Streaming"]
+  },
+  {
+    "canonical": "Distributed Systems & Scalability",
+    "aliases": ["Distributed Systems", "Scalability", "Consensus", "Raft"]
+  },
+  {
+    "canonical": "Data Cleaning & Transformation",
+    "aliases": ["Data Cleaning", "Feature Engineering", "Transformation"]
+  },
+  {
+    "canonical": "dbt & Data Modeling",
+    "aliases": ["dbt", "Data Modeling", "Analytics Engineering"]
+  },
+  {
+    "canonical": "Data Warehousing (Snowflake/BigQuery)",
+    "aliases": ["Data Warehousing", "Snowflake", "BigQuery", "Cloud Warehouse"]
+  },
+  {
+    "canonical": "Data Visualization & Dashboards",
+    "aliases": ["Data Visualization", "Dashboards", "Tableau", "BI"]
+  },
+  {
+    "canonical": "Full Stack Architecture",
+    "aliases": ["Full Stack", "Application Architecture", "System Architecture"]
+  }
+]

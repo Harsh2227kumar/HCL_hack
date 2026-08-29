@@ -103,11 +103,11 @@ export async function GET(request: Request) {
           status: nextBestActionItem.status,
           phase: phaseNames[nextBestActionItem.phase - 1] || 'Foundations',
           resource: {
-            title: (nextBestActionItem as any).resource?.title || 'Unknown Resource',
-            durationHours: (nextBestActionItem as any).resource?.durationHours || 5,
-            format: (nextBestActionItem as any).resource?.format || 'course',
-            skillsTaught: (nextBestActionItem as any).resource?.skillsTaught || [],
-            prerequisiteSkills: (nextBestActionItem as any).resource?.prerequisiteSkills || [],
+            title: nextBestActionItem.resource?.title || 'Unknown Resource',
+            durationHours: nextBestActionItem.resource?.durationHours || 5,
+            format: nextBestActionItem.resource?.format || 'course',
+            skillsTaught: (nextBestActionItem.resource?.skillsTaught as string[]) || [],
+            prerequisiteSkills: (nextBestActionItem.resource?.prerequisiteSkills as string[]) || [],
           },
           reason: nextBestActionItem.reason,
           score: nextBestActionItem.score,
@@ -130,7 +130,7 @@ export async function GET(request: Request) {
       pKnown: s.finalEstimate / 5, // Convert 0–5 scale to P(known) [0,1]
     }));
 
-    const dependencies: SkillDependency[] = (skillDependenciesData as any[]).map(
+    const dependencies: SkillDependency[] = (skillDependenciesData as Array<{ skill_name: string; depends_on_skill_name: string }>).map(
       (d) => ({
         skill_name: d.skill_name,
         depends_on_skill_name: d.depends_on_skill_name,
@@ -163,11 +163,11 @@ export async function GET(request: Request) {
               status: item.status,
               phase: phaseNames[item.phase - 1] || 'Foundations',
               resource: {
-                title: (item as any).resource?.title || 'Unknown Resource',
-                durationHours: (item as any).resource?.durationHours || 5,
-                format: (item as any).resource?.format || 'course',
-                skillsTaught: (item as any).resource?.skillsTaught || [],
-                prerequisiteSkills: (item as any).resource?.prerequisiteSkills || [],
+                title: item.resource?.title || 'Unknown Resource',
+                durationHours: item.resource?.durationHours || 5,
+                format: item.resource?.format || 'course',
+                skillsTaught: (item.resource?.skillsTaught as string[]) || [],
+                prerequisiteSkills: (item.resource?.prerequisiteSkills as string[]) || [],
               },
               reason: item.reason,
               score: item.score,

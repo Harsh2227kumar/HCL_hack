@@ -147,8 +147,7 @@ export function reconcileSkillFromEvidence(
  * below 2.5 as "incorrect". This lets old callers migrate without rewriting.
  */
 export function reconcileSkillEstimate(
-  evidenceRecords: SkillEvidence[],
-  _now: Date = new Date()
+  evidenceRecords: SkillEvidence[]
 ): { final_estimate: number | null; confidence_score: number } {
   if (!evidenceRecords || evidenceRecords.length === 0) {
     return { final_estimate: null, confidence_score: 0 };

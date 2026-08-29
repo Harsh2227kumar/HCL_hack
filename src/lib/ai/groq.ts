@@ -13,7 +13,7 @@ export async function callGroq<T>(prompt: string, schema: z.ZodType<T>): Promise
   const groq = new Groq({ apiKey });
 
   // Convert Zod schema to JSON schema
-  const jsonSchema = zodToJsonSchema(schema as any, "responseSchema");
+  const jsonSchema = zodToJsonSchema(schema as unknown as Parameters<typeof zodToJsonSchema>[0], "responseSchema");
   const schemaString = JSON.stringify(jsonSchema);
 
   const fullPrompt = `${prompt}\n\nIMPORTANT: You must respond ONLY with valid JSON that strictly satisfies the following JSON schema. Do NOT include markdown blocks like \`\`\`json. Just the raw JSON object.\n\nSchema:\n${schemaString}`;
@@ -39,7 +39,7 @@ export async function callGroq<T>(prompt: string, schema: z.ZodType<T>): Promise
   try {
     const parsedData = JSON.parse(responseText);
     return schema.parse(parsedData);
-  } catch (error) {
+  } catch {
     console.error('[Groq] Failed to parse or validate JSON response:', responseText);
     throw new Error('Groq response failed schema validation');
   }

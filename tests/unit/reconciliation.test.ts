@@ -132,7 +132,7 @@ describe('reconcileSkillEstimate — legacy adapter', () => {
   const now = new Date('2026-08-28T00:00:00Z');
 
   it('should handle zero evidence records', () => {
-    const result = reconcileSkillEstimate([], now);
+    const result = reconcileSkillEstimate([]);
     expect(result).toEqual({ final_estimate: null, confidence_score: 0 });
   });
 
@@ -141,7 +141,7 @@ describe('reconcileSkillEstimate — legacy adapter', () => {
       { score: 4, source: 'diagnostic', timestamp: new Date('2026-08-27T00:00:00Z') },
       { score: 5, source: 'project_completion', timestamp: new Date('2026-08-28T00:00:00Z') },
     ];
-    const result = reconcileSkillEstimate(evidence, now);
+    const result = reconcileSkillEstimate(evidence);
     expect(result.final_estimate).not.toBeNull();
     expect(result.final_estimate!).toBeGreaterThanOrEqual(0);
     expect(result.final_estimate!).toBeLessThanOrEqual(5);
@@ -156,8 +156,8 @@ describe('reconcileSkillEstimate — legacy adapter', () => {
       { score: 1, source: 'diagnostic', timestamp: now },
       { score: 0, source: 'diagnostic', timestamp: now },
     ];
-    const highResult = reconcileSkillEstimate(highEvidence, now);
-    const lowResult = reconcileSkillEstimate(lowEvidence, now);
+    const highResult = reconcileSkillEstimate(highEvidence);
+    const lowResult = reconcileSkillEstimate(lowEvidence);
     expect(highResult.final_estimate!).toBeGreaterThan(lowResult.final_estimate!);
   });
 });

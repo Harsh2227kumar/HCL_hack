@@ -21,16 +21,18 @@ async function runTest() {
   try {
     const result1 = await callAI('understanding', "Extract details from this text: My name is Yash and I just turned 24 years old today.", TestSchema);
     console.log("Result 1:", result1);
-  } catch (e: any) {
-    console.error("Test 1 failed:", e.message);
+  } catch (e: unknown) {
+    const errMsg = e instanceof Error ? e.message : String(e);
+    console.error("Test 1 failed:", errMsg);
   }
 
   console.log("\n=== Testing 'writing' role (Primary: Groq, Fallback: Gemini) ===");
   try {
     const result2 = await callAI('writing', "Extract details from this text: Sameera is a 22-year-old developer.", TestSchema);
     console.log("Result 2:", result2);
-  } catch (e: any) {
-    console.error("Test 2 failed:", e.message);
+  } catch (e: unknown) {
+    const errMsg = e instanceof Error ? e.message : String(e);
+    console.error("Test 2 failed:", errMsg);
   }
 }
 

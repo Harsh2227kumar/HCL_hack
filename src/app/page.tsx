@@ -4,17 +4,10 @@ import React from 'react';
 import Link from 'next/link';
 import { 
   GitBranch, 
-  Network, 
   Layers, 
-  Compass, 
   Sparkles, 
-  CheckCircle2, 
   ArrowRight, 
-  ShieldCheck, 
-  Zap, 
-  BookOpen, 
-  BrainCircuit,
-  Cpu
+  BrainCircuit
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -139,7 +132,7 @@ export default function HomePage() {
             </div>
             <h3 className="text-lg font-serif font-bold text-[#1A1A1A]">Cross-Discipline Knowledge Graph</h3>
             <p className="text-xs text-[#666] leading-relaxed font-sans">
-              Connects Frontend, Backend, AI/ML, DevOps, and Cybersecurity into a unified skill ontology powered by kamranahmedse/developer-roadmap.
+              Connects Frontend, Backend, AI/ML, DevOps, and Cybersecurity into a unified skill ontology using a structured cross-discipline knowledge graph.
             </p>
           </div>
         </div>

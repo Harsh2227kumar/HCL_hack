@@ -8,16 +8,37 @@ import {
   ZoomOut, 
   RotateCcw, 
   ListTree, 
-  LayoutGrid, 
   CheckCircle2, 
   Clock, 
-  ArrowRight,
-  Info,
-  SlidersHorizontal,
-  ChevronRight,
-  Download
+  SlidersHorizontal
 } from 'lucide-react';
 import { RoadmapPath, RoadmapNode } from '@/data/roadmapsData';
+
+export interface SkillGapItem {
+  skillName: string;
+  current: number;
+  target: number;
+  gap: number;
+  confidence?: number;
+}
+
+export interface ActiveRecommendation {
+  goal?: string;
+  weeklyHours?: number;
+  timeToGoalWeeks?: number;
+  bottleneck?: string | null;
+  aiInsight?: string;
+  skillGaps?: SkillGapItem[];
+  activePath?: {
+    id?: string;
+    version?: number;
+    triggerReason?: string;
+    generatedAt?: string | Date;
+    milestones?: unknown[];
+  };
+  recommendations?: unknown[];
+  reason?: string;
+}
 
 interface DAGVisualizerProps {
   roadmaps: RoadmapPath[];
@@ -26,7 +47,7 @@ interface DAGVisualizerProps {
   selectedNode: RoadmapNode | null;
   onSelectNode: (node: RoadmapNode | null) => void;
   onToggleStatus: (nodeId: string, status: 'not-started' | 'in-progress' | 'mastered' | 'too-hard' | 'skipped') => void;
-  activeRecommendation?: any;
+  activeRecommendation?: ActiveRecommendation;
 }
 
 interface LayoutNode extends RoadmapNode {
@@ -42,7 +63,6 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
   onSelectRoadmap,
   selectedNode,
   onSelectNode,
-  onToggleStatus,
   activeRecommendation
 }) => {
   const [viewMode, setViewMode] = useState<'graph' | 'list'>('graph');
@@ -232,7 +252,6 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
   // Track summary KPIs
   const totalHours = selectedRoadmap.nodes.reduce((acc, n) => acc + n.estimatedHours, 0);
   const masteredCount = selectedRoadmap.nodes.filter(n => n.status === 'mastered').length;
-  const inProgressCount = selectedRoadmap.nodes.filter(n => n.status === 'in-progress').length;
   const masteredHours = selectedRoadmap.nodes
     .filter(n => n.status === 'mastered')
     .reduce((acc, n) => acc + n.estimatedHours, 0);
@@ -264,7 +283,11 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
 
   // Center view on track change
   useEffect(() => {
-    resetView();
+    const frame = requestAnimationFrame(() => {
+      setZoom(1);
+      setPan({ x: 40, y: 40 });
+    });
+    return () => cancelAnimationFrame(frame);
   }, [selectedRoadmap.id]);
 
   return (
@@ -331,17 +354,22 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
           </div>
         </div>
 
-        {/* Selected Track Deep Metrics */}
-        <div className="border border-[#1A1A1A] bg-white p-4 space-y-3">
-          <div className="text-[10px] font-mono uppercase tracking-widest text-[#777] font-bold border-b border-[#1A1A1A]/10 pb-1 flex justify-between items-center">
-            <span>Track Statistics</span>
-            <span className="font-bold text-[#1A1A1A]">{selectedRoadmap.role}</span>
+        {/* Selected Roadmap Meta */}
+        <div className="border-t border-[#1A1A1A]/15 pt-5 space-y-3">
+          <div className="text-[10px] font-mono uppercase tracking-widest text-[#777] font-bold">
+            Track Specifications
+          </div>
+          <div>
+            <h3 className="text-xl font-serif font-bold text-[#1A1A1A] leading-tight">
+              {selectedRoadmap.title}
+            </h3>
+            <span className="text-xs font-mono text-[#666]">{selectedRoadmap.role}</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 text-xs font-mono">
+          <div className="grid grid-cols-2 gap-2 text-xs font-mono pt-1">
             <div className="bg-[#F8F7F4] p-2 border border-[#1A1A1A]/10">
               <span className="text-[10px] text-[#777] block">Progress</span>
-              <span className="text-lg font-serif font-bold text-emerald-800">{progressPercent}%</span>
+              <span className="text-lg font-serif font-bold text-[#1A1A1A]">{progressPercent}%</span>
               <span className="text-[10px] text-[#555] block">{masteredCount}/{selectedRoadmap.nodes.length} Mastered</span>
             </div>
             <div className="bg-[#F8F7F4] p-2 border border-[#1A1A1A]/10">
@@ -352,7 +380,7 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
           </div>
 
           <div className="text-[11px] font-serif text-[#555] italic leading-relaxed pt-1">
-            "{selectedRoadmap.description}"
+            &ldquo;{selectedRoadmap.description}&rdquo;
           </div>
         </div>
  
@@ -367,7 +395,7 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
             </div>
 
             <div className="space-y-2.5 max-h-[300px] overflow-y-auto pr-1">
-              {activeRecommendation.skillGaps.map((gapItem: any) => {
+              {activeRecommendation.skillGaps.map((gapItem: SkillGapItem) => {
                 const current = gapItem.current ?? 0;
                 const target = gapItem.target ?? 5;
                 const gap = gapItem.gap ?? 0;
@@ -376,7 +404,7 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
                 const isBottleneck = activeRecommendation.bottleneck?.toLowerCase() === gapItem.skillName?.toLowerCase();
                 
                 // Find largest gap
-                const largestGapValue = Math.max(...activeRecommendation.skillGaps.map((g: any) => g.gap ?? 0));
+                const largestGapValue = Math.max(...(activeRecommendation.skillGaps?.map((g: SkillGapItem) => g.gap ?? 0) || [0]));
                 const isLargestGap = gap > 0 && gap === largestGapValue;
 
                 // Percent calculations (assuming 5.0 is the max rating scale)
@@ -687,7 +715,6 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
                   const isDirectChildOfHover = edge.from === activeFocusId;
                   const isAncestorEdge = ancestorIds.has(edge.from) && (ancestorIds.has(edge.to) || edge.to === activeFocusId);
                   const isDescendantEdge = (descendantIds.has(edge.from) || edge.from === activeFocusId) && descendantIds.has(edge.to);
-                  const isHighlighted = isDirectPrereqOfHover || isDirectChildOfHover || isAncestorEdge || isDescendantEdge;
 
                   let strokeColor = '#C8C4B8';
                   let strokeWidth = 1.5;
@@ -725,7 +752,6 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
               {/* Node Cards Layer */}
               {layoutData.nodes.map((node) => {
                 const isSelected = selectedNode?.id === node.id;
-                const isHovered = hoveredNodeId === node.id;
                 const isAncestor = ancestorIds.has(node.id);
                 const isDescendant = descendantIds.has(node.id);
                 const isFocused = activeFocusId === node.id;

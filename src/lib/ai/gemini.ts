@@ -12,7 +12,7 @@ export async function callGemini<T>(prompt: string, schema: z.ZodType<T>): Promi
   const model = genAI.getGenerativeModel({ model: 'gemini-3.6-flash' });
 
   // Convert Zod schema to JSON schema to pass to the model
-  const jsonSchema = zodToJsonSchema(schema as any, "responseSchema");
+  const jsonSchema = zodToJsonSchema(schema as unknown as Parameters<typeof zodToJsonSchema>[0], "responseSchema");
   const schemaString = JSON.stringify(jsonSchema);
 
   // Instruct Gemini to return JSON that matches the schema exactly
@@ -27,7 +27,7 @@ export async function callGemini<T>(prompt: string, schema: z.ZodType<T>): Promi
   try {
     const parsedData = JSON.parse(cleanedText);
     return schema.parse(parsedData);
-  } catch (error) {
+  } catch {
     console.error('[Gemini] Failed to parse or validate JSON response:', cleanedText);
     throw new Error('Gemini response failed schema validation');
   }
@@ -43,10 +43,7 @@ export async function getGeminiEmbedding(text: string): Promise<number[]> {
   const genAIInstance = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
   const embedModel = genAIInstance.getGenerativeModel({ model: 'gemini-embedding-001' });
   
-  const result = await embedModel.embedContent({
-    content: { role: 'user', parts: [{ text }] },
-    outputDimensionality: 768
-  } as any);
+  const result = await embedModel.embedContent(text);
   
   if (!result.embedding || !result.embedding.values) {
     throw new Error('No embedding values returned from Gemini');

@@ -29,7 +29,7 @@ export async function POST(request: Request) {
       confidence_score: s.confidenceScore
     }));
     
-    const dependencies: SkillDependency[] = (skillDependenciesData as any[]).map(d => ({
+    const dependencies: SkillDependency[] = (skillDependenciesData as Array<{ skill_name: string; depends_on_skill_name: string }>).map(d => ({
       skill_name: d.skill_name,
       depends_on_skill_name: d.depends_on_skill_name
     }));
@@ -39,18 +39,63 @@ export async function POST(request: Request) {
 
     const targetSkill = selected[0];
     const prompt = `Generate 5 multiple-choice questions to assess a learner's knowledge in "${targetSkill}". Include 4 options per question, the correct answer, and a short explanation.`;
+    let questions: Array<{ question: string; options: string[]; correctAnswer: string; explanation: string }> = [];
+    let isFallback = false;
 
-    const aiRes = await callAI('understanding', prompt, QuestionSchema);
-    
-    if (Array.isArray(aiRes)) throw new Error('Expected structured data from callAI');
+    try {
+      const aiRes = await callAI('understanding', prompt, QuestionSchema);
+      if (!Array.isArray(aiRes) && aiRes?.data?.questions?.length > 0) {
+        questions = aiRes.data.questions;
+      }
+    } catch {
+      console.warn(`[diagnostic/generate] AI generation failed for ${targetSkill}, using curated fallback.`);
+      isFallback = true;
+      questions = [
+        {
+          question: `What is the core principle or purpose of ${targetSkill}?`,
+          options: [
+            `To establish structured patterns, reliable execution, and core abstractions in ${targetSkill}.`,
+            `To bypass all safety checks and compilation stages in production environments.`,
+            `To execute unverified bytecode directly without memory management.`,
+            `To convert synchronous relational schemas into flat binary streams.`
+          ],
+          correctAnswer: `To establish structured patterns, reliable execution, and core abstractions in ${targetSkill}.`,
+          explanation: `Understanding the fundamental design principles and abstractions of ${targetSkill} is critical for robust application development.`
+        },
+        {
+          question: `When implementing ${targetSkill}, which consideration is most important for maintainability?`,
+          options: [
+            `Adhering to deterministic interfaces, modular isolation, and testable boundaries.`,
+            `Hardcoding environment parameters directly inside root modules.`,
+            `Disabling error logging to reduce disk write cycles.`,
+            `Duplicating domain state across independent worker nodes without synchronization.`
+          ],
+          correctAnswer: `Adhering to deterministic interfaces, modular isolation, and testable boundaries.`,
+          explanation: `Modular isolation and clear interfaces prevent regression and decouple complex dependencies.`
+        },
+        {
+          question: `How does intermediate mastery in ${targetSkill} translate to system reliability?`,
+          options: [
+            `Ensures proper error handling, resource lifecycle management, and predictable latency.`,
+            `Guarantees that no CPU cycles will be consumed during peak workloads.`,
+            `Automatically resolves cross-origin network failures at the OS kernel level.`,
+            `Replaces database transaction guarantees with local in-memory caches.`
+          ],
+          correctAnswer: `Ensures proper error handling, resource lifecycle management, and predictable latency.`,
+          explanation: `Reliable systems depend on disciplined error recovery and proper lifecycle resource management.`
+        }
+      ];
+    }
 
     return NextResponse.json({
       skillName: targetSkill,
-      questions: aiRes.data.questions
+      questions,
+      isFallback
     });
 
-  } catch (error: any) {
-    console.error('Error generating diagnostic:', error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Error generating diagnostic:', errMsg);
+    return NextResponse.json({ error: errMsg }, { status: 500 });
   }
 }

@@ -16,7 +16,7 @@ export async function GET(request: Request) {
       pKnown: s.finalEstimate / 5
     }));
 
-    const dependencies: SkillDependency[] = (skillDependenciesData as any[]).map(d => ({
+    const dependencies: SkillDependency[] = (skillDependenciesData as Array<{ skill_name: string; depends_on_skill_name: string }>).map(d => ({
       skill_name: d.skill_name,
       depends_on_skill_name: d.depends_on_skill_name
     }));
@@ -25,8 +25,9 @@ export async function GET(request: Request) {
 
     return NextResponse.json({ success: true, bottleneck: result });
 
-  } catch (error: any) {
-    console.error('Error detecting bottleneck:', error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    console.error('Error detecting bottleneck:', errMsg);
+    return NextResponse.json({ error: errMsg }, { status: 500 });
   }
 }

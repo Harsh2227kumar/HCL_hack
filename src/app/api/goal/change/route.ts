@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     });
 
     const requiredSkills: Array<{ skill: string; min_level: number }> =
-      (template?.requiredSkills as any) || [
+      (template?.requiredSkills as Array<{ skill: string; min_level: number }>) || [
         { skill: 'JavaScript', min_level: 3 },
         { skill: 'React', min_level: 3 },
         { skill: 'Node.js', min_level: 2 },
