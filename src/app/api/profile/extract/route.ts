@@ -30,7 +30,14 @@ const ExtractedProfileSchema = z.object({
   experienceLevel: z
     .string()
     .nullish()
-    .transform((val) => (val && val.trim().length > 0 ? val : 'Intermediate')),
+    .transform((val) => {
+      if (!val || typeof val !== 'string') return 'Intermediate';
+      const lower = val.toLowerCase();
+      if (lower.includes('beginner') || lower.includes('novice')) return 'Beginner';
+      if (lower.includes('advanced') || lower.includes('senior') || lower.includes('expert')) return 'Advanced';
+      return 'Intermediate';
+    })
+    .pipe(z.enum(['Beginner', 'Intermediate', 'Advanced'])),
   notes: z
     .string()
     .nullish()
@@ -39,9 +46,8 @@ const ExtractedProfileSchema = z.object({
 
 // Map experienceLevel string → selfRatedLevel integer (0-5 scale)
 function experienceToSelfRated(experienceLevel: string): number {
-  const lower = experienceLevel.toLowerCase();
-  if (lower.includes('beginner') || lower.includes('novice') || lower.includes('no experience')) return 1;
-  if (lower.includes('advanced') || lower.includes('senior') || lower.includes('expert')) return 3;
+  if (experienceLevel === 'Beginner') return 1;
+  if (experienceLevel === 'Advanced') return 3;
   return 2; // intermediate default
 }
 
@@ -98,8 +104,8 @@ Extract and return a clean JSON object satisfying this schema:
 - goal: The specific domain or career goal the learner wants to master (e.g. "AI Engineering & Machine Learning", "Full Stack Web Development", "Deep Learning & NLP", etc.)
 - weeklyHours: Integer number of hours per week the learner can dedicate (if flexible or unspecified, use 10)
 - learningStyle: Preferred learning modality (e.g. "Interactive Coding", "Hands-on Projects", "Video Courses", "Documentation")
-- experienceLevel: Current baseline skills & background (e.g. "Intermediate (Python & GenAI fundamentals)")
-- notes: Any special notes mentioned`;
+- experienceLevel: Current baseline skill level (must be "Beginner", "Intermediate", or "Advanced")
+- notes: Any special notes or extra details mentioned`;
 
     const response = await callAI('understanding', prompt, ExtractedProfileSchema);
     if (Array.isArray(response)) throw new Error('Expected structured response');
@@ -114,6 +120,7 @@ Extract and return a clean JSON object satisfying this schema:
             goal: profileData.goal,
             weeklyHours: profileData.weeklyHours,
             learningStyle: profileData.learningStyle,
+            experienceLevel: profileData.experienceLevel,
             notes: profileData.notes,
           },
         },

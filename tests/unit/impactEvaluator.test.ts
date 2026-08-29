@@ -8,7 +8,7 @@ import {
 describe('evaluateImpact', () => {
   const defaultContext: LearnerContext = {
     hasPrereqGap: false,
-    recentDiagnosticScore: 0.8,
+    recentDiagnosticNormalizedScore: 0.8,
     resourceDifficulty: 2,
     learnerExperienceLevel: 'Intermediate',
     formatMismatch: false,
@@ -24,9 +24,19 @@ describe('evaluateImpact', () => {
     expect(result.action).toBe('insert_prerequisite');
   });
 
-  test('triggers diagnostic_low_score cause when recentDiagnosticScore < 0.5', () => {
+  test('triggers diagnostic_low_score cause when recentDiagnosticNormalizedScore < 0.5', () => {
     const event: ProgressEvent = { eventType: 'too_hard', resourceId: 'res-2' };
-    const context: LearnerContext = { ...defaultContext, recentDiagnosticScore: 0.3 };
+    const context: LearnerContext = { ...defaultContext, recentDiagnosticNormalizedScore: 0.3 };
+
+    const result = evaluateImpact(event, context);
+    expect(result.replan).toBe(true);
+    expect(result.cause).toBe('diagnostic_low_score');
+    expect(result.action).toBe('swap_resource');
+  });
+
+  test('triggers diagnostic_low_score cause for raw score of 2/5 (normalized 0.4)', () => {
+    const event: ProgressEvent = { eventType: 'too_hard', resourceId: 'res-2b' };
+    const context: LearnerContext = { ...defaultContext, recentDiagnosticNormalizedScore: 2 / 5 };
 
     const result = evaluateImpact(event, context);
     expect(result.replan).toBe(true);
@@ -62,7 +72,7 @@ describe('evaluateImpact', () => {
     const event: ProgressEvent = { eventType: 'too_hard', resourceId: 'res-5' };
     const context: LearnerContext = {
       hasPrereqGap: true,
-      recentDiagnosticScore: 0.2,
+      recentDiagnosticNormalizedScore: 0.2,
       resourceDifficulty: 5,
       learnerExperienceLevel: 'Beginner',
       formatMismatch: true,
@@ -78,7 +88,7 @@ describe('evaluateImpact', () => {
     const event: ProgressEvent = { eventType: 'too_hard', resourceId: 'res-6' };
     const context: LearnerContext = {
       hasPrereqGap: false,
-      recentDiagnosticScore: 0.3,
+      recentDiagnosticNormalizedScore: 0.3,
       resourceDifficulty: 5,
       learnerExperienceLevel: 'Beginner',
       formatMismatch: true,
@@ -92,7 +102,7 @@ describe('evaluateImpact', () => {
   test('non-replan eventTypes (started, completed, skipped, diagnostic_taken) always return replan: false', () => {
     const context: LearnerContext = {
       hasPrereqGap: true,
-      recentDiagnosticScore: 0.1,
+      recentDiagnosticNormalizedScore: 0.1,
       resourceDifficulty: 5,
       learnerExperienceLevel: 'Beginner',
       formatMismatch: true,
@@ -119,3 +129,4 @@ describe('evaluateImpact', () => {
     expect(result.replan).toBe(false);
   });
 });
+

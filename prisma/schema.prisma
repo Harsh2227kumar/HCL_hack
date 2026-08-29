@@ -28,6 +28,7 @@ model LearnerProfile {
   goal           String?
   weeklyHours    Int?
   learningStyle  String?
+  experienceLevel String?  // "Beginner" | "Intermediate" | "Advanced"
   notes          String?
   updatedAt      DateTime @updatedAt
 }

@@ -14,7 +14,7 @@ export interface ProgressEvent {
 
 export interface LearnerContext {
   hasPrereqGap: boolean;
-  recentDiagnosticScore: number | null;
+  recentDiagnosticNormalizedScore: number | null;
   resourceDifficulty: number;
   learnerExperienceLevel: string;
   formatMismatch: boolean;
@@ -55,8 +55,8 @@ export function evaluateImpact(
 
   // 2. Low diagnostic score check
   if (
-    context.recentDiagnosticScore !== null &&
-    context.recentDiagnosticScore < 0.5
+    context.recentDiagnosticNormalizedScore !== null &&
+    context.recentDiagnosticNormalizedScore < 0.5
   ) {
     return {
       replan: true,

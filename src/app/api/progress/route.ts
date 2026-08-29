@@ -284,11 +284,13 @@ export async function POST(request: Request) {
       }
     }
 
+    const rawDiagScore = recentDiagnostic?.score ?? (score ?? null);
+
     const context: ImpactLearnerContext = {
       hasPrereqGap,
-      recentDiagnosticScore: recentDiagnostic?.score ?? (score ?? null),
+      recentDiagnosticNormalizedScore: rawDiagScore != null ? rawDiagScore / 5 : null,
       resourceDifficulty: resource?.difficulty ?? 3,
-      learnerExperienceLevel: profile?.learningStyle || 'Intermediate',
+      learnerExperienceLevel: profile?.experienceLevel || 'Intermediate',
       formatMismatch: false,
     };
 
