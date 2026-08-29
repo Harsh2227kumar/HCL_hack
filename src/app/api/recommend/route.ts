@@ -68,6 +68,8 @@ export async function POST(request: Request) {
         skillEstimates: dbSkills.map((s) => ({
           skill_name: s.skillName,
           final_estimate: s.finalEstimate,
+          target_level: s.targetLevel,
+          confidence_score: s.confidenceScore,
         })),
         weeklyHours: dbProfile?.weeklyHours ?? 10,
         learningStyle: dbProfile?.learningStyle ?? 'visual',

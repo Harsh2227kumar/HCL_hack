@@ -116,4 +116,43 @@ describe("scoreResource", () => {
     // recommendation_status should be recommended
     expect(result.recommendation_status).toBe("recommended");
   });
+
+  it("should calculate different skill_gap_match scores for skills with same final_estimate but different target_level", () => {
+    const resourceTarget3: LearningResource = {
+      id: "res_sql_01",
+      skills_taught: ["PostgreSQL"],
+      prerequisite_skills: [],
+      difficulty: "intermediate",
+      duration_hours: 5,
+    };
+
+    const resourceTarget5: LearningResource = {
+      id: "res_py_01",
+      skills_taught: ["Python"],
+      prerequisite_skills: [],
+      difficulty: "intermediate",
+      duration_hours: 5,
+    };
+
+    const learner: LearnerContext = {
+      skillEstimates: [
+        { skill_name: "PostgreSQL", final_estimate: 2.8, target_level: 3.0 },
+        { skill_name: "Python", final_estimate: 2.8, target_level: 5.0 },
+      ],
+      weeklyHours: 10,
+      learningStyle: "visual",
+      pastFeedback: [],
+    };
+
+    const resultTarget3 = scoreResource(resourceTarget3, learner, 0.8);
+    const resultTarget5 = scoreResource(resourceTarget5, learner, 0.8);
+
+    // Skill gap for PostgreSQL (2.8/3.0) should be (3 - 2.8)/3 = 0.0667
+    // Skill gap for Python (2.8/5.0) should be (5 - 2.8)/5 = 0.44
+    expect(resultTarget3.score_breakdown.skill_gap_match).toBeLessThan(
+      resultTarget5.score_breakdown.skill_gap_match
+    );
+    expect(resultTarget3.score_breakdown.skill_gap_match).toBeCloseTo(0.0667, 3);
+    expect(resultTarget5.score_breakdown.skill_gap_match).toBeCloseTo(0.44, 2);
+  });
 });

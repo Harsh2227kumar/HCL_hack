@@ -11,7 +11,12 @@ export interface LearningResource {
 }
 
 export interface LearnerContext {
-  skillEstimates: { skill_name: string; final_estimate: number }[];
+  skillEstimates: {
+    skill_name: string;
+    final_estimate: number;
+    target_level?: number;
+    confidence_score?: number;
+  }[];
   weeklyHours: number;
   learningStyle: string;
   pastFeedback: { resource_id: string; event_type: string }[];
@@ -55,10 +60,17 @@ export function scoreResource(
   const prerequisiteSkills = resource.prerequisite_skills || resource.prerequisiteSkills || [];
   const durationHours = resource.duration_hours !== undefined ? resource.duration_hours : resource.durationHours;
 
-  const skillEstimatesMap = new Map<string, number>();
+  const skillEstimatesMap = new Map<
+    string,
+    { final_estimate: number; target_level: number; confidence_score?: number }
+  >();
   if (learner.skillEstimates) {
     for (const est of learner.skillEstimates) {
-      skillEstimatesMap.set(est.skill_name, est.final_estimate);
+      skillEstimatesMap.set(est.skill_name, {
+        final_estimate: est.final_estimate,
+        target_level: est.target_level ?? 5.0,
+        confidence_score: est.confidence_score,
+      });
     }
   }
 
@@ -69,21 +81,26 @@ export function scoreResource(
   let hasUnmetPrerequisites = false;
 
   for (const prereq of prerequisiteSkills) {
-    const est = skillEstimatesMap.get(prereq) ?? 0.0;
+    const est = skillEstimatesMap.get(prereq)?.final_estimate ?? 0.0;
     if (est < PREREQ_MIN_THRESHOLD) {
       hasUnmetPrerequisites = true;
     }
   }
 
   // 2. Skill Gap Match (weight 0.35)
-  // Target level is assumed to be 5.0 (complete mastery). Gap = 5.0 - final_estimate.
+  // Gap = Math.max(0, targetLevel - finalEstimate) / targetLevel, clamped to [0, 1]
   let skillGapMatch = 0.0;
   if (skillsTaught.length > 0) {
     let totalGapScore = 0.0;
     for (const skill of skillsTaught) {
-      const est = skillEstimatesMap.get(skill) ?? 0.0;
-      const gap = Math.max(0.0, 5.0 - est);
-      totalGapScore += gap / 5.0; // Normalized 0 to 1
+      const estInfo = skillEstimatesMap.get(skill);
+      const finalEstimate = estInfo?.final_estimate ?? 0.0;
+      const targetLevel = estInfo?.target_level ?? 5.0;
+
+      const divisor = targetLevel > 0 ? targetLevel : 5.0;
+      const rawGap = Math.max(0.0, targetLevel - finalEstimate) / divisor;
+      const gap = Math.min(1.0, Math.max(0.0, rawGap));
+      totalGapScore += gap;
     }
     skillGapMatch = totalGapScore / skillsTaught.length;
   }
@@ -94,7 +111,7 @@ export function scoreResource(
   if (prerequisiteSkills.length > 0) {
     let totalPrereqScore = 0.0;
     for (const prereq of prerequisiteSkills) {
-      const est = skillEstimatesMap.get(prereq) ?? 0.0;
+      const est = skillEstimatesMap.get(prereq)?.final_estimate ?? 0.0;
       if (est >= PREREQ_MIN_THRESHOLD) {
         totalPrereqScore += 1.0;
       } else {
@@ -124,7 +141,7 @@ export function scoreResource(
   if (skillsTaught.length > 0) {
     let sumEst = 0.0;
     for (const skill of skillsTaught) {
-      sumEst += skillEstimatesMap.get(skill) ?? 0.0;
+      sumEst += skillEstimatesMap.get(skill)?.final_estimate ?? 0.0;
     }
     learnerEstimateOnResourceSkills = sumEst / skillsTaught.length;
   }
