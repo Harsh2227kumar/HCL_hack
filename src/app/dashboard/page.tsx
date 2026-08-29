@@ -13,7 +13,8 @@ import { TeamMatrixView } from '@/components/roadmap/TeamMatrixView';
 import { PlaybookView } from '@/components/roadmap/PlaybookView';
 import { DesignSystemView } from '@/components/roadmap/DesignSystemView';
 import { NodeDetailDrawer } from '@/components/roadmap/NodeDetailDrawer';
-import { Sparkles, AlertCircle, Loader2 } from 'lucide-react';
+import { AiAssistantModal } from '@/components/chat/AiAssistantModal';
+import { Sparkles, AlertCircle, Loader2, Bot } from 'lucide-react';
 
 interface LearnerProfile {
   userId?: string;
@@ -81,6 +82,7 @@ export default function DashboardPage() {
   const [provider, setProvider] = useState<string | null>(null);
   const [adaptationBanner, setAdaptationBanner] = useState<string | null>(null);
   const [apiWarning, setApiWarning] = useState<string | null>(null);
+  const [aiModalOpen, setAiModalOpen] = useState(false);
 
   const fallbackToStaticRoadmap = useCallback((profile: LearnerProfile | null) => {
     const goalLower = (profile?.goal || '').toLowerCase();
@@ -592,6 +594,25 @@ export default function DashboardPage() {
           onToggleStatus={handleToggleStatus}
         />
       )}
+
+      {/* Floating AI Academic Advisor Launcher Button */}
+      <button
+        onClick={() => setAiModalOpen(true)}
+        className="fixed bottom-6 right-6 z-40 px-4 py-3 bg-[#1A1A1A] hover:bg-black text-white rounded-full shadow-2xl border border-white/20 flex items-center gap-2.5 font-mono text-xs uppercase font-bold tracking-wider hover:scale-105 transition-all cursor-pointer group"
+      >
+        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping group-hover:animate-none"></span>
+        <Bot className="w-4 h-4 text-emerald-400" />
+        <span>Ask AI Advisor</span>
+      </button>
+
+      {/* AI Assistant Modal */}
+      <AiAssistantModal
+        isOpen={aiModalOpen}
+        onClose={() => setAiModalOpen(false)}
+        currentGoal={activeRecommendation?.goal || learnerProfile?.goal || "AI Engineering & Machine Learning"}
+        bottleneckSkill={activeRecommendation?.bottleneck}
+        activeModuleTitle={selectedNode?.label}
+      />
 
       {/* Editorial Minimalist Footer */}
       <footer className="border-t border-[#1A1A1A]/15 bg-[#F8F7F4] py-3 px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-[#666] tracking-wider uppercase gap-2 shrink-0">

@@ -683,6 +683,14 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
 
                 const isFilteredOut = !filteredNodes.some(fn => fn.id === node.id);
 
+                // Identify if this is the active track's primary next recommendation
+                const isNextRecommendedAction = (
+                  selectedRoadmap.id === 'personalized-engine-path' &&
+                  node.status !== 'mastered' &&
+                  node.status !== 'skipped' &&
+                  layoutData.nodes.find(n => n.status !== 'mastered' && n.status !== 'skipped')?.id === node.id
+                );
+
                 return (
                   <div
                     key={node.id}
@@ -704,7 +712,9 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
                       isDimmed ? 'opacity-40' : 'opacity-100'
                     } ${
                       isSelected
-                        ? 'border-[#1A1A1A] bg-white shadow-[6px_6px_0px_#1A1A1A] -translate-y-1'
+                        ? 'border-[#1A1A1A] bg-white shadow-[6px_6px_0px_#1A1A1A] -translate-y-1 ring-2 ring-emerald-500/50'
+                        : isNextRecommendedAction
+                        ? 'border-emerald-600 bg-emerald-50/40 shadow-[4px_4px_0px_#059669] ring-2 ring-emerald-500'
                         : isFocused
                         ? 'border-[#1A1A1A] bg-white shadow-[4px_4px_0px_#1A1A1A]'
                         : isAncestor
@@ -714,12 +724,19 @@ export const DAGVisualizer: React.FC<DAGVisualizerProps> = ({
                         : 'border-[#1A1A1A]/40 bg-white hover:border-[#1A1A1A] hover:shadow-[4px_4px_0px_rgba(0,0,0,0.15)]'
                     }`}
                   >
-                    {/* Card Header: Category & Level */}
-                    <div className="flex justify-between items-start">
-                      <span className="text-[9px] font-mono uppercase tracking-wider text-[#666] font-semibold truncate max-w-[150px]">
-                        {node.category}
-                      </span>
-                      <span className={`text-[9px] font-mono px-1.5 py-0.5 border ${
+                    {/* Card Header: Category & Level / Next Step Badge */}
+                    <div className="flex justify-between items-start gap-1">
+                      {isNextRecommendedAction ? (
+                        <span className="text-[9px] font-mono uppercase tracking-wider text-emerald-900 font-bold bg-emerald-100 border border-emerald-400 px-1.5 py-0.5 rounded flex items-center gap-1 animate-pulse">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                          <span>Next Action</span>
+                        </span>
+                      ) : (
+                        <span className="text-[9px] font-mono uppercase tracking-wider text-[#666] font-semibold truncate max-w-[150px]">
+                          {node.category}
+                        </span>
+                      )}
+                      <span className={`text-[9px] font-mono px-1.5 py-0.5 border shrink-0 ${
                         node.level === 'Fundamentals' ? 'bg-emerald-50 text-emerald-900 border-emerald-300' :
                         node.level === 'Intermediate' ? 'bg-blue-50 text-blue-900 border-blue-300' :
                         node.level === 'Advanced' ? 'bg-purple-50 text-purple-900 border-purple-300' :

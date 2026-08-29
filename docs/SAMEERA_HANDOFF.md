@@ -1,62 +1,153 @@
-# Handoff to Sameera (Backend/Core)
+# Handoff to Sameera (Backend / Core Integration)
 
-This document summarizes the current state of the data, validation, and UI layers established on the `yash/features` branch, and outlines the integration contract for the backend.
+This document specifies the backend integration requirements for **Tavily Web Research & Grounding** and **Grounded Diagnostic Generation / Learning Notes**.
 
-## Yash Completed
+---
 
-* **Canonical skill vocabulary** (`data/skills.json`)
-* **Resource coverage** (65 curated resources)
-* **Assessment resources** (15 targeted assessments with distinct UI)
-* **Data validation** (`validateLearningGraph.ts` script for integrity checks)
-* **Canonical goal cleanup** (All goal templates now use canonical skill names)
-* **Assessment validation** (Ensuring goals have matching assessments)
-* **UI honesty/fallback clarity** (Explicit badges for rule-based and fallback states)
-* **Skill-gap dashboard** (BKT current vs target skill visualization)
-* **Decision trace** (Score breakdown and path explanations UI)
-* **Resource comparison** (Side-by-side module comparison)
-* **AI Engineer demo guide** (`docs/DEMO_AI_ENGINEER.md`)
+## 1. Required Backend Integration Summary
 
-## Current Data Contract
+We have created the standalone server-side search helper in [`src/lib/ai/tavily.ts`](file:///Users/yashkhadgi/HCL_Hack/learning-path-recommender/src/lib/ai/tavily.ts).
+To ground Gemini diagnostics and learning notes with live external engineering context, Sameera needs to connect this helper into the backend API routes.
 
-The JSON datasets in `data/` serve as the source of truth for all graph structure and UI rendering:
+---
 
-* **Canonical Skills**: 36 unique skills defined in `data/skills.json`.
-* **Aliases**: 132 aliases mapped to canonical skills.
-* **Goal Templates**: Found in `data/goal_templates.json`.
-* **Resource Schema**: Defined in `data/learning_resources.json` (includes `skills_taught`, `prerequisite_skills`, `duration_hours`, etc.).
-* **Assessment Resource Type**: Resources with `type: "assessment"` receive specialized "Skill Evaluation" styling.
-* **Validation Command**: Run `npm run validate:data` after any modifications to the data files to ensure structural integrity.
+## 2. Existing APIs Involved
 
-## Sameera-Owned Integration
+1. `POST /api/diagnostic/generate` (Generates adaptive diagnostic questions for the target skill)
+2. `POST /api/chat` (AI Academic Advisor conversational onboarding)
+3. `POST /api/explain/trace` (Generates reasoning trace for recommended resources)
 
-Sameera owns the backend logic that powers the UI. Do not modify the frontend/data logic to bypass these systems:
+---
 
-* Diagnostic backend (`/api/diagnostic/*`)
-* Adaptive diagnostic logic
-* BKT (Bayesian Knowledge Tracing) implementation
-* Hybrid scoring engine
-* Recommendation engine (`/api/recommend`)
-* Prerequisite sorting and resolution
-* Resource replacement and goal-change regeneration
-* API routes (`src/app/api/*`)
-* Prisma schema and database migrations (`prisma/`)
-* Backend test suites (`tests/integration/`, `tests/unit/`)
+## 3. Proposed Request Fields
 
-## Important Integration Rules
+For `/api/diagnostic/generate`:
+```typescript
+interface DiagnosticGenerateRequest {
+  userId: string;
+  targetSkill?: string; // Optional: specify skill directly (otherwise resolved from BKT / required_skills)
+  enableWebGrounding?: boolean; // Default: true (triggers Tavily research if TAVILY_API_KEY is present)
+}
+```
 
-* **Use Canonical Skill Names**: When logging progress, resolving dependencies, or updating BKT, always use the canonical skill names from `data/skills.json`.
-* **Goal Templates**: Do not reintroduce alias names into `data/goal_templates.json`.
-* **Assessment Resources**: Ensure new assessment resources use `type: "assessment"`.
-* **Coordination**: Do not modify Yash UI/data components without coordination.
-* **Validation**: Run `npm run validate:data` after any data changes.
+---
 
-## Known Warnings
+## 4. Proposed Response Fields
 
-The `npm run validate:data` script currently produces some expected warnings where certain goal skills lack dedicated assessment resources (e.g., `HTML & CSS`, `TypeScript`, `Next.js`). **These are warnings, not errors**, and do not block the build or demo.
+For `/api/diagnostic/generate`:
+```typescript
+interface DiagnosticGenerateResponse {
+  skillName: string;
+  questions: Array<{
+    question: string;
+    options: string[];
+    correctAnswer: string;
+    explanation: string;
+    groundedContext?: string; // Concise snippet from retrieved research
+  }>;
+  groundingMetadata?: {
+    provider: "tavily" | "gemini-internal" | "fallback";
+    queryUsed?: string;
+    sources?: Array<{
+      title: string;
+      url: string;
+      snippet: string;
+    }>;
+  };
+  provider: "gemini" | "groq" | "fallback";
+}
+```
 
-## Final Verification (as of latest commit)
+---
 
-* `npm run validate:data` -> **PASS**
-* `npx vitest run` -> **PASS (60/60 tests)**
-* `npm run lint` -> **PASS (0 errors, 0 warnings)**
-* `npx next build --webpack` -> **PASS (Compiled successfully)**
+## 5. Tavily Retrieval Contract
+
+When generating diagnostic questions or learning notes:
+1. Construct search query using canonical vocabulary from `data/skills.json` and `data/goal_templates.json`:
+   - E.g., `"${targetSkill} official documentation core concepts engineering assessment ${goalName}"`
+2. Call `searchTavily(query, 3)` from `src/lib/ai/tavily.ts`.
+3. If results are returned (`provider === 'tavily'`), inject the retrieved snippets into Gemini's system prompt:
+   ```
+   EVIDENCE FROM CURRENT DOCUMENTATION:
+   ${results.map(r => `Source: ${r.title} (${r.url})\n${r.content}`).join('\n\n')}
+
+   Generate 3 diagnostic multiple-choice questions grounded in the above engineering facts.
+   ```
+
+---
+
+## 6. Gemini Grounding & Learning Notes Contract
+
+For learning notes or concept explanations:
+- Gemini synthesizes the Tavily snippets into 3-bullet takeaway notes.
+- Returned JSON schema must include:
+  ```json
+  {
+    "summary": "...",
+    "key_takeaways": ["...", "..."],
+    "sources": [{ "title": "...", "url": "..." }]
+  }
+  ```
+
+---
+
+## 7. Fallback Behavior
+
+- If `TAVILY_API_KEY` is missing or rate-limited:
+  - System automatically uses internal Gemini generation without crashing (`groundingMetadata.provider = "gemini-internal"`).
+- If Gemini/Groq are down:
+  - System returns the structured goal-specific fallback question set with `provider = "fallback"` and `groundingMetadata.provider = "fallback"`.
+- The frontend UI displays the exact status badge (`AI-generated diagnostic`, `Web-Grounded via Tavily`, or `Fallback diagnostic`) without faking claims.
+
+---
+
+## 8. Security Requirements
+
+- `TAVILY_API_KEY` is accessed exclusively in Node.js server runtimes via `process.env.TAVILY_API_KEY`.
+- Never expose `TAVILY_API_KEY` via `NEXT_PUBLIC_*` client variables.
+- Never log raw API keys to console or response payloads.
+- Do not commit `.env` or `.env.local` to git repositories.
+
+---
+
+## 9. Example Response Shape
+
+```json
+{
+  "skillName": "Linear Algebra & PyTorch",
+  "questions": [
+    {
+      "question": "What does Singular Value Decomposition (SVD) decompose in tensor optimization?",
+      "options": [
+        "Orthogonal rotation matrices (U, V) and singular values (Σ)",
+        "Eigenvalues and eigenvectors for symmetric matrices only",
+        "Gradient descent step vectors",
+        "Sparse dot products"
+      ],
+      "correctAnswer": "Orthogonal rotation matrices (U, V) and singular values (Σ)",
+      "explanation": "SVD factors any real matrix into U Σ V^T, fundamental for low-rank matrix decomposition.",
+      "groundedContext": "PyTorch documentation on torch.linalg.svd decomposition."
+    }
+  ],
+  "groundingMetadata": {
+    "provider": "tavily",
+    "queryUsed": "Linear Algebra & PyTorch official documentation tensor operations",
+    "sources": [
+      {
+        "title": "PyTorch Linear Algebra Docs",
+        "url": "https://pytorch.org/docs/stable/linalg.html",
+        "snippet": "torch.linalg.svd computes the singular value decomposition of a matrix..."
+      }
+    ]
+  },
+  "provider": "gemini"
+}
+```
+
+---
+
+## 10. Exact UI Components Waiting for Integration
+
+1. `src/app/onboarding/page.tsx` (`loadDiagnosticQuestions` consumes `groundingMetadata` and renders source pills).
+2. `src/components/roadmap/NodeDetailDrawer.tsx` (`DecisionTraceCard` displays grounding citations when returned).
+3. `src/app/course/[id]/page.tsx` (Displays external reference docs and verified skill outcomes).

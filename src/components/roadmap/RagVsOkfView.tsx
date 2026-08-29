@@ -363,15 +363,20 @@ export const RagVsOkfView: React.FC = () => {
         <section className="max-w-5xl mx-auto space-y-8">
           <div className="border-b border-[#1A1A1A]/20 pb-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2">
             <div>
-              <h3 className="text-2xl font-serif italic text-[#1A1A1A]">
-                Interactive 3-Way Query Simulator
-              </h3>
+              <div className="flex items-center gap-2">
+                <h3 className="text-2xl font-serif italic text-[#1A1A1A]">
+                  Comparative Architectural Query Simulator
+                </h3>
+                <span className="text-[10px] font-mono uppercase px-2 py-0.5 bg-amber-100 text-amber-900 border border-amber-300 rounded font-bold">
+                  Conceptual Benchmark
+                </span>
+              </div>
               <p className="text-xs font-mono text-[#666] mt-0.5">
-                Observe how Pure RAG, Pure OKF, and Hybrid GraphRAG process the exact same developer query in real time
+                Simulated trade-off evaluation: Observe how Pure Vector RAG, Pure OKF, and Hybrid GraphRAG process developer prerequisite queries
               </p>
             </div>
             <span className="text-xs font-mono bg-[#1A1A1A] text-white px-2 py-0.5 font-bold self-start sm:self-auto">
-              TEST SUITE
+              SPEC BENCHMARK
             </span>
           </div>
 
