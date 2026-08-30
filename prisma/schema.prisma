@@ -86,7 +86,7 @@ model LearningResource {
   difficulty         Int      // 1-5
   durationHours      Float?
   format             String?
-  embedding          Unsupported("vector(768)")? // Gemini embeddings are 768 dims
+  embedding          Unsupported("vector(3072)")? // gemini-embedding-001 outputs 3072 dims
 
   pathItems          LearningPathItem[]
   progressEvents     ProgressEvent[]
