@@ -15,7 +15,25 @@ One entry per person per push. Add new entries at the **top** of the log (newest
 
 ---
 
+## Progress Checklist
+- [x] **Phase 1: Foundation Layer** (Supabase, Prisma, GenAI clients, Schema, Seed)
+- [x] **Phase 2: Core Intelligence** (Pure TS deterministic engines, SkillGap, Bottleneck, Prerequisite Sort)
+- [x] **Phase 3: API Routes** (15 Next.js server endpoints + new metrics & reasoning trace engines)
+- [ ] **Phase 4: Frontend UI** (Onboarding chat, Dashboard visualization, Course details)
+- [ ] **Phase 5: Integration & Demo Prep** (Unit tests, edge cases, End-to-end rehearsal)
+- [ ] **Phase 6: Deployment** (Vercel, GitHub, Presentation Docs)
+
+---
+
 ## Log
+
+### 2026-08-30 — Antigravity (via Yash)
+- What I built/changed: Completed Phase 3 (API Routes). Built all 15 endpoints for chat, profile, diagnostic, skills, recommendation, path generation, progress, explainability, and dashboard. Implemented `onboardingMetrics.ts` and `reasoningTrace.ts` based on skillbridge-ai.
+- Files touched: `src/app/api/**/route.ts`, `src/lib/core/onboardingMetrics.ts`, `src/lib/core/reasoningTrace.ts`
+- Blocked on: None
+- Next up: Phase 4 — Frontend UI
+
+---
 
 ### 2026-08-30 — Rudrakshi & Sameera (via Yash)
 - What I built/changed: Completed Phase 2 (Deterministic Core Intelligence) - implemented all 7 pure TypeScript engines including skill reconciliation, bottleneck detection, hybrid scoring, and prerequisite path generation. No LLMs are used for this logic.
