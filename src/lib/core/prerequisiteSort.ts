@@ -58,6 +58,71 @@ export function generatePath(
     }
   }
 
+  // CYCLE BREAKING LOGIC (Inspired by skillbridge-ai)
+  function breakCycles() {
+    const visited = new Set<string>();
+    const recStack = new Set<string>();
+
+    function dfs(node: string): string[] | null {
+      visited.add(node);
+      recStack.add(node);
+
+      for (const neighbor of graph.get(node) || []) {
+        if (!visited.has(neighbor)) {
+          const cycle = dfs(neighbor);
+          if (cycle) {
+            cycle.push(node);
+            return cycle;
+          }
+        } else if (recStack.has(neighbor)) {
+          return [node, neighbor]; // Cycle detected
+        }
+      }
+
+      recStack.delete(node);
+      return null;
+    }
+
+    let cycleDetected = true;
+    while (cycleDetected) {
+      cycleDetected = false;
+      visited.clear();
+      recStack.clear();
+
+      for (const node of graph.keys()) {
+        if (!visited.has(node)) {
+          const cycle = dfs(node);
+          if (cycle) {
+            cycleDetected = true;
+            // Break cycle by removing edge from the resource with the lowest score in the cycle
+            let lowestScore = Infinity;
+            let nodeToRemoveEdgeFrom = cycle[0];
+            let targetNode = cycle[1];
+
+            for (let i = 0; i < cycle.length - 1; i++) {
+              const src = cycle[i];
+              const score = validResources.find(r => r.resourceId === src)?.totalScore || 0;
+              if (score < lowestScore) {
+                lowestScore = score;
+                nodeToRemoveEdgeFrom = src;
+                targetNode = cycle[i+1];
+              }
+            }
+
+            // Remove edge nodeToRemoveEdgeFrom -> targetNode
+            const neighbors = graph.get(nodeToRemoveEdgeFrom)!;
+            graph.set(nodeToRemoveEdgeFrom, neighbors.filter(n => n !== targetNode));
+            inDegree.set(targetNode, Math.max(0, inDegree.get(targetNode)! - 1));
+            console.warn(`[GRAPH] Broke cycle by removing edge ${nodeToRemoveEdgeFrom} -> ${targetNode}`);
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  breakCycles();
+
   let queue: string[] = [];
   for (const [resId, degree] of Array.from(inDegree.entries())) {
     if (degree === 0) queue.push(resId);
