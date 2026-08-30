@@ -1,13 +1,17 @@
 import React from 'react';
 
 type SkillGap = {
-  skill: string;
-  current: number;
-  target: number;
+  skillName: string;
+  currentLevel: number;
+  targetLevel: number;
   priority: 'critical' | 'recommended' | 'optional';
 };
 
 export default function SkillGapBars({ gaps }: { gaps: SkillGap[] }) {
+  if (!gaps || gaps.length === 0) {
+    return <div className="text-gray-500 text-sm">No skill gaps identified. You're fully ready!</div>;
+  }
+
   return (
     <div className="space-y-4">
       {gaps.map((gap, i) => {
@@ -15,13 +19,13 @@ export default function SkillGapBars({ gaps }: { gaps: SkillGap[] }) {
         if (gap.priority === 'critical') barColor = 'bg-red-500';
         else if (gap.priority === 'recommended') barColor = 'bg-yellow-500';
 
-        const currentPct = (gap.current / gap.target) * 100;
+        const currentPct = gap.targetLevel > 0 ? (gap.currentLevel / gap.targetLevel) * 100 : 100;
         
         return (
           <div key={i} className="flex flex-col gap-1">
             <div className="flex justify-between text-sm font-medium">
-              <span>{gap.skill}</span>
-              <span className="text-gray-500">{gap.current} / {gap.target}</span>
+              <span>{gap.skillName}</span>
+              <span className="text-gray-500">{gap.currentLevel} / {gap.targetLevel}</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2.5 relative">
               <div

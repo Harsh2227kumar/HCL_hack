@@ -1,4 +1,13 @@
-import { geminiClient } from './gemini';
+import { GoogleGenAI } from '@google/genai';
+
+const getKeys = (envStr: string | undefined): string[] => {
+  if (!envStr) return [];
+  return envStr.split(',').map(k => k.trim()).filter(k => k.length > 0);
+};
+
+const apiKeys = getKeys(process.env.GEMINI_API_KEY);
+const apiKey = apiKeys.length > 0 ? apiKeys[0] : '';
+const geminiClient = new GoogleGenAI({ apiKey });
 
 const EMBEDDING_MODEL = 'gemini-embedding-001';
 

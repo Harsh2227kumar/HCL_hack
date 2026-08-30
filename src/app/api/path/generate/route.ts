@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
 
     // 3. Generate Path DAG
     const dependencies = await prisma.skillDependency.findMany();
-    const { phases, estimatedWeeksToGoal } = generatePath(scored, dependencies as any, profile.weeklyHours);
+    const { phases, estimatedWeeksToGoal } = generatePath(scored, dependencies as any, profile.weeklyHours || 5, resourceMap);
 
     // 4. Generate Reasoning Trace and Metrics (skillbridge-ai inspired)
     const trace = generateReasoningTrace(gaps, phases, resourceMap as any);

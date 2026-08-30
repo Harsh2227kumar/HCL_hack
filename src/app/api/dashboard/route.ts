@@ -49,6 +49,7 @@ export async function GET(request: NextRequest) {
     let metrics = null;
     let progressStats = { completed: 0, started: 0, total: 0, percentage: 0 };
 
+    let formattedPhases = [];
     if (currentPath) {
       const pendingItems = currentPath.items.filter(i => i.status === 'pending');
       if (pendingItems.length > 0) {
@@ -60,11 +61,11 @@ export async function GET(request: NextRequest) {
       progressStats.started = currentPath.items.filter(i => i.status === 'started').length;
       progressStats.percentage = progressStats.total > 0 ? Math.round((progressStats.completed / progressStats.total) * 100) : 0;
 
-      // Reconstruct phases for metrics
+      // Reconstruct phases for UI and metrics
       const phasesMap = new Map<number, any>();
       for (const item of currentPath.items) {
         if (!phasesMap.has(item.phase)) {
-          phasesMap.set(item.phase, { phase: item.phase, phaseName: item.phaseName, items: [] });
+          phasesMap.set(item.phase, { id: `phase-${item.phase}`, phase: item.phase, title: item.phaseName, items: [], resources: [] });
         }
         phasesMap.get(item.phase).items.push(item);
       }
@@ -77,6 +78,16 @@ export async function GET(request: NextRequest) {
       const resourceMap = new Map(resources.map(r => [r.id, r]));
 
       metrics = calculatePathwayMetrics(phases, gapsResult.readinessScore, profile.weeklyHours, resourceMap as any);
+
+      // Attach actual resources to the phases array for the frontend Timeline component
+      for (const phase of phases) {
+        phase.resources = phase.items.map((item: any) => ({
+          ...resourceMap.get(item.resourceId),
+          _pathItem: item // attach status/reason for UI
+        }));
+      }
+
+      formattedPhases = phases;
     }
 
     return NextResponse.json({
@@ -90,6 +101,7 @@ export async function GET(request: NextRequest) {
       missingSkills: gapsResult.missingSkills,
       bottleneck,
       currentPath,
+      formattedPhases,
       metrics,
       progress: progressStats,
       estimatedWeeksToGoal: currentPath?.estimatedWeeksToGoal || 0,

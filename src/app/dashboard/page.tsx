@@ -29,7 +29,19 @@ export default function DashboardPage() {
   }, []);
 
   if (loading) return <div className="p-8">Loading dashboard...</div>;
-  if (!data) return <div className="p-8">Failed to load data.</div>;
+  if (!data || data.error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+        <div className="bg-white p-8 rounded-xl shadow-lg max-w-md w-full text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Profile Not Found</h2>
+          <p className="text-gray-500 mb-6">We couldn't find your learning profile. It seems you haven't completed the onboarding chat yet.</p>
+          <a href="/onboarding" className="inline-block w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors">
+            Start Onboarding
+          </a>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gray-50 p-4 gap-4">
@@ -46,7 +58,7 @@ export default function DashboardPage() {
 
         <div className="bg-white p-4 rounded-lg shadow">
           <h2 className="text-lg font-semibold mb-4">Skill Gaps</h2>
-          <SkillGapBars gaps={data.gaps || []} />
+          <SkillGapBars gaps={data.skillGaps || []} />
         </div>
       </aside>
 
@@ -54,7 +66,7 @@ export default function DashboardPage() {
       <main className="w-full md:w-1/2 bg-white p-6 rounded-lg shadow space-y-6">
         <h1 className="text-2xl font-bold">Your Learning Pathway</h1>
         <PathEvolutionStrip pathHistory={data.pathHistory || []} />
-        <PathTimeline phases={data.phases || []} />
+        <PathTimeline phases={data.formattedPhases || []} />
       </main>
 
       {/* Right Panel: Insights & Metrics */}
