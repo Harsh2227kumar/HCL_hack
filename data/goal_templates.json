@@ -1,0 +1,33 @@
+[
+  {
+    "goalName": "ML Engineer",
+    "requiredSkills": [
+      { "skill": "Python", "min_level": 4 },
+      { "skill": "Mathematics Fundamentals", "min_level": 3 },
+      { "skill": "Linear Algebra", "min_level": 3 },
+      { "skill": "Statistics", "min_level": 3 },
+      { "skill": "Data Preprocessing", "min_level": 3 },
+      { "skill": "Machine Learning", "min_level": 4 },
+      { "skill": "Deep Learning", "min_level": 3 }
+    ]
+  },
+  {
+    "goalName": "Data Analyst",
+    "requiredSkills": [
+      { "skill": "Python", "min_level": 3 },
+      { "skill": "Mathematics Fundamentals", "min_level": 3 },
+      { "skill": "Statistics", "min_level": 4 },
+      { "skill": "SQL", "min_level": 4 },
+      { "skill": "Data Visualization", "min_level": 3 }
+    ]
+  },
+  {
+    "goalName": "Backend Developer",
+    "requiredSkills": [
+      { "skill": "Node.js", "min_level": 3 },
+      { "skill": "SQL", "min_level": 3 },
+      { "skill": "System Design", "min_level": 3 },
+      { "skill": "API Development", "min_level": 4 }
+    ]
+  }
+]

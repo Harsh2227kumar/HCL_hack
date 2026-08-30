@@ -17,6 +17,14 @@ One entry per person per push. Add new entries at the **top** of the log (newest
 
 ## Log
 
+### 2026-08-30 — Yash
+- What I built/changed: Completed Phase 1 (Foundation Layer) setup including Prisma/Supabase clients, Gemini/Groq AI clients, callAI implementation with failover, validation schemas, and database seed script.
+- Files touched: `src/lib/prisma.ts`, `src/lib/supabase/client.ts`, `src/lib/ai/gemini.ts`, `src/lib/ai/groq.ts`, `src/lib/ai/embeddings.ts`, `src/lib/ai/callAI.ts`, `src/lib/validation/schemas.ts`, `src/lib/validation/groundingCheck.ts`, `data/*.json`, `scripts/seed.ts`
+- Blocked on: None
+- Next up: Phase 2 — Deterministic Core Intelligence
+
+---
+
 ### 2026-08-27 — Yash
 - What I built/changed: Not started yet — initial repo scaffold complete
 - Files touched: N/A

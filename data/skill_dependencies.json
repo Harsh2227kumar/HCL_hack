@@ -1,0 +1,14 @@
+[
+  { "skill": "Machine Learning", "dependsOn": "Linear Algebra" },
+  { "skill": "Machine Learning", "dependsOn": "Statistics" },
+  { "skill": "Machine Learning", "dependsOn": "Python" },
+  { "skill": "Deep Learning", "dependsOn": "Machine Learning" },
+  { "skill": "Deep Learning", "dependsOn": "Linear Algebra" },
+  { "skill": "Statistics", "dependsOn": "Mathematics Fundamentals" },
+  { "skill": "Linear Algebra", "dependsOn": "Mathematics Fundamentals" },
+  { "skill": "Data Preprocessing", "dependsOn": "Python" },
+  { "skill": "Data Preprocessing", "dependsOn": "Statistics" },
+  { "skill": "Data Visualization", "dependsOn": "Python" },
+  { "skill": "API Development", "dependsOn": "Node.js" },
+  { "skill": "System Design", "dependsOn": "API Development" }
+]
