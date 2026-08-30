@@ -26,6 +26,8 @@ model LearnerProfile {
   userId         String   @unique
   user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   goal           String?
+  goalTemplateId String?
+  goalTemplate   GoalTemplate? @relation(fields: [goalTemplateId], references: [id])
   weeklyHours    Int?
   learningStyle  String?
   notes          String?
@@ -72,6 +74,7 @@ model GoalTemplate {
   id             String   @id @default(uuid())
   goalName       String   @unique
   requiredSkills Json     // [{ skill: string, min_level: number }]
+  profiles       LearnerProfile[]
 }
 
 model LearningResource {
@@ -120,6 +123,7 @@ model LearningPathItem {
   resourceId       String
   resource         LearningResource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
   phase            Int
+  phaseName        String?
   position         Int
   status           String           // pending, started, completed, skipped
   reason           String?

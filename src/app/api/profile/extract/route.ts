@@ -67,6 +67,7 @@ export async function POST(request: NextRequest) {
           selfRatedLevel: skill.selfRatedLevel,
           confidenceScore: 0.3,
           finalEstimate: skill.selfRatedLevel,
+          targetLevel: 5,
         },
         create: {
           userId,
@@ -74,6 +75,7 @@ export async function POST(request: NextRequest) {
           selfRatedLevel: skill.selfRatedLevel,
           confidenceScore: 0.3,
           finalEstimate: skill.selfRatedLevel,
+          targetLevel: 5,
         }
       });
 
