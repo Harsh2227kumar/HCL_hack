@@ -44,19 +44,16 @@ async function main() {
   // 2. Seed Skill Dependencies
   const depsRaw = fs.readFileSync(path.join(__dirname, '..', 'data', 'skill_dependencies.json'), 'utf-8');
   const depsData = JSON.parse(depsRaw);
-  for (const dep of depsData) {
-    await prisma.skillDependency.upsert({
-      where: {
-        skillName_dependsOnSkillName: {
-          skillName: dep.skill,
-          dependsOnSkillName: dep.dependsOn,
-        },
-      },
-      update: {},
-      create: {
+  
+  console.log(`Seeding ${depsData.length} Skill Dependencies in batches...`);
+  for (let i = 0; i < depsData.length; i += 2000) {
+    const batch = depsData.slice(i, i + 2000);
+    await prisma.skillDependency.createMany({
+      data: batch.map((dep: any) => ({
         skillName: dep.skill,
         dependsOnSkillName: dep.dependsOn,
-      },
+      })),
+      skipDuplicates: true,
     });
   }
   console.log(`✅ Seeded ${depsData.length} Skill Dependencies`);
@@ -65,104 +62,55 @@ async function main() {
   const resourcesRaw = fs.readFileSync(path.join(__dirname, '..', 'data', 'learning_resources.json'), 'utf-8');
   const resourcesData = JSON.parse(resourcesRaw);
   
-  let successCount = 0;
-  let failCount = 0;
-
-  for (let i = 0; i < resourcesData.length; i++) {
-    const res = resourcesData[i];
+  console.log(`Seeding ${resourcesData.length} Learning Resources in batches...`);
+  const BATCH_SIZE = 500;
+  
+  for (let i = 0; i < resourcesData.length; i += BATCH_SIZE) {
+    const batch = resourcesData.slice(i, i + BATCH_SIZE);
     
-    // Upsert the resource data first
-    await prisma.learningResource.upsert({
-      where: { id: res.id },
-      update: {
-        title: res.title,
-        type: res.type,
-        provider: res.provider,
-        description: res.description,
-        url: res.url,
-        skillsTaught: res.skillsTaught,
-        prerequisiteSkills: res.prerequisiteSkills,
-        difficulty: res.difficulty,
-        durationHours: res.durationHours,
-        format: res.format,
-      },
-      create: {
-        id: res.id,
-        title: res.title,
-        type: res.type,
-        provider: res.provider,
-        description: res.description,
-        url: res.url,
-        skillsTaught: res.skillsTaught,
-        prerequisiteSkills: res.prerequisiteSkills,
-        difficulty: res.difficulty,
-        durationHours: res.durationHours,
-        format: res.format,
-      },
-    });
+    const upserts = batch.map((res: any) => 
+      prisma.learningResource.upsert({
+        where: { id: res.id },
+        update: {
+          title: res.title,
+          type: res.type,
+          provider: res.provider,
+          description: res.description,
+          url: res.url,
+          skillsTaught: res.skillsTaught,
+          prerequisiteSkills: res.prerequisiteSkills,
+          difficulty: res.difficulty,
+          durationHours: res.durationHours,
+          format: res.format,
+        },
+        create: {
+          id: res.id,
+          title: res.title,
+          type: res.type,
+          provider: res.provider,
+          description: res.description,
+          url: res.url,
+          skillsTaught: res.skillsTaught,
+          prerequisiteSkills: res.prerequisiteSkills,
+          difficulty: res.difficulty,
+          durationHours: res.durationHours,
+          format: res.format,
+        },
+      })
+    );
 
-    // Generate embedding
-    const textToEmbed = `${res.title}. ${res.description}. Teaches: ${res.skillsTaught.join(', ')}. Difficulty: ${res.difficulty}/5. Format: ${res.format || 'mixed'}`;
-    
-    try {
-      console.log(`[${i + 1}/${resourcesData.length}] Generating embedding for ${res.id}...`);
-      const vector = await generateEmbedding(textToEmbed);
-      
-      if (vector.length > 0) {
-        const formattedVector = `[${vector.join(',')}]`;
-        await prisma.$executeRawUnsafe(
-          `UPDATE "LearningResource" SET embedding = '${formattedVector}'::vector WHERE id = '${res.id}'`
-        );
-        successCount++;
-        console.log(`  ✅ ${res.id} — ${vector.length} dims`);
-      } else {
-        failCount++;
-        console.log(`  ❌ ${res.id} — empty embedding returned`);
-      }
-    } catch (e: any) {
-      failCount++;
-      console.error(`  ❌ ${res.id} — ${e.message?.substring(0, 100)}`);
-      
-      // If rate limited, wait longer
-      if (e.status === 429 || e.message?.includes('429')) {
-        console.log('  ⏳ Rate limited, waiting 10s...');
-        await sleep(10000);
-        // Retry once
-        try {
-          const vector = await generateEmbedding(textToEmbed);
-          if (vector.length > 0) {
-            const formattedVector = `[${vector.join(',')}]`;
-            await prisma.$executeRawUnsafe(
-              `UPDATE "LearningResource" SET embedding = '${formattedVector}'::vector WHERE id = '${res.id}'`
-            );
-            successCount++;
-            failCount--;
-            console.log(`  ✅ ${res.id} — retry succeeded, ${vector.length} dims`);
-          }
-        } catch (retryErr: any) {
-          console.error(`  ❌ ${res.id} — retry failed: ${retryErr.message?.substring(0, 100)}`);
-        }
-      }
-    }
+    // Run batch of upserts in a single transaction
+    await prisma.$transaction(upserts);
 
-    // Throttle: wait between requests to avoid rate limits
-    if (i < resourcesData.length - 1) {
-      await sleep(300);
-    }
+    // Progress logging
+    console.log(`Seeded ${Math.min(i + BATCH_SIZE, resourcesData.length)}/${resourcesData.length} resources...`);
   }
 
   console.log(`\n=== Seed Summary ===`);
   console.log(`Goal Templates:     ${goalsData.length}`);
   console.log(`Skill Dependencies: ${depsData.length}`);
   console.log(`Learning Resources: ${resourcesData.length}`);
-  console.log(`Embeddings OK:      ${successCount}`);
-  console.log(`Embeddings Failed:  ${failCount}`);
-  
-  if (failCount > 0) {
-    console.log(`\n⚠️ Some embeddings failed. Re-run the seed to retry.`);
-  } else {
-    console.log(`\n🎉 All embeddings generated successfully!`);
-  }
+  console.log(`\nEmbeddings were intentionally skipped for performance.`);
 
   // Verify embeddings
   const withEmbeddings = await prisma.$queryRawUnsafe<any[]>(

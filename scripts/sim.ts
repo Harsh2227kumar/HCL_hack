@@ -41,17 +41,19 @@ async function main() {
   console.log('2. Calculating Gaps...');
   const { gaps, readinessScore, matchedSkills, missingSkills } = calculateSkillGaps(skills as any, goalTemplate as any);
   
-  console.log('3. Embedding...');
-  const queryVector = await generateEmbedding(gaps.map(g => g.skillName).join(', '));
-  const formattedVector = `[${queryVector.join(',')}]`;
+  console.log('3. Skip Embedding... (Using exact match for 20k resources)');
+  const gapSkillsFormatted = gaps.map(g => `'${g.skillName.replace(/'/g, "''")}'`).join(',');
 
   console.log('4. Querying...');
   const rawResources = await p.$queryRawUnsafe<any[]>(`
     SELECT id, title, type, provider, description, url, "skillsTaught", "prerequisiteSkills", difficulty, "durationHours", format
     FROM "LearningResource"
-    WHERE embedding IS NOT NULL
-    ORDER BY embedding <=> '${formattedVector}'::vector
-    LIMIT 30
+    WHERE EXISTS (
+      SELECT 1 
+      FROM jsonb_array_elements_text("skillsTaught") as skill 
+      WHERE skill IN (${gapSkillsFormatted})
+    )
+    LIMIT 100
   `);
 
   console.log('5. Scoring...');

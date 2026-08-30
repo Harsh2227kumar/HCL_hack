@@ -1,0 +1,1779 @@
+{
+  "roadmap": "php",
+  "topic_count": 120,
+  "topics": [
+    {
+      "skill_id": "php:_get",
+      "topic_slug": "_get",
+      "node_id": "GFYGFVfxkOoPI5mI4zSt1",
+      "title": "$_GET",
+      "description": "$\\_GET is a pre-defined array in PHP, that's used to collect form-data sent through HTTP GET method. It's useful whenever you need to process or interact with data that has been passed in via a URL's query string. For an example if you have a form with a GET method, you can get the values of the form elements through this global $\\_GET array. Here\u2019s an example: <form method=\"get\" action=\"test.php\"",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "$_GET",
+          "url": "https://www.php.net/manual/en/reserved.variables.get.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:_post",
+      "topic_slug": "_post",
+      "node_id": "qNG-a4iIO-puZsMwAMzYC",
+      "title": "$_POST",
+      "description": "`$_POST` is a superglobal variable in PHP that's used to collect form data submitted via HTTP POST method. Your PHP script can access this data through `$_POST`. Let's say you have a simple HTML form on your webpage. When the user submits this form, the entered data can be fetched using `$_POST`. Here's a brief example: <?php if ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") { $name = $_POST[\"name\"]; } ?>",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "$_POST",
+          "url": "https://www.php.net/manual/en/reserved.variables.post.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:_request",
+      "topic_slug": "_request",
+      "node_id": "A6rfW4uJhyfAX2b18_EEC",
+      "title": "$_REQUEST",
+      "description": "$\\_REQUEST is a PHP superglobal variable that contains the contents of both $\\_GET, $\\_POST, and $\\_COOKIE. It is used to collect data sent via both the GET and POST methods, as well as cookies. $\\_REQUEST is useful if you do not care about the method used to send data, but its usage is generally discouraged as it could lead to security vulnerabilities. Here's a simple example: $name = $_REQUEST['",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "$_REQUEST",
+          "url": "https://www.php.net/manual/en/reserved.variables.request.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:_server",
+      "topic_slug": "_server",
+      "node_id": "7Ja2at_N9tRTlvSGahrqn",
+      "title": "$_SERVER",
+      "description": "The `$_SERVER` is a superglobal in PHP, holding information about headers, paths, and script locations. $\\_SERVER is an associative array containing server variables created by the web server. This can include specific environmental configurations, the server signature, your PHP script's paths and details, client data, and the active request/response sequence. Among its many uses, `$_SERVER['REMOT",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "$_SERVER",
+          "url": "https://www.php.net/reserved.variables.server"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:abstract-classes",
+      "topic_slug": "abstract-classes",
+      "node_id": "ub79EkMiOmPBwXLRuYFL8",
+      "title": "Abstract classes",
+      "description": "Abstract classes in PHP are those which cannot be instantiated on their own. They are simply blueprints for other classes, providing a predefined structure. By declaring a class as abstract, you can define methods without having to implement them. Subsequent classes, when inheriting from an abstract class, must implement these undefined methods.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Abstract Classes",
+          "url": "https://www.php.net/manual/en/language.oop5.abstract.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:access-specifiers",
+      "topic_slug": "access-specifiers",
+      "node_id": "RD2RaBmA2XWkEa13PTCTX",
+      "title": "Access Specifiers",
+      "description": "Access specifiers, also known as access modifiers, in PHP are keywords used in the class context which define the visibility and accessibility of properties, methods and constants. PHP supports three types of access specifiers: public, private, and protected. 'Public' specified properties or methods can be accessed from anywhere, 'private' ones can only be accessed within the class that defines th",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Access Specifiers & Visibility",
+          "url": "https://www.php.net/manual/en/language.oop5.visibility.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:anonymous-functions",
+      "topic_slug": "anonymous-functions",
+      "node_id": "Nr5m6wQLp7VyG3AucrSc8",
+      "title": "Anonymous Functions",
+      "description": "Anonymous functions in PHP, also known as closures, are functions that do not have a specified name. They are most frequently used as a value for callback parameters, but can be used in many other ways. When creating an anonymous function, you can also inherit variables from the parent scope. Here's a basic usage example: $greet = function($name) { printf(\"Hello %s\\r\\n\", $name); }; $greet('World')",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Anonymous Functions",
+          "url": "https://www.php.net/manual/en/functions.anonymous.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:apache",
+      "topic_slug": "apache",
+      "node_id": "KMQqePqAjQ-ReDwHqeofx",
+      "title": "Apache",
+      "description": "Apache is a popular web server that can efficiently host PHP applications. Apache integrates well with PHP, using its `mod_php` module, providing a stable and consistent environment for your PHP scripts to run. This compatibility creates a seamless user experience, as PHP pages are served as if they're part of the website and not just files being executed on the server.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Apache PHP Documentation",
+          "url": "https://www.php.net/manual/en/install.unix.apache2.php"
+        },
+        {
+          "raw_type": "official",
+          "title": "Apache",
+          "url": "https://httpd.apache.org/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:arrays",
+      "topic_slug": "arrays",
+      "node_id": "IhKjvT6CjRz4dsSU7SNQo",
+      "title": "Arrays",
+      "description": "Arrays in PHP are fundamental data structures that store multiple elements in a particular key-value pair collection. PHP offers extensive support for arrays, making them convenient for storing sets of data or complex collections.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Arrays",
+          "url": "https://www.php.net/manual/en/language.types.array.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:arrow-functions",
+      "topic_slug": "arrow-functions",
+      "node_id": "mP1BIkqbWVVTU-zZv1ZL6",
+      "title": "Arrow Functions",
+      "description": "Arrow functions provide a more concise syntax to create anonymous functions. The feature enthusiastically borrowed from modern Javascript significantly improves PHP's functional programming credibility. The primary difference between regular PHP closures and PHP Arrow functions is the automatic capturing of variables from the parent scope.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Arrow Functions",
+          "url": "https://www.php.net/manual/en/functions.arrow.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:associative-arrays",
+      "topic_slug": "associative-arrays",
+      "node_id": "i_NRsOJNNp7AOqMgu5Jg8",
+      "title": "Associative Arrays",
+      "description": "Associative arrays in PHP are a type of array that uses named keys instead of numeric ones. This provides a more human-readable way to store data where each value can be accessed by its corresponding string key. An example of an associative array could be storing names as keys and their corresponding ages as values. Here's a brief example: $ages = [ \"Peter\" => 35, \"John\" => 42, \"Mary\" => 27 ]; In ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PHP Documentation - Associative Arrays",
+          "url": "https://www.php.net/manual/en/language.types.array.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:auth-mechanisms",
+      "topic_slug": "auth-mechanisms",
+      "node_id": "HJJzKYXdK4BWITLP4APLZ",
+      "title": "Auth Mechanisms",
+      "description": "When you are developing PHP application, security should always be a top priority and authentication mechanism forms it's very core. It ensures proper establishing of user identities before they can access your system's resources. PHP provides several methods to implement authentication like session-based, token-based, HTTP authentication, and more.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Auth Mechanisms",
+          "url": "https://www.php.net/manual/en/features.http-auth.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:autoloading",
+      "topic_slug": "autoloading",
+      "node_id": "qFiTsf6Es-gwqe6J6bdL1",
+      "title": "Autoloading",
+      "description": "Autoloading is a convenient feature in PHP that allows for automated loading of classes or files when they are needed. For example, if you have a class that is not yet included or required in the script, and you're instantiating that class, PHP would automatically include that class file for you, given that it complies with the standard PHP autoloading conventions. This feature cuts down the need ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Autoloading",
+          "url": "https://www.php.net/manual/en/language.oop5.autoload.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:basic-php-syntax",
+      "topic_slug": "basic-php-syntax",
+      "node_id": "hzBUHSuFwLYNooF_vEmrs",
+      "title": "Basic PHP Syntax",
+      "description": "PHP syntax is generally considered similar to C-style syntax, where code blocks are defined with curly braces, variables start with a dollar sign ($), and statements end with a semicolon (;), making it relatively easy to learn for programmers familiar with C-like languages; PHP scripts are embedded within HTML using opening tags \"\" to mark where PHP code should be executed within a web page.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Basic Syntax",
+          "url": "https://www.php.net/manual/en/langref.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:caching-strategies",
+      "topic_slug": "caching-strategies",
+      "node_id": "Av-BMa57RvrLlAXLffOH0",
+      "title": "Caching Strategies",
+      "description": "Caching Strategies are integral to Performance Optimization in PHP. Caching minimizes server load and enhances application speed by temporarily storing results of expensive operations, so that they can be reused in subsequent requests. Some caching techniques used in PHP include opcode caching, object caching, database query caching or full-page caching. For example, OPcache is an opcode caching s",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Opcache",
+          "url": "https://www.php.net/manual/en/book.opcache.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:callback-functions",
+      "topic_slug": "callback-functions",
+      "node_id": "x7hA2KAzJIjc-prgCEw6V",
+      "title": "Callback Functions",
+      "description": "A callback function in PHP is a function that is passed as an argument to another function. The receiving function can then invoke this function as needed. Callback functions are often used to define flexible or reusable code because they allow you to customize the behavior of a function without changing its structure.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Callback Functions",
+          "url": "https://www.php.net/manual/en/language.types.callable.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:casting-data-types",
+      "topic_slug": "casting-data-types",
+      "node_id": "pzReF4C0mcCWAnpfIJbwl",
+      "title": "Casting Data Types",
+      "description": "PHP, as a loose typing language, allows us to change the type of a variable or to transform an instance of one data type into another. This operation is known as Casting. When to use casting, however, depends on the situation - it is recommendable when you want explicit control over the data type for an operation. The syntax involves putting the intended type in parentheses before the variable. Fo",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Type Casting",
+          "url": "https://www.php.net/manual/en/language.types.type-juggling.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:classes-and-objects",
+      "topic_slug": "classes-and-objects",
+      "node_id": "PIuplWreo7PFG3Mdn2t6W",
+      "title": "Classes and Objects",
+      "description": "PHP supports object-oriented programming, offering a multi-paradigm way of coding through classes and objects. A class is like a blueprint for creating objects that encapsulate all faculties, properties and methods. An object, on the other hand, is an instance of a class where you can interact with the class's methods and change its properties. PHP lets you define a class using the keyword 'class'",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Classes",
+          "url": "https://www.php.net/manual/en/language.oop5.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:composer",
+      "topic_slug": "composer",
+      "node_id": "yVFDu2aTiEZ4PWMdKdW2P",
+      "title": "Composer",
+      "description": "Composer is a fundamental tool in modern PHP development. It simplifies the management of project dependencies, allowing you to declare what you need and automatically installing those resources in your project. For example, if your PHP project requires a certain library, Composer will fetch the appropriate version and make sure it's available for your project. Here's an example of how to add a de",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Composer",
+          "url": "https://getcomposer.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Composer Documentation",
+          "url": "https://getcomposer.org/doc/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:conditionals",
+      "topic_slug": "conditionals",
+      "node_id": "38YksjvhXCbgnHqkl57Cz",
+      "title": "Conditionals",
+      "description": "Conditionals in PHP, much like in other programming languages, allow for branching in code, meaning your program can choose to execute specific parts of code based on the state of variables or expressions. The most common conditional statements in PHP are \"if\", \"else\", and \"elseif\".",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Control Structures",
+          "url": "https://www.php.net/manual/en/language.control-structures.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:configuration-files",
+      "topic_slug": "configuration-files",
+      "node_id": "DTaAZaU1CwzW7esoDhj85",
+      "title": "Configuration Files",
+      "description": "Configuration files are critical for PHP applications because they help manage dynamic settings like database connection information, error reporting, and many other PHP settings without hard coding, making your application flexible and secure. PHP uses an \"php.ini\" file to hold these settings. You can modify settings by accessing and changing values in this file. For example, to adjust the maximu",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PHP Config",
+          "url": "https://www.php.net/manual/en/ini.list.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:configuration-tuning",
+      "topic_slug": "configuration-tuning",
+      "node_id": "VpwwF8j5ZtXVSbzNfE7Sx",
+      "title": "Configuration Tuning",
+      "description": "For performance optimization in PHP, configuration tuning is a crucial step. You can manipulate several settings in your php.ini file to enhance your PHP application's performance. For instance, `memory_limit` is a key parameter that specifies the maximum amount of memory a script can consume. Optimizing this setting will prevent the PHP scripts from eating up all server resources. Similarly, adju",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Configuration Tuning",
+          "url": "https://www.php.net/manual/en/ini.core.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:connection-pooling",
+      "topic_slug": "connection-pooling",
+      "node_id": "txUyPR_tdC8iTJV3RtvBz",
+      "title": "Connection Pooling",
+      "description": "Connection pooling is a technique used in PHP to manage and maintain multiple open connections with a database. It reduces the time overhead of constantly opening and closing connections, and ensures efficient utilisation of resources. Connection pooling limits the number of connections opened with the database and instead reuses a pool of existing active connections, thereby significantly enhanci",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Connection Pooling",
+          "url": "https://www.php.net/manual/en/oci8.connection.php"
+        },
+        {
+          "raw_type": "official",
+          "title": "Database Extensions",
+          "url": "https://www.php.net/manual/en/refs.database.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:constants",
+      "topic_slug": "constants",
+      "node_id": "VLRLymQmLfscrBfzXKvHi",
+      "title": "Constants",
+      "description": "Constants in PHP are fixed values that do not change during the execution of the script. They can be handy for values that need to be reused often like a website's URL, a company's name, or even a hardcoded database connection string. Unlike variables, once a constant is defined, it cannot be undefined or reassigned. Constants are case-sensitive by default but this can be overridden. They are defi",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Constants",
+          "url": "https://www.php.net/manual/en/language.constants.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:constructor--destructor",
+      "topic_slug": "constructor--destructor",
+      "node_id": "oNUt1oT8pYBVvH0S2P6cb",
+      "title": "Constructor / Destructor",
+      "description": "Constructor and Destructor methods are fundamental components of Object-Oriented Programming (OOP) in PHP. A constructor is a special type of method that automatically runs upon creating an object, often used to set property values or default behaviors. On the other hand, a destructor is a method that is automatically invoked when an object is due to be destroyed, perfect for cleanup activities. H",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PHP Constructors and Destructors",
+          "url": "https://www.php.net/manual/en/language.oop5.decon.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:cookies",
+      "topic_slug": "cookies",
+      "node_id": "so03-fK7E2WvTm6XsPq4i",
+      "title": "Cookies",
+      "description": "Cookies are a crucial part of state management in PHP. They enable storage of data on the user's browser, which can then be sent back to the server with each subsequent request. This permits persistent data between different pages or visits. To set a cookie in PHP, you can use the `setcookie()` function. For example, `setcookie(\"user\", \"John Doe\", time() + (86400 * 30), \"/\");` will set a cookie na",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Cookies",
+          "url": "https://www.php.net/manual/en/features.cookies.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:csrf-protection",
+      "topic_slug": "csrf-protection",
+      "node_id": "J9yIXZTtwbFzH2u4dI1ep",
+      "title": "CSRF Protection",
+      "description": "Cross-Site Request Forgery (CSRF) Protection in PHP is a method where a website can defend itself against unwanted actions performed on behalf of the users without their consent. It's a critical aspect of security as it safeguards users against potential harmful activities. Here's an example: if users are logged into a website and get tricked into clicking a deceitful link, CSRF attacks could be t",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "PHP Tutorial CSRF",
+          "url": "https://www.phptutorial.net/php-tutorial/php-csrf/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:csv-processing",
+      "topic_slug": "csv-processing",
+      "node_id": "MRDjEjbkMpk7shcWAoPOF",
+      "title": "CSV Processing",
+      "description": "CSV processing refers to handling CSV (Comma Separated Values) files in PHP, an operation significantly useful for managing tabular data. PHP provides a few key functions to handle CSV files effectively. For example, `fgetcsv()` allows you to read CSV file line by line, `fputcsv()` lets you write line by line into a CSV file, and `str_getcsv()` allows you to parse a CSV string into an array. A qui",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "CSV Processing",
+          "url": "https://php.net/manual/en/ref.fileinfo.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:curl",
+      "topic_slug": "curl",
+      "node_id": "KC6D81-T-FwQc7Osw1rlY",
+      "title": "cURL",
+      "description": "cURL is a flexible way to make requests to external servers from within a PHP script. cURL, which stands for Client URL, is a library that facilitates various types of network communication methods based on different types of URLs. You can, for example, use cURL functions in PHP to access REST APIs, download files, or post form data, among other things. Here's a basic PHP cURL example where we fet",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "cURL",
+          "url": "https://curl.se/"
+        },
+        {
+          "raw_type": "official",
+          "title": "cURL in PHP",
+          "url": "https://www.php.net/manual/en/book.curl.php"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "curl/curl",
+          "url": "https://github.com/curl/curl"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:data-types",
+      "topic_slug": "data-types",
+      "node_id": "srIHPZabaCGdB5VvUXaMa",
+      "title": "Data Types",
+      "description": "PHP is a flexible and widely-used language that supports several types of data. These types include integers, floating-point numbers, strings, arrays, objects, NULL, and many more. The different data types allow developers to efficiently manage and handle data in their applications. For example, an integer data type in PHP can be a non-decimal number between -2,147,483,648 and 2,147,483,647. Here'",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Data Types",
+          "url": "https://www.php.net/manual/en/language.types.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:database-migrations",
+      "topic_slug": "database-migrations",
+      "node_id": "meplwvmHMtI3Sb_fyodzZ",
+      "title": "Database Migrations",
+      "description": "Database migrations help keep track of changes in your database schema, making it easier to move from one version of a database to another. Migrations allow us to evolve our database design iteratively and apply these updates across our development, staging, and production servers. This can save a lot of manual work. But more than that, migrations maintain consistency across all the environments, ",
+      "resources": []
+    },
+    {
+      "skill_id": "php:database-transactions",
+      "topic_slug": "database-transactions",
+      "node_id": "FY-F6n9j29hQrnFry3VGb",
+      "title": "Database Transactions",
+      "description": "Database transactions in PHP refer to a unit of work performed within a database system, which is treated in a coordinated manner. This technique is vital when dealing with critical tasks like money transfer between accounts, where data consistency is crucial. If one part of the transaction fails, the entire transaction fails, ensuring that the database stays consistent even in an event of a failu",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PDO Transactions",
+          "url": "https://www.php.net/manual/en/pdo.transactions.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:default--optional-params",
+      "topic_slug": "default--optional-params",
+      "node_id": "RgVP99rJJ8FVecIA45w20",
+      "title": "Default / Optional Params",
+      "description": "In PHP, you can assign default values to your function parameters. These are called default or optional parameters. This is exceptionally useful when you want to make the function argument optional so if a value is not provided when the function is called, then the default value is used instead. Here's a simple code example: function greet($name = \"guest\") { echo \"Hello, $name!\"; } greet(); // Out",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Default Parameters",
+          "url": "https://www.php.net/manual/en/functions.arguments.php#functions.arguments.default"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:dependency-injection",
+      "topic_slug": "dependency-injection",
+      "node_id": "KEE50C6lOS4eX8sAbfhYe",
+      "title": "Dependency Injection",
+      "description": "Dependency injection is a design pattern used mainly for managing class dependencies. Here, instead of a class being responsible for creating its dependencies on its own, an injector (the \"client\") passes the requirements to the class (the \"service\"), centralizing control and encouraging code to follow the single responsibility principle. As a simple example, consider a situation where class B nee",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understand Dependency Injection in PHP",
+          "url": "https://php-di.org/doc/understanding-di.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:echo",
+      "topic_slug": "echo",
+      "node_id": "2ykzBBdYhWuM-neGf0AWP",
+      "title": "echo",
+      "description": "'echo' is a language construct in PHP, and it is commonly used to output one or more strings to the browser. This command doesn't behave like a function, hence it doesn't require parentheses unless it's necessary to avoid confusion. It's also worth mentioning that 'echo' also supports multiple parameters. Check out a simple example below where we are using echo to output a simple string: echo \"Hel",
+      "resources": []
+    },
+    {
+      "skill_id": "php:environment-variables",
+      "topic_slug": "environment-variables",
+      "node_id": "fitjnLYKLHJ2P5G7JAvzm",
+      "title": "Environment Variables",
+      "description": "Environment variables provide a way to influence the behavior of software on your system. They consist of name/value pairs and are used for various purposes, such as to specify directory paths, usernames, or passwords that your PHP application might use. You can set PHP environment variables using the `putenv()` function, and retrieve them using `getenv()`. For example, if you want to set the envi",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Environment Variables",
+          "url": "https://www.php.net/manual/en/function.putenv.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:evolution-and-history",
+      "topic_slug": "evolution-and-history",
+      "node_id": "b2CuLrhsUNnb4OxI6RRAS",
+      "title": "Evolution and History",
+      "description": "PHP, originally standing for Personal Home Page, is a popular scripting language used commonly for web development. Rasmus Lerdorf created it in 1994, and since then, it has evolved significantly from a simple set of CGI binaries written in C, to a full-featured language. PHP's journey includes several versions, with PHP 3 introducing a re-written parser and a better approach to object-oriented pr",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "History of PHP",
+          "url": "https://www.php.net/history"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:executing-system-commands",
+      "topic_slug": "executing-system-commands",
+      "node_id": "VhyYNGhOdKKrz_-uTkrjD",
+      "title": "Executing System Commands",
+      "description": "PHP provides developers with the flexibility to invoke system commands directly from PHP scripts. This can be achieved with functions like `exec()`, `system()`, or `passthru()`, which allow your PHP script to execute system-level instructions and interact with the underlying server. This can be useful in several scenarios - for automating tasks, orchestrating system activities, or even for pulling",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Exec Function",
+          "url": "https://www.php.net/manual/en/ref.exec.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:file-permissions",
+      "topic_slug": "file-permissions",
+      "node_id": "tgIyG6vHWpe9sz6lHmj5a",
+      "title": "File Permissions",
+      "description": "File permissions in PHP control who can read, write, and execute a file. They're crucial for the security and proper functioning of your PHP applications. When working with files, you can use functions like `chmod()`, `is_readable()`, and `is_writable()` to manage permissions. Typically, you would use `chmod()` to change the permissions of a file. The first parameter is the name of the file and th",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Filesystem Functions",
+          "url": "https://www.php.net/manual/en/ref.filesystem.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:file-uploads",
+      "topic_slug": "file-uploads",
+      "node_id": "HNo8QO4aPbvgePiA4l6tq",
+      "title": "File Uploads",
+      "description": "Uploading files in PHP is a commonly used functionality for many applications. This is typically done using the `$_FILES` superglobal array that allows you to manage uploaded files in your PHP script. It contains details like `name`, `type`, `size` etc of the file. An index is also present for each file in the case of multiple uploads. The `move_uploaded_file()` function is then used to move the u",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "File Uploads",
+          "url": "https://www.php.net/manual/en/features.file-upload.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:form-processing",
+      "topic_slug": "form-processing",
+      "node_id": "sYI7f1PYP7G30_Uj2mZRv",
+      "title": "Form Processing",
+      "description": "Form processing is a common web function and in PHP, it's pretty straightforward. It typically involves accepting data from a user through a web form and then using PHP to handle, process and possibly store that data. PHP provides superglobal arrays (`$_GET`, `$_POST`, and `$_REQUEST`) which help to collect form data. Let's talk about a simple example of a form that accepts a name from a user and ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "HTML Form Processing",
+          "url": "https://www.php.net/manual/en/tutorial.forms.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:function-declaration",
+      "topic_slug": "function-declaration",
+      "node_id": "1nODJchgSuWbcvSlxnWeE",
+      "title": "Function Declaration",
+      "description": "Function is the block of code that performs a specific task. It is a reusable code that can be called multiple times. In PHP, a function is declared using the `function` keyword followed by the function name and parentheses. The function name should be unique and descriptive. The parentheses may contain parameters that are passed to the function. The function body is enclosed within curly braces `",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "User Defined Functions",
+          "url": "https://www.php.net/manual/en/functions.user-defined.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:functions",
+      "topic_slug": "functions",
+      "node_id": "WiGv7vi7Mtw-YqPMcnnyw",
+      "title": "Functions",
+      "description": "Functions in PHP are self-contained blocks of code that carry out specific tasks and can be reused throughout your application. A function is defined with the word \"function\" followed by a name, and it should return a value using the \"return\" statement. To use a function, you simply need to call it by its name. You can also pass parameters to functions to influence how they work. Here's a simple f",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Functions",
+          "url": "https://www.php.net/manual/en/language.functions.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:guzzle",
+      "topic_slug": "guzzle",
+      "node_id": "_Al4NXKVQAnk8OikwvXCL",
+      "title": "Guzzle",
+      "description": "Guzzle is a PHP HTTP client that simplifies making HTTP requests in PHP. It provides a straightforward and powerful way to send HTTP requests. Guzzle can simplify your life if you often handle APIs or other HTTP requests. It's great for everything from sending simple GET requests, to uploading files with POST requests, or even handling Errors using exception handling.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Guzzle Documentation",
+          "url": "https://docs.guzzlephp.org/en/stable/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:http-methods",
+      "topic_slug": "http-methods",
+      "node_id": "tn_iIfaJZVtPK6vFds7FH",
+      "title": "HTTP Methods",
+      "description": "PHP allows for handling HTTP methods, which are a way of defining the action to be performed on the resource identified by a given URL. In PHP, the $\\_SERVER superglobal array can be used to identify the HTTP method of a specific request, typically a GET, POST, PUT, DELETE or HEAD. For example, to identify if a request is a POST request, you can use `if ($_SERVER['REQUEST_METHOD'] == 'POST') { // ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "HTTP Methods",
+          "url": "https://www.php.net/manual/en/reserved.variables.server.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:ifelse",
+      "topic_slug": "ifelse",
+      "node_id": "-McOv-ZPTGayX7Mx2Thw1",
+      "title": "if/else",
+      "description": "In PHP, the if/else conditional statements are fundamental components that control the flow of the program based on specific conditions. When the 'if' condition is true, a block of code will execute. If that condition is not met (or false), the program proceeds to the 'else' statement (if provided), executing its block of code. This allows you to handle different situations dynamically. A simple e",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "if-else",
+          "url": "https://www.php.net/manual/en/control-structures.elseif.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:include",
+      "topic_slug": "include",
+      "node_id": "hKfv7V6bl2LXssq9Ffi7C",
+      "title": "include",
+      "description": "The 'include' statement in PHP is a useful method for inserting code written in one file into another. It's mainly used when the same code needs to be used in multiple files, avoiding redundancy and making code maintenance easier. If it cannot find the file, PHP will emit a warning but continue to execute the rest of the script. Here's a simple example: <?php include 'filename.php'; ?> In this cod",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "include",
+          "url": "https://www.php.net/manual/en/function.include.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:include_once",
+      "topic_slug": "include_once",
+      "node_id": "SwtLDgyPmDry20qS4FBfH",
+      "title": "include_once",
+      "description": "The `include_once` statement is a part of PHP's file-handling toolkit, allowing developers to include a PHP file within another PHP file, but only for a one-time execution. This way, you can ensure that functions or objects defined in the included file are not duplicated leading to errors. It helps keep your code DRY (Don't Repeat Yourself) and clean. Here is a small example: include_once 'databas",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "include_once",
+          "url": "https://www.php.net/manual/en/function.include-once.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:indexed-arrays",
+      "topic_slug": "indexed-arrays",
+      "node_id": "j2S8dP3HlAOOoZdpj-7Dx",
+      "title": "Indexed Arrays",
+      "description": "Indexed arrays in PHP store values that are accessed through numerical indexes, which start at 0 by default. This might be particularly useful when you have a list of items in a specific order. For example, you might use an indexed array to represent a list of your favorite books, where each book is numbered starting from 0. Each individual item in the array, book in this case, can be accessed by ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Indexed Arrays",
+          "url": "https://www.php.net/manual/en/language.types.array.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:inheritance",
+      "topic_slug": "inheritance",
+      "node_id": "c5q2e_jyMt8Pir5Od3lRi",
+      "title": "Inheritance",
+      "description": "Inheritance, a fundamental concept in object-oriented programming (OOP), is a feature that PHP supports. It lets us create classes which are extensions of other classes, inheriting their methods and properties. This concept allows the creation of more flexible and maintainable code, as it promotes code reuse. For instance, consider we have a 'Vehicle' class and we want to create a 'Car' class. Sin",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Inheritance",
+          "url": "https://www.php.net/manual/en/language.oop5.inheritance.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:input-validation",
+      "topic_slug": "input-validation",
+      "node_id": "93oEIZttb85S23C1fLraP",
+      "title": "Input Validation",
+      "description": "Input validation is a vital aspect of PHP security. It involves checking whether the user-provided data is in the expected format or not before it's processed further. This helps prevent potential security risks such as SQL injections, cross-site scripting (XSS) etc. Let's take an example of a simple form input validation: if (filter_var($email, FILTER_VALIDATE_EMAIL)) { echo(\"Email is valid\"); } ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Input Validation",
+          "url": "https://www.php.net/manual/en/book.filter.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:installing-php",
+      "topic_slug": "installing-php",
+      "node_id": "3_TuxOSzBuktBlBF05r_z",
+      "title": "Installing PHP",
+      "description": "Installing PHP is an essential process to start developing PHP applications. PHP can be installed on Windows, macOS, and various distributions of Linux. Places to get PHP include the official PHP website, package managers like APT for Linux and Homebrew for macOS, or bundled solutions like XAMPP or WAMP that provide PHP along with a web server and database. After successful installation, you can r",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Installation Guide",
+          "url": "https://www.php.net/manual/en/install.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:interfaces",
+      "topic_slug": "interfaces",
+      "node_id": "vu0H-TsD7hkJgOQbSRj92",
+      "title": "Interfaces",
+      "description": "Interfaces in PHP serve as a blueprint for designing classes. They ensure that a class adheres to a certain contract, all without defining how those methods should function. As PHP is not a strictly typed language, interfaces can be particularly useful in large codebases to maintain continuity and predictability. For example, in PHP, an interface 'iTemplate' could be defined with methods 'setVaria",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Interfaces",
+          "url": "https://www.php.net/manual/en/language.oop5.interfaces.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:introduction-to-php",
+      "topic_slug": "introduction-to-php",
+      "node_id": "_hYN0gEi9BL24nptEtXWU",
+      "title": "Introduction to PHP",
+      "description": "PHP, also known as Hypertext Preprocessor, is a powerful scripting language used predominantly for creating dynamic web pages and applications. It provides seamless interaction with databases, easier control of content, session tracking, and cookies. Being an open-source language, it's favored by developers for its flexibility, speed, and security. Here's a simple PHP code to print a text: <?php e",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PHP",
+          "url": "https://www.php.net/"
+        },
+        {
+          "raw_type": "official",
+          "title": "PHP Documentation",
+          "url": "https://www.php.net/docs.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "PHP Tutorial",
+          "url": "https://www.phptutorial.net/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Learn PHP Interactively",
+          "url": "https://www.learn-php.org/about"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introduction to PHP",
+          "url": "https://www.youtube.com/watch?v=KBT2gmAfav4"
+        },
+        {
+          "raw_type": "video",
+          "title": "PHP Tutorial - Full Course",
+          "url": "https://www.youtube.com/watch?v=OK_JCtrrv-c"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:json-processing",
+      "topic_slug": "json-processing",
+      "node_id": "DB2cxZE58WCCavW2PNwmf",
+      "title": "JSON Processing",
+      "description": "JSON Processing in PHP refers to the handling, reading, and manipulation of JSON formatted data. JSON, or JavaScript Object Notation, is a versatile data format used worldwide due to its easy readability and robustness. PHP natively supports JSON and includes built-in functions like `json_encode()` and `json_decode()`. The `json_encode()` function returns a JSON representation of a value, particul",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "JSON Manual",
+          "url": "https://www.php.net/manual/en/book.json.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:lamp",
+      "topic_slug": "lamp",
+      "node_id": "7LjxtrmgJtTJc0_kP83Tr",
+      "title": "LAMP",
+      "description": "LAMP refers to the combined use of Linux OS, Apache HTTP Server, MySQL relational database management system, and PHP; it's a popular stack for creating and hosting websites. For PHP, LAMP is a robust, open-source web development platform that supports a wide range of dynamic websites and applications. Suppose you plan to develop a content management system (CMS), forums, or e-commerce shops. In t",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PHP Lamp",
+          "url": "https://www.php.net/manual/en/introduction.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:laravel",
+      "topic_slug": "laravel",
+      "node_id": "zsscRQZIq5o0JZir9hlz-",
+      "title": "Yii",
+      "description": "Yii is a high-performance, package-based PHP framework for developing modern applications.  It provides a full set of proven, ready-to-use features including caching, logging, a template engine, data abstraction, validation, authentication and authorization, routing, a middleware pipeline, a dependency injection container, database access via query builder and Active Record, migrations, event hand",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Yii Docs",
+          "url": "https://yiisoft.github.io/docs/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Demo Applications",
+          "url": "https://yiisoft.github.io/docs/guide/start/demo-apps.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:loops",
+      "topic_slug": "loops",
+      "node_id": "qwt8xN4vuTrY-D0czYITI",
+      "title": "Loops",
+      "description": "PHP incorporates the use of loops, which are a vital part of programming. They allow a block of code to be executed repeatedly based on a certain condition or until a specific condition is met. In PHP, there are four types of loops - 'while', 'do-while', 'for' and 'foreach'. The 'while' loop continues executing its nested code as long as the condition remains true. The 'do-while' loop executes a b",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Loops",
+          "url": "https://www.php.net/manual/en/language.control-structures.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:magic-methods",
+      "topic_slug": "magic-methods",
+      "node_id": "rSXsPWto7Jeyw3Szl9pvf",
+      "title": "Magic methods",
+      "description": "PHP Magic Methods, often considered the hooks of the language, provide developers a way to change how objects will respond to particular language constructs. Magic methods are special functions that start with \"\\_\\_\" such as `__construct()`, `__destruct(), __call(), __get(), __set()` and more. They enable us to perform certain tasks automatically when specific actions occur. For example, `__constr",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Magic Methods",
+          "url": "https://www.php.net/manual/en/language.oop5.magic.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:mamp",
+      "topic_slug": "mamp",
+      "node_id": "t7p7TU2khaxsZPYAdwFAA",
+      "title": "MAMP",
+      "description": "MAMP stands for Macintosh, Apache, MySQL, and PHP. It is a popular software stack that enables developers to run a local server environment. While other technology stacks might be more relevant to different languages or platform-specific development, MAMP is highly beneficial for PHP development. MAMP allows PHP developers to run their code in a localhost environment on their systems, making testi",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "MAMP",
+          "url": "https://www.mamp.info/en/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:match",
+      "topic_slug": "match",
+      "node_id": "3gNzX-bw2iqur7U7-_W38",
+      "title": "match",
+      "description": "Match expressions are an integral feature of PHP, introduced in PHP 8.0 as an alternative to the switch statement. Compared to the switch statement, match expressions are safer since they don't require break statements and are more concise. The match expression can be an excellent tool for pattern matching. Here's an example: $message = match ($statusCode) { 200, 300 => 'OK', 400 => 'error', defau",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "match",
+          "url": "https://www.php.net/manual/en/control-structures.match.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:memory-management",
+      "topic_slug": "memory-management",
+      "node_id": "bt7dK2PcOZ72B9HXPyMwL",
+      "title": "Memory Management",
+      "description": "Memory Management is a crucial part of PHP performance optimization. Efficient memory use can significantly boost the speed and reliability of your PHP applications. PHP automatically provides a garbage collector which cleans up unused memory, but understanding and managing your script's memory usage can result in better use of resources. For instance, `unset()` function can help in freeing up mem",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Memory Management",
+          "url": "https://www.php.net/manual/en/features.gc.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:multi-dimensional-arrays",
+      "topic_slug": "multi-dimensional-arrays",
+      "node_id": "uARTOZ-ZwugSmbCJoRS5Y",
+      "title": "Multi-dimensional Arrays",
+      "description": "Multi-dimensional arrays in PHP are a type of array that contains one or more arrays. Essentially, it's an array of arrays. This allows you to store data in a structured manner, much like a table or a matrix. The fundamental idea is that each array value can, in turn, be another array. For instance, you can store information about various users, where each user (a primary array element) contains s",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Multi-dimensional Arrays",
+          "url": "https://www.php.net/manual/en/language.types.array.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:mysqli",
+      "topic_slug": "mysqli",
+      "node_id": "YLuo0oZJzTCoiZoOSG57z",
+      "title": "MySQLi",
+      "description": "MySQLi is a PHP extension that allows PHP programs to connect with MySQL databases. This extension provides the capability to perform queries, retrieve data, and perform complex operations on MySQL databases using PHP. MySQLi comes with an object-oriented and procedural interface and supports prepared statements, multiple statements, and transactions. Here's a basic example of using MySQLi to conn",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "MySQLi",
+          "url": "https://www.php.net/manual/en/book.mysqli.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:named-arguments",
+      "topic_slug": "named-arguments",
+      "node_id": "RkNjYva8o_jXp9suz5YdG",
+      "title": "Named Arguments",
+      "description": "Named arguments in PHP, introduced with PHP 8.0, allow you to specify the values of required parameters by their names, instead of their position in the function call, thus making your code more readable, reducing mistakes, and allowing for unimportant arguments to be skipped. Here's an array\\_fill() function using named arguments: <?php $a = array_fill(start_index: 0, count: 100, value: 50); In t",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Named Arguments",
+          "url": "https://www.php.net/manual/en/functions.arguments.php#functions.named-arguments"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:namespaces",
+      "topic_slug": "namespaces",
+      "node_id": "9raJ06lKRZITbjWeLil-F",
+      "title": "Namespaces",
+      "description": "Namespaces in PHP are a way of encapsulating items so that name collisions won't occur. When your code expands, there could be a situation where classes, interfaces, functions, or constants might have the same name, causing confusion or errors. Namespaces come to the rescue by grouping these items. You declare a namespace using the keyword 'namespace' at the top of your PHP file. Every class, func",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Namespaces",
+          "url": "https://www.php.net/manual/en/language.namespaces.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:nginx",
+      "topic_slug": "nginx",
+      "node_id": "aspZpACHEKOsi_Er5FYPY",
+      "title": "Nginx",
+      "description": "Nginx is often deployed as a reverse proxy server for PHP applications, helping to manage client requests and load balance. Unlike traditional servers, Nginx handles numerous simultaneous connections more efficiently, proving instrumental in delivering PHP content faster. For PHP, one common configuration with Nginx involves PHP-FPM (FastCGI Process Manager). FastCGI is a variation on the earlier ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Nginx Documentation",
+          "url": "https://nginx.org/en/docs/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:null-coalescing-operator",
+      "topic_slug": "null-coalescing-operator",
+      "node_id": "w0ntgFBhgGd5RUFd-qlPK",
+      "title": "Null Coalescing Operator",
+      "description": "The Null Coalescing Operator (??) in PHP is a simple and useful tool for handling variables that might not be set. It allows developers to provide a default value when the variable happens not to have a value. It is similar to the ternary operator, but instead of checking whether a variable is true or false, it checks if it is set or null. This makes it a handy tool for handling optional function ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Null Coalescing Operator",
+          "url": "https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.null-coalesce-op"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:null-safe-operator",
+      "topic_slug": "null-safe-operator",
+      "node_id": "1NXSk8VZDr89jQTTkOL7x",
+      "title": "Null Safe Operator",
+      "description": "The Null Safe Operator is a handy feature in PHP which deals with an issue that often pops up when working with objects: trying to access properties or methods on an object that might be null. Instead of a fatal error, the PHP Null Safe Operator (indicated by ?->) allows null values to be returned safely, making your code more robust. Here's a quick example, consider $session?->user?->name. If $se",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "The Basics - Manual",
+          "url": "https://www.php.net/manual/en/language.oop5.basic.php"
+        },
+        {
+          "raw_type": "official",
+          "title": "PHP RFC: Nullsafe operator",
+          "url": "https://wiki.php.net/rfc/nullsafe_operator"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:object-relational-mapping-orm",
+      "topic_slug": "object-relational-mapping-orm",
+      "node_id": "SeqGIfcLuveZ2z5ZSXcOd",
+      "title": "Object-Relational Mapping (ORM)",
+      "description": "Object-Relational Mapping (ORM) is a popular technique used with PHP to convert data between incompatible type systems using an object-oriented programming language. Essentially, it saves PHP developers time by enabling them to work with databases using OOP standards and avoid writing long SQL queries. One commonly used ORM in PHP is Doctrine. For instance, to save data into a products table, you ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is an Object Relational Mapping (ORM)",
+          "url": "https://stackoverflow.com/questions/1279613/what-is-an-orm-how-does-it-work-and-how-should-i-use-one#answer-1279678"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:oop-fundamentals",
+      "topic_slug": "oop-fundamentals",
+      "node_id": "yTviiPFR5b_dr3WyxdxxQ",
+      "title": "OOP Fundamentals",
+      "description": "In PHP, Object-Oriented Programming (OOP) Fundamentals cover critical aspects like classes, objects, properties, and methods. OOP facilitates efficient code reusability and makes it easier to manage and modify code. For example, here's a code snippet that represents a class with a method and a property in PHP: class Hello { public $greeting = \"Hello, world!\"; public function displayGreeting() { ec",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "OOP",
+          "url": "https://php.net/manual/en/language.oop5.basic.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:opcode-caching",
+      "topic_slug": "opcode-caching",
+      "node_id": "NieqZd1juaNYoZOrB7e31",
+      "title": "Opcode Caching",
+      "description": "Opcode caching is a technique that can significantly enhance the PHP performance. It works by storing precompiled script bytecode in memory, thus eliminating the need for PHP to load and parse scripts on each request. For opcode caching, OPCache extension is often used in PHP. With this, the PHP script's compiled version is stored for subsequent requests, reducing the overhead of code parsing and ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Opcode Caching",
+          "url": "https://www.php.net/manual/en/book.opcache.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:packagist",
+      "topic_slug": "packagist",
+      "node_id": "xZf2jjnCVHwYfDH2hs9kR",
+      "title": "Packagist",
+      "description": "Packagist is the primary package repository for PHP, providing a service for hosting and distributing PHP package dependencies. Developers can use it to upload their PHP packages and share them with other developers globally. In conjunction with Composer, Packagist helps manage package versions and resolve dependencies for PHP, acting as a crucial part of modern PHP development.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Packagist",
+          "url": "https://packagist.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Package Documentation",
+          "url": "https://getcomposer.org/doc/01-basic-usage.md#package-versions"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:parameters--return-values",
+      "topic_slug": "parameters--return-values",
+      "node_id": "mpQKoBzsOa-5iWo08sOhQ",
+      "title": "Parameters / Return Values",
+      "description": "Parameters in PHP functions specify the input that the function expects to receive when it is called. They can be of various types like strings, integers, arrays, or even objects. PHP also supports default values for parameters and passing by reference. In PHP, the 'return' statement is often used to end the execution of a function and send back a value. Return values can be any data type. Here's ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Parameters / Return Values",
+          "url": "https://www.php.net/manual/en/functions.arguments.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:password-hashing",
+      "topic_slug": "password-hashing",
+      "node_id": "JbWFfJiCRrXDhnuIx_lqx",
+      "title": "Password Hashing",
+      "description": "Password Hashing in PHP is a crucial aspect of security, which involves converting a plaintext password into a unique hash that cannot be easily reversed. PHP's built-in functions - `password_hash()` and `password_verify()` - are usually employed for this purpose. `password_hash()` creates a new password hash using a strong one-way hashing algorithm, while `password_verify()` checks if the given h",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Password Hashing",
+          "url": "https://www.php.net/manual/en/function.password-hash.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:pdo",
+      "topic_slug": "pdo",
+      "node_id": "cJtPz1RMN1qDE4eRdv4N_",
+      "title": "PDO",
+      "description": "PDO (PHP Data Objects) is an interface in PHP that provides a lightweight, consistent way for working with databases in PHP. PDO allows you to use any database without changing your PHP code, making your code database-independent. Furthermore, it offers robust error handling and can utilize prepared statements to prevent SQL injection attacks. Here is how you could connect and fetch data from a My",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Data Objects",
+          "url": "https://www.php.net/manual/en/book.pdo.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:performance-optimization",
+      "topic_slug": "performance-optimization",
+      "node_id": "M1nVsh_sCSFJRf6-7Ttsj",
+      "title": "Performance Optimization",
+      "description": "Performance Optimization linked with Advanced Database Techniques in PHP ensures your database-driven applications run efficiently. This involves techniques like indexing, using EXPLAIN SQL command, de-normalization, and caching query results. For instance, an effective technique is caching query results, which can significantly reduce the number of database calls. PHP offers functions to serializ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "MySQL Performance Optimization",
+          "url": "https://www.php.net/manual/en/book.mysql.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:pest",
+      "topic_slug": "pest",
+      "node_id": "d6MydchA52HIxfAUjmZui",
+      "title": "Pest",
+      "description": "Pest is an innovative and elegant testing framework for PHP. Think of it as a stylish and streamlined alternative to PHPUnit. Pest makes testing your PHP code a breeze by enabling expressive and flexible test cases. It provides higher-level abstractions to minimize boilerplate code without disrupting the ability to integrate traditional PHPUnit tests. For example, using Pest can make a test case a",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Pest",
+          "url": "https://pestphp.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Pest Installation",
+          "url": "https://pestphp.com/docs/installation"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:phan",
+      "topic_slug": "phan",
+      "node_id": "B45YVzov8X_iOtneiFEqa",
+      "title": "Phan",
+      "description": "Phan is a static analysis tool specially made for PHP language, greatly useful in catching common issues in the code before execution. It can analyze the syntax and behaviors in PHP code, detecting problems such as undeclared variables, type inconsistencies, uncaught exceptions, and more. Interestingly, Phan has a particular strength \u2014 it understands the relationships among PHP's different feature",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Phan",
+          "url": "https://phan.github.io/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "phan/phan",
+          "url": "https://github.com/phan/phan"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:php-cs-fixer",
+      "topic_slug": "php-cs-fixer",
+      "node_id": "r07k_hT2z2EiIBH4q3F7-",
+      "title": "PHP CS Fixer",
+      "description": "PHP CS Fixer is a valuable utility for PHP developers that examines and fixes your code to ensure it aligns with specific coding standards. This powerful tool diminishes the time and effort spent on manual code review and corrections. It reviews your PHP code's syntax, appearance, and structure and can automatically fix issues found. PHP CS Fixer supports PSR-1, PSR-2, Symfony standards, and more.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "CS Fixer",
+          "url": "https://cs.symfony.com/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:php-fig",
+      "topic_slug": "php-fig",
+      "node_id": "SD9k16UlVve9WtNMDA5Za",
+      "title": "PHP-FIG",
+      "description": "PHP-FIG, also known as the PHP Framework Interoperability Group, is a vital part of PHP's ecosystem. This group has the main goal of creating PHP standards that promote interoperability among PHP frameworks, libraries, and other pieces of PHP based software. The group is responsible for PSR standards, which most modern PHP codes adhere to. Typically, it provides guidelines on coding style, logger ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PHP FIG",
+          "url": "https://www.php-fig.org/psr/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:php-fpm",
+      "topic_slug": "php-fpm",
+      "node_id": "AoGS-5MSkp8gtJFQVPSBE",
+      "title": "PHP-FPM",
+      "description": "PHP-FPM, or PHP FastCGI Process Manager, is a robust and efficient way to serve PHP applications. It dramatically improves the speed and processing efficiency of PHP apps by isolating each request, thus preventing jobs from interfering with each other. With PHP-FPM, your server can handle more simultaneous visitors without a slowdown. For example, to start using PHP-FPM with NGINX, you may include",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PHP FPM",
+          "url": "https://www.php.net/manual/en/install.fpm.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:php-versions-and-features",
+      "topic_slug": "php-versions-and-features",
+      "node_id": "6sHRQTcoKL3TlgNJlwyx8",
+      "title": "PHP Versions and Features",
+      "description": "PHP (Hypertext Preprocessor) versions are critically important as each release comes with new features, improvements, and bug fixes. PHP versions start from PHP 1.0 released in 1995 and have improved over the years. The more recent version as of writing is PHP 8.0, which introduced features like the JIT compiler, named arguments, match expressions, and more. Remember, sticking to officially suppor",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Versions and Features",
+          "url": "https://www.php.net/manual/en/history.php.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:phpcodesniffer",
+      "topic_slug": "phpcodesniffer",
+      "node_id": "fSpvZ_4kGFMbFVCWhA8vn",
+      "title": "PHP CodeSniffer",
+      "description": "PHP CodeSniffer is a tool used to ensure your PHP code adheres to a defined coding standard. It works by tokenizing your code and detecting violations of a pre-configured set of rules, covering aspects like indentation, spacing, naming conventions, and more. This helps maintain code consistency across projects and teams, making it easier to read, understand, and maintain.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "PHP_CodeSniffer",
+          "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:phpstan",
+      "topic_slug": "phpstan",
+      "node_id": "12k71gNfwAcT9K5aLWgbZ",
+      "title": "PHPStan",
+      "description": "PHPStan is a static analysis tool for PHP that focuses on discovering bugs in your code. As opposed to dynamic analysis which works while your program is running, static analysis examines your code without executing it. PHPStan can catch an entire class of bugs even before you write tests for the code, thus making it a valuable tool in PHP development. For example, PHPStan can prevent issues like ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PHP Stan",
+          "url": "https://phpstan.org/user-guide/getting-started"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:phpunit",
+      "topic_slug": "phpunit",
+      "node_id": "NfBKKwG2GGBPppOjoLLBg",
+      "title": "PHPUnit",
+      "description": "PHPUnit is a widely used testing framework in PHP. Automated testing allows developers to ensure their code functions as expected. With PHPUnit, you can write test cases in PHP to check the functionality of your codebase. It's particularly good for executing unit tests - tests that verify individual parts of the software. PHPUnit supports several types of assertions, making it versatile for any te",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PHP Unit",
+          "url": "https://phpunit.de/getting-started/phpunit-7.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:polymorphism",
+      "topic_slug": "polymorphism",
+      "node_id": "gtq5KrghF28f5G8nuDcYQ",
+      "title": "Polymorphism",
+      "description": "Polymorphism is a core concept in object-oriented programming that PHP supports. It provides a mechanism to use one interface for different underlying forms, enabling different objects to process differently based on their data type. In PHP, polymorphism can be achieved through inheritance and interfaces. For example, you may have a parent class 'Shape' and child classes 'Circle', 'Rectangle', etc",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "Polymorphism",
+          "url": "https://www.phptutorial.net/php-oop/php-polymorphism/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:print",
+      "topic_slug": "print",
+      "node_id": "NQUmO90sqe7fnzod3Ia8H",
+      "title": "print",
+      "description": "The 'print' statement in PHP is an in-built function used for outputting one or more strings. Unlike 'echo', it is not a language construct and has a return value. However, it is slower because it uses expressions. The text or numeric data that 'print' outputs can be shown directly or stored in a variable. For instance, to print a string you may use `print(\"Hello, World!\");`, and for using it with",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "print",
+          "url": "https://www.php.net/manual/en/function.print.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:print_r",
+      "topic_slug": "print_r",
+      "node_id": "wsC7OGXOyfCY4pLLNrR2v",
+      "title": "print_r",
+      "description": "The print\\_r function in PHP is used to print human-readable information about a variable, ranging from simple values to more complex, multi-dimensional arrays and objects. It's exceptionally helpful while debugging, providing more information about the variable's contents than the echo or print functions. For example, in the code `$array = array('apple', 'banana', 'cherry'); print_r($array);`, it",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "print_r",
+          "url": "https://www.php.net/manual/en/function.print-r.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:process-control",
+      "topic_slug": "process-control",
+      "node_id": "NTKUMgsKGYISIyhgOJPQn",
+      "title": "Process Control",
+      "description": "Process Control, a crucial aspect of PHP system interactions, pertains to the ability to manage child processes within larger PHP scripts. Through the Process Control Extensions, PHP can create, monitor and control these child processes efficiently. These functions help develop robust client-server systems by managing and bringing multi-threading capabilities to single-threaded PHP scripts. For in",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Process Control",
+          "url": "https://www.php.net/manual/en/ref.pcntl.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:profiling-techniques",
+      "topic_slug": "profiling-techniques",
+      "node_id": "_Dh78x_tPLqZweg--qZFQ",
+      "title": "Profiling Techniques",
+      "description": "Profiling is an analytical process within PHP that focuses on optimizing the application\u2019s performance. It involves pinpointing bottlenecks and problematic sections of your PHP code that cause poor performance, often using profiling tools. One such tool is Xdebug, which provides detailed information about how each line of code is executed. This process helps in understanding how long an operation ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Xdebug Profiler",
+          "url": "https://xdebug.org/docs/profiler"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:properties-and-methods",
+      "topic_slug": "properties-and-methods",
+      "node_id": "MRAPXshy9RoYdReY6grf_",
+      "title": "Properties and Methods",
+      "description": "Properties and Methods are fundamental components of Object-Oriented Programming (OOP) in PHP. Properties are just like variables; they hold information that an object will need to use. Methods, on the other hand, are similar to functions; they perform an action on an object's properties. In PHP, properties are declared using visibility keywords (public, protected, or private) followed by a regula",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Properties and Methods",
+          "url": "https://www.php.net/manual/en/language.oop5.properties.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:psalm",
+      "topic_slug": "psalm",
+      "node_id": "T1XD93j6Lkpl88JSmys9b",
+      "title": "Psalm",
+      "description": "Psalm is a popular static analysis tool tailored for PHP. It identifies potential issues in your code, including syntax errors, unused variables, and type mismatches, before you run the code. This helps to improve code quality and maintainability. It's quite powerful, it can even understand complex scenarios using its template/interface system. To analyze your PHP code with Psalm, you simply need ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Psalm Documentation",
+          "url": "https://psalm.dev/docs/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:psr-standards",
+      "topic_slug": "psr-standards",
+      "node_id": "3tONibbRgK7HCwGTE2Gqw",
+      "title": "PSR Standards",
+      "description": "The PHP Framework Interop Group (PHP-FIG) introduced PHP Standard Recommendation (PSR) standards to provide a uniform and interoperable set of coding practices for PHP developers. PSR standards cover a variety of coding aspects such as code style (PSR-1, PSR-2), autoloading (PSR-4), and more. The PHP community widely accepts these standards contributing towards writing clean and easy-to-follow cod",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PSR Standards",
+          "url": "https://www.php-fig.org/psr/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:reading-files",
+      "topic_slug": "reading-files",
+      "node_id": "S9wTlkbv9-R6dohhZ47hs",
+      "title": "Reading Files",
+      "description": "Reading files is a common task in PHP and it provides a range of functions for this purpose. You can use the `fopen()` function with the 'r' mode to open a file for reading. The `fgets()` function lets you read a file line by line, while `fread()` reads a specified number of bytes. For reading the entire file in one go, use `file_get_contents()`. Remember to always close the file after you're done",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Filesystem Operations",
+          "url": "https://www.php.net/manual/en/book.filesystem.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:recursion",
+      "topic_slug": "recursion",
+      "node_id": "D9ybK5INH5zSOcYMb5ZPi",
+      "title": "Recursion",
+      "description": "Recursion, as it applies to PHP, refers to a function that calls itself to solve a problem. A recursive function distinguishes itself by solving small parts of the problem until it resolves the main issue. Think of it as breaking down a task into smaller tasks that are easier to solve. However, careful design is needed to ensure the recursive function has a clear stopping point, or else it can res",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Functions - Recursion",
+          "url": "https://www.php.net/manual/en/language.functions.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:require",
+      "topic_slug": "require",
+      "node_id": "Kaaqu-mN7xvHN6CbIn616",
+      "title": "require",
+      "description": "The 'require' statement is a built-in feature of PHP used to include and evaluate a specific file while executing the code. This is a crucial part of file handling in PHP because it enables the sharing of functions, classes, or elements across multiple scripts, promoting code reusability and neatness. Keep in mind, if the required file is missing, PHP will produce a fatal error and stop the code e",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "require",
+          "url": "https://www.php.net/manual/en/function.require.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:require_once",
+      "topic_slug": "require_once",
+      "node_id": "-CyJbsg2ho3RvfzKnJj5C",
+      "title": "require_once",
+      "description": "PHP uses the 'require\\_once' statement as an efficient way to include a PHP file into another one. There's an interesting quirk to this function: PHP checks if the file was previously included, and if so, it doesn't include the file again. This helps avoid problems with redundant function declarations, variable value reassignments, or coding loops. However, do remember that 'require\\_once' is dist",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "require_once",
+          "url": "https://www.php.net/manual/en/function.require-once.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:sanitization-techniques",
+      "topic_slug": "sanitization-techniques",
+      "node_id": "tfC1tCrbvH5J43WUpG9Yb",
+      "title": "Sanitization Techniques",
+      "description": "Sanitization Techniques is a vital part of PHP security basics, which ensures that the user-provided data is safe to be used within your script. It can prevent harmful data from being inserted into the database or being used in other ways that could potentially be dangerous to your application. It includes functions which can strip off unwanted characters from the data. For instance, the `filter_v",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Sanitization Techniques",
+          "url": "https://www.php.net/manual/en/function.filter-var.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:sessions",
+      "topic_slug": "sessions",
+      "node_id": "qobzzgzArNHLLn9Oiqc6G",
+      "title": "Sessions",
+      "description": "Sessions provide a way to preserve certain data across subsequent accesses. Unlike a cookie, the information is not stored on the user's computer but on the server. This is particularly useful when you want to store information related to a specific user's session on your platform, like user login status or user preferences. When a session is started in PHP, a unique session ID is generated for th",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Sessions",
+          "url": "https://www.php.net/manual/en/book.session.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:sql-injection",
+      "topic_slug": "sql-injection",
+      "node_id": "801vB_JMas4ucriUmfrLg",
+      "title": "SQL Injection",
+      "description": "SQL Injection is a crucial security topic in PHP. It is a code injection technique where an attacker may slip shady SQL code within a query. This attack can lead to data manipulation or loss and even compromise your database. To prevent this, PHP encourages the use of prepared statements with either the MySQLi or PDO extension. An example of a vulnerable code snippet would be: `$unsafe_variable = ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "SQL Injection",
+          "url": "https://www.php.net/manual/en/security.database.sql-injection.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:state-management",
+      "topic_slug": "state-management",
+      "node_id": "CGehmZjcgTWC7fQAvxmNW",
+      "title": "State Management",
+      "description": "State management in PHP involves keeping track of user activity in the application, as HTTP protocol doesn't store earlier interactions. Typically, these data involve user details such as login info, form input data, etc. A prevalent method of state management in PHP is through sessions and cookies. Sessions work by keeping the state data on the server side and a session identifier on the client s",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "setcookie",
+          "url": "https://php.net/manual/en/function.setcookie.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:static-analysis",
+      "topic_slug": "static-analysis",
+      "node_id": "PrG_5dyBblXsWYYRcOJMa",
+      "title": "Static Analysis",
+      "description": "Static analysis in PHP is a method to inspect the source code before running it. Rather than testing programs on specific inputs (dynamic analysis), static analysis focuses on finding potential issues within code without executing it. It can help in identifying common coding mistakes and uncovering complex problems like dependency issues, unused variables, undeclared properties, and more. Using to",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PHP Stan",
+          "url": "https://phpstan.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "PHP Stan - Getting Started",
+          "url": "https://phpstan.org/user-guide/getting-started"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:static-methods-and-properties",
+      "topic_slug": "static-methods-and-properties",
+      "node_id": "qlkpwXfOc1p7j37hrzffI",
+      "title": "Static Methods and Properties",
+      "description": "Static methods and properties in PHP belong to the class rather than an instance of the class. This means they can be accessed without creating an object of the class. A static method is declared with the static keyword and can be invoked directly using the class name followed by the scope resolution operator. Similarly, a static property is also defined with the static keyword, but cannot be acce",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Static Methods and Properties",
+          "url": "https://www.php.net/manual/en/language.oop5.static.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:style-tools",
+      "topic_slug": "style-tools",
+      "node_id": "6eWgZVLV479oQzl0fu-Od",
+      "title": "Style Tools",
+      "description": "Style Tools in PHP are primarily coding standard tools that help maintain a consistent coding style throughout your PHP project. PHP\\_CodeSniffer is a popular tool in this category. It tokenizes PHP, JavaScript, and CSS files and detects violations of a defined set of coding standards. A brief example of PHP\\_CodeSniffer usage would be to run it in the command line like this: `phpcs /path/to/code/",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "PHP_CodeSniffer",
+          "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer/"
+        },
+        {
+          "raw_type": "article",
+          "title": "PHP code quality tools",
+          "url": "https://www.jetbrains.com/help/phpstorm/php-code-quality-tools.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:switch",
+      "topic_slug": "switch",
+      "node_id": "bgJ9-m6Fiu3VCc-NZlbpn",
+      "title": "switch",
+      "description": "The switch statement is a special conditional statement in PHP that can simplify code and improve readability when you need to compare one value with multiple different possibilities. It is an alternative to using a chain of \"if...else\" conditions, and is particularly useful when you have many different cases to compare. The switch expression is evaluated only once, and its value is compared to ea",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "switch",
+          "url": "https://www.php.net/manual/en/control-structures.switch.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:symfony",
+      "topic_slug": "symfony",
+      "node_id": "57VSMVePOr9qUD5x_LNdf",
+      "title": "Symfony",
+      "description": "Symfony is a set of PHP components and a framework for web projects. It aims to speed up the creation and maintenance of web applications and replace the recurring coding tasks. Symfony uses Composer, a PHP dependency manager, to manage its components. Below is an example of creating a new Symfony project: composer create-project symfony/website-skeleton myproject This will download and install a ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Symfony",
+          "url": "https://symfony.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Symfony Documentation",
+          "url": "https://symfony.com/doc/current/index.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:traits",
+      "topic_slug": "traits",
+      "node_id": "GR09ns9B-0cONQaQ_uj-7",
+      "title": "Traits",
+      "description": "Traits is a concept in PHP that allows code reusability by enabling developers to create reusable pieces of code which can be used in classes to extend functionality. They are a way to reduce intricacies of single inheritance by enabling a developer to reuse sets of methods freely in several independent classes. Here's an example how to use a Trait: trait Greeting { public function sayHello() { re",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Traits",
+          "url": "https://www.php.net/manual/en/language.oop5.traits.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:type-declarations",
+      "topic_slug": "type-declarations",
+      "node_id": "sPW-Ti2VyNYzxq6EYkbn7",
+      "title": "Type Declarations",
+      "description": "Type declarations, also known as type hints, are a feature in PHP that provides you options to specify the type of variable that a function is expected to receive or the type of value that it should return. Not only does it help to debug code quickly, it also makes the code more readable. In PHP, type declarations can be for both parameters in a function (parameter type declarations) and return va",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Type Declarations",
+          "url": "https://www.php.net/manual/en/language.types.declarations.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:var_dump",
+      "topic_slug": "var_dump",
+      "node_id": "JCCeVC0hOrvIeyfg1ScKA",
+      "title": "var_dump",
+      "description": "Var\\_dump is a built-in PHP function that's incredibly handy for debugging as it outputs the data type and value of a given variable. This includes array elements and object properties, if given such types. If you're wrangling with your PHP code and finding your variables aren't behaving as you expect, using var\\_dump can quickly show you what you're working with. Check out a simple usage example ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "var_dump",
+          "url": "https://www.php.net/manual/en/function.var-dump.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:variables-and-scope",
+      "topic_slug": "variables-and-scope",
+      "node_id": "D0BtyxyjIBcpfn5wP23WC",
+      "title": "Variables and Scope",
+      "description": "Variables are a central part of PHP, allowing you to store data that can be used later in your scripts. Their values can be of various types including strings, integers, arrays, and objects. PHP has both local and global scope when it comes to variables. Local scope refers to variables that are only accessible within the function they are defined, while global scope means a variable is accessible ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Variables and Scope",
+          "url": "https://www.php.net/manual/en/language.variables.scope.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:variadic-functions",
+      "topic_slug": "variadic-functions",
+      "node_id": "rtmytETfyyLdcXUC0QyzL",
+      "title": "Variadic Functions",
+      "description": "Variadic functions in PHP are functions that can accept any number of arguments. This gives you greater flexibility, as it allows for an undetermined number of arguments. You can create a variadic function by adding '...' before the function argument. Any number of arguments you provide when calling the function are treated as an array, which can be processed using common array functions. A simple",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Variadic Functions",
+          "url": "https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:wamp",
+      "topic_slug": "wamp",
+      "node_id": "36Y1HkHxhuxh2qVQB8NVE",
+      "title": "WAMP",
+      "description": "WAMP is a popular software stack used for developing PHP web applications on Windows systems. Acting as an abbreviation for Windows, Apache, MySQL, and PHP, WAMP provides all the components necessary to set up a local web server. Apache is used to handle HTTP requests, MySQL manages the databases, and PHP serves as the programming language. The benefit of using WAMP lies in its convenience as it p",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Windows Installation",
+          "url": "https://www.php.net/manual/en/install.windows.manual.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:what-is-php",
+      "topic_slug": "what-is-php",
+      "node_id": "_LhLDVZjLt1DoAP1NuUES",
+      "title": "What is PHP?",
+      "description": "PHP, an acronym for Hypertext Preprocessor, is a popular server-side scripting language favored for web development. It's versatile, dynamic, and can be embedded seamlessly into HTML code. PHP scripts are executed on the server, and the result is sent back to the browser as plain HTML.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "What is PHP?",
+          "url": "https://www.php.net/manual/en/introduction.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to PHP",
+          "url": "https://www.phptutorial.net/php-tutorial/what-is-php/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:writing-files",
+      "topic_slug": "writing-files",
+      "node_id": "two4UycJaCfSp6jQqtTAb",
+      "title": "Writing Files",
+      "description": "Writing files plays a crucial part in PHP, allowing you to store data and modify it later. This process involves opening the file, writing the desired data, and then closing it. Writing can be done using different functions, but `fwrite()` is the most commonly used one. It requires two arguments the file pointer and the string of data to be written. Here's a brief snippet of code for instance: $fi",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Writing Files",
+          "url": "https://www.php.net/manual/en/function.fwrite.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:xampp",
+      "topic_slug": "xampp",
+      "node_id": "-wniKEBwbF0Fi1fHpF-Gc",
+      "title": "XAMPP",
+      "description": "XAMPP is an open-source development environment that stands for Cross-Platform (X), Apache server (A), MariaDB (M), PHP (P), and Perl (P). If you're working with PHP, it's a handy tool because it creates a local web server for testing or development purposes. It's especially useful if you plan to use a database in your project, as it includes MariaDB. It integrates seamlessly with PHP, enabling yo",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Installing Apache2",
+          "url": "https://www.php.net/manual/en/install.windows.apache2.php"
+        },
+        {
+          "raw_type": "official",
+          "title": "XAMPP",
+          "url": "https://www.apachefriends.org/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:xdebug",
+      "topic_slug": "xdebug",
+      "node_id": "lFoHoMRywCWa056ii5cKQ",
+      "title": "Xdebug",
+      "description": "Xdebug is a PHP extension that provides debugging and profiling capabilities. It's a powerful tool that can help you understand what your code is doing, track down bugs, and optimize performance. With Xdebug, you can set breakpoints, watch variables, and step through your code one line at a time. For instance, to start using Xdebug, you first need to install it and then initialize it in your code ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Xdebug",
+          "url": "https://xdebug.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Xdebug Documentation",
+          "url": "https://xdebug.org/docs/"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:xml-processing",
+      "topic_slug": "xml-processing",
+      "node_id": "ggkWo0DRSSDDkHpbiyUyf",
+      "title": "XML Processing",
+      "description": "XML processing in PHP allows manipulation and interpretation of XML documents. PHP's XML Parser extension helps to parse XML data from strings and files, providing event-driven processing capabilities. This is especially useful during large XML parsing. To process XML in PHP, you first create an XML parser, set functionality through handler functions for the start and end of elements, character da",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "XML Processing",
+          "url": "https://www.php.net/manual/en/book.xml.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:xss-prevention",
+      "topic_slug": "xss-prevention",
+      "node_id": "DxqQrToZSayWplKdCkTgT",
+      "title": "XSS Prevention",
+      "description": "Cross Site Scripting, often known as XSS, is a glaring risk in web security, and PHP also must address it. It occurs when someone is able to insert dangerous code into your site, which can then be executed by users. To prevent XSS in PHP, developers should deploy `htmlspecialchars()` function to escape potentially harmful characters. This function converts special characters to their HTML entities",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Special Charsets",
+          "url": "https://www.php.net/manual/en/function.htmlspecialchars.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "php:zend-debugger",
+      "topic_slug": "zend-debugger",
+      "node_id": "KpQb5Zh3GUcbYUyXHvyu2",
+      "title": "Zend Debugger",
+      "description": "Zend Debugger is a PHP debugging extension used to identify issues in PHP scripts. It allows you to monitor and fix issues in your code, such as logical errors, and helps in boosting your web application's overall performance. Essentially, it becomes a simple yet powerful method for debugging server-side PHP scripts, by providing detailed debugging data and facilitating real-time interaction with ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Zend Debugger",
+          "url": "https://www.zend.com/topics/Debugger-API"
+        }
+      ]
+    }
+  ]
+}

@@ -24,15 +24,7 @@ export default function DecisionTraceModal({ resourceId, userId, onClose }: Deci
           const data = await res.json();
           setTraceData(data);
         } else {
-          // Mock data in case API is not implemented yet
-          setTraceData({
-            confidence: 0.89,
-            steps: [
-              { step: 'Identified missing prerequisite skills', score: 0.92 },
-              { step: 'Matched preferred learning style (Visual)', score: 0.85 },
-              { step: 'Filtered by appropriate difficulty level', score: 0.89 }
-            ]
-          });
+          console.error('API returned an error:', await res.text());
         }
       } catch (error) {
         console.error('Failed to fetch trace', error);

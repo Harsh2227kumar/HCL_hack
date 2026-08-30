@@ -104,7 +104,7 @@ export const aiCounterfactualSchema = z.object({
 
 export const aiChatResponseSchema = z.object({
   message: z.string(),
-  quick_replies: z.array(z.string()).optional(),
+  quick_replies: z.array(z.string()).nullish(),
   done: z.boolean(),
 });
 

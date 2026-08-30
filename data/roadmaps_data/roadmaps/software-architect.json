@@ -1,0 +1,2456 @@
+{
+  "roadmap": "software-architect",
+  "topic_count": 112,
+  "topics": [
+    {
+      "skill_id": "software-architect:acid-cap-theorem",
+      "topic_slug": "acid-cap-theorem",
+      "node_id": "bbKEEk7dvfFZBBJaIjm0j",
+      "title": "ACID, CAP Theorem",
+      "description": "ACID describes the guarantees a database transaction provides: atomicity, consistency, isolation, and durability, ensuring reliable operations even under failure. The CAP theorem states that a distributed system can only guarantee two of three properties at once: consistency, availability, and partition tolerance. Architects use both concepts to reason about the trade offs involved in choosing dat",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is CAP Theorem?",
+          "url": "https://www.bmc.com/blogs/cap-theorem/"
+        },
+        {
+          "raw_type": "article",
+          "title": "CAP Theorem - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/CAP_theorem"
+        },
+        {
+          "raw_type": "article",
+          "title": "An Illustrated Proof of the CAP Theorem",
+          "url": "https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/"
+        },
+        {
+          "raw_type": "article",
+          "title": "CAP Theorem and its applications in NoSQL Databases",
+          "url": "https://www.ibm.com/uk-en/cloud/learn/cap-theorem"
+        },
+        {
+          "raw_type": "article",
+          "title": "ACID - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/ACID"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is CAP Theorem?",
+          "url": "https://www.youtube.com/watch?v=_RbsFXWRZ10"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:actors",
+      "topic_slug": "actors",
+      "node_id": "AoWO2BIKG5X4JWir6kh5r",
+      "title": "Actors",
+      "description": "Actor Model is a model that represents actors as the basic unit of a system, they can only communicate through messages and have their own private state, and they can also manage other actors, resulting in an encapsulated and fault-tolerant system.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "The actor model in 10 minutes",
+          "url": "https://www.brianstorti.com/the-actor-model/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Actor Model Explained",
+          "url": "https://www.youtube.com/watch?v=ELwEdb_pD0k"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:apache-spark",
+      "topic_slug": "apache-spark",
+      "node_id": "a0baFv7hVWZGvS5VLh5ig",
+      "title": "Apache spark",
+      "description": "Apache Spark is a distributed data processing engine that performs computations in memory, making it significantly faster than earlier tools like MapReduce for many workloads. It supports batch processing, streaming, machine learning, and graph processing through a single unified framework. Architects often choose Spark for large scale analytics pipelines that need both speed and flexibility.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Apache Spark",
+          "url": "https://spark.apache.org/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:apis--integrations",
+      "topic_slug": "apis--integrations",
+      "node_id": "Ocn7-ctpnl71ZCZ_uV-uD",
+      "title": "APIs and Integrations",
+      "description": "APIs and integrations define how different systems and services communicate with each other, whether within a company or across organizations. Choosing the right integration style, protocol, and data format affects performance, flexibility, and how easily new systems can be connected later. This is a core concern in almost every modern architecture, since few systems operate in isolation.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is API Integration",
+          "url": "https://www.ibm.com/topics/api-integration"
+        },
+        {
+          "raw_type": "article",
+          "title": "API Integration - Postman",
+          "url": "https://www.postman.com/api-platform/api-integration/"
+        },
+        {
+          "raw_type": "article",
+          "title": "API First Integration",
+          "url": "https://www.infoq.com/articles/api-first-integration/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:application-architecture",
+      "topic_slug": "application-architecture",
+      "node_id": "Lqe47l4j-C4OwkbkwPYry",
+      "title": "Application Architecture",
+      "description": "Application architecture focuses on the internal structure of a single software application: its modules, layers, and the patterns used to organize code. It determines how the application handles concerns like data access, business logic, and user interface separation. Decisions made here affect how easy the application is to test, extend, and maintain over time.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Application Architecture",
+          "url": "https://www.codesee.io/learning-center/application-architecture"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:architecture",
+      "topic_slug": "architecture",
+      "node_id": "OaLmlfkZid7hKqJ9G8oNV",
+      "title": "Architectures",
+      "description": "Architecture refers to the approach of designing and implementing software architecture with a focus on the tools and technologies that will be used during the development process. This perspective emphasizes that the selection of tools can significantly influence architectural decisions and the overall design of the system.",
+      "resources": []
+    },
+    {
+      "skill_id": "software-architect:atlassian-tools",
+      "topic_slug": "atlassian-tools",
+      "node_id": "3bpd0iZTd3G-H8A7yrExY",
+      "title": "Atlassian Tools",
+      "description": "Atlassian tools, including Jira and Confluence, support project tracking and documentation for software teams at scale. Jira manages tasks, sprints, and issues in agile workflows, while Confluence stores documentation and design discussions. Many enterprise teams standardize on these tools for both day to day work tracking and long term knowledge management.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Jira Service Desk",
+          "url": "https://www.atlassian.com/software/jira/service-management/features/service-desk"
+        },
+        {
+          "raw_type": "official",
+          "title": "Jira Core",
+          "url": "https://www.atlassian.com/software/jira/work-management"
+        },
+        {
+          "raw_type": "official",
+          "title": "Confluence",
+          "url": "https://www.atlassian.com/wac/software/confluence?"
+        },
+        {
+          "raw_type": "official",
+          "title": "Bitbucket",
+          "url": "https://bitbucket.org/product/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Statuspage",
+          "url": "https://www.atlassian.com/software/statuspage"
+        },
+        {
+          "raw_type": "official",
+          "title": "Opsgenie",
+          "url": "https://www.atlassian.com/software/opsgenie"
+        },
+        {
+          "raw_type": "official",
+          "title": "Advanced Roadmaps for Jira",
+          "url": "https://www.atlassian.com/software/jira/features/roadmaps"
+        },
+        {
+          "raw_type": "official",
+          "title": "Jira Align",
+          "url": "https://www.atlassian.com/software/jira/align"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:auth-strategies",
+      "topic_slug": "auth-strategies",
+      "node_id": "KiwFXB6yd0go30zAFMTJt",
+      "title": "Auth Strategies",
+      "description": "Authentication and authorization strategies determine how a system verifies who a user is and what they are allowed to do. Common approaches include session based authentication, token based methods like JWT, and protocols like OAuth for delegated access. Choosing the right strategy affects both security and how easily a system integrates with other services.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "JSON Web Token - Handbook",
+          "url": "https://auth0.com/resources/ebooks/jwt-handbook"
+        },
+        {
+          "raw_type": "article",
+          "title": "Authentication vs Authorization",
+          "url": "https://www.cerbos.dev/blog/authentication-vs-authorization"
+        },
+        {
+          "raw_type": "video",
+          "title": "SAML Overview",
+          "url": "https://www.youtube.com/watch?v=i8wFExDSZv0"
+        },
+        {
+          "raw_type": "video",
+          "title": "A Developers Guide to SAML",
+          "url": "https://www.youtube.com/watch?v=l-6QSEqDJPo"
+        },
+        {
+          "raw_type": "video",
+          "title": "SAML 2.0: Technical Overview",
+          "url": "https://www.youtube.com/watch?v=SvppXbpv-5k"
+        },
+        {
+          "raw_type": "video",
+          "title": "An Illustrated Guide to OAuth and OpenID Connect",
+          "url": "https://www.youtube.com/watch?v=t18YB3xDfXI"
+        },
+        {
+          "raw_type": "video",
+          "title": "OAuth 2.0 & OpenID Connect (OIDC): Technical Overview",
+          "url": "https://www.youtube.com/watch?v=rTzlF-U9Y6Y"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:babok",
+      "topic_slug": "babok",
+      "node_id": "LQlzVxUxM3haWRwbhYHKY",
+      "title": "Babok",
+      "description": "The guide to the Business Analysis Body of Knowledge (BABOK Guide) is a book from the International Institute of Business Analysis (IIBA) that provides business analysts (BAs) with strategies for using data to improve an organization's workflow processes, technology, products and services.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Babok",
+          "url": "https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Guide to the Business Analysis Body of Knowledge",
+          "url": "https://en.wikipedia.org/wiki/A_Guide_to_the_Business_Analysis_Body_of_Knowledge"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:balance",
+      "topic_slug": "balance",
+      "node_id": "otHQ6ye1xgkI1qb4tEHVF",
+      "title": "Balance",
+      "description": "Balance refers to weighing competing priorities such as speed versus quality, or innovation versus stability. An architect regularly makes trade offs between what is technically ideal and what is practical given time and budget constraints. Finding the right balance keeps a project moving without accumulating excessive technical debt.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Balance_(architecture"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:bpm-bpel",
+      "topic_slug": "bpm-bpel",
+      "node_id": "DwNda95-fE7LWnDA6u1LU",
+      "title": "BPM BPEL",
+      "description": "Business process management describes methodologies and tools for modeling, automating, and optimizing business processes across an organization. BPEL, the Business Process Execution Language, is an XML based language used to define and orchestrate these processes, often within service oriented architectures. Architects working on enterprise workflow automation need to understand how BPM tools coo",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is BPM?",
+          "url": "https://www.redhat.com/en/topics/automation/what-is-business-process-management"
+        },
+        {
+          "raw_type": "article",
+          "title": "BPEL described",
+          "url": "https://www.ibm.com/docs/en/baw/19.x?topic=SS8JB4_19.x/com.ibm.wbpm.wid.main.doc/prodoverview/topics/cbpelproc.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "BPM vs BPEL",
+          "url": "https://www.youtube.com/watch?v=V6nr5dnb1JQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:ci--cd",
+      "topic_slug": "ci--cd",
+      "node_id": "isavRe4ANVn77ZX6gNSLH",
+      "title": "CI / CD",
+      "description": "CI/CD is a method to frequently deliver apps to customers by introducing automation into the stages of app development. The main concepts attributed to CI/CD are continuous integration, continuous delivery, and continuous deployment. CI/CD is a solution to the problems integrating new code can cause for development and operations teams (AKA \"integration hell\").",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "CI/CID - GitHub",
+          "url": "https://github.com/resources/articles/devops/ci-cd"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is CI/CD? - Redhat",
+          "url": "https://www.redhat.com/en/topics/devops/what-is-ci-cd"
+        },
+        {
+          "raw_type": "article",
+          "title": "Continuous Integration and Continuous Delivery Explained",
+          "url": "https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about CI/CD",
+          "url": "https://app.daily.dev/tags/cicd?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:client--server",
+      "topic_slug": "client--server",
+      "node_id": "mka_DwiboH5sGFhXhk6ez",
+      "title": "Client-Server Architecture",
+      "description": "Client-server architecture is a computing model that separates tasks or workloads between service providers (servers) and service requesters (clients). This architecture is widely used in networked applications, including web applications, where clients interact with servers to access resources, services, and data.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Client-Server Architecture",
+          "url": "https://www.simplilearn.com/what-is-client-server-architecture-article"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:cloud-design-patterns",
+      "topic_slug": "cloud-design-patterns",
+      "node_id": "CxceVdaNCyKDhs0huDtcL",
+      "title": "Cloud Design Patterns",
+      "description": "These design patterns are useful for building reliable, scalable, secure applications in the cloud. The cloud design patterns where each pattern describes the problem that the pattern addresses, considerations for applying the pattern, and an example based on Microsoft Azure. Most patterns include code samples or snippets that show how to implement the pattern on Azure. However, most patterns are ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Cloud Design Patterns",
+          "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Cloud",
+          "url": "https://app.daily.dev/tags/cloud?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:cloud-providers",
+      "topic_slug": "cloud-providers",
+      "node_id": "C0rKd5Rr27Z1_GleoEZxF",
+      "title": "Cloud Providers",
+      "description": "Cloud providers provide a layer of APIs to abstract infrastructure and provision it based on security and billing boundaries. The cloud runs on servers in data centers, but the abstractions cleverly give the appearance of interacting with a single \u201cplatform\u201d or large application. The ability to quickly provision, configure, and secure resources with cloud providers has been key to both the tremend",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Cloud Service Provider",
+          "url": "https://www.techtarget.com/searchitchannel/definition/cloud-service-provider-cloud-provider"
+        },
+        {
+          "raw_type": "article",
+          "title": "What are Cloud Providers?",
+          "url": "https://www.redhat.com/en/topics/cloud-computing/what-are-cloud-providers"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Cloud",
+          "url": "https://app.daily.dev/tags/cloud?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:communication",
+      "topic_slug": "communication",
+      "node_id": "Ac49sOlQKblYK4FZuFHDR",
+      "title": "Communication",
+      "description": "Communication is central to the architect role, since decisions need to be explained to developers, managers, and other stakeholders with different levels of technical understanding. An architect translates business goals into technical direction and also feeds technical constraints back into business conversations. Without strong communication, even a well designed architecture can fail to be ado",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Communication Skills",
+          "url": "https://en.wikipedia.org/wiki/Communication"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:consult--coach",
+      "topic_slug": "consult--coach",
+      "node_id": "LSWlk9A3b6hco9Il_elao",
+      "title": "Consult & Coach",
+      "description": "Consulting and coaching means guiding developers and teams toward better technical practices without necessarily writing the code themselves. Architects often review designs, answer technical questions, and mentor less experienced engineers on patterns and standards. This skill turns an architect's individual knowledge into improvements across the whole team.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Consulting"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:containers",
+      "topic_slug": "containers",
+      "node_id": "l3oeo65FyV5HHvw5n_1wa",
+      "title": "Containers",
+      "description": "Containers are a construct in which cgroups, namespaces, and chroot are used to fully encapsulate and isolate a process. This encapsulated process, called a container image, shares the kernel of the host with other containers, allowing containers to be significantly smaller and faster than virtual machines. These images are designed for portability, allowing for full local testing of a static imag",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "cgroups",
+          "url": "https://en.wikipedia.org/wiki/Cgroups"
+        },
+        {
+          "raw_type": "article",
+          "title": "namespaces",
+          "url": "https://en.wikipedia.org/wiki/Linux_namespaces"
+        },
+        {
+          "raw_type": "article",
+          "title": "chroot",
+          "url": "https://en.wikipedia.org/wiki/Chroot"
+        },
+        {
+          "raw_type": "article",
+          "title": "What are Containers?",
+          "url": "https://cloud.google.com/learn/what-are-containers"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is a Container?",
+          "url": "https://www.docker.com/resources/what-container/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Articles about Containers - The New Stack",
+          "url": "https://thenewstack.io/category/containers/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What are Containers?",
+          "url": "https://www.youtube.com/playlist?list=PLawsLZMfND4nz-WDBZIj8-nbzGFD4S9oz"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Containers",
+          "url": "https://app.daily.dev/tags/containers?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:cqrs-eventual-consistency",
+      "topic_slug": "cqrs-eventual-consistency",
+      "node_id": "RsnN5bt8OhSMjSFmVgw-X",
+      "title": "CQRS, Eventual Consistency",
+      "description": "CQRS, or Command Query Responsibility Segregation, separates the operations that change data from the operations that read data, often using different models for each. This separation pairs naturally with eventual consistency, where updates propagate across a system over time instead of instantly. These patterns are common in distributed systems where strict, immediate consistency would hurt perfo",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "CQRS",
+          "url": "https://martinfowler.com/bliki/CQRS.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to CQRS",
+          "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:datawarehouse-principles",
+      "topic_slug": "datawarehouse-principles",
+      "node_id": "B5YtP8C1A0jB3MOdg0c_q",
+      "title": "Datawarehouses Principles",
+      "description": "Data warehouse principles cover how to design storage systems optimized for analytical queries rather than transactional workloads. This includes concepts like star and snowflake schemas, fact and dimension tables, and strategies for handling historical data changes. Understanding these principles helps an architect design systems that support reliable reporting and business intelligence.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Toptal Developers Website",
+          "url": "https://www.toptal.com/data-science/data-warehouse-concepts-principles"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:ddd",
+      "topic_slug": "ddd",
+      "node_id": "IIelzs8XYMPnXabFKRI51",
+      "title": "DDD",
+      "description": "Domain driven design structures software around the business domain it serves, using a shared language between developers and domain experts called the ubiquitous language. It introduces concepts like bounded contexts and aggregates to manage complexity in large systems. DDD is especially useful when building software for complex business domains where getting the model right matters more than tec",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "DDD Starter Modelling Process",
+          "url": "https://github.com/ddd-crew/ddd-starter-modelling-process/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Domain Driven Design Quickly",
+          "url": "https://web.archive.org/web/20230606035225/https://matfrs2.github.io/RS2/predavanja/literatura/Avram%20A,%20Marinescu%20F.%20-%20Domain%20Driven%20Design%20Quickly.pdf"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Architecture",
+          "url": "https://app.daily.dev/tags/architecture?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:decision-making",
+      "topic_slug": "decision-making",
+      "node_id": "MSDo0nPk_ghRYkZS4MAQ_",
+      "title": "Decision Making",
+      "description": "Decision making covers evaluating trade offs and choosing a direction when there is no single obviously correct answer. Architects constantly weigh factors like cost, performance, team skill, and time to market when picking a technology or pattern. Good decision making relies on gathering enough information without getting stuck waiting for a perfect answer that may never come.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Decision Making - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Decision-making"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:design--architecture",
+      "topic_slug": "design--architecture",
+      "node_id": "fBd2m8tMJmhuNSaakrpg4",
+      "title": "Design & Architecture",
+      "description": "This skill covers applying design principles and architectural patterns to real systems, not just knowing them in theory. It means knowing when to use a microservices approach versus a monolith, or when a simple layered design is enough. Strong design and architecture skills come from experience applying patterns across different kinds of projects and learning from what worked and what did not.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Software Design Roadmap",
+          "url": "https://roadmap.sh/software-design-architecture"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "Design Patterns for Humans",
+          "url": "https://github.com/nilbuild/design-patterns-for-humans"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:distributed-systems",
+      "topic_slug": "distributed-systems",
+      "node_id": "j7OP6RD_IAU6HsyiGaynx",
+      "title": "Distributed Systems",
+      "description": "Distributed systems consist of multiple independent components running on different machines that communicate over a network to work as a single system. They introduce challenges like network latency, partial failures, and data consistency that do not exist in single machine applications. Architects designing distributed systems need to plan for failure as a normal condition rather than an excepti",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Free Distributed Systems book from Maarten van Steen",
+          "url": "https://www.distributed-systems.net/index.php/books/ds3/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Distributed Architectures",
+          "url": "https://estuary.dev/distributed-architecture/"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Architecture",
+          "url": "https://app.daily.dev/tags/architecture?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:documentation",
+      "topic_slug": "documentation",
+      "node_id": "5D-kbQ520k1D3fCtD01T7",
+      "title": "Documentation",
+      "description": "Architectural documentation is sometimes more and sometimes less important. Important documents are for example architectural decisions or code guidelines. Initial documentation is often required before coding starts and need to be refined continuously. Other documentation can be automatically generated as code can also be documentation, e.g. UML class diagrams.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Documentation"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Ultimate Guide To Software Architecture Documentation",
+          "url": "https://www.workingsoftware.dev/software-architecture-documentation-the-ultimate-guide/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:emc-dms",
+      "topic_slug": "emc-dms",
+      "node_id": "YfYviOXqGVp9C6DuhqBrn",
+      "title": "EMC and DMS",
+      "description": "EMC's document management systems provide enterprise level tools for storing, organizing, and controlling access to documents and records at scale. These systems focus on compliance, versioning, and retention policies important for regulated industries. Architects integrating with EMC DMS need to understand how document workflows and metadata fit into a broader enterprise system.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "DMS",
+          "url": "https://www.opentext.com/products/documentum-content-management"
+        },
+        {
+          "raw_type": "article",
+          "title": "EMC Software",
+          "url": "https://www.spiceworks.com/collaboration/content-collaboration/articles/top-10-enterprise-content-management-software-systems/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:enterprise-architecture",
+      "topic_slug": "enterprise-architecture",
+      "node_id": "vlW07sc-FQnxPMjDMn8_F",
+      "title": "Enterprise Level Architecture",
+      "description": "The highest level of architecture. Focus on multiple solutions. High level, abstract design, which needs to be detailed out by solution or application architects. Communication is across the organization.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Enterprise Software Architecture",
+          "url": "https://medium.com/@hsienwei/enterprise-software-architecture-957288829daa"
+        },
+        {
+          "raw_type": "article",
+          "title": "Enterprise Architect vs Software Architect",
+          "url": "https://www.linkedin.com/pulse/enterprise-architect-vs-software-who-you-luigi-saggese/"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Architecture",
+          "url": "https://app.daily.dev/tags/architecture?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:enterprise-software",
+      "topic_slug": "enterprise-software",
+      "node_id": "8yALyPVUZPtd7LX3GrO1e",
+      "title": "Enterprise Software",
+      "description": "Enterprise software refers to software applications that are designed to meet the needs of large organizations or enterprises. These applications are typically complex, scalable, and capable of integrating with other systems to support a wide range of business functions. Enterprise software is used to improve efficiency, streamline processes, and enhance productivity across various departments wit",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Enterprise Software",
+          "url": "https://en.wikipedia.org/wiki/Enterprise_software"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:esb-soap",
+      "topic_slug": "esb-soap",
+      "node_id": "fELnBA0eOoE-d9rSmDJ8l",
+      "title": "ESB and SOAP",
+      "description": "ESB (Enterprise Service Bus) and SOAP (Simple Object Access Protocol) are two technologies that enable communication between different systems. ESB is a software architecture that allows for the integration of various systems, such as databases, web services, and mobile applications. SOAP is a messaging protocol that enables the exchange of structured data between systems over the internet.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understanding SOAP: The Old Guard of Web Services",
+          "url": "https://mariomthree.medium.com/understanding-soap-the-old-guard-of-web-services-6ca89d8ec312"
+        },
+        {
+          "raw_type": "article",
+          "title": "Enterprise Service Bus",
+          "url": "https://en.wikipedia.org/wiki/Enterprise_service_bus"
+        },
+        {
+          "raw_type": "article",
+          "title": "ESB - IBM",
+          "url": "https://www.ibm.com/topics/esb"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:estimate-and-evaluate",
+      "topic_slug": "estimate-and-evaluate",
+      "node_id": "m0ZYdqPFDoHOPo18wKyvV",
+      "title": "Estimate and Evaluate",
+      "description": "Estimating and evaluating involves judging the time, cost, and effort a technical solution will require, as well as assessing whether an existing system meets its goals. Architects use this skill when planning new projects and when reviewing whether current systems are still fit for purpose. Accurate estimates depend on experience and an honest understanding of a team's capabilities.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Evaluating Software Architectures",
+          "url": "https://medium.com/oolooroo/evaluating-digital-architectures-a-deep-dive-into-modern-software-systems-analysis-dff3b0d2da8f"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Evaluate Software Architecture: Methods and Tools",
+          "url": "https://www.linkedin.com/advice/0/what-most-common-software-architecture-evaluation"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:etl-datawarehouses",
+      "topic_slug": "etl-datawarehouses",
+      "node_id": "JUFE4OQhnXOt1J_MG-Sjf",
+      "title": "ETL Datawarehouses",
+      "description": "ETL (Extract, Transform, Load) is a key process in data warehousing, enabling the integration of data from multiple sources into a centralized database. The process begins by **extracting** data from original sources, followed by **transforming** it to ensure quality, deduplication, and combination, and finally **loading** it into the target database. ETL tools streamline this process, allowing co",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is ETL?",
+          "url": "https://www.snowflake.com/guides/what-etl"
+        },
+        {
+          "raw_type": "video",
+          "title": "ETL Explained",
+          "url": "https://www.youtube.com/watch?v=OW5OgsLpDCQ"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about ETL",
+          "url": "https://app.daily.dev/tags/etl?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:firewalls",
+      "topic_slug": "firewalls",
+      "node_id": "Hqk_GGsFi14SI5fgPSoGV",
+      "title": "Firewalls",
+      "description": "A Firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization's previously established security policies. Firewalls usually sit between a trusted network and an untrusted network; oftentimes the untrusted network is the Internet. For example, office networks often use a firewall to protect their network from online threats.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is a Firewall? - Cloudflare",
+          "url": "https://www.cloudflare.com/learning/security/what-is-a-firewall/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Firewall - Cisco",
+          "url": "https://www.cisco.com/site/us/en/learn/topics/security/what-is-a-firewall.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:frameworks",
+      "topic_slug": "frameworks",
+      "node_id": "hjlkxYZS7Zf9En3IUS-Wm",
+      "title": "Architect Frameworks",
+      "description": "This section covers frameworks and methodologies used specifically for enterprise architecture modeling and business analysis, distinct from software development frameworks. They provide structured approaches for documenting and communicating architecture at an organizational level. Familiarity with these frameworks matters most for architects working in large, formally structured enterprises.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Architect Frameworks",
+          "url": "https://www.techtarget.com/searchapparchitecture/definition/enterprise-architecture-framework"
+        },
+        {
+          "raw_type": "article",
+          "title": "Common Software Architecture Frameworks",
+          "url": "https://medium.com/@publicapplicationcenter/tutorial-notes-common-software-architecture-frameworks-1a9915e1d806"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:functional-programming",
+      "topic_slug": "functional-programming",
+      "node_id": "6FDGecsHbqY-cm32yTZJa",
+      "title": "Functional Programming",
+      "description": "Functional programming treats computation as the evaluation of pure functions, avoiding shared state and mutable data where possible. This style makes code easier to test and reason about, since functions with no side effects behave predictably given the same input. Concepts from functional programming, like immutability and pure functions, increasingly appear even in languages that are not purely",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Functional Programming",
+          "url": "https://en.wikipedia.org/wiki/Functional_programming"
+        },
+        {
+          "raw_type": "article",
+          "title": "Functional Programming with JavaScript",
+          "url": "https://www.telerik.com/blogs/functional-programming-javascript"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learning Functional Programming",
+          "url": "https://youtube.com/watch?v=e-5obm1G_FY"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:git",
+      "topic_slug": "git",
+      "node_id": "ZEzYb-i55hBe9kK3bla94",
+      "title": "Git",
+      "description": "Git is a distributed version control system that tracks changes to code over time and allows multiple developers to work on the same project without overwriting each other's work. It supports branching and merging workflows that let teams develop features in isolation before combining them. Almost every modern software project relies on Git as its foundation for source control.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Git & GitHub Roadmap",
+          "url": "https://roadmap.sh/git-github"
+        },
+        {
+          "raw_type": "course",
+          "title": "Why use Git? (Interactive Lesson)",
+          "url": "https://inter-git.com/lessons/introduction"
+        },
+        {
+          "raw_type": "article",
+          "title": "Git by Example - Learn Version Control with Bite-sized Lessons",
+          "url": "https://antonz.org/git-by-example/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Tutorial: Git for Absolutely Everyone",
+          "url": "https://thenewstack.io/tutorial-git-for-absolutely-everyone/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Git & GitHub Crash Course For Beginners",
+          "url": "https://www.youtube.com/watch?v=SWYqp7iY_Tc"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:github",
+      "topic_slug": "github",
+      "node_id": "PyTuVs08_z4EhLwhTYzFu",
+      "title": "GitHub",
+      "description": "GitHub has become a central hub for open-source projects and is widely used by developers, companies, and organizations for both private and public repositories. It was acquired by Microsoft in 2018 but continues to operate as a relatively independent entity. GitHub's popularity has made it an essential tool in modern software development workflows and a key platform for showcasing coding projects",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Git & GitHub Roadmap",
+          "url": "https://roadmap.sh/git-github"
+        },
+        {
+          "raw_type": "official",
+          "title": "GitHub",
+          "url": "https://github.com"
+        },
+        {
+          "raw_type": "official",
+          "title": "GitHub: Quickstart",
+          "url": "https://docs.github.com/en/get-started/quickstart/hello-world"
+        },
+        {
+          "raw_type": "official",
+          "title": "GitHub Documentation",
+          "url": "https://docs.github.com/en/get-started/quickstart"
+        },
+        {
+          "raw_type": "official",
+          "title": "Learn GitHub by doing",
+          "url": "https://skills.github.com/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is GitHub?",
+          "url": "https://www.youtube.com/watch?v=w3jLJU7DT5E"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about GitHub",
+          "url": "https://app.daily.dev/tags/github?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:go",
+      "topic_slug": "go",
+      "node_id": "nKlM9k4qAh4wBFXqM-2kC",
+      "title": "Go",
+      "description": "Go is an open source programming language supported by Google. Go can be used to write cloud services, CLI tools, used for API development, and much more.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Go Roadmap",
+          "url": "https://roadmap.sh/golang"
+        },
+        {
+          "raw_type": "official",
+          "title": "A Tour of Go \u2013 Go Basics",
+          "url": "https://go.dev/tour/welcome/1"
+        },
+        {
+          "raw_type": "official",
+          "title": "Go Reference Documentation",
+          "url": "https://go.dev/doc/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go by Example - annotated example programs",
+          "url": "https://gobyexample.com/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:graphql",
+      "topic_slug": "graphql",
+      "node_id": "Sp3FdPT4F9YnTGvlE_vyq",
+      "title": "Graphql",
+      "description": "GraphQL is a query language and runtime for APIs, developed by Facebook. GraphQL's flexibility and efficiency make it popular for building complex applications, especially those with diverse client requirements. It's particularly useful for mobile applications where bandwidth efficiency is crucial. While it requires a paradigm shift from REST, many developers and organizations find GraphQL's benef",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated GraphQL Roadmap",
+          "url": "https://roadmap.sh/graphql"
+        },
+        {
+          "raw_type": "official",
+          "title": "Introduction to GraphQL",
+          "url": "https://graphql.org/learn/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to GraphQL",
+          "url": "https://thenewstack.io/introduction-to-graphql/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Execute a Simple GraphQL Query",
+          "url": "https://thenewstack.io/how-to-execute-a-simple-graphql-query/"
+        },
+        {
+          "raw_type": "video",
+          "title": "GraphQL Course for Beginners",
+          "url": "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:grpc",
+      "topic_slug": "grpc",
+      "node_id": "priDGksAvJ05YzakkTFtM",
+      "title": "gRPC",
+      "description": "gRPC is a high performance remote procedure call framework that uses HTTP/2 and Protocol Buffers to enable fast, efficient communication between services. It supports streaming and strongly typed contracts, making it a common choice for internal service to service communication in microservices architectures. Compared to REST, gRPC generally offers better performance but is less human readable and",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "gRPC Website",
+          "url": "https://grpc.io/"
+        },
+        {
+          "raw_type": "official",
+          "title": "gRPC Introduction",
+          "url": "https://grpc.io/docs/what-is-grpc/introduction/"
+        },
+        {
+          "raw_type": "official",
+          "title": "gRPC Core Concepts",
+          "url": "https://grpc.io/docs/what-is-grpc/core-concepts/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Stephane Maarek - gRPC Introduction",
+          "url": "https://youtu.be/XRXTsQwyZSU"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:hadoop-spark-mapreduce",
+      "topic_slug": "hadoop-spark-mapreduce",
+      "node_id": "92GG4IRZ3FijumC94aL-T",
+      "title": "Spark, Hadoop MapReduce",
+      "description": "Hadoop, Spark, and MapReduce are frameworks for processing large datasets across clusters of machines. MapReduce, the original model, splits processing into map and reduce steps distributed across nodes, while Spark improves on this with in memory processing for much faster performance. Architects consider these tools when a system needs to process data at a scale that a single machine cannot hand",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Apache Spark",
+          "url": "https://spark.apache.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Spark vs Hadoop MapReduce",
+          "url": "https://www.integrate.io/blog/apache-spark-vs-hadoop-mapreduce"
+        },
+        {
+          "raw_type": "video",
+          "title": "Hadoop explained in 5 minutes",
+          "url": "https://www.youtube.com/watch?v=aReuLtY0YMI"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Apache Spark",
+          "url": "https://app.daily.dev/tags/spark?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:hadoop",
+      "topic_slug": "hadoop",
+      "node_id": "I_VjjmMK52_tS8qjQUspN",
+      "title": "Hadoop",
+      "description": "Hadoop is an open source framework for distributed storage and processing of large datasets across clusters of commodity hardware. Its core components include HDFS for storage and MapReduce for processing, though many projects now pair Hadoop's storage with faster engines like Spark. It remains common in enterprises with established big data infrastructure built around it.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Apache Hadoop",
+          "url": "https://hadoop.apache.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Apache Hadoop - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Apache_Hadoop"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Apache Hadoop",
+          "url": "https://app.daily.dev/tags/apache-hadoop?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:hashing-algorithms",
+      "topic_slug": "hashing-algorithms",
+      "node_id": "7tBAD0ox9hTK4D483GTRo",
+      "title": "Hashing Algorithms",
+      "description": "Hashing algorithms are used to generate a unique value for a given input. This value is called a hash. Hashing algorithms are used to verify the integrity of data, to store passwords, and to generate unique identifiers for data.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Hashing?",
+          "url": "https://www.codecademy.com/resources/blog/what-is-hashing/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Hashing Algorithms and Security - Computerphile",
+          "url": "https://www.youtube.com/watch?v=b4b8ktEV4Bg"
+        },
+        {
+          "raw_type": "video",
+          "title": "Top Hashing Algorithms In Cryptography | MD5 and SHA 256 Algorithms Explained | Simplilearn",
+          "url": "https://www.youtube.com/watch?v=Plp4F3ZfC7A"
+        },
+        {
+          "raw_type": "video",
+          "title": "SHA: Secure Hashing Algorithm - Computerphile",
+          "url": "https://www.youtube.com/watch?v=DMtFhACPnTY"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:how-to-code",
+      "topic_slug": "how-to-code",
+      "node_id": "77KvWCA1oHSGgDKBTwjv7",
+      "title": "How to Code",
+      "description": "An architect needs strong coding skills to design realistic solutions and earn credibility with the development team. Writing code themselves helps them understand the practical constraints of the technologies they choose and spot problems before they become costly. Staying hands on also keeps their architectural decisions grounded in real implementation experience rather than theory alone.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to Code \u2013 Coding for Beginners and How to Learn Programming for Free",
+          "url": "https://www.freecodecamp.org/news/how-to-code-coding-for-beginners-and-how-to-learn-programming-for-free/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Technology Radar",
+          "url": "https://www.thoughtworks.com/radar"
+        },
+        {
+          "raw_type": "video",
+          "title": "coding is easy, actually",
+          "url": "https://www.youtube.com/watch?v=qkFYqY3vr84"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:http-https",
+      "topic_slug": "http-https",
+      "node_id": "Nq6o6Ty8VyNRsvg-UWp7D",
+      "title": "HTTP, HTTPS",
+      "description": "HTTP is the protocol that underlies most communication on the web, defining how clients and servers exchange requests and responses. HTTPS adds encryption on top of HTTP using TLS, protecting data in transit from being read or altered by third parties. Nearly every modern web architecture relies on a solid understanding of how these protocols handle requests, headers, and status codes.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is HTTPS?",
+          "url": "https://www.cloudflare.com/en-gb/learning/ssl/what-is-https/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is HTTP?",
+          "url": "https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Overview of HTTP",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
+        },
+        {
+          "raw_type": "article",
+          "title": "Everything you need to know about HTTP",
+          "url": "https://cs.fyi/guide/http-in-depth"
+        },
+        {
+          "raw_type": "article",
+          "title": "HTTP/3 From A To Z: Core Concepts",
+          "url": "https://www.smashingmagazine.com/2021/08/http3-core-concepts-part1/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Why HTTPS Matters",
+          "url": "https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https"
+        },
+        {
+          "raw_type": "article",
+          "title": "Enabling HTTPS on Your Servers",
+          "url": "https://developers.google.com/web/fundamentals/security/encrypt-in-transit/enable-https"
+        },
+        {
+          "raw_type": "video",
+          "title": "HTTP Crash Course & Exploration",
+          "url": "https://www.youtube.com/watch?v=iYM2zFP3Zn0"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:iaf",
+      "topic_slug": "iaf",
+      "node_id": "wFu9VO48EYbIQrsM8YUCj",
+      "title": "Iaf",
+      "description": "The Integrated Architecture Framework is a methodology for enterprise architecture that structures architecture work across business, information, and technology domains. It provides a consistent way to model how different aspects of an organization's architecture relate to each other. Architects use frameworks like IAF when working in organizations that require formal architecture governance.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Integrated_Architecture_Framework"
+        },
+        {
+          "raw_type": "article",
+          "title": "IAF PDF",
+          "url": "https://www.capgemini.com/wp-content/uploads/2018/03/architecture-for-the-information-age.pdf"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:ibm-bpm",
+      "topic_slug": "ibm-bpm",
+      "node_id": "5EVecZmvor09LjD7WR_Y9",
+      "title": "IBM BPM",
+      "description": "IBM Business Process Manager is a platform for modeling, automating, and monitoring business processes within an organization. It provides tools for both business analysts and developers to design workflows and integrate them with existing enterprise systems. Architects encounter IBM BPM in enterprises that have standardized on IBM's middleware stack for process automation.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Overview BPM",
+          "url": "https://www.ibm.com/docs/en/bpm/8.5.5?topic=manager-business-process-overview"
+        },
+        {
+          "raw_type": "video",
+          "title": "BPM Demo",
+          "url": "https://www.youtube.com/watch?v=6yn4nCWMNLI"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about IBM",
+          "url": "https://app.daily.dev/tags/ibm?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:important-skills-to-learn",
+      "topic_slug": "important-skills-to-learn",
+      "node_id": "lBtlDFPEQvQ_xtLtehU0S",
+      "title": "Important Skills to Learn",
+      "description": "Beyond technical knowledge, a software architect needs skills like clear communication, sound decision making, and the ability to simplify complex problems. These skills help them lead teams, justify technical choices to non technical stakeholders, and keep projects moving forward. Building these skills alongside technical expertise is what separates a senior developer from an effective architect.",
+      "resources": []
+    },
+    {
+      "skill_id": "software-architect:infrastructure-as-code",
+      "topic_slug": "infrastructure-as-code",
+      "node_id": "igf9yp1lRdAlN5gyQ8HHC",
+      "title": "Infrastructure as Code",
+      "description": "Infrastructure as code manages servers, networks, and other infrastructure through machine readable configuration files instead of manual setup. Tools like Terraform or CloudFormation let teams version, review, and repeat infrastructure changes just like application code. Architects rely on this approach to ensure environments are consistent and reproducible across development, testing, and produc",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Infrastructure as Code",
+          "url": "https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac"
+        },
+        {
+          "raw_type": "article",
+          "title": "GUIs, CLI, APIs: Learn Basic Terms of Infrastructure-as-Code",
+          "url": "https://thenewstack.io/guis-cli-apis-learn-basic-terms-of-infrastructure-as-code/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Infrastructure as Code?",
+          "url": "https://www.youtube.com/watch?v=zWw2wuiKd5o"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Infrastructure as Code? Difference of Infrastructure as Code Tools",
+          "url": "https://www.youtube.com/watch?v=POPP2WTJ8es"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introduction to Infrastructure as Code",
+          "url": "https://www.youtube.com/watch?v=zWw2wuiKd5o"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Infrastructure",
+          "url": "https://app.daily.dev/tags/infrastructure?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:itil",
+      "topic_slug": "itil",
+      "node_id": "Rq1Wi-cHjS54SYo-Btp-e",
+      "title": "ITIL",
+      "description": "ITIL is a framework for IT service management, focused on aligning IT services with the needs of the business through defined processes like incident, change, and problem management. It is commonly adopted in enterprises that need consistent, auditable processes for running IT operations. Architects benefit from understanding ITIL when their systems must integrate with an organization's existing s",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "ITIL Documentation",
+          "url": "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is ITIL?",
+          "url": "https://www.youtube.com/watch?v=wgnpfMK8vDk"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:java--kotlin--scala--swift",
+      "topic_slug": "java--kotlin--scala--swift",
+      "node_id": "a5DB_hsD4bAf8BtHNFNPo",
+      "title": "Java/Kotlin/Scala",
+      "description": "*   **Java**: Java is a widely-used, object-oriented programming language known for its platform independence, reliability, and scalability. It\u2019s commonly used for building large-scale enterprise applications, Android development, and web services. Java\u2019s extensive libraries, frameworks, and strong community support make it a popular choice for developers. *   **Scala**: Scala is a statically-type",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Java Roadmap",
+          "url": "https://roadmap.sh/java"
+        },
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Kotlin Roadmap",
+          "url": "https://roadmap.sh/kotlin"
+        },
+        {
+          "raw_type": "official",
+          "title": "Java",
+          "url": "https://www.java.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Kotlin",
+          "url": "https://kotlinlang.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Scala Documentation",
+          "url": "https://docs.scala-lang.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Swift Docs",
+          "url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:javascript--typescript",
+      "topic_slug": "javascript--typescript",
+      "node_id": "bhP5gMpRVebSFpCeHVXBj",
+      "title": "JavaScript / TypeScript",
+      "description": "JavaScript is the primary language of the web, running in browsers and, through Node.js, on servers as well. TypeScript adds static typing on top of JavaScript, catching errors earlier and making large codebases easier to maintain. Architects working on web or full stack projects need to understand both languages to evaluate frontend and backend technology choices.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated JavaScript Roadmap",
+          "url": "https://roadmap.sh/javascript"
+        },
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated TypedScript Roadmap",
+          "url": "https://roadmap.sh/typescript"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Modern JavaScript Tutorial",
+          "url": "https://javascript.info/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:kanban",
+      "topic_slug": "kanban",
+      "node_id": "O7H6dt3Z7EKohxfJzwbPM",
+      "title": "Kanban",
+      "description": "Kanban is an agile method that visualizes work on a board with columns representing stages, helping teams manage flow and limit work in progress. It focuses on continuous delivery rather than fixed length iterations, making it flexible for teams with varying or unpredictable workloads. Architects use Kanban boards to track technical tasks and see bottlenecks in a team's workflow.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What Is Kanban? A Simple Guide to Improve Efficiency.",
+          "url": "https://businessmap.io/kanban-resources/getting-started/what-is-kanban"
+        },
+        {
+          "raw_type": "article",
+          "title": "Kanban Methodology: The Simplest Agile Framework",
+          "url": "https://kissflow.com/project/agile/kanban-methodology/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Kanban Methodology? The Ultimate Guide",
+          "url": "https://www.wrike.com/kanban-guide/what-is-kanban/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:layered",
+      "topic_slug": "layered",
+      "node_id": "05hLO2_A8Tr6cLJGFRhOh",
+      "title": "Layered Architecture",
+      "description": "Layered architecture organizes a system into horizontal layers, such as presentation, business logic, and data access, where each layer only communicates with the ones directly above or below it. This separation makes it easier to change one layer without affecting the others, such as swapping a database without touching business rules. It is one of the oldest and most widely understood architectu",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Layered_architecture"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:less",
+      "topic_slug": "less",
+      "node_id": "qwpsGRFgzAYstM7bJA2ZJ",
+      "title": "Less",
+      "description": "**LeSS** (Large-Scale-Scrum) is an agile framework designed to scale Scrum across multiple teams working on a single product. It adheres to Scrum's principles, emphasizing simplicity and continuous improvement. LeSS encourages coordination between teams by using a single backlog and a common Product Owner. Each team is responsible for parts of the product, but they collaborate in its joint develop",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "LeSS Framework",
+          "url": "https://less.works/less/framework"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introduction to LeSS",
+          "url": "https://www.youtube.com/watch?v=1BZf_Oa7W94"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:levels-of-architecture",
+      "topic_slug": "levels-of-architecture",
+      "node_id": "2sR4KULvAUUoOtopvsEBs",
+      "title": "Levels of Architecture",
+      "description": "Architecture can be described at different levels of scope, ranging from a single application to an entire organization. Application architecture deals with the internals of one system, solution architecture connects several systems to solve a business problem, and enterprise architecture aligns technology strategy across a whole company. Each level requires a different set of concerns and a diffe",
+      "resources": []
+    },
+    {
+      "skill_id": "software-architect:linux--unix",
+      "topic_slug": "linux--unix",
+      "node_id": "XnvlRrOhdoMsiGwGEhBro",
+      "title": "Linux / Unix",
+      "description": "Knowledge of UNIX is a must for almost all kind of development as most of the codes that you write is most likely going to be finally deployed on a UNIX/Linux machine. Linux has been the backbone of the free and open source software movement, providing a simple and elegant operating system for almost all your needs.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Linux Roadmap",
+          "url": "https://roadmap.sh/linux"
+        },
+        {
+          "raw_type": "course",
+          "title": "Coursera - Unix Courses",
+          "url": "https://www.coursera.org/courses?query=unix"
+        },
+        {
+          "raw_type": "article",
+          "title": "Unix & Linux Tutorial",
+          "url": "https://www.tutorialspoint.com/unix/index.htm"
+        },
+        {
+          "raw_type": "article",
+          "title": "Linux Basics",
+          "url": "https://dev.to/rudrakshi99/linux-basics-2onj"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Operating System - Crash Course",
+          "url": "https://www.youtube.com/watch?v=ROjZy1WbCIA"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:management",
+      "topic_slug": "management",
+      "node_id": "UyIwiIiKaa6LTQaqzbCam",
+      "title": "Management",
+      "description": "Management covers the certifications, methodologies, and organizational practices an architect encounters when working within structured project and process frameworks. This includes formal project management certifications as well as agile methodologies used to organize team work. Knowledge here helps an architect operate effectively within an organization's existing processes.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Management"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:marketing-skills",
+      "topic_slug": "marketing-skills",
+      "node_id": "YW6j3Sg511dXToTcwSnOS",
+      "title": "Marketing Skills",
+      "description": "Marketing skills help an architect present and sell technical ideas internally, convincing stakeholders and teams to adopt a proposed direction. This includes framing technical benefits in terms that matter to business decision makers, such as cost savings or reduced risk. Even the best architectural design needs buy in to actually get implemented.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Marketing Skills for Architects",
+          "url": "https://openasset.com/blog/marketing-for-architects/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:messaging-queues",
+      "topic_slug": "messaging-queues",
+      "node_id": "4NVdEbmpQVHpBc7582S6E",
+      "title": "Messaging queues",
+      "description": "Message queuing makes it possible for applications to communicate asynchronously, by sending messages to each other via a queue. A message queue provides temporary storage between the sender and the receiver so that the sender can keep operating without interruption when the destination program is busy or not connected.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Messaging Queues",
+          "url": "https://aws.amazon.com/message-queue/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Messaging Queues Tutorial",
+          "url": "https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_message_queues.htm"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:microfrontends",
+      "topic_slug": "microfrontends",
+      "node_id": "vpko5Kyf6BZ5MHpxXOKaf",
+      "title": "Microfrontends",
+      "description": "Microfrontends is an architectural style where independently deliverable frontend applications built by different teams using different technologies are composed into a greater whole. Simply, a Micro-Frontend is a portion of a webpage (not the entire page). There is a \u201cHost\u201d or a \u201cContainer\u201d page in the Micro-Frontend Architecture page that can host one or more Micro-Frontends.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Micro Frontends",
+          "url": "https://micro-frontends.org/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Micro-Frontends Course - Beginner to Expert",
+          "url": "https://www.youtube.com/watch?v=lKKsjpH09dU"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:microservices",
+      "topic_slug": "microservices",
+      "node_id": "b6lCGw82qKpUmsxe1r1f5",
+      "title": "Microservices",
+      "description": "Microservice architecture is a pattern in which highly cohesive, loosely coupled services are separately developed, maintained, and deployed. Each component handles an individual function, and when combined, the application handles an overall business function.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Pattern: Microservice Architecture",
+          "url": "https://microservices.io/patterns/microservices.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Microservices?",
+          "url": "https://smartbear.com/solutions/microservices/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Microservices 101",
+          "url": "https://thenewstack.io/microservices-101/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Primer: Microservices Explained",
+          "url": "https://thenewstack.io/primer-microservices-explained/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Articles about Microservices",
+          "url": "https://thenewstack.io/category/microservices/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:ms-dynamics",
+      "topic_slug": "ms-dynamics",
+      "node_id": "gdtI0H_PzzTj_aFQn_NeA",
+      "title": "MS Dynamics",
+      "description": "Microsoft Dynamics is a suite of enterprise resource planning and customer relationship management applications used to manage business processes like sales, finance, and operations. It integrates closely with other Microsoft products, making it a common choice for organizations already invested in the Microsoft ecosystem. Architects working with Dynamics need to understand its data model and inte",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Everything you ever wanted to know about Microsoft Dynamics",
+          "url": "https://www.nigelfrank.com/insights/everything-you-ever-wanted-to-know-about-dynamics-crm"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Microsoft Dynamics?",
+          "url": "https://www.youtube.com/watch?v=ogfclHWgqgE"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:mvc-mvp-mvvm",
+      "topic_slug": "mvc-mvp-mvvm",
+      "node_id": "jj5otph6mEYiR-oU5WVtT",
+      "title": "MVC, MVP, MVVM",
+      "description": "MVC, MVP, and MVVM are patterns for separating an application's data, logic, and user interface into distinct layers. MVC splits responsibilities between model, view, and controller, MVP replaces the controller with a presenter that handles view logic, and MVVM introduces a view model that binds data to the view automatically. Choosing between them depends on the platform and how much automatic da",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "MVC, MVP and MVVM Design Pattern",
+          "url": "https://medium.com/@ankit.sinhal/mvc-mvp-and-mvvm-design-pattern-6e169567bbad"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about General Programming",
+          "url": "https://app.daily.dev/tags/general-programming?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:net-framework-based",
+      "topic_slug": "net-framework-based",
+      "node_id": "D1IXOBUrrXf5bXhVu9cmI",
+      "title": ".NET Framework Based",
+      "description": "The .NET ecosystem, built around languages like C#, is widely used for enterprise applications, especially in Windows centric environments. It provides a large set of libraries and tools for building web, desktop, and cloud applications. An architect working in enterprise settings often needs to understand .NET's strengths around tooling, performance, and integration with Microsoft infrastructure.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": ".NET Website",
+          "url": "https://dotnet.microsoft.com/en-us/"
+        },
+        {
+          "raw_type": "official",
+          "title": "What is .NET?",
+          "url": "https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet"
+        },
+        {
+          "raw_type": "official",
+          "title": "Why Choose .NET?",
+          "url": "https://dotnet.microsoft.com/en-us/platform/why-choose-dotnet"
+        },
+        {
+          "raw_type": "official",
+          "title": "C# Documentation",
+          "url": "https://learn.microsoft.com/en-us/dotnet/csharp/?WT.mc_id=dotnet-35129-website"
+        },
+        {
+          "raw_type": "official",
+          "title": "F# Documentation",
+          "url": "https://learn.microsoft.com/en-us/dotnet/fsharp/?WT.mc_id=dotnet-35129-website"
+        },
+        {
+          "raw_type": "official",
+          "title": "Visual Basic Documentation",
+          "url": "https://learn.microsoft.com/en-us/dotnet/visual-basic/?WT.mc_id=dotnet-35129-website"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:networks",
+      "topic_slug": "networks",
+      "node_id": "cBWJ6Duw99tSKr7U6OW3A",
+      "title": "Networks",
+      "description": "A computer network is a set of computers sharing resources located on or provided by network nodes. Computers use common communication protocols over digital interconnections to communicate with each other. These interconnections are made up of telecommunication network technologies based on physically wired, optical, and wireless radio-frequency methods that may be arranged in a variety of networ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Networking - IBM",
+          "url": "https://www.ibm.com/topics/networking"
+        },
+        {
+          "raw_type": "article",
+          "title": "Networking - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Networking"
+        },
+        {
+          "raw_type": "article",
+          "title": "Networking Basics",
+          "url": "https://www.cisco.com/c/en/us/solutions/small-business/resource-center/networking/networking-basics.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:nosql-databases",
+      "topic_slug": "nosql-databases",
+      "node_id": "57liQPaPyVpE-mdLnsbi0",
+      "title": "Nosql databases",
+      "description": "NoSQL databases store data in flexible formats like documents, key value pairs, or graphs, without requiring a fixed schema. They often trade strict consistency for better scalability and performance, making them suitable for large scale or rapidly changing data. Architects choose NoSQL databases when the data model does not fit neatly into relational tables or when horizontal scaling is a priorit",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "NoSQL Database - AWS",
+          "url": "https://aws.amazon.com/nosql/"
+        },
+        {
+          "raw_type": "article",
+          "title": "NoSQL Databases",
+          "url": "https://www.mongodb.com/resources/basics/databases/nosql-explained"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:oop",
+      "topic_slug": "oop",
+      "node_id": "AMDLJ_Bup-AY1chl_taV3",
+      "title": "OOP",
+      "description": "Object oriented programming organizes code around objects that combine data and behavior, using concepts like encapsulation, inheritance, and polymorphism. It helps model real world entities and relationships in a way that keeps related code together and reusable. Most enterprise architecture patterns and languages rely on object oriented principles as a foundation.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "OOP - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Object-oriented_programming"
+        },
+        {
+          "raw_type": "article",
+          "title": "Basic Concepts of Object-Oriented Programming",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming"
+        },
+        {
+          "raw_type": "video",
+          "title": "FreeCodeCamp - (OOP) in C++",
+          "url": "https://www.youtube.com/watch?v=wN0x9eZLix4"
+        },
+        {
+          "raw_type": "video",
+          "title": "FreeCodeCamp - (OPP) in Python",
+          "url": "https://www.youtube.com/watch?v=Ej_02ICOIgs"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:operations-knowledge",
+      "topic_slug": "operations-knowledge",
+      "node_id": "EdJhuNhMSWjeVxGW-RZtL",
+      "title": "Operations Knowledge",
+      "description": "Operational knowledge refers to the understanding and insights that software architects need to effectively design, implement, and manage software systems throughout their lifecycle. This knowledge encompasses various aspects of software development, deployment, and maintenance, and it is crucial for ensuring that systems operate efficiently, reliably, and securely.",
+      "resources": []
+    },
+    {
+      "skill_id": "software-architect:osi",
+      "topic_slug": "osi",
+      "node_id": "Mt5W1IvuHevNXVRlh7z26",
+      "title": "OSI and TCP/IP Models",
+      "description": "The OSI and TCP/IP model is used to help the developer to design their system for interoperability. The OSI model has 7 layers while the TCP/IP model has a more summarized form of the OSI model only consisting 4 layers. This is important if you're trying to design a system to communicate with other systems.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Cloudflare - What is the OSI model",
+          "url": "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:owasp",
+      "topic_slug": "owasp",
+      "node_id": "KhqUK-7jdClu9M2Pq7x--",
+      "title": "OWASP",
+      "description": "OWASP or Open Web Application Security Project is an online community that produces freely-available articles, methodologies, documentation, tools, and technologies in the field of web application security.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "OWASP Web Application Security Testing Checklist",
+          "url": "https://github.com/0xRadi/OWASP-Web-Checklist"
+        },
+        {
+          "raw_type": "article",
+          "title": "Wikipedia - OWASP",
+          "url": "https://en.wikipedia.org/wiki/OWASP"
+        },
+        {
+          "raw_type": "article",
+          "title": "OWASP Top 10 Security Risks",
+          "url": "https://sucuri.net/guides/owasp-top-10-security-vulnerabilities-2021/"
+        },
+        {
+          "raw_type": "article",
+          "title": "OWASP Cheatsheets",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/AJAX_Security_Cheat_Sheet.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:patterns--design-principles",
+      "topic_slug": "patterns--design-principles",
+      "node_id": "_U0VoTkqM1d6NR13p5azS",
+      "title": "Patterns and design principles",
+      "description": "In the realm of software architecture, patterns and design principles are foundational tools that enable architects to create robust, scalable, and maintainable systems. They offer proven solutions to common problems and guide decision-making throughout the software development lifecycle. Understanding these concepts is essential for anyone following a software architect roadmap, as they bridge th",
+      "resources": []
+    },
+    {
+      "skill_id": "software-architect:pki",
+      "topic_slug": "pki",
+      "node_id": "OpL2EqvHbUmFgnpuhtZPr",
+      "title": "PKI",
+      "description": "A public key infrastructure (PKI) is a set of roles, policies, hardware, software, and procedures to create, manage, distribute, use, store and revoke digital certificates and public-key encryption. The purpose of a PKI is to facilitate the secure electronic transfer of information for a range of network activities such as e-commerce, internet banking, and confidential email. It is required for ac",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "PKI - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Public_key_infrastructure"
+        },
+        {
+          "raw_type": "article",
+          "title": "PKI - DoD Cyber Exchange",
+          "url": "https://public.cyber.mil/pki-pke/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:pmi",
+      "topic_slug": "pmi",
+      "node_id": "hRug9yJKYacB9X_2cUalR",
+      "title": "PMI",
+      "description": "The PMI certification (Project Management Institute) is an internationally recognized credential in project management. The most well-known is the PMP\u00ae (Project Management Professional), which validates the skills and knowledge of professionals to manage projects effectively by applying best practices and standards defined in the PMBOK\u00ae (Project Management Body of Knowledge) guide.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Project Management Institute",
+          "url": "https://www.pmi.org/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:prince2",
+      "topic_slug": "prince2",
+      "node_id": "SJ5lrlvyXgtAwOx4wvT2W",
+      "title": "Prince2",
+      "description": "Prince2 is a structured project management method and practitioner certification programme. Prince2 emphasizes dividing projects into manageable and controllable stages. It is adopted in many countries worldwide, including the UK, Western European countries, and Australia.",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Prince2 Project Management Course",
+          "url": "https://www.simplilearn.com/project-management/prince2-foundation-and-practitioner-certification-training"
+        },
+        {
+          "raw_type": "official",
+          "title": "Prince2 Certification",
+          "url": "https://www.axelos.com/certifications/propath/prince2-project-management"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:programming-languages",
+      "topic_slug": "programming-languages",
+      "node_id": "uoDtVFThaV6OMK2wXGfP5",
+      "title": "Programming Languages",
+      "description": "A programming language is a system of notation for writing computer programs. Programming languages are described in terms of their syntax and semantics, usually defined by a formal language. Languages usually provide features such as a type system, variables, and mechanisms for error handling.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Programming Language",
+          "url": "https://en.wikipedia.org/wiki/Programming_language"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:proxies",
+      "topic_slug": "proxies",
+      "node_id": "6_EOmU5GYGDGzmNoLY8cB",
+      "title": "Proxies",
+      "description": "A proxy is an intermediary server that sits between a client and a destination server, forwarding requests and often adding functionality like caching, load balancing, or filtering. Reverse proxies sit in front of backend servers to distribute traffic and hide internal infrastructure, while forward proxies sit in front of clients. Architects use proxies to improve performance, security, and manage",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Proxy Server",
+          "url": "https://en.wikipedia.org/wiki/Proxy_server"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:python",
+      "topic_slug": "python",
+      "node_id": "j2Ph2QcKwmKlbaMHz1l_i",
+      "title": "Python",
+      "description": "Python is a multi-paradigm language. Being an interpreted language, code is executed as soon as it is written and the Python syntax allows for writing code in functional, procedural or object-oriented programmatic ways. Python is frequently recommended as the first language new coders should learn, because of its focus on readability, consistency, and ease of use. This comes with some downsides, a",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Python Roadmap",
+          "url": "https://roadmap.sh/python"
+        },
+        {
+          "raw_type": "official",
+          "title": "Python Website",
+          "url": "https://www.python.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Python Getting Started",
+          "url": "https://www.python.org/about/gettingstarted/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Automate the Boring Stuff",
+          "url": "https://automatetheboringstuff.com/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Crash Course",
+          "url": "https://ehmatthes.github.io/pcc/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:react-vue-angular",
+      "topic_slug": "react-vue-angular",
+      "node_id": "mCiYCbKIOVU34qil_q7Hg",
+      "title": "React, Vue, Angular",
+      "description": "React, Vue, and Angular are popular JavaScript frameworks and libraries for building interactive web user interfaces through reusable components. React focuses on a flexible component model with a large ecosystem, Vue emphasizes simplicity and gradual adoption, and Angular provides a more complete, opinionated framework out of the box. An architect chooses between them based on team experience, pr",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated React Roadmap",
+          "url": "https://roadmap.sh/react"
+        },
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Vue Roadmap",
+          "url": "https://roadmap.sh/vue"
+        },
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Angular Roadmap",
+          "url": "https://roadmap.sh/angular"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:reactive-programming",
+      "topic_slug": "reactive-programming",
+      "node_id": "C0g_kQFlte5siHMHwlHQb",
+      "title": "Reactive Programming",
+      "description": "Reactive programming describes a design paradigm that relies on asynchronous programming logic to handle real-time updates to otherwise static content. It provides an efficient means -- the use of automated data streams -- to handle data updates to content whenever a user makes an inquiry.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Reactive Programming?",
+          "url": "https://www.techtarget.com/searchapparchitecture/definition/reactive-programming"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:responsibilities",
+      "topic_slug": "responsibilities",
+      "node_id": "rUxbG2S2nJuA1YVY6sjiX",
+      "title": "Responsibilities",
+      "description": "A software architect's responsibilities include defining system structure, choosing technologies, setting technical standards, and reviewing code for architectural consistency. They also assess risks, plan for scalability, and mentor developers on best practices. Beyond technical work, they communicate decisions to stakeholders and balance competing demands like cost, time, and quality.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Software Architect",
+          "url": "https://en.wikipedia.org/wiki/Software_architect"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:rest",
+      "topic_slug": "rest",
+      "node_id": "Ss43xwK1ydEToj6XmmCt7",
+      "title": "REST",
+      "description": "REST is an architectural style for designing APIs around resources, identified by URLs and manipulated through standard HTTP methods like GET, POST, and DELETE. Its simplicity and reliance on existing web standards have made it the most common approach for building public and internal APIs. Architects favor REST when they need a widely understood, easy to consume interface.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is a REST API?",
+          "url": "https://www.redhat.com/en/topics/api/what-is-a-rest-api"
+        },
+        {
+          "raw_type": "article",
+          "title": "Roy Fieldings dissertation chapter, Representational State Transfer (REST)",
+          "url": "https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+        },
+        {
+          "raw_type": "article",
+          "title": "Learn REST: A RESTful Tutorial",
+          "url": "https://restapitutorial.com/"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about REST API",
+          "url": "https://app.daily.dev/tags/rest-api?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:ruby",
+      "topic_slug": "ruby",
+      "node_id": "U_Hmzfjjs1jVtu2CZ0TlG",
+      "title": "Ruby",
+      "description": "Ruby is a high-level, interpreted programming language that blends Perl, Smalltalk, Eiffel, Ada, and Lisp. Ruby focuses on simplicity and productivity along with a syntax that reads and writes naturally. Ruby supports procedural, object-oriented and functional programming and is dynamically typed.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Ruby",
+          "url": "https://www.ruby-lang.org/en/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Learn Ruby in 20 minutes",
+          "url": "https://www.ruby-lang.org/en/documentation/quickstart/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:rup",
+      "topic_slug": "rup",
+      "node_id": "7rudOREGG-TTkCosU0hNw",
+      "title": "RUP",
+      "description": "The RUP (**Rational Unified Process**) is not a widely recognized certification like PMP or Scrum, but rather a software development framework created by Rational Software (now IBM). It follows an iterative and incremental approach to project development, based on best practices for delivering high-quality software on time and within budget.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "IBM Certified Solution Designer RUP",
+          "url": "https://www.ibm.com/training/certification/ibm-certified-solution-designer-ibm-rational-unified-process-v70-38008003"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:safe",
+      "topic_slug": "safe",
+      "node_id": "Bg7ru1q1j6pNB43HGxnHT",
+      "title": "SAFe",
+      "description": "**SAFe** is an agile framework designed to scale agile practices in large and complex organizations. Unlike LeSS, SAFe is more structured and provides a formal approach to coordinating multiple teams, programs, and portfolios. It incorporates elements of `Lean`, `DevOps`, and `agile principles`, and defines additional roles, ceremonies, and artifacts to align teams' goals with the business strateg",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "SAFe 6.0",
+          "url": "https://scaledagileframework.com/SAFE"
+        },
+        {
+          "raw_type": "video",
+          "title": "SAFe explained in five minutes",
+          "url": "https://www.youtube.com/watch?v=aW2m-BtCJyE&t=2s"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:salesforce",
+      "topic_slug": "salesforce",
+      "node_id": "mOXyzdNn8W-9R99ffcnor",
+      "title": "Salesforce",
+      "description": "Salesforce is a widely used cloud based customer relationship management platform that also supports custom application development through its Apex language and Lightning platform. Many organizations extend Salesforce beyond CRM into custom business applications built on top of its platform. Architects need to understand Salesforce's data model, API options, and platform limits when integrating i",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Salesforce and what is it used for?",
+          "url": "https://ascendix.com/blog/what-is-salesforce-what-salesforce-is-used-for/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Salesforce?",
+          "url": "https://www.youtube.com/watch?v=xx2sK-QiBjw"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Salesforce",
+          "url": "https://app.daily.dev/tags/salesforce?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:sap-erp-hana-business-objects",
+      "topic_slug": "sap-erp-hana-business-objects",
+      "node_id": "TxWAznp1tUtZ1MvThf9M1",
+      "title": "SAP ERP, HANA, Business Objects",
+      "description": "SAP ERP is a widely used enterprise resource planning system that manages core business processes across large organizations, from finance to supply chain. SAP HANA is an in memory database platform that powers faster processing for SAP applications, and SAP Business Objects provides business intelligence and reporting on top of that data. Architects in large enterprises often need to design integ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "SAP",
+          "url": "https://www.sap.com/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:scrum",
+      "topic_slug": "scrum",
+      "node_id": "PKqwKvoffm0unwcFwpojk",
+      "title": "Scrum",
+      "description": "Scrum is an agile framework that organizes work into fixed length iterations called sprints, with defined roles like product owner and scrum master guiding the process. It includes regular ceremonies such as sprint planning, daily standups, and retrospectives to keep the team aligned and improve over time. It is one of the most widely adopted agile methodologies in software development.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Scrum and How to Get Started",
+          "url": "https://www.atlassian.com/agile/scrum."
+        },
+        {
+          "raw_type": "article",
+          "title": "Scrum Methodology: The Complete Guide & Best Practices",
+          "url": "https://thedigitalprojectmanager.com/projects/pm-methodology/scrum-methodology-complete-guide/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Essential Topics for the Scrum Product Owner",
+          "url": "https://www.scrum.org/resources/blog/essential-topics-scrum-product-owner"
+        },
+        {
+          "raw_type": "article",
+          "title": "Scrum \u2022 Topics - Thriving Technologist",
+          "url": "https://thrivingtechnologist.com/topics/scrum/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:security",
+      "topic_slug": "security",
+      "node_id": "IzFTn5-tQuF_Z0cG_w6CW",
+      "title": "Security",
+      "description": "Security is a broad field that encompasses various measures and practices designed to protect information, systems, and networks from unauthorized access, damage, or theft. It is essential in safeguarding sensitive data and maintaining the integrity and availability of resources.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Security - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Security"
+        },
+        {
+          "raw_type": "article",
+          "title": "Architect Security",
+          "url": "https://aws.amazon.com/blogs/architecture/lets-architect-security-in-software-architectures/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:serverless-concepts",
+      "topic_slug": "serverless-concepts",
+      "node_id": "WoXoVwkSqXTP5U8HtyJOL",
+      "title": "Serverless Concepts",
+      "description": "Serverless is a cloud-native development model that allows developers to build and run applications without having to manage servers. There are still servers in serverless, but they are abstracted away from app development. A cloud provider handles the routine work of provisioning, maintaining, and scaling the server infrastructure. Developers can simply package their code in containers for deploy",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Serverless?",
+          "url": "https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Serverless Computing?",
+          "url": "https://www.cloudflare.com/learning/serverless/what-is-serverless/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Serverless on AWS",
+          "url": "https://aws.amazon.com/serverless/"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Serverless",
+          "url": "https://app.daily.dev/tags/serverless?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:serverless",
+      "topic_slug": "serverless",
+      "node_id": "FAXKxl3fWUFShYmoCsInZ",
+      "title": "Serverless",
+      "description": "Serverless architecture (also known as serverless computing or function as a service, FaaS) is a software design pattern where applications are hosted by a third-party service, eliminating the need for server software and hardware management by the developer. Applications are broken up into individual functions that can be invoked and scaled individually.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Serverless Architectures By AWS",
+          "url": "https://aws.amazon.com/lambda/serverless-architectures-learn-more/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Serverless in Detail",
+          "url": "https://martinfowler.com/articles/serverless.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:service-mesh",
+      "topic_slug": "service-mesh",
+      "node_id": "OErbfM-H3laFm47GCHNPI",
+      "title": "Service Mesh",
+      "description": "A Service Mesh is a dedicated infrastructure layer for handling service-to-service communication. It\u2019s responsible for the reliable delivery of requests through the complex topology of services that comprise a modern, cloud native application. In layman's terms, it's a tool which helps you to control how different services communicate with each other.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Red Hat - What is a Service Mesh?",
+          "url": "https://www.redhat.com/en/topics/microservices/what-is-a-service-mesh"
+        },
+        {
+          "raw_type": "article",
+          "title": "Kubernetes Service Mesh - Blog Post",
+          "url": "https://platform9.com/blog/kubernetes-service-mesh-a-comparison-of-istio-linkerd-and-consul/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Service Mesh explained in 15 Minutes",
+          "url": "https://youtu.be/16fgzklcF7Y"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Service Mesh",
+          "url": "https://app.daily.dev/tags/service-mesh?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:service-oriented",
+      "topic_slug": "service-oriented",
+      "node_id": "6uvmMgvOwGyuLC5TOhjFu",
+      "title": "Service oriented",
+      "description": "Service oriented architecture structures a system as a set of loosely coupled services that communicate through well defined interfaces, often using standards like SOAP. It predates microservices and shares similar goals of modularity and reuse, but typically involves heavier middleware like an enterprise service bus. Many large enterprises still run service oriented systems built before microserv",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "SOA Architecture By AWS",
+          "url": "https://aws.amazon.com/what-is/service-oriented-architecture/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:simplifying-things",
+      "topic_slug": "simplifying-things",
+      "node_id": "lrtgF1RTaS4TCKww0aY6C",
+      "title": "Simplifying Things",
+      "description": "Simplifying things means reducing complex problems and systems into clear, manageable parts that others can understand and act on. Architects often deal with many moving pieces, and the ability to cut through unnecessary complexity leads to designs that are easier to build, test, and maintain. This skill also helps when explaining technical decisions to people without a deep technical background.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Simplifying Things",
+          "url": "https://www.infoq.com/articles/driving-architectural-simplicity/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:slack",
+      "topic_slug": "slack",
+      "node_id": "CYnUg_okOcRrD7fSllxLW",
+      "title": "Slack",
+      "description": "Slack is a messaging app for business that connects people to the information that they need. By bringing people together to work as one unified team, Slack transforms the way that organisations communicate.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Slack",
+          "url": "https://slack.com"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting Started with Slack",
+          "url": "https://slack.com/intl/en-in/help/categories/360000049043"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Slack?",
+          "url": "https://www.youtube.com/watch?v=q19RtuCHt1Q"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Slack",
+          "url": "https://app.daily.dev/tags/slack?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:solid",
+      "topic_slug": "solid",
+      "node_id": "QNG-KP01WQnq8o1-In1-n",
+      "title": "SOLID",
+      "description": "SOLID is a set of five object oriented design principles: single responsibility, open closed, Liskov substitution, interface segregation, and dependency inversion. Following these principles leads to code that is easier to extend, test, and maintain as a system grows. Architects use SOLID as a checklist when reviewing designs for long term maintainability.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "SOLID Principles",
+          "url": "https://www.baeldung.com/solid-principles"
+        },
+        {
+          "raw_type": "article",
+          "title": "SOLID: The First 5 Principles of Object Oriented Design",
+          "url": "https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:solution-architecture",
+      "topic_slug": "solution-architecture",
+      "node_id": "uGs-9xE3DMJxKhenltbFK",
+      "title": "Solution Architecture",
+      "description": "Solution architecture designs how multiple applications and systems work together to satisfy a specific business need. It sits between application architecture and enterprise architecture, dealing with integration points, data flow, and technology choices across several components. A solution architect often works closely with project stakeholders to make sure the combined systems meet both techni",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Solution Architecture",
+          "url": "https://www.leanix.net/en/wiki/it-architecture/solution-architecture"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:spa-ssr-ssg",
+      "topic_slug": "spa-ssr-ssg",
+      "node_id": "ulwgDCQi_BYx5lmll7pzU",
+      "title": "SPA vs SSG vs SSR",
+      "description": "Single page applications load once and update content dynamically without full page reloads, giving a smooth user experience but sometimes at the cost of slower initial load and weaker search engine visibility. Server side rendering generates HTML on the server for each request, improving initial load time and SEO. Static site generation pre builds pages at build time, offering the fastest perform",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Web Design Patterns \u2014 SSR, SSG, and SPA",
+          "url": "https://medium.com/codex/web-design-patterns-ssr-ssg-and-spa-fadad7673dfe"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rendering on the Web",
+          "url": "https://web.dev/rendering-on-the-web/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:sql-databases",
+      "topic_slug": "sql-databases",
+      "node_id": "n5AcBt_u8qtTe3PP9svPZ",
+      "title": "Sql databases",
+      "description": "SQL stands for Structured Query Language. It's used for relational databases. A SQL database is a collection of tables that stores a specific set of structured data. Examples of SQL Databases includes MariaDB, MySQL and PostgreSQL.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated SQL Roadmap",
+          "url": "https://roadmap.sh/sql"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is SQL? - AWS",
+          "url": "https://aws.amazon.com/what-is/sql/"
+        },
+        {
+          "raw_type": "article",
+          "title": "SQL Databases",
+          "url": "https://www.openlogic.com/blog/what-sql-database"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about SQL",
+          "url": "https://app.daily.dev/tags/sql?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:tcpip-model",
+      "topic_slug": "tcpip-model",
+      "node_id": "UCCT7-E_QUKPg3jAsjobx",
+      "title": "TCP/IP Model",
+      "description": "The TCP/IP model is the practical, four layer framework that actually underlies how the internet works, covering link, internet, transport, and application layers. It is simpler than the OSI model and maps more directly to real protocols like IP, TCP, and HTTP. Understanding TCP/IP helps an architect reason about how data actually travels between systems over the internet.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Transmission Control Protocol TCP/IP? - Fortinet",
+          "url": "https://www.fortinet.com/resources/cyberglossary/tcp-ip#:~:text=The%20TCP%2FIP%20model%20defines,exchanged%20and%20organized%20over%20networks."
+        },
+        {
+          "raw_type": "article",
+          "title": "What is TCP/IP and How Does it Work?",
+          "url": "https://www.techtarget.com/searchnetworking/definition/TCP-IP"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:tdd",
+      "topic_slug": "tdd",
+      "node_id": "DnP66pjK3b8tCtYr05n2G",
+      "title": "Test Driven Development",
+      "description": "Test driven development (TDD) is the process of writing tests for software's requirements which will fail until the software is developed to meet those requirements. Once those tests pass, then the cycle repeats to refactor code or develop another feature/requirement. In theory, this ensures that software is written to meet requirements in the simplest form, and avoids code defects.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Test Driven Development (TDD)?",
+          "url": "https://www.guru99.com/test-driven-development.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Test-driven development",
+          "url": "https://www.ibm.com/garage/method/practices/code/practice_test_driven_development/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Agile in Practice: Test Driven Development",
+          "url": "https://youtu.be/uGaNkTahrIw"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about TDD",
+          "url": "https://app.daily.dev/tags/tdd?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:technical-skills",
+      "topic_slug": "technical-skills",
+      "node_id": "hFx3mLqh5omNxqI9lfaAQ",
+      "title": "Technical Skills",
+      "description": "Technical skills cover the practical, hands on knowledge an architect needs, including programming languages, design patterns, tools, and infrastructure concepts. These skills give an architect the credibility and depth needed to make informed decisions rather than relying only on theory. The following sections break this knowledge down into specific areas like languages, patterns, and tools.",
+      "resources": []
+    },
+    {
+      "skill_id": "software-architect:togaf",
+      "topic_slug": "togaf",
+      "node_id": "5TDTU22Fla2mRr6JeOcaY",
+      "title": "Togaf",
+      "description": "TOGAF, The Open Group Architecture Framework, is one of the most widely used frameworks for developing and managing enterprise architecture. It defines a structured process, called the Architecture Development Method, for creating and maintaining architecture that aligns with business goals. Large organizations often adopt TOGAF to bring consistency to how architecture decisions are made and docum",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Togaf",
+          "url": "https://www.opengroup.org/togaf"
+        },
+        {
+          "raw_type": "article",
+          "title": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/The_Open_Group_Architecture_Framework"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:tools",
+      "topic_slug": "tools",
+      "node_id": "SuMhTyaBS9vwASxAt39DH",
+      "title": "Architect Tools",
+      "description": "Architect tools are software tools that help architects to design, document, and manage software architectures. These tools can be used to create architecture diagrams, generate code, and automate the software development process.",
+      "resources": []
+    },
+    {
+      "skill_id": "software-architect:trello",
+      "topic_slug": "trello",
+      "node_id": "a6joS9WXg-rbw29_KfBd9",
+      "title": "Trello",
+      "description": "Trello is a visual project management tool based on boards, lists, and cards that represent tasks moving through stages of work. Its simplicity makes it popular for smaller teams or lightweight project tracking compared to more complex tools. Architects may use it to track technical debt items or smaller initiatives outside a full project management system.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Trello",
+          "url": "https://trello.com"
+        },
+        {
+          "raw_type": "official",
+          "title": "Trello Guide",
+          "url": "https://trello.com/guide"
+        },
+        {
+          "raw_type": "video",
+          "title": "A Tour Of Trello",
+          "url": "https://www.youtube.com/watch?v=AyfupeWS0yY"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:uml",
+      "topic_slug": "uml",
+      "node_id": "8FTKnAKNL9LnZBrw9YXqK",
+      "title": "UML",
+      "description": "The Unified Modeling Language is a standardized set of diagram types used to visualize the design of a system, including class diagrams, sequence diagrams, and use case diagrams. It gives architects and developers a common visual language for describing structure and behavior before or during implementation. While not every team uses UML formally, understanding its notation helps when reading arch",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "UML Website",
+          "url": "https://www.uml.org"
+        },
+        {
+          "raw_type": "article",
+          "title": "UML Pattern - IBM",
+          "url": "https://www.ibm.com/docs/en/rational-soft-arch/9.6.1?topic=files-uml-pattern-frameworks"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Unified Modeling Language Reference Manual (Second Edition)",
+          "url": "https://personal.utdallas.edu/~chung/Fujitsu/UML_2.0/Rumbaugh--UML_2.0_Reference_CD.pdf"
+        },
+        {
+          "raw_type": "article",
+          "title": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Unified_Modeling_Language"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:understand-the-basics",
+      "topic_slug": "understand-the-basics",
+      "node_id": "4zicbh7Wg2lmKSRhb6E-L",
+      "title": "Understand the Basics",
+      "description": "Understanding the basics means knowing what software architecture is, what a software architect does, and how architectural decisions are structured across different levels of a system. It covers the terminology and mental models an architect uses before diving into any specific pattern or tool. This foundation shapes how later, more technical topics fit into the bigger picture.",
+      "resources": []
+    },
+    {
+      "skill_id": "software-architect:w3c-and-whatwg",
+      "topic_slug": "w3c-and-whatwg",
+      "node_id": "s0RvufK2PLMXtlsn2KAUN",
+      "title": "W3c and WHATWG Standards",
+      "description": "The W3C and WHATWG are the organizations responsible for defining and maintaining web standards like HTML, CSS, and related specifications. The W3C historically focused on formal standardization, while WHATWG, formed by browser vendors, drives the living standard for HTML used by modern browsers today. Understanding these standards bodies helps an architect know where to look for authoritative gui",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "W3C Standards",
+          "url": "https://www.w3.org/standards/"
+        },
+        {
+          "raw_type": "official",
+          "title": "WHATWG Standards",
+          "url": "https://spec.whatwg.org/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:web-mobile",
+      "topic_slug": "web-mobile",
+      "node_id": "j9Y2YbBKi3clO_sZ2L_hQ",
+      "title": "Web and Mobile",
+      "description": "This section covers concepts and technologies specific to building web and mobile user facing applications. It includes frontend frameworks, rendering strategies, and programming paradigms that shape how these applications are structured. An architect working on user facing products needs to understand these choices even if they are not writing the frontend code themselves.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Web vs Mobile",
+          "url": "https://buildfire.com/difference-between-web-app-and-mobile-app/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:what-is-a-software-architect",
+      "topic_slug": "what-is-a-software-architect",
+      "node_id": "eG38hT0rotYJ3G-t9df9R",
+      "title": "What is a Software Architect",
+      "description": "A software architect is the person responsible for making high level technical decisions on a project, including choosing technologies, defining system structure, and setting coding standards. They act as a bridge between business requirements and the engineering team, translating goals into a technical roadmap. The role combines deep technical knowledge with communication skills, since decisions ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "12 Skills a Software Architect Needs",
+          "url": "https://www.redhat.com/architect/what-is-software-architect"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:what-is-software-architecture",
+      "topic_slug": "what-is-software-architecture",
+      "node_id": "EGG99VA-PEdWdVxNDLtG_",
+      "title": "What is Software Architecture",
+      "description": "Software architecture is the high level structure of a software system: how it is divided into components, how those components interact, and the principles that guide their design. It defines the technical decisions that are hard to change later, such as how data flows between services or which technology stack underpins the system. Good architecture balances functional requirements with qualitie",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Software Architecture in Software Engineering?",
+          "url": "https://www.computer.org/resources/software-architecture"
+        },
+        {
+          "raw_type": "article",
+          "title": "Software Architecture: It might not be what you think it is",
+          "url": "https://www.infoq.com/articles/what-software-architecture/"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:working-with-data",
+      "topic_slug": "working-with-data",
+      "node_id": "YCJYRA3b-YSm8vKmGUFk5",
+      "title": "Working with Databases",
+      "description": "Working with data covers the tools and concepts an architect needs to design systems that store, process, and analyze large amounts of information. This includes choosing between database types, understanding data processing frameworks, and knowing how analytics fits into a broader system. Data heavy systems often require different architectural trade offs than typical transactional applications.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Introduction to Databases",
+          "url": "https://www.digitalocean.com/community/conceptual-articles/an-introduction-to-databases"
+        }
+      ]
+    },
+    {
+      "skill_id": "software-architect:xp",
+      "topic_slug": "xp",
+      "node_id": "7fL9lSu4BD1wRjnZy9tM9",
+      "title": "Extreme Programming (XP)",
+      "description": "Extreme Programming is an agile methodology that emphasizes technical practices like pair programming, test driven development, and continuous integration to improve software quality. It focuses heavily on engineering discipline alongside the process and collaboration elements found in other agile frameworks. Architects who value technical excellence often draw on XP practices even when a team for",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Extreme Programming (XP)?",
+          "url": "https://www.agilealliance.org/glossary/xp/"
+        },
+        {
+          "raw_type": "article",
+          "title": "It's Values, Principles, And Practices",
+          "url": "https://www.nimblework.com/agile/extreme-programming-xp/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Extreme Programming (XP)",
+          "url": "https://scrum-master.org/en/extreme-programming-xp-a-beginners-guide-to-the-agile-method/"
+        }
+      ]
+    }
+  ]
+}

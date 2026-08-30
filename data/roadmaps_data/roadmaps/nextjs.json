@@ -1,0 +1,1827 @@
+{
+  "roadmap": "nextjs",
+  "topic_count": 94,
+  "topics": [
+    {
+      "skill_id": "nextjs:adapters",
+      "topic_slug": "adapters",
+      "node_id": "fXXlJ6oN_YPWVr-fqEar3",
+      "title": "Adapter",
+      "description": "Next.js can be adapted to run on different platforms to support their infrastructure capabilities, including AWS Amplify Hosting, Cloudflare, Deno Deploy, Netlify, and Vercel.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Deployment with Adapters",
+          "url": "https://nextjs.org/docs/app/getting-started/deploying#adapters"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:analytics",
+      "topic_slug": "analytics",
+      "node_id": "a34ZmSk5VYVLq8wsEvOcI",
+      "title": "Analytics",
+      "description": "Next.js has built-in support for measuring and reporting performance metrics. You can either use the `useReportWebVitals` hook to manage reporting yourself, or alternatively, Vercel provides a managed service to automatically collect and visualize metrics for you.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to add analytics to your Next.js application",
+          "url": "https://nextjs.org/docs/app/guides/analytics"
+        },
+        {
+          "raw_type": "official",
+          "title": "useReportWebVitals",
+          "url": "https://nextjs.org/docs/app/api-reference/functions/use-report-web-vitals"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:api-endpoints",
+      "topic_slug": "api-endpoints",
+      "node_id": "4H8aOVYsZiPbTQUYcZjb_",
+      "title": "API Endpoints",
+      "description": "API Routes let you create an API endpoint inside a Next.js app. API endpoints work differently in Pages routers and App Routers: * Pages Router: Historically, Next.js used pages/api/* for APIs. This approach relied on Node.js request/response objects and an Express-like API. * App Router (Default): Introduced in Next.js 13, the App Router fully embraces web standard Request/Response APIs. Instead ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Route Handlers and Middleware",
+          "url": "https://nextjs.org/docs/app/getting-started/route-handlers-and-middleware"
+        },
+        {
+          "raw_type": "official",
+          "title": "API Routes for Pages Router",
+          "url": "https://nextjs.org/docs/pages/building-your-application/routing/api-routes"
+        },
+        {
+          "raw_type": "official",
+          "title": "Building APIs with Next.js",
+          "url": "https://nextjs.org/blog/building-apis-with-nextjs"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Route Handlers",
+          "url": "https://www.youtube.com/watch?v=27Uj6BeIDV0"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:app",
+      "topic_slug": "app",
+      "node_id": "3VXKRDxDmqJObkoW8ndrz",
+      "title": "App Router",
+      "description": "The App Router is a file-system based router that uses React's latest features, such as [Server Components](https://react.dev/reference/rsc/server-components), [Suspense](https://react.dev/reference/react/Suspense), and [Server Functions](https://react.dev/reference/rsc/server-functions)",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "App Router Tutorial",
+          "url": "https://nextjs.org/learn/dashboard-app"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next js Tutorial for Beginners | Nextjs 13 (App Router) with TypeScript",
+          "url": "https://www.youtube.com/watch?v=ZVnjOPwW4ZA"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:caching-data",
+      "topic_slug": "caching-data",
+      "node_id": "77i6HVsnX-uSDw8vz3afD",
+      "title": "Caching Data",
+      "description": "Caching data in Next.js involves storing the results of data fetches so that subsequent requests for the same data can be served faster. Instead of repeatedly fetching data from a database or API, Next.js can retrieve it from the cache. This improves performance and reduces the load on your data sources. Caching can be configured at different levels. Caching behavior changes depending on whether t",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Caching and Revalidating",
+          "url": "https://nextjs.org/docs/app/getting-started/caching-and-revalidating"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:caching",
+      "topic_slug": "caching",
+      "node_id": "0Rgs7jaFX1Gl5KDT6DKbX",
+      "title": "Caching API Endpoints in Next.js",
+      "description": "When you don't know the exact route segment names ahead of time and want to create routes from dynamic data, you can use Dynamic Segments that are filled in at request time or prerendered at build time. One example is catch-all segments, which allow you to extend API Routes  to catch all subsequent paths.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Catch-all Segments for App Router",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/dynamic-routes#catch-all-segments"
+        },
+        {
+          "raw_type": "official",
+          "title": "Catch all API routes for Page Router",
+          "url": "https://nextjs.org/docs/pages/building-your-application/routing/api-routes#catch-all-api-routes"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Catch all Segments",
+          "url": "https://www.youtube.com/watch?v=d46hLIg1B3Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:client-rendered",
+      "topic_slug": "client-rendered",
+      "node_id": "HdSmD_nDV5BPO5JJqs1k8",
+      "title": "Client-Side Rendering in Next.js",
+      "description": "Client-Side Rendering (CSR) means the browser receives a minimal HTML page from the server. The browser then downloads the JavaScript code, which is responsible for rendering the entire user interface. The JavaScript code fetches the data and dynamically generates the HTML content in the browser. This approach shifts the rendering workload from the server to the client's browser.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Server and Client Components for App Router",
+          "url": "https://nextjs.org/docs/app/getting-started/server-and-client-components"
+        },
+        {
+          "raw_type": "official",
+          "title": "Client-side Rendering for Pages Router",
+          "url": "https://nextjs.org/docs/pages/building-your-application/rendering/client-side-rendering"
+        },
+        {
+          "raw_type": "official",
+          "title": "Client Components",
+          "url": "https://nextjs.org/docs/14/app/building-your-application/rendering/client-components"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Server and Client Components",
+          "url": "https://www.youtube.com/watch?v=dMCSiA5gzkU"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:client",
+      "topic_slug": "client",
+      "node_id": "jYSa7UMmjb51pGAyU4PoB",
+      "title": "Client-Side Data Fetching",
+      "description": "Client-side data fetching involves retrieving data directly in the user's browser using JavaScript. This happens after the initial HTML content is loaded. When a user interacts with a page, or after a certain event, the browser makes a request to an API or data source. The fetched data is then used to update the user interface dynamically, without requiring a full page reload. Client-side data fet",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Client-side Fetching for App Router",
+          "url": "https://nextjs.org/docs/app/getting-started/fetching-data#client-components"
+        },
+        {
+          "raw_type": "official",
+          "title": "Client-side Fetching for Pages Router",
+          "url": "https://nextjs.org/docs/pages/building-your-application/data-fetching/client-side"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Fetching Data in Client Components",
+          "url": "https://www.youtube.com/watch?v=7Kz4--kCBP0"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:composition",
+      "topic_slug": "composition",
+      "node_id": "6O9c3J-1JQtZTXXIDDXSM",
+      "title": "Rendering Composition",
+      "description": "Rendering composition is the practice of building complex user interfaces by combining smaller, reusable components. In Next.js, this is important because it allows you to strategically decide which parts of your application should be pre-rendered on the server for better performance and SEO, and which parts can be rendered on the client for dynamic interactivity. By composing components effective",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Server and Client Composition Patterns",
+          "url": "https://nextjs.org/docs/14/app/building-your-application/rendering/composition-patterns"
+        },
+        {
+          "raw_type": "official",
+          "title": "Server and Client Components",
+          "url": "https://nextjs.org/docs/app/getting-started/server-and-client-components#how-do-server-and-client-components-work-in-nextjs"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Server and Client Components",
+          "url": "https://www.youtube.com/watch?v=dMCSiA5gzkU"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:create-next-app",
+      "topic_slug": "create-next-app",
+      "node_id": "3tTTKj6PWsRoRRXH5tXxS",
+      "title": "create-next-app",
+      "description": "The create-next-app CLI allow you to create a new Next.js application using the default template or an example from a public GitHub repository. It is the easiest way to get started with Next.js.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "create-next-app",
+          "url": "https://nextjs.org/docs/app/api-reference/cli/create-next-app"
+        },
+        {
+          "raw_type": "video",
+          "title": "Create Next App | Create Next Js Project",
+          "url": "https://www.youtube.com/watch?v=o1cRvsrHbfo"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:csr",
+      "topic_slug": "csr",
+      "node_id": "4CcK-BLP5NM3ZrCIEG4s8",
+      "title": "Client-Side Rendering (CSR)",
+      "description": "In Client-Side Rendering (CSR) with React, the browser downloads a minimal HTML page and the JavaScript needed for the page. The JavaScript is then used to update the DOM and render the page. When the application is first loaded, the user may notice a slight delay before they can see the full page, this is because the page isn't fully rendered until all the JavaScript is downloaded, parsed, and ex",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Client-side Rendering (CSR)",
+          "url": "https://nextjs.org/docs/pages/building-your-application/rendering/client-side-rendering"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Client-side Rendering (CSR)?",
+          "url": "https://prismic.io/blog/client-side-rendering"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:css-in-js",
+      "topic_slug": "css-in-js",
+      "node_id": "j5jIZvz_bMZqmr_gl0pQF",
+      "title": "CSS in JS",
+      "description": "It's possible to use any existing CSS-in-JS solution in your existing Next.js Apps and Pages. CSS-in-JS is a technique where CSS styles are written in JavaScript files instead of separate CSS files. This approach allows you to use JavaScript's dynamic capabilities to manage and scope your styles, often using libraries that generate CSS at runtime or build time. It offers benefits like component-le",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to use CSS-in-JS libraries in App Router",
+          "url": "https://nextjs.org/docs/app/guides/css-in-js"
+        },
+        {
+          "raw_type": "official",
+          "title": "How to use CSS-in-JS libraries in Pages Router",
+          "url": "https://nextjs.org/docs/pages/guides/css-in-js"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:css-modules",
+      "topic_slug": "css-modules",
+      "node_id": "tlg5XMVcAHmhey-efjf3M",
+      "title": "CSS Modules",
+      "description": "CSS Modules locally scope CSS by generating unique class names. This allows you to use the same class in different files without worrying about naming collisions.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "CSS Modules",
+          "url": "https://nextjs.org/docs/app/getting-started/css#css-modules"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:custom-server",
+      "topic_slug": "custom-server",
+      "node_id": "Hj01UZuHkQppXTq6XV9Pn",
+      "title": "How to set up a custom server in Next.js",
+      "description": "Next.js includes its own server with `next start` by default. If you have an existing backend, you can still use it with Next.js (this is not a custom server). A custom Next.js server allows you to programmatically start a server for custom patterns. The majority of the time, you will not need this approach. However, it's available if you need to eject.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to set up a custom server in Next.js",
+          "url": "https://nextjs.org/docs/app/guides/custom-server"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:cypress",
+      "topic_slug": "cypress",
+      "node_id": "KmOTgclnf-QYDYK0QwwVe",
+      "title": "Cypress",
+      "description": "Next.js supports Cypress for End-to-End (E2E) and Component Testing. With Cypress, you can easily create tests for your modern web applications, debug them visually, and automatically run them in your continuous integration builds.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to set up Cypress with Next.js",
+          "url": "https://nextjs.org/docs/app/guides/testing/cypress"
+        },
+        {
+          "raw_type": "official",
+          "title": "Cypress",
+          "url": "https://www.cypress.io/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:data-fetching-patterns",
+      "topic_slug": "data-fetching-patterns",
+      "node_id": "GAHFfQ8CviNxV7ITpt--q",
+      "title": "Data Fetching Patterns in Next.js",
+      "description": "There are a few recommended patterns and best practices for fetching data in React and Next.js, including: * Fetching data on the server. * Fetching data only where it's necessary. * Using React's streaming and Suspense features to progressively render and incrementally stream rendered units of the UI to the client. * Using parallel or sequential fetching depending on your particular use case. * U",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Patterns and Best Practices",
+          "url": "https://nextjs.org/docs/14/app/building-your-application/data-fetching/patterns#fetching-data-on-the-server"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:deployment-options",
+      "topic_slug": "deployment-options",
+      "node_id": "BPStVqWV0660A-_fJSuM7",
+      "title": "Deployment Options",
+      "description": "Next.js can be deployed in multiple ways, including as a : * Node.js server, * Docker container, * static export, * adapted to run on different platforms.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Deploying in Next.js",
+          "url": "https://nextjs.org/docs/app/getting-started/deploying"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:docker-container",
+      "topic_slug": "docker-container",
+      "node_id": "y5_zX209AaHOf_wQibo12",
+      "title": "Docker Container",
+      "description": "Next.js can be deployed to any provider that supports Docker containers. This includes container orchestrators like Kubernetes or a cloud provider that runs Docker. Docker deployments support all Next.js features.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated Docker Roadmap",
+          "url": "https://roadmap.sh/docker"
+        },
+        {
+          "raw_type": "official",
+          "title": "Deployment with Docker",
+          "url": "https://nextjs.org/docs/app/getting-started/deploying#nodejs-server"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:edge",
+      "topic_slug": "edge",
+      "node_id": "SYUKB1Afciqz7hA1n5yIx",
+      "title": "Edge Runtime",
+      "description": "The Edge Runtime is a lightweight JavaScript runtime environment based on V8, designed to execute code closer to the user. It allows you to run server-side logic, like API routes and middleware, on a globally distributed network of servers. This proximity reduces latency and improves the overall performance of your application by minimizing the distance data needs to travel.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "What is Edge Runtime?",
+          "url": "https://edge-runtime.vercel.app/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Edge Runtime",
+          "url": "https://nextjs.org/docs/app/api-reference/edge"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:environment-variables",
+      "topic_slug": "environment-variables",
+      "node_id": "iv6rWEqjh07d0n2kAQedO",
+      "title": "Environment Variables",
+      "description": "Environment variables are dynamic values that can affect the behavior of programs on a computer. They are typically used to store configuration settings, API keys, and other sensitive information that should not be hardcoded directly into the application's source code. This allows you to easily change the application's behavior without modifying the code itself, making it more flexible and secure ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to use environment variables in Next.js",
+          "url": "https://nextjs.org/docs/app/guides/environment-variables"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:error-states",
+      "topic_slug": "error-states",
+      "node_id": "pxltXOWgpbo95V4u2ryX7",
+      "title": "Error States",
+      "description": "Error states in Next.js routing refer to how your application handles situations where a route cannot be successfully loaded or rendered. Errors can be divided into two categories: expected errors and uncaught exceptions. Expected errors are those that can occur during the normal operation of the application, such as those from server-side form validation or failed requests. These errors should be",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Error Handling",
+          "url": "https://nextjs.org/docs/app/getting-started/error-handling#handling-expected-errors"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Error Handling",
+          "url": "https://www.youtube.com/watch?v=fWV5WPSbgdg"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:eslint",
+      "topic_slug": "eslint",
+      "node_id": "CvrHzkxg7ndCvd_tbYnK4",
+      "title": "ESLint",
+      "description": "ESLint is an open-source static code analysis tool for JavaScript that identifies problematic patterns and style issues in your code, helping to enforce coding standards and prevent bugs before they occur Next.js provides an ESLint plugin, `eslint-plugin-next`, already bundled within the base configuration that makes it possible to catch common issues and problems in a Next.js application.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "ESLint Plugin",
+          "url": "https://nextjs.org/docs/app/api-reference/config/eslint"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:fetching-locations",
+      "topic_slug": "fetching-locations",
+      "node_id": "lkdBRzC8lAvRYKBt7E37V",
+      "title": "Fetching Location",
+      "description": "Data fetching in Next.js allows you to render your content in different ways, depending on your application's use case. By default, layouts and pages are Server Components, which lets you fetch data and render parts of your UI on the server, optionally cache the result, and stream it to the client. When you need interactivity or browser APIs, you can use Client Components to layer in functionality",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Fetching Data",
+          "url": "https://nextjs.org/docs/app/getting-started/fetching-data"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Data Fetching",
+          "url": "https://www.youtube.com/watch?v=DRsU93Lde2"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:fonts",
+      "topic_slug": "fonts",
+      "node_id": "ZptECTASMX97m5yCZ-XO8",
+      "title": "Font Optimization",
+      "description": "The `next/font` module automatically optimizes your fonts and removes external network requests for improved privacy and performance. It includes built-in self-hosting for any font file. This means you can optimally load web fonts with no layout shift.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Font Optimization",
+          "url": "https://nextjs.org/docs/app/getting-started/fonts"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:global-css",
+      "topic_slug": "global-css",
+      "node_id": "BfNON3Vp3zSWBurSS4ZHo",
+      "title": "Global CSS",
+      "description": "Next.js provides several ways to style your application using CSS. One example is Global CSS, which refers to CSS styles that are applied across your entire application. This means that the styles defined in a global CSS file will affect all elements on every page of your website, unless specifically overridden by more specific CSS rules. It's a way to establish a consistent look and feel througho",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Global CSS",
+          "url": "https://nextjs.org/docs/app/getting-started/css#global-css"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:handling-sensitive-data",
+      "topic_slug": "handling-sensitive-data",
+      "node_id": "Ti_Bl5NnRIY9UTNTH15xA",
+      "title": "Handling Sensitive Data",
+      "description": "Sensitive data, like API keys or user credentials, requires careful management to prevent exposure. In Next.js, you should avoid directly embedding such data in client-side code or committing it to your repository. Instead, leverage environment variables and server-side logic to securely access and utilize sensitive information, ensuring it remains protected from unauthorized access.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to think about data security in Next.js",
+          "url": "https://nextjs.org/docs/app/guides/data-security#data-fetching-approaches"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Think About Security in Next.js",
+          "url": "https://nextjs.org/blog/security-nextjs-server-components-actions"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:images",
+      "topic_slug": "images",
+      "node_id": "1t9iOcmrEmuwOxOZ0vlY7",
+      "title": "Images",
+      "description": "images account for a huge portion of the typical website\u2019s page weight and can have a sizable impact on your website's LCP performance. The Next.js Image component extends the HTML <img> element with features for automatic image optimization, including: * Size Optimization: Automatically serve correctly sized images for each device, using modern image formats like WebP and AVIF. * Visual Stability",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Image Optimization",
+          "url": "https://nextjs.org/docs/app/getting-started/images"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:instrumentation",
+      "topic_slug": "instrumentation",
+      "node_id": "DHqdXJFhVZWaNa5zSX8Wk",
+      "title": "instrumentation",
+      "description": "Instrumentation is the process of using code to integrate monitoring and logging tools into your application. This allows you to track the performance and behavior of your application, and to debug issues in production.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to set up instrumentation",
+          "url": "https://nextjs.org/docs/app/guides/instrumentation"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:intercepting-routes",
+      "topic_slug": "intercepting-routes",
+      "node_id": "dP6cZkEZ6lxPsy5SjvuZA",
+      "title": "Intercepting Routes",
+      "description": "Intercepting routes allows you to load a route from another part of your application within the current layout. This routing paradigm can be useful when you want to display the content of a route without the user switching to a different context. For example, when clicking on a photo in a feed, you can display the photo in a modal, overlaying the feed.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Intercepting Routes",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/intercepting-routes"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Intercepting Routes",
+          "url": "https://www.youtube.com/watch?v=FTiwIVxWC00"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:internationalization",
+      "topic_slug": "internationalization",
+      "node_id": "bSsM7VLZcJKYL5XXSG0r-",
+      "title": "Internationalization",
+      "description": "Internationalization is the process of designing and developing applications that can be adapted to various languages and regions without engineering changes. Next.js enables you to configure the routing and rendering of content to support multiple languages. Making your site adaptive to different locales includes translated content (localization) and internationalized routes.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to implement internationalization in Next.js for App Router",
+          "url": "https://nextjs.org/docs/app/guides/internationalization"
+        },
+        {
+          "raw_type": "official",
+          "title": "How to implement internationalization in Next.js for Pages Router",
+          "url": "https://nextjs.org/docs/pages/guides/internationalization"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:introduction",
+      "topic_slug": "introduction",
+      "node_id": "tcDL4OEbZplbjNa8VTLpv",
+      "title": "Introduction",
+      "description": "Next.js is a React framework that enables functionalities like server-side rendering and static site generation for web applications. It provides a structure for organizing React components, handling routing, and optimizing performance. Next.js simplifies the process of building production-ready, full-stack web applications with React.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Next.js",
+          "url": "https://nextjs.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Next.js Docs",
+          "url": "https://nextjs.org/docs"
+        },
+        {
+          "raw_type": "official",
+          "title": "Next.js Course",
+          "url": "https://nextjs.org/learn"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "Next.js",
+          "url": "https://github.com/vercel/next.js"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:javascript-basics",
+      "topic_slug": "javascript-basics",
+      "node_id": "DlUQkDRPUcjC3pO4P5zCQ",
+      "title": "JavaScript Basics",
+      "description": "JavaScript is a programming language that adds interactivity to websites. It allows you to create dynamic content, control multimedia, animate images, and much more. Think of HTML as the structure of a house, CSS as the interior design, and JavaScript as the electrical system that makes everything work. Understanding JavaScript is crucial before diving into Next.js because Next.js is built on top ",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated JavaScript Roadmap",
+          "url": "https://roadmap.sh/javascript"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Modern JavaScript Tutorial",
+          "url": "https://javascript.info/"
+        },
+        {
+          "raw_type": "video",
+          "title": "JavaScript Crash Course for Beginners",
+          "url": "https://youtu.be/hdI2bqOjy3c"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about JavaScript",
+          "url": "https://app.daily.dev/tags/javascript?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:jest",
+      "topic_slug": "jest",
+      "node_id": "sc5Pliyq6bfeFXp0ca5yH",
+      "title": "Jest",
+      "description": "Next.js allows you to use Jest for unit testing and snapshot testing. Jest is a JavaScript testing framework created by Facebook, designed for ensuring the correctness of JavaScript code, especially React applications. It provides a complete and easy-to-use solution for writing unit, integration, and end-to-end tests. Jest includes features like a test runner, assertion library, mocking capabiliti",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to set up Jest with Next.js",
+          "url": "https://nextjs.org/docs/app/guides/testing/jest"
+        },
+        {
+          "raw_type": "official",
+          "title": "Jest",
+          "url": "https://jestjs.io/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:layouts-and-templates",
+      "topic_slug": "layouts-and-templates",
+      "node_id": "zJXCS7U9NUsn7cuEx3YMs",
+      "title": "Layouts and Templates",
+      "description": "Layouts and templates provide a way to share UI elements across multiple pages, maintaining state and avoiding unnecessary re-renders. Layouts wrap around pages, persisting across route changes to preserve things like navigation bars or sidebars. Templates are similar to layouts in that they wrap each child layout or page. Unlike layouts that persist across routes and maintain state, templates cre",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Layouts for App Router",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/layout#root-layouts"
+        },
+        {
+          "raw_type": "official",
+          "title": "Layouts for Pages Router",
+          "url": "https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts"
+        },
+        {
+          "raw_type": "official",
+          "title": "Templates for App Router",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/template"
+        },
+        {
+          "raw_type": "article",
+          "title": "A guide to Next.js layouts and nested layouts",
+          "url": "https://blog.logrocket.com/guide-next-js-layouts-nested-layouts/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Layouts",
+          "url": "https://www.youtube.com/watch?v=NK-8a8EzWrU"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Templates",
+          "url": "https://www.youtube.com/watch?v=yfww2kplO-k"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:lazy-loading",
+      "topic_slug": "lazy-loading",
+      "node_id": "3_Mpvkxp9A7PMogxxMikQ",
+      "title": "Lazy Loading",
+      "description": "Lazy loading in Next.js helps improve the initial loading performance of an application by decreasing the amount of JavaScript needed to render a route. It allows you to defer loading of Client Components and imported libraries, and only include them in the client bundle when they're needed. For example, you might want to defer loading a modal until a user clicks to open it.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to lazy load Client Components and libraries",
+          "url": "https://nextjs.org/docs/app/guides/lazy-loading"
+        },
+        {
+          "raw_type": "article",
+          "title": "Lazy loading",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Lazy_loading"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:loading-and-streaming",
+      "topic_slug": "loading-and-streaming",
+      "node_id": "b2LcPc5MfoyF0W9Y0aGpR",
+      "title": "Loading and Streaming",
+      "description": "The special file `loading.js` helps you create meaningful Loading UI with React Suspense. With this convention, you can show an instant loading state from the server while the content of a route segment loads. The new content is automatically swapped in once rendering is complete. In addition to `loading.js`, you can also manually create Suspense Boundaries for your own UI components. The App Rout",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Loading UI and Streaming",
+          "url": "https://nextjs.org/docs/14/app/building-your-application/routing/loading-ui-and-streaming"
+        },
+        {
+          "raw_type": "official",
+          "title": "Instant Loading States",
+          "url": "https://nextjs.org/docs/14/app/building-your-application/routing/loading-ui-and-streaming#instant-loading-states"
+        },
+        {
+          "raw_type": "official",
+          "title": "Suspense",
+          "url": "https://react.dev/reference/react/Suspense"
+        },
+        {
+          "raw_type": "article",
+          "title": "Next.js 15 Tutorial - Loading UI",
+          "url": "https://www.youtube.com/watch?v=0OVg4ikUaz0"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:markdown-and-mdx",
+      "topic_slug": "markdown-and-mdx",
+      "node_id": "3GI0xHGG_qgpLfEjaLYxr",
+      "title": "Markdown and MDX",
+      "description": "Markdown is a lightweight markup language used to format text. It allows you to write using plain text syntax and convert it to structurally valid HTML. It's commonly used for writing content on websites and blogs. MDX is a superset of markdown that lets you write JSX directly in your markdown files. It is a powerful way to add dynamic interactivity and embed React components within your content. ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to use markdown and MDX in Next.js",
+          "url": "https://nextjs.org/docs/app/guides/mdx"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:memoization-in-fetch",
+      "topic_slug": "memoization-in-fetch",
+      "node_id": "UZCMVpg5YIDxu-AMah3S-",
+      "title": "Memoization in Fetch",
+      "description": "Memoization is an optimization technique that speeds up subsequent function calls by caching the results of previous calls with the same input parameters. This approach allows for re-use of data in a React Component tree, prevents redundant network calls and enhances performance For the initial request, data is fetched from an external source and the result is stored in memory Subsequent requests ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Request Memoization",
+          "url": "https://nextjs.org/docs/app/guides/caching#request-memoization"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 14 Tutorial - vRequest Memoization",
+          "url": "https://www.youtube.com/watch?v=tcLe3Xi0fJE"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:memory-usage",
+      "topic_slug": "memory-usage",
+      "node_id": "SI7KzNSLP0ccH_P94StGL",
+      "title": "Memory Usage",
+      "description": "As applications grow and become more feature rich, they can demand more resources when developing locally or creating production builds. Next.js provides several strategies and techniques to optimize memory and address common memory issues in Next.js.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to optimize memory usage",
+          "url": "https://nextjs.org/docs/app/guides/memory-usage"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:metadata",
+      "topic_slug": "metadata",
+      "node_id": "45XMR5imHEDF_X8wcgjGW",
+      "title": "Metadata",
+      "description": "The Metadata APIs can be used to define your application metadata for improved SEO and web shareability and include: * The static `metadata` object * The dynamic `generateMetadata` function * Special file conventions that can be used to add static or dynamically generated favicons and OG images.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Metadata and OG images",
+          "url": "https://nextjs.org/docs/app/getting-started/metadata-and-og-images#static-open-graph-images"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:middleware",
+      "topic_slug": "middleware",
+      "node_id": "gpZNwsh075wl5eH2gLKro",
+      "title": "Middleware",
+      "description": "Middleware is a powerful feature that allows you to intercept and run code on the server before a request is completed. Then, based on the incoming request, you can modify the response by rewriting, redirecting, modifying the request or response headers, or responding directly. Middleware executes before routes are rendered. It's particularly useful for implementing custom server-side logic like a",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Middleware for App Router",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/middleware"
+        },
+        {
+          "raw_type": "official",
+          "title": "Middleware for Pages Router",
+          "url": "https://nextjs.org/docs/pages/api-reference/file-conventions/middleware"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Middleware",
+          "url": "https://www.youtube.com/watch?v=t1KTTZbqCm0"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:nextjs-routing-basics",
+      "topic_slug": "nextjs-routing-basics",
+      "node_id": "xRZqBd5-QO8zh7ksHlRjK",
+      "title": "Next.js Routing Basics",
+      "description": "Routing is the process of defining how an application responds to client requests to specific endpoints (URIs). In Next.js, routing is primarily file-system based. This means that the structure of your `pages` directory directly corresponds to the routes of your application. Each file in the `pages` directory becomes a route based on its filename. For example, a file named `about.js` in the `pages",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "https://nextjs.org/docs/pages/building-your-application/routing",
+          "url": "https://nextjs.org/docs/pages/building-your-application/routing"
+        },
+        {
+          "raw_type": "official",
+          "title": "Defining Routes",
+          "url": "https://nextjs.org/docs/14/app/building-your-application/routing/defining-routes"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Routing Explained For Beginners",
+          "url": "https://www.youtube.com/watch?v=qivq_vDYFGk"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:nextjs",
+      "topic_slug": "nextjs",
+      "node_id": "uJrOHRLmEBZtHJzAAusUe",
+      "title": "Next.js",
+      "description": "Next.js is a React framework that provides extra features and optimizations on top of React for building web applications. It simplifies development by offering solutions for routing, data fetching, and server-side rendering out of the box. This allows developers to create performant and scalable web applications with less configuration.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Next.js",
+          "url": "https://nextjs.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Next.js",
+          "url": "https://masteringnextjs.com"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js Full course",
+          "url": "https://www.youtube.com/watch?v=9P8mASSREYM"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js for Beginners - freeCodeCamp",
+          "url": "https://youtu.be/KjY94sAKLlw?si=orve81YcY8Fm2vDy"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:nodejs-server",
+      "topic_slug": "nodejs-server",
+      "node_id": "Okw_IjU2iRSvSQVdKeeCo",
+      "title": "Node.js Server",
+      "description": "Next.js can be deployed to any provider that supports Node.js. You just have to build your application and start a Node.js server using simple commands. This server supports all Next.js features. If needed, you can also eject to a custom server. Node.js deployments support all Next.js features.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Node.js Server",
+          "url": "https://nextjs.org/docs/app/getting-started/deploying#nodejs-server"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:nodejs",
+      "topic_slug": "nodejs",
+      "node_id": "0S37ka1K-TdYLnjCBrKSH",
+      "title": "Node.js",
+      "description": "Node.js is a JavaScript runtime environment that executes JavaScript code outside of a web browser. It allows developers to use JavaScript for server-side scripting and to build scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it efficient and well-suited for real-time applications.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit de Dedicated Node.js Roadmap",
+          "url": "https://roadmap.sh/nodejs"
+        },
+        {
+          "raw_type": "official",
+          "title": "Node.js",
+          "url": "https://nodejs.org/en/about/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Edge Runtime",
+          "url": "https://nextjs.org/docs/app/api-reference/edge"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:opentelemetry",
+      "topic_slug": "opentelemetry",
+      "node_id": "mTh5PZNpzJNKPqpu5PVL6",
+      "title": "OpenTelemetry",
+      "description": "Observability is crucial for understanding and optimizing the behavior and performance of your Next.js app. With observability, developers can proactively address issues before they become major problems and provide a better user experience. Next.js recommends using OpenTelemetry for instrumenting your apps. It's a platform-agnostic way to instrument apps that allows you to change your observabili",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to set up instrumentation with OpenTelemetry",
+          "url": "https://nextjs.org/docs/app/guides/open-telemetry"
+        },
+        {
+          "raw_type": "official",
+          "title": "OpenTelemetry Docs",
+          "url": "https://opentelemetry.io/docs/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:package-bundling",
+      "topic_slug": "package-bundling",
+      "node_id": "qM_Za9NiCiCG5-kf5RCXF",
+      "title": "Package Bundling",
+      "description": "Bundling external packages can significantly improve the performance of your application. By default, packages imported inside Server Components and Route Handlers are automatically bundled by Next.js for enhanced optimization.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to optimize package bundling",
+          "url": "https://nextjs.org/docs/app/guides/package-bundling"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:pages",
+      "topic_slug": "pages",
+      "node_id": "htuyzi5_N-fqnx_SsO_DS",
+      "title": "Pages Router",
+      "description": "The Pages Router in Next.js is a file-system based router built around the `pages` directory. Each file in the `pages` directory becomes a route based on its file name. For example, a file named `about.js` would create a route at `/about`. This approach simplifies routing by automatically mapping files to routes, making it easy to create and manage different pages within your application.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Pages Router",
+          "url": "https://nextjs.org/docs/pages"
+        },
+        {
+          "raw_type": "official",
+          "title": "Pages Router Tutorial",
+          "url": "https://nextjs.org/learn/pages-router"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:parallel-routes",
+      "topic_slug": "parallel-routes",
+      "node_id": "2N_hm9Zx_Lp-RFEMP9HFb",
+      "title": "Parallel Routes",
+      "description": "Parallel Routes allows you to simultaneously or conditionally render one or more pages within the same layout. They are useful for highly dynamic sections of an app, such as dashboards and feeds on social sites.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Parallel Routes",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/parallel-routes"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Parallel Routes",
+          "url": "https://www.youtube.com/watch?v=697kNwfU-4M"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:parallel-vs-sequential",
+      "topic_slug": "parallel-vs-sequential",
+      "node_id": "SjJQ7ceU6vBhlhrN8hcvy",
+      "title": "Parallel vs Sequential",
+      "description": "When fetching data inside React components, you need to be aware of two data fetching patterns: Parallel and Sequential. With sequential data fetching, requests in a route are dependent on each other and therefore create waterfalls. There may be cases where you want this pattern because one fetch depends on the result of the other, or you want a condition to be satisfied before the next fetch to s",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Parallel and sequential data fetching",
+          "url": "https://nextjs.org/docs/14/app/building-your-application/data-fetching/patterns#parallel-and-sequential-data-fetching"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:playwright",
+      "topic_slug": "playwright",
+      "node_id": "qFDdfOBdOlGMjTEOiiuTe",
+      "title": "Playwright",
+      "description": "Next.js supports Playwright for End-to-End (E2E) testing. Playwright is a testing framework that lets you automate Chromium, Firefox, and WebKit with a single API. You can use it to write E2E testing.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to set up Playwright with Next.js",
+          "url": "https://nextjs.org/docs/app/guides/testing/playwright"
+        },
+        {
+          "raw_type": "official",
+          "title": "Playwright",
+          "url": "https://playwright.dev/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:preloading-data",
+      "topic_slug": "preloading-data",
+      "node_id": "Ve1Pa7IhGHPZ_F-sCMcNb",
+      "title": "Preloading data",
+      "description": "Another way to optimize data fetching is to use the preload pattern. You can optionally create a preload function to further optimize parallel data fetching. With this approach, you don't have to pass promises down as props. The preload function can also have any name as it's a pattern, not an API.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Preloading data",
+          "url": "https://nextjs.org/docs/14/app/building-your-application/data-fetching/patterns#preloading-data"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:preparing-for-production",
+      "topic_slug": "preparing-for-production",
+      "node_id": "-yiJSBIoczJHOW8YMdWFI",
+      "title": "Preparing for Production",
+      "description": "Before taking Next.js application to production, there are some optimizations and patterns you should consider implementing for the best user experience, performance, and security. Next.js provides a list of best practices when building your application and before going to production. In addition, you should be aware of the automatic Next.js optimizations.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to optimize your Next.js application for production",
+          "url": "https://nextjs.org/docs/app/guides/production-checklist"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:prettier",
+      "topic_slug": "prettier",
+      "node_id": "efMytbUmw44M8dPL4ItsX",
+      "title": "Prettier",
+      "description": "Prettier is an opinionated code formatter that supports many languages, including JavaScript, TypeScript, and CSS. It automatically formats your code to adhere to a consistent style, ensuring readability and maintainability across your project. The ESLint Plugin contains code formatting rules, which may conflict with your existing Prettier setup. To make ESLint and Prettier work together, you can ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "ESLint Plugin with Prettier",
+          "url": "https://nextjs.org/docs/app/api-reference/config/eslint#with-prettier"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "eslint-config-prettier",
+          "url": "https://github.com/prettier/eslint-config-prettier"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:react-cache",
+      "topic_slug": "react-cache",
+      "node_id": "crBlqiS78n7yz28cT2GGz",
+      "title": "React Cache function",
+      "description": "The React `cache` function allows you to memoize the return value of a function, allowing you to call the same function multiple times while only executing it once. `fetch` requests using the `GET` or `HEAD` methods are automatically memoized, so you do not need to wrap it in React `cache`. However, for other `fetch` methods, or when using data fetching libraries (such as some database, CMS, or Gr",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "React cache function",
+          "url": "https://nextjs.org/docs/app/guides/caching#react-cache-function"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:react-frameworks",
+      "topic_slug": "react-frameworks",
+      "node_id": "FdvaN6BOxUEJt7TarSDmo",
+      "title": "React Frameworks",
+      "description": "React frameworks provide structure and tools to streamline the development of React applications. They offer solutions for common challenges like routing, data fetching, state management, and build processes, allowing developers to focus on building features rather than configuring infrastructure. These frameworks often include pre-built components, optimized performance configurations, and conven",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Comparing The Top React Frameworks",
+          "url": "https://dev.to/surajondev/comparing-the-top-cra-alternatives-9cg"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:reditects",
+      "topic_slug": "reditects",
+      "node_id": "K1wGmAy9L0VE6cwYE2pA6",
+      "title": "Redirects in Next.js API Endpoints",
+      "description": "Redirects in Next.js API endpoints allow you to send a user from one URL to another. This is useful for various scenarios, such as moving or renaming pages, handling temporary content changes, or guiding users to a different part of your application based on specific conditions. By sending an HTTP redirect response, the server instructs the client's browser to navigate to the new URL.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to handle redirects in Next.js for App Router",
+          "url": "https://nextjs.org/docs/app/guides/redirecting"
+        },
+        {
+          "raw_type": "official",
+          "title": "redirectHow to handle redirects in Next.js for Pages Router",
+          "url": "https://nextjs.org/docs/pages/guides/redirecting"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:remix",
+      "topic_slug": "remix",
+      "node_id": "G_33yo1MshQbiaGTPtTdK",
+      "title": "Remix",
+      "description": "Remix is a full-stack web framework that focuses on web standards and modern web development patterns. It emphasizes server-side rendering and progressive enhancement to deliver fast and resilient user experiences. Remix leverages web fundamentals like HTTP caching and distributed systems to build robust and performant web applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Remix",
+          "url": "https://remix.run/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Remix Docs",
+          "url": "https://v2.remix.run/docs/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Remix Crash Course 2023",
+          "url": "https://www.youtube.com/watch?v=RBYJTop1e-g"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:rendering-pages",
+      "topic_slug": "rendering-pages",
+      "node_id": "IlWFMh44HtHDnIr7nqwtI",
+      "title": "Rendering Pages in Next.js",
+      "description": "Rendering refers to the process of converting your code into HTML that can be displayed in a web browser. Next.js offers different strategies for this, including server-side rendering (SSR), static site generation (SSG), incremental static regeneration (ISR), and client-side rendering (CSR). Each method determines when and where the HTML is generated, impacting performance, SEO, and interactivity.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Rendering Strategies",
+          "url": "https://nextjs.org/learn/seo/rendering-strategies"
+        },
+        {
+          "raw_type": "official",
+          "title": "Partial Prerendering",
+          "url": "https://nextjs.org/docs/app/getting-started/partial-prerendering"
+        },
+        {
+          "raw_type": "official",
+          "title": "Rendering User Interfaces (UI)",
+          "url": "https://nextjs.org/learn/react-foundations/rendering-ui"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:rendering-strategies",
+      "topic_slug": "rendering-strategies",
+      "node_id": "1ch6ZXZP46FP8q3HeCqWM",
+      "title": "Rendering Strategies",
+      "description": "Rendering strategies determine how your application's user interface is generated and delivered to the user's browser. Different strategies offer varying trade-offs between performance, SEO, and data freshness. Choosing the right rendering strategy is crucial for optimizing your application based on its specific requirements and content characteristics.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Rendering Strategies",
+          "url": "https://nextjs.org/learn/seo/rendering-strategies"
+        },
+        {
+          "raw_type": "official",
+          "title": "How to build single-page applications with Next.js",
+          "url": "https://nextjs.org/docs/app/guides/single-page-applications"
+        },
+        {
+          "raw_type": "article",
+          "title": "Next.js Rendering Strategies: SSR, SSG, and ISR Compared",
+          "url": "https://hybridheroes.de/blog/2023-05-31-next-js-rendering-strategies/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:revalidating-cached-data",
+      "topic_slug": "revalidating-cached-data",
+      "node_id": "N5siOJO3dc9vJUTpbdm04",
+      "title": "Revalidating Cached Data",
+      "description": "Revalidation is the process of updating cached data. When you cache data, it's stored for a certain period. After that period, or based on specific events, you might want to refresh the data to ensure your application displays the most up-to-date information. Revalidation allows you to control when and how your cached data is updated, balancing performance with data freshness. Revalidating in Next",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Revalidating",
+          "url": "https://nextjs.org/docs/app/guides/caching#revalidating-1"
+        },
+        {
+          "raw_type": "official",
+          "title": "Caching and Revalidating",
+          "url": "https://nextjs.org/docs/app/getting-started/caching-and-revalidating#revalidatetag"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:revalidation-errors",
+      "topic_slug": "revalidation-errors",
+      "node_id": "qMYuXOlr_c-6oQKVOdGci",
+      "title": "Revalidation Errors",
+      "description": "When revalidation fails, it means the attempt to refresh the cached data encountered an issue, preventing the application from displaying the most up-to-date information. These errors can stem from various sources, such as network connectivity problems, issues with the data source itself (e.g., a database being unavailable), or problems within the revalidation logic. In Next.js, If an error is thr",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Error handling and revalidation",
+          "url": "https://nextjs.org/docs/14/app/building-your-application/data-fetching/fetching-caching-and-revalidating"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:route-matcher",
+      "topic_slug": "route-matcher",
+      "node_id": "Sn-8ztsjjtUxD_SP6w3cS",
+      "title": "Route Matcher",
+      "description": "A route matcher in Next.js middleware allows you to conditionally execute middleware based on the incoming request's path. It defines specific patterns or conditions that the request path must satisfy for the middleware to run. This enables you to apply middleware logic only to certain routes or groups of routes within your application, providing fine-grained control over request handling.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Matcher for App Router",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/middleware#matcher"
+        },
+        {
+          "raw_type": "official",
+          "title": "Matcher for Pages Router",
+          "url": "https://nextjs.org/docs/pages/api-reference/file-conventions/middleware#matcher"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:routing-patterns",
+      "topic_slug": "routing-patterns",
+      "node_id": "09uWsmXOXU0Ox7F3qsjRx",
+      "title": "Routing Patterns",
+      "description": "The App Router provides a set of conventions to help you implement more advanced routing patterns. These include: * Parallel Routes: Allow you to simultaneously show two or more pages in the same view that can be navigated independently. * Intercepting Routes: Allow you to intercept a route and show it in the context of another route. These patterns allow you to build richer and more complex UIs, ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Advanced Routing Patterns",
+          "url": "https://nextjs.org/docs/13/app/building-your-application/routing#advanced-routing-patterns"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:routing-terminology",
+      "topic_slug": "routing-terminology",
+      "node_id": "oFhmV5Xv0KJ-SjeYVZBpi",
+      "title": "Routing Terminology in Next.js",
+      "description": "In Next.js, routing is primarily handled through the `app` directory (introduced in Next.js 13) and the older `pages` directory. Key terms include: *   **Route:** A specific URL path that maps to a particular component or page. For example, `/blog/my-first-post`. *   **Route Segment:** A part of the URL path. In `/blog/my-first-post`, `blog` and `my-first-post` are route segments. *   **File-Syste",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Project structure and organization",
+          "url": "https://nextjs.org/docs/app/getting-started/project-structure"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Routing",
+          "url": "https://www.youtube.com/watch?v=9602Yzvd7i"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Nested Routes",
+          "url": "https://www.youtube.com/watch?v=H7JjKjkC33c"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Dynamic Routes",
+          "url": "https://www.youtube.com/watch?v=k9g6aVLH3p4"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Nested Dynamic Routes",
+          "url": "https://www.youtube.com/watch?v=edrJf0GKfAI"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:runtimes-and-types",
+      "topic_slug": "runtimes-and-types",
+      "node_id": "LN7SHgcQp9gX_jfEN84YP",
+      "title": "Runtimes and Types",
+      "description": "In the context of Next.js, runtime refers to the set of libraries, APIs, and general functionality available to your code during execution. On the server, there are two runtimes where parts of your application code can be rendered: * The Node.js Runtime (default), which has access to all Node.js APIs and is used for rendering your application. * The Edge Runtime which contains a more limited set o",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "https://nextjs.org/docs/app/api-reference/edge",
+          "url": "https://nextjs.org/docs/app/api-reference/edge"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:sass",
+      "topic_slug": "sass",
+      "node_id": "5H7toz-DxtnwjozCgLuk6",
+      "title": "Sass in Next.js",
+      "description": "Sass (Syntactically Awesome Style Sheets) is a CSS preprocessor that extends the capabilities of standard CSS. It allows you to use features like variables, nesting, mixins, and functions to write more organized, maintainable, and efficient stylesheets. These features are then compiled into standard CSS that browsers can understand. Next.js has built-in support for integrating with Sass after the ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Sass",
+          "url": "https://sass-lang.com/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "Sass",
+          "url": "https://github.com/sass/sass"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to use Sass in Next.js",
+          "url": "https://nextjs.org/docs/app/guides/sass"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:scripts",
+      "topic_slug": "scripts",
+      "node_id": "JFrpy3dGt-UP9Weo1VBvN",
+      "title": "Third-Party Scripts",
+      "description": "Third-party scripts are code snippets from external sources that add functionality to your website, such as analytics, advertising, or social media widgets. Next.js allows you to load a third-party script for multiple routes through the `next/script` component, optimizing performance and enhancing control over when and how scripts are executed within your application. These scripts can impact your",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to load and optimize scripts",
+          "url": "https://nextjs.org/docs/app/guides/scripts"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:server-actions",
+      "topic_slug": "server-actions",
+      "node_id": "IuBZY-ISP1Sy_5OQ99jLY",
+      "title": "Server Functions",
+      "description": "Server Functions are asynchronous functions that are executed on the server. They can be used in Server and Client Components to handle form submissions and data mutations in Next.js applications. In an `action` or mutation context, they are also called Server Actions.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "What are Server Functions?",
+          "url": "https://nextjs.org/docs/app/getting-started/updating-data"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js Server Actions",
+          "url": "https://www.youtube.com/watch?v=gQ2bVQPFS4U"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:server-rendered",
+      "topic_slug": "server-rendered",
+      "node_id": "m7eKlykOZCA3BLuBHioDj",
+      "title": "Server-Side Rendering (SSR)",
+      "description": "Server-Side Rendering (SSR) is a technique where a web application's initial HTML is generated on the server in response to a user's request. This pre-rendered HTML is then sent to the client's browser, allowing the user to see the content immediately, even before the JavaScript code is fully executed. This approach contrasts with client-side rendering, where the browser downloads a minimal HTML p",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Server and Client Components for App Router",
+          "url": "https://nextjs.org/docs/app/getting-started/server-and-client-components#when-to-use-server-and-client-components"
+        },
+        {
+          "raw_type": "official",
+          "title": "Server-side Rendering (SSR) for App Router",
+          "url": "https://nextjs.org/docs/pages/building-your-application/rendering/server-side-rendering"
+        },
+        {
+          "raw_type": "official",
+          "title": "Server Components",
+          "url": "https://nextjs.org/docs/14/app/building-your-application/rendering/server-components"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Server and Client Components",
+          "url": "https://www.youtube.com/watch?v=dMCSiA5gzkU"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:server",
+      "topic_slug": "server",
+      "node_id": "QDxYlIyFOuGUIy_ZovHs0",
+      "title": "Server-Side Data Fetching for Locations",
+      "description": "Fetching data on the server in Next.js allows you to retrieve location information before the page is rendered. This approach improves performance by reducing the amount of work the client's browser needs to do, leading to faster initial page loads and better SEO. Server-side data fetching ensures that the data is available when the page is initially rendered, providing a seamless user experience.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Client-side Fetching",
+          "url": "https://nextjs.org/docs/app/getting-started/fetching-data#server-components"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Fetching Data in Server Components",
+          "url": "https://www.youtube.com/watch?v=WKfPctdIDek"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:setting-headers",
+      "topic_slug": "setting-headers",
+      "node_id": "XwDF-Kt9K5smm3ruxlkR2",
+      "title": "Setting Headers in Next.js Middleware",
+      "description": "Middleware in Next.js allows you to run code before a request is completed. Setting headers within middleware enables you to modify the HTTP response headers, controlling aspects like caching, security policies, or custom information passed to the client. This provides a flexible way to manage response behavior based on incoming requests.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Setting Headers for App Router",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/middleware#setting-headers"
+        },
+        {
+          "raw_type": "official",
+          "title": "Setting Headers for Pages Router",
+          "url": "https://nextjs.org/docs/pages/api-reference/file-conventions/middleware#setting-headers"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:setting-things-up",
+      "topic_slug": "setting-things-up",
+      "node_id": "ThrO72opK7xGWpy0GG63T",
+      "title": "Setting Things Up",
+      "description": "Next.js allows you to customize your project to meet specific requirements. This includes integrations with TypeScript, ESlint, and more, as well as internal configuration options such as Absolute Imports and Environment Variables.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Configuration",
+          "url": "https://nextjs.org/docs/app/api-reference/config"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:spa-vs-ssr",
+      "topic_slug": "spa-vs-ssr",
+      "node_id": "ch5gUr8xeCIp-i48N5qew",
+      "title": "SPA vs SSR",
+      "description": "Single-Page Applications (SPAs) load a single HTML page and dynamically update the content using JavaScript, providing a fluid user experience without full page reloads. Server-Side Rendering (SSR), on the other hand, generates the HTML on the server for each request, sending a fully rendered page to the client. Next.js allows you to choose between these approaches or even combine them, offering f",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to build single-page applications with Next.js",
+          "url": "https://nextjs.org/docs/app/guides/single-page-applications"
+        },
+        {
+          "raw_type": "official",
+          "title": "Server-side Rendering (SSR)",
+          "url": "https://nextjs.org/docs/pages/building-your-application/rendering/server-side-rendering"
+        },
+        {
+          "raw_type": "article",
+          "title": "https://dev.to/santhanam87/ssr-vs-spa-showdown-choosing-the-right-rendering-approach-for-your-web-app-4439",
+          "url": "https://dev.to/santhanam87/ssr-vs-spa-showdown-choosing-the-right-rendering-approach-for-your-web-app-4439"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:spa",
+      "topic_slug": "spa",
+      "node_id": "NC7s-EOLWhjXR70JFZxcg",
+      "title": "Single-Page Application (SPA) Rendering",
+      "description": "A Single-Page Application (SPA) is a web application that loads a single HTML page and dynamically updates that page as the user interacts with the application. This is achieved by using JavaScript to manipulate the DOM (Document Object Model) directly, rather than requesting new HTML pages from the server for each interaction. This approach provides a more fluid and responsive user experience, as",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "https://nextjs.org/docs/app/guides/single-page-applications",
+          "url": "https://nextjs.org/docs/app/guides/single-page-applications"
+        },
+        {
+          "raw_type": "article",
+          "title": "Single-page application",
+          "url": "https://en.wikipedia.org/wiki/Single-page_application"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building Single-Page Applications (SPAs) with React and Next.js",
+          "url": "https://medium.com/@blog.iroidsolutions/building-single-page-applications-spas-with-react-and-next-js-c8e02d806145"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:ssg",
+      "topic_slug": "ssg",
+      "node_id": "CqPZHOs1Iew6PCIjwiqUt",
+      "title": "Static Site Generation (SSG)",
+      "description": "Static Site Generation (SSG) is a rendering method that generates HTML pages at build time. This means that when a user requests a page, the server sends a pre-rendered HTML file, rather than dynamically generating it on each request. This approach leads to faster load times and improved SEO, as search engines can easily crawl and index the static content.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Static Site Generation (SSG)",
+          "url": "https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:ssr",
+      "topic_slug": "ssr",
+      "node_id": "7EYQnX3cEAjSL-iJSprEI",
+      "title": "Server-Side Rendering (SSR)",
+      "description": "Server-Side Rendering (SSR) is a technique where a web application's HTML is generated on the server in response to each user request. The server then sends the fully rendered HTML to the client's browser, which displays it. This differs from client-side rendering, where the browser downloads a minimal HTML page and then uses JavaScript to render the content.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Server-side Rendering (SSR)",
+          "url": "https://nextjs.org/docs/pages/building-your-application/rendering/server-side-rendering"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Server-Side Rendering: Definition, Benefits and Risks",
+          "url": "https://solutionshub.epam.com/blog/post/what-is-server-side-rendering"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:static-assets",
+      "topic_slug": "static-assets",
+      "node_id": "iabbuLHqAiRkgj03t64x7",
+      "title": "Static Assets",
+      "description": "Static content is any file that is stored in a server and is the same every time it is delivered to users. HTML files and images are examples of this kind of content. Next.js can serve static files under a folder called `public` in the root directory. Files inside `public` can then be referenced by your code starting from the base URL (`/`). It's important to note that Next.js cannot safely cache ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "public Folder",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/public-folder"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:static-export",
+      "topic_slug": "static-export",
+      "node_id": "evmzZ6F7TWgYhdaahnZHY",
+      "title": "Static Export",
+      "description": "Next.js enables starting as a static site or Single-Page Application (SPA), then later optionally upgrading to use features that require a server. Since Next.js supports static exports, it can be deployed and hosted on any web server that can serve HTML/CSS/JS static assets. This includes tools like AWS S3, Nginx, or Apache. Running as a static export does not support Next.js features that require",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Static Export Deployment",
+          "url": "https://nextjs.org/docs/app/getting-started/deploying#static-export"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:static-vs-dynamic",
+      "topic_slug": "static-vs-dynamic",
+      "node_id": "hQHvu7MzNwA2lL9ADm5YQ",
+      "title": "Static vs Dynamic API Endpoints",
+      "description": "API endpoints in Next.js allow you to create serverless functions that handle requests. These endpoints can be either static or dynamic, depending on how their routes are defined and how they process data. Static API endpoints have predefined routes and typically return the same response for every request, while dynamic API endpoints use parameters in their routes to handle different requests and ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Route Handlers and Middleware",
+          "url": "https://nextjs.org/docs/app/getting-started/route-handlers-and-middleware"
+        },
+        {
+          "raw_type": "official",
+          "title": "Dynamic API Routes for Pages Routers",
+          "url": "https://nextjs.org/docs/pages/building-your-application/routing/api-routes#dynamic-api-routes"
+        },
+        {
+          "raw_type": "official",
+          "title": "Building APIs with Next.js",
+          "url": "https://nextjs.org/blog/building-apis-with-nextjs#12-app-router-vs-pages-router"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:streaming",
+      "topic_slug": "streaming",
+      "node_id": "lR7oPh0DCY_BhzXH31N36",
+      "title": "Streaming in Next.js API Endpoints",
+      "description": "Streaming in Next.js API endpoints allows you to send data to the client in chunks, rather than waiting for the entire response to be generated on the server before sending anything. This can significantly improve perceived performance, especially for long-running processes or when dealing with large datasets. By sending data incrementally, the client can start processing and displaying informatio",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Streaming",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/route#streaming"
+        },
+        {
+          "raw_type": "official",
+          "title": "Streaming responses",
+          "url": "https://nextjs.org/docs/pages/building-your-application/routing/api-routes#streaming-responses"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Streaming",
+          "url": "https://www.youtube.com/watch?v=oSf1gUDGJOA"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:structuring-routes",
+      "topic_slug": "structuring-routes",
+      "node_id": "9egFwmy-o7Fx-M7FcPXXy",
+      "title": "Structuring Routes",
+      "description": "Structuring routes in Next.js involves organizing your project's file system to define the different URLs (or routes) of your application. Each file within the `app` directory (or `pages` directory in older versions) corresponds to a specific route. The file's location and name directly determine the URL path that users will access. This file-system-based routing simplifies navigation and makes it",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Project structure and organization for App Router",
+          "url": "https://nextjs.org/docs/app/getting-started/project-structure"
+        },
+        {
+          "raw_type": "official",
+          "title": "Project Structure and Organization for Pages Router",
+          "url": "https://nextjs.org/docs/pages/getting-started/project-structure"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js 15 Tutorial - Project Structure",
+          "url": "https://www.youtube.com/watch?v=L0g87N0piT0"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:tailwind-css",
+      "topic_slug": "tailwind-css",
+      "node_id": "3IKXvlA9P06GiOi34zv5H",
+      "title": "Tailwind CSS",
+      "description": "Next.js support Tailwind CSS to style your apps. Tailwind CSS is a utility-first CSS framework that provides a set of pre-defined CSS classes that you can use to style your HTML elements directly in your markup. Instead of writing custom CSS rules, you compose styles by applying these utility classes, allowing for rapid UI development and consistent design. This approach promotes a more streamline",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Tailwind CSS",
+          "url": "https://tailwindcss.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Tailwind CSS in Next.js",
+          "url": "https://nextjs.org/docs/app/getting-started/css#tailwind-css"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:third-party-libraries",
+      "topic_slug": "third-party-libraries",
+      "node_id": "-j38AhG6LUCH5GupGiqUM",
+      "title": "Third Party Libraries",
+      "description": "`@next/third-parties` is a library that provides a collection of components and utilities that improve the performance and developer experience of loading popular third-party libraries, like Google Tag Manager and Google Analytics,  in your Next.js application. All third-party integrations provided by `@next/third-parties` have been optimized for performance and ease of use.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to optimize third-party libraries",
+          "url": "https://nextjs.org/docs/app/guides/third-party-libraries"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:types-of-routers",
+      "topic_slug": "types-of-routers",
+      "node_id": "km7dLVpl76c5EfWvhhbRh",
+      "title": "Types of Routers",
+      "description": "Next.js has two different routers: *   **App Router**: The newer router that supports new React features like Server Components. *   **Pages Router**: The original router, still supported and being improved. Before Next.js 13, the Pages Router was the main way to create routes in Next.js. It's still supported in newer versions of Next.js, but Next.js recommends migrating to the new App Router to l",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Next.js Docs",
+          "url": "https://nextjs.org/docs#app-router-and-pages-router"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js App vs. Pages Router - Which One is Better?",
+          "url": "https://www.youtube.com/watch?v=EYDOXzpTRvw"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:typescript",
+      "topic_slug": "typescript",
+      "node_id": "ZFHkHmvjndPjDAB-MAtb7",
+      "title": "TypeScript",
+      "description": "TypeScript is a syntactic superset of JavaScript which adds static typing. This means that TypeScript adds syntax on top of JavaScript, allowing developers to add types. Next.js comes with built-in TypeScript, automatically installing the necessary packages and configuring the proper settings when you create a new project with create-next-app. To add TypeScript to an existing project, rename a fil",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "TypeScript",
+          "url": "https://nextjs.org/docs/app/api-reference/config/typescript"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:use-cases",
+      "topic_slug": "use-cases",
+      "node_id": "54Cc_GdL327tzkdYBA305",
+      "title": "Middleware Use Cases",
+      "description": "Middleware in Next.js allows you to run code before a request is completed. This provides a flexible way to modify the response by rewriting, redirecting, adding headers, or even directly responding. Common use cases include authentication, authorization, redirecting users based on their location (localization), handling bots, and implementing advanced security measures.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Middleware for App Router",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/middleware"
+        },
+        {
+          "raw_type": "official",
+          "title": "Middleware for Pages Router",
+          "url": "https://nextjs.org/docs/pages/api-reference/file-conventions/middleware"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:using-cookies",
+      "topic_slug": "using-cookies",
+      "node_id": "8kUhcd2-BlqOKInEuSI95",
+      "title": "Using Cookies in Next.js Middleware",
+      "description": "Cookies are small pieces of data that websites store on a user's computer to remember information about them, such as login details, preferences, or shopping cart items. In Next.js middleware, you can access and modify these cookies before a request is handled by your application's routes, allowing you to implement features like authentication, personalization, and A/B testing based on cookie valu",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Using Cookies for App Router",
+          "url": "https://nextjs.org/docs/app/api-reference/file-conventions/middleware#using-cookies"
+        },
+        {
+          "raw_type": "official",
+          "title": "Using Cookies for Pages Router",
+          "url": "https://nextjs.org/docs/pages/api-reference/file-conventions/middleware#using-cookies"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:videos",
+      "topic_slug": "videos",
+      "node_id": "1SJX-nGuhIxGH0ukfluoQ",
+      "title": "Videos in Next.js",
+      "description": "Next.js provides various approaches and techniques to store and display video files without affecting performance. Videos can be embedded on the page using the HTML `<video>` tag for direct video files and `<iframe>` for external platform-hosted videos.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to use and optimize videos",
+          "url": "https://nextjs.org/docs/app/guides/videos"
+        },
+        {
+          "raw_type": "video",
+          "title": "Add high-performance video to your Nextjs app",
+          "url": "https://next-video.dev/docs"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:vitest",
+      "topic_slug": "vitest",
+      "node_id": "KTZRo1Y_Z-7eMYzZ9W0Vl",
+      "title": "Vitest",
+      "description": "Next.js allows you to use Vitest for unit testing. Vitest is a fast unit test framework powered by Vite. It offers a development experience similar to Vite, making it easy to set up and use in projects that already use Vite for building. Vitest focuses on speed and simplicity, providing features like instant hot module replacement (HMR) and built-in support for TypeScript and JSX.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How to set up Vitest with Next.js",
+          "url": "https://nextjs.org/docs/app/guides/testing/vitest"
+        },
+        {
+          "raw_type": "official",
+          "title": "Vitest",
+          "url": "https://vitest.dev/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:why-frontend-frameworks",
+      "topic_slug": "why-frontend-frameworks",
+      "node_id": "rJ3vuI58Z9u2SKTDgpTE2",
+      "title": "Why Frontend Frameworks?",
+      "description": "Building modern web applications often involves managing complex user interfaces, handling data efficiently, and ensuring a smooth user experience. Frontend frameworks like React, Angular, and Next.js provide a structured approach to these challenges. They offer pre-built components, routing solutions, state management tools, and optimized build processes, allowing developers to focus on building ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Web3 Frontend \u2013 Everything You Need to Learn About Building Dapp Frontends",
+          "url": "https://moralis.io/web3-frontend-everything-you-need-to-learn-about-building-dapp-frontends/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is the difference between a framework and a library?",
+          "url": "https://www.youtube.com/watch?v=D_MO9vIRBcA"
+        },
+        {
+          "raw_type": "video",
+          "title": "Which JS Framework is best?",
+          "url": "https://www.youtube.com/watch?v=cuHDQhDhvPE"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Frontend Development",
+          "url": "https://app.daily.dev/tags/frontend?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:why-nextjs",
+      "topic_slug": "why-nextjs",
+      "node_id": "WxoMZRRiW9CGDZ9i80nbf",
+      "title": "Why Next.js?",
+      "description": "Next.js is a React framework that provides extra features and optimizations beyond what React offers on its own. When choosing a framework built on React, Next.js stands out because it simplifies development with features like built-in routing, server-side rendering, and static site generation. These capabilities improve performance, SEO, and the overall developer experience compared to building a",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "10 Must-Know Benefits of Next.js for Modern Web Apps",
+          "url": "https://www.designrush.com/agency/web-development-companies/nextjs/trends/benefits-of-next-js"
+        },
+        {
+          "raw_type": "article",
+          "title": "Next.js 15 Tutorial - Introduction",
+          "url": "https://www.youtube.com/watch?v=b4ba60j_4o8"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:why-react",
+      "topic_slug": "why-react",
+      "node_id": "ey6z7Y4WtNtQJ50n-3j5P",
+      "title": "Why React?",
+      "description": "React is a JavaScript library designed for building user interfaces in a declarative and component-based way. It simplifies the process of creating dynamic and interactive web applications by allowing developers to break down complex UIs into smaller, reusable pieces. This approach promotes code maintainability, reusability, and efficiency, making it easier to manage and update large-scale fronten",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated React Roadmap",
+          "url": "https://roadmap.sh/react"
+        },
+        {
+          "raw_type": "official",
+          "title": "React Website",
+          "url": "https://react.dev"
+        },
+        {
+          "raw_type": "video",
+          "title": "Full Stack React Developer Course",
+          "url": "https://www.youtube.com/watch?v=Bvwq_S0n2pk"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about React",
+          "url": "https://app.daily.dev/tags/react?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "nextjs:why-use-app-router",
+      "topic_slug": "why-use-app-router",
+      "node_id": "e_rwwlKsvyv9OMDDBXo_N",
+      "title": "App Router",
+      "description": "The App Router in Next.js is a new routing system built on React Server Components, offering enhanced flexibility and performance compared to the traditional Pages Router. Before Next.js 13, the Pages Router was the main way to create routes in Next.js. It's still supported in newer versions of Next.js, but Next.js recommends migrating to the new App Router to leverage React's latest features.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Next.js: App Router vs Pages Router",
+          "url": "https://dev.to/dcs-ink/nextjs-app-router-vs-pages-router-3p57"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1159 @@
+{
+  "roadmap": "engineering-manager",
+  "topic_count": 133,
+  "topics": [
+    {
+      "skill_id": "engineering-manager:agile-methodologies",
+      "topic_slug": "agile-methodologies",
+      "node_id": "n9gvPHn4c1U-l6v-W9v6r",
+      "title": "Agile methodologies",
+      "description": "An Engineering Manager ensures smooth implementation of Agile methodologies within the team. The manager oversees sprint planning, backlog refinement, and retrospectives for consistent development flow. They have the key role in facilitating communication, fostering a high-performing environment, and encouraging adaptive planning. The Engineering Manager faces the challenge of maintaining an Agile",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Scrum Guide",
+          "url": "https://scrumguides.org/"
+        }
+      ]
+    },
+    {
+      "skill_id": "engineering-manager:api-strategy",
+      "topic_slug": "api-strategy",
+      "node_id": "ukmMMWacekcejEiEKCLzh",
+      "title": "API strategy",
+      "description": "An Engineering Manager's ability to handle API strategies directly impacts the success of partner management. A key responsibility in this area is defining clear API requirements that align with partner needs and business targets. Meeting these goals can be complex, mainly due to differing partner expectations and changing trends in API development. Overcoming these challenges requires a deep unde",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:architectural-decision-making",
+      "topic_slug": "architectural-decision-making",
+      "node_id": "FtWNnOE3zObmjS-Og26M3",
+      "title": "Architectural Decision-Making",
+      "description": "Architectural decision-making is a crucial responsibility for an Engineering Manager. These decisions can shape the future capabilities and operation of an engineering team. A manager should be capable of balancing current requirements with long-term goals. This involves choosing the right technologies, frameworks and design patterns. They face challenges, like managing risks and ensuring scalabil",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:architecture-documentation",
+      "topic_slug": "architecture-documentation",
+      "node_id": "gHhNi32MSBmqk-oKOy-uj",
+      "title": "Architecture documentation",
+      "description": "Engineering managers pave the way to secure well-built architecture documents. These texts act as blueprints - they guide software development and offer comprehensive visibility into the system's structure. Therefore, managers ensure that these crucial documents are precise, updated, and accessible to all team members. However, architecture documentation also throws up challenges. The difficulty l",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:best-practices",
+      "topic_slug": "best-practices",
+      "node_id": "4-MCXFOkMGcN369OPG-vw",
+      "title": "Best Practices",
+      "description": "As an Engineering Manager, one key area you interact with is the best practices for documentation. This involves ensuring your team consistently maintains high-quality, easily readable, and efficiently structured documents. Importance is placed on keeping information up-to-date and easily accessible to facilitate quick decision-making and work efficiency. One of your responsibilities is to instill",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:bias-recognition--mitigation",
+      "topic_slug": "bias-recognition--mitigation",
+      "node_id": "g9FvFKC715tZL2ZGlPl3N",
+      "title": "Bias Recognition / Mitigation",
+      "description": "An Engineering Manager shoulders the responsibility of shaping a team culture that empowers everyone equally. Recognizing and mitigating bias is both a pivotal and challenging part of this role. Ensuring that decisions aren't tainted by personal biases averts, for instance, unjust promotions or assignments. Engineering Managers must remain receptive to feedback, acting upon it to uproot hidden bia",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:blameless-post-mortems",
+      "topic_slug": "blameless-post-mortems",
+      "node_id": "fYkKo8D35AHd8agr3YrIP",
+      "title": "Blameless Post-mortems",
+      "description": "An Engineering Manager plays a key role in facilitating blameless post-mortems. They bring teams together after incidents to dissect what went wrong, ensuring the main goal is learning, not pointing fingers. The manager is responsible for promoting a no-blame culture. They ensure everyone opens up about their actions without fear or guilt. From this, they derive measures to stop similar incidents ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:board-presentations",
+      "topic_slug": "board-presentations",
+      "node_id": "5MM1ccB1pmQcd3Uyjmbr7",
+      "title": "Board presentations",
+      "description": "Engineering Managers handle board presentations as a means to communicate company's technical strategies and progress. Main responsibility includes providing a comprehensive yet easy-to-understand technical synopsis to the board members who might not be tech-savvy. It involves striking a balance between technical specifics and high-level overviews. A common challenge is simplifying the technical l",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:brown-bags",
+      "topic_slug": "brown-bags",
+      "node_id": "S8-nwYKlG7YHL2dWwR303",
+      "title": "Brown Bags",
+      "description": "An Engineering Manager can utilize Brown Bags as a relaxed, voluntary form of knowledge transfer among the team. It's mainly their job to set the agenda and facilitate these informal sessions, leveraging them to encourage team members to share information and learnings. They face the challenge of ensuring relevant content is being shared, while maintaining an atmosphere where people are comfortabl",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:budget-planning",
+      "topic_slug": "budget-planning",
+      "node_id": "oqjr26B27SHSYVQ4IFnA1",
+      "title": "Budget Planning",
+      "description": "The role of an engineering manager extends beyond engineering tasks to include budget planning. Their duties include creating and overseeing the financial plan for their team. They need to estimate costs and ensure spending stays within set limits. This aspect often introduces challenges - it's tricky to balance the optimal resource allocation, project expenses and salary provisions. Yet, successf",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:budget-requests",
+      "topic_slug": "budget-requests",
+      "node_id": "pLUOU2AmAJ9aJAmIlVD7D",
+      "title": "Budget requests",
+      "description": "As an Engineering Manager, handling budget requests is more than just numbers. It\u2019s about demonstrating the value of engineering efforts in clear business terms to executives. Here, their role is to justify the request by showing how the budget aligns with the team's goals and the company's strategic objectives. They often face the challenge of explaining technical necessities in a business-friend",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:build-vs-buy-evaluation",
+      "topic_slug": "build-vs-buy-evaluation",
+      "node_id": "H0aav5qKDNiNegJOGP2rx",
+      "title": "Build vs Buy Evaluation",
+      "description": "An Engineering Manager navigates the \"Build vs Buy\" decision with precision. Their main responsibility is to analyze the benefits and drawbacks of developing in-house versus purchasing premade solutions. They must weigh up factors including cost, time, quality, and alignment with their company's long-term goals. Challenges arise from needing to balance immediate needs with future scalability. This",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:burnout-prevention",
+      "topic_slug": "burnout-prevention",
+      "node_id": "mIUx8zAHWyPWPGvxuTK4y",
+      "title": "Burnout Prevention",
+      "description": "Burnout prevention focuses on strategies and practices aimed at minimizing and mitigating the risk of employees experiencing burnout, a state of emotional, physical, and mental exhaustion caused by prolonged or excessive stress. It involves creating a supportive work environment, promoting healthy work-life balance, and equipping individuals and teams with the tools and resources needed to manage ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Preventing Burnout: A Guide to Protecting Your Well-Being",
+          "url": "https://www.psychiatry.org/news-room/apa-blogs/preventing-burnout-protecting-your-well-being"
+        },
+        {
+          "raw_type": "article",
+          "title": "Beating Burnout",
+          "url": "https://hbr.org/2016/11/beating-burnout"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Avoid Burnout",
+          "url": "https://www.youtube.com/watch?v=smjGAcyqDnk"
+        }
+      ]
+    },
+    {
+      "skill_id": "engineering-manager:business-case-development",
+      "topic_slug": "business-case-development",
+      "node_id": "vhOHvfF_lfQrrOK6sGLTY",
+      "title": "Business Case Development",
+      "description": "An Engineering Manager often takes on the responsibility of Business Case Development. This means they analyze and present possible outcomes of a project or decision. It's essential for them to understand the business side, not only the technical side. While it can be challenging, a proper business case helps guide investments. The manager must address all crucial aspects: costs, benefits, risks, ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:business-continuity",
+      "topic_slug": "business-continuity",
+      "node_id": "v6N7BH0B55gX0oNXb55D7",
+      "title": "Business continuity",
+      "description": "An Engineering Manager plays a fundamental role in establishing and maintaining business continuity. Their key responsibilities include forming strategies to ensure continuous service delivery and minimize downtime during unforeseen circumstances. They are heavily involved in the creation and maintenance of disaster recovery plans, as well as testing their effectiveness. Challenges faced could be ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:career-development-planning",
+      "topic_slug": "career-development-planning",
+      "node_id": "fhFSR_N4ZDTHINEinubHG",
+      "title": "Career Development Planning",
+      "description": "As an Engineering Manager, supporting your team's career development is critical. This requires aligning individual growth with the organization's goals and the team's skill requirements. It's not just about discussing job roles and future positions, but also about fostering long-term learning and professional growth. Challenges here include finding a balance between the team's current workload an",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:change-management",
+      "topic_slug": "change-management",
+      "node_id": "tt02qGHSn4fPbpboZ1Ni_",
+      "title": "Change management",
+      "description": "Engineering Managers play a significant role in change management. They are responsible for implementing new processes and technologies while ensuring minimal disruption. One of the challenges they face is managing the human side of change. This involves addressing employee fears and resistance to avoid a drop in productivity. To successfully navigate change, Engineering Managers should use their ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:change-strategy",
+      "topic_slug": "change-strategy",
+      "node_id": "1__zRE1iu1FDX9ynpWSBS",
+      "title": "Change strategy",
+      "description": "An Engineering Manager plays a vital role in developing and deploying organizational change strategies. They need to clearly define the vision, set realistic objectives, devise a detailed roadmap for change, and regularly update the team. Proper communication is vital to manage any fears or doubts among team members. In this regard, skills required vary from strategic thinking to effective communi",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:cicd-implementation",
+      "topic_slug": "cicd-implementation",
+      "node_id": "gAEmpSMvNyjmTa5q9oZSg",
+      "title": "CI/CD Implementation",
+      "description": "Working with CI/CD implementation, an Engineering Manager ensures fast and efficient production cycles. Key responsibilities include setting up, administering, and optimizing CI/CD pipelines. They oversee the integration of code changes and automate deployment, enabling a streamlined, error-reduced, and faster delivery of software builds. Challenges they may face include pipeline failure, software",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:code-review-best-practices",
+      "topic_slug": "code-review-best-practices",
+      "node_id": "40yK6XzI8lSxdiAXxtF75",
+      "title": "Code Review Best Practices",
+      "description": "An Engineering Manager has the responsibility to guide their team on code review best practices. They not only need to ensure the team is delivering quality code, but also that the process is efficient and educative. This involves creating a culture where constructive feedback is welcomed, and where discussing and learning about the codebase is a part of the daily routine. Challenges could include",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:communication-planning",
+      "topic_slug": "communication-planning",
+      "node_id": "Mxi4g_PzT0oYc3NgR0UVg",
+      "title": "Communication planning",
+      "description": "An Engineering Manager is pivotal in communication planning during organizational changes. His key tasks are to ensure timely and clear communication to prevent confusion and keep the team committed. They keep a balance between providing too much detail that would overwhelm and too little that might result in anxiety and fear. The manager can face issues like hesitance from teams to change or rumo",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:company-culture",
+      "topic_slug": "company-culture",
+      "node_id": "KA0y6KdVTjJFeX3frHUNo",
+      "title": "Company Culture",
+      "description": "An Engineering Manager plays a vital role in shaping and fostering the company culture. It's their task to ensure the culture aligns with the company's values and promotes a positive working environment. Healthy company culture can contribute to higher employee satisfaction, improved productivity, and lower turnover rates. The main challenge in this respect is to maintain compatibility between the",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:competitive-analysis",
+      "topic_slug": "competitive-analysis",
+      "node_id": "76GjwwEYaEX_kh02OSpdr",
+      "title": "Competitive Analysis",
+      "description": "An Engineering Manager uses competitive analysis for strategic thinking in various ways. They use it to understand the strengths and weaknesses of their own team and products compared to their competitors. This helps them pinpoint areas for improvement and innovation. Also, it guides them in making decisions about resource allocation, project prioritization, and technology choices. Their key respo",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:conflict-resolution",
+      "topic_slug": "conflict-resolution",
+      "node_id": "QA5CR5f0geC_RQc_SOK-N",
+      "title": "Conflict Resolution",
+      "description": "An Engineering Manager often faces conflicts, be it between team members, different projects, or resources. Effective Conflict Resolution is key to keeping the team harmonious and productive. This involves the ability to assess the situation accurately, allowing for all parties involved to voice their concerns and finding a solution that works for all. It\u2019s part of the Engineering Manager's respon",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:contingency-planning",
+      "topic_slug": "contingency-planning",
+      "node_id": "2RwpGPegD2GyiiV6SVbbM",
+      "title": "Contingency planning",
+      "description": "An Engineering Manager's role in Contingency Planning is essential for effective Risk Mitigation. They have to identify potential issues that could disrupt projects and develop back-up strategies to manage these risks. These could range from resources availability to unplanned absences of team members, among other things. A significant challenge they might encounter is foreseeing all potential ris",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:cost-optimization",
+      "topic_slug": "cost-optimization",
+      "node_id": "rbhZJZtRV1ZZ5QaYW77ry",
+      "title": "Cost Optimization",
+      "description": "As an Engineering Manager, cost optimization plays a crucial role in financial management. They have to balance budget constraints with project goals, making smart decisions about resource allocation to ensure maximum efficiency. This includes optimizing software licenses, cloud services, hardware, and labor costs. Careful planning and monitoring is necessary to avoid cost overrun. Challenges in c",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:critical-situation-leadership",
+      "topic_slug": "critical-situation-leadership",
+      "node_id": "nnoVA8W70hrNDxN3XQCVL",
+      "title": "Critical Situation Leadership",
+      "description": "Leading a team through a critical situation involves guiding them effectively when facing unexpected challenges, high-pressure scenarios, or significant disruptions. This requires clear communication, decisive action, and a focus on maintaining team morale and productivity while navigating uncertainty and resolving the crisis at hand. It's about providing stability and direction when things are mo",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to Lead Through a Crisis",
+          "url": "https://www.ccl.org/articles/leading-effectively-articles/how-to-lead-through-a-crisis/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Lead how they need: adopting a situational leadership style",
+          "url": "https://www.atlassian.com/blog/teamwork/situational-leadership"
+        },
+        {
+          "raw_type": "video",
+          "title": "Situational Leadership Model Explained",
+          "url": "https://www.youtube.com/watch?v=pykuvuA-QFU"
+        }
+      ]
+    },
+    {
+      "skill_id": "engineering-manager:cross-department-collaboration",
+      "topic_slug": "cross-department-collaboration",
+      "node_id": "Hb_rZe4k37Rr0enSh7woV",
+      "title": "Cross-department collaboration",
+      "description": "Cross-department collaboration is crucial for an Engineering Manager. They are responsible for coordinating with teams outside their department to align goals, synchronize work, and facilitate project completion. This requires well-honed communication skills, efficient leadership tactics, and effective collaboration strategies. Challenges may arise due to departmental silos, different priorities o",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:cross-functional-collaboration",
+      "topic_slug": "cross-functional-collaboration",
+      "node_id": "ZyNbSBd8plAZ5lt5OEUYu",
+      "title": "Cross-functional Collaboration",
+      "description": "One key responsibility of Engineering Managers is to establish clear communication across organisational functions, as they often have greater context and understanding of high-level processes. The job of establishing working cross-functional collaboration often includes defining areas of responsibility, formalising the communication streams, aligning goals, and resolving conflicts between teams. ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:culture-evolution",
+      "topic_slug": "culture-evolution",
+      "node_id": "y7YHIz7OI4sNfC_nhfLcu",
+      "title": "Culture evolution",
+      "description": "Engineering Managers play a crucial role in culture evolution during team changes. Their key responsibilities fall within communication, fostering an environment of transparency, addressing concerns, and leveraging changes to strengthen the team\u2019s values and spirit. Navigating cultural shifts can be challenging. Engineering Managers often address this by keeping regular check-ins, encouraging open",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:customer-feedback-integration",
+      "topic_slug": "customer-feedback-integration",
+      "node_id": "QEViLNgG4Uv9Q9PWig0u3",
+      "title": "Customer feedback integration",
+      "description": "Engineering Managers shoulder a crucial responsibility while integrating customer feedback. This usually means working closely with design and development teams to incorporate customers' inputs into the product. The key to success here is maintaining a keen solicitude for the end-users' experience and needs. Amidst the technical jargon and coding diagrams, it's all too easy to lose sight of the us",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:customer-success-alignment",
+      "topic_slug": "customer-success-alignment",
+      "node_id": "A-Aa7VdDAYfaMUZD_cWwP",
+      "title": "Customer success alignment",
+      "description": "An Engineering Manager\u2019s involvement in customer success alignment is crucial. They ensure that the engineering team aligns with the customer\u2019s needs and expectations. Key responsibilities include collaborating with the customer success team, understanding customer requirements, and making sure the engineering team is on the same page. Challenges arise when there's a disconnect between what custom",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:decision-records",
+      "topic_slug": "decision-records",
+      "node_id": "dTjp_rEl1ITZjvELqVtfv",
+      "title": "Decision records",
+      "description": "An Engineering Manager plays a crucial role in preserving decision records. These records serve as valuable historical documents, they encapsulate reasons behind significant decisions made in projects. An Engineering Manager's key responsibilities include ensuring decision records are kept up to date, comprehensible and easily accessible. Challenges the manager may face can stem from inconsistent ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:defining-and-enforcing-values",
+      "topic_slug": "defining-and-enforcing-values",
+      "node_id": "ZuZuzwy-Frsn_PFJZVuAQ",
+      "title": "Defining and Enforcing Values",
+      "description": "An Engineering Manager plays a critical role in defining and enforcing the values of the team they lead. They're responsible for setting the tone for a culture where these values are understood and practiced by all members. They will often work hand-in-hand with HR and leadership to craft a set of values that align with the broader organization's vision and purpose. Enforcing these values, however",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:delegation",
+      "topic_slug": "delegation",
+      "node_id": "bx2SMhR58ud45se5dK7qS",
+      "title": "Delegation",
+      "description": "An Engineering Manager handles delegation by assigning tasks and responsibilities to team members based on their skill levels, strengths, and project needs. They must constantly balance the need to complete tasks efficiently against the need for team development. They face the challenge of assigning right-sized tasks that promote growth without overwhelming their team. Key responsibilities in this",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:dependency-management",
+      "topic_slug": "dependency-management",
+      "node_id": "hH-UDVFlgKoMJcI1ssDFv",
+      "title": "Dependency management",
+      "description": "Dependency management plays a crucial role in an Engineering Manager's life. They need to understand and manage the dependencies between various tasks in a project. This includes determining what needs to be done first, what tasks depend on others, and what can be done in parallel. This is vital to keep projects on schedule and prevent bottlenecks. Engineering Managers face the challenge of juggli",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:development--release-workflow",
+      "topic_slug": "development--release-workflow",
+      "node_id": "bpJPDbifPwS4ScOoATlEI",
+      "title": "Development / Release Workflow",
+      "description": "Engineering managers are crucial to structuring Development/Release Workflow within a quality and process framework. With the end goal of managing and improving the software quality, they shape and guide the workflow. Their key duties involve creating a seamless process from development to release that can be easily understood and used by all team members. They must balance the need for rigorous t",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:disaster-recovery",
+      "topic_slug": "disaster-recovery",
+      "node_id": "KOTzJ8e7mc0wmF46vrj3I",
+      "title": "Disaster recovery",
+      "description": "An Engineering Manager plays a critical role in disaster recovery planning and execution. They ensure that a robust strategy is in place to minimize the impact of mishaps on the engineering operations, such as hardware failure or data loss. One key responsibility is to train the team to handle emergencies, ensure backup systems are operational, and validate the recovery plan regularly. The stagger",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:em-vs-tech-lead-vs-ic",
+      "topic_slug": "em-vs-tech-lead-vs-ic",
+      "node_id": "oKbeLp4YB8rI1Q3vi0EnG",
+      "title": "EM vs Tech Lead vs IC",
+      "description": "An Engineering Manager (EM), Technical Lead, and Individual Contributor (IC) play vital roles in tech teams. However, their responsibilities and focus areas differ. The EM prioritizes team management including hiring, team dynamics, facilitating communication, and ensuring deliverables. They often steer clear of day-to-day coding to focus on strategic matters. On the other hand, a Tech Lead leads ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:emergency-protocols",
+      "topic_slug": "emergency-protocols",
+      "node_id": "Xaeb67Nqdi0kwvehQUYeJ",
+      "title": "Emergency protocols",
+      "description": "An Engineering Manager plays a crucial role in creating and enforcing emergency protocols during incident responses. This involves planning and implementing strategies to minimize downtime and maintain system integrity. As a part of their key responsibilities, they are required to ensure the team responds swiftly, efficiently, and calmly in emergency situations. This often involves staff training,",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:emergency-staffing",
+      "topic_slug": "emergency-staffing",
+      "node_id": "FwK-B7jRbBXVnuY9JxI1w",
+      "title": "Emergency Staffing",
+      "description": "Emergency staffing refers to the process of quickly securing and deploying personnel to address unexpected and critical situations that disrupt normal operations. This involves identifying skill gaps, finding available resources (either internal or external), and rapidly onboarding them to mitigate the impact of the emergency and restore stability. The goal is to minimize disruption and maintain e",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Five Components of Effective Emergency Staffing Solutions",
+          "url": "https://www.atriumglobal.com/resources/effective-emergency-staffing-solutions/"
+        }
+      ]
+    },
+    {
+      "skill_id": "engineering-manager:emotional-intelligence",
+      "topic_slug": "emotional-intelligence",
+      "node_id": "h7gEQNbGiabDA1q1Bk_IB",
+      "title": "Emotional Intelligence",
+      "description": "Emotional intelligence is crucial for an Engineering Manager. It helps them understand team dynamics, enhances communication, and strengthens relationships. Their main responsibilities include recognizing team members' emotions, gauging their reactions appropriately, and managing their responses effectively. Engineering Managers often face challenges in dealing with various personalities within a ",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "Daniel Goleman on the different kinds of empathy",
+          "url": "https://www.youtube.com/watch?v=WdDVvLEKoc8"
+        }
+      ]
+    },
+    {
+      "skill_id": "engineering-manager:executive-summaries",
+      "topic_slug": "executive-summaries",
+      "node_id": "CHothgVl8ulFthwS7uKqK",
+      "title": "Executive summaries",
+      "description": "As an Engineering Manager, producing clear and helpful executive summaries is key. This type of communication gives a quick brief to leadership about the engineering team's progress and challenges. Crucial points should be distilled into easily digestible information, free of technical jargon that might cause confusion. Addressing this responsibility demands an in-depth understanding of both the p",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:external-collaboration",
+      "topic_slug": "external-collaboration",
+      "node_id": "Jctp5tPCK_vY35_bh7QFk",
+      "title": "External collaboration",
+      "description": "The role of an Engineering Manager extends to external collaboration as well. Here, they often serve the role of liaising with external teams, vendors, or partners, aligning goals and ensuring smooth communication flow. The key responsibilities include managing relationships, understanding the partner ecosystem, and negotiating win-win situations. Engineering Managers face challenges like cultural",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:feature-prioritization",
+      "topic_slug": "feature-prioritization",
+      "node_id": "2QwMcO27H3ygtLlWVplxr",
+      "title": "Feature prioritization",
+      "description": "As an Engineering Manager, they play a crucial role in feature prioritization. Their key responsibility is to balance the demands of the customers with the resources of their engineering team. Gleaning insights from customer feedback, market trends, and competitor analysis, they guide the team to focus on what's crucial for the business. Challenges faced by Engineering Managers in feature prioriti",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:feedback-delivery",
+      "topic_slug": "feedback-delivery",
+      "node_id": "Az9GgkLFoat2t_sYRUBv5",
+      "title": "Feedback Delivery",
+      "description": "An Engineering Manager plays a vital role in delivering feedback. Constructive feedback reinforces positive behaviors and corrects any missteps, effectively enhancing team dynamics. This leadership responsibility could include making sure the team is aware of their strengths, areas for improvement, and creating a balanced dialogue that encourages growth. However, the challenge lies in presenting c",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:hiring-and-recruitment",
+      "topic_slug": "hiring-and-recruitment",
+      "node_id": "3na5mBIPl5f6mjEzkgD_C",
+      "title": "Hiring and Recruitment",
+      "description": "Recruiting the right talent is a vital task for an Engineering Manager. It is their responsibility to understand the skill gaps in their teams and identify potential individuals who can fill those gaps. The challenge here is finding the right balance between technical skills and cultural fit. To succeed, the manager must have a clear understanding of the company's needs and the projects ahead. The",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:impact-assessment",
+      "topic_slug": "impact-assessment",
+      "node_id": "oGmtkOGVgA4huGJqkBEfj",
+      "title": "Impact assessment",
+      "description": "An Engineering Manager's role in 'Impact Assessment' during 'Organizational Change' involves assessing the potential risks and effects of proposed changes on their team and the larger organization. They need to foresee potential negative impacts and devise strategies to mitigate them to maintain the team's productivity and morale. Engineering Managers are responsible for communicating these assess",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:incident-management",
+      "topic_slug": "incident-management",
+      "node_id": "o1xPrfg8iNWQpD12xsbQJ",
+      "title": "Incident Management",
+      "description": "Being an Engineering Manager entails managing unexpected issues, and a key part of this is incident management. Duties include setting up clear protocols for identifying, responding to, and documenting incidents. They ensure all team members know their individual roles and tasks in these processes. A challenging aspect is tackling critical incidents without disrupting regular workflow. To turn the",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:inclusive-environment-creation",
+      "topic_slug": "inclusive-environment-creation",
+      "node_id": "6iM0n4faMNhk4mezS9AcG",
+      "title": "Inclusive environment creation",
+      "description": "Creating an inclusive environment is certainly a challenge for an Engineering Manager. This task involves nurturing a culture where all individuals are respected, appreciated, and valued for their uniqueness. It\u2019s central to breaking down barriers, encouraging innovative thinking and taking advantage of diverse talents. The Engineering Manager's responsibilities here include establishing and enfor",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:innovation-fostering",
+      "topic_slug": "innovation-fostering",
+      "node_id": "njqjYPMQK3nGYtqHzUylo",
+      "title": "Innovation fostering",
+      "description": "Engineering managers play a vital role in fostering innovation in the engineering culture. They set the tone by creating an environment where unique ideas are welcomed, and risk-taking is encouraged. Giving team members the freedom to experiment and learn from failures is crucial in sparking innovation. Key responsibilities include providing resources, time, and space for creative thinking, and re",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:integration-management",
+      "topic_slug": "integration-management",
+      "node_id": "f3P0fF4UzgVQZuMVTVmP1",
+      "title": "Integration management",
+      "description": "An engineering manager in partner management has a critical role in managing integrations. Their responsibilities include overseeing the development of tools and technologies that facilitate seamless connectivity with partners, ensuring the integration process meets partner requirements and goals. Engineering managers face challenges like dealing with complex integration scenarios, aligning techno",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:knowledge-bases",
+      "topic_slug": "knowledge-bases",
+      "node_id": "7t9jmv3_lRCEG5y5DA8bF",
+      "title": "Knowledge bases",
+      "description": "An Engineering Manager plays a crucial role in establishing solid knowledge bases for their team. This is a system where team members record, update, and share information about projects, coding practices, or other essential technical insights. The Engineering Manager is responsible for making sure that information is up-to-date, relevant, and easily accessible for everyone on the team. A key chal",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:knowledge-sharing-practices",
+      "topic_slug": "knowledge-sharing-practices",
+      "node_id": "74-7hDXaBVXYo6LJdgac_",
+      "title": "Knowledge sharing practices",
+      "description": "An Engineering Manager drives knowledge sharing practices within an engineering culture. Ensuring his team is updated with recent tech advances and system upgrades is one of his key responsibilities. Conducting regular workshops, brainstorming sessions, organizing 'Tech-Talks' proves essential in maintaining a consistent knowledge flow. Challenges often arise in the form of team members being relu",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:kpi-definition",
+      "topic_slug": "kpi-definition",
+      "node_id": "Wd8FCEaGZBTvsD-k4t0r4",
+      "title": "KPI Definition",
+      "description": "An Engineering Manager is pivotal in the process of defining key performance indicators (KPIs) for a project. They identify the crucial metrics that reflect success and are aligned with the project goals. To accomplish this, they work closely with their team and other stakeholders, clarifying the key outcomes that matter most. The definition of KPIs can be challenging due to the potential range of",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:learning-culture-development",
+      "topic_slug": "learning-culture-development",
+      "node_id": "aeD-kBZEr1NHFtAD8yHI_",
+      "title": "Learning culture development",
+      "description": "As an Engineering Manager, fostering a learning culture in the team is a notable aspect of their role. This involves creating an environment where team members are comfortable asking questions and making mistakes, seeing them as opportunities for learning and growth. The manager facilitates this by promoting continuous learning opportunities like webinars, workshops, and online classes. One challe",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:legacy-system-retirement",
+      "topic_slug": "legacy-system-retirement",
+      "node_id": "9mNLfntu1TPjcX3RoUeMq",
+      "title": "Legacy system retirement",
+      "description": "The retirement of legacy systems often falls under an Engineering Manager's purview. One of their main responsibilities is determining when a system becomes obsolete and planning its phase-out. This task demands a delicate balance of technical acumen, project management skills, and sound communication to ensure minimal disruption. Challenges include preserving vital data and functionalities and de",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:legacy-system-retirement",
+      "topic_slug": "legacy-system-retirement",
+      "node_id": "QUxpEK8smXRBs2gMdDInB",
+      "title": "Legacy System Retirement",
+      "description": "Every Engineering Manager knows the value and hurdles of legacy system retirement. They must plan and manage this complex task with a keen understanding of the system's purpose, its interdependencies, and potential risks of its retirement. Key responsibilities include assessing the impact on users, mitigating downtime, and ensuring business continuity. Challenges often arise from lack of documenta",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:lessons-learned",
+      "topic_slug": "lessons-learned",
+      "node_id": "HUQ_-vU2pdBPyF0mBocHz",
+      "title": "Lessons Learned",
+      "description": "As an Engineering Manager, one key responsibility in the field of knowledge management is the curation of \"Lessons Learned\". This involves reflecting on completed projects, identifying what was done well and what could be improved in the future. A significant challenge they face is ensuring these lessons are clearly articulated and accessible to all team members, to ensure similar issues don't reo",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:market-awareness",
+      "topic_slug": "market-awareness",
+      "node_id": "P2gIOt-i0sQEOMBo-XjZO",
+      "title": "Market awareness",
+      "description": "An Engineering Manager needs to have both technology and market awareness. By understanding the market trends, they can lead the team towards developing products or features that meet client needs and stand out from the competition. This involves close collaboration with the marketing, sales, and product management teams to incorporate market feedback into the engineering process. The challenge of",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:mentoring-and-coaching",
+      "topic_slug": "mentoring-and-coaching",
+      "node_id": "0ULnfq0ZFJXgoLbKM1gxC",
+      "title": "Mentoring and Coaching",
+      "description": "An Engineering Manager often plays a pivotal role in mentoring and coaching their team. They are responsible for providing regular feedback, advising on professional and technical development, and goal-setting. This involvement helps to cultivate a culture of continuous learning and growth. The challenge for Engineering Managers is to strike the right balance between providing support and empoweri",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:mentoring-programs",
+      "topic_slug": "mentoring-programs",
+      "node_id": "g6K9fxWdRQT5h_u4Y_bkq",
+      "title": "Mentoring Programs",
+      "description": "An Engineering Manager has a crucial role in facilitating mentoring programs as part of knowledge transfer. Their responsibilities involve choosing the right pairs for mentorship, ensuring mentors have the appropriate skills and knowledge, and evaluating the effectiveness of the program. One of the challenges they may encounter is determining how to pair mentors and mentees. They address this thro",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:migration-planning",
+      "topic_slug": "migration-planning",
+      "node_id": "QMAIEkVFHrrP6lUWvd0S8",
+      "title": "Migration planning",
+      "description": "Migration planning is a key facet of an Engineering Manager's responsibilities. They play a pivotal role in planning, coordinating, and overseeing the technical changes that include systems, databases, or application migration. This process requires them to have a solid understanding of the current technologies and the new systems being adopted, align migration activities with business needs and e",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:milestone-management",
+      "topic_slug": "milestone-management",
+      "node_id": "PXobPGPgCX3_55w4UtxT9",
+      "title": "Milestone Management",
+      "description": "Engineering Managers play a crucial role in Milestone Management. They are responsible for setting clear, measurable goals that map out the path to project completion. These milestones are pivotal for keeping the team motivated and the project on track. Challenges in this area include ensuring that milestones are ambitious yet attainable and progressive yet feasible. An Engineering Manager combats",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:one-on-one-meetings",
+      "topic_slug": "one-on-one-meetings",
+      "node_id": "b3qoH_LuW-Gz4N8WdGnZs",
+      "title": "One-on-One Meetings",
+      "description": "Engineering Managers play a vital role in conducting one-on-one meetings with their subordinates. Their key responsibilities in these meetings involve understanding the concerns of their team members, giving valuable feedback, and setting up individual growth paths. They also talk about career development and address performance issues. One-on-one meetings present challenges, like how to provide n",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:organization-structure",
+      "topic_slug": "organization-structure",
+      "node_id": "mjMRNhPkeb4lEZXBb8Iot",
+      "title": "Organization structure",
+      "description": "An Engineering Manager must understand and navigate the organization structure with ease. As a key responsibility, they need to know the roles, responsibilities, and relationships of various teams and individuals within the organization. This awareness can aid in quality cross-functional collaboration and effective decision making. Challenges may arise when there are changes in organizational stru",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:people",
+      "topic_slug": "people",
+      "node_id": "aSZ2uVCmpAdEPjJt6VKG4",
+      "title": "People",
+      "description": "Engineering Managers have a crucial role in managing the people aspect of their teams. They are responsible for building, nurturing, and guiding their teams towards a shared goal. This involves hiring the right talent, fostering collaboration, and promoting a positive environment for brainstorming and innovation. They also address personal and professional conflicts, ensuring a unified and efficie",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:performance-evaluations",
+      "topic_slug": "performance-evaluations",
+      "node_id": "eJzYnoB6sArLjXRm51cM4",
+      "title": "Performance Evaluations",
+      "description": "As an Engineering Manager, handling performance evaluations involves providing regular, constructive feedback to team members. An integral responsibility is to assess how well team members are meeting their deliverable goals and contributing to projects. It's crucial to define clear outcome metrics and keep an ongoing dialogue regarding progress. The challenge lies in balancing criticism and recog",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:politics-navigation",
+      "topic_slug": "politics-navigation",
+      "node_id": "Zoz01JcNU69gr95IcWhYM",
+      "title": "Politics navigation",
+      "description": "Engineering Managers have to skillfully navigate politics in any organization. Their goal here is to understand relationships, power dynamics, and informal networks that govern how things work. Politics navigation is pertinent to minimizing conflicts, maximizing support for initiatives, and achieving team goals smoothly. Identifying and managing politics often falls on the shoulders of Engineering",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:post-incident-analysis",
+      "topic_slug": "post-incident-analysis",
+      "node_id": "8zyK34SwHry2lrWchw0KZ",
+      "title": "Post-incident analysis",
+      "description": "After any technical incident, Engineering Managers shoulder the vital task of leading post-incident analysis. This involves in-depth evaluation of what caused the incident, how it was resolved, and ways to prevent recurrence. It\u2019s through this process that teams identify system flaws and address them promptly. Crafting clear, concise incident reports that capture key insights is one of their key r",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:process-changes",
+      "topic_slug": "process-changes",
+      "node_id": "ev9ZKygqETctLMSt1GAFU",
+      "title": "Process changes",
+      "description": "An Engineering Manager identifies the need for process changes, and oversees the implementation. They'll usually take the front seat in conducting technical reviews to evaluate current procedures. If there's an operational gap, they'll design and enforce a more efficient process. Addressing implementation obstacles is another responsibility. This means the manager will handle resistance to change ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:process-documentation",
+      "topic_slug": "process-documentation",
+      "node_id": "Kwy9O1z2hpeE0Sb3qtxEg",
+      "title": "Process documentation",
+      "description": "An Engineering Manager deeply recognizes the vitality of process documentation to ensure smooth operations within the team. The manager is responsible for leading this area, facilitating a comprehensive and accurate representation of processes, and crafting guidelines that are easy to understand. They guarantee that essential information isn't locked in someone's head and is readily accessible for",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:process",
+      "topic_slug": "process",
+      "node_id": "iZFn0FaRdrGv_-_8zii_-",
+      "title": "Process",
+      "description": "Engineering management is a crucial role in tech companies, overseeing the processes that power engineering teams. An Engineering Manager has to ensure that all processes, be it software development lifecycles, testing protocols, or deployment procedures, are efficient, effective, and correctly implemented. A key responsibility they hold is identifying and managing any bottlenecks or hindrances sl",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:product-strategy-alignment",
+      "topic_slug": "product-strategy-alignment",
+      "node_id": "nC5dfGlxbLoXUAp2u-6Gl",
+      "title": "Product strategy alignment",
+      "description": "For an Engineering Manager, aligning product strategy requires strong tech understanding and the ability to connect it with business needs. They play an essential role in transforming the company's goals into a clearly defined product roadmap and help their team focus on what\u2019s crucial for the product's success. Their key responsibilities include engaging in cross-functional collaboration with pro",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:product",
+      "topic_slug": "product",
+      "node_id": "p9ecMvHCqjmvxf67di7pY",
+      "title": "Product",
+      "description": "Engineering managers are pivotal in translating product visions into tangible results. They shoulder the responsibility of aligning the engineering team's efforts with the product roadmap. This involves not just understanding the technical complexity, but also grasping the product's strategic importance. They face challenges like prioritizing feature development and resolving resource clashes. Eff",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:production-issues-management",
+      "topic_slug": "production-issues-management",
+      "node_id": "kQG_wk66-51dA4Ly9ivjM",
+      "title": "Production issues management",
+      "description": "An Engineering Manager's role in production issues management is crucial. They are responsible for quick decision making during system down-times or service disruptions. They deploy resources efficiently to resolve issues, sometimes guiding the team in real-time to troubleshoot and fix the problem. Key challenges include downtime minimization, maintaining system availability, and making trade-offs",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:project-postmortems",
+      "topic_slug": "project-postmortems",
+      "node_id": "g9WWa50V8ZbhIJgBRx0Nd",
+      "title": "Project Postmortems",
+      "description": "Project postmortems are a crucial part of an Engineering Manager's role in project management. They allow the manager to evaluate a project after it's completed to understand what went well and what needs improvement. As a leader, the Engineering Manager typically steers this process, encouraging team members to discuss their experiences and draw valuable lessons. A primary challenge is ensuring t",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:project-tracking",
+      "topic_slug": "project-tracking",
+      "node_id": "SuT6q5lMMSyVkadlQp7iU",
+      "title": "Project Tracking",
+      "description": "An Engineering Manager's role includes ensuring that project tracking is effectively performed. They use various project management tools and techniques to monitor progress, check the alignment with set timelines, and identify potential bottlenecks. This is paramount to meeting deadlines and delivering projects on time. Responsibilities include updating project statuses, handling the reporting of ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:quality-metrics",
+      "topic_slug": "quality-metrics",
+      "node_id": "ZWWsuFm_G4kvvl_cv8l_t",
+      "title": "Quality Metrics",
+      "description": "Quality metrics are a crucial part of an Engineering Manager's role in project management. The responsibility here is two-fold: choosing the right metrics and interpreting them correctly for making data-driven decisions. Metrics like defect density, test pass rate, code review coverage, and more, can provide powerful insights into a project's health. Engineering Managers might face challenges in s",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:recognition-programs",
+      "topic_slug": "recognition-programs",
+      "node_id": "Vb3A4a-UpGTAEs-dVI66s",
+      "title": "Recognition programs",
+      "description": "Engineering Managers play a vital role in establishing and executing recognition programs in team culture. They understand the importance of acknowledging their team's contributions and achievements. As such, their main responsibility is designing and implementing effective recognition programs that motivate and inspire the team. One challenge they face in this role is ensuring genuine and inclusi",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:release-management",
+      "topic_slug": "release-management",
+      "node_id": "-Qc6E3gkUUonfzifYqeJJ",
+      "title": "Release Management",
+      "description": "Managing a software release is an essential role of an Engineering Manager. One key responsibility here is to establish deadlines and ensure all project components meet these deadlines. This includes tracking progress and addressing potential or actual delays. Challenges here can include coordinating with multiple teams and managing changing product requirements. To tackle these, an Engineering Ma",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:reorganizations",
+      "topic_slug": "reorganizations",
+      "node_id": "5_CE3p5jMA1uEqFNfp7Kh",
+      "title": "Reorganizations",
+      "description": "As an Engineering Manager, dealing with reorganizations can be challenging yet vital. They are responsible for planning and executing the restructure while ensuring minimal disruption to the workflow. It's also their duty to communicate these changes to their teams clearly and compassionously, as reorganizations can often lead to anxiety among members. Key challenges that they might face include r",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:resistance-management",
+      "topic_slug": "resistance-management",
+      "node_id": "vfp6VmWnhpre_eDORg7ht",
+      "title": "Resistance management",
+      "description": "In managing resistance during organizational change, an Engineering Manager's role involves identifying employees' concerns and fears. They work to address these issues by demonstrating empathy, opening communications, and providing solid reasons for the change. Addressing resistance may require new skills or adjustments to work styles, making training and support vital parts of the process. Engin",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:resource-allocation",
+      "topic_slug": "resource-allocation",
+      "node_id": "4v5yLKYVcMh0s7SQuf__C",
+      "title": "Resource Allocation",
+      "description": "An Engineering Manager juggles various responsibilities, one the most critical being effective resource allocation. This includes assigning the right team members to the right tasks, as well as wisely distributing budget and physical resources. While it's challenging to strike a balance between the needs of the project, the team's capabilities, and budgetary constraints, effective managers employ ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:resource-forecasting",
+      "topic_slug": "resource-forecasting",
+      "node_id": "iwwxnSVvCmZ57stXwzk8G",
+      "title": "Resource forecasting",
+      "description": "Resource forecasting is a practical tool for an Engineering Manager. It involves predicting future resource needs to ensure smooth execution of tasks. A manager's responsibility here is to avoid over-hiring or overspending while ensuring a project progresses efficiently. Forecasting effectively calls for knowledge of project timelines, team strengths and a keen eye on budget constraints. Furthermo",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:responsibility-shifts",
+      "topic_slug": "responsibility-shifts",
+      "node_id": "eIlW4mZKNQfBsTDmZf7ex",
+      "title": "Responsibility shifts",
+      "description": "Engineering Managers often handle responsibility shifts within the team during change management. It's their duty to analyze what skills are needed, and delegate new duties accordingly. They also ensure all members understand their updated roles, ensuring a smooth transition. Responsibility shifts often present challenges because they might disrupt established work rhythms. The Engineering Manager",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:risk-management",
+      "topic_slug": "risk-management",
+      "node_id": "mgw6M8I9qy1EoJpJV-gy1",
+      "title": "Risk Management",
+      "description": "As an Engineering Manager, handling risk management is a significant duty. They are responsible for identifying potential risks in every project aspect and implementing proper measures to reduce these risks. They foresee and evaluate technical difficulties, resource constraints, and schedule overruns to safeguard the team's success. A common challenge for Engineering Managers is balancing risk mit",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:roi-analysis",
+      "topic_slug": "roi-analysis",
+      "node_id": "XinUWPahOdufmLYcEwMj_",
+      "title": "ROI analysis",
+      "description": "An Engineering Manager leverages ROI (Return on Investment) analysis to ensure strategic objectives align with financial viability. They analyze projected costs and benefits related to engineering projects. Their key responsibilities include identifying potential risks and calculating the profitability of various alternatives based on expected returns. Conducting an ROI analysis can pose challenge",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:role-transitions",
+      "topic_slug": "role-transitions",
+      "node_id": "FayHWdUHHYFFBwnXx37Gk",
+      "title": "Role transitions",
+      "description": "Role transitions often occur within an Engineering team, and an Engineering Manager has a crucial role managing these changes. They're responsible for making sure transitioning team members are clear about their new duties and have the support they need to fulfill them. Challenges that arise with role transitions can include resistance to change, confusion, or even a decrease in productivity. Engi",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:scaling-infrastructure",
+      "topic_slug": "scaling-infrastructure",
+      "node_id": "EyoVFmqOJbH1sAPHLISFt",
+      "title": "Scaling Infrastructure",
+      "description": "An Engineering Manager is vital to scaling infrastructure because they typically lead the design, development, and execution of such operations. As a part of their role, they might identify current bottlenecks, forecast future growth, and plan accordingly so the infrastructure can support the increased load. The process often involves challenges such as predicting growth accurately, balancing cost",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:scope-management",
+      "topic_slug": "scope-management",
+      "node_id": "C-lJJSjT8Cxw_UT3ocFsO",
+      "title": "Scope Management",
+      "description": "As an Engineering Manager, scope management is crucial because it ensures all work required, and only the work required, is included in the project. Their key role involves defining the scope, focusing on the project requirements, and acknowledging potential scope creep scenarios which may deviate the project from its objectives. The challenges faced often include managing the team's expectations ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:security--best-practices",
+      "topic_slug": "security--best-practices",
+      "node_id": "sQCLhk__jvbityuuLlxiW",
+      "title": "Security  Best Practices",
+      "description": "As an Engineering Manager, ensuring security best practices is crucial. This involves creating and maintaining secure software infrastructure, and making sure the team is following proper protocols. Responsibilities include staying updated on latest security trends and threats, applying suitable security measures, and overseeing code reviews. It's also important for the manager to instill a securi",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:security-incident-handling",
+      "topic_slug": "security-incident-handling",
+      "node_id": "FNp4-RgPvfC76pJKjX56a",
+      "title": "Security incident handling",
+      "description": "An Engineering Manager plays a pivotal role in security incident handling. Key responsibilities include establishing protocols for incident response and ensuring the team is well-prepared to manage any security breach. The manager needs to promote a culture of security awareness, regularly updating the team on potential risks and implementing security best practices. Challenges may include staying",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:service-recovery",
+      "topic_slug": "service-recovery",
+      "node_id": "2fHcb1dAnf34APCAAlwnR",
+      "title": "Service Recovery",
+      "description": "Service recovery is a critical responsibility for an Engineering Manager. They lead their teams through restoring and maintaining essential services following any disruption. This could be due to a server failure, software crashes, or unexpected logical errors. As this role requires swift and effective actions, Engineering Managers often face challenges in balancing resources, troubleshooting, and",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:social-connections",
+      "topic_slug": "social-connections",
+      "node_id": "LE3ykySYFL23KvuwxeBaR",
+      "title": "Social connections",
+      "description": "Creating and maintaining social connections within a team is a key focus for an Engineering Manager. It's their role to facilitate an environment that encourages bonding, which often involves organizing team-building events or casual gatherings. They face challenges like remote work preventing face-to-face interaction, and cultural or personality differences causing disconnect. To address these, t",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:software-engineering-background",
+      "topic_slug": "software-engineering-background",
+      "node_id": "fBENrXdMhoGYgL_d96tgo",
+      "title": "Software Engineering Background",
+      "description": "An Engineering Manager with a Software Engineering background is well-equipped to handle technical challenges within the team. They can effectively provide direction and guidance on software development, use their knowledge to troubleshoot problems and offer practical solutions. Their role entails not only supervising the team's work but also assisting in technical aspects. The main challenge is t",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:sprint-planning",
+      "topic_slug": "sprint-planning",
+      "node_id": "7BcToTqL78QmG4qb43X5Q",
+      "title": "Sprint Planning",
+      "description": "An Engineering Manager plays a pivotal role in sprint planning. They lead the team in defining the project's scope for the next sprint, taking into account the team's capacity and the project's priorities. They ensure team members understand tasks and their importance. Their responsibilities include setting realistic objectives, aligning with stakeholders, and securing required resources. They rec",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:stakeholder-communication",
+      "topic_slug": "stakeholder-communication",
+      "node_id": "irEwTIubCjORnlH27QpEo",
+      "title": "Stakeholder Communication",
+      "description": "An Engineering Manager plays a crucial role in incident response, especially when managing stakeholder communication. They are responsible for maintaining open, honest, and constant communication with all relevant parties. Ensuring that stakeholders are up-to-date with the situation, planned actions, and progress reassures them about the situation's management. The main challenge lies in providing",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:stakeholder-management",
+      "topic_slug": "stakeholder-management",
+      "node_id": "34uOnta7dKOyZL0et_RC8",
+      "title": "Stakeholder management",
+      "description": "An Engineering Manager plays a critical role in stakeholder management during organizational change. They act as the link between the technical team and all other stakeholders (e.g., customer, management, or other teams). Their main responsibilities include communicating effectively about the impact of the proposed changes on the product delivery, ensuring that the stakeholders are on the same pag",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:stakeholder-management",
+      "topic_slug": "stakeholder-management",
+      "node_id": "TVqVlJqegLZRSkwNoHbBf",
+      "title": "Stakeholder Management",
+      "description": "Stakeholder management is a critical part of an Engineering Manager's role. They must be able to clarify project goals, handle issues and create a shared vision among different stakeholders. Key responsibilities include steering meetings, managing expectations and providing regular progress updates. One challenge is that each stakeholder may have different interests and priorities. Balancing these",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:status-reporting",
+      "topic_slug": "status-reporting",
+      "node_id": "gqKEgKjEu5sOf5Gl-HS-j",
+      "title": "Status Reporting",
+      "description": "Engineering Managers have a key role in status reporting. This involves constantly monitoring projects, addressing bottlenecks, and updating upper management and stakeholders. They ensure that everyone stays informed about project timelines, resource allocation, and development progress. The main challenge facing Engineering Managers is to deliver bad news diplomatically. This might involve change",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:strategic-proposals",
+      "topic_slug": "strategic-proposals",
+      "node_id": "uBrsV_EocAkRWEqJYjoZn",
+      "title": "Strategic proposals",
+      "description": "An Engineering Manager's role in strategic proposals involves developing and presenting potential strategies to executives. They need to understand the technical aspects of projects or strategies, and relay this information to non-technical audiences persuasively. The challenge lies in tailoring technical content for an executive audience. This requires exceptional communication skills and an abil",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:stress-management",
+      "topic_slug": "stress-management",
+      "node_id": "QFhhOgwz_bgZgOfKFg5XA",
+      "title": "Stress Management",
+      "description": "Stress management encompasses the techniques and strategies used to control and reduce the negative impacts of stress. It involves identifying stressors, understanding their effects on physical and mental well-being, and implementing coping mechanisms to maintain a healthy balance. Effective stress management aims to improve overall resilience and performance by mitigating the adverse consequences",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Stress Management",
+          "url": "https://www.helpguide.org/mental-health/stress/stress-management"
+        },
+        {
+          "raw_type": "video",
+          "title": "5 Steps to Rapidly Reduce Stress (Top Stress Management Techniques)",
+          "url": "https://www.youtube.com/watch?v=1WIHlVZcrzs"
+        }
+      ]
+    },
+    {
+      "skill_id": "engineering-manager:system-design-and-architecture",
+      "topic_slug": "system-design-and-architecture",
+      "node_id": "iX4HPgoiEbc_gze1A01n4",
+      "title": "System Design and Architecture",
+      "description": "An Engineering Manager leads and oversees the system design and architecture. They're responsible for ensuring that the design aligns with the company's business goals and client needs. Their tasks may include making key technical decisions, reviewing design proposals, architecting scalable systems, and ensuring systems' redundancy and fault tolerance. Technical issues are common in system design ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:system-monitoring--performance",
+      "topic_slug": "system-monitoring--performance",
+      "node_id": "pduPcv2QPpVmVvDdK4CPi",
+      "title": "System Monitoring & Performance",
+      "description": "An Engineering Manager has a vital role to play in system monitoring & performance. They're responsible for setting up the right tools and processes that allow ongoing scrutiny of systems to ensure optimal performance. This includes laying out clear KPIs for system uptime, responsiveness, and other critical metrics. Challenges can include capturing the right data and making sense of it to preempt ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:team-health-metrics",
+      "topic_slug": "team-health-metrics",
+      "node_id": "KPDHk7tl_BnIj_obnq3Kl",
+      "title": "Team Health Metrics",
+      "description": "Team health metrics are pivotal for an Engineering Manager as they provide insights into team performance, morale, and overall effectiveness. As a manager, it's crucial to regularly track these metrics, like productivity rates, team morale, and code quality, and to address any issues promptly. Managers face the challenge of balancing the quantitative data with qualitative observations. Not all iss",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:team-meetings",
+      "topic_slug": "team-meetings",
+      "node_id": "e0ZuiCoS8sJ0XB1lNiz7_",
+      "title": "Team Meetings",
+      "description": "An Engineering Manager's role in team meetings is, above all, to guide and inspire the team. They must set the agenda and ensure that all key points are discussed to move projects forward. Clear communication is crucial, as is the ability to listen to the team's feedback and ideas. An open and inclusive environment can help encourage freely sharing thoughts and solutions. One of the challenges fac",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:team-mergers",
+      "topic_slug": "team-mergers",
+      "node_id": "ph0U4l2alVJ8lUJ96q7co",
+      "title": "Team mergers",
+      "description": "Engineering Managers play a crucial role in merging teams. Their responsibility is to lead the process smoothly and ensure the newly merged team works effectively. It involves planning and executing the integration process, setting shared goals, and building team unity. They need to focus on promoting open communication, resolving conflicts and managing team dynamics. Merging teams presents challe",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:team-motivation",
+      "topic_slug": "team-motivation",
+      "node_id": "U_oOnDXkCE387r9olvMZB",
+      "title": "Team Motivation",
+      "description": "For an Engineering Manager, sparking team motivation is paramount. They take the extra step to understand their team members' motivations, whether it's acquiring new skills or delivering high-quality products, and use this understanding to fuel their passion. Manager's key responsibility here is to set clear objectives, provide feedback, and foster a positive work environment. Challenges may arise",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:team-structure-and-design",
+      "topic_slug": "team-structure-and-design",
+      "node_id": "tPDmXXjvFI_8-MTo_dEUw",
+      "title": "Team Structure and Design",
+      "description": "Team structure and design weigh heavily on an Engineering Manager's shoulders. Key responsibilities include determining the necessary roles, defining their right fit, and establishing efficient channels of communication. This foundation is fundamental to improving overall productivity and agile adaptability. Challenges include aligning team design to project demands while balancing individual tale",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:team-traditions-and-rituals",
+      "topic_slug": "team-traditions-and-rituals",
+      "node_id": "8Nro6PTkEkNugYBjQfJ6O",
+      "title": "Team Traditions and Rituals",
+      "description": "As an Engineering Manager, fostering positive team traditions and rituals is essential for a healthy team culture. They often organize and participate in these traditions to build camaraderie and morale. These can include activities such as daily stand-ups, team lunches, code reviews, or even celebrating personal achievements. The manager has to consider the interests and cultures of their team me",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:tech-talks",
+      "topic_slug": "tech-talks",
+      "node_id": "2LO0iWf-y3l4rA1n_oG1g",
+      "title": "Tech Talks",
+      "description": "Engineering Managers often utilize Tech Talks as an effective method for knowledge transfer within the team. It's their responsibility to organize these sessions where team members can share ideas, innovations, and discoveries related to their technical work. These discussions can help to improve overall team understanding, promote learning, and foster a culture of open communication. One challeng",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:technical-customer-support",
+      "topic_slug": "technical-customer-support",
+      "node_id": "V5s2i-L2tsZFNxMLN_e_U",
+      "title": "Technical customer support",
+      "description": "Engineering Managers play a vital role in technical customer support. They're responsible for ensuring that their team provides accurate and timely solutions to the customer's technical issues. Their key responsibilities include devising effective strategies for problem-solving, conducting regular team meetings to discuss pressing issues, and maintaining strong communication with other teams to un",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:technical-debt-and-management",
+      "topic_slug": "technical-debt-and-management",
+      "node_id": "EY6Hk5wPd9Y_VA1UROk44",
+      "title": "Technical Debt and Management",
+      "description": "Engineering Managers play a crucial role in managing technical debt. This involves identifying, prioritizing, and tackling issues. It's the manager's job to strike a balance between improving the existing codebase and delivering new features. Addressing technical debt demands constant vigilance. Key responsibilities include conducting code reviews, advocating for coding standards, and allocating t",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:technical-documentation",
+      "topic_slug": "technical-documentation",
+      "node_id": "_2xnTKt5yi__jj_WgcLa7",
+      "title": "Technical Documentation",
+      "description": "An Engineering Manager takes the lead in establishing a practice for creating and maintaining technical documentation. The manager needs to ensure that protocols are followed and the information is consistently up-to-date. Consistent and clear documentation helps the team by reducing misunderstandings and boosting productivity. The challenges for an Engineering Manager in this area include ensurin",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:technical-excellence-mindset",
+      "topic_slug": "technical-excellence-mindset",
+      "node_id": "Cq0OFaWqSRathZO-bxBrP",
+      "title": "Technical excellence mindset",
+      "description": "An Engineering Manager plays a vital role in promoting a technical excellence mindset. Their key responsibility is to foster an environment where the team constantly challenges the status quo and seeks ways to improve their technical skills and knowledge. This requires creating an atmosphere that values continuous learning, encourages innovation, and rewards creative problem-solving. The challenge",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:technical-partnerships",
+      "topic_slug": "technical-partnerships",
+      "node_id": "tCT2syTMyEHCspDLXxk6R",
+      "title": "Technical partnerships",
+      "description": "An Engineering Manager plays a vital role in fostering technical partnerships in relation to customer relations. They have the responsibility of coordinating and collaborating with tech-partners to fulfill customer requirements, effectively leveraging their expertise for mutual benefit. They need to maintain a sound understanding of both the partner's capabilities and the customer's needs, bridgin",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:technical-risk-assessment",
+      "topic_slug": "technical-risk-assessment",
+      "node_id": "d7zMBhMFgY9MwmKC9CVVh",
+      "title": "Technical Risk Assessment",
+      "description": "An Engineering Manager plays a pivotal role in technical risk assessment, acting as the gatekeeper to foresee and avoid potential dangers. Their key duties revolve around identifying the technical debt, evaluating its potential impact, and laying out choices to mitigate it. They also participate in disaster recovery planning, ensuring the team is prepared to handle any technical issues that might ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:technical-roadmapping",
+      "topic_slug": "technical-roadmapping",
+      "node_id": "ikCJ8Ybu2AD1w5VuPNVAO",
+      "title": "Technical Roadmapping",
+      "description": "As an Engineering Manager, the creation of technical roadmaps forms a pivotal part of your role. Simply put, it's a strategic document that outlines the steps your team needs to take to achieve technical goals. You're responsible for being a vital connection between company-wide goals and your engineering team. A key challenge is aligning the roadmap with both business requirements and foundationa",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:technical-standards-setting",
+      "topic_slug": "technical-standards-setting",
+      "node_id": "C2YsaZ32An_UXV8lB7opm",
+      "title": "Technical Standards Setting",
+      "description": "Engineering Managers play a crucial role in the setting of technical standards. Their key responsibilities include identifying appropriate industry standards, ensuring the team's technical resources align with these standards, and implementing them consistently across all engineering projects. A common challenge faced by Engineering Managers is sustaining a balance between maintaining high standar",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:technology-adoption",
+      "topic_slug": "technology-adoption",
+      "node_id": "jerPoyfCcwZbNuE_cl1hq",
+      "title": "Technology adoption",
+      "description": "An Engineering Manager has a vital role during technology adoption as a part of technical change management. They evaluate technologies to determine their suitability for the team's needs. This includes assessing the impact of new technologies on existing systems, workflows, and team skills. Engineering Managers are responsible for planning the adoption process, communicating changes to the team, ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:technology-partnerships",
+      "topic_slug": "technology-partnerships",
+      "node_id": "xMN575nnnQJeHe2oJYw17",
+      "title": "Technology partnerships",
+      "description": "Engineering Managers play a key role in fostering technology partnerships. It's a necessity for them to understand both the technical sides and value propositions of potential partners. They establish and maintain relationships based on mutual technology goals, and ensure that partners align with the overall strategy of their engineering team. For partner management, Engineering Managers often nee",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:testing-strategies",
+      "topic_slug": "testing-strategies",
+      "node_id": "q5SJyM1d8cQzzAcR-kotB",
+      "title": "Testing Strategies",
+      "description": "Testing strategies form a crucial part of an engineering manager's domain. They are responsible for defining the approach that allows quick detection of flaws and ensures the production of quality software products. Their key responsibilities include selecting the proper testing methods, liaising with the development team to ensure adherence to established protocols, and managing resources for eff",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:timeline-estimation",
+      "topic_slug": "timeline-estimation",
+      "node_id": "QWO5QFS7kXwfu3aa8IiRt",
+      "title": "Timeline Estimation",
+      "description": "Timeline estimation is a vital part of an Engineering Manager's role. Typically, they'll leverage their experience, industry knowledge, and sometimes, gut feeling, to envisage a project's duration. They are responsible for considering factors such as workload, complexity, team size, and risks to determine a realistic timeline. They often face challenges in ensuring that timelines are accurate and ",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:tool-transitions",
+      "topic_slug": "tool-transitions",
+      "node_id": "f-52wRfPRrA9iniOMYQB7",
+      "title": "Tool transitions",
+      "description": "As an Engineering Manager, implementing a tool transition is a major responsibility. It's key to ensure the new tool meets team requirements and aligns with company goals. They need to plan the transition, helping team members understand why the change is happening and what the benefits are. Challenges during tool transitions include resistance to change, knowledge gaps, and possible disruption to",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:trust--influence-building",
+      "topic_slug": "trust--influence-building",
+      "node_id": "7PBmYoSmIgZT21a2Ip3_S",
+      "title": "Trust / Influence Building",
+      "description": "Building trust and influence is crucial for any Engineering Manager. This involves establishing a solid reputation, delivering on promises and being an active listener to your team's ideas and issues. It's a manager's job to ensure there's an open, honest environment that promotes trust. Balancing delegation and taking charge, especially in difficult situations, is key to building influence. One c",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understanding The Trust Equation",
+          "url": "https://trustedadvisor.com/why-trust-matters/understanding-trust/understanding-the-trust-equation"
+        }
+      ]
+    },
+    {
+      "skill_id": "engineering-manager:velocity-tracking",
+      "topic_slug": "velocity-tracking",
+      "node_id": "idd92ZTBVUzptBl5jRdc3",
+      "title": "Velocity Tracking",
+      "description": "An Engineering Manager plays a critical role in managing project velocities. They are responsible for understanding team pace and utilizing this data to predict project completion times. This not only assists in setting realistic expectations but also in resource allocation. A challenge they face is ensuring the team maintains a steady pace without burning out. It's crucial to strike a balance bet",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:vendor-management",
+      "topic_slug": "vendor-management",
+      "node_id": "Imgt669vbUT_Iec2o4Gvt",
+      "title": "Vendor Management",
+      "description": "Vendor Management involves negotiating contracts, improving value procurement, and maintaining effective communication. An Engineering Manager plays a key role in this aspect. Their responsibilities include choosing credible vendors, tracking vendor performance and ensuring that their products or services are of high quality. Managing vendor relationships can be a challenge. However, it's essentia",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:vendor-relationships",
+      "topic_slug": "vendor-relationships",
+      "node_id": "WYoqfmk5ejB2UOiYXh4Zi",
+      "title": "Vendor relationships",
+      "description": "Engineering managers play a crucial role in maintaining robust vendor relationships. They are often responsible for choosing the right vendors, managing contracts, and ensuring the quality of services or goods provided. One challenge they face is ensuring that the vendors adhere to the agreed service level agreements (SLAs) and standards. They handle this by setting clear expectations, maintaining",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:vision-alignment",
+      "topic_slug": "vision-alignment",
+      "node_id": "QssXmeifoI3dtu-eXp8PK",
+      "title": "Vision alignment",
+      "description": "As an Engineering Manager, aligning vision is a crucial aspect of executive communication. They are responsible for understanding the company's strategic objectives and translating them into engineering goals. This task requires effective communication, ensuring all team members comprehend and work towards this common goal. The challenge is to explain complex technical strategies in a clear, engag",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:war-room-management",
+      "topic_slug": "war-room-management",
+      "node_id": "LQ3YfAgJ4UaDgtnN-cMht",
+      "title": "War Room Management",
+      "description": "Managing a War Room during an incident response requires the Engineering Manager to harness effective cross-functional communication skills. They coordinate with various teams, aligning everyone towards resolving the issue in the fastest possible way. At the same time, they minimize the impact on services and maintain transparency with stakeholders about progress. A key responsibility of the Engin",
+      "resources": []
+    },
+    {
+      "skill_id": "engineering-manager:what-is-engineering-management",
+      "topic_slug": "what-is-engineering-management",
+      "node_id": "_hYN0gEi9BL24nptEtXWU",
+      "title": "What is Engineering Management?",
+      "description": "Engineering management is the integration of engineering principles with business practices to oversee and optimize complex engineering-driven enterprises. It involves planning, organizing, allocating resources, and directing activities that have a technological component.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Engineering Management Resources",
+          "url": "https://github.com/engineering-management/awesome-engineering-management"
+        },
+        {
+          "raw_type": "article",
+          "title": "Software Engineering at Google: The Engineering Manager",
+          "url": "https://abseil.io/resources/swe-book/html/ch05.html#the_engineering_manager"
+        }
+      ]
+    },
+    {
+      "skill_id": "engineering-manager:work-life-balance-during-crises",
+      "topic_slug": "work-life-balance-during-crises",
+      "node_id": "tmY4Ktu6luFg5wKylJW76",
+      "title": "Work-Life Balance During Crises",
+      "description": "Maintaining work-life balance during a crisis involves strategies and practices that help team members manage their professional responsibilities while also prioritizing their personal well-being and commitments. This includes setting boundaries, utilizing time management techniques, encouraging open communication about workload and stress, and ensuring access to resources that support mental and ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "The Work-Life Balance Crisis",
+          "url": "https://www.speechtherapypd.com/blogs/the-worklife-balance-crisis"
+        },
+        {
+          "raw_type": "article",
+          "title": "5 Ways to Keep Your Career on Track During a Life Crisis",
+          "url": "https://melodywilding.com/5-ways-to-keep-your-career-on-track-during-a-life-crisis/"
+        }
+      ]
+    }
+  ]
+}

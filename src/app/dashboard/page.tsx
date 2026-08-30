@@ -15,7 +15,8 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
-        const res = await fetch("/api/dashboard?userId=test-user");
+        const currentUserId = localStorage.getItem('userId') || 'user-1';
+        const res = await fetch(`/api/dashboard?userId=${currentUserId}`);
         const json = await res.json();
         setData(json);
       } catch (err) {

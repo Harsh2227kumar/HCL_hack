@@ -1,11 +1,17 @@
 import Groq from 'groq-sdk';
 
-const apiKey = process.env.GROQ_API_KEY || '';
+const getKeys = (envStr: string | undefined): string[] => {
+  if (!envStr) return [];
+  return envStr.split(',').map(k => k.trim()).filter(k => k.length > 0);
+};
 
-export const groqClient = new Groq({ apiKey });
+const apiKeys = getKeys(process.env.GROQ_API_KEY);
+let currentKeyIndex = 0;
 
 export async function callGroq(prompt: string, systemPrompt?: string, responseSchema?: any): Promise<string> {
-  const model = 'llama-3.3-70b-versatile';
+  if (apiKeys.length === 0) throw new Error("GROQ_API_KEY is not set.");
+  
+  const model = 'openai/gpt-oss-120b';
   
   const messages: any[] = [];
   if (systemPrompt) {
@@ -13,11 +19,26 @@ export async function callGroq(prompt: string, systemPrompt?: string, responseSc
   }
   messages.push({ role: 'user', content: prompt });
 
-  const completion = await groqClient.chat.completions.create({
-    messages,
-    model,
-    response_format: responseSchema ? { type: 'json_object' } : undefined,
-  });
+  for (let i = 0; i < apiKeys.length; i++) {
+    const keyToTry = apiKeys[(currentKeyIndex + i) % apiKeys.length];
+    const client = new Groq({ apiKey: keyToTry });
+    
+    try {
+      const completion = await client.chat.completions.create({
+        messages,
+        model,
+        response_format: responseSchema ? { type: 'json_object' } : undefined,
+        max_tokens: 4096,
+      });
+      currentKeyIndex = (currentKeyIndex + i) % apiKeys.length;
+      return completion.choices[0]?.message?.content || '';
+    } catch (err: any) {
+      console.warn(`[Groq] API Key (ending in ...${keyToTry.slice(-4)}) failed. Switching to next key...`);
+      if (i === apiKeys.length - 1) {
+        throw err;
+      }
+    }
+  }
 
-  return completion.choices[0]?.message?.content || '';
+  throw new Error("All Groq API keys exhausted or failed.");
 }

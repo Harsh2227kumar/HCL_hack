@@ -1,0 +1,1661 @@
+{
+  "roadmap": "r",
+  "topic_count": 129,
+  "topics": [
+    {
+      "skill_id": "r:aesthetic-mappings",
+      "topic_slug": "aesthetic-mappings",
+      "node_id": "HDWIMwjBFh4vKw_BYo0bF",
+      "title": "Aesthetic Mappings",
+      "description": "Aesthetic mappings connect columns in your data to visual properties of a plot, like position, color, size, or shape. Writing `aes(x = year, y = revenue, color = region)` tells ggplot2 to plot year against revenue and color each point by region. Choosing the right aesthetics for the right variables makes the difference between a clear plot and a confusing one.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:apis",
+      "topic_slug": "apis",
+      "node_id": "V_cnhs4qzp-SLnLaGXC1l",
+      "title": "APIs",
+      "description": "Web APIs let you request data over the internet from another service, typically returning it in JSON format. Fetching data from an API in R usually means making an HTTP request with a package like httr, then parsing the response. This combination of requesting and parsing is essential for working with any modern data source that exposes an API rather than a static file.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:apply-family",
+      "topic_slug": "apply-family",
+      "node_id": "yqCapCzAFkWZvebvkuHNV",
+      "title": "Apply Family",
+      "description": "The apply family is a set of base R functions that apply another function to every element of a vector, list, or data structure, replacing many uses of explicit loops. `lapply()` always returns a list, `sapply()` tries to simplify the result into a vector or matrix, and `vapply()` works like `sapply()` but requires specifying the expected output type in advance. These functions predate the tidyver",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "apply family in r apply(), lapply(), sapply(), mapply() and tapply()",
+          "url": "https://www.r-bloggers.com/2021/05/apply-family-in-r-apply-lapply-sapply-mapply-and-tapply/"
+        },
+        {
+          "raw_type": "article",
+          "title": "apply, lapply, sapply in R: The apply Family Explained",
+          "url": "https://coddy.tech/docs/r/apply-family"
+        },
+        {
+          "raw_type": "video",
+          "title": "Apply Functions in R",
+          "url": "https://www.youtube.com/watch?v=i8xYAX5dH-o"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:arguments--defaults",
+      "topic_slug": "arguments--defaults",
+      "node_id": "qSJI_xsSN3wPY3ud0bZdm",
+      "title": "Arguments & Defaults",
+      "description": "Function arguments are the inputs a function accepts, and default values let you specify what an argument should be if the caller doesn't provide one. Writing `function(x, na.rm = FALSE)` means `na.rm` defaults to `FALSE` unless the caller overrides it. R also supports `...` to let a function accept a variable number of additional arguments, often passed through to another function inside.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Functions",
+          "url": "https://adv-r.hadley.nz/functions.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Create functions in R",
+          "url": "https://www.youtube.com/watch?v=dCyj1MCOMrw"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:arrays",
+      "topic_slug": "arrays",
+      "node_id": "fy2pI0rjkw9d8THIHgDuN",
+      "title": "Arrays",
+      "description": "An array generalizes a matrix to more than two dimensions, storing values of a single type across any number of dimensions you specify. Arrays are less common in everyday data analysis than vectors or data frames, but they appear in specialized numerical and scientific computing contexts. R indexes into them using the same bracket notation used for vectors and matrices, just with an extra dimensio",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Arrays",
+          "url": "https://www.w3schools.com/r/r_arrays.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "R Basics 11 - Arrays",
+          "url": "https://www.youtube.com/watch?v=oYhP2WZYpBY"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:base-r-plotting",
+      "topic_slug": "base-r-plotting",
+      "node_id": "Ytwncvf4YOgLPNnczOpts",
+      "title": "Base R Plotting",
+      "description": "Base R includes plotting functions like `plot()`, `hist()`, and `boxplot()` that don't require any additional package. They're quick to use for a fast look at data and require no setup. Base R plots are generally less polished and more manual to customize than ggplot2, since you build them up layer by layer using separate function calls.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:basic-syntax",
+      "topic_slug": "basic-syntax",
+      "node_id": "nDFlbYOe7U7mVJadKYy_W",
+      "title": "Basic Syntax",
+      "description": "This section covers the fundamental building blocks of writing R code: variables, operators, comments, and basic control structures. It's the vocabulary you need before anything more complex makes sense.",
+      "resources": [
+        {
+          "raw_type": "book",
+          "title": "R for Data Science (2e)",
+          "url": "https://r4ds.hadley.nz/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Harvard CS50\u2019s Intro to R Programming",
+          "url": "https://www.youtube.com/watch?v=g_3IKHG-rfA"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn R in 39 minutes",
+          "url": "https://www.youtube.com/watch?v=yZ0bV2Afkjc"
+        },
+        {
+          "raw_type": "video",
+          "title": "R programming in one hour - a crash course for beginners",
+          "url": "https://www.youtube.com/watch?v=eR-XRSKsuR4"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:best-practices",
+      "topic_slug": "best-practices",
+      "node_id": "OLOZSNHrOFD3claBXNKxP",
+      "title": "Best Practices",
+      "description": "Good data visualization practice means choosing chart types and design choices that communicate data accurately rather than misleadingly. Common anti-patterns include truncated axes that exaggerate differences and color choices that aren't accessible to colorblind viewers. A technically correct chart can still mislead its audience if these principles are ignored.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:big-data-tools",
+      "topic_slug": "big-data-tools",
+      "node_id": "GkxSrpOJx-SWvnDkTPcJt",
+      "title": "Big Data Tools",
+      "description": "This section covers working with datasets too large or too slow to handle comfortably with standard R data manipulation tools. It includes techniques for parallelizing computation and connecting to distributed processing systems.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:casting-types",
+      "topic_slug": "casting-types",
+      "node_id": "XI8bvhQ3ugezTu60USUG2",
+      "title": "Casting Types",
+      "description": "Casting converts a column to the correct type, such as turning character `\"42\"` into the numeric value `42`. Data often arrives in the wrong type for analysis, especially numbers or dates stored as plain text. Getting the types right early avoids confusing errors later when a function expects a number but receives text instead.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:character",
+      "topic_slug": "character",
+      "node_id": "ghrVl-VfVDvpyBIl6N4xM",
+      "title": "Character",
+      "description": "Character is R's type for text, written inside single or double quotes, like `\"hello\"`. R provides many built-in and package functions for searching, splitting, and reformatting text stored this way. Character data shows up constantly in real datasets: names, categories, free-text responses, file paths.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Character",
+          "url": "https://www.r-tutor.com/r-introduction/basic-data-types/character"
+        },
+        {
+          "raw_type": "article",
+          "title": "R Strings",
+          "url": "https://www.w3schools.com/r/r_strings.asp"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:comments",
+      "topic_slug": "comments",
+      "node_id": "IahDxQfLvld-qCAeAuAo-",
+      "title": "Comments",
+      "description": "Comments start with `#` and are ignored when R runs the code, letting you leave notes explaining what a piece of code does or why. They don't affect how a script executes, but they make code easier to understand later, whether for someone else or for yourself after time has passed. Good commenting habits pay off especially once scripts grow beyond a few lines.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Comments",
+          "url": "https://www.w3schools.com/r/r_comments.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "how to add comments in your R codes",
+          "url": "https://www.youtube.com/watch?v=1ELURZg8IIY"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:common-plots",
+      "topic_slug": "common-plots",
+      "node_id": "1uWW6PP2uWqKU4Ya5GzVO",
+      "title": "Common Plots",
+      "description": "Common plot types include line plots for trends over time, bar plots for comparing quantities across categories, histograms for showing the distribution of a single numeric variable, and boxplots for summarizing spread and outliers. Each type suits a different kind of question about the data. Learning when to reach for which one is as important as knowing the syntax to produce it.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:complex",
+      "topic_slug": "complex",
+      "node_id": "SQh5uCFmpecdc-_PtyCEp",
+      "title": "Complex",
+      "description": "Complex numbers combine a real and imaginary part, written in R as something like `3+2i`. They come up in specialized mathematical work, such as signal processing, but most day-to-day data analysis never touches them directly. R supports them fully as a native type, including arithmetic and functions like `Mod()` and `Conj()`.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Complex Types",
+          "url": "https://www.r-tutor.com/r-introduction/basic-data-types/complex"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:conditional-statements",
+      "topic_slug": "conditional-statements",
+      "node_id": "bN3DAVH9lstsgwFhFMU_m",
+      "title": "Conditional Statements",
+      "description": "Conditional statements let code branch based on whether something is true or false, using `if`, `else if`, and `else`. R evaluates the condition, runs the matching block, and skips the rest. R also offers `ifelse()` and dplyr's `case_when()` for applying conditional logic across an entire column of data at once.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Conditional statements",
+          "url": "https://intro2r.com/conditional-statements.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "R If ... Else",
+          "url": "https://www.w3schools.com/r/r_if_else.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Conditional Statements in R (If, Else If, and Else)",
+          "url": "https://www.youtube.com/watch?v=YT6OXoTIjOk"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:correlation",
+      "topic_slug": "correlation",
+      "node_id": "IeNMySumbyJdHhORMwmFr",
+      "title": "Correlation",
+      "description": "Correlation measures the strength and direction of a linear relationship between two numeric variables, expressed as a single number between negative one and positive one. A value near positive one means the variables tend to increase together, and near zero means little linear relationship exists. Correlation does not imply causation, and it can miss real relationships that aren't linear in shape",
+      "resources": []
+    },
+    {
+      "skill_id": "r:cran",
+      "topic_slug": "cran",
+      "node_id": "IL0fFEs4CgK_eBft-SYAl",
+      "title": "CRAN",
+      "description": "CRAN, the Comprehensive R Archive Network, is R's official package repository, hosting tens of thousands of vetted packages. Packages published on CRAN go through basic automated checks before release, giving them a baseline level of reliability. It's the default source `install.packages()` pulls from, and most tutorials assume packages come from here unless stated otherwise.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "CRAN",
+          "url": "https://cran.r-project.org/"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:creating-variables",
+      "topic_slug": "creating-variables",
+      "node_id": "WBnsgWCiduh03uxGIN69c",
+      "title": "Creating Variables",
+      "description": "Creating a variable stores a value under a name so you can reuse it later, most commonly using the `<-` assignment operator, though `=` also works in most contexts. Once assigned, a variable holds its value until you reassign or remove it. This is one of the very first things you do in any R script.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Variables",
+          "url": "https://www.w3schools.com/r/r_variables.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Creating Variables in R",
+          "url": "https://www.youtube.com/watch?v=FmK79_MgO-8"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:csv",
+      "topic_slug": "csv",
+      "node_id": "0cq7ItNudoIj48xoeA-q5",
+      "title": "CSV",
+      "description": "CSV files store tabular data as plain text with values separated by commas, making them one of the most universal formats for exchanging data between tools. Base R can read them with `read.csv()`, though readr's `read_csv()` is faster and handles more edge cases well, such as inconsistent column types or unusual encodings. Reading them correctly means paying attention to details like headers and h",
+      "resources": []
+    },
+    {
+      "skill_id": "r:dashboards",
+      "topic_slug": "dashboards",
+      "node_id": "ofS4vY5u64GP4mI8gG_WD",
+      "title": "Dashboards",
+      "description": "Dashboards present data and analysis interactively, typically through a web page with charts, filters, and controls a viewer can adjust themselves. They're built either through general business intelligence tools or R-native frameworks, depending on the audience and existing tooling in an organization. This section covers both routes for building them out of R work.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:data-cleaning",
+      "topic_slug": "data-cleaning",
+      "node_id": "dLatbMJKRRZKjQbKW291i",
+      "title": "Data Cleaning",
+      "description": "This section covers fixing messy, inconsistent, or incomplete data before it's ready for analysis. It includes converting types, cleaning text, handling missing values, and detecting outliers.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:data-frames",
+      "topic_slug": "data-frames",
+      "node_id": "kIXf6FI-z6dgUdTGCjHkt",
+      "title": "Data Frames",
+      "description": "A data frame is R's standard structure for tabular data, organized into rows and columns where each column can hold a different type but all values within a column share the same type. It's the structure you'll use for almost any real dataset loaded into R, whether from a CSV file, a database, or an API. Nearly every data manipulation package in R, including dplyr, is built around working with dat",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Data Frames",
+          "url": "https://www.w3schools.com/r/r_data_frames.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "R Tutorial - Using the Data Frame in R",
+          "url": "https://www.youtube.com/watch?v=9f2g7RN5N0I"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:data-manipulation",
+      "topic_slug": "data-manipulation",
+      "node_id": "vP5oSvl3Z5inZEd3pmiMK",
+      "title": "Data Manipulation",
+      "description": "This section covers the core tasks of reshaping and transforming data once it's already loaded into R: filtering, grouping, joining, and more. Most real analysis work happens here, between importing raw data and producing final results.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:data-structures",
+      "topic_slug": "data-structures",
+      "node_id": "JTDhohoC6Ew7uvPwuWr1v",
+      "title": "Data Structures",
+      "description": "This section covers the containers R uses to hold data: vectors, lists, and the various tabular formats. Nearly everything you do in R involves working with one of these structures.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Data Structures",
+          "url": "https://www.w3schools.com/r/r_data_structures.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Basic Data Structures in R: Vectors, Matrices, and Data Frames",
+          "url": "https://www.r-bloggers.com/2025/01/basic-data-structures-in-r-vectors-matrices-and-data-frames/"
+        },
+        {
+          "raw_type": "video",
+          "title": "BASIC DATA STRUCTURES IN R PROGRAMMING",
+          "url": "https://www.youtube.com/watch?v=k0zLwDAQ6Uw"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:data-tables",
+      "topic_slug": "data-tables",
+      "node_id": "SCW3xD7wCf3_ruTtxBkAX",
+      "title": "Data Tables",
+      "description": "A data table is the structure provided by the data.table package, built specifically for fast, memory-efficient operations on large datasets. It extends the data frame with a more concise syntax and internal optimizations that make filtering, grouping, and joining noticeably faster on big data. Many R users learn dplyr first and pick up data tables specifically when performance on large datasets b",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Introduction to data.table",
+          "url": "https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "DT: An R interface to the DataTables library",
+          "url": "https://rstudio.github.io/DT/"
+        },
+        {
+          "raw_type": "video",
+          "title": "data.table Package in R",
+          "url": "https://www.youtube.com/playlist?list=PLu6UwBFCnlEcb47DE-yWPjoEeZp10PDJz"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:data-types",
+      "topic_slug": "data-types",
+      "node_id": "Iw6aTwdfOys4mzozQ_2Hz",
+      "title": "Data Types",
+      "description": "This section covers the basic kinds of values R works with: numbers, text, and logical values. Every piece of data in R falls into one of these categories, and knowing them shapes how you write and debug code.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Data Types",
+          "url": "https://intro2r.com/data-types.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Data types in R programming",
+          "url": "https://www.youtube.com/watch?v=VtUVQWl0aRA"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:debugging",
+      "topic_slug": "debugging",
+      "node_id": "1shfOZKx1DfYAOtQb1CoK",
+      "title": "Debugging",
+      "description": "Debugging in R involves finding out why code isn't behaving as expected, using tools like `browser()`, which pauses execution at a specific line so you can inspect variables, and `traceback()`, which shows the sequence of function calls leading up to an error. RStudio and Positron both provide visual debugging tools built on top of these, including breakpoints you can set by clicking in the editor",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Debugging",
+          "url": "https://adv-r.hadley.nz/debugging.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Debugging with the RStudio IDE",
+          "url": "https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introduction to the RStudio Debugger",
+          "url": "https://www.youtube.com/watch?v=QQxTf3o07NU"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:descriptive-statistics",
+      "topic_slug": "descriptive-statistics",
+      "node_id": "epfsRqEvWDjgeSrku0emD",
+      "title": "Descriptive Statistics",
+      "description": "Descriptive statistics summarize the basic characteristics of a dataset: central tendency, spread, and shape. They form the foundation for almost every deeper statistical technique, since you need to understand a variable's basic behavior before modeling relationships involving it. R's base `summary()` function calculates several of these at once for a quick overview.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:distribution-analysis",
+      "topic_slug": "distribution-analysis",
+      "node_id": "52p2OUjL11aRM4PyHrCt_",
+      "title": "Distribution Analysis",
+      "description": "Distribution analysis looks at how values in a dataset are spread across their range, most commonly using histograms and boxplots. A histogram groups values into bins and shows how many observations fall into each, revealing shape characteristics like skewness. A boxplot summarizes a distribution's median, quartiles, and potential outliers in a single compact visual.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:dplyr",
+      "topic_slug": "dplyr",
+      "node_id": "2EXfdeT4WoEg5ZNr9eCtK",
+      "title": "dplyr",
+      "description": "dplyr provides a small set of verbs for the most common data manipulation tasks: filtering rows, selecting columns, arranging order, and summarizing groups. These verbs are designed to read almost like plain English, making dplyr code easier to follow than equivalent base R code. It's the core data manipulation package within the tidyverse.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:dropping-vs-imputing",
+      "topic_slug": "dropping-vs-imputing",
+      "node_id": "xIS0cJ8ui0siBoZJr3-B_",
+      "title": "Dropping vs. Imputing",
+      "description": "Once missing values are found, you have to decide whether to drop rows containing them, which is simple but can lose real information, or impute them, replacing missing values with an estimate like the column mean. The right choice depends heavily on why the data is missing and how much of it there is. Dropping too aggressively can bias results if the missingness isn't random.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:encoding-categories",
+      "topic_slug": "encoding-categories",
+      "node_id": "1bHv3_acNts_BeOn3l6DF",
+      "title": "Encoding Categories",
+      "description": "Encoding categories turns text labels into R's factor type, giving categorical data the structure needed for modeling and certain visualizations. It also involves deciding on the order categories should follow, since default alphabetical ordering isn't always meaningful. This step usually comes after the raw text has already been cleaned and standardized.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:error-handling",
+      "topic_slug": "error-handling",
+      "node_id": "bLZXJOMu6-NT2bqntOPfd",
+      "title": "Error Handling",
+      "description": "This section covers how to catch and respond to problems in your code instead of letting them crash your script outright. `tryCatch()` lets you run code that might fail and specify what should happen if it does, such as logging a message or returning a default value. This matters for any code that depends on unreliable inputs, like reading files or calling an API.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Catch Me If You Can: Exception Handling in R",
+          "url": "https://www.r-bloggers.com/2023/11/catch-me-if-you-can-exception-handling-in-r/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Error Handling and Generation",
+          "url": "https://bookdown.org/rdpeng/RProgDA/error-handling-and-generation.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "R Tutorial Playlist - Error handler, try catch statement",
+          "url": "https://www.youtube.com/watch?v=ShGJy5beTJo"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:excel",
+      "topic_slug": "excel",
+      "node_id": "SOdl-8SpW1NsQoPtviJ8-",
+      "title": "Excel",
+      "description": "Excel files store data in a binary or XML-based format that differs from plain text files, often including multiple sheets and formatting within a single file. R doesn't read them with base functions, so packages like readxl are needed to extract the underlying data into a usable data frame. Reading Excel data means deciding which sheet to read and whether the first row contains headers.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:exploratory-data-analysis",
+      "topic_slug": "exploratory-data-analysis",
+      "node_id": "s2Wxtvjjz7bYK0sYeNhM4",
+      "title": "Exploratory Data Analysis",
+      "description": "This section covers the first, applied pass at understanding a new dataset: summarizing it numerically and visually before any deeper modeling. It's usually the step right after data cleaning and right before serious statistical analysis.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:faceting--themes",
+      "topic_slug": "faceting--themes",
+      "node_id": "P0NtCbzyGWz5B41feWsAy",
+      "title": "Faceting & Themes",
+      "description": "Faceting splits a single plot into a grid of smaller plots, one for each level of a categorical variable, making it easy to compare patterns across groups side by side. Themes control the overall visual styling of a plot, like background color, gridlines, and font sizes. Together they cover much of the difference between a rough exploratory plot and one polished enough to share.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:factors",
+      "topic_slug": "factors",
+      "node_id": "GeyQm1ONhk_eLXME7OS4M",
+      "title": "Factors",
+      "description": "A factor represents categorical data, storing a fixed set of possible values called levels, such as \"low\", \"medium\", \"high\". Internally, R stores factors as integers mapped to those level labels, which is more memory-efficient than storing the same category repeatedly as text. Getting factor levels and their order right is a common source of subtle bugs, especially when merging or filtering catego",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Factors",
+          "url": "https://www.w3schools.com/r/r_factors.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Factors",
+          "url": "https://r4ds.had.co.nz/factors.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Factor Variables in R",
+          "url": "https://www.youtube.com/watch?v=cspQYQLZbCo"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:filter-query-arrange",
+      "topic_slug": "filter-query-arrange",
+      "node_id": "6w_sSTw1R5MU2zj2RpO5Z",
+      "title": "Filter, Query, Arrange",
+      "description": "Filtering keeps rows matching a condition, querying more broadly covers selecting the specific subset of data you need, and arranging sorts rows by one or more columns. In dplyr, these map to `filter()` and `arrange()`, both designed to read almost like plain English. Together they cover a large share of everyday data wrangling needs.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:forcats",
+      "topic_slug": "forcats",
+      "node_id": "WVgYRRNpsNXBnz7V9JX29",
+      "title": "forcats",
+      "description": "forcats provides tools for working with factors, R's data type for categorical variables, making common tasks like reordering levels or lumping rare categories together more straightforward than base R. Functions like `fct_reorder()` let you control the order categories appear in in plots and tables, which matters since default factor ordering is often alphabetical rather than meaningful. It's esp",
+      "resources": []
+    },
+    {
+      "skill_id": "r:forward--backward-fill",
+      "topic_slug": "forward--backward-fill",
+      "node_id": "9mFT0z5yT446_-nGdG492",
+      "title": "Forward / Backward Fill",
+      "description": "Forward and backward fill are common in time series data, carrying the last known value forward or the next known value backward to fill gaps. This assumes a value likely stayed the same or is reasonably close to nearby recorded values. It's a simpler alternative to statistical imputation, often used when data is missing due to something like a sensor briefly going offline.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:functions",
+      "topic_slug": "functions",
+      "node_id": "GrKgIYLzkSjtXdK5czN2x",
+      "title": "Functions",
+      "description": "This section covers writing and using your own functions in R: how they accept inputs, return values, and interact with the rest of your code. Functions are the main way to package logic so it can be reused instead of repeated.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Functions",
+          "url": "https://www.w3schools.com/r/r_functions.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Functions",
+          "url": "https://r4ds.had.co.nz/functions.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "A tutorial for writing functions in R",
+          "url": "https://www.youtube.com/watch?v=3uK1OzA7CTs"
+        },
+        {
+          "raw_type": "video",
+          "title": "Create functions in R",
+          "url": "https://www.youtube.com/watch?v=dCyj1MCOMrw"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:geospatial-analysis",
+      "topic_slug": "geospatial-analysis",
+      "node_id": "f2NsSRl_UukuqHggghWSw",
+      "title": "Geospatial Analysis",
+      "description": "Geospatial analysis works with data tied to specific locations on Earth, using specialized structures and tools for handling coordinates, boundaries, and spatial relationships. It covers both vector data, like points and polygons, and raster data, like satellite imagery. This is a distinct application area requiring its own set of packages beyond standard data manipulation tools.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:ggplot2",
+      "topic_slug": "ggplot2",
+      "node_id": "4FPrICo0eUAONFvObktqU",
+      "title": "ggplot2",
+      "description": "ggplot2 is the tidyverse's plotting package, built around the grammar of graphics, which describes any plot as a combination of data, a coordinate system, and layered elements mapped to aesthetics like position or color. Instead of choosing a fixed chart type, you build a plot by combining these pieces, which is why the same approach can produce scatterplots, bar charts, or complex faceted layouts",
+      "resources": []
+    },
+    {
+      "skill_id": "r:ggplot2",
+      "topic_slug": "ggplot2",
+      "node_id": "vsqvOoq59aWgGexOSwlFG",
+      "title": "ggplot2",
+      "description": "ggplot2 is a data visualization package that follows the grammar of graphics, a system for describing and building graphs by combining independent components. It allows users to create complex plots by layering elements such as data, coordinate systems, and visual mappings. By providing a consistent and structured approach to plotting, it enables the creation of publication-quality visualizations ",
+      "resources": []
+    },
+    {
+      "skill_id": "r:grammar-of-graphics",
+      "topic_slug": "grammar-of-graphics",
+      "node_id": "lEiv0DXeWD7w67GdZdy54",
+      "title": "Grammar of Graphics",
+      "description": "The grammar of graphics is the conceptual framework ggplot2 is built on, describing any plot as a combination of data, a coordinate system, and layered geometric elements mapped to aesthetics. Instead of choosing a fixed chart type, you build a plot by combining these pieces, which is why the same underlying approach can produce scatterplots, bar charts, or complex layouts using consistent syntax.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:group-by--summarize",
+      "topic_slug": "group-by--summarize",
+      "node_id": "fuAX0fNChwliVC_gJ7GV2",
+      "title": "Group By & Summarize",
+      "description": "Grouping splits a data frame into groups based on one or more columns, and summarizing then collapses each group down to a single summary row, such as a group's average or count. Together they replace the need for manual loops when calculating statistics per category, like average sales per region. This pattern is one of the most commonly used in all of data analysis.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:hypothesis-testing",
+      "topic_slug": "hypothesis-testing",
+      "node_id": "0xYk_O7rNoy7O116xVJvi",
+      "title": "Hypothesis Testing",
+      "description": "Hypothesis testing provides a formal framework for deciding whether an observed pattern in data is likely real or could plausibly have occurred by chance alone. It starts with a null hypothesis, typically stating there's no effect, and calculates a p-value representing how surprising the observed data would be if that null hypothesis were true. Common tests include the t-test for comparing means a",
+      "resources": []
+    },
+    {
+      "skill_id": "r:igraph",
+      "topic_slug": "igraph",
+      "node_id": "WA-oBafJlw5OUphYrDm5u",
+      "title": "igraph",
+      "description": "igraph is the standard R package for building, analyzing, and visualizing network graphs. It provides tools for calculating centrality measures, detecting communities, and computing paths between nodes, covering most of the core graph theory operations needed. It's the foundation many other network analysis tools in R, including tidygraph, build on top of.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:importing-data",
+      "topic_slug": "importing-data",
+      "node_id": "KrX28-WcpfMiuvPBtHAXw",
+      "title": "Importing Data",
+      "description": "This section covers getting data from outside sources into R, whatever form it originally comes in. Different sources, flat files, spreadsheets, web pages, and APIs, each need a different approach to load correctly.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:installing-packages",
+      "topic_slug": "installing-packages",
+      "node_id": "_4619gNlgw_dDr_fVZ7Up",
+      "title": "Installing Packages",
+      "description": "Installing packages adds functionality to R beyond what comes built in, using the base function `install.packages()` to download and install from CRAN. Running `install.packages(\"dplyr\")`, for example, fetches the dplyr package and its dependencies. This is the most basic and common way to extend R with new capabilities.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Installing and loading packages",
+          "url": "https://rladiessydney.org/courses/01-basicbasics-2"
+        },
+        {
+          "raw_type": "article",
+          "title": "R packages",
+          "url": "https://intro2r.com/packages.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Easy Way to Install a Package in R (with 8 Code Examples)",
+          "url": "https://www.dataquest.io/blog/install-package-r/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Installing Packages in R Studio",
+          "url": "https://www.youtube.com/watch?v=u1r5XTqrCTQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:installing-r",
+      "topic_slug": "installing-r",
+      "node_id": "8sLFw8BlwuE7tvMrDg9Pp",
+      "title": "Installing R",
+      "description": "Installing R involves downloading the base software environment from the Comprehensive R Archive Network (CRAN) and executing the installer for your specific operating system. This process sets up the core language engine, allowing you to run R scripts, manage packages, and perform statistical computations directly on your computer. Once the installation is complete, you can interact with the lang",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Installing R",
+          "url": "https://intro2r.com/install_r.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Installing R and RStudio",
+          "url": "https://rstudio-education.github.io/hopr/starting.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "R Programming Tutorial - Learn the Basics of Statistical Computing",
+          "url": "https://www.youtube.com/watch?v=_V8eKsto3Ug"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to install R and RStudio on Windows 11 (Updated 2025)",
+          "url": "https://www.youtube.com/watch?v=mxNrU902uyc"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:integer",
+      "topic_slug": "integer",
+      "node_id": "K1whVa9-2i8QMqDo_tNlZ",
+      "title": "Integer",
+      "description": "Integers are whole numbers stored more compactly than numeric values, created by appending an `L` to a number, like `5L`. They matter when memory efficiency counts, since integers take up less space than numeric doubles. Most everyday R code doesn't need to worry about the distinction, since R converts between the two automatically in most operations.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Integers",
+          "url": "https://statsandr.com/blog/data-types-in-r/#integer"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:interactive-plots",
+      "topic_slug": "interactive-plots",
+      "node_id": "BMWA2CF4VkXEneErhJym-",
+      "title": "Interactive Plots",
+      "description": "Interactive plots let viewers hover over points for details, zoom into a region, or toggle categories on and off, rather than viewing a fixed, static image. They work particularly well in dashboards, reports viewed in a browser, or any context where the audience benefits from exploring the data themselves. They aren't useful for print or contexts where the output needs to be a fixed image.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:introduction",
+      "topic_slug": "introduction",
+      "node_id": "QUzLkB8iKfUBtyAfKc8LC",
+      "title": "What is R",
+      "description": "R is a programming language built for statistical computing and data analysis. Bell Labs statisticians created its predecessor, S, in the 1970s, and R emerged in the 1990s as an open-source implementation of similar ideas. It comes with built-in support for vectors, data frames, and statistical functions, so tasks like regression or plotting a distribution take just a line or two of code. Universi",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Introduction to R",
+          "url": "https://www.r-project.org/about.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "R Introduction",
+          "url": "https://www.w3schools.com/r/r_intro.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Is R Programming? Definition, Use Cases and FAQ",
+          "url": "https://www.coursera.org/articles/what-is-r-programming"
+        },
+        {
+          "raw_type": "video",
+          "title": "R programming for ABSOLUTE beginners",
+          "url": "https://www.youtube.com/watch?v=FY8BISK5DpM"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:iqr",
+      "topic_slug": "iqr",
+      "node_id": "ucEFYVtXIvuYKjudK3pwB",
+      "title": "IQR",
+      "description": "The IQR method for detecting outliers flags values that fall well below or above the interquartile range, the range between the 25th and 75th percentile of the data. It's a robust approach, less sensitive to extreme values than methods based on the mean and standard deviation. It's commonly visualized directly through a boxplot's whiskers.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:isnull-isna",
+      "topic_slug": "isnull-isna",
+      "node_id": "bcODvfBqCUwLVXa8HKOFB",
+      "title": "isnull, isna",
+      "description": "Detecting missing values in R relies on `is.na()`, since direct comparison like `NA == NA` doesn't return `TRUE` the way you might expect. This function returns a logical vector marking which values are missing, which can then be summed to count them or used to filter rows. It's the starting point before deciding how to handle any missing data found.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:joins",
+      "topic_slug": "joins",
+      "node_id": "WdiPYzeuO8dKQsuP0xy4P",
+      "title": "Joins",
+      "description": "Joins combine two data frames based on matching values in one or more shared columns, similar to joins in SQL. An inner join keeps only rows with matches in both tables, a left join keeps all rows from the first table and fills in matches where available, and a full join keeps all rows from both regardless of matches. Choosing the right join type is essential whenever data is spread across multipl",
+      "resources": []
+    },
+    {
+      "skill_id": "r:json",
+      "topic_slug": "json",
+      "node_id": "R_8vJSp2Zp0CBWMeI2gsd",
+      "title": "JSON",
+      "description": "JSON is a structured text format built around nested key-value pairs, commonly returned by web APIs. Parsing it in R usually means using a package like jsonlite to convert the response into R data structures. Because JSON's nested structure often doesn't map directly onto a flat data frame, some restructuring is usually needed afterward to get it into a usable tabular shape.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:leaflet",
+      "topic_slug": "leaflet",
+      "node_id": "2uHsp_MQMF3WaOgcv0eDY",
+      "title": "leaflet",
+      "description": "leaflet creates interactive, web-based maps in R, built on top of the popular Leaflet.js JavaScript library. Unlike static maps, leaflet maps let viewers pan, zoom, and click on individual features to see more detail. It integrates well with Shiny apps, letting map interactions trigger updates elsewhere in a dashboard.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:linear-regression",
+      "topic_slug": "linear-regression",
+      "node_id": "PMGbX81TpodkDVz8o1z-T",
+      "title": "Linear Regression",
+      "description": "Linear regression models the relationship between a numeric outcome and one or more predictor variables, fitting a straight line, or hyperplane with multiple predictors, that best describes the relationship. R's `lm()` function fits linear models with a simple formula syntax, like `lm(sales ~ advertising)`. Checking the model's assumptions, like linearity and constant variance of the errors, matte",
+      "resources": []
+    },
+    {
+      "skill_id": "r:lists",
+      "topic_slug": "lists",
+      "node_id": "lbYcKVjKw1mMU1DIGwA-s",
+      "title": "Lists",
+      "description": "A list is a flexible container that can hold elements of different types and lengths in a single object, unlike a vector, which requires uniform type. A single list might hold a character string, a numeric vector, and a data frame all at once. Accessing elements typically uses double brackets, `[[ ]]`, to pull out a single element, versus single brackets, `[ ]`, which return a sublist.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Lists",
+          "url": "https://www.w3schools.com/r/r_lists.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Working with lists in R",
+          "url": "https://www.youtube.com/watch?v=X8lNTDeiKiE"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:logical",
+      "topic_slug": "logical",
+      "node_id": "jQTOs0UfekeCV6sPWVOr2",
+      "title": "Logical",
+      "description": "Logical values represent true or false, written as `TRUE` and `FALSE`. They result from comparisons like `5 > 3` and drive conditional logic throughout R code, such as `if` statements and filtering rows in a data frame. Logical values can also be summed directly, since R treats `TRUE` as 1 and `FALSE` as 0 in numeric contexts.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Booleans / Logical Values",
+          "url": "https://www.w3schools.com/r/r_booleans.asp"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:logistic-regression",
+      "topic_slug": "logistic-regression",
+      "node_id": "nfuMTLrkI-XSNDseEOkXD",
+      "title": "Logistic Regression",
+      "description": "Logistic regression models a binary outcome, like whether an event happens or not, as a function of one or more predictor variables. It predicts the probability of the outcome falling into one category, using the `glm()` function with a logistic link in R. It's one of the most widely used models for classification problems, both in traditional statistics and as a baseline in machine learning.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:loops",
+      "topic_slug": "loops",
+      "node_id": "mCa0SGe_bHuU5P_FEsNYI",
+      "title": "Loops",
+      "description": "A `for` loop repeats a block of code once for each element in a vector or list. A `while` loop repeats as long as a condition stays true, useful when you don't know in advance how many iterations you'll need. R loops are generally slower than vectorized alternatives, so experienced R users often reach for functions like `sapply()` or dplyr verbs where possible.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Loops",
+          "url": "https://intro2r.com/loops.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Loops",
+          "url": "https://rstudio-education.github.io/hopr/loops.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Loops using R programming",
+          "url": "https://www.youtube.com/watch?v=UvopClD98LQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:lubridate",
+      "topic_slug": "lubridate",
+      "node_id": "aD3VCC-ltZVisOgC--gAd",
+      "title": "lubridate",
+      "description": "lubridate makes working with dates and times considerably easier than base R alone. Functions like `ymd()`, `mdy()`, and `dmy()` parse dates written in different common formats without requiring a manually specified format string. It also provides clear tools for date arithmetic using durations, periods, and intervals, each handling calendar quirks like leap years slightly differently.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:machine-learning",
+      "topic_slug": "machine-learning",
+      "node_id": "KWfYpJQwYeQzP4buGaA9y",
+      "title": "Machine Learning",
+      "description": "This section covers building predictive and pattern-finding models from data, using R's modern modeling frameworks. It builds on the statistical foundations covered earlier in the roadmap.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:map-functions",
+      "topic_slug": "map-functions",
+      "node_id": "e4mVEXKmmQbz051wE1HPZ",
+      "title": "Map Functions",
+      "description": "Map functions apply a function to every element of a list or vector and collect the results, avoiding the need for an explicit loop. purrr's `map()` always returns a list, while variants like `map_dbl()` return a vector of a specific type, making the expected output explicit. This becomes especially useful for iterating over nested data, such as running the same model on many subsets of a dataset ",
+      "resources": []
+    },
+    {
+      "skill_id": "r:matrices",
+      "topic_slug": "matrices",
+      "node_id": "29bAj72LyJQ62JbBl9vvG",
+      "title": "Matrices",
+      "description": "A matrix is a two-dimensional grid of values, all of the same type, arranged in rows and columns. Matrices support standard linear algebra operations like multiplication, transposition, and inversion, making them the natural structure for mathematical computation in R. Unlike a data frame, every cell in a matrix must share the same underlying data type.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Matrices",
+          "url": "https://www.w3schools.com/r/r_matrices.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Matrices in R Programming",
+          "url": "https://www.r-bloggers.com/2023/11/understanding-matrices-in-r-programming/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Matrices in R",
+          "url": "https://www.youtube.com/watch?v=3fHRSAYgRKY"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Create Matrices and Perform matrix Operations in R",
+          "url": "https://www.youtube.com/watch?v=SYYUBytX1ng"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:mutate--transform",
+      "topic_slug": "mutate--transform",
+      "node_id": "8vgTUVCNPb71lNHKycHce",
+      "title": "Mutate & Transform",
+      "description": "Mutating adds new columns or changes existing ones in a data frame, calculating values across every row based on an expression you specify. Multiple new columns can be created in a single step, with later columns able to reference ones created earlier in the same step. This is one of the most frequently used data manipulation operations, since almost every analysis involves deriving new variables ",
+      "resources": []
+    },
+    {
+      "skill_id": "r:network-analysis",
+      "topic_slug": "network-analysis",
+      "node_id": "YBcSlradj7221NPcwWcFk",
+      "title": "Network Analysis",
+      "description": "Network analysis studies relationships between entities, represented as a graph of nodes connected by edges, such as people connected by friendships or web pages connected by links. It covers identifying influential nodes, detecting clusters or communities within a network, and visualizing the overall structure. This is a distinct application area from typical tabular data analysis, since relation",
+      "resources": []
+    },
+    {
+      "skill_id": "r:nlp",
+      "topic_slug": "nlp",
+      "node_id": "BgwWbX4MgOPwMDPGX_HFs",
+      "title": "NLP",
+      "description": "NLP, or natural language processing, covers techniques for analyzing and extracting meaning from text data, such as tokenizing, measuring sentiment, or discovering topics across a collection of documents. R has a mature set of packages for this kind of work, ranging from tidyverse-friendly tools to faster, more specialized libraries for large text corpora. It's a distinct application area combinin",
+      "resources": []
+    },
+    {
+      "skill_id": "r:numeric",
+      "topic_slug": "numeric",
+      "node_id": "dewpbYpun6Nho0ErI3rv-",
+      "title": "Numeric",
+      "description": "Numeric is R's default type for numbers with decimal points, such as `3.14` or `2.0`, stored internally as double-precision floating point values. Almost all arithmetic in R produces numeric results unless you explicitly ask for integers. This is the type used for the vast majority of everyday calculations.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Numerics",
+          "url": "https://www.w3schools.com/r/r_numbers.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Numeric Types",
+          "url": "https://statsandr.com/blog/data-types-in-r/#numeric"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:operators",
+      "topic_slug": "operators",
+      "node_id": "3d540CG_Ye7vvIFQKmiPb",
+      "title": "Operators",
+      "description": "Arithmetic operators handle basic math, like `+`, `-`, `*`, and `/`. Relational operators compare values and return a logical result, like `==` and `<`. Logical operators combine or invert logical values, using `&` and `|` for element-wise comparisons. These form the backbone of nearly every calculation and condition you write in R.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Operators",
+          "url": "https://www.w3schools.com/r/r_operators.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Operators in R | R for Data Analytics Series",
+          "url": "https://www.youtube.com/watch?v=O5nQKzBb0oc"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:overplotting-techniques",
+      "topic_slug": "overplotting-techniques",
+      "node_id": "1b3AiO9i3pgkglwGeHiqd",
+      "title": "Overplotting Techniques",
+      "description": "Overplotting happens when too many data points overlap on a plot, making it hard to see the true density or pattern, especially common with large datasets. Jittering adds small random noise to point positions to spread out overlapping points slightly. Transparency, adjusted through the alpha setting, lets overlapping points show through each other rather than fully obscuring one another.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:pak",
+      "topic_slug": "pak",
+      "node_id": "j1jq5_64lBuYQQjJWKIuI",
+      "title": "pak",
+      "description": "pak is a newer package installer for R designed to replace `install.packages()` with something faster and more reliable. It parallelizes downloads, caches packages locally so reinstalls are quicker, and gives clearer error messages when a dependency conflict occurs. Many R developers now use it as their default installer instead of base R's built-in function.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pak",
+          "url": "https://pak.r-lib.org/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "pak",
+          "url": "https://github.com/r-lib/pak"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:parallel-computing",
+      "topic_slug": "parallel-computing",
+      "node_id": "ApowKoA3C1B8oUr4-sltZ",
+      "title": "Parallel Computing",
+      "description": "Parallel computing splits a computational task across multiple processor cores at once, rather than running everything sequentially, cutting the total time for tasks that can be broken into independent pieces. R provides tools like the parallel package's `parLapply()` for distributing work across a cluster of R processes. Not every task benefits from this, since the overhead of splitting work and ",
+      "resources": []
+    },
+    {
+      "skill_id": "r:parsing-dates",
+      "topic_slug": "parsing-dates",
+      "node_id": "L7btVRwvkEVX0K8LxnbqJ",
+      "title": "Parsing Dates",
+      "description": "Parsing dates handles the extra complexity of date formats, since something like \"01/02/2024\" could mean different things depending on locale conventions. Getting the format specification right, or using a package like lubridate that guesses common formats automatically, avoids silently misreading dates. This matters especially when working with data from different countries or systems that don't ",
+      "resources": []
+    },
+    {
+      "skill_id": "r:pipe",
+      "topic_slug": "pipe",
+      "node_id": "0K17RO_EoOaT820WypQ7H",
+      "title": "Pipe",
+      "description": "The pipe operator takes the result on its left and passes it as the first argument to the function on its right, letting you chain several operations in a readable, top-to-bottom sequence. R now has two common versions: the native pipe `|>`, built into base R since version 4.1, and the older magrittr pipe `%>%`, which predates it and is still common in existing code. Writing `data |> filter(x > 0)",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Pipe Operator: %\\>% vs |\\>, The Complete Guide to Both Pipes",
+          "url": "https://r-statistics.co/R-Pipe-Operator.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Finally Explained: The Difference Between R's Pipe Operators",
+          "url": "https://www.youtube.com/watch?v=uIL9gMjn40Y"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introducing the Pipe Operator in R",
+          "url": "https://www.youtube.com/watch?v=Stt3qEuIeso"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:plotly",
+      "topic_slug": "plotly",
+      "node_id": "XPr7td4S8xpFxG5IkWvyz",
+      "title": "plotly",
+      "description": "plotly creates interactive charts that let viewers hover, zoom, and filter directly in the browser. It can convert many existing ggplot2 plots into interactive versions with a single function call, or build interactive charts directly with its own syntax. It's the most common package in R for adding this kind of interactivity to a plot.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:positron",
+      "topic_slug": "positron",
+      "node_id": "2m8uQRGaVZUd4mfm7bRou",
+      "title": "Positron",
+      "description": "Positron is a newer IDE from Posit, built on the same underlying technology as VS Code but tailored for data science work in R and Python. It combines a modern, extensible editor with the data-focused features R users expect, like a variables pane and integrated plots. It's becoming the default recommendation for new R and data science setups.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Positron",
+          "url": "https://positron.posit.co/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Exploratory Data Analysis with R in Positron",
+          "url": "https://posit.co/blog/eda-in-positron"
+        },
+        {
+          "raw_type": "video",
+          "title": "A quick tour of Positron",
+          "url": "https://www.youtube.com/watch?v=4Ir_HX4riHw"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:power-bi--tableau",
+      "topic_slug": "power-bi--tableau",
+      "node_id": "EHVXO79NGpLC1i8x4Y7g1",
+      "title": "Power BI / Tableau",
+      "description": "Power BI and Tableau are business intelligence tools for building dashboards, connecting to data sources and creating interactive visualizations largely through a visual interface rather than code. R can connect to both, either as a data source feeding into them or, in Power BI's case, running R scripts directly inside the tool for custom visuals or calculations. They're common in organizations wh",
+      "resources": []
+    },
+    {
+      "skill_id": "r:probability-distributions",
+      "topic_slug": "probability-distributions",
+      "node_id": "wSKItU0lct_9CCs4G4JO_",
+      "title": "Probability Distributions",
+      "description": "A probability distribution describes how likely different outcomes are for a random variable, such as the normal distribution or the binomial distribution for counting successes in repeated trials. R provides functions for common distributions following a consistent naming pattern: `d` for density, `p` for cumulative probability, `q` for quantiles, and `r` for random generation. Understanding whic",
+      "resources": []
+    },
+    {
+      "skill_id": "r:purrr",
+      "topic_slug": "purrr",
+      "node_id": "KXvrYvFvyAqFbJeS1KHRi",
+      "title": "purrr",
+      "description": "purrr applies a function to each element of a list or vector and collects the results, similar in spirit to base R's apply family but with more consistent, predictable behavior. Its `map()` function always returns a list, while variants like `map_dbl()` return a vector of a specific type, making the expected output explicit. It fits naturally with the pipe operator and tidyverse style, letting you",
+      "resources": []
+    },
+    {
+      "skill_id": "r:quanteda",
+      "topic_slug": "quanteda",
+      "node_id": "gUpA_YtWlToGs-OJZZDpV",
+      "title": "quanteda",
+      "description": "quanteda is a faster, more powerful text analysis package built for working with large corpora of documents, offering more advanced features than tidytext for tasks like document-feature matrices and topic modeling. It trades some of tidytext's tidyverse-native simplicity for more performance and specialized functionality. It's typically reached for once text analysis needs outgrow what tidytext c",
+      "resources": []
+    },
+    {
+      "skill_id": "r:quarto",
+      "topic_slug": "quarto",
+      "node_id": "SnLNFoVZhL6YuE9QOLpAl",
+      "title": "Quarto",
+      "description": "Quarto is a publishing system that renders documents combining text, code, and code output into formats like HTML, PDF, or Word. It works across multiple languages, including R, Python, and Julia, and is positioned as the modern successor to R Markdown. Posit actively develops and promotes it as the current default for literate programming in R.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Quarto",
+          "url": "https://quarto.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Quarto for R",
+          "url": "https://quarto.org/docs/computations/r.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Tutorial: Hello, Quarto",
+          "url": "https://quarto.org/docs/get-started/hello/rstudio.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Quarto crash course - what you can do with quarto",
+          "url": "https://www.youtube.com/watch?v=oYV1a9sWhgM"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:r-dates--times",
+      "topic_slug": "r-dates--times",
+      "node_id": "1X3RbJPY_GbIDarcO2UDL",
+      "title": "R Dates & Times",
+      "description": "Base R represents dates and times using specific classes: `Date` for calendar dates and `POSIXct` for date-times that include a time component. These classes let you do arithmetic directly, like subtracting two dates to get the number of days between them. Parsing dates correctly requires knowing the format they were written in, since ambiguous formats can be misread.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:r-markdown",
+      "topic_slug": "r-markdown",
+      "node_id": "PDZEvLgi94V5oLt3J5U9Z",
+      "title": "R Markdown",
+      "description": "R Markdown documents mix Markdown-formatted text with chunks of R code, rendering into HTML, PDF, or Word output with the code's results embedded directly. It predates Quarto and was the standard tool for this kind of work for many years, so a large amount of existing documentation and tutorials still use it. Quarto has since become the recommended tool for new projects, but R Markdown remains ful",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "R Markdown",
+          "url": "https://rmarkdown.rstudio.com/"
+        },
+        {
+          "raw_type": "video",
+          "title": "R Markdown: The Definitive Guide",
+          "url": "https://pkg.yihui.org/rmarkdown-book/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is R Markdown?",
+          "url": "https://www.youtube.com/watch?v=asHhuHRxhvo"
+        },
+        {
+          "raw_type": "video",
+          "title": "R Markdown TUTORIAL",
+          "url": "https://www.youtube.com/watch?v=K418swtFnik"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:r-vs-python",
+      "topic_slug": "r-vs-python",
+      "node_id": "O3lbX70fDeKsv9fkJJtYv",
+      "title": "R vs Python for Data Work",
+      "description": "R and Python solve overlapping problems but come from different roots. R grew out of statistics departments, so its core language and packages treat data frames, vectors, and statistical models as first-class citizens. Python grew as a general-purpose language, so its data tools (pandas, NumPy) were added on top of a language built for other things. In practice, R tends to win for statistical mode",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated Python For Data Analysis Roadmap",
+          "url": "https://roadmap.sh/python-data-analysis"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python vs. R: What\u2019s the Difference?",
+          "url": "https://www.ibm.com/think/topics/python-vs-r"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python or R for Data Analysis: Which Should You Learn?",
+          "url": "https://www.coursera.org/articles/python-or-r-for-data-analysis"
+        },
+        {
+          "raw_type": "video",
+          "title": "R vs Python",
+          "url": "https://www.youtube.com/watch?v=4lcwTGA7MZw&t=171s"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:readr",
+      "topic_slug": "readr",
+      "node_id": "y0yMev6QSHjqd1YJ9Y05Z",
+      "title": "readr",
+      "description": "readr provides fast, consistent functions for reading flat files like CSVs into R, such as `read_csv()`, as an improvement over base R's equivalent functions. It handles more edge cases well, like inconsistent column types or unusual encodings, and gives clearer feedback about how it parsed each column. It's typically the first tool reached for when loading tabular data into R.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:recursion",
+      "topic_slug": "recursion",
+      "node_id": "VdtQNeFL8vnaHHzW6CWds",
+      "title": "Recursion",
+      "description": "Recursion is when a function calls itself, typically to break a problem into smaller versions of the same problem until it reaches a simple base case. A classic example is calculating a factorial by having the function call itself with a smaller number each time. Recursive functions need a clear stopping condition, or they will call themselves indefinitely and crash.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R recursion",
+          "url": "https://www.w3schools.com/r/r_functions_recursion.asp"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:regular-expressions",
+      "topic_slug": "regular-expressions",
+      "node_id": "feXXBBD1J5TEllq2zbCUZ",
+      "title": "Regular Expressions",
+      "description": "Regular expressions are a pattern-matching language for describing sequences of characters, used to search, validate, or extract specific pieces of text. A pattern like `^\\d{3}-\\d{4}$` might describe a phone number format, matching only text that fits that exact shape. They take practice to read fluently, but solve text problems that simple string functions alone can't handle efficiently.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:relationship-analysis",
+      "topic_slug": "relationship-analysis",
+      "node_id": "hS12KA72tBNmVvS921-H-",
+      "title": "Relationship Analysis",
+      "description": "Relationship analysis examines how two or more variables relate to each other, using tools like scatterplots for two numeric variables, correlation matrices for many numeric variables at once, and cross-tabulation for categorical variables. This is usually the second step in exploratory analysis, after looking at variables individually. It often surfaces the patterns that later motivate a specific",
+      "resources": []
+    },
+    {
+      "skill_id": "r:renv",
+      "topic_slug": "renv",
+      "node_id": "6dJaQRj2zMz00sfTiTdww",
+      "title": "renv",
+      "description": "renv manages package versions on a per-project basis instead of one shared library for your whole machine. It records the exact package versions a project uses in a lockfile, so anyone who opens that project later can restore the exact same environment. This solves the common problem where a script that worked months ago breaks because a package updated in a way that changed its behavior.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "renv",
+          "url": "https://cran.r-project.org/web/packages/renv/index.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to renv",
+          "url": "https://rstudio.github.io/renv/articles/renv.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "renv: How to create a stable environment and manage dependencies in R",
+          "url": "https://www.youtube.com/watch?v=FWhjQrRZwRg"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:reshaping",
+      "topic_slug": "reshaping",
+      "node_id": "cRgcpjX7GlMB_l3ARU1z4",
+      "title": "Reshaping",
+      "description": "Reshaping changes the layout of a dataset without changing its underlying content, most commonly converting between wide and long formats. Wide format spreads related values across separate columns, while long format stacks them into fewer columns with an extra column identifying what each value represents. Many statistical functions and plotting tools expect one shape or the other, so reshaping i",
+      "resources": []
+    },
+    {
+      "skill_id": "r:rstatix",
+      "topic_slug": "rstatix",
+      "node_id": "-9C077yNLTXLbEo0TW1zU",
+      "title": "rstatix",
+      "description": "rstatix provides a tidyverse-friendly interface for common statistical tests, wrapping base R functions like `t.test()` and `aov()` in a syntax that fits naturally into a dplyr pipeline. It returns results as tidy data frames rather than the more complex object types base R statistical functions typically produce, making the output easier to filter, combine, or feed into a plot. It's a popular cho",
+      "resources": []
+    },
+    {
+      "skill_id": "r:rstudio",
+      "topic_slug": "rstudio",
+      "node_id": "c8uLNJMr6UZfvjFwFhxvd",
+      "title": "RStudio",
+      "description": "RStudio is the most established integrated development environment for R, combining a script editor, console, plot viewer, and package tools in one window. It has deep, mature support for building R packages and rendering Quarto or R Markdown documents. Posit develops and maintains it, and much existing R documentation still assumes you're working in it.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "RStudio IDE",
+          "url": "https://posit.co/downloads"
+        },
+        {
+          "raw_type": "official",
+          "title": "Installing R and RStudio",
+          "url": "https://rstudio-education.github.io/hopr/starting.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "RStudio for beginners",
+          "url": "https://www.youtube.com/watch?v=Kgwfuycn9_I"
+        },
+        {
+          "raw_type": "video",
+          "title": "RStudio for the Total Beginner",
+          "url": "https://www.youtube.com/watch?v=FIrsOBy5k58"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:sampling",
+      "topic_slug": "sampling",
+      "node_id": "U6vkyRtFatEi8oCm0zoIK",
+      "title": "Sampling",
+      "description": "Sampling covers the different methods for selecting a subset of a population to study, when studying the entire population isn't feasible, including simple random, stratified, and cluster sampling. It also covers the mechanics of random number generation in R and setting a seed for reproducibility. The right sampling method depends on the structure of the population and what you need the sample to",
+      "resources": []
+    },
+    {
+      "skill_id": "r:scopes",
+      "topic_slug": "scopes",
+      "node_id": "JWRELdQozts-p0448ILYf",
+      "title": "Scopes",
+      "description": "Scoping determines which variables a function can see and use while it runs. R uses lexical scoping, meaning a function looks first inside itself, then in the environment where it was defined, not the environment where it was called from. Understanding scoping becomes especially important once you write nested functions or functions that return other functions.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Scoping Rules of R",
+          "url": "https://bookdown.org/rdpeng/rprogdatascience/scoping-rules-of-r.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Lexical scoping",
+          "url": "https://adv-r.hadley.nz/functions.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "R Scoping Rules",
+          "url": "https://www.youtube.com/watch?v=Xom1XXqiwV0"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:setting-up",
+      "topic_slug": "setting-up",
+      "node_id": "6br2AmC31MvGURDUgNtl2",
+      "title": "Setting Up",
+      "description": "This section covers configuring your R environment: managing packages, choosing an IDE, and setting up tools for publishing your work. It's the practical groundwork that makes the rest of your R workflow smooth.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:sf",
+      "topic_slug": "sf",
+      "node_id": "XP4ngNk1Fqzb2nxtHs3Ot",
+      "title": "sf",
+      "description": "sf handles vector spatial data in R, representing points, lines, and polygons, such as store locations or country boundaries. It's built around simple features, a standard format for representing spatial data used across many GIS tools beyond just R. It's the modern standard for vector geospatial work in R, having replaced the older sp package.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:shiny",
+      "topic_slug": "shiny",
+      "node_id": "pC_AC-yhn9qqL2HbIl8Yx",
+      "title": "Shiny",
+      "description": "Shiny is a framework for building interactive web applications directly in R, without needing to know HTML, CSS, or JavaScript. An app has two main parts: a UI defining what the user sees, and a server function defining how the app responds when the user interacts with those elements. This reactive model automatically updates outputs whenever their underlying inputs change.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:sparklyr",
+      "topic_slug": "sparklyr",
+      "node_id": "XTXm8aIDbRkTXoAck_m3I",
+      "title": "Sparklyr",
+      "description": "Sparklyr connects R to Apache Spark, a distributed computing framework built for processing datasets far too large to fit in memory on a single machine. It lets you write familiar dplyr syntax that gets translated into Spark operations running across a cluster of machines. It matters specifically once a dataset grows beyond what fits comfortably in a single machine's memory.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:statistical-analysis",
+      "topic_slug": "statistical-analysis",
+      "node_id": "MhJaZyfzuHGROihT8U7cY",
+      "title": "Statistical Analysis",
+      "description": "This section covers the classical statistical techniques used to summarize data, test hypotheses, and model relationships between variables. It's the theoretical and methodological core underneath a lot of applied data work.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:stats",
+      "topic_slug": "stats",
+      "node_id": "xgI4j0gkNkd3pqGmWkpmF",
+      "title": "stats",
+      "description": "stats is the base R package that ships with every R installation, providing core statistical functions like `lm()` for regression, `t.test()` for hypothesis testing, and functions for common probability distributions. It requires no separate installation since it's part of base R itself. Many higher-level statistics packages build directly on functions from this package.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:string-manipulation",
+      "topic_slug": "string-manipulation",
+      "node_id": "swUTr8ZP72JnyP7UjfrHH",
+      "title": "String Manipulation",
+      "description": "String manipulation covers searching, extracting, replacing, and combining text values, most commonly using the stringr package's consistent `str_` functions. Text data shows up constantly in real datasets: names, categories, free-text responses. Getting comfortable with these operations resolves a large share of everyday data cleaning problems.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:stringr",
+      "topic_slug": "stringr",
+      "node_id": "P_u3uSVm63KsmQRWdvBmr",
+      "title": "stringr",
+      "description": "stringr provides a consistent, well-documented set of functions for working with text, covering tasks like detecting patterns, extracting substrings, and combining strings. Every function follows a consistent naming pattern starting with `str_`, such as `str_detect()` or `str_replace()`, making the package easier to learn than base R's more scattered string functions. It's the standard tool for te",
+      "resources": []
+    },
+    {
+      "skill_id": "r:strings-and-dates",
+      "topic_slug": "strings-and-dates",
+      "node_id": "akoMThJHZLC3vFk_zB-S1",
+      "title": "Strings and Dates",
+      "description": "This section covers handling text and date or time data, two of the most common sources of messy, inconsistently formatted values in real datasets. Getting comfortable here pays off across nearly every other part of data analysis.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:strip-replace-split",
+      "topic_slug": "strip-replace-split",
+      "node_id": "S1EzGF-CLu7tWDb1V6RQc",
+      "title": "strip, replace, split",
+      "description": "Stripping removes leading or trailing whitespace from text, replacing swaps out unwanted characters or patterns for something else, and splitting breaks a single string into multiple parts based on a delimiter. These are usually among the first steps in cleaning any dataset with free-text or inconsistently formatted columns. The stringr package provides consistent functions for all three operation",
+      "resources": []
+    },
+    {
+      "skill_id": "r:summary-statistics",
+      "topic_slug": "summary-statistics",
+      "node_id": "AvzZ6SxNvGCuq9cX_O6op",
+      "title": "Summary Statistics",
+      "description": "Summary statistics condense a column of data down to a few representative numbers, like the mean, median, and standard deviation. They form the foundation for almost every deeper statistical technique, since you need to understand a variable's basic behavior before modeling relationships involving it. Calculating these is usually the first step in getting a feel for any new dataset.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:terra",
+      "topic_slug": "terra",
+      "node_id": "UphqgVEpeVfM8mCVKpE-s",
+      "title": "terra",
+      "description": "terra handles raster data in R, grids of values like satellite imagery or elevation data, and has replaced the older, now retired raster package. It provides functions for reading, manipulating, and analyzing raster layers, including operations like resampling and calculating values across a grid. It's the standard modern choice for raster work in R.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:text",
+      "topic_slug": "text",
+      "node_id": "1BCWaI0i01gzwo539I90D",
+      "title": "Text",
+      "description": "Plain text files store unstructured or loosely structured data without the strict comma or tab delimiters of a CSV or TSV file. Reading them into R might mean reading line by line for further parsing, or using a delimiter-aware function if the text has some consistent structure like tab separation. This is a common starting point for log files, raw scraped content, or data that doesn't fit neatly ",
+      "resources": []
+    },
+    {
+      "skill_id": "r:tibble",
+      "topic_slug": "tibble",
+      "node_id": "3PBGqxsWI3K6vpB9PtteC",
+      "title": "tibble",
+      "description": "tibble is the tidyverse package that defines and supports the tibble data structure, a modern variant of the data frame. It provides functions for creating tibbles directly, converting existing data frames into tibbles, and controlling how they print in the console. Most other tidyverse packages return tibbles by default, relying on this package underneath.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:tibbles",
+      "topic_slug": "tibbles",
+      "node_id": "4LSIcQnzj3V5mStHIYP-O",
+      "title": "Tibbles",
+      "description": "A tibble is a modern variant of the data frame, introduced by the tidyverse, with a few behavioral differences designed to reduce surprises. Tibbles print more usefully in the console, showing only what fits on screen along with each column's type, and they refuse to silently drop dimensions the way base data frames sometimes do. Most tidyverse functions return tibbles by default rather than base ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Tibble",
+          "url": "https://tibble.tidyverse.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Tibbles",
+          "url": "https://r4ds.had.co.nz/tibbles.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Tibble in R",
+          "url": "https://www.youtube.com/playlist?list=PLu6UwBFCnlEc2m689k42f0bXLX7rUfOJv"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:tidygraph",
+      "topic_slug": "tidygraph",
+      "node_id": "_VJmd1wv2UJcLpQKnmjjK",
+      "title": "tidygraph",
+      "description": "tidygraph applies tidyverse conventions to network data, letting you manipulate graph nodes and edges using familiar dplyr-style verbs instead of igraph's more specialized syntax. It works alongside ggraph for visualization, together forming a tidyverse-native alternative to working with igraph directly. It's often preferred by users already comfortable with the tidyverse who want that same syntax",
+      "resources": []
+    },
+    {
+      "skill_id": "r:tidymodels",
+      "topic_slug": "tidymodels",
+      "node_id": "23bhr8zcXaTgjiAa7z_Pn",
+      "title": "tidymodels",
+      "description": "tidymodels is a collection of R packages for building and evaluating machine learning models, designed to follow tidyverse conventions and work well with the pipe operator. It splits modeling into distinct, composable steps: preprocessing, specifying a model, fitting it, and evaluating results, each handled by a different package within the collection. It has become the standard modern framework f",
+      "resources": []
+    },
+    {
+      "skill_id": "r:tidyr",
+      "topic_slug": "tidyr",
+      "node_id": "axtup-_HtUjM2Ft3J1Sxb",
+      "title": "tidyr",
+      "description": "tidyr handles reshaping data between different layouts, most notably converting between wide and long formats with `pivot_longer()` and `pivot_wider()`. Many statistical functions and ggplot2 specifically expect data in a particular shape, so tidyr often bridges the gap between how data is stored and how it needs to look for analysis or plotting. It also handles filling in missing combinations of ",
+      "resources": []
+    },
+    {
+      "skill_id": "r:tidytext",
+      "topic_slug": "tidytext",
+      "node_id": "BM2ukkGQzjbWiPgExsN5z",
+      "title": "tidytext",
+      "description": "tidytext applies tidyverse conventions to text analysis, representing tokenized text as a data frame with one row per word. This tidy structure lets you use familiar dplyr verbs to filter, count, and summarize text data, rather than working with specialized text-only data structures. It's typically the entry point before deeper text analysis like sentiment analysis or topic modeling.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:tidyverse",
+      "topic_slug": "tidyverse",
+      "node_id": "qjHtL_erZg2F9HuDOSaKl",
+      "title": "tidyverse",
+      "description": "The tidyverse is a collection of R packages designed to work together around a shared philosophy and consistent syntax for data science tasks. It includes packages for data manipulation, visualization, string handling, and more, all built to interoperate smoothly with the pipe operator. Learning the tidyverse's conventions once makes each individual package inside it easier to pick up.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:time-series-analysis",
+      "topic_slug": "time-series-analysis",
+      "node_id": "6u9a625hfddNmkjU0uiSK",
+      "title": "Time Series Analysis",
+      "description": "Time series analysis studies data collected sequentially over time, where the order of observations carries meaning that would be lost if the rows were shuffled. It involves identifying trends, seasonal patterns, and autocorrelation, where a value depends on its own previous values. Forecasting models use these identified patterns to predict future values based on historical data.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:tmap",
+      "topic_slug": "tmap",
+      "node_id": "z9ZgXE5cDkLOlJNi6JIMJ",
+      "title": "tmap",
+      "description": "tmap creates thematic maps in R, designed specifically for visualizing spatial data like sf objects with a syntax inspired by ggplot2's layered approach. It supports both static maps for reports and interactive maps for exploration, switching between the two with a single setting. It's commonly used as the visualization layer on top of data prepared with sf or terra.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:type-conversion",
+      "topic_slug": "type-conversion",
+      "node_id": "5pYoyNuVkRmQBqdrgcAcN",
+      "title": "Type Conversion",
+      "description": "Type conversion is deliberately changing a value from one type to another, such as turning the character `\"5\"` into the numeric value `5` with `as.numeric()`. R also does this automatically in some situations, called coercion, which can cause quiet bugs when data doesn't convert the way you expect. Understanding both the explicit functions and R's automatic rules helps catch these issues early.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Data Type Conversion in R",
+          "url": "https://www.youtube.com/watch?v=_rPde-SPDVE"
+        },
+        {
+          "raw_type": "article",
+          "title": "Data Types in R Programming and Data type conversion",
+          "url": "https://medium.com/swlh/data-types-in-r-programming-and-data-type-conversion-1bb613213708"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:vectors",
+      "topic_slug": "vectors",
+      "node_id": "C19rHMygP6Uc1NDgzt3DG",
+      "title": "Vectors",
+      "description": "A vector is R's most basic data structure: an ordered collection of values that all share the same type. Nearly everything in R is built on vectors, including single values, which R treats as vectors of length one. Operations on vectors work element by element without needing an explicit loop, which is one of the defining features of how R code is written.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "R Vectors",
+          "url": "https://www.w3schools.com/r/r_vectors.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Vectors",
+          "url": "https://r4ds.had.co.nz/vectors.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introduction to R: Vectors",
+          "url": "https://www.youtube.com/watch?v=H4v4MRSc8k4"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:visual-inspection",
+      "topic_slug": "visual-inspection",
+      "node_id": "UIFNQ9g5fMK-KoZCrqv27",
+      "title": "Visual Inspection",
+      "description": "Visual inspection uses plots, most often boxplots or scatterplots, to spot outliers by eye rather than through a fixed numeric rule. This often reveals context that purely numeric methods miss, such as whether an unusual value looks like a data entry error or a genuine rare event. It's frequently used alongside numeric methods like IQR or Z-score rather than as a replacement for them.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:vs-code",
+      "topic_slug": "vs-code",
+      "node_id": "ObA_xZDY7PxU54NGBwyVI",
+      "title": "VS Code",
+      "description": "VS Code is a general-purpose code editor from Microsoft that supports R through extensions rather than built-in features. It fits projects where R is just one part of a larger codebase involving other languages, since it shares one consistent editor across all of them. R support in VS Code is solid but less specialized than what RStudio or Positron offer natively.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "R in Visual Studio Code",
+          "url": "https://code.visualstudio.com/docs/languages/r"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Data Scientist\u2019s View of Running R in Visual Studio Code",
+          "url": "https://www.r-bloggers.com/2025/05/a-data-scientists-view-of-running-r-in-visual-studio-code/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Simple setup for R in VSCode instead of RStudio (Mac)",
+          "url": "https://www.youtube.com/watch?v=rKPfssR66GM"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:web-scraping",
+      "topic_slug": "web-scraping",
+      "node_id": "2Es328m-FGfn7UQteQjdS",
+      "title": "Web Scraping",
+      "description": "Web scraping extracts data directly from a website's HTML when that data isn't offered through a proper API or downloadable file. The rvest package reads a webpage's HTML and lets you select specific elements using CSS selectors or XPath, pulling out text, tables, or links. It requires some understanding of how the target page is structured, since different sites organize their HTML very different",
+      "resources": []
+    },
+    {
+      "skill_id": "r:window-functions",
+      "topic_slug": "window-functions",
+      "node_id": "w78MVXiI2V3XXajsEEZyk",
+      "title": "Window Functions",
+      "description": "Window functions calculate a value for each row based on a set of related rows, without collapsing the data the way summarizing does. Ranking each row within its group, calculating a running total, or comparing a row's value to the previous row are all window function tasks. They're typically combined with grouping, keeping one row per original row rather than one row per group.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:working-with-data-tables",
+      "topic_slug": "working-with-data-tables",
+      "node_id": "GChLgXktEvXnOs9fiv77x",
+      "title": "Working with Data Tables",
+      "description": "Working with data tables means using the data.table package's syntax and conventions for fast, memory-efficient data manipulation on large datasets. It uses a distinctive bracket-based syntax, `dt[i, j, by]`, differing from both base R indexing and dplyr's verb-based approach. It's typically reached for once dataset size makes dplyr noticeably slower.",
+      "resources": []
+    },
+    {
+      "skill_id": "r:your-first-r-script",
+      "topic_slug": "your-first-r-script",
+      "node_id": "NkRfIHsHQnOHJSTuFQ9aj",
+      "title": "Your First R Script",
+      "description": "A first R script is usually a short file with a few lines of code, like assigning a variable and printing it, run to confirm your R installation actually works. Writing and running this first script is where syntax stops being abstract and starts being something you can see execute. It's also the point where you get comfortable with the basic loop of writing code, running it, and reading the outpu",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using R for the very first time?",
+          "url": "https://towardsdatascience.com/using-r-for-the-very-first-time-7d78c526ae68/"
+        },
+        {
+          "raw_type": "video",
+          "title": "R Programming Tutorial - Learn the Basics of Statistical Computing",
+          "url": "https://www.youtube.com/watch?v=_V8eKsto3Ug"
+        }
+      ]
+    },
+    {
+      "skill_id": "r:z-score",
+      "topic_slug": "z-score",
+      "node_id": "2HIeG6ywOA9BkE9W3Gu9v",
+      "title": "Z-score",
+      "description": "The Z-score method flags values a certain number of standard deviations away from the mean, commonly using a threshold like 2 or 3. It works well for roughly normally distributed data, but poorly for data that's heavily skewed, since the mean and standard deviation themselves get distorted by skew. It gives a precise numeric measure of how unusual a given value is relative to the rest of the data.",
+      "resources": []
+    }
+  ]
+}

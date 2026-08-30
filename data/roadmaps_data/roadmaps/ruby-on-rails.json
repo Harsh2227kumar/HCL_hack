@@ -1,0 +1,2606 @@
+{
+  "roadmap": "ruby-on-rails",
+  "topic_count": 109,
+  "topics": [
+    {
+      "skill_id": "ruby-on-rails:accessibility",
+      "topic_slug": "accessibility",
+      "node_id": "dvL7HRXMqs2NOuTtfHeXM",
+      "title": "Accessibility",
+      "description": "Accessibility, often shortened to A11y, focuses on designing and developing websites and applications that are usable by people with disabilities. This includes individuals with visual, auditory, motor, or cognitive impairments, ensuring they can perceive, understand, navigate, and interact with web content effectively. Implementing accessibility involves following established guidelines and best ",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:action-views",
+      "topic_slug": "action-views",
+      "node_id": "NyByCB4J4hk7rN7nrp1dv",
+      "title": "Action Views",
+      "description": "Action View is the view component of the Ruby on Rails framework. It's responsible for rendering the user interface, typically in HTML, but also in other formats like XML or JSON. It handles tasks such as template rendering, layout management, and helper methods to simplify the creation of dynamic web pages.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Action View Overview",
+          "url": "https://guides.rubyonrails.org/action_view_overview.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Views",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-views#introduction"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails Views \u2014 The V in MVC",
+          "url": "https://medium.com/@tafby88/rails-views-the-v-in-mvc-71e04d017791"
+        },
+        {
+          "raw_type": "video",
+          "title": "Action View in Rails",
+          "url": "https://www.youtube.com/watch?v=n2X_75Jja1A"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:active-record",
+      "topic_slug": "active-record",
+      "node_id": "ig8gCcieQF923NKhNyaNA",
+      "title": "Active Record",
+      "description": "Active Record is the ORM (Object-Relational Mapping) layer within Ruby on Rails. It acts as an interface between your Ruby code and the database. Instead of writing raw SQL queries, you use Active Record's methods to interact with your database tables as if they were Ruby objects. This allows you to create, read, update, and delete data in a more intuitive and object-oriented way, simplifying data",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Record Query Interface",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html#what-is-the-active-record-query-interface-questionmark"
+        },
+        {
+          "raw_type": "article",
+          "title": "Active Record Queries",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-active-record-queries"
+        },
+        {
+          "raw_type": "article",
+          "title": "Advanced Queries in ActiveRecord for Ruby on Rails",
+          "url": "https://blog.appsignal.com/2025/02/26/advanced-queries-in-activerecord-for-ruby-on-rails.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ep 4. Active Record explained | Rails New Tutorial with Typecraft",
+          "url": "https://www.youtube.com/watch?v=n0TPEsKE9v0"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:advanced-asset-management",
+      "topic_slug": "advanced-asset-management",
+      "node_id": "8Jbs2XpIL-Nd-tr2f0AJ8",
+      "title": "Advanced Asset Management",
+      "description": "You can use advanced asset management techniques to optimize and organize your application's assets (images, stylesheets, JavaScript files) beyond the basic functionality provided by the asset pipeline. This includes strategies like using CDNs for faster delivery, implementing asset versioning for cache busting, precompiling assets for production environments, and employing tools for minification ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Advanced Asset Management",
+          "url": "https://guides.rubyonrails.org/asset_pipeline.html#advanced-asset-management"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:aggregations",
+      "topic_slug": "aggregations",
+      "node_id": "C8A-30h1xJBFLhD182H89",
+      "title": "Aggregations",
+      "description": "Aggregations in Active Record allow you to derive summary information from your database records. This involves performing calculations like finding the average, minimum, maximum, or sum of values across a set of records, or counting the number of records that meet certain criteria. These calculations are typically performed directly within the database for efficiency and can be easily accessed th",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Grouping",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html#grouping"
+        },
+        {
+          "raw_type": "official",
+          "title": "Calculations",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html#calculations"
+        },
+        {
+          "raw_type": "article",
+          "title": "Grouping and Aggregating",
+          "url": "https://backend.turing.edu/module2/lessons/grouping_and_aggregating"
+        },
+        {
+          "raw_type": "video",
+          "title": "SQL Learning Path - Group By Statement",
+          "url": "https://www.youtube.com/watch?v=KdI1IPVJlHg"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:app",
+      "topic_slug": "app",
+      "node_id": "BiVYxjVr2OhmnglHz_kVZ",
+      "title": "App Directory",
+      "description": "The `app` directory in a Rails application is the heart of your project, containing the core logic and components that define its behavior. It's where you'll find the code responsible for handling user requests, interacting with the database, and rendering views. This directory is organized into subdirectories, each dedicated to a specific aspect of the application, such as models, views, and cont",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:assets-pipeline",
+      "topic_slug": "assets-pipeline",
+      "node_id": "EcGyLolDRJJra4PDWlQjJ",
+      "title": "Assets Pipeline",
+      "description": "The Assets Pipeline in Rails provides a structured way to manage and pre-process assets like stylesheets, JavaScript files, and images. It bundles, minifies, and compresses these assets to improve website performance by reducing the number of requests and the size of the files that need to be downloaded by the browser. It also allows you to use features like automatic CSS prefixing and CoffeeScrip",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "The Asset Pipeline",
+          "url": "https://guides.rubyonrails.org/asset_pipeline.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Asset Pipeline",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-the-asset-pipeline"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails Asset Pipeline",
+          "url": "https://medium.com/@tali.scheer/rails-asset-pipeline-ab441688616a"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding the Asset Pipeline in Ruby on Rails",
+          "url": "https://webcrunch.com/posts/understanding-asset-pipeline-ruby-on-rails"
+        },
+        {
+          "raw_type": "video",
+          "title": "A Quick and Easy Guide to the Asset Pipeline in Rails 7",
+          "url": "https://www.youtube.com/watch?v=cQQH9sEhnnY"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding The Rails Asset Pipeline",
+          "url": "https://www.youtube.com/watch?v=maTYAac1ESI"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:authentication",
+      "topic_slug": "authentication",
+      "node_id": "WqjcBTzbU4iFpYVp1-ptv",
+      "title": "Authentication",
+      "description": "Authentication in Rails verifies the identity of users, ensuring they are who they claim to be before granting access to protected resources. It typically involves checking user credentials, like a username and password, against stored data to confirm their validity. Upon successful verification, a user session is created, allowing the application to remember the user across multiple requests with",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Authentication",
+          "url": "https://guides.rubyonrails.org/security.html#authentication"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails Authentication: Gems vs. Recipes vs. Generators",
+          "url": "https://masilotti.com/rails-authentication/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Authentication and Authorization in Ruby on Rails",
+          "url": "https://medium.com/@zachlandis91/authentication-and-authorization-in-ruby-on-rails-c44c1ccea94d"
+        },
+        {
+          "raw_type": "video",
+          "title": "Securing your app with the default Authentication Generator | Rails 8 Unpacked",
+          "url": "https://www.youtube.com/watch?v=4q1RWZABhKE"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use Authentication in Ruby on Rails 8",
+          "url": "https://www.youtube.com/watch?v=uGllXLfRx60"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:authorization",
+      "topic_slug": "authorization",
+      "node_id": "xz-xEwqyvJgTKvjpmXeOH",
+      "title": "Authorization",
+      "description": "Authorization determines what a user is allowed to do within an application. It focuses on verifying if a user has the necessary permissions to access specific resources or perform certain actions. This process happens after authentication, which confirms the user's identity and dictates the level of access granted based on their role or attributes.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Complete Guide To Managing User Permissions In Rails Apps",
+          "url": "https://www.honeybadger.io/blog/complete-guide-to-managing-user-permissions-in-rails-apps/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Implementing Role-Based Access Control (RBAC) in Rails: A Comprehensive Guide",
+          "url": "https://medium.com/@er.sumitsah/implementing-role-based-access-control-rbac-in-rails-a-comprehensive-guide-752194c8bffe"
+        },
+        {
+          "raw_type": "article",
+          "title": "Authentication and Authorization in Ruby on Rails",
+          "url": "https://www.shakacode.com/blog/mastering-authorization-in-rails-with-pundit/"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:background-jobs",
+      "topic_slug": "background-jobs",
+      "node_id": "Mj4SxEsrQZz6zIKos1hyk",
+      "title": "Background Jobs in Rails",
+      "description": "Background jobs allow you to perform time-consuming tasks outside of the main request-response cycle. This means your web application can remain responsive and quickly handle user requests, while the longer tasks are processed in the background. Rails achieves this using Active Job, a framework for declaring jobs and making them run on a variety of queuing backends like Sidekiq, Resque, or even a ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Job Basics",
+          "url": "https://guides.rubyonrails.org/active_job_basics.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails Background Jobs \u2014 Reconstruct Your Application",
+          "url": "https://medium.com/@hasnatraza.dev/rails-background-jobs-reconstruct-your-application-ccaef2860552"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Simple Guide to Background Jobs in Ruby on Rails",
+          "url": "https://www.bluebash.co/blog/simple-guide-to-background-jobs-in-ruby-on-rails/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Manage asynchronous tasks with Solid Queue | Rails 8 Unpacked",
+          "url": "https://www.youtube.com/watch?v=ReyKfb12EVU"
+        },
+        {
+          "raw_type": "video",
+          "title": "Testing Active Job in Ruby on Rails",
+          "url": "https://www.youtube.com/watch?v=7ieeu0r27ig"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:basic-queries",
+      "topic_slug": "basic-queries",
+      "node_id": "Ddikj7KylZSoqsdAsd380",
+      "title": "Basic Queries in Active Record",
+      "description": "Active Record provides a powerful and intuitive interface for interacting with databases in Rails applications. Basic queries allow you to retrieve data from your database tables using simple and expressive methods. These methods enable you to find records based on various criteria, such as specific IDs, attribute values, or more complex conditions, forming the foundation for data retrieval operat",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Record Query Interface",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Active Record Queries",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-active-record-queries"
+        },
+        {
+          "raw_type": "article",
+          "title": "Advanced Queries in ActiveRecord for Ruby on Rails",
+          "url": "https://blog.appsignal.com/2025/02/26/advanced-queries-in-activerecord-for-ruby-on-rails.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Query Like a Pro: Active Record for Database Queries",
+          "url": "https://dev.to/minchulan/exploring-rails-active-record-and-querying-with-relational-databases-3p2g"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ep 4. Active Record explained | Rails New Tutorial with Typecraft",
+          "url": "https://www.youtube.com/watch?v=n0TPEsKE9v0"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:better-errors",
+      "topic_slug": "better-errors",
+      "node_id": "yUwMPqnV5ZqV7eCL0bkfs",
+      "title": "Better Errors",
+      "description": "Better Errors is a Ruby gem that enhances the standard Rails error page with more detailed and interactive debugging information. It provides a richer debugging experience by displaying source code snippets, allowing you to inspect variables, and even execute code directly within the error page. This makes it easier to understand the cause of errors and quickly identify solutions during developmen",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:bin",
+      "topic_slug": "bin",
+      "node_id": "6HV1KoHTSeEE1-f6IeWB4",
+      "title": "bin Directory",
+      "description": "The `bin` directory in a Rails application contains executable scripts that are specific to your application. These scripts are typically used for tasks like starting the server, running tests, or performing other administrative operations. They provide a convenient way to interact with your Rails application from the command line.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:byebug",
+      "topic_slug": "byebug",
+      "node_id": "SFGRkOuEMFxOJ4UU_Ti8L",
+      "title": "Byebug",
+      "description": "Byebug is a powerful debugger for Ruby. It allows you to step through your code, set breakpoints, inspect variables, and evaluate expressions in real-time, helping you identify and fix errors in your Ruby applications. It's a gem that integrates directly into your Ruby environment, providing a command-line interface for debugging.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:caching",
+      "topic_slug": "caching",
+      "node_id": "fjROKLDD5h6Vp0zXgJ5Y0",
+      "title": "Caching",
+      "description": "Caching is a technique used to store copies of frequently accessed data in a temporary storage location, like memory, to reduce the need to retrieve the data from its source, such as a database or external API, every time it's requested. This results in faster response times and reduced load on the original data source.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Caching with Rails: An Overview",
+          "url": "https://guides.rubyonrails.org/caching_with_rails.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "An Introduction to HTTP Caching in Ruby On Rails",
+          "url": "https://blog.appsignal.com/2024/08/14/an-introduction-to-http-caching-in-ruby-on-rails.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Low Level Caching in Rails",
+          "url": "https://www.honeybadger.io/blog/rails-low-level-caching/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Types of Caching in Rails",
+          "url": "https://tadhao.medium.com/types-of-caching-in-rails-cba708aae679"
+        },
+        {
+          "raw_type": "video",
+          "title": "Fragment and Collection Cache in Ruby on Rails 7",
+          "url": "https://www.youtube.com/watch?v=t4bugdvKEag"
+        },
+        {
+          "raw_type": "video",
+          "title": "Easy caching with Solid Cache | Rails 8 Unpacked",
+          "url": "https://www.youtube.com/watch?v=mA6somzKYEg"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:callbacks",
+      "topic_slug": "callbacks",
+      "node_id": "xgJCbwDNWPbYV2bCILRo0",
+      "title": "Callbacks",
+      "description": "Callbacks are methods that get called at certain moments in the lifecycle of an Active Record object. These moments can include creation, updating, deletion, validation, or saving. By using callbacks, you can trigger logic before or after these actions, allowing you to perform tasks like data validation, auditing, or related object updates automatically",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Record Callbacks",
+          "url": "https://guides.rubyonrails.org/active_record_callbacks.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Active Record Callbacks | The Odin Project",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-active-record-callbacks"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails ActiveRecord Callbacks \u2014 cheatsheet & best practices",
+          "url": "https://medium.com/@jaysadiq/rails-activerecord-callbacks-cheatsheet-55fdb37f76ef"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby on Rails ActiveRecord Callbacks",
+          "url": "https://dev.to/eapenzac/ruby-on-rails-activerecord-callbacks-597a"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding Active Record Callbacks",
+          "url": "https://www.youtube.com/watch?v=1-31AlGv96Y"
+        },
+        {
+          "raw_type": "video",
+          "title": "Callbacks",
+          "url": "https://www.youtube.com/watch?v=GLBMfB8N1G8"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:cancancan",
+      "topic_slug": "cancancan",
+      "node_id": "0dPBO4cZFWvE3rSHEW1OJ",
+      "title": "CanCanCan",
+      "description": "CanCanCan is an authorization library for Ruby on Rails applications that restricts what resources a given user is allowed to access. It provides a simple and declarative way to define abilities, based on the user's role and the resource being accessed. This allows developers to easily manage permissions and ensure that users can only perform actions they are authorized to do.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:cancancan",
+      "topic_slug": "cancancan",
+      "node_id": "3fA4RoDm2NFUK0EWFy-eP",
+      "title": "CanCanCan",
+      "description": "CanCanCan is an authorization library for Ruby on Rails applications that restricts what resources a given user is allowed to access. It provides a simple and flexible way to define abilities, which represent the permissions a user has on different resources, and then checks these abilities within your controllers and views to control access and display appropriate content. This gem helps in defin",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "cancancan",
+          "url": "https://github.com/CanCanCommunity/cancancan"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails 7 Authorization with Cancancan Gem",
+          "url": "https://medium.com/@learnwithalfred/rails-7-authorization-with-cancancan-gem-f3a29c01b3bd"
+        },
+        {
+          "raw_type": "article",
+          "title": "Authorization Gems in Ruby: Pundit and CanCanCan",
+          "url": "https://blog.appsignal.com/2023/03/22/authorization-gems-in-ruby-pundit-and-cancancan.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Authorization on Rails (CanCanCan Demonstration)",
+          "url": "https://www.youtube.com/watch?v=cTYu-OjUgDw"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ruby On Rails - Authorization Using CanCanCan",
+          "url": "https://www.youtube.com/playlist?list=PL6HtmRWwDtYMuIDt4syZdGXWFPZrAWvm_"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:capybara",
+      "topic_slug": "capybara",
+      "node_id": "JCQT_3B9hu8QkJaoDQK_V",
+      "title": "Capybara",
+      "description": "Capybara is a Ruby gem that simplifies acceptance testing for web applications. It simulates how a user interacts with your application through a browser, allowing you to write tests that verify the behavior of your application from an end-user perspective. It provides a clean and easy-to-use API for interacting with elements on a web page, such as clicking links, filling in forms, and asserting t",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "capybara",
+          "url": "https://github.com/teamcapybara/capybara"
+        },
+        {
+          "raw_type": "article",
+          "title": "Integration Testing Ruby on Rails with Minitest and Capybara",
+          "url": "https://semaphore.io/community/tutorials/integration-testing-ruby-on-rails-with-minitest-and-capybara"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Rails testing \u201chello world\u201d using RSpec and Capybara",
+          "url": "https://www.codewithjason.com/rails-testing-hello-world-using-rspec-capybara/"
+        },
+        {
+          "raw_type": "video",
+          "title": "End to end testing Rails with capybara",
+          "url": "https://www.youtube.com/watch?v=ggnGOBe2A3o"
+        },
+        {
+          "raw_type": "video",
+          "title": "System Tests With Capybara and Selenium | Ruby On Rails 7 Tutorial",
+          "url": "https://www.youtube.com/watch?v=2TInLtG8dj4"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:conditions",
+      "topic_slug": "conditions",
+      "node_id": "NgMAdAtdJFd3Pha4nwiLE",
+      "title": "Active Record Conditions",
+      "description": "Active Record conditions are used to specify criteria for retrieving data from a database table. They allow you to filter records based on specific attributes and values, enabling you to retrieve only the data that meets your desired requirements. These conditions are typically expressed using SQL-like syntax or through a more Ruby-friendly syntax provided by Active Record.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Conditions",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html#conditions"
+        },
+        {
+          "raw_type": "official",
+          "title": "Overriding Conditions",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html#overriding-conditions"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:config",
+      "topic_slug": "config",
+      "node_id": "Vr0UKX1C3DSVxZjj-Ls6L",
+      "title": "Config Directory",
+      "description": "The `config` directory in a Rails application houses configuration files that control various aspects of the application's behavior. These files define database connections, routing rules, environment-specific settings, and other application-wide configurations, allowing developers to customize the application without modifying the core code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Configuring Rails Applications",
+          "url": "https://guides.rubyonrails.org/configuring.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Setting Up and Managing Databases in Ruby on Rails",
+          "url": "https://bhartee-tech-ror.medium.com/setting-up-and-managing-databases-in-ruby-on-rails-72885f9f1164"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Rails database.yml File",
+          "url": "https://dev.to/andreimaxim/the-rails-databaseyml-file-4dm9"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:constraints",
+      "topic_slug": "constraints",
+      "node_id": "H2lhyWJ2aErIC6UsIag_p",
+      "title": "Routing Constraints",
+      "description": "Routing constraints allow you to restrict which routes are matched based on specific criteria. These criteria can include the request's subdomain, IP address, HTTP headers, or any other attribute of the request. By adding constraints, you can create more precise and targeted routes, ensuring that requests are handled by the correct controller action.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Constraints",
+          "url": "https://guides.rubyonrails.org/routing.html#http-verb-constraints"
+        },
+        {
+          "raw_type": "official",
+          "title": "Advanced Constrains",
+          "url": "https://guides.rubyonrails.org/routing.html#advanced-constraints"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use Rails Routing Constraints: Two Use Cases with Code",
+          "url": "https://8thlight.com/insights/how-to-use-rails-routing-constraints-2-use-cases-with-code"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails advanced routing constraints",
+          "url": "https://thoughtbot.com/blog/rails-advanced-routing-constraints"
+        },
+        {
+          "raw_type": "video",
+          "title": "Advanced Rails Routing Constraints: Domain, Subdomain, Authentication, and more | Preview",
+          "url": "https://www.youtube.com/watch?v=bauG5ibI9Xc"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:controller-actions",
+      "topic_slug": "controller-actions",
+      "node_id": "Cm0tEnjeqQzQORowsdEjk",
+      "title": "Controller Actions",
+      "description": "Controller actions are methods within a Rails controller that handle specific requests from users or other parts of the application. Each action typically corresponds to a specific route and performs a task, such as displaying a form, creating a new record, updating an existing record, or deleting a record. These actions interact with models to retrieve or manipulate data and then render a view to",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Action Controller Overview",
+          "url": "https://guides.rubyonrails.org/action_controller_overview.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to Controllers in Rails",
+          "url": "https://codesignal.com/learn/courses/ruby-on-rails-basics/lessons/controllers-in-rails"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:controller-callbacks-filters",
+      "topic_slug": "controller-callbacks-filters",
+      "node_id": "oHdgQvPSEs-l3EzNRd8q2",
+      "title": "Controller Callbacks",
+      "description": "Controller callbacks, often referred to as filters, are methods that are executed at specific points in the lifecycle of a controller action. They allow you to run code before, after, or around a controller action, providing a way to encapsulate common logic, such as authentication, authorization, or data preparation, and keep your controller actions clean and focused.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Controller Callbacks",
+          "url": "https://guides.rubyonrails.org/action_controller_overview.html#controller-callbacks"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Simple Guide to before_action Callbacks in Ruby on Rails",
+          "url": "https://medium.com/@havanurkara55/a-simple-guide-to-before-action-callbacks-in-ruby-on-rails-fb068fb533d7"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails \"around_action\" : a less used callback",
+          "url": "https://dev.to/moltenhead/rails-aroundaction-a-less-used-callback-10cf"
+        },
+        {
+          "raw_type": "video",
+          "title": "ActionController callbacks in Rails",
+          "url": "https://www.youtube.com/watch?v=SnRq1_VXVVc"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:controllers",
+      "topic_slug": "controllers",
+      "node_id": "HDt5AAg9H4n8wh3uACudP",
+      "title": "Controllers",
+      "description": "Controllers are the intermediary between the user, the view, and the model. They receive requests from the user (often through routes), process the request by interacting with the model to retrieve or manipulate data, and then determine which view to render to display the results to the user. Essentially, they manage the application's workflow and logic.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Action Controller Overview",
+          "url": "https://guides.rubyonrails.org/action_controller_overview.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Controllers",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-controllers"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby on Rails Controller Patterns and Anti-patterns",
+          "url": "https://blog.appsignal.com/2021/04/14/ruby-on-rails-controller-patterns-and-anti-patterns.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "How I keep my Rails controllers organized",
+          "url": "https://www.codewithjason.com/keep-rails-controllers-organized/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Controllers - Ruby on Rails - The Odin Project",
+          "url": "https://www.youtube.com/watch?v=2isr-7DdoYE"
+        },
+        {
+          "raw_type": "video",
+          "title": "Fun With The Controller - Ruby On Rails Friend List App #11",
+          "url": "https://www.youtube.com/watch?v=SErZhMh2o30"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:cookies",
+      "topic_slug": "cookies",
+      "node_id": "JAfp4HnSEfxZ33qhVrNvk",
+      "title": "Cookies in Rails Controllers",
+      "description": "Cookies are small pieces of data that a server sends to a user's web browser. The browser may store it and send it back with later requests to the same server. Rails controllers provide a convenient way to set, read, and delete cookies, allowing you to maintain state between requests, such as remembering user preferences or tracking session information.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Cookies",
+          "url": "https://guides.rubyonrails.org/action_controller_overview.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Complete Guide to Working With Cookies in Rails",
+          "url": "https://www.writesoftwarewell.com/how-http-cookies-work-rails/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Sessions and Cookies in Rails: A Comprehensive Guide",
+          "url": "https://medium.com/@carriekarft/mastering-sessions-and-cookies-in-rails-a-comprehensive-guide-0446422d7b22"
+        },
+        {
+          "raw_type": "article",
+          "title": "Cookies & Sessions in Rails",
+          "url": "https://dev.to/matthewkohn/cookies-sessions-in-rails-54b8"
+        },
+        {
+          "raw_type": "video",
+          "title": "Rails 6 for Beginners Part 15: Login with Session Cookies",
+          "url": "https://www.youtube.com/watch?v=IzbQAj_tcfI"
+        },
+        {
+          "raw_type": "video",
+          "title": "Rails Cookies and Session",
+          "url": "https://www.youtube.com/watch?v=iOR-9fMMmLM"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:create-an-app",
+      "topic_slug": "create-an-app",
+      "node_id": "4SiV-sW-zg_HtL2tPc90-",
+      "title": "Creating a New Rails Application",
+      "description": "Creating a new Rails application is the initial step in starting any Rails project. It involves using the `rails new` command, which sets up the basic directory structure, configuration files, and dependencies needed for a functional Rails application. This process bootstraps your project with a default set of tools and conventions, allowing you to quickly begin building your web application.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:creating-controllers",
+      "topic_slug": "creating-controllers",
+      "node_id": "tSdMmh2SG1Qul5PWCaCKa",
+      "title": "Creating Controllers",
+      "description": "Controllers are the logical center of your application, responsible for receiving specific requests from the user, interacting with the model to retrieve or save data, and then rendering a view to present that data back to the user. Creating a controller involves defining a Ruby class that inherits from `ApplicationController` and defining methods (called actions) within that class to handle speci",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Creating a Controller",
+          "url": "https://guides.rubyonrails.org/action_controller_overview.html#creating-a-controller"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to Controllers in Rails",
+          "url": "https://codesignal.com/learn/courses/ruby-on-rails-basics/lessons/controllers-in-rails"
+        },
+        {
+          "raw_type": "video",
+          "title": "Controllers - Ruby on Rails - The Odin Project",
+          "url": "https://www.youtube.com/watch?v=2isr-7DdoYE"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:creating-models",
+      "topic_slug": "creating-models",
+      "node_id": "oxEooPuoRqxLreJSA4QIh",
+      "title": "Creating Models",
+      "description": "Models in Ruby on Rails represent the data and business logic of your application. They are Ruby classes that inherit from `ApplicationRecord` and typically correspond to tables in your database. Creating a model involves defining its attributes (columns in the database table) and any associated validations, callbacks, and relationships with other models. This process allows you to interact with y",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Creating Active Record Models",
+          "url": "https://guides.rubyonrails.org/active_record_basics.html#creating-active-record-models"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails Models",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-active-record-basics#rails-models"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby on Rails - Models",
+          "url": "https://www.tutorialspoint.com/ruby-on-rails/rails-models.htm"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ep 4. Active Record explained | Rails New Tutorial with Typecraft",
+          "url": "https://www.youtube.com/watch?v=n0TPEsKE9v0"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:csrf-protection",
+      "topic_slug": "csrf-protection",
+      "node_id": "VlQis-Wkahd1E1aM1ZP2E",
+      "title": "CSRF Protection",
+      "description": "Cross-Site Request Forgery (CSRF) is a web security vulnerability that allows an attacker to trick a user's browser into executing unwanted actions on a trusted site when the user is authenticated. CSRF protection involves adding a unique, unpredictable token to each form submitted by the user. This token is then verified on the server-side to ensure that the request originated from the legitimate",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:customizing-routes",
+      "topic_slug": "customizing-routes",
+      "node_id": "3NTsftFbqkG5s4xoU_q6E",
+      "title": "Customizing Routes",
+      "description": "Customizing routes allows developers to define specific URL patterns and map them to particular controller actions. This provides flexibility in designing user-friendly and SEO-optimized URLs, deviating from the default Rails conventions. By modifying the `routes.rb` file, you can create custom routes that cater to the unique needs of your application, including specifying HTTP methods, defining r",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Customizing Resourceful Routes",
+          "url": "https://guides.rubyonrails.org/routing.html#customizing-resourceful-routes"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Write Custom Routes in Rails",
+          "url": "https://levelup.gitconnected.com/how-to-write-custom-routes-in-rails-872df2ca4d39"
+        },
+        {
+          "raw_type": "article",
+          "title": "Custom routes in rails",
+          "url": "https://medium.com/@leviyitzchokdeutsch/custom-routes-in-rails-f790e5940e22"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:data-types",
+      "topic_slug": "data-types",
+      "node_id": "6aukVg4KBYPW0FVtdAvS5",
+      "title": "Data Types in Rails Models",
+      "description": "Data types define the kind of information a database column can store. When creating Rails models, you specify data types for each attribute, which then translates into the corresponding column type in your database table. These types include integers, strings, booleans, dates, and more, ensuring data integrity and efficient storage.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "ActiveRecord::Type",
+          "url": "https://api.rubyonrails.org/classes/ActiveRecord/Type.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails ActiveRecord Data Types",
+          "url": "https://dev.to/asyraf/rails-activerecord-data-types-32ip"
+        },
+        {
+          "raw_type": "article",
+          "title": "List of Rails data types for ActiveRecord migrations",
+          "url": "https://www.jdeen.com/blog/list-of-rails-data-types-for-activerecord-migrations"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:databases",
+      "topic_slug": "databases",
+      "node_id": "QdWCXUAfVXiP6RQ6VyDkX",
+      "title": "Database",
+      "description": "Databases are structured collections of data, organized for efficient storage, retrieval, and management. Active Record is Rails' ORM (Object-Relational Mapping) layer, providing an interface between your Ruby code and the database. It allows you to interact with database tables as if they were Ruby objects, simplifying database operations like creating, reading, updating, and deleting records.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Configuring a Database",
+          "url": "https://guides.rubyonrails.org/configuring.html#configuring-a-database"
+        },
+        {
+          "raw_type": "official",
+          "title": "Multiple Databases with Active Record",
+          "url": "https://guides.rubyonrails.org/active_record_multiple_databases.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Setting Up and Managing Databases in Ruby on Rails",
+          "url": "https://bhartee-tech-ror.medium.com/setting-up-and-managing-databases-in-ruby-on-rails-72885f9f1164"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Rails database.yml File",
+          "url": "https://dev.to/andreimaxim/the-rails-databaseyml-file-4dm9"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Configure Multiple Databases with Rails",
+          "url": "https://www.youtube.com/watch?v=aOsffm22T8I"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:db",
+      "topic_slug": "db",
+      "node_id": "N2pXb4eqXrBdR495zMqGY",
+      "title": "db",
+      "description": "The `db` directory in a Rails application houses everything related to your database. It contains files for database schema definition, migrations, and seed data. This directory is essential for managing and evolving your application's data structure over time.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:debug",
+      "topic_slug": "debug",
+      "node_id": "SFGRkOuEMFxOJ4UU_Ti8L",
+      "title": "debug",
+      "description": "The `debug` helper in Ruby on Rails provides a way to display the contents of a variable or object directly within your views. It's primarily used for debugging purposes, allowing you to quickly inspect data structures and identify issues in your code during development. When used, it outputs the object's information in a readable format within `<pre>` tags on the rendered HTML page, making it eas",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "debug",
+          "url": "https://guides.rubyonrails.org/debugging_rails_applications.html#debug"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:debugging",
+      "topic_slug": "debugging",
+      "node_id": "ELvMdjJZGl_k_0Qsi_vtm",
+      "title": "Debugging",
+      "description": "Debugging is the process of identifying and removing errors (bugs) from software. It involves systematically finding the source of a problem, understanding why it's happening, and then implementing a solution to fix it. Effective debugging relies on using tools and techniques to inspect code, track down unexpected behavior, and verify that the fix resolves the issue without introducing new problem",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Debugging Rails Applications",
+          "url": "https://guides.rubyonrails.org/debugging_rails_applications.html#view-helpers-for-debugging"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:deployment",
+      "topic_slug": "deployment",
+      "node_id": "Ia5mN1j_lMCg0vt2z1_jI",
+      "title": "Deployment",
+      "description": "Deployment is the process of making your Ruby on Rails application accessible to users on a live server. It involves configuring the server environment, transferring your application code, setting up databases, and ensuring the application runs smoothly and reliably in a production setting. This includes handling aspects like web server configuration, application server setup, database connections",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Deploying to Production",
+          "url": "https://guides.rubyonrails.org/getting_started.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Deploying with Kamal 2.0 | Rails 8 Unpacked",
+          "url": "https://www.youhttps://www.youtube.com/watch?v=sPUk9-1WVXItube.com/watch?v=sPUk9-1WVXI"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:devise",
+      "topic_slug": "devise",
+      "node_id": "deKkp0TGU3Dj0zxUn9VI4",
+      "title": "Devise",
+      "description": "Devise is a flexible authentication solution for Rails applications. It provides a complete MVC solution based on Warden that handles user registration, login, password recovery, and other common authentication tasks. It uses a modular approach, allowing developers to choose and configure the specific features they need for their application.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "devise",
+          "url": "https://github.com/heartcombo/devise"
+        },
+        {
+          "raw_type": "article",
+          "title": "An Introduction to Devise for Ruby on Rails",
+          "url": "https://blog.appsignal.com/2023/07/12/an-introduction-to-devise-for-ruby-on-rails.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Set Up User Authentication with Devise in a Rails 7 Application",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-set-up-user-authentication-with-devise-in-a-rails-7-application"
+        },
+        {
+          "raw_type": "video",
+          "title": "Build a Blog with Rails Part 10: Authentication with Devise",
+          "url": "https://www.youtube.com/watch?v=dTpyInyvQ2Y"
+        },
+        {
+          "raw_type": "video",
+          "title": "This New Devise API Gem Makes User Auth So Simple! | Ruby On Rails 7 Tutorial",
+          "url": "https://www.youtube.com/watch?v=sLcLwVCBU0c"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:dynamic-finders",
+      "topic_slug": "dynamic-finders",
+      "node_id": "p8bkCtZkgdkh3G_d7fvmt",
+      "title": "Dynamic Finders",
+      "description": "Dynamic finders provide a convenient way to query your database based on specific attributes of your model. They allow you to create methods on the fly that search for records based on the values of those attributes, eliminating the need to write custom query methods for simple attribute-based searches. This feature simplifies data retrieval and makes your code more readable.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:engines",
+      "topic_slug": "engines",
+      "node_id": "D_LyvlDwKSzvnSWCpR00D",
+      "title": "Engines",
+      "description": "Engines are like mini-applications that can be plugged into a larger Rails application. They provide a way to encapsulate specific functionality, such as a blog, a forum, or an e-commerce platform, into a reusable component. This allows developers to create modular and maintainable applications by isolating concerns and promoting code reuse across different projects.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:erb-templates",
+      "topic_slug": "erb-templates",
+      "node_id": "CX-9Ii3e9rrokUTF0_hI5",
+      "title": "ERB Templates",
+      "description": "ERB (Embedded Ruby) templates are a core component of Rails views, allowing you to embed Ruby code directly within your HTML markup. This enables dynamic content generation, where data from your Rails application can be seamlessly integrated into the presentation layer. ERB templates use special tags to denote Ruby code, which is then executed when the view is rendered, producing the final HTML ou",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "ERB",
+          "url": "https://guides.rubyonrails.org/action_view_overview.html#erb"
+        },
+        {
+          "raw_type": "official",
+          "title": "Layouts and Rendering in Rails",
+          "url": "https://guides.rubyonrails.org/layouts_and_rendering.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Clean Code in ERB Templates: Ruby on Rails Basics",
+          "url": "https://medium.com/nyc-ruby-on-rails/clean-code-in-erb-templates-ruby-on-rails-basics-374ad48dd95e"
+        },
+        {
+          "raw_type": "video",
+          "title": "Rails Application Templates",
+          "url": "https://www.youtube.com/watch?v=ucskVEiN8J8"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:factory-bot",
+      "topic_slug": "factory-bot",
+      "node_id": "OLdWSGSwYnggN14BdH9nN",
+      "title": "Factory Bot",
+      "description": "Factory Bot is a library for creating Ruby objects for testing purposes. It provides a simple and clean syntax for defining factories, which are blueprints for creating instances of your models with pre-defined attributes. This helps to avoid repetitive setup code in your tests and ensures consistent test data.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "factory_bot_rails",
+          "url": "https://github.com/thoughtbot/factory_bot_rails"
+        },
+        {
+          "raw_type": "article",
+          "title": "FactoryBot for Rails testing",
+          "url": "https://www.honeybadger.io/blog/factorybot-for-rails-testing-md/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How I set up Factory Bot on a fresh Rails project",
+          "url": "http://codewithjason.com/set-factory-bot-fresh-rails-project/"
+        },
+        {
+          "raw_type": "article",
+          "title": "My Introduction To Factory Bot",
+          "url": "https://medium.com/@mariacristina.simoes/my-introduction-to-factory-bot-88949467a7e9"
+        },
+        {
+          "raw_type": "video",
+          "title": "Install Factory Bot with Ruby on Rails",
+          "url": "https://www.youtube.com/watch?v=vQQKIyAHPI4"
+        },
+        {
+          "raw_type": "video",
+          "title": "Factory Bot Testing with Active Storage and Devise | Ruby on Rails 7 Tutorial",
+          "url": "https://www.youtube.com/watch?v=7JdyQEcZ7F8"
+        },
+        {
+          "raw_type": "video",
+          "title": "Factory Bot Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=ef82mR9Mm8Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:form-elements",
+      "topic_slug": "form-elements",
+      "node_id": "GGR8jAQNggJc92FcvtL4O",
+      "title": "Form Elements",
+      "description": "Form elements are the individual components within an HTML form that allow users to input data. These elements include text fields, text areas, checkboxes, radio buttons, select boxes, and buttons, each serving a specific purpose in collecting different types of user information. They are essential for creating interactive web applications where users can submit data to the server.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Helpers for Generating Form Elements",
+          "url": "https://guides.rubyonrails.org/form_helpers.html#helpers-for-generating-form-elements"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:form-validation",
+      "topic_slug": "form-validation",
+      "node_id": "rg-48lLxIaKdjIb9icB72",
+      "title": "Form Validation",
+      "description": "Form validation is the process of ensuring that the data submitted through a form meets specific requirements before it's saved to the database. This helps prevent errors, maintain data integrity, and provide a better user experience. Rails provides built-in methods and helpers to easily define and enforce these validation rules directly within your models, such as checking for presence, format, u",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Record Validations",
+          "url": "https://guides.rubyonrails.org/active_record_validations.html#performing-custom-validations"
+        },
+        {
+          "raw_type": "article",
+          "title": "Keeping it Clean \u2014 Data Validation with Ruby on Rails",
+          "url": "https://medium.com/@jennyjean8675309/keeping-it-clean-data-validation-with-ruby-on-rails-a0c6190f1b8e"
+        },
+        {
+          "raw_type": "video",
+          "title": "Rails Custom Validations",
+          "url": "https://www.youtube.com/watch?v=nPS-dalL_hQ"
+        },
+        {
+          "raw_type": "video",
+          "title": "Nested Attributes & Validation In Ruby On Rails 7",
+          "url": "https://www.youtube.com/watch?v=Fpu0rc3stq4"
+        },
+        {
+          "raw_type": "video",
+          "title": "Rails 6 for Beginners Part 12: Validations",
+          "url": "https://www.youtube.com/watch?v=l-Jv5vMjB70&t=209s"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:form_for",
+      "topic_slug": "form_for",
+      "node_id": "EctqfKE5AAqByipGIv0Wa",
+      "title": "form_for",
+      "description": "`form_for` is a helper method in Ruby on Rails that simplifies the creation of HTML forms. It automatically generates the necessary HTML tags and attributes for creating forms that are bound to a specific model object. This helper streamlines the process of building forms for creating, updating, and managing data within your Rails application.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Action View Form Helpers",
+          "url": "https://guides.rubyonrails.org/form_helpers.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "form_for",
+          "url": "https://api.rubyonrails.org/v8.1.2/classes/ActionView/Helpers/FormHelper.html#method-i-form_for"
+        },
+        {
+          "raw_type": "article",
+          "title": "I Have a Form_For That! (Rails Forms)",
+          "url": "https://medium.com/@thorntonbrenden/i-have-a-form-for-that-rails-forms-42345b69c31"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails form_for Helpers Under the Hood",
+          "url": "https://smitham50.medium.com/rails-form-for-helpers-under-the-hood-fdf98c7bd3d1"
+        },
+        {
+          "raw_type": "video",
+          "title": "Rails 5.2 - Blog with Comments and Users Nested Resources, form_for and much more",
+          "url": "https://www.youtube.com/watch?v=CBn_zu-2mtk"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding Rails Forms",
+          "url": "https://www.youtube.com/watch?v=28wOvW5x7HY"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:form_with",
+      "topic_slug": "form_with",
+      "node_id": "EWMC98NdSnblHBD0U3Ty2",
+      "title": "form_with",
+      "description": "`form_with` is a helper method used to create HTML forms. It simplifies the process of generating the necessary HTML tags for form elements, handling attributes like the form's action URL, HTTP method (GET, POST, PUT, PATCH, DELETE), and CSRF protection. It's the recommended way to build forms in Rails 5.1 and later, offering a more streamlined and flexible approach compared to older form helpers.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Action View Form Helpers",
+          "url": "https://guides.rubyonrails.org/form_helpers.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "form_with",
+          "url": "https://api.rubyonrails.org/v8.1.2/classes/ActionView/Helpers/FormHelper.html#method-i-form_with"
+        },
+        {
+          "raw_type": "article",
+          "title": "Form helpers: form_with",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-form-basics#form-helpers-formwith"
+        },
+        {
+          "raw_type": "video",
+          "title": "Improving form_with Errors in Rails | Preview",
+          "url": "https://www.youtube.com/watch?v=mSSO_lT9MeA"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ruby on Rails Forms With Hotwire",
+          "url": "https://www.youtube.com/watch?v=-n7IbUFKjoM"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding Rails Forms",
+          "url": "https://www.youtube.com/watch?v=28wOvW5x7HY"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:gemfile",
+      "topic_slug": "gemfile",
+      "node_id": "t8yTDpN4kNuW6ZhHnum2X",
+      "title": "Gemfile",
+      "description": "The Gemfile is a file in the root directory of a Ruby on Rails application that specifies the gem dependencies required for the project. It uses Ruby's syntax to list the gems and their versions, allowing Bundler to manage and install the correct versions of each gem. This ensures that the application has all the necessary libraries to run properly and consistently across different environments.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:helpers",
+      "topic_slug": "helpers",
+      "node_id": "lnr8HfS8mIcE4Ef-bXQbO",
+      "title": "Helpers",
+      "description": "Helpers in Rails are methods that you can use in your views to encapsulate complex logic, format data, or generate HTML. They promote code reusability and keep your views clean and readable by moving presentation-related code out of the templates. Helpers can be defined in application-wide helpers or controller-specific helpers.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Action View Helpers",
+          "url": "https://guides.rubyonrails.org/action_view_helpers.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Guide to Rails View Helpers",
+          "url": "https://blog.appsignal.com/2023/02/01/a-guide-to-rails-view-helpers.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use Rails Helpers (Complete Guide)",
+          "url": "https://www.rubyguides.com/2020/01/rails-helpers/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Rails helpers: How to use them right",
+          "url": "https://www.youtube.com/watch?v=n0UhaSI54As"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use Rails Helper Methods",
+          "url": "https://www.youtube.com/watch?v=jASswaHkCbk"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:hotwire",
+      "topic_slug": "hotwire",
+      "node_id": "2IEdP3YjzCf150UpGao42",
+      "title": "Hotwire",
+      "description": "Hotwire is an alternative approach to building modern web applications by sending HTML over the wire, instead of complex JSON APIs. It allows you to build rich, dynamic user interfaces without writing large amounts of JavaScript. By leveraging server-rendered HTML and a lightweight JavaScript framework, Hotwire simplifies the development process and improves performance.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Hotwire",
+          "url": "https://hotwired.dev/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Turbo Rails Tutorial",
+          "url": "https://www.hotrails.dev/turbo-rails"
+        },
+        {
+          "raw_type": "article",
+          "title": "From Zero to Hotwire \u2014 Rails 8",
+          "url": "https://medium.com/jungletronics/from-zero-to-hotwire-rails-8-e6cd16216165"
+        },
+        {
+          "raw_type": "video",
+          "title": "Hotwire for Rails",
+          "url": "https://www.youtube.com/playlist?list=PLm8ctt9NhMNWy8fC-7g9OC1IJPkYQ_pI7"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introduction to Hotwire in Ruby on Rails",
+          "url": "https://www.youtube.com/watch?v=m_4myBwU2cU"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to use Hotwire in Rails",
+          "url": "https://www.youtube.com/watch?v=Qp6sxgjA-xY"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:how-the-web-works",
+      "topic_slug": "how-the-web-works",
+      "node_id": "3YcOhdk9w24f5x0WattyB",
+      "title": "How the Web Works",
+      "description": "The web operates through a client-server model where a client (like a web browser) sends a request to a server, and the server processes that request and sends back a response. This interaction typically involves HTTP (Hypertext Transfer Protocol) for communication, URLs (Uniform Resource Locators) to identify resources, and HTML (Hypertext Markup Language) to structure the content displayed in th",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:inspecting-routes",
+      "topic_slug": "inspecting-routes",
+      "node_id": "lLYISr_j0NsE7wkBVvnbM",
+      "title": "Inspecting Routes",
+      "description": "Rails comes with functionalities that allow developers to view all defined routes, their corresponding HTTP methods (GET, POST, PUT, DELETE, etc.), the controller and action they map to, and any route parameters. This is crucial for understanding how URLs are handled within the application and for debugging routing issues. Rails provides tools to easily list and analyze these routes, offering insi",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Inspecting Routes",
+          "url": "https://guides.rubyonrails.org/routing.html#inspecting-routes"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Inspect Rails Routes from the Terminal",
+          "url": "https://dpericich.medium.com/how-to-inspect-rails-routes-from-the-terminal-860b1aab1df4"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:introduction",
+      "topic_slug": "introduction",
+      "node_id": "0MKuq69yhj8q6suTQ7fY7",
+      "title": "Introduction to Ruby on Rails",
+      "description": "Ruby on Rails, often shortened to Rails, is a server-side web application framework written in the Ruby programming language. It provides a structure for databases, web services, and web pages, emphasizing the use of convention over configuration (CoC) and the don't repeat yourself (DRY) principles. Rails aims to make web application development easier by providing tools and structures that develo",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:joins",
+      "topic_slug": "joins",
+      "node_id": "Uz5WseVkPoDJfnKw1FH9a",
+      "title": "Joins in Active Record",
+      "description": "Joins in Active Record allow you to combine data from multiple database tables based on related columns. This is essential for retrieving information that spans across different tables, such as fetching a user's posts or a product's categories. By specifying the relationships between your models, Active Record simplifies the process of writing complex SQL queries, enabling you to efficiently retri",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Joining Tables",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html#joining-tables"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Really Good at Rails :joins",
+          "url": "https://medium.com/swlh/getting-really-good-at-rails-joins-93fd5b33fa8e"
+        },
+        {
+          "raw_type": "article",
+          "title": "Joins",
+          "url": "https://medium.com/swlh/getting-really-good-at-rails-joins-93fd5b33fa8e"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding multiple joins in ActiveRecord",
+          "url": "https://dev.to/anakbns/multiple-joins-with-activerecord-33j5"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:kamal",
+      "topic_slug": "kamal",
+      "node_id": "ih8oOhO49tg1wUUiusIA-",
+      "title": "Kamal",
+      "description": "Kamal is a deployment tool created by 37signals (the creators of Ruby on Rails) designed to simplify the process of deploying web applications to one or more servers. It focuses on using Docker containers and modern deployment strategies like zero-downtime deployments, making it easier to manage and scale your Rails applications in production environments. It aims to provide a streamlined alternat",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Kamal",
+          "url": "https://kamal-deploy.org/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "kamal",
+          "url": "https://github.com/basecamp/kamal"
+        },
+        {
+          "raw_type": "article",
+          "title": "Deploying a Rails 8 app with Kamal",
+          "url": "https://community.hetzner.com/tutorials/deploy-rails-8-app-on-hetzner-with-kamal"
+        },
+        {
+          "raw_type": "video",
+          "title": "https://www.youtube.com/watch?v=sPUk9-1WVXI",
+          "url": "https://www.youhttps//www.youtube.com/watch?v=sPUk9-1WVXItube.com/watch?v=sPUk9-1WVXI"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Deploy a Rails App With Kamal",
+          "url": "https://www.youtube.com/watch?v=9nRY0p2br28"
+        },
+        {
+          "raw_type": "video",
+          "title": "Absolute Beginners Guide to Deploying Rails 8 to Production (Kamal Tutorial)",
+          "url": "https://www.youtube.com/watch?v=tGi3YGGhIGg"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:kaminari",
+      "topic_slug": "kaminari",
+      "node_id": "6P7GM12isuv5A_SA3tqNA",
+      "title": "Kaminari",
+      "description": "Kaminari is a Ruby on Rails gem that simplifies the process of adding pagination to your application. It provides an easy-to-use interface for displaying large datasets in manageable chunks, improving performance and user experience by loading only the necessary data for each page. Kaminari integrates seamlessly with ActiveRecord and other ORMs, making it a straightforward solution for paginating ",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "kaminari",
+          "url": "https://github.com/kaminari/kaminari"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby On Rails Pagination With Kaminari",
+          "url": "https://www.dennisokeeffe.com/blog/2022-03-02-ruby-on-rails-pagination-with-kaminari"
+        },
+        {
+          "raw_type": "article",
+          "title": "Implementing Pagination in Rails with Kaminari",
+          "url": "https://devcamp.com/trails/2/campsites/37/guides/implementing-pagination-rails-kaminari"
+        },
+        {
+          "raw_type": "video",
+          "title": "The Kaminari Gem in Ruby on Rails 7",
+          "url": "https://www.youtube.com/watch?v=sHbI0jY8RUs"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:layouts--yield",
+      "topic_slug": "layouts--yield",
+      "node_id": "-bX4iPTO1dt3wLAcFI7nL",
+      "title": "Layouts and Yield in Rails Views",
+      "description": "Layouts provide a consistent structure for your application's views. They are templates that define the overall look and feel of a page, including elements like headers, footers, and navigation. The `yield` keyword acts as a placeholder within the layout, indicating where the content from individual views should be inserted. This allows you to reuse common elements across multiple pages while stil",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Structuring Layouts",
+          "url": "https://guides.rubyonrails.org/layouts_and_rendering.html#structuring-layouts"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby on Rails - Layouts",
+          "url": "https://www.tutorialspoint.com/ruby-on-rails/rails-layouts.htm"
+        },
+        {
+          "raw_type": "article",
+          "title": "How Layouts Work in Rails",
+          "url": "https://railsdesigner.com/rails-layouts/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use Rails Layouts & Display The Current Action Name",
+          "url": "https://www.youtube.com/watch?v=KKg63bQocmw"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:log-levels",
+      "topic_slug": "log-levels",
+      "node_id": "1KGuLLxZ-2ghim7ge2ACN",
+      "title": "Log Levels",
+      "description": "Log levels in Rails are categories that indicate the severity of a log message. They help you filter and prioritize information when debugging or monitoring your application. Common log levels, in increasing order of severity, are: `debug`, `info`, `warn`, `error`, and `fatal`. Each level allows you to control the amount of detail recorded, from verbose debugging information to critical errors tha",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:logging",
+      "topic_slug": "logging",
+      "node_id": "Un4rFrxtto4WLG9YNaAMK",
+      "title": "Logging",
+      "description": "Logging involves recording events that occur within an application, such as user actions, errors, and system information. This recorded data is typically stored in log files, providing a valuable resource for monitoring application behavior, diagnosing issues, and understanding performance. Rails provides a built-in logging framework that simplifies the process of generating and managing these log",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to Start Logging With Ruby on Rails",
+          "url": "https://betterstack.com/community/guides/logging/how-to-start-logging-with-ruby-on-rails/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Making the Most of Your Logs in Rails",
+          "url": "https://blog.appsignal.com/2023/03/01/making-the-most-of-your-logs-in-rails.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Rails Logging Setup That Saved Me From Debugging Hell",
+          "url": "https://bhavyansh001.medium.com/the-rails-logging-setup-that-saved-me-from-debugging-hell-97904592eceb"
+        },
+        {
+          "raw_type": "video",
+          "title": "Debugging And Logging | Intro To Ruby On Rails 7 Part 24",
+          "url": "https://www.youtube.com/watch?v=9rDK2rbm6DI"
+        },
+        {
+          "raw_type": "video",
+          "title": "Logging Mastery: From Rails Default to Kibana \ud83d\udcc8",
+          "url": "https://www.youtube.com/watch?v=CoHMwJsLiLU"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:mailbox--mailer",
+      "topic_slug": "mailbox--mailer",
+      "node_id": "rhs6_Zg9PuY2Oost0vc_o",
+      "title": "Mailbox and Mailer",
+      "description": "The Rails Mailbox and Mailer provide a structured way to handle incoming and outgoing emails. Mailers are used to compose and send emails from your application, defining email content, recipients, and headers. Mailboxes, introduced more recently, route incoming emails to specific controllers or models within your application, allowing you to process and respond to emails programmatically.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Action Mailbox Basics",
+          "url": "https://guides.rubyonrails.org/action_mailbox_basics.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Action Mailer Basics",
+          "url": "https://guides.rubyonrails.org/action_mailer_basics.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "In Depth Look At Action Mailbox",
+          "url": "https://www.codynorman.com/ruby/action_mailbox/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails Mailer Tutorial",
+          "url": "https://medium.com/@ericschwartz7/rails-mailer-tutorial-82700f6737d9"
+        },
+        {
+          "raw_type": "article",
+          "title": "Writing better Action Mailers: Revisiting a core Rails concept",
+          "url": "https://boringrails.com/articles/writing-better-action-mailers/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Receive and process inbound email with Ruby on Rails",
+          "url": "https://www.youtube.com/watch?v=jOfAV2QWNOw&t=87s"
+        },
+        {
+          "raw_type": "video",
+          "title": "Action Mailer for Beginners | Ruby on Rails 7",
+          "url": "https://www.youtube.com/watch?v=-8Rs1DcMZ9I"
+        },
+        {
+          "raw_type": "video",
+          "title": "Realtime Rails with Hotwire & ActionMailbox | Part 1",
+          "url": "https://www.youtube.com/watch?v=WSuFaY7-q3g&t=66s"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:mariadb",
+      "topic_slug": "mariadb",
+      "node_id": "Jf7W0Sw5azZZ6VGb9oaYq",
+      "title": "MariaDB Support in Rails",
+      "description": "MariaDB is an open-source relational database management system (RDBMS) that is a popular fork of MySQL. Rails applications can connect to and interact with MariaDB databases using the `mysql2` adapter. This allows developers to leverage MariaDB's features, such as enhanced performance and storage engines, within their Rails applications for data persistence and management.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Configuring a MySQL or MariaDB Database",
+          "url": "https://guides.rubyonrails.org/configuring.html#configuring-a-mysql-or-mariadb-database"
+        },
+        {
+          "raw_type": "official",
+          "title": "Connector/Ruby Guide",
+          "url": "https://mariadb.com/docs/connectors/connectors-quickstart-guides/connector-ruby-guide"
+        },
+        {
+          "raw_type": "article",
+          "title": "Howto Set Up MariaDB For Rails Development",
+          "url": "https://myrtana.sk/articles/howto-set-up-mariadb-for-rails-development"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:migrations",
+      "topic_slug": "migrations",
+      "node_id": "gJYuVgBvJeXL72NsRubLm",
+      "title": "Migrations",
+      "description": "Migrations are a way to evolve your database schema over time in a consistent and manageable way. They are Ruby files that define changes to your database structure, such as creating tables, adding columns, or modifying indexes. These files allow you to track and apply changes to your database schema, making it easy to collaborate with other developers and deploy your application to different envi",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Record Migrations",
+          "url": "https://guides.rubyonrails.org/active_record_migrations.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Migrations",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-migrations"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to create Active Record migrations in Ruby on Rails",
+          "url": "https://learnetto.com/tutorials/how-to-create-active-record-migrations-in-ruby-on-rails"
+        },
+        {
+          "raw_type": "article",
+          "title": "A quick guide on database migrations in Ruby on Rails",
+          "url": "https://dev.to/dumebii/quick-guide-to-migrations-in-ruby-on-rails-for-beginners-4gmb"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use Migrations in Rails (Step-by-Step)",
+          "url": "https://www.youtube.com/watch?v=1DaO6F8-Qdc"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:minitest",
+      "topic_slug": "minitest",
+      "node_id": "9evL0EqA6aBGczrfsRkV7",
+      "title": "Minitest",
+      "description": "Minitest is a complete testing suite for Ruby, providing support for test-driven development (TDD), behavior-driven development (BDD), mocking, and benchmarking. It's a lightweight and fast testing framework that comes bundled with Ruby, making it readily available for use in Rails applications. Minitest allows developers to write various types of tests, including unit tests, integration tests, an",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "minirtest",
+          "url": "https://github.com/minitest/minitest"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started With Testing In Rails (Using Minitest and RSpec)",
+          "url": "https://medium.com/@ethanryan/getting-started-with-testing-in-rails-using-minitest-and-rspec-113fe1f866a"
+        },
+        {
+          "raw_type": "article",
+          "title": "Minitest vs. RSpec in Rails",
+          "url": "https://www.honeybadger.io/blog/minitest-rspec-rails/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started With System Tests in Rails With Minitest",
+          "url": "https://blog.appsignal.com/2020/02/12/getting-started-with-system-tests-in-ruby-with-minitest.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Testing Rails with MiniTest",
+          "url": "https://medium.com/@mario_chavez/testing-rails-with-minitest-7b4f99d4fcb8"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:model-methods",
+      "topic_slug": "model-methods",
+      "node_id": "ca3Ik5pl-XmecZ3Ztx0YV",
+      "title": "Model Methods",
+      "description": "Model methods in Ruby on Rails are custom functions defined within a model class that encapsulate specific business logic related to that model. These methods allow you to perform operations on model instances or the model class itself, such as data validation, calculations, or interactions with other models, promoting code reusability and maintainability within your Rails application.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "CRUD: Reading and Writing Data",
+          "url": "https://guides.rubyonrails.org/active_record_basics.html#validations"
+        },
+        {
+          "raw_type": "article",
+          "title": "\ud83d\udc8e Ruby on Rails Cheat Sheet",
+          "url": "https://pagertree.com/blog/ruby-on-rails-cheat-sheet#migration-data-types"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:model-relationships",
+      "topic_slug": "model-relationships",
+      "node_id": "lWsJL135U-N5xIBnXqTYx",
+      "title": "Model Relationships",
+      "description": "Model relationships in Rails define how different models in your application are connected to each other. These relationships allow you to easily access related data and maintain data integrity. Common types of relationships include one-to-one, one-to-many, and many-to-many, each representing a different way that data entities can be associated.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Record Associations",
+          "url": "https://guides.rubyonrails.org/association_basics.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Active Record Associations",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-active-record-associations"
+        },
+        {
+          "raw_type": "article",
+          "title": "Active Record Associations For Dummies",
+          "url": "https://jontzavala.medium.com/active-record-associations-for-dummies-82af58050da4"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby on Rails - Active Record Associations",
+          "url": "https://www.tutorialspoint.com/ruby-on-rails/rails-active-record-associations.htm"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn Active Record associations with Starwars",
+          "url": "https://www.youtube.com/watch?v=E2jk4h1gQ2I"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding Active Record Associations",
+          "url": "https://www.youtube.com/watch?v=5mhuNSkV_vQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:models",
+      "topic_slug": "models",
+      "node_id": "NtiePD28NjaDtsC3oEbYf",
+      "title": "Models",
+      "description": "Models are Ruby classes that represent data and business logic. They interact with the database to perform CRUD (Create, Read, Update, Delete) operations on the data. Models provide a structured way to manage data, enforce validations, and define relationships between different data entities within an application. They are a core component of the Model-View-Controller (MVC) architectural pattern.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Record Basics",
+          "url": "https://guides.rubyonrails.org/active_record_basics.html#creating-active-record-models"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails models",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-active-record-basics#rails-models"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby on Rails - Models",
+          "url": "https://www.tutorialspoint.com/ruby-on-rails/rails-models.htm"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Rails Model Introduction I Wish I Had",
+          "url": "https://www.maxwellantonucci.com/posts/2020/04/07/rails-model-intro-wish-i-had/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails models cheatsheet",
+          "url": "https://devhints.io/rails-models"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use Active Record: An Introduction For Beginner Rails Developers",
+          "url": "https://www.youtube.com/watch?v=-zQdVV7D4w8"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:mvc-architecture",
+      "topic_slug": "mvc-architecture",
+      "node_id": "wHKlT_wCIrpSvULvXCufr",
+      "title": "MVC Architecture",
+      "description": "MVC, or Model-View-Controller, is a software design pattern commonly used for developing user interfaces that divides an application into three interconnected parts. The Model manages the application's data and logic, the View displays the data to the user, and the Controller handles user input and updates the Model and View accordingly. This separation of concerns makes applications easier to dev",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:mysql",
+      "topic_slug": "mysql",
+      "node_id": "vIOmb6qGA0ZbPyqEQ9Bb4",
+      "title": "MySQL in Rails",
+      "description": "MySQL is a popular open-source relational database management system (RDBMS). In a Ruby on Rails application, MySQL serves as a persistent data store for your application's information, such as user accounts, product details, and blog posts. Rails leverages Active Record, an Object-Relational Mapping (ORM) framework, to interact with MySQL databases, allowing developers to work with data using Rub",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Configuring a MySQL or MariaDB Database",
+          "url": "https://guides.rubyonrails.org/configuring.html#configuring-a-mysql-or-mariadb-database"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby on Rails with MySQL",
+          "url": "https://medium.com/@chandan-sharma/ruby-on-rails-create-mysql-database-and-add-table-5e62ac0e823c"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to use MySQL with your Ruby on Rails application",
+          "url": "https://www.ionos.com/digitalguide/server/know-how/use-mysql-with-ruby-on-rails/"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:named-routes",
+      "topic_slug": "named-routes",
+      "node_id": "KlEgfzfkPu0O43tJIsU3H",
+      "title": "Named Routes",
+      "description": "Named routes provide a convenient way to refer to specific routes within your application's code. Instead of hardcoding URLs, you can use a symbolic name that represents the route, making your code more readable and maintainable. These names are automatically generated based on your `routes.rb` file and can be used in views, controllers, and models to generate URLs and paths.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Naming Routes",
+          "url": "https://guides.rubyonrails.org/routing.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Named Routes in Rails",
+          "url": "https://www.writesoftwarewell.com/understanding-named-routes-in-rails/"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:nested-forms",
+      "topic_slug": "nested-forms",
+      "node_id": "p0JHL8iAcV5tRLX9DPhx6",
+      "title": "Nested Forms",
+      "description": "Nested forms allow you to manage associated models directly within a parent form. This means you can create, update, and delete records of related models on the same page as the parent model, providing a more streamlined user experience. For example, you might create a new blog post and its associated comments all at once.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Building Complex Forms",
+          "url": "https://guides.rubyonrails.org/form_helpers.html#building-complex-forms"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails \u2014 Nested Forms and Nested Resources",
+          "url": "https://david-rafe.medium.com/rails-nested-forms-and-nested-resources-cb9f21bb1a1a"
+        },
+        {
+          "raw_type": "article",
+          "title": "Nested Forms in Rails - FastRuby.io",
+          "url": "https://www.fastruby.io/blog/learning/rails/nested-forms.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Dynamic Nested Forms with Rails and Stimulus",
+          "url": "https://jonathanyeong.com/writing/rails-stimulus-dynamic-nested-form/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Stimulus Nested Forms | Ruby on Rails 7 Tutorial",
+          "url": "https://www.youtube.com/watch?v=7JNRZLTRDCc"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:nested-routes",
+      "topic_slug": "nested-routes",
+      "node_id": "DbJ1BIOoerkCH4P95Z7wD",
+      "title": "Nested Routes",
+      "description": "Nested routes allow you to define hierarchical relationships between resources in your application's URLs. This means you can represent parent-child relationships, such as comments belonging to a specific post, directly in the URL structure. This approach helps to create more organized and intuitive URLs, reflecting the data's relationships and improving the user experience.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:non-restful-routes",
+      "topic_slug": "non-restful-routes",
+      "node_id": "3qImaY9Hs3Cvatw1X96Ns",
+      "title": "Non-RESTful Routes",
+      "description": "Non-RESTful routes are custom routes that deviate from the standard RESTful conventions (like `index`, `show`, `create`, `update`, `destroy`). They are used when an action doesn't naturally map to a typical CRUD operation or when you need a more descriptive or specific URL for a particular function in your application. These routes allow you to define custom paths and HTTP verbs to connect to spec",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:omniauth",
+      "topic_slug": "omniauth",
+      "node_id": "mRdKPWMxzEacPOA8j-SoH",
+      "title": "OmniAuth",
+      "description": "OmniAuth is a flexible authentication system that allows users to sign in to your application using third-party providers like Google, Facebook, Twitter, and more. It provides a standardized way to handle the authentication process, abstracting away the complexities of dealing with different authentication protocols and APIs. This simplifies the integration of social login and other external authe",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:ordering",
+      "topic_slug": "ordering",
+      "node_id": "NwzKYGKVyLF_hiHSZ01Yq",
+      "title": "Ordering",
+      "description": "Ordering in Active Record allows you to specify the sequence in which records are retrieved from the database. This is achieved by using the `order` method, which accepts either a string representing the SQL order clause or a hash/symbol representing the attribute(s) to order by and their direction (ascending or descending). Ordering ensures that data is presented in a predictable and meaningful w",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Ordering",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html#ordering"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails Quick Tips - ActiveRecord Ordering",
+          "url": "https://hashrocket.com/blog/posts/rails-quick-tips-activerecord-ordering"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails 7 adds ActiveRecord::QueryMethods#in_order_of to return query results in a particular sequence",
+          "url": "https://blog.saeloun.com/2021/10/05/rails-7-activerecord-adds-in-order-of-method/"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:pagination",
+      "topic_slug": "pagination",
+      "node_id": "jTrvSb4eN9Hna0YooHapb",
+      "title": "Pagination",
+      "description": "Pagination is the process of dividing content into discrete pages, allowing users to navigate through large sets of data in a more manageable way. This technique enhances user experience by preventing overwhelming amounts of information from being displayed on a single page, leading to faster loading times and improved site usability.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Pagination in Rails from scratch (no gems)",
+          "url": "https://dev.to/anakbns/pagination-in-rails-from-scratch-no-gems-206f"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:pagination",
+      "topic_slug": "pagination",
+      "node_id": "txrWW1OlBZP-uiUKSMupo",
+      "title": "Pagination",
+      "description": "Pagination is the process of dividing content into discrete pages, allowing users to navigate through large datasets in a manageable way. Instead of displaying all records at once, which can lead to performance issues and a poor user experience, pagination presents data in smaller, more digestible chunks, typically with navigation controls to move between pages. This improves loading times and mak",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:pagy",
+      "topic_slug": "pagy",
+      "node_id": "BFmYL2UyuCXdFCeMKtDZk",
+      "title": "Pagy",
+      "description": "Pagy is a gem in Ruby on Rails that simplifies the implementation of pagination in your web applications. It provides a fast and flexible way to divide large datasets into smaller, more manageable pages, improving user experience and server performance. Pagy focuses on efficiency and minimal memory usage, offering customizable templates and a variety of features to suit different pagination needs.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Pagy",
+          "url": "https://ddnexus.github.io/pagy/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "pagy",
+          "url": "https://github.com/ddnexus/pagy"
+        },
+        {
+          "raw_type": "article",
+          "title": "A step-by-step guide to paginate your Rails app with Pagy gem",
+          "url": "https://medium.com/@barrosgiovanni1/a-step-by-step-guide-to-paginate-your-rails-app-with-pagy-gem-d177c42a43a6"
+        },
+        {
+          "raw_type": "video",
+          "title": "Pagy Gem with Turbo for Easy Infinite Scrolling | Ruby on Rails 7 Tutorial",
+          "url": "https://www.youtube.com/watch?v=4nrmf5KfD8Y"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:partials",
+      "topic_slug": "partials",
+      "node_id": "9qNdqb_Y95_Hjm-7GYA-o",
+      "title": "Partials",
+      "description": "Partials are reusable snippets of view code that can be rendered within other views. They help to keep your views organized and DRY (Don't Repeat Yourself) by extracting common UI elements or logic into separate files. This allows you to easily update and maintain these elements across your application without duplicating code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Partials",
+          "url": "https://guides.rubyonrails.org/action_view_overview.html#partials"
+        },
+        {
+          "raw_type": "article",
+          "title": "An Intro to Partials and Helpers in Ruby on Rails",
+          "url": "https://staceymck.medium.com/an-intro-to-partials-and-helpers-in-ruby-on-rails-10d62d85da24"
+        },
+        {
+          "raw_type": "video",
+          "title": "Rails Tutorial | Working with View Partials in Ruby on Rails",
+          "url": "https://www.youtube.com/watch?v=YIJwb0rQS74"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:phlex",
+      "topic_slug": "phlex",
+      "node_id": "G3HHrElODg0Js0WY-VYkL",
+      "title": "Phlex",
+      "description": "Phlex is a Ruby library for building HTML views with a Ruby syntax. It offers a component-based approach, allowing developers to define reusable UI elements as Ruby classes. This approach aims to provide a more structured and maintainable way to create dynamic web pages compared to traditional ERB templates.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Phlex",
+          "url": "https://www.phlex.fun/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "phlex-rails",
+          "url": "https://github.com/yippee-fun/phlex-rails"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby On rails Using phlex gem",
+          "url": "https://medium.com/@ashwinborkar1997/ruby-on-rails-using-phlex-gem-5603ab87a4bf"
+        },
+        {
+          "raw_type": "video",
+          "title": "Components with Phlex in Rails",
+          "url": "https://www.youtube.com/watch?v=l4bQSfqZZfQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:plugins--engines",
+      "topic_slug": "plugins--engines",
+      "node_id": "nh6d9XbtvwBUtVDmEk0i_",
+      "title": "Plugins & Engines",
+      "description": "Plugins and engines in Rails are both ways to package and reuse code, but they serve slightly different purposes. Plugins are typically smaller and used to add specific functionalities or modify existing behavior within a Rails application. Engines, on the other hand, are more self-contained and can act as mini-applications within a larger Rails application, often providing their own models, contr",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "The Basics of Creating Rails Plugins",
+          "url": "https://guides.rubyonrails.org/plugins.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting Started with Engines",
+          "url": "https://guides.rubyonrails.org/engines.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building Ruby on Rails engines",
+          "url": "https://www.honeybadger.io/blog/rails-engines/"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Guide to Rails Engines in the Wild: Real World Examples of Rails Engines in Action",
+          "url": "https://www.toptal.com/developers/ruby-on-rails/rails-engines-in-the-wild-real-world-examples-of-rails-engines-in-action"
+        },
+        {
+          "raw_type": "video",
+          "title": "Creating A Private Ruby Gem for Ruby on Rails 7",
+          "url": "https://www.youtube.com/watch?v=H4j2vUwZgEk"
+        },
+        {
+          "raw_type": "video",
+          "title": "Your First Rails Engine | Ruby on Rails 7 Gem Tutorial",
+          "url": "http://youtube.com/watch?v=7AVb4mJuIWA"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:plugins",
+      "topic_slug": "plugins",
+      "node_id": "nh6d9XbtvwBUtVDmEk0i_",
+      "title": "Plugins",
+      "description": "Plugins are self-contained packages of code that extend or modify the functionality of a Rails application. They provide a way to encapsulate reusable features, such as authentication, authorization, or payment processing, and easily integrate them into different Rails projects. Plugins can add models, controllers, views, helpers, and even modify the Rails framework itself.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:postgresql",
+      "topic_slug": "postgresql",
+      "node_id": "TRTR2JyyfqICTm3kbyIgu",
+      "title": "PostgreSQL in Rails",
+      "description": "PostgreSQL is an open-source, object-relational database system known for its reliability, feature robustness, and adherence to standards. It's a popular choice for Rails applications due to its advanced data types, support for complex queries, and strong community support. Rails seamlessly integrates with PostgreSQL through Active Record, providing an abstraction layer for database interactions.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated PostgreSQL Roadmap",
+          "url": "https://roadmap.sh/postgresql-dba"
+        },
+        {
+          "raw_type": "official",
+          "title": "Configuring a PostgreSQL Database",
+          "url": "https://guides.rubyonrails.org/configuring.html#configuring-a-postgresql-database"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Set Up Ruby on Rails with Postgres",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-set-up-ruby-on-rails-with-postgres"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting started with Ruby on Rails and Postgres on Supabase",
+          "url": "https://supabase.com/blog/ruby-on-rails-postgres"
+        },
+        {
+          "raw_type": "video",
+          "title": "How To Use PostgreSQL with Your Ruby on Rails Application",
+          "url": "https://www.youtube.com/watch?v=lLiEiBzEct8"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:pry",
+      "topic_slug": "pry",
+      "node_id": "eyeSECF8-wu8EMr5gD7VJ",
+      "title": "Pry",
+      "description": "Pry is a powerful Ruby runtime developer console and alternative to `irb`. It allows you to pause your code's execution at any point, inspect variables, step through code line by line, and even modify your code on the fly. This makes it an invaluable tool for understanding and debugging Ruby and Rails applications.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "pry",
+          "url": "https://github.com/pry/pry"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to use Pry to debug Ruby apps",
+          "url": "https://www.honeybadger.io/blog/debugging-ruby-with-pry/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Debugging Ruby Code with Pry",
+          "url": "https://laflamablanc.medium.com/debugging-ruby-code-with-pry-a0bf1f5e97ca"
+        },
+        {
+          "raw_type": "video",
+          "title": "Pry Open Your Rails 7 Code Debug Like a Pro",
+          "url": "https://www.youtube.com/watch?v=yMdV0tpra7c"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ruby on Rails - Railscasts #280 Pry With Rails",
+          "url": "https://www.youtube.com/watch?v=KfFf2-KJNTU"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:public",
+      "topic_slug": "public",
+      "node_id": "rHzhzrwsguJx3Hg5szucY",
+      "title": "Public Directory",
+      "description": "The `public` directory in a Ruby on Rails application serves as the root directory for all static assets that are directly accessible by web browsers. It holds files like HTML, CSS, JavaScript, images, and other media that don't require any processing or compilation by Rails before being served to the user. These files are served directly by the web server (like Nginx or Apache) without Rails inte",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:pundit",
+      "topic_slug": "pundit",
+      "node_id": "dTU2RPkJcZaPRuSHPod71",
+      "title": "Pundit",
+      "description": "Pundit is a Ruby gem that provides a straightforward way to implement authorization in your Ruby on Rails applications. It focuses on defining authorization rules using plain Ruby objects (policies) that determine whether a given user is allowed to perform a specific action on a particular resource. This approach promotes clean, maintainable, and testable authorization logic within your applicatio",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "pundit",
+          "url": "https://github.com/varvet/pundit"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Authorization in Rails with Pundit",
+          "url": "https://www.shakacode.com/blog/mastering-authorization-in-rails-with-pundit/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Pundit Gem For Authorization In Ruby On Rails 7",
+          "url": "https://www.youtube.com/watch?v=SodfIjgcaW8"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ruby on Rails #49 gem Pundit for Authorization - Complete Guide",
+          "url": "https://www.youtube.com/watch?v=xxkx57-vbQI"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:query-optimization",
+      "topic_slug": "query-optimization",
+      "node_id": "8EwNQFoZbzf5WtvP4OA4G",
+      "title": "Query Optimization",
+      "description": "Query optimization focuses on improving the efficiency of database queries to reduce execution time and resource consumption. This involves techniques like eager loading to minimize the number of queries, using indexes to speed up data retrieval, and writing efficient query conditions to filter data effectively. The goal is to retrieve the necessary data as quickly as possible, improving the overa",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Eager Loading Associations",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html#eager-loading-associations"
+        },
+        {
+          "raw_type": "article",
+          "title": "Optimizing database queries in Rails with Active Record",
+          "url": "https://medium.com/@arnaudetienne/optimizing-database-queries-in-rails-with-active-record-b84295866af0"
+        },
+        {
+          "raw_type": "article",
+          "title": "Active Record Query Optimization Tips: Boost Your Ruby on Rails Application Performance",
+          "url": "https://kinsta.com/blog/active-record-query-optimization/"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:rails--frontend",
+      "topic_slug": "rails--frontend",
+      "node_id": "jKADWbGXSL5yGzsLqSJG9",
+      "title": "Rails & Frontend",
+      "description": "Rails, while primarily a backend framework, works seamlessly with various frontend technologies to build complete web applications. You can use Rails to handle the server-side logic, data management, and API endpoints, while employing frontend frameworks like React, Vue.js, or even Hotwire for the user interface and interactive elements. Hotwire, in particular, allows you to build modern, reactive",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:rails-command-line",
+      "topic_slug": "rails-command-line",
+      "node_id": "DyrNnHUm4Ws5Ku7AlVnWg",
+      "title": "Rails Command Line",
+      "description": "The Rails command line interface (CLI), often accessed via the `rails` command, is a powerful tool for creating, managing, and interacting with Rails applications. It provides a suite of commands to generate code, run tests, manage databases, and perform various other development tasks, streamlining the development process and reducing boilerplate code.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:rails-generators",
+      "topic_slug": "rails-generators",
+      "node_id": "okQl2NFVACbZJPgh3sD5I",
+      "title": "Rails Generators",
+      "description": "Rails Generators are powerful tools built into the Rails framework that automate the creation of files and directories needed for various parts of your application. They streamline development by providing pre-built templates for models, controllers, views, migrations, and more, reducing boilerplate code and ensuring consistency across your project. Using generators helps you quickly scaffold out ",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:rails-internationalization",
+      "topic_slug": "rails-internationalization",
+      "node_id": "IjEF4T0vuFNUlA9O0wOFw",
+      "title": "Rails Internationalization",
+      "description": "Internationalization (I18n) is the process of designing and developing applications that can be adapted to various languages and regions without engineering changes. It involves extracting text and other locale-specific data from the application's code and storing it in separate files, allowing the application to be translated and formatted for different locales. This enables users to interact wit",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Rails Internationalization (I18n) API",
+          "url": "https://guides.rubyonrails.org/i18n.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails internationalization (I18n): Tutorial on Rails locales & more",
+          "url": "https://lokalise.com/blog/rails-i18n/"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Comprehensive Guide to Rails Internationalization (i18n)",
+          "url": "https://www.honeybadger.io/blog/rails-i18n/"
+        },
+        {
+          "raw_type": "article",
+          "title": "7 Key Best Practices for Rails Internationalization",
+          "url": "https://phrase.com/blog/posts/rails-i18n-best-practices/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Intro To I18n Localizations With Ruby On Rails 7",
+          "url": "https://www.youtube.com/watch?v=gkaxM1AqBss"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:rails-logger",
+      "topic_slug": "rails-logger",
+      "node_id": "PDxKuQbWhbg0_AewOw9Mm",
+      "title": "Rails Logger",
+      "description": "The Rails Logger is a built-in component within Ruby on Rails that provides a standardized way to record events and messages during the execution of an application. It allows developers to track application behavior, diagnose issues, and monitor performance by writing information to various output destinations, such as files or the console. The logger offers different severity levels (e.g., debug,",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "The Logger",
+          "url": "https://guides.rubyonrails.org/debugging_rails_applications.html#the-logger"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Start Logging With Ruby on Rails",
+          "url": "https://betterstack.com/community/guides/logging/how-to-start-logging-with-ruby-on-rails/#step-6-configuring-logger"
+        },
+        {
+          "raw_type": "video",
+          "title": "Debugging And Logging | Intro To Ruby On Rails 7 Part 24",
+          "url": "https://www.youtube.com/watch?v=9rDK2rbm6DI"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:raw-sql",
+      "topic_slug": "raw-sql",
+      "node_id": "wszshSvhqtfN829f5InuL",
+      "title": "Raw SQL in Active Record",
+      "description": "Active Record typically provides an abstraction layer for database interactions, allowing you to work with objects and methods instead of writing SQL queries directly. However, sometimes you need more control or access to database-specific features. Raw SQL allows you to bypass Active Record's abstraction and execute SQL queries directly against your database, giving you the flexibility to perform",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated SQL Roadmap",
+          "url": "https://roadmap.sh/sql"
+        },
+        {
+          "raw_type": "official",
+          "title": "Finding by SQL",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html#finding-by-sql"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:redirects",
+      "topic_slug": "redirects",
+      "node_id": "pSdqdRPlLfmIl5X9XF76r",
+      "title": "Redirects",
+      "description": "Redirects in web applications are mechanisms to automatically forward a user from one URL to another. This is commonly used for various reasons, such as moving content to a new location, handling outdated URLs, or guiding users through a specific workflow. In Rails, redirects are implemented within controllers to send an HTTP response that instructs the browser to navigate to a different URL.",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:rendering-views",
+      "topic_slug": "rendering-views",
+      "node_id": "WJmDAayQ6SMNuUWsMzhnJ",
+      "title": "Rendering Views",
+      "description": "Rendering views in Ruby on Rails involves generating HTML (or other formats) to be displayed to the user. This process typically uses templates written in ERB or other templating languages, combining data from the controller with the template to produce the final output. Rails provides mechanisms for rendering different types of content, including partials, layouts, and collections, offering flexi",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Layouts and Rendering in Rails",
+          "url": "https://guides.rubyonrails.org/layouts_and_rendering.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:request-reponse-flow",
+      "topic_slug": "request-reponse-flow",
+      "node_id": "eYaayU92hNbri3YTdSAbG",
+      "title": "Request-Response Flow in Rails Routing",
+      "description": "The request-response flow in Rails describes how a web application handles incoming requests from users and generates appropriate responses. When a user interacts with a Rails application (e.g., clicks a link or submits a form), the request is first received by the Rails router. The router then analyzes the request and determines which controller and action should handle it. The controller action ",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:restful-routes",
+      "topic_slug": "restful-routes",
+      "node_id": "NB50RuNBT5Oja2Ry6p892",
+      "title": "RESTful Routes",
+      "description": "RESTful routes provide a standardized way to map HTTP verbs (GET, POST, PUT, DELETE) to controller actions, representing Create, Read, Update, and Delete (CRUD) operations on resources. This convention promotes a clean and predictable URL structure, making applications easier to understand and maintain by aligning routes with the underlying data model. By following REST principles, developers can ",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:routing-fundamentals",
+      "topic_slug": "routing-fundamentals",
+      "node_id": "ftFF3oFfqpKvjQhXk3bWw",
+      "title": "Routing Fundamentals",
+      "description": "Routing in a web application is the process of mapping incoming HTTP requests (like GET or POST requests) to specific controller actions. It acts as a traffic director, examining the URL and other request parameters to determine which part of the application should handle the request and generate a response. This mechanism allows you to define how your application responds to different URLs, creat",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:rspec",
+      "topic_slug": "rspec",
+      "node_id": "Xs9gIVdO9TuZabUapgubJ",
+      "title": "RSpec",
+      "description": "RSpec is a testing framework for Ruby. It provides a domain-specific language (DSL) for writing tests that are easy to read and understand. RSpec focuses on behavior-driven development (BDD), allowing developers to describe the desired behavior of their code in a clear and concise manner, leading to more maintainable and reliable applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "RSpec",
+          "url": "https://rspec.info/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "rspec-rails",
+          "url": "https://github.com/rspec/rspec-rails"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby on Rails Testing with RSpec: Writing your First Tests",
+          "url": "https://medium.com/nerd-for-tech/ruby-on-rails-testing-with-rspec-writing-your-first-tests-6330920928fd"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started With Testing In Rails (Using Minitest and RSpec)",
+          "url": "https://medium.com/@ethanryan/getting-started-with-testing-in-rails-using-minitest-and-rspec-113fe1f866a"
+        },
+        {
+          "raw_type": "article",
+          "title": "Minitest vs. RSpec in Rails",
+          "url": "https://www.honeybadger.io/blog/minitest-rspec-rails/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Automated testing with rspec",
+          "url": "https://www.youtube.com/playlist?list=PLS6F722u-R6Ik3fbeLXbSclWkT6Qsp9ng"
+        },
+        {
+          "raw_type": "video",
+          "title": "Test Driven RSpec",
+          "url": "https://www.youtube.com/playlist?list=PLr442xinba86s9cCWxoIH_xq5UE9Wwo4Z"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:scopes",
+      "topic_slug": "scopes",
+      "node_id": "x4MkSkbLK7aHWUoKuq1j4",
+      "title": "Scopes",
+      "description": "Scopes in Rails models are pre-defined database queries that you can reuse throughout your application. They allow you to encapsulate common query logic, making your code cleaner, more readable, and easier to maintain. Scopes can be simple, like finding all active users, or more complex, involving joins and conditions. They are defined within the model and can be chained together to create more sp",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Scopes",
+          "url": "https://guides.rubyonrails.org/active_record_querying.html#scopes"
+        },
+        {
+          "raw_type": "article",
+          "title": "Scopes",
+          "url": "https://www.theodinproject.com/lessons/ruby-on-rails-active-record-queries#scopes"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use Scopes in Ruby on Rails",
+          "url": "https://www.rubyguides.com/2019/10/scopes-in-ruby-on-rails/"
+        },
+        {
+          "raw_type": "article",
+          "title": "ActiveRecord Scopes: Ruby On Rails Best Practices",
+          "url": "https://medium.com/nyc-ruby-on-rails/mastering-activerecord-scopes-5d7082122c0d"
+        },
+        {
+          "raw_type": "video",
+          "title": "Taking A Look At Scopes In Ruby On Rails 7",
+          "url": "https://www.youtube.com/watch?v=nzgf1LRqxvg"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to use Scopes in Ruby on Rails",
+          "url": "https://www.youtube.com/watch?v=_LerTMQW76w"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:security",
+      "topic_slug": "security",
+      "node_id": "YyBmT5CzL-lspStC8aZ_t",
+      "title": "Security",
+      "description": "Security in web applications involves protecting data and functionality from unauthorized access, use, disclosure, disruption, modification, or destruction. It encompasses various practices and techniques to ensure confidentiality, integrity, and availability of the application and its data. This includes addressing vulnerabilities like cross-site scripting (XSS), SQL injection, and authentication",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Securing Rails Applications",
+          "url": "https://guides.rubyonrails.org/security.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Complete Guide to Ruby on Rails Security Measures \ud83d\udee1\ufe0f",
+          "url": "https://railsdrop.com/2025/05/11/a-complete-guide-to-ruby-on-rails-security-measures/"
+        },
+        {
+          "raw_type": "article",
+          "title": "The inadequate guide to Rails security",
+          "url": "https://www.honeybadger.io/blog/ruby-security-tutorial-and-rails-security-guide/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Essential Security Best Practices for Ruby on Rails",
+          "url": "https://dev.to/harsh_u115/essential-security-best-practices-for-ruby-on-rails-4d68"
+        },
+        {
+          "raw_type": "article",
+          "title": "Securing Ruby on Rails Applications: Best Practices",
+          "url": "https://medium.com/@vaishnaviganeshkar15/securing-ruby-on-rails-applications-best-practices-787f2cc03f02"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:sessions",
+      "topic_slug": "sessions",
+      "node_id": "mJ5wZPg770fDlJ-V9x75t",
+      "title": "Sessions in Rails Controllers",
+      "description": "Beyond processing requests and rendering views, controllers also provide a mechanism for maintaining user sessions. Sessions allow you to store data related to a specific user across multiple requests, enabling features like login persistence, shopping carts, and personalized experiences. This data is typically stored on the server and associated with a unique session ID that is sent to the client",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Session",
+          "url": "https://guides.rubyonrails.org/action_controller_overview.html#session"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Sessions and Cookies in Rails: A Comprehensive Guide",
+          "url": "https://medium.com/@carriekarft/mastering-sessions-and-cookies-in-rails-a-comprehensive-guide-0446422d7b22"
+        },
+        {
+          "raw_type": "article",
+          "title": "Cookies & Sessions in Rails",
+          "url": "https://dev.to/matthewkohn/cookies-sessions-in-rails-54b8"
+        },
+        {
+          "raw_type": "video",
+          "title": "Rails Cookies and Session",
+          "url": "https://www.youtube.com/watch?v=iOR-9fMMmLM"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:setting-up-ruby-on-rails",
+      "topic_slug": "setting-up-ruby-on-rails",
+      "node_id": "4nyrB8-xmd35S6ZNjPX8d",
+      "title": "Setting up Ruby on Rails",
+      "description": "Setting up Ruby on Rails involves installing the necessary software and configuring your environment to develop and run Rails applications. This typically includes installing Ruby, the Rails gem, a database system (like PostgreSQL or MySQL), and any other dependencies required for your project. Once these components are installed, you can create a new Rails application using the `rails new` comman",
+      "resources": []
+    },
+    {
+      "skill_id": "ruby-on-rails:sqlite",
+      "topic_slug": "sqlite",
+      "node_id": "J7eIUewbviWck-lVJ1hre",
+      "title": "SQLite in Rails",
+      "description": "SQLite is a lightweight, file-based database engine. It requires no separate server process and stores the entire database in a single file on disk. This makes it a convenient choice for development, testing, and small-scale applications where a full-fledged database server isn't necessary. Rails supports SQLite out of the box, making it easy to set up and use.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Configuring an SQLite3 Database",
+          "url": "https://guides.rubyonrails.org/configuring.html#configuring-an-sqlite3-database"
+        },
+        {
+          "raw_type": "official",
+          "title": "SQLite",
+          "url": "https://www.sqlite.org/index.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "SQLite in Production? Rails 8 Made Me a Believer",
+          "url": "https://bhavyansh001.medium.com/sqlite-in-production-rails-8-made-me-a-believer-28a621db864a"
+        },
+        {
+          "raw_type": "article",
+          "title": "Configuring Rails Applications",
+          "url": "https://edgeguides.rubyonrails.org/configuring.html#locations-for-initialization-code"
+        },
+        {
+          "raw_type": "video",
+          "title": "Stephen Margheim - SQLite on Rails: Supercharging the One-Person Framework - Rails World 2024",
+          "url": "https://www.youtube.com/watch?v=wFUy120Fts8"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:storage",
+      "topic_slug": "storage",
+      "node_id": "JyARA-iMMw2uEuB_ljFrs",
+      "title": "Storage in Ruby on Rails",
+      "description": "Rails itself doesn't directly manage file storage; instead, it relies on external services or libraries to handle the actual saving and retrieval of these files. This allows you to store files locally on your server, or more commonly, in cloud storage services like Amazon S3, Google Cloud Storage, or Azure Blob Storage. These services offer scalability, reliability, and often lower costs compared ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Storage Overview",
+          "url": "https://guides.rubyonrails.org/active_storage_overview.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using Active Storage for Ruby on Rails",
+          "url": "https://medium.com/@bwrosen20/using-active-storage-for-ruby-on-rails-a84991e45d93"
+        },
+        {
+          "raw_type": "video",
+          "title": "Active Storage For File Uploads | Ruby on Rails 7 Tutorial",
+          "url": "https://www.youtube.com/watch?v=jjjAJeWJ2xE"
+        },
+        {
+          "raw_type": "video",
+          "title": "Active Storage in Ruby on Rails 5.2",
+          "url": "https://www.youtube.com/playlist?list=PL3mtAHT_eRexVRWcjcqgfTvYQD2scoTlk"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:strong-parameters",
+      "topic_slug": "strong-parameters",
+      "node_id": "cUYKqkqvg2u3Z4KOtAE9m",
+      "title": "Strong Parameters",
+      "description": "Controller parameters are the data sent from a client (like a web browser) to your Rails application, typically through forms or API requests. These parameters are accessible within your controller actions. Strong parameters are a security feature in Rails that helps protect your application from mass assignment vulnerabilities. They work by requiring you to explicitly permit which parameters are ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Parameters",
+          "url": "https://guides.rubyonrails.org/action_controller_overview.html#parameters"
+        },
+        {
+          "raw_type": "official",
+          "title": "Strong Parameters",
+          "url": "https://guides.rubyonrails.org/action_controller_overview.html#strong-parameters"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails Params: Where do they come from?",
+          "url": "https://medium.com/launch-school/params-in-rails-where-do-they-come-from-b172cdb46eb4"
+        },
+        {
+          "raw_type": "article",
+          "title": "How the Rails params hash works",
+          "url": "https://www.honeybadger.io/blog/how-the-rails-params-hash-works/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding Rails Params & How to Use Them",
+          "url": "https://www.youtube.com/watch?v=01xF2U2oA2M"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ruby On Rails - Strong Parameters in Your Controllers",
+          "url": "https://www.youtube.com/watch?v=Z8IrqXK86UM"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:testing",
+      "topic_slug": "testing",
+      "node_id": "qtzX0ZzmWjs-CkHQDhsD1",
+      "title": "Testing",
+      "description": "Testing in software development involves verifying that individual units of code (unit tests) and the application as a whole (integration and system tests) function as expected. It helps ensure code quality, prevents regressions, and facilitates easier refactoring by providing a safety net to catch errors early in the development process. Different types of tests, such as unit, integration, and sy",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Testing Rails Applications",
+          "url": "https://guides.rubyonrails.org/testing.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "A journey towards better Ruby on Rails testing practices",
+          "url": "https://thoughtbot.com/blog/a-journey-towards-better-testing-practices"
+        },
+        {
+          "raw_type": "article",
+          "title": "What are all the Rails testing tools and how do I use them?",
+          "url": "https://www.codewithjason.com/rails-testing-tools/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Testing in Ruby on Rails Applications (Unit, Integration, & Functional Tests)",
+          "url": "https://www.youtube.com/watch?v=eXmA1vWGDfs"
+        },
+        {
+          "raw_type": "video",
+          "title": "Testing A Rails App That Uses Devise Sessions | Ruby On Rails 7 Tutorial",
+          "url": "https://www.youtube.com/watch?v=PtGjHGdJQrQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:transactions",
+      "topic_slug": "transactions",
+      "node_id": "yrW99MwJNCBMinYUXm1B_",
+      "title": "Transactions",
+      "description": "Transactions are a sequence of operations performed as a single logical unit of work. They ensure data integrity by treating a series of database operations as an \"all or nothing\" proposition. If any operation within the transaction fails, the entire transaction is rolled back, reverting the database to its original state before the transaction began. This prevents partial updates and maintains co",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Record Transactions",
+          "url": "https://api.rubyonrails.org/classes/ActiveRecord/Transactions/ClassMethods.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Is A Transaction?",
+          "url": "https://www.honeybadger.io/blog/database-transactions-rails-activerecord/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Rails transactions: The Complete Guide",
+          "url": "https://medium.com/@kristenrogers.kr75/rails-transactions-the-complete-guide-7b5c00c604fc"
+        },
+        {
+          "raw_type": "article",
+          "title": "107.ActiveRecord Transactions in depth",
+          "url": "https://courses.bigbinaryacademy.com/learn-rubyonrails/activerecord-transactions-in-depth/"
+        },
+        {
+          "raw_type": "article",
+          "title": "5 Tips to Design Ruby on Rails Transactions the Right Way",
+          "url": "https://blog.appsignal.com/2022/03/30/5-tips-to-design-ruby-on-rails-transactions-the-right-way.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:validations",
+      "topic_slug": "validations",
+      "node_id": "UD5BpSz2CRK1_Sl2z67AL",
+      "title": "Validations",
+      "description": "Validations are rules that you define for your models to ensure that only valid data is saved into your database. They help maintain data integrity by checking if attributes meet specific criteria, such as presence, format, uniqueness, or custom conditions, before a record is created or updated. If a validation fails, the record will not be saved, and an error message will be added to the object's",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Active Record Validations",
+          "url": "https://guides.rubyonrails.org/active_record_validations.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ruby on Rails - Validation",
+          "url": "https://www.tutorialspoint.com/ruby-on-rails/rails-validation.htm"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Deep Dive into Active Record Validations",
+          "url": "https://www.honeybadger.io/blog/active-record-validations/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Active Record Validations For Beginners | Ruby On Rails 7 Tutorial",
+          "url": "https://www.youtube.com/watch?v=gLRm5UajMiE"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding Ruby on Rails ActiveRecord Validations",
+          "url": "https://www.youtube.com/watch?v=c3hoXWO_6ao"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:viewcomponent",
+      "topic_slug": "viewcomponent",
+      "node_id": "e7tcUrtjEcFvQNL6PCYE1",
+      "title": "ViewComponent",
+      "description": "ViewComponent is a framework for building reusable, testable & encapsulated UI components in Ruby on Rails. It encourages a component-based architecture within your Rails application, allowing you to define UI elements as Ruby classes with associated templates, similar to components in frameworks like React or Vue. This approach promotes better organization, maintainability, and reusability of you",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "ViewComponent",
+          "url": "https://viewcomponent.org/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "view_component",
+          "url": "https://github.com/ViewComponent/view_component"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building reusable UI components in Rails with ViewComponent",
+          "url": "https://www.honeybadger.io/blog/rails-viewcomponent/"
+        },
+        {
+          "raw_type": "video",
+          "title": "ViewComponent Crash Course with Ruby on Rails",
+          "url": "https://www.youtube.com/watch?v=Mc19pB784Us"
+        },
+        {
+          "raw_type": "video",
+          "title": "Intro To View Components In Ruby On Rails 7",
+          "url": "https://www.youtube.com/watch?v=z077hg7Zzyk"
+        }
+      ]
+    },
+    {
+      "skill_id": "ruby-on-rails:why-web-frameworks",
+      "topic_slug": "why-web-frameworks",
+      "node_id": "VCufea-9vs4DfzB815IT5",
+      "title": "Why Web Frameworks?",
+      "description": "Web frameworks provide a structured and efficient way to build web applications by offering pre-built components, tools, and conventions. They handle common tasks like routing, database interaction, and templating, allowing developers to focus on the unique features of their application rather than reinventing the wheel. This leads to faster development, more maintainable code, and improved securi",
+      "resources": []
+    }
+  ]
+}

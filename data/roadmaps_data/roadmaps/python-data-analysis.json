@@ -1,0 +1,2537 @@
+{
+  "roadmap": "python-data-analysis",
+  "topic_count": 113,
+  "topics": [
+    {
+      "skill_id": "python-data-analysis:airflow",
+      "topic_slug": "airflow",
+      "node_id": "LERo7-ggtfZ-KZyNdBwt6",
+      "title": "Airflow",
+      "description": "Apache Airflow is an open-source platform for authoring, scheduling, and monitoring data pipelines. Pipelines are defined as DAGs (Directed Acyclic Graphs) in Python, where each node is a task and edges define dependencies. Airflow provides a web UI for monitoring runs, retrying failures, and tracking execution history. It is the standard orchestration tool for production Python data pipelines.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Airflow 101: Building Your First Workflow",
+          "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/fundamentals.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to Apache Airflow",
+          "url": "https://www.dataquest.io/blog/introduction-to-apache-airflow/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Airflow Tutorial For Beginners (2026)",
+          "url": "https://www.youtube.com/watch?v=IiczxlbQb8s"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:altair",
+      "topic_slug": "altair",
+      "node_id": "9vgD1Sd5B3iRMPLrfMG0C",
+      "title": "Altair",
+      "description": "Altair is a declarative statistical visualization library for Python based on the Vega-Lite grammar. Charts are built by binding data columns to visual channels (x, y, color, size) and specifying the mark type. Altair produces interactive charts by default and generates JSON specifications that render in notebooks and web browsers.",
+      "resources": []
+    },
+    {
+      "skill_id": "python-data-analysis:apis-with-requests",
+      "topic_slug": "apis-with-requests",
+      "node_id": "10c4tiBOR68J3qa55LcJS",
+      "title": "APIs with requests",
+      "description": "The `requests` library is the standard Python tool for making HTTP requests. It is used to call REST APIs that return JSON or XML data. A typical workflow involves calling `requests.get(url, params=params)`, checking the response status, and parsing the JSON body with `.json()` before loading it into a DataFrame.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python Requests Module",
+          "url": "https://www.w3schools.com/python/module_requests.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python's Requests Library (Guide)",
+          "url": "https://realpython.com/python-requests/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Master Python Requests In 15 Minutes. Call Any API",
+          "url": "https://www.youtube.com/watch?v=Xnbef8F_Yfc"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:args--kwargs",
+      "topic_slug": "args--kwargs",
+      "node_id": "7ukR74cN6lHbvhs4mFn6R",
+      "title": "args & kwargs",
+      "description": "`*args` allows a function to accept any number of positional arguments as a tuple. `**kwargs` allows any number of keyword arguments as a dictionary. They make functions flexible when the number or names of arguments are not known in advance, and are widely used in Python libraries for passing options through layers of function calls.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Args and Kwargs in Python \u2013 Function Calling Made Easy",
+          "url": "https://towardsdatascience.com/args-and-kwargs-in-python-function-calling-made-easy-acfe736f988a/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python args & kwargs",
+          "url": "https://www.w3schools.com/python/python_args_kwargs.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python *ARGS & **KWARGS are awesome!",
+          "url": "https://www.youtube.com/watch?v=Vh__2V2tXUM"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:arithmetic",
+      "topic_slug": "arithmetic",
+      "node_id": "AAxvIAas2Sdkz9-2uNHXq",
+      "title": "Arithmetic",
+      "description": "Arithmetic operators perform mathematical calculations: `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division), `//` (floor division), `%` (modulo), and `**` (exponentiation). They are used constantly for computing derived columns, normalizing values, and performing aggregations.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python Arithmetic Operators",
+          "url": "https://www.w3schools.com/python/python_operators_arithmetic.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Exponent: 5 Methods for Exponentiation + Applications",
+          "url": "https://roadmap.sh/python/exponent"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Division: Operators, Floor Division, and Examples",
+          "url": "https://roadmap.sh/python/division"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Modulo Operator (%): Complete Guide with Examples",
+          "url": "https://roadmap.sh/python/modulo"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:array-operations",
+      "topic_slug": "array-operations",
+      "node_id": "qOZ-T7zaPjvIT222rSV4o",
+      "title": "Array Operations",
+      "description": "NumPy supports a wide range of array operations: element-wise arithmetic, aggregation functions (`sum`, `mean`, `std`, `min`, `max`), reshaping, stacking, and splitting. These operations are vectorized, meaning they apply to the entire array at once without explicit loops, making them highly efficient.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "NumPy Arithmetic Array Operations",
+          "url": "https://www.programiz.com/python-programming/numpy/basic-array-operations"
+        },
+        {
+          "raw_type": "article",
+          "title": "Doing Math with Arrays",
+          "url": "https://towardsdatascience.com/introducing-numpy-part-4-doing-math-with-arrays-5e77ac595641/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ultimate Guide to NumPy Arrays",
+          "url": "https://www.youtube.com/watch?v=lLRBYKwP8GQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:arrays--ndarray",
+      "topic_slug": "arrays--ndarray",
+      "node_id": "qiUPTXFgfukxlPhnv76jo",
+      "title": "Arrays & ndarray",
+      "description": "The `ndarray` is NumPy's core data structure: a multi-dimensional, homogeneously typed array stored in contiguous memory. It supports element-wise operations, broadcasting, and vectorized computation far faster than Python lists. Understanding ndarray is fundamental to working efficiently with numerical data in Python.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "NumPy: the absolute basics for beginners",
+          "url": "https://numpy.org/doc/stable/user/absolute_beginners.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "numpy.array",
+          "url": "https://numpy.org/doc/stable/reference/generated/numpy.array.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ultimate Guide to NumPy Arrays",
+          "url": "https://www.youtube.com/watch?v=lLRBYKwP8GQ&pp=ygUMbnVtcHkgYXJyYXlz"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:beautifulsoup",
+      "topic_slug": "beautifulsoup",
+      "node_id": "w4K_ffCUbzhGxWyoKsspu",
+      "title": "BeautifulSoup",
+      "description": "BeautifulSoup is a Python library for parsing HTML and XML documents. It provides methods for navigating the document tree, searching for elements by tag, class, or attribute, and extracting text and links. BeautifulSoup is used for web scraping when the target website does not provide an API.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Beautiful Soup Documentation",
+          "url": "https://beautiful-soup-4.readthedocs.io/en/latest/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Beautiful Soup: Build a Web Scraper With Python",
+          "url": "https://realpython.com/beautiful-soup-web-scraper-python/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Web Scraping with Python - Beautiful Soup Crash Course",
+          "url": "https://www.youtube.com/watch?v=XVv6mJpFOb0"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:big-data-tools",
+      "topic_slug": "big-data-tools",
+      "node_id": "GkxSrpOJx-SWvnDkTPcJt",
+      "title": "Big Data Tools",
+      "description": "Big data tools process datasets too large to fit in a single machine's memory using distributed or out-of-core computation. Dask and PySpark are the primary Python tools for scaling beyond what Pandas and NumPy can handle. They provide familiar DataFrame-like APIs while distributing computation across cores or clusters.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "4 Types of Big Data Technologies (+ Management Tools)",
+          "url": "https://www.coursera.org/articles/big-data-technologies"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:booleans",
+      "topic_slug": "booleans",
+      "node_id": "Ze02ApxTvyQqtB3VYv3d4",
+      "title": "Booleans",
+      "description": "Booleans (`bool`) have two values: `True` and `False`. They are the result of comparison and logical operations and are used to control flow and filter data.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Built-in Types",
+          "url": "https://docs.python.org/3/library/stdtypes.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Booleans: Use Truth Values in Your Code",
+          "url": "https://realpython.com/ref/builtin-types/str/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:boxplot",
+      "topic_slug": "boxplot",
+      "node_id": "ij8PMz519gC9WIxlWGD7B",
+      "title": "Boxplot",
+      "description": "A box plot displays the five-number summary of a variable: minimum, Q1, median, Q3, and maximum. The box covers the IQR, a line marks the median, and whiskers extend to the data range. Points beyond the whiskers are plotted individually as potential outliers. Box plots are effective for comparing distributions across groups.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "matplotlib.pyplot.boxplot",
+          "url": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Create and customize boxplots with Python\u2019s Matplotlib",
+          "url": "https://towardsdatascience.com/create-and-customize-boxplots-with-pythons-matplotlib-to-get-lots-of-insights-from-your-data-d561c9883643/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Seaborn boxplot | Box plot explanation, box plot demo, and how to make a box plot in Python seaborn",
+          "url": "https://www.youtube.com/watch?v=Vo-bfTqEFQk"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:built-in-functions",
+      "topic_slug": "built-in-functions",
+      "node_id": "KtV5Jl-hOcUS5L-15BUDD",
+      "title": "Built-in Functions",
+      "description": "Python's built-in functions are available without any imports and cover common operations: `len()`, `sum()`, `min()`, `max()`, `sorted()`, `enumerate()`, `zip()`, `map()`, `filter()`, and others. These functions simplify common tasks and are used constantly alongside data analysis libraries.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Built-in Functions",
+          "url": "https://docs.python.org/3/library/functions.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Master Python Filter: Syntax, Examples, and Best Practices",
+          "url": "https://roadmap.sh/python/filter"
+        },
+        {
+          "raw_type": "video",
+          "title": "All 71 built-in Python functions",
+          "url": "https://www.youtube.com/watch?v=7Qu_KXc7xSI"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:casting-types",
+      "topic_slug": "casting-types",
+      "node_id": "XI8bvhQ3ugezTu60USUG2",
+      "title": "Casting Types",
+      "description": "Casting types in Pandas converts a column from one data type to another using `.astype()`. Common conversions include converting string columns to numeric with `pd.to_numeric()`, converting to datetime with `pd.to_datetime()`, and converting integers to categories. Correct data types are required for accurate calculations and efficient memory use.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.DataFrame.astype",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.astype.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Change Column Type in Pandas DataFrames",
+          "url": "https://towardsdatascience.com/how-to-change-column-type-in-pandas-dataframes-d2a5548888f8/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:categorical-plots",
+      "topic_slug": "categorical-plots",
+      "node_id": "Dj8Ar4-NQ5mQQhNHmQJVy",
+      "title": "Categorical Plots",
+      "description": "Seaborn's categorical plots visualize the relationship between a numeric variable and one or more categorical variables. `sns.boxplot()`, `sns.violinplot()`, `sns.barplot()`, `sns.stripplot()`, and `sns.countplot()` cover the main patterns. They are used to compare distributions or averages across groups.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Visualizing categorical data",
+          "url": "https://seaborn.pydata.org/tutorial/categorical.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:comparison",
+      "topic_slug": "comparison",
+      "node_id": "Md0yXC3JTH56Wky5jA8Fk",
+      "title": "Comparison",
+      "description": "Comparison operators evaluate the relationship between two values and return a boolean. They include `==`, `!=`, `<`, `>`, `<=`, and `>=`. They form the building blocks of filtering conditions applied to DataFrames and arrays.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python Comparison Operators",
+          "url": "https://www.w3schools.com/python/gloss_python_comparison_operators.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Comparison Operators in Python",
+          "url": "https://www.youtube.com/watch?v=6ZQtBK-dM9c"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:conda",
+      "topic_slug": "conda",
+      "node_id": "j1jq5_64lBuYQQjJWKIuI",
+      "title": "conda",
+      "description": "conda is an open-source package and environment manager included with the Anaconda and Miniconda distributions. It manages both Python packages and non-Python dependencies, making it well suited for scientific computing. conda environments isolate project dependencies and can be exported to `environment.yml` for reproducibility.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Anaconda",
+          "url": "https://www.anaconda.com/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Anaconda (Conda) for Python - What & Why?",
+          "url": "https://www.youtube.com/watch?v=23aQdrS58e0"
+        },
+        {
+          "raw_type": "video",
+          "title": "Master the basics of Conda environments in Python",
+          "url": "https://www.youtube.com/watch?v=1VVCd0eSkYc"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:conditionals",
+      "topic_slug": "conditionals",
+      "node_id": "NP1kjSk0ujU0Gx-ajNHlR",
+      "title": "Conditionals",
+      "description": "Conditionals execute different code paths based on whether a condition is true. Python uses `if`, `elif`, and `else` for this. Python 3.10 introduced `match/case`, a structural pattern matching statement that cleanly handles multiple specific value checks as an alternative to long `elif` chains. They appear in custom functions applied to DataFrames, in filtering logic, and in branching pipeline co",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Conditional Statements in Python",
+          "url": "https://realpython.com/python-conditional-statements/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Switch Statement 101: Match-case and alternatives",
+          "url": "https://roadmap.sh/python/switch"
+        },
+        {
+          "raw_type": "video",
+          "title": "Control Flow in Python - If Elif Else Statements",
+          "url": "https://www.youtube.com/watch?v=Zp5MuPOtsSY"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:correlation--covariance",
+      "topic_slug": "correlation--covariance",
+      "node_id": "YCMSjDjUCnkz2VPXfLxz5",
+      "title": "Correlation & Covariance",
+      "description": "Correlation measures the strength and direction of the linear relationship between two variables, scaled between \u22121 and +1. Covariance measures the same relationship but is not normalized, making it harder to interpret across variables with different scales. `df.corr()` and `df.cov()` compute these matrices in Pandas, and heatmaps are used to visualize them.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Statistics in Python \u2013 Understanding Variance, Covariance, and Correlation",
+          "url": "https://towardsdatascience.com/statistics-in-python-understanding-variance-covariance-and-correlation-4729b528db01/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Covariance and Correlation in Probability",
+          "url": "https://www.youtube.com/watch?v=QKPdk57y7Ck"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:correlation-matrix",
+      "topic_slug": "correlation-matrix",
+      "node_id": "PHfLEgeEMChsSOSIgMoWH",
+      "title": "Correlation Matrix",
+      "description": "A correlation matrix shows the pairwise correlation coefficients between all numeric columns in a dataset. It is computed with `df.corr()` and typically visualized as a heatmap using Seaborn. It is a key EDA tool for identifying which features are strongly related, which helps with feature selection and multicollinearity detection.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Correlation Matrix, Demystified",
+          "url": "https://medium.com/data-science/correlation-matrix-demystified-3ae3405c86c1"
+        },
+        {
+          "raw_type": "article",
+          "title": "Data Science - Statistics Correlation Matrix",
+          "url": "https://www.w3schools.com/datascience/ds_stat_correlation_matrix.asp"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:cross-tabulation",
+      "topic_slug": "cross-tabulation",
+      "node_id": "7XHYCVpUpvwAtaUBjTa4O",
+      "title": "Cross-tabulation",
+      "description": "Cross-tabulation (crosstab) counts the frequency of combinations of values across two or more categorical variables. `pd.crosstab()` produces a table of frequencies or proportions. It is used to examine relationships between categorical variables, such as how customer segments differ across product categories.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.crosstab",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.crosstab.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Power of Crosstab Function in Pandas",
+          "url": "https://medium.com/geekculture/the-power-of-crosstab-function-in-pandas-for-data-analysis-and-visualization-6c085c269fcd"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python Pandas Tutorial 13. Crosstab",
+          "url": "https://www.youtube.com/watch?v=I_kUj-MfYys"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:csv",
+      "topic_slug": "csv",
+      "node_id": "nDUOJPCEzkCxX8B63HBP3",
+      "title": "CSV",
+      "description": "CSV (Comma-Separated Values) is the most common format for tabular data exchange. `pd.read_csv()` loads a CSV file into a DataFrame and accepts dozens of parameters for handling separators, missing values, date parsing, and data types. CSV files are human-readable but lack type information, so columns often need type correction after loading.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.read_csv",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas Read CSV",
+          "url": "https://www.w3schools.com/python/pandas/pandas_csv.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Read a CSV file into a Pandas DataFrame",
+          "url": "https://www.youtube.com/watch?v=4YI9z1qUpew"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:customizing-plots",
+      "topic_slug": "customizing-plots",
+      "node_id": "JTYST4p4O9RQbCzxsoQhA",
+      "title": "Customizing Plots",
+      "description": "Matplotlib allows extensive customization: titles with `set_title()`, axis labels with `set_xlabel()` / `set_ylabel()`, tick formatting, color palettes, line styles, font sizes, legends, and annotations. Customizing plots ensures they communicate clearly and meet the standards required for reports and presentations.",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Advanced Matplotlib: Design & Customize Visualizations",
+          "url": "https://www.coursera.org/learn/advanced-matplotlib-design-customize-visualizations"
+        },
+        {
+          "raw_type": "article",
+          "title": "Customizing Plots",
+          "url": "https://apxml.com/courses/intermediate-python-programming-ml/chapter-4-data-visualization-matplotlib-seaborn/matplotlib-customization"
+        },
+        {
+          "raw_type": "article",
+          "title": "3 Tricks to Prettify Matplotlib Plots",
+          "url": "https://towardsdatascience.com/3-tricks-to-prettify-matplotlib-plots-d0a73b861c09/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Matplotlib customization is easy! \ud83c\udfa8",
+          "url": "https://www.youtube.com/watch?v=hunq_UOdmoo"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:customizing-plots",
+      "topic_slug": "customizing-plots",
+      "node_id": "j4UHICw-niFv1RRlC-vk1",
+      "title": "Customizing Plots",
+      "description": "Seaborn plots are customized through function parameters (palette, hue, size, style) and by accessing the underlying Matplotlib axes after creation. `sns.set_theme()` and `sns.set_style()` change the global appearance. Seaborn's theming system makes it easy to produce clean, publication-ready charts with minimal code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Controlling figure aesthetics",
+          "url": "https://seaborn.pydata.org/tutorial/aesthetics.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "5 Ways to Transform Your Seaborn Data Visualisations",
+          "url": "https://towardsdatascience.com/5-ways-to-transform-your-seaborn-data-visualisations-1ed2cb484e38/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:dash",
+      "topic_slug": "dash",
+      "node_id": "-dsafcJlA16H_ji0zQvKy",
+      "title": "Dash",
+      "description": "Dash is a Python framework for building analytical web applications, developed by Plotly. It combines Plotly charts with reactive UI components and runs as a Flask web server. Dash provides more control and customization than Streamlit and is better suited for production-grade dashboards with complex interactivity.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Dash in 20 Minutes",
+          "url": "https://dash.plotly.com/tutorial"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introduction to Dash Plotly - Data Visualization in Python",
+          "url": "https://www.youtube.com/watch?v=hSPmj7mK6ng"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:dashboards",
+      "topic_slug": "dashboards",
+      "node_id": "uyhlD_ZBCCd3IvrWZ5mlh",
+      "title": "Dashboards",
+      "description": "Dashboards combine multiple visualizations and controls into a single interface for monitoring and exploring data. Python provides several tools for building data dashboards that can be shared as web applications without requiring frontend development skills. The main options are Streamlit, Dash, and connecting to BI tools like Power BI and Tableau.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated BI Analyst Roadmap",
+          "url": "https://roadmap.sh/bi-analyst"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is a dashboard? A complete overview",
+          "url": "https://www.tableau.com/dashboard/what-is-dashboard"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:dask",
+      "topic_slug": "dask",
+      "node_id": "ApowKoA3C1B8oUr4-sltZ",
+      "title": "Dask",
+      "description": "Dask is a parallel computing library for Python that scales Pandas, NumPy, and Scikit-learn to larger-than-memory datasets. It breaks data into chunks and builds a task graph that is executed lazily. Dask DataFrames mirror the Pandas API, making it easy to adapt existing code for larger datasets without switching ecosystems.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Dask Tutorial",
+          "url": "https://tutorial.dask.org/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Intro to Dask",
+          "url": "https://www.youtube.com/watch?v=z18qjLu-Mw4&list=PLeDTMczuyDQ8S73cdc0PrnTO80kfzpgz2"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:data-cleaning",
+      "topic_slug": "data-cleaning",
+      "node_id": "K53X-NB1S9XXSF6j8q1qu",
+      "title": "Data Cleaning",
+      "description": "Data cleaning identifies and resolves quality issues in raw data so it is accurate and consistent enough for analysis. In Python, cleaning is done primarily with Pandas and string processing tools. Common tasks include handling missing values, fixing data types, standardizing text, removing duplicates, and detecting outliers.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Complete Guide to Data Cleaning in Python",
+          "url": "https://www.dataquest.io/guide/data-cleaning-in-python-tutorial/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas Data Cleaning",
+          "url": "https://www.w3schools.com/python/pandas/pandas_cleaning.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Data Cleaning in Pandas | Python Pandas Tutorials",
+          "url": "https://www.youtube.com/watch?v=bDhvCp3_lYw"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:data-pipelines",
+      "topic_slug": "data-pipelines",
+      "node_id": "f3YL32h2gbU_G8kkNC3Vc",
+      "title": "Data Pipelines",
+      "description": "Data pipelines automate the sequence of steps that move and transform data from sources to destinations. They encapsulate the full workflow \u2014 ingestion, cleaning, transformation, and output \u2014 as code. Orchestration tools like Airflow schedule and monitor these pipelines in production, ensuring they run reliably and their failures are caught and handled.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is a data pipeline?",
+          "url": "https://www.ibm.com/think/topics/data-pipeline"
+        },
+        {
+          "raw_type": "video",
+          "title": "Data Pipelines Explained",
+          "url": "https://www.youtube.com/watch?v=6kEGUCrBEU0"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:defining-functions",
+      "topic_slug": "defining-functions",
+      "node_id": "0XtKHqPS6AfhQvhH5cu7Q",
+      "title": "Defining Functions",
+      "description": "User-defined functions are created with the `def` keyword and encapsulate reusable logic. A function takes parameters, executes a body, and returns a value with `return`. Writing well-scoped functions makes analysis code modular, testable, and easier to apply across a dataset using Pandas' `apply()` method.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python Return Multiple Values: 4 Methods & Examples",
+          "url": "https://roadmap.sh/python/return-multiple-values"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python Functions - Visually Explained",
+          "url": "https://www.youtube.com/watch?v=KW6qncswzHw"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:dictionaries",
+      "topic_slug": "dictionaries",
+      "node_id": "lReYQM-p8rrYcHkaqzbMr",
+      "title": "Dictionaries",
+      "description": "Dictionaries store key-value pairs and provide fast lookup by key. They are used extensively in Python for mapping labels to values, building frequency counts, and configuring function arguments.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Dictionaries",
+          "url": "https://docs.python.org/3/tutorial/datastructures.html#dictionaries"
+        },
+        {
+          "raw_type": "article",
+          "title": "Hashmaps in Python: Master Implementation and Use Cases",
+          "url": "https://roadmap.sh/python/hashmap"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python KeyError Exceptions: Causes and Fixes",
+          "url": "https://roadmap.sh/python/keyerror"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python dictionaries are easy \ud83d\udcd9",
+          "url": "https://www.youtube.com/watch?v=MZZSMaEAC2g"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:distribution-plots",
+      "topic_slug": "distribution-plots",
+      "node_id": "Xq7Ho2kWg5AtZK0G6z02U",
+      "title": "Distribution plots",
+      "description": "Seaborn's distribution plots visualize the distribution of one or two variables. `sns.histplot()` and `sns.kdeplot()` show the shape of a single variable's distribution. `sns.displot()` combines both. `sns.pairplot()` shows pairwise distributions and relationships across all numeric columns in a DataFrame.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Visualizing distributions of data",
+          "url": "https://seaborn.pydata.org/tutorial/distributions.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:dropping-vs-imputing",
+      "topic_slug": "dropping-vs-imputing",
+      "node_id": "xIS0cJ8ui0siBoZJr3-B_",
+      "title": "Dropping vs. Imputing",
+      "description": "When handling missing values, dropping removes rows or columns with `dropna()`, while imputing fills them with a substitute value using `fillna()` or `SimpleImputer` from Scikit-learn. Dropping is appropriate when missing data is rare or random. Imputing is preferred when data is valuable or missing systematically, using the mean, median, mode, or a predicted value.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.DataFrame.fillna",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas DataFrame fillna() Method",
+          "url": "https://www.w3schools.com/python/pandas/ref_df_fillna.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python Pandas Tutorial 5: Handle Missing Data: fillna, dropna, interpolate",
+          "url": "https://www.youtube.com/watch?v=EaGbS7eWSs0"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:duckdb",
+      "topic_slug": "duckdb",
+      "node_id": "a6HiqhsJJijqObw9pNOqb",
+      "title": "DuckDB",
+      "description": "DuckDB is an in-process analytical database designed for fast SQL queries on large datasets stored as files or in memory. It can query CSV, Parquet, and Pandas DataFrames directly with SQL syntax. DuckDB is increasingly used in data analysis workflows as a fast alternative to loading data into a full database system.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "DuckDB Docs",
+          "url": "https://duckdb.org/docs/current/clients/python/overview"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introducing DuckDB",
+          "url": "https://realpython.com/python-duckdb/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Try DuckDB for SQL on Pandas",
+          "url": "https://www.youtube.com/watch?v=8SYQtpSk_OI"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:encoding-categories",
+      "topic_slug": "encoding-categories",
+      "node_id": "1bHv3_acNts_BeOn3l6DF",
+      "title": "Encoding Categories",
+      "description": "Categorical encoding converts text category labels into numerical values that machine learning algorithms can process. Common approaches include label encoding (assigning each category an integer), one-hot encoding (creating binary columns for each category with `pd.get_dummies()`), and ordinal encoding for ordered categories.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Categorical data",
+          "url": "https://pandas.pydata.org/docs/user_guide/categorical.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Encoding Categorical Variables: One-hot vs Dummy Encoding",
+          "url": "https://towardsdatascience.com/encoding-categorical-variables-one-hot-vs-dummy-encoding-6d5b9c46e2db/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:environment-setup",
+      "topic_slug": "environment-setup",
+      "node_id": "8Z20apU8ugXwdH8rRZAcr",
+      "title": "Environment Setup",
+      "description": "Setting up a proper Python environment for data analysis involves choosing a package manager, managing dependencies, and selecting a development environment. A well-configured environment ensures reproducibility and avoids package conflicts. The main tools are pip and conda for package management, and virtual environments for isolation.",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "Setting Up A Python Environment for Data Analysis and Machine Learning",
+          "url": "https://www.youtube.com/watch?v=NDFMa5FSQuI"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:excel",
+      "topic_slug": "excel",
+      "node_id": "OwEBYI4u7nb9-UGOR9SQf",
+      "title": "Excel",
+      "description": "Excel files (`.xlsx`, `.xls`) are loaded with `pd.read_excel()`, which supports selecting sheets, skipping rows, and reading specific columns. The `openpyxl` library is required for `.xlsx` files. Excel is common in business environments, and analysts frequently need to read and write it as part of reporting workflows.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.read_excel",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.read_excel.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas read_excel: Reading Excel Files in Python",
+          "url": "https://www.digitalocean.com/community/tutorials/pandas-read_excel-reading-excel-file-in-python"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:exploratory-data-analysis",
+      "topic_slug": "exploratory-data-analysis",
+      "node_id": "eObhSoXcbqLdwegzaWmi7",
+      "title": "Exploratory Data Analysis",
+      "description": "Exploratory Data Analysis (EDA) is the process of examining a dataset to understand its structure, distributions, and relationships before formal modeling. It combines descriptive statistics and visualizations to surface patterns, anomalies, and hypotheses. EDA guides subsequent cleaning decisions and model choices.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Exploratory Statistical Data Analysis with a Real Dataset using Pandas",
+          "url": "https://medium.com/data-science/exploratory-statistical-data-analysis-with-a-real-dataset-using-pandas-208007798b92"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas Profiling \u2013 Easy Exploratory Data Analysis in Python",
+          "url": "https://towardsdatascience.com/pandas-profiling-easy-exploratory-data-analysis-in-python-65d6d0e23650/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Exploratory Data Analysis in Pandas | Python Pandas Tutorials",
+          "url": "https://www.youtube.com/watch?v=Liv6eeb1VfE"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:filtering--querying",
+      "topic_slug": "filtering--querying",
+      "node_id": "wxO7f8wh6JTXHYDiPcbmy",
+      "title": "Filtering & Querying",
+      "description": "Filtering in Pandas selects rows that meet specified conditions. Boolean masks, the `.query()` method, and `.isin()` are common approaches. Multiple conditions can be combined with `&` (and) and `|` (or), and the `.query()` method allows SQL-like string syntax for readable filtering expressions.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.DataFrame.query",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.htmlme.query"
+        },
+        {
+          "raw_type": "official",
+          "title": "How do I select a subset of a DataFrame?",
+          "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/03_subset_data.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "10 Elegant Ways to Filter Pandas DataFrames",
+          "url": "https://towardsdatascience.com/stop-writing-messy-boolean-masks-10-elegant-ways-to-filter-pandas-dataframes/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Filtering Columns and Rows in Pandas",
+          "url": "https://www.youtube.com/watch?v=kB7FV-ijdqE"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:floats",
+      "topic_slug": "floats",
+      "node_id": "aLIXcqB258WNrdASuN_7G",
+      "title": "Floats",
+      "description": "Floats (`float`) represent real numbers with a decimal point. Most numerical data in analysis involves floats, including prices, measurements, and probabilities. Floating-point arithmetic has precision limitations that can cause small rounding errors, which are important to be aware of in financial and scientific calculations.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Built-in Types",
+          "url": "https://docs.python.org/3/library/stdtypes.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "float",
+          "url": "https://realpython.com/ref/builtin-types/float/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:forward--backward-fill",
+      "topic_slug": "forward--backward-fill",
+      "node_id": "9mFT0z5yT446_-nGdG492",
+      "title": "Forward / Backward Fill",
+      "description": "Forward fill (`ffill`) propagates the last valid value forward to fill subsequent missing entries. Backward fill (`bfill`) does the reverse, filling from the next valid value. Both are commonly used for time series data where missing values represent periods where the previous or next observation is the best estimate.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.DataFrame.ffill",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.ffill.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "pandas.DataFrame.bfill",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.bfill.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Fill Missing Data with Pandas",
+          "url": "https://towardsdatascience.com/how-to-fill-missing-data-with-pandas-8cb875362a0d/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:functions--methods",
+      "topic_slug": "functions--methods",
+      "node_id": "kyrS5ez7_85AnNt8Bojz_",
+      "title": "Functions & Methods",
+      "description": "Functions are reusable blocks of code that take inputs, perform operations, and return outputs. They encapsulate cleaning steps, transformations, and calculations that need to be applied consistently. Python supports built-in functions, user-defined functions, and anonymous lambda functions.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python Functions",
+          "url": "https://www.w3schools.com/python/python_functions.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Methods, Functions, & Libraries",
+          "url": "https://mode.com/python-tutorial/python-methods-functions-and-libraries"
+        },
+        {
+          "raw_type": "video",
+          "title": "Functions in Python are easy",
+          "url": "https://www.youtube.com/watch?v=89cGQjB5R4M"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:geopandas",
+      "topic_slug": "geopandas",
+      "node_id": "-Bxn2sj2NjHLhRZrPIi0n",
+      "title": "GeoPandas",
+      "description": "GeoPandas is an open-source library that extends the capabilities of pandas by allowing spatial operations on geometric types. It simplifies working with geospatial data by enabling the use of familiar data structures like GeoSeries and GeoDataFrame, which store and manipulate vector-based geographic information. Through its integration with libraries like Shapely and PyGEOS, it allows you to perf",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "GeoPandas Docs",
+          "url": "https://geopandas.org/en/stable/docs.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Introduction to GeoPandas",
+          "url": "https://geopandas.org/en/stable/getting_started/introduction.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Geospatial Python - Full Course for Beginners with Geopandas",
+          "url": "https://www.youtube.com/watch?v=0mWgVVH_dos"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:geospatial-analysis",
+      "topic_slug": "geospatial-analysis",
+      "node_id": "SWrijRzSZxhnSYDwv1_pH",
+      "title": "Geospatial Analysis",
+      "description": "Geospatial analysis is the process of gathering, manipulating, and mapping data that is tied to specific geographic locations on the Earth's surface. It involves using tools and libraries to perform spatial operations, such as calculating distances between coordinates, analyzing geographic patterns, or visualizing datasets on interactive maps. By integrating coordinate systems and geometric shapes",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Introduction to Python for Geographic Data Analysis",
+          "url": "https://pythongis.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Spatial analysis with Python",
+          "url": "https://spatial-analytics.readthedocs.io/en/develop/lessons/L1/intro-to-python-geostack.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "GeoSpatial Analysis With Python For Beginners",
+          "url": "https://www.youtube.com/watch?v=IRJC67zm6nk"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:google-colab",
+      "topic_slug": "google-colab",
+      "node_id": "c8uLNJMr6UZfvjFwFhxvd",
+      "title": "Google Colab",
+      "description": "Google Colab is a cloud-hosted Jupyter notebook environment from Google. It requires no local setup and provides free access to GPUs and TPUs, making it popular for machine learning work. Colab notebooks are stored in Google Drive and can be shared like any other document.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Google Colab",
+          "url": "https://colab.research.google.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Python Basics in Colab",
+          "url": "https://colab.research.google.com/github/data-psl/lectures2020/blob/master/notebooks/01_python_basics.ipynb"
+        },
+        {
+          "raw_type": "video",
+          "title": "Google Colab Tutorial for Beginners | Get Started with Google Colab",
+          "url": "https://www.youtube.com/watch?v=RLYoEyIHL6A"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:groupby--aggregation",
+      "topic_slug": "groupby--aggregation",
+      "node_id": "KnSv5dPToipoz2RF1dDnO",
+      "title": "Groupby & Aggregation",
+      "description": "`groupby()` splits a DataFrame into groups based on one or more columns, applies a function to each group, and combines the results. Common aggregation functions include `sum()`, `mean()`, `count()`, `min()`, `max()`, and custom functions via `agg()`. This split-apply-combine pattern is one of the most powerful features of Pandas.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.DataFrame.groupby",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "All About Pandas Groupby Explained with 25 Examples",
+          "url": "https://towardsdatascience.com/all-about-pandas-groupby-explained-with-25-examples-494e04a8ef56/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Group By and Aggregate Functions in Pandas |",
+          "url": "https://www.youtube.com/watch?v=VRmXto2YA2I"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:heatmaps",
+      "topic_slug": "heatmaps",
+      "node_id": "Bk3z1CHnrnV6ii2Y0BF8G",
+      "title": "Heatmaps",
+      "description": "`sns.heatmap()` visualizes matrix-style data using color intensity. It is most commonly used to display correlation matrices and pivot tables. Color maps, annotations, and masking options allow the heatmap to be customized for readability. Heatmaps are an effective way to show patterns across two categorical dimensions.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "seaborn.heatmap",
+          "url": "https://seaborn.pydata.org/generated/seaborn.heatmap.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Data Visualization with Seaborn: Heatmaps",
+          "url": "https://medium.com/@1zeyneper/data-visualization-with-seaborn-heatmaps-58abfadd79d5"
+        },
+        {
+          "raw_type": "video",
+          "title": "Seaborn heatmap | How to make a heatmap in Python Seaborn and adjust the heatmap style",
+          "url": "https://www.youtube.com/watch?v=0U9cs2V-Mqc"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:histogram",
+      "topic_slug": "histogram",
+      "node_id": "oRaag-FOl50NJM0y4joBm",
+      "title": "Histogram",
+      "description": "A histogram groups numeric values into bins and shows the count or frequency of each bin as a bar. It is the primary tool for visualizing the distribution of a single variable: its shape, center, spread, and whether it is skewed or has multiple peaks. `df['col'].hist()` and Matplotlib's `plt.hist()` are the standard ways to create one.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "matplotlib.pyplot.hist",
+          "url": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Matplotlib Histograms",
+          "url": "https://www.w3schools.com/PYTHON/matplotlib_histograms.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Matplotlib histograms in 6 minutes! \ud83d\udd14",
+          "url": "https://www.youtube.com/watch?v=2E6fDoz7LuU"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:indexing--slicing",
+      "topic_slug": "indexing--slicing",
+      "node_id": "PlFcaQsvFSK0Y-LKGu0eH",
+      "title": "Indexing & Slicing",
+      "description": "Pandas provides two primary indexing systems: `.loc[]` for label-based selection and `.iloc[]` for position-based selection. Both work on rows, columns, or both simultaneously. Boolean indexing with a condition (e.g., `df[df['age'] > 30]`) is the most common way to filter rows.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.DataFrame.loc",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "pandas.DataFrame.iloc",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Iloc vs Loc in Pandas: A Guide with Examples",
+          "url": "https://www.analyticsvidhya.com/blog/2026/03/iloc-vs-loc-in-pandas/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Pandas loc and iloc",
+          "url": "https://www.youtube.com/watch?v=naRQyRZrXCE"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:indexing--slicing",
+      "topic_slug": "indexing--slicing",
+      "node_id": "mAOljEWt_0Hb9jLBKuc-H",
+      "title": "Array Operations",
+      "description": "NumPy supports a wide range of array operations: element-wise arithmetic, aggregation functions (`sum`, `mean`, `std`, `min`, `max`), reshaping, stacking, and splitting. These operations are vectorized, meaning they apply to the entire array at once without explicit loops, making them highly efficient.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Indexing on ndarrays",
+          "url": "https://numpy.org/doc/stable/user/basics.indexing.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "NumPy Array Indexing",
+          "url": "https://www.w3schools.com/python/numpy/numpy_array_indexing.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "NumPy Array Slicing",
+          "url": "https://www.w3schools.com/python/numpy/numpy_array_slicing.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Indexing Arrays",
+          "url": "https://towardsdatascience.com/introducing-numpy-part-2-indexing-arrays-5b381b90d1d0/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:integers",
+      "topic_slug": "integers",
+      "node_id": "_-bUq5jtewDmsmnzYw1-q",
+      "title": "Integers",
+      "description": "Integers (`int`) are whole numbers without a decimal point. They appear as counts, indices, IDs, and categorical encodings. Python integers have arbitrary precision, meaning they do not overflow like integers in lower-level languages.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Built-in Types",
+          "url": "https://docs.python.org/3/library/stdtypes.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "int",
+          "url": "https://realpython.com/ref/builtin-types/int/"
+        },
+        {
+          "raw_type": "article",
+          "title": "\"Python Max Int: Understanding Arbitrary Precision Integers \"",
+          "url": "https://roadmap.sh/python/max-int"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:interactive-visualization",
+      "topic_slug": "interactive-visualization",
+      "node_id": "ES8zVixZ5wZ0tW6beOWxJ",
+      "title": "Interactive Visualization",
+      "description": "Interactive visualizations allow users to explore data by hovering, zooming, panning, and filtering directly in the chart. They are more engaging than static plots for dashboards and reports where the audience needs to examine specific data points. Python's main interactive visualization libraries are Plotly and Altair.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Top 10 Python Data Visualization Libraries",
+          "url": "https://reflex.dev/blog/top-10-data-visualization-libraries/"
+        },
+        {
+          "raw_type": "article",
+          "title": "4 Key Players in Python Data Visualization Ecosystem: Matplotlib, Seaborn, Altair, and Plotly",
+          "url": "https://towardsdatascience.com/4-key-players-in-python-data-visualization-ecosystem-matplotlib-seaborn-altair-and-plotly-23ae37a68227/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:introduction",
+      "topic_slug": "introduction",
+      "node_id": "GISOFMKvnBys0O0IMpz2J",
+      "title": "Introduction",
+      "description": "Python is the dominant language for data analysis due to its readable syntax, rich ecosystem of libraries, and strong community support. Getting started requires understanding the core language features: operators, data types, control flow, and data structures. These fundamentals apply directly to every data manipulation and analysis task that follows.",
+      "resources": [
+        {
+          "raw_type": "book",
+          "title": "Python for Data Analysis",
+          "url": "https://www.lkhibra.ma/books/Python-for-Data-Analysis.pdf"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Does a Data Analyst Do?",
+          "url": "https://roadmap.sh/data-analyst/what-does-a-data-analyst-do"
+        },
+        {
+          "raw_type": "article",
+          "title": "How Long Does It Really Take To Learn Python? My Experience",
+          "url": "https://roadmap.sh/python/how-long-does-it-take-to-learn"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python for Data Analytics - Full Course for Beginners",
+          "url": "https://www.youtube.com/watch?v=wUSDVGivd-8"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:iqr",
+      "topic_slug": "iqr",
+      "node_id": "ucEFYVtXIvuYKjudK3pwB",
+      "title": "IQR",
+      "description": "The Interquartile Range (IQR) is the difference between the 75th percentile (Q3) and 25th percentile (Q1) of a dataset. Outliers are commonly defined as values below Q1 \u2212 1.5\u00d7IQR or above Q3 + 1.5\u00d7IQR. The IQR method is robust to extreme values and is the basis for the box plot's whiskers.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using Pandas IQR: 3 Essential Steps",
+          "url": "https://medium.com/@heyamit10/using-pandas-iqr-3-essential-steps-f5cf73a390ba"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to detect outliers using IQR and Boxplots?",
+          "url": "https://machinelearningplus.com/machine-learning/how-to-detect-outliers-using-iqr-and-boxplots/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Outlier detection and removal using IQR",
+          "url": "https://www.youtube.com/watch?v=A3gClkblXK8"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:isnull-isna",
+      "topic_slug": "isnull-isna",
+      "node_id": "bcODvfBqCUwLVXa8HKOFB",
+      "title": "isnull, isna",
+      "description": "`isnull()` and `isna()` are equivalent Pandas methods that return a boolean DataFrame or Series indicating which values are missing (NaN). They are the first step in assessing data completeness. Combined with `.sum()`, they give a count of missing values per column, and with boolean indexing they select rows with missing data.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Working with missing data",
+          "url": "https://pandas.pydata.org/docs/user_guide/missing_data.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "pandas.isnull",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.isnull.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "pandas.isna",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.isna.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Handling Missing Values with Pandas",
+          "url": "https://towardsdatascience.com/handling-missing-values-with-pandas-b876bf6f008f/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:json",
+      "topic_slug": "json",
+      "node_id": "VEetEvKGNzAO9QdZY2g86",
+      "title": "JSON",
+      "description": "JSON (JavaScript Object Notation) is a text format for structured data commonly returned by APIs. `pd.read_json()` converts JSON into a DataFrame, though nested structures often require normalization with `pd.json_normalize()`. JSON is flexible but can be irregular in structure, requiring careful handling of missing fields.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.read_json",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.read_json.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas Read JSON",
+          "url": "https://www.w3schools.com/python/pandas/pandas_json.asp"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:jupyterlab",
+      "topic_slug": "jupyterlab",
+      "node_id": "2m8uQRGaVZUd4mfm7bRou",
+      "title": "JupyterLab",
+      "description": "JupyterLab is the modern, full-featured successor to the classic Jupyter Notebook interface. It supports notebooks where code, output, and narrative text coexist in a single document, while adding a tabbed layout, a file browser, a terminal, and support for multiple file types side by side. It is the standard environment for exploratory data analysis because results are visible immediately after e",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Get Started",
+          "url": "https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Jupyter Notebook Complete Beginner Guide",
+          "url": "https://www.youtube.com/watch?v=5pf0_bpNbkw"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:lambda-functions",
+      "topic_slug": "lambda-functions",
+      "node_id": "AzsZhpK-wuWtafVFJMhdY",
+      "title": "Lambda Functions",
+      "description": "Lambda functions are anonymous, single-expression functions defined with the `lambda` keyword. They are used for short, throwaway operations, particularly as arguments to functions like `map()`, `filter()`, and Pandas' `apply()`. For example: `df['col'].apply(lambda x: x * 2)`.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python Lambda",
+          "url": "https://www.w3schools.com/python/python_lambda.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python Lambda Functions Explained",
+          "url": "https://www.youtube.com/watch?v=HQNiSfb795A"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:linear-algebra-basics",
+      "topic_slug": "linear-algebra-basics",
+      "node_id": "xHDrwKDE_mrSihCsPQMBF",
+      "title": "Linear Algebra Basics",
+      "description": "NumPy provides linear algebra operations, including matrix multiplication (`np.dot`, `@`), matrix inversion, determinants, and eigenvalues. These are used in statistics (covariance matrices), machine learning (feature transformations), and scientific computing. Understanding the basics of matrix operations is useful for reading ML algorithm implementations.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Numpy Linear Algebra",
+          "url": "https://www.programiz.com/python-programming/numpy/linear-algebra"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn NumPy in 1 hour! \ud83d\udd22",
+          "url": "https://www.youtube.com/watch?v=VXU4LSAQDSc"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:list-comprehensions",
+      "topic_slug": "list-comprehensions",
+      "node_id": "la9oiXURvw6AH-Vuh-WqT",
+      "title": "List Comprehensions",
+      "description": "List comprehensions provide a concise syntax for creating lists by applying an expression to each item in an iterable, optionally filtering with a condition. For example: `[x**2 for x in range(10) if x % 2 == 0]`. They are faster and more readable than equivalent `for` loops for simple transformations.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "List Comprehensions",
+          "url": "https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+        },
+        {
+          "raw_type": "article",
+          "title": "When to Use a List Comprehension in Python Quiz",
+          "url": "https://realpython.com/quizzes/list-comprehension-python/"
+        },
+        {
+          "raw_type": "article",
+          "title": "List Comprehensions in Python",
+          "url": "https://towardsdatascience.com/list-comprehensions-in-python-28d54c9286ca/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:lists",
+      "topic_slug": "lists",
+      "node_id": "F4dp3Ip8G-EI1hprtv3do",
+      "title": "Lists",
+      "description": "Lists are ordered, mutable sequences that can hold elements of any type. They are one of the most used data structures in Python for storing collections of values. Typical uses include holding column names, storing results from loops, and passing multiple values to functions.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "List",
+          "url": "https://docs.python.org/3/tutorial/datastructures.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use Lists in Python",
+          "url": "https://www.youtube.com/watch?v=9OeznAkyQz4"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:logical",
+      "topic_slug": "logical",
+      "node_id": "_0K6o-R0F2a9bpEDfRcTi",
+      "title": "Logical",
+      "description": "Logical operators combine boolean expressions. Python uses `and`, `or`, and `not` for this purpose. They are used heavily in data filtering conditions, such as selecting rows where multiple criteria are true simultaneously.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python not Operator: The Complete Guide to Logical Negation",
+          "url": "https://roadmap.sh/python/not-operator"
+        },
+        {
+          "raw_type": "article",
+          "title": "The or Operator in Python: Complete Guide with Examples",
+          "url": "https://roadmap.sh/python/or"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Logical Operators",
+          "url": "https://www.w3schools.com/python/python_if_logical.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Logical operators in Python are easy \ud83d\udd23",
+          "url": "https://www.youtube.com/watch?v=W7luvtXeQTA"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:loops",
+      "topic_slug": "loops",
+      "node_id": "Dvy7BnNzK55qbh_SgOk8m",
+      "title": "Loops",
+      "description": "Loops execute a block of code repeatedly. Python provides `for` loops for iterating over sequences and `while` loops for condition-based repetition. They are used for batch processing files, iterating over grouped data, and automating repetitive tasks, though vectorized operations are preferred for performance.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python while Loops: Repeating Tasks Conditionally",
+          "url": "https://realpython.com/python-while-loop/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python for Loops: The Pythonic Way",
+          "url": "https://realpython.com/python-for-loop/#the-guts-of-the-python-for-loop"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understand Loops in Python with One Article",
+          "url": "https://towardsdatascience.com/understand-loops-in-python-with-one-article-bace2ddba789/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn Python for loops in 5 minutes!",
+          "url": "https://www.youtube.com/watch?v=KWgYha0clzw"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:matplotlib",
+      "topic_slug": "matplotlib",
+      "node_id": "Md9Yq7bwDNo6hO_A9aa9N",
+      "title": "Matplotlib",
+      "description": "Matplotlib is Python's foundational plotting library. It provides a MATLAB-like interface for creating static, animated, and interactive visualizations. While more verbose than higher-level libraries, Matplotlib offers the most control over every aspect of a plot and is the basis for understanding how other Python visualization tools work.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Matplotlib Tutorials",
+          "url": "https://matplotlib.org/stable/tutorials/index.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Matplotlib Tutorial",
+          "url": "https://www.w3schools.com/python/matplotlib_intro.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Matplotlib Full Python Course - Data Science Fundamentals",
+          "url": "https://www.youtube.com/watch?v=OZOOLe2imFo"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:mean-median-mode",
+      "topic_slug": "mean-median-mode",
+      "node_id": "DdA2gJKpgOHj9mqZL-c4F",
+      "title": "Mean, Median, Mode",
+      "description": "Mean, median, and mode are measures of central tendency that describe the typical value in a distribution. Pandas computes these with `mean()`, `median()`, and `mode()` on Series or DataFrame columns. Comparing them reveals distribution shape: in a symmetric distribution they are equal; in a skewed one they diverge.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "A Guide to Metrics in Exploratory Data Analysis",
+          "url": "https://towardsdatascience.com/a-guide-to-metrics-in-exploratory-data-analysis-250b33f72297/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Your Data: The Essentials of Exploratory Data Analysis",
+          "url": "https://dev.to/nderitugichuki/understanding-your-data-the-essentials-of-exploratory-data-analysis-400i"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:merging--joining",
+      "topic_slug": "merging--joining",
+      "node_id": "Rq9TFEEJnjEgVa1DiJxFz",
+      "title": "Merging & Joining",
+      "description": "Pandas provides `merge()` and `join()` for combining DataFrames based on common columns or indices. Merge supports inner, left, right, and outer joins, mirroring SQL JOIN behavior. `concat()` stacks DataFrames vertically or horizontally. These operations are used to combine data from multiple sources into a single analysis-ready table.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Merge, join, concatenate and compare",
+          "url": "https://pandas.pydata.org/docs/user_guide/merging.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Combining Data in pandas With merge(), .join(), and concat()",
+          "url": "https://realpython.com/pandas-merge-join-and-concat/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas: Combining Data",
+          "url": "https://towardsdatascience.com/pandas-combining-data-b190d793b626/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:null",
+      "topic_slug": "null",
+      "node_id": "GidLncxwx7d1QzAOfHRLX",
+      "title": "Null Values",
+      "description": "Null values represent missing or undefined data within a dataset, signaling that a specific observation or entry is absent. In Python, this is typically represented by `None`, while libraries like pandas utilize `NaN` (Not a Number) to denote missing numeric information. Handling these values is a fundamental step in data cleaning, as they must be identified and addressed to ensure that statistica",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python Null (None): Guide to Missing Values and NoneType",
+          "url": "https://roadmap.sh/python/null#the-most-common-uses-of-none"
+        },
+        {
+          "raw_type": "article",
+          "title": "Null in Python: Understanding Python's NoneType Object",
+          "url": "https://realpython.com/null-in-python/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:numpy",
+      "topic_slug": "numpy",
+      "node_id": "IO-disDSfkPau4Pd_TNwc",
+      "title": "NumPy",
+      "description": "NumPy is the foundational numerical computing library for Python. It provides the `ndarray`, a fast, multi-dimensional array, and a comprehensive library of mathematical functions that operate on arrays without Python loops. NumPy underpins Pandas, Scikit-learn, and most other scientific Python libraries.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "NumPy quickstart",
+          "url": "https://numpy.org/doc/stable/user/quickstart.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "NumPy Tutorial",
+          "url": "https://www.w3schools.com/python/numpy/default.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "NumPy for Absolute Beginners: A Project-Based Approach to Data Analysis",
+          "url": "https://towardsdatascience.com/numpy-for-absolute-beginners-a-project-based-approach-to-data-analysis/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python NumPy Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=QUT1VHiLmmI"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:oop-for-data-analysis",
+      "topic_slug": "oop-for-data-analysis",
+      "node_id": "hTAQSe0rHv7fuAMfxJwGp",
+      "title": "OOP for Data Analysis",
+      "description": "Object-oriented programming (OOP) organizes code around classes and objects rather than standalone functions and procedures. A class defines a blueprint with attributes (data) and methods (behavior), and objects are instances of that class. For data analysis work, OOP is useful when building reusable data processing components, custom dataset loaders, or analysis pipelines that need to maintain st",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Object-Oriented Programming (OOP) in Python",
+          "url": "https://towardsdatascience.com/object-oriented-programming-oop-in-python-56b1f3229c0f/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How data scientists can leverage object oriented programming (OOP)",
+          "url": "https://medium.com/@lawjimmy123/how-data-scientists-can-leverage-object-oriented-programming-oop-design-pattern-to-write-better-699166910882"
+        },
+        {
+          "raw_type": "article",
+          "title": "Object-Oriented Programming (OOP) in Python",
+          "url": "https://realpython.com/python3-object-oriented-programming/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:operators",
+      "topic_slug": "operators",
+      "node_id": "so95CO6Qw3I0S98ISENS-",
+      "title": "Operators",
+      "description": "Operators are symbols that perform operations on values and variables. Python supports arithmetic, comparison, and logical operators, each serving a different purpose in data analysis code. Understanding how operators work and combine is necessary for writing correct filtering conditions, calculations, and control flow logic.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python Operators",
+          "url": "https://www.w3schools.com/python/python_operators.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Operators from Scratch!!! \u2013 A Beginner\u2019s Guide",
+          "url": "https://towardsdatascience.com/python-operators-from-scratch-a-beginners-guide-8471306f4278/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python Tutorial for Beginners | Operators in Python",
+          "url": "https://www.youtube.com/watch?v=v5MR5JnKcZI"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:pandas-string-methods",
+      "topic_slug": "pandas-string-methods",
+      "node_id": "yRHodYYqdICLZyG3J9qjc",
+      "title": "Pandas String Methods",
+      "description": "Pandas exposes string methods through the `.str` accessor on Series, allowing vectorized text operations on entire columns. Methods include `.str.strip()`, `.str.lower()`, `.str.contains()`, `.str.replace()`, `.str.split()`, and `.str.extract()`. These methods avoid the need to loop over rows for string cleaning.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Working with text data",
+          "url": "https://pandas.pydata.org/docs/user_guide/text.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "5 Must-Know Pandas Operations on Strings",
+          "url": "https://towardsdatascience.com/5-must-know-pandas-operations-on-strings-4f88ca6b8e25/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How do I use string methods in pandas?",
+          "url": "https://www.youtube.com/watch?v=bofaC0IckHo"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:pandas",
+      "topic_slug": "pandas",
+      "node_id": "bIblb5cVNSZLqSuskmKnP",
+      "title": "Pandas",
+      "description": "Pandas is the primary data manipulation library for Python. It provides two core data structures: Series (one-dimensional) and DataFrame (two-dimensional tabular data). Pandas supports loading data from many formats, cleaning, transforming, grouping, merging, and exporting data, covering the full data preparation workflow.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "10 minutes to pandas",
+          "url": "https://pandas.pydata.org/docs/user_guide/10min.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas Tutorial",
+          "url": "https://www.w3schools.com/python/pandas/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn Pandas in 1 hour! \ud83d\udc3c",
+          "url": "https://www.youtube.com/watch?v=VXtjG_GzO7Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:pandas",
+      "topic_slug": "pandas",
+      "node_id": "cD139cRk1xj2ip-o_078l",
+      "title": "Pandas",
+      "description": "Pandas integrates with SQL through `pd.read_sql()`, which executes a SQL query against a database connection and returns the result as a DataFrame. This allows analysts to leverage SQL for initial data extraction and filtering while using Pandas for downstream manipulation and analysis.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.read_sql",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.read_sql.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Read Write Data From Database (read_sql, to_sql)",
+          "url": "https://www.youtube.com/watch?v=M-4EpNdlSuY"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:parquet",
+      "topic_slug": "parquet",
+      "node_id": "sBKhhjfFTpbj7TQwVnX7F",
+      "title": "Parquet",
+      "description": "Parquet is a columnar file format optimized for analytical workloads. It stores data with type information, supports efficient compression, and reads much faster than CSV for large datasets. `pd.read_parquet()` requires the `pyarrow` or `fastparquet` library and is the preferred format for storing processed DataFrames on disk.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.read_parquet",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.read_parquet.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Reading Parquet Files in Python",
+          "url": "https://www.youtube.com/watch?v=XFO5jdGsMek"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:parsing-dates",
+      "topic_slug": "parsing-dates",
+      "node_id": "L7btVRwvkEVX0K8LxnbqJ",
+      "title": "Parsing Dates",
+      "description": "Date columns loaded from CSV are typically read as strings and must be converted to datetime objects for time-based operations. `pd.to_datetime()` parses date strings in many formats and accepts a `format` parameter for custom patterns. Once parsed, datetime columns enable operations like extracting year/month, computing differences, and resampling time series.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.to_datetime",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.to_datetime.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Working with Dates and Time Series Data",
+          "url": "https://www.youtube.com/watch?v=UFuo7EHI8zc"
+        },
+        {
+          "raw_type": "article",
+          "title": "Dealing with Date and Time in Pandas DataFrames",
+          "url": "https://towardsdatascience.com/dealing-with-date-and-time-in-pandas-dataframes-7d140f711a47/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:pip",
+      "topic_slug": "pip",
+      "node_id": "6dJaQRj2zMz00sfTiTdww",
+      "title": "pip",
+      "description": "pip is Python's default package installer. It installs packages from the Python Package Index (PyPI) using `pip install package-name`. Libraries like NumPy, Pandas, Matplotlib, and Scikit-learn are all installed this way. A `requirements.txt` file captures all dependencies for a project.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Installing Packages",
+          "url": "https://packaging.python.org/en/latest/tutorials/installing-packages/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "pip",
+          "url": "https://github.com/pypa/pip"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python pip \ud83c\udfd7\ufe0f",
+          "url": "https://www.youtube.com/watch?v=9z7gGUbAj5U"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:plot-categories",
+      "topic_slug": "plot-categories",
+      "node_id": "5HEYmbVJ6Z7lvgqalVjxW",
+      "title": "Plot Categories",
+      "description": "Matplotlib supports a wide range of plot types: line plots (`plot`), bar charts (`bar`, `barh`), scatter plots (`scatter`), histograms (`hist`), box plots (`boxplot`), pie charts (`pie`), and more. Choosing the right plot type depends on the data structure and the relationship being communicated.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Plot types",
+          "url": "https://matplotlib.org/stable/plot_types/index.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Gallery: Matplotlib",
+          "url": "https://python-graph-gallery.com/matplotlib/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Matplotlib: Part 3. Exploring Different Plot Types",
+          "url": "https://medium.com/@ebimsv/mastering-matplotlib-3-exploring-different-plot-types-bd13d18ff613"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:plotly",
+      "topic_slug": "plotly",
+      "node_id": "J_u8yvrHEWKKmVsVgPN7L",
+      "title": "Plotly",
+      "description": "Plotly is a Python library for creating interactive charts and dashboards. It produces web-based visualizations using JavaScript under the hood, with a Python API. Plotly Express provides a high-level interface for common chart types, while the `graph_objects` module offers full control. Plotly integrates with Dash for building full web dashboards.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Getting Started with Plotly in Python",
+          "url": "https://plotly.com/python/getting-started/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Plotly Python Graphing Library Fundamentals",
+          "url": "https://plotly.com/python/plotly-fundamentals/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Plotly Tutorial - Basics in 7 Minutes!",
+          "url": "https://www.youtube.com/watch?v=PqUaDvbczbI"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:polars",
+      "topic_slug": "polars",
+      "node_id": "18eitPvBQKdeM3K33d59g",
+      "title": "Polars",
+      "description": "Polars is a fast DataFrame library for Python written in Rust. It is designed as a high-performance alternative to Pandas, with a more consistent API and significantly better performance on large datasets. Polars uses lazy evaluation and query optimization to process data efficiently without loading everything into memory at once.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Getting started",
+          "url": "https://docs.pola.rs/user-guide/getting-started/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learning the Polars DataFrame Library!",
+          "url": "https://www.youtube.com/watch?v=OTVDmA6CRlQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:power-bi--tableau",
+      "topic_slug": "power-bi--tableau",
+      "node_id": "EHVXO79NGpLC1i8x4Y7g1",
+      "title": "Power BI / Tableau",
+      "description": "Power BI and Tableau are enterprise BI platforms for building interactive dashboards and reports. Python integrates with both: Power BI supports Python visuals and data transformation scripts, and Tableau supports Python through TabPy for custom calculations. Analysts who prepare data in Python can visualize and distribute it through these platforms for business audiences.",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "Power BI Tutorials for Beginners",
+          "url": "https://www.youtube.com/playlist?list=PLUaB-1hjhk8HqnmK0gQhfmIdCbxwoAoys"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn Tableau in Under 2 hours",
+          "url": "https://www.youtube.com/watch?v=j8FSP8XuFyk"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:printing-variables",
+      "topic_slug": "printing-variables",
+      "node_id": "icVUQgedEGcaPpJSV8JdI",
+      "title": "Printing Variables",
+      "description": "Printing variables is done with Python's built-in `print()` function. During analysis, printing intermediate values helps verify that transformations are working as expected. F-strings (`f\"value: {variable}\"`) provide a clean way to format output with variable values embedded in strings.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Variables in Python: Usage and Best Practices",
+          "url": "https://realpython.com/python-variables/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Print New Line: Methods, Examples, and Best Practices",
+          "url": "https://roadmap.sh/python/print-new-line"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Multiline Strings: The Complete Guide",
+          "url": "https://roadmap.sh/python/multiline-strings"
+        },
+        {
+          "raw_type": "video",
+          "title": "Data Types & Variables in Python",
+          "url": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRhN-sfWgCU1z_Qhakc1AGOn"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:pyspark",
+      "topic_slug": "pyspark",
+      "node_id": "XTXm8aIDbRkTXoAck_m3I",
+      "title": "PySpark",
+      "description": "PySpark is the Python API for Apache Spark, the distributed data processing engine. It allows Python code to run Spark jobs on clusters, processing datasets at the scale of terabytes. PySpark provides DataFrame and SQL APIs similar to Pandas and integrates with MLlib for distributed machine learning. It is used when data volume exceeds what Dask or a single machine can handle.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PySpark Tutorials",
+          "url": "https://spark.apache.org/docs/latest/api/python/tutorial/index.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "PySpark for Beginners: Beyond the Basics",
+          "url": "https://towardsdatascience.com/pyspark-for-beginners-beyond-the-basics/"
+        },
+        {
+          "raw_type": "video",
+          "title": "PySpark Tutorial",
+          "url": "https://www.youtube.com/watch?v=wNRjR6Cds5s&list=PL2IsFZBGM_IHCl9zhRVC1EXTomkEp_1zm"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:random-module",
+      "topic_slug": "random-module",
+      "node_id": "XizmE-QroU4GJbjvqNYxe",
+      "title": "Random Module",
+      "description": "NumPy's `random` module generates pseudorandom numbers and samples. It provides functions for creating random arrays, sampling from distributions (normal, uniform, binomial), and setting a seed for reproducibility. Random number generation is used in simulation, bootstrapping, and initializing machine learning models.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Random Numbers in NumPy",
+          "url": "https://www.w3schools.com/python/numpy/numpy_random.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Numpy Random",
+          "url": "https://www.programiz.com/python-programming/numpy/random"
+        },
+        {
+          "raw_type": "video",
+          "title": "Random numbers in NumPy are easy! \ud83c\udfb2",
+          "url": "https://www.youtube.com/watch?v=Ql5zGPtxlHY&pp=ygUNIG51bXB5IHJhbmRvbQ%3D%3D"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:re",
+      "topic_slug": "re",
+      "node_id": "oXhGEIie-MzfUSM2Ng4Zm",
+      "title": "re",
+      "description": "The `re` module provides regular expression support for pattern matching and text manipulation. It is used for extracting structured data from unstructured text, validating formats, and performing complex find-and-replace operations. Key functions include `re.match()`, `re.search()`, `re.findall()`, and `re.sub()`.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "re \u2014 Regular expression operations",
+          "url": "https://docs.python.org/3/library/re.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Regular expression HOWTO",
+          "url": "https://docs.python.org/3/howto/regex.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python RegEx",
+          "url": "https://www.w3schools.com/python/python_regex.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python Tutorial: re Module - How to Write and Match Regular Expressions (Regex)",
+          "url": "https://www.youtube.com/watch?v=K8L6KVGG-7o"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:reading-data",
+      "topic_slug": "reading-data",
+      "node_id": "w2j11Jyr_qLP1Y9ST-06O",
+      "title": "Reading Data",
+      "description": "Pandas provides functions to load data from many formats: `pd.read_csv()`, `pd.read_excel()`, `pd.read_json()`, `pd.read_parquet()`, `pd.read_sql()`, and others. Each function returns a DataFrame and accepts parameters for handling headers, delimiters, encoding, and data types. Reading data is always the first step in a Pandas workflow.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How do I read and write tabular data?",
+          "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/02_read_write.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas 101: How to Read Data from Multiple Sources",
+          "url": "https://riyoma.medium.com/pandas-101-how-to-read-data-from-multiple-sources-ba75e5497ad5"
+        },
+        {
+          "raw_type": "video",
+          "title": "Reading in Files in Pandas | Python Pandas Tutorials",
+          "url": "https://www.youtube.com/watch?v=dUpyC40cF6Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:reading-local-files",
+      "topic_slug": "reading-local-files",
+      "node_id": "34DL5RWQtHkvgVhI9a_ZQ",
+      "title": "Reading Local Files",
+      "description": "Reading local files loads data stored on disk into Python for analysis. Pandas supports the most common file formats used in data work. The right function to use depends on the file format, and parameters like delimiter, encoding, and header row often need to be specified.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "pandas: How to Read and Write Files",
+          "url": "https://realpython.com/pandas-read-write-files/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Navigate File Paths: Reading Data With Pandas",
+          "url": "https://www.youtube.com/watch?v=39pwKSJ7T1Y"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:reading-web-data",
+      "topic_slug": "reading-web-data",
+      "node_id": "w8iQWthKu1w75z36B8Ir3",
+      "title": "Reading Web Data",
+      "description": "Reading web data involves fetching data from URLs, REST APIs, and web pages directly into Python. This allows analysis workflows to incorporate live or frequently updated data without manual downloads. The main tools are the `requests` library for APIs and `BeautifulSoup` or `scrapy` for web scraping.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "An Efficient Way to Read Data from the Web Directly into Python",
+          "url": "https://medium.com/data-science/an-efficient-way-to-read-data-from-the-web-directly-into-python-a526a0b4f4cb"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:regression-plots",
+      "topic_slug": "regression-plots",
+      "node_id": "PcGJMkmZrl4xc2ADT9dF3",
+      "title": "Regression Plots",
+      "description": "Seaborn's regression plots visualize the relationship between two numeric variables with a fitted regression line. `sns.regplot()` plots data points and a linear regression fit with confidence interval. `sns.lmplot()` extends this to support faceting by a categorical variable, enabling comparison across groups.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Visualizing statistical relationships",
+          "url": "https://seaborn.pydata.org/tutorial/relational.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Seaborn Relplot in Python: Visualising Relationships in Data",
+          "url": "https://towardsdatascience.com/seaborn-relplot-in-python-visualising-relationships-in-data-ee39138d53aa/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Seaborn scatter plot | How to make and style a scatterplot in Python seaborn",
+          "url": "https://www.youtube.com/watch?v=4yz4cMXCkuw"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:reshaping",
+      "topic_slug": "reshaping",
+      "node_id": "ACr__YweG2xOAf56FK8tE",
+      "title": "Reshaping",
+      "description": "Reshaping transforms the structure of a DataFrame without changing its data. `pivot()` and `pivot_table()` convert long-format data to wide format. `melt()` does the reverse, converting wide to long. `stack()` and `unstack()` move index levels to columns or vice versa. Reshaping is often needed to prepare data for specific visualizations or models.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Reshaping and pivot tables",
+          "url": "https://pandas.pydata.org/docs/user_guide/reshaping.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Reshaping a Pandas Dataframe: Long-to-Wide and Vice Versa",
+          "url": "https://towardsdatascience.com/reshaping-a-pandas-dataframe-long-to-wide-and-vice-versa-517c7f0995ad/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Pandas - Reshape Dataframe",
+          "url": "https://www.youtube.com/watch?v=oY62o-tBHF4&list=PL6icxsSf2sRe2qqFmtZwU_VKChEChzhEP"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:saving-figures",
+      "topic_slug": "saving-figures",
+      "node_id": "mElhFGGT2GnLg2AkJFETN",
+      "title": "Saving figures",
+      "description": "Figures are saved to disk with `plt.savefig('filename.png', dpi=300, bbox_inches='tight')`. Supported formats include PNG, PDF, SVG, and JPEG. Saving high-resolution figures is important when embedding charts in reports or publications. The `bbox_inches='tight'` parameter prevents axis labels from being cut off.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "matplotlib.pyplot.savefig",
+          "url": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to save a matplotlib figure and fix text cutting off || Matplotlib Tips",
+          "url": "https://www.youtube.com/watch?v=C8MT-A7Mvk4"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:scatterplot",
+      "topic_slug": "scatterplot",
+      "node_id": "4ce2yYLRCSb3azsOMpE-U",
+      "title": "Scatterplot",
+      "description": "A scatter plot displays two numeric variables as points on an x-y axis to reveal their relationship. It is used during EDA to detect correlations, clusters, and outliers. A trend line or regression line can be added to show the direction and strength of the linear relationship between the variables.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "matplotlib.pyplot.scatter",
+          "url": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Make a Scatter Plot in Python With plt.scatter()",
+          "url": "https://realpython.com/visualizing-python-plt-scatter/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Seaborn scatter plot | How to make and style a scatterplot in Python seaborn",
+          "url": "https://www.youtube.com/watch?v=4yz4cMXCkuw"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:scikit-learn",
+      "topic_slug": "scikit-learn",
+      "node_id": "npndQC8OIfP1wwn_iswPy",
+      "title": "Scikit-learn",
+      "description": "Scikit-learn is the standard machine learning library for Python. It provides a consistent API for classification, regression, clustering, dimensionality reduction, model selection, and preprocessing. Models are trained with `.fit()`, used to predict with `.predict()`, and evaluated with a suite of metrics. Scikit-learn also provides tools for pipelines, cross-validation, and hyperparameter tuning",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Scikit-learn",
+          "url": "https://scikit-learn.org/stable/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Scikit-learn Crash Course - Machine Learning Library for Python",
+          "url": "https://www.youtube.com/watch?v=0B5eIE_1vpU"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:scipy",
+      "topic_slug": "scipy",
+      "node_id": "YxA0ms9vkufKGOguRNK1B",
+      "title": "SciPy",
+      "description": "SciPy is a scientific computing library built on NumPy. It provides modules for statistics (`scipy.stats`), optimization (`scipy.optimize`), linear algebra, signal processing, and numerical integration. `scipy.stats` is used for hypothesis tests (t-tests, chi-square, ANOVA), probability distributions, and descriptive statistics beyond what NumPy provides.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "SciPy User Guide",
+          "url": "https://docs.scipy.org/doc/scipy/tutorial/"
+        },
+        {
+          "raw_type": "article",
+          "title": "SciPy Tutorial",
+          "url": "https://www.w3schools.com/python/scipy/index.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "SciPy Tutorial: For Physicists, Engineers, and Mathematicians",
+          "url": "https://www.youtube.com/watch?v=jmX4FOUEfgU"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:scrapy",
+      "topic_slug": "scrapy",
+      "node_id": "UImXdBHQKCzp9NdjF9xMi",
+      "title": "scrapy",
+      "description": "Scrapy is a Python framework for large-scale web scraping. Unlike BeautifulSoup, which parses individual pages, Scrapy manages the full crawling workflow: following links, handling pagination, managing request queues, and exporting data. It is used when scraping requires collecting data from many pages across a site.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Scrapy Docs",
+          "url": "https://docs.scrapy.org/en/latest/"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Minimalist End-to-End Scrapy Tutorial (Part I)",
+          "url": "https://medium.com/data-science/a-minimalist-end-to-end-scrapy-tutorial-part-i-11e350bcdec0"
+        },
+        {
+          "raw_type": "video",
+          "title": "Scrapy for Beginners - A Complete How To Example Web Scraping Project",
+          "url": "https://www.youtube.com/watch?v=s4jtkzHhLzY"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:seaborn",
+      "topic_slug": "seaborn",
+      "node_id": "zx7uCaQiCxvXMhm9FG3XG",
+      "title": "Seaborn",
+      "description": "Seaborn is a Python visualization library built on Matplotlib that provides a higher-level interface for statistical graphics. It handles common plot types with less code and integrates tightly with Pandas DataFrames. Seaborn is particularly strong for visualizing statistical relationships, distributions, and grouped comparisons.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Seaborn Tutorials",
+          "url": "https://seaborn.pydata.org/tutorial.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Introduction to Seaborn for dataviz with Python",
+          "url": "https://python-graph-gallery.com/seaborn/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Data Visualisation Tutorial Using Seaborn",
+          "url": "https://towardsdatascience.com/data-visualisation-tutorial-using-seaborn-26e1ef9043db/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introduction to Seaborn",
+          "url": "https://www.youtube.com/watch?v=vaf4ir8eT38&list=PLtPIclEQf-3cG31dxSMZ8KTcDG7zYng1j"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:series-and-dataframe",
+      "topic_slug": "series-and-dataframe",
+      "node_id": "3N5N6qe8JVr0XGOFdn5-8",
+      "title": "Series and DataFrame",
+      "description": "A Series is a one-dimensional labeled array, analogous to a single column in a spreadsheet. A DataFrame is a two-dimensional table of Series that share an index, analogous to a spreadsheet or SQL table. These two structures are the foundation of all Pandas operations.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pandas.Series",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "pandas.DataFrame",
+          "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas Series",
+          "url": "https://www.w3schools.com/python/pandas/pandas_series.asp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pandas DataFrames",
+          "url": "https://www.w3schools.com/python/pandas/pandas_dataframes.asp"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:sets",
+      "topic_slug": "sets",
+      "node_id": "GvV_thqIC0yXyJbJt_Zmu",
+      "title": "Sets",
+      "description": "Sets are unordered collections of unique values. They support mathematical set operations like union, intersection, and difference. They are useful for finding unique values, checking membership, and comparing two groups of items.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Sets",
+          "url": "https://docs.python.org/3/tutorial/datastructures.html#sets"
+        },
+        {
+          "raw_type": "video",
+          "title": "What are Sets in Python? Python Tutorial for Absolute Beginners",
+          "url": "https://www.youtube.com/watch?v=t9j8lCUGZXo"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:sql-fundamentals",
+      "topic_slug": "sql-fundamentals",
+      "node_id": "E_r4BLrSyHkrxpg4HDkUm",
+      "title": "SQL Fundamentals",
+      "description": "SQL (Structured Query Language) is the standard language for querying relational databases. Data analysts use SQL to extract, filter, aggregate, and join data from databases before loading it into Python for further analysis. Python provides several libraries for running SQL queries directly from code.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "SQL Tutorial - Mode",
+          "url": "https://www.thoughtspot.com/sql-tutorial"
+        },
+        {
+          "raw_type": "article",
+          "title": "SQL Tutorial",
+          "url": "https://www.sqltutorial.org/"
+        },
+        {
+          "raw_type": "video",
+          "title": "SQL Tutorial - Full Database Course for Beginners",
+          "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:sqlalchemy",
+      "topic_slug": "sqlalchemy",
+      "node_id": "k63rFXaVDUX2ZOVI_O9WG",
+      "title": "SQLAlchemy",
+      "description": "SQLAlchemy is a Python SQL toolkit and object-relational mapper (ORM) that provides a unified interface for connecting to many database backends including PostgreSQL, MySQL, SQLite, and others. It is used with Pandas via `pd.read_sql()` to load query results directly into DataFrames.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "SQLAlchemy",
+          "url": "https://www.sqlalchemy.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering SQLAlchemy: A Comprehensive Guide for Python Developers",
+          "url": "https://medium.com/@ramanbazhanau/mastering-sqlalchemy-a-comprehensive-guide-for-python-developers-ddb3d9f2e829"
+        },
+        {
+          "raw_type": "video",
+          "title": "SQLAlchemy: The BEST SQL Database Library in Python",
+          "url": "https://www.youtube.com/watch?v=aAy-B6KPld8"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:sqlite3",
+      "topic_slug": "sqlite3",
+      "node_id": "-RepeaHp66GGuM66k9JHd",
+      "title": "sqlite3",
+      "description": "`sqlite3` is Python's built-in library for working with SQLite databases. SQLite is a lightweight, file-based relational database that requires no server setup. It is commonly used for local data storage, prototyping, and working with small to medium datasets entirely within Python.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "sqlite3",
+          "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-tutorial"
+        },
+        {
+          "raw_type": "video",
+          "title": "Sqlite 3 Python Tutorial in 5 minutes",
+          "url": "https://www.youtube.com/watch?v=girsuXz0yA8"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:statistics--ml",
+      "topic_slug": "statistics--ml",
+      "node_id": "KLXFKVb-EC5WOigI63y09",
+      "title": "Statistics & ML",
+      "description": "Python has a rich ecosystem of libraries for statistical analysis and machine learning. SciPy extends NumPy with statistical tests, optimization, and signal processing. Scikit-learn provides a consistent API for building, evaluating, and deploying machine learning models. Together they cover the analytical needs of most data analysis work.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python Statistics Fundamentals: How to Describe Your Data",
+          "url": "https://realpython.com/python-statistics/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Mastering Probability and Statistics in Python",
+          "url": "https://www.youtube.com/playlist?list=PLVgEzPHodXi1wT9OK8B_W6Hs8Xc-gaG6N"
+        },
+        {
+          "raw_type": "video",
+          "title": "Machine Learning Tutorial Python | Machine Learning For Beginners",
+          "url": "https://www.youtube.com/playlist?list=PLeo1K3hjS3uvCeTYTeyfe0-rN5r8zn9rw"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:streamlit",
+      "topic_slug": "streamlit",
+      "node_id": "Z-inS5OKdXi6yveKgxMeC",
+      "title": "Streamlit",
+      "description": "Streamlit is an open-source Python framework for building interactive data applications with minimal code. A Streamlit app is a Python script where each widget (slider, dropdown, text input) triggers a rerun of the script with the new value. It is popular for rapidly prototyping and sharing data analysis tools and ML demos.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Tutorials",
+          "url": "https://docs.streamlit.io/develop/tutorials"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started with Streamlit",
+          "url": "https://www.pythonguis.com/tutorials/getting-started-with-streamlit/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Streamlit: The Fastest Way To Build Python Apps?",
+          "url": "https://www.youtube.com/watch?v=D0D4Pa22iG0"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:strings",
+      "topic_slug": "strings",
+      "node_id": "F-0Rxwu_RcNF_NOoFHoo7",
+      "title": "Strings",
+      "description": "Strings (`str`) represent text data. Column names, categorical values, labels, and file paths are all strings. Python provides extensive string methods for cleaning, parsing, and transforming text data, and the `re` module adds regex-based pattern matching.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Built-in Types",
+          "url": "https://docs.python.org/3/library/stdtypes.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "str",
+          "url": "https://realpython.com/ref/builtin-types/str/"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:strip-replace-split",
+      "topic_slug": "strip-replace-split",
+      "node_id": "S1EzGF-CLu7tWDb1V6RQc",
+      "title": "strip, replace, split",
+      "description": "`strip()` removes leading and trailing whitespace from a string. `replace()` substitutes one substring with another. `split()` divides a string into a list based on a delimiter. These three methods are among the most used for basic text cleaning, applied either to Python strings directly or through the Pandas `.str` accessor on a column.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python String Methods: split, join, replace, strip & More",
+          "url": "https://devnook.dev/cheatsheets/python-string-methods-cheatsheet/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python String Methods",
+          "url": "https://www.w3schools.com/PYTHON/python_ref_string.asp"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:subplots-and-figures",
+      "topic_slug": "subplots-and-figures",
+      "node_id": "GRg7HyeVuSwkKD5bCOFiY",
+      "title": "Subplots and figures",
+      "description": "Matplotlib's `Figure` is the top-level container, and `Axes` objects are the individual plots within it. `plt.subplots(rows, cols)` creates a grid of axes for displaying multiple plots side by side. Subplots are used to compare distributions across groups or to show multiple related variables in one figure.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create multiple subplots using plt.subplots",
+          "url": "https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Matplotlib: Part 4. Subplots, Layouts, and Advanced Customizations",
+          "url": "https://medium.com/@ebimsv/mastering-matplotlib-part-4-subplots-layouts-and-advanced-customizations-2f07c4a99e80"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to Multi-figure Layouts",
+          "url": "https://codesignal.com/learn/courses/customizing-and-styling-plots/lessons/multi-figure-layouts-with-matplotlib"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:tuples",
+      "topic_slug": "tuples",
+      "node_id": "olniprgaL7l-9YhwbFfmN",
+      "title": "Tuples",
+      "description": "Tuples are ordered, immutable sequences. Unlike lists, their contents cannot be changed after creation. They are used to represent fixed collections of values, such as coordinate pairs, function return values, and dictionary keys where immutability is required.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Tuple",
+          "url": "https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python Tuples",
+          "url": "https://www.youtube.com/watch?v=w6hL_dszMxk"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:type-casting",
+      "topic_slug": "type-casting",
+      "node_id": "NjCor7ePiZapd4f6bMZlV",
+      "title": "Type Casting",
+      "description": "Type casting converts a value from one data type to another using built-in functions like `int()`, `float()`, `str()`, and `bool()`. It is frequently needed when data is loaded with incorrect types, such as numbers stored as strings or booleans stored as integers.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Python Type Conversion",
+          "url": "https://www.programiz.com/python-programming/type-conversion-and-casting"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn type casting in 7 minutes!",
+          "url": "https://www.youtube.com/watch?v=Qtq83lAoogM"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:uv",
+      "topic_slug": "uv",
+      "node_id": "0w4i0aavs0j2hl9Fbqy4Y",
+      "title": "uv",
+      "description": "uv is a Python package and project manager written in Rust. It handles dependency installation, virtual environments, Python version management, and project builds in a single tool, replacing the need for separate tools like pip, pip-tools, virtualenv, and pyenv. It resolves and installs packages significantly faster than pip because of its Rust-based resolver and aggressive caching. Developers us",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "uv",
+          "url": "https://docs.astral.sh/uv/"
+        },
+        {
+          "raw_type": "article",
+          "title": "uv vs pip: Managing Python Packages and Dependencies",
+          "url": "https://realpython.com/uv-vs-pip/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python Tutorial: UV",
+          "url": "https://www.youtube.com/watch?v=AMdG7IjgSPM"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:variance--std-deviation",
+      "topic_slug": "variance--std-deviation",
+      "node_id": "nZl1ngETFxKStt0tFvOpR",
+      "title": "Variance & Std. Deviation",
+      "description": "Variance measures the average squared deviation from the mean, and standard deviation is its square root in the original units. Both quantify how spread out data values are. Pandas computes them with `var()` and `std()`. A high standard deviation relative to the mean signals high variability in the data.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "A Guide to Metrics in Exploratory Data Analysis",
+          "url": "https://towardsdatascience.com/a-guide-to-metrics-in-exploratory-data-analysis-250b33f72297/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Calculate Standard Deviation & Variance in Python",
+          "url": "https://www.youtube.com/watch?v=p4H2b2x_nWc"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:virtualenv--venv",
+      "topic_slug": "virtualenv--venv",
+      "node_id": "IL0fFEs4CgK_eBft-SYAl",
+      "title": "virtualenv / venv",
+      "description": "`venv` is Python's built-in tool for creating isolated virtual environments. Each environment has its own Python interpreter and installed packages, preventing conflicts between projects. `virtualenv` is a third-party alternative with additional features. Virtual environments are a best practice for keeping project dependencies separate.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "venv \u2014 Creation of virtual environments",
+          "url": "https://docs.python.org/3/library/venv.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Python Virtual Environment",
+          "url": "https://www.w3schools.com/python/python_virtualenv.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python Virtual Environments - Full Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=Y21OR1OPC9A"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:visual-inspection",
+      "topic_slug": "visual-inspection",
+      "node_id": "UIFNQ9g5fMK-KoZCrqv27",
+      "title": "Visual Inspection",
+      "description": "Visual inspection uses charts to identify outliers and anomalies that statistical thresholds might miss. Box plots show the IQR and flag points beyond the whiskers. Scatter plots reveal isolated points far from the main cluster. Histograms expose unusual spikes or gaps. Visual inspection is always a valuable complement to numerical outlier detection.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using Boxplot To Identify Outliers For Continuous Variables",
+          "url": "https://yashvaantlakham73.medium.com/26-pandas-data-cleaning-using-boxplot-to-identify-outliers-for-continuous-variables-6ace0e6023dd"
+        },
+        {
+          "raw_type": "article",
+          "title": "5 Powerful Techniques with UDFs for Data Cleaning and 5 Graphical Methods",
+          "url": "https://medium.com/@satyamdatasci/outlier-detection-in-python-5-powerful-techniques-with-udfs-for-data-cleaning-and-5-graphical-db053e7cf9bf"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:vs-code",
+      "topic_slug": "vs-code",
+      "node_id": "ObA_xZDY7PxU54NGBwyVI",
+      "title": "VS Code",
+      "description": "Visual Studio Code is a lightweight, extensible code editor that supports Python development through extensions. With the Python and Jupyter extensions installed, VS Code supports notebooks, debugging, linting, and IntelliSense. It is a popular choice for analysts who want more IDE features than a browser-based notebook provides.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Jupyter Notebooks in VS Code",
+          "url": "https://code.visualstudio.com/docs/datascience/jupyter-notebooks"
+        },
+        {
+          "raw_type": "video",
+          "title": "Getting Started with Jupyter Notebooks in VS Code",
+          "url": "https://www.youtube.com/watch?v=suAkMeWJ1yE"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:working-with-strings",
+      "topic_slug": "working-with-strings",
+      "node_id": "Sg5w8zO2Ji-uDJKEoWey9",
+      "title": "Working with Strings",
+      "description": "Python provides a rich set of string methods for manipulating text: `strip()`, `split()`, `replace()`, `upper()`, `lower()`, `startswith()`, `endswith()`, and many more. These methods are applied directly to strings or through Pandas' `.str` accessor for vectorized text cleaning on entire columns.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "string \u2014 Common string operations",
+          "url": "https://docs.python.org/3/library/string.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Useful String Methods in Python",
+          "url": "https://towardsdatascience.com/useful-string-methods-in-python-5047ea4d3f90/"
+        },
+        {
+          "raw_type": "video",
+          "title": "String methods in Python are easy! \u3030\ufe0f",
+          "url": "https://www.youtube.com/watch?v=tb6EYiHtcXU"
+        },
+        {
+          "raw_type": "video",
+          "title": "Python Tutorial for Beginners 2: Strings",
+          "url": "https://www.youtube.com/watch?v=k9TUPpGqYTo"
+        }
+      ]
+    },
+    {
+      "skill_id": "python-data-analysis:z-score",
+      "topic_slug": "z-score",
+      "node_id": "2HIeG6ywOA9BkE9W3Gu9v",
+      "title": "Z-score",
+      "description": "A Z-score measures how many standard deviations a value is from the mean. Values with a Z-score above 3 or below \u22123 are commonly flagged as outliers. Z-scores are calculated using `scipy.stats.zscore()` or manually and work best when the data is approximately normally distributed.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to Find Outliers",
+          "url": "https://codingnomads.com/how-to-find-outliers"
+        },
+        {
+          "raw_type": "video",
+          "title": "Outlier detection and removal: z score, standard deviation",
+          "url": "https://www.youtube.com/watch?v=KFuEAGR3HS4"
+        }
+      ]
+    }
+  ]
+}

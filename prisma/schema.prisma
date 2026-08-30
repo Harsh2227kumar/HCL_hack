@@ -75,6 +75,7 @@ model GoalTemplate {
   goalName       String   @unique
   requiredSkills Json     // [{ skill: string, min_level: number }]
   profiles       LearnerProfile[]
+  embedding      Unsupported("vector(3072)")?
 }
 
 model LearningResource {

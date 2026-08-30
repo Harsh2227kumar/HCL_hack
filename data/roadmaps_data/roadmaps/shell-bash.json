@@ -1,0 +1,3831 @@
+{
+  "roadmap": "shell-bash",
+  "topic_count": 174,
+  "topics": [
+    {
+      "skill_id": "shell-bash:0",
+      "topic_slug": "0",
+      "node_id": "pgZIDDxAP9mOtEI0HL3l-",
+      "title": "$0 in Shell Scripting",
+      "description": "In shell scripting, `$0` is a special variable that holds the name of the script being executed. It essentially represents the command used to invoke the script. This can be the script's filename, or if the script was invoked with a path, it will contain that path. `$0` is useful for identifying the script itself within the script's code, for example, in logging or error messages.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understanding Special Parameters in Linux Shell Scripting",
+          "url": "https://medium.com/@tradingcontentdrive/understanding-special-parameters-in-linux-shell-scripting-0-62768f49fb34"
+        },
+        {
+          "raw_type": "video",
+          "title": "Using BASH Script Arguments",
+          "url": "https://www.youtube.com/watch?v=vsRBWCfMf9A"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:1-2-3",
+      "topic_slug": "1-2-3",
+      "node_id": "DiYuY3M3eD1WKO5w16Swa",
+      "title": "Positional Parameters",
+      "description": "Positional parameters in shell scripting are variables that hold the command-line arguments passed to a script. These parameters are represented by special variables like `$1`, `$2`, `$3`, and so on, where each number corresponds to the order in which the argument was provided when the script was executed. `$1` holds the first argument, `$2` the second, and so forth, allowing scripts to access and",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Positional Parameters",
+          "url": "https://adminschoice.com/bash-positional-parameters/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Positional Parameters",
+          "url": "https://www.gnu.org/software/bash/manual/html_node/Positional-Parameters.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:",
+      "topic_slug": "",
+      "node_id": "2Fh0NFuNxuc-wU3VXv8Zj",
+      "title": "$*",
+      "description": "`$*` is a special variable in shell scripting that expands to all the positional parameters (arguments) passed to a script or function. It represents all the arguments as a single string, with each argument separated by the first character of the `IFS` (Internal Field Separator) variable, which defaults to a space, tab, and newline. This allows you to easily access and iterate over all the argumen",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understanding Special Parameters in Linux Shell Scripting",
+          "url": "https://medium.com/@tradingcontentdrive/understanding-special-parameters-in-linux-shell-scripting-0-62768f49fb34"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:",
+      "topic_slug": "",
+      "node_id": "Pr8XdVGYBIuCyRW4w45sa",
+      "title": "Square Bracket Wildcards in Shell/Bash",
+      "description": "Square brackets `[]` in shell wildcards define a character class, matching any single character _within_ the brackets. This allows you to specify a range or set of characters to match in a filename or string. For example, `[abc]` will match either 'a', 'b', or 'c'. You can also use ranges like `[a-z]` to match any lowercase letter or `[0-9]` to match any digit. A caret `^` inside the brackets nega",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Standard Wildcards / Globbing Patterns in Linux",
+          "url": "https://www.putorius.net/standard-wildcards-globbing-patterns-in.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "wildcards in linux | asterisk , question mark , square brackets , curly brackets , escape character",
+          "url": "https://www.youtube.com/watch?v=_J9JwnIzJ9o"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:",
+      "topic_slug": "",
+      "node_id": "VLzMSaoVA46PTLHwZtDUx",
+      "title": "Script Arguments using $@",
+      "description": "`$@` is a special variable in shell scripting that expands to all the positional parameters (arguments) passed to a script. Each argument is treated as a separate word, even if it contains spaces, ensuring that the script receives and processes each argument individually. This is particularly useful when you need to iterate over or manipulate each argument provided to your script.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understanding Special Parameters in Linux Shell Scripting:",
+          "url": "https://medium.com/@tradingcontentdrive/understanding-special-parameters-in-linux-shell-scripting-0-62768f49fb34"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:",
+      "topic_slug": "",
+      "node_id": "X6aVYPapBn-EC9Dw6LMDB",
+      "title": "Asterisk Wildcard",
+      "description": "The asterisk (\\*) is a wildcard character that represents zero or more characters. It's used in commands and file paths to match multiple files or directories based on a pattern. For example, `*.txt` will match all files ending with \".txt\", and `data*` will match files or directories starting with \"data\".",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Wildcards",
+          "url": "https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm"
+        },
+        {
+          "raw_type": "article",
+          "title": "Wildcard characters in Shell Script Linux",
+          "url": "https://nkugwamarkwilliam.medium.com/wildcard-characters-in-shell-script-linux-6e885b624565"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Globbing Basics! How to use wildcards on the shell",
+          "url": "https://www.youtube.com/watch?v=gsucx2W-9sg"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:",
+      "topic_slug": "",
+      "node_id": "hoRtqMV7B23bBJFI-RWRB",
+      "title": "Number of Script Arguments ($#)",
+      "description": "`$#` is a special variable in shell scripting that represents the number of arguments passed to a script when it is executed. It's a simple integer value that allows you to determine how many inputs the user provided when running your script, enabling you to write logic that handles different scenarios based on the number of arguments.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understanding Special Parameters in Linux Shell Scripting",
+          "url": "https://medium.com/@tradingcontentdrive/understanding-special-parameters-in-linux-shell-scripting-0-62768f49fb34"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:",
+      "topic_slug": "",
+      "node_id": "hxjqlxolS_ahtro4T0EKG",
+      "title": "Exit Codes and $?",
+      "description": "Exit codes are numerical values returned by a program or script upon completion, signaling whether it executed successfully or encountered an error. The special variable `$?` in Bash stores the exit code of the most recently executed command. A value of 0 typically indicates success, while any non-zero value signifies failure, with different numbers often representing specific error types.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "$? - Linux Bash Shell Scripting Tutorial Wiki",
+          "url": "https://bash.cyberciti.biz/guide/$%3F"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:",
+      "topic_slug": "",
+      "node_id": "mYg9d8e0_XjtXBqBYtaaL",
+      "title": "Curly Braces Wildcards",
+      "description": "Curly braces `{}` are used for multiple matches. Each string can be an exact name, or a wildcard. It will find anything that matches any of the given strings using an or relationship (one OR the other). For example, `touch file{1,2,3}.txt` will create three files: `file1.txt`, `file2.txt`, and `file3.txt`.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Standard Wildcards / Globbing Patterns in Linux",
+          "url": "https://www.putorius.net/standard-wildcards-globbing-patterns-in.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "wildcards in linux | asterisk , question mark , square brackets , curly brackets , escape character",
+          "url": "https://www.youtube.com/watch?v=_J9JwnIzJ9o"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:",
+      "topic_slug": "",
+      "node_id": "qG71FX6DwRm1rdtjtN78u",
+      "title": "Wildcard Question Mark (?)",
+      "description": "The question mark (?) wildcard is a single-character wildcard. It matches exactly one occurrence of any character. This means that when used in a pattern, it will be replaced by any single character in a filename or string, allowing you to match files or strings with slight variations in their names or content.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How To Use Unix Wildcards",
+          "url": "https://www.warp.dev/terminus/linux-wildcards"
+        },
+        {
+          "raw_type": "article",
+          "title": "Wildcard characters in Shell Script Linux",
+          "url": "https://nkugwamarkwilliam.medium.com/wildcard-characters-in-shell-script-linux-6e885b624565"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Globbing Basics! How to use wildcards on the shell",
+          "url": "https://www.youtube.com/watch?v=gsucx2W-9sg"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:apt",
+      "topic_slug": "apt",
+      "node_id": "nfyh2co43xfR9DJbNnM_Y",
+      "title": "apt",
+      "description": "`apt` (Advanced Package Tool) is a command-line package management system used primarily on Debian-based Linux distributions like Ubuntu. It simplifies the process of installing, updating, removing, and managing software packages by retrieving them from configured repositories and handling dependencies automatically. `apt` provides a user-friendly interface for interacting with the underlying Debi",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "apt Command in Linux",
+          "url": "https://linuxize.com/post/how-to-use-apt-command/"
+        },
+        {
+          "raw_type": "article",
+          "title": "apt Linux Command with Examples",
+          "url": "https://phoenixnap.com/kb/apt-linux"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The apt Command",
+          "url": "https://www.youtube.com/watch?v=1kicKTbK768"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:arithmetic-expansion",
+      "topic_slug": "arithmetic-expansion",
+      "node_id": "LHoR6krZTuJW5BGiKf_AT",
+      "title": "Arithmetic Expansion",
+      "description": "Arithmetic expansion allows you to perform mathematical calculations directly within your shell scripts. It uses the `$((...))` syntax to evaluate expressions, treating the contents inside the parentheses as an arithmetic expression. This enables you to perform operations like addition, subtraction, multiplication, division, and modulo, and assign the results to variables or use them in conditiona",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Arithmetic Expansion (Bash Reference Manual)",
+          "url": "https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Math Operations (Bash Arithmetic) Explained {+11 Examples}",
+          "url": "https://phoenixnap.com/kb/bash-math"
+        },
+        {
+          "raw_type": "video",
+          "title": "Arithmetic Expressions - Bash Programming Tutorial 4",
+          "url": "https://www.youtube.com/watch?v=rjuB3X8MOQc"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:arithmetic",
+      "topic_slug": "arithmetic",
+      "node_id": "60ika3rjs42VIk-3AcOdq",
+      "title": "Arithmetic Operators in Bash",
+      "description": "Arithmetic operators in Bash are symbols used to perform mathematical calculations within shell scripts. These operators allow you to add, subtract, multiply, divide, and find the remainder of numbers directly within your scripts, enabling you to perform calculations and manipulate numerical data. Bash primarily uses integer arithmetic, but there are ways to work with floating-point numbers as wel",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Math Operations (Bash Arithmetic) Explained",
+          "url": "https://phoenixnap.com/kb/bash-math"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Operators",
+          "url": "https://www.w3schools.com/bash/bash_operators.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Arithmetic Expressions - Bash Programming Tutorial",
+          "url": "https://www.youtube.com/watch?v=rjuB3X8MOQc"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:arrays",
+      "topic_slug": "arrays",
+      "node_id": "4WFWrrcvLgU8Fz8RjQ4lf",
+      "title": "Arrays",
+      "description": "Arrays are ordered collections of elements, where each element can be accessed using an index. They allow you to store multiple values under a single variable name, making it easier to manage and manipulate related data. In Bash, arrays can hold strings or numbers, and they are indexed starting from zero.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Arrays",
+          "url": "https://www.w3schools.com/bash/bash_arrays.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Arrays in Pure Bash - You Suck at Programming",
+          "url": "https://www.youtube.com/watch?v=r4Sc-DpIprk"
+        },
+        {
+          "raw_type": "video",
+          "title": "Arrays in Bash Explained in 7 Minutes! - Indexed, Associative, and Nested / Multi-Dimensional",
+          "url": "https://www.youtube.com/watch?v=asHJ-xfuyno"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:associative-arrays",
+      "topic_slug": "associative-arrays",
+      "node_id": "YM7wA4MgeailSoXR_03Qx",
+      "title": "Associative Arrays",
+      "description": "Associative arrays, also known as dictionaries or hash maps in other programming languages, are data structures that store key-value pairs. Unlike regular arrays which use numerical indexes to access elements, associative arrays use strings (or other data types in some languages) as keys. This allows you to retrieve values based on meaningful names rather than just positions.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Associative arrays in Bash",
+          "url": "https://rednafi.com/misc/associative-arrays-in-bash/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Creating And Using An Associative Array In A Bash Script | by Linux Root Room",
+          "url": "https://medium.com/@linuxrootroom/create-and-use-associative-array-in-bash-script-5f4e32a00577"
+        },
+        {
+          "raw_type": "video",
+          "title": "Arrays in Bash Explained in 7 Minutes! - Indexed, Associative, and Nested / Multi-Dimensional",
+          "url": "https://www.youtube.com/watch?v=asHJ-xfuyno"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:at",
+      "topic_slug": "at",
+      "node_id": "Wny7lCxP2M1FaoUYDD7Gf",
+      "title": "at",
+      "description": "The `at` command in Unix-like operating systems is used to schedule commands to be executed at a specific time. It allows you to specify a time and date, and then provide a command that will be run automatically at that designated time. This is useful for automating tasks that need to be performed at a later time without requiring manual intervention.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "At Command in Linux",
+          "url": "https://linuxize.com/post/at-command-in-linux/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use the Linux at Command",
+          "url": "https://phoenixnap.com/kb/linux-at-command"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use The \"at\" Command On Linux",
+          "url": "https://www.youtube.com/watch?v=0Lvvw4yA6Ag"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:awk",
+      "topic_slug": "awk",
+      "node_id": "GXF6SSkYtVyGYB_LFSIpe",
+      "title": "Awk for Numeric Operations",
+      "description": "Awk is a powerful text processing tool that can also perform numeric calculations. It reads input line by line and executes a set of instructions for each line. These instructions can include arithmetic operations, comparisons, and variable assignments, making awk useful for tasks like calculating sums, averages, and performing other data manipulations directly within the shell.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How To Use awk In Bash Scripting",
+          "url": "https://www.cyberciti.biz/faq/bash-scripting-using-awk/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash awk - Pattern Scanning and Processing Language",
+          "url": "https://www.w3schools.com/bash/bash_awk.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learning Awk Is Essential For Linux Users",
+          "url": "https://www.youtube.com/watch?v=9YOZmI-zWok"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:awk",
+      "topic_slug": "awk",
+      "node_id": "Jh1gVJvhe-H22VB4hnbuU",
+      "title": "awk",
+      "description": "`awk` is a powerful text processing tool in Unix-like operating systems. It scans input files line by line, searching for lines that match a specified pattern. When a matching line is found, `awk` performs a specified action on that line, such as printing it, modifying it, or extracting specific fields. It's particularly useful for manipulating data within files and generating reports.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "AWK command in Linux/Unix | DigitalOcean",
+          "url": "https://www.digitalocean.com/community/tutorials/awk-command-linux-unix"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Linux AWK Command \u2013 Linux and Unix Usage Syntax Examples",
+          "url": "https://www.freecodecamp.org/news/the-linux-awk-command-linux-and-unix-usage-syntax-examples/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - awk",
+          "url": "https://www.youtube.com/watch?v=oPEnvuj9QrI"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:bash--n",
+      "topic_slug": "bash--n",
+      "node_id": "_UDEyH6hECoOoXcbcXTLy",
+      "title": "Bash -n",
+      "description": "The `bash -n` option is a debugging tool that allows you to perform a syntax check on your Bash script without actually executing it. This is useful for identifying errors like typos, missing keywords, or incorrect syntax before running the script and potentially causing unintended consequences. It essentially parses the script and reports any syntax errors it finds.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Script \u2018-n\u2019 Operator Explained: Evaluating Expressions",
+          "url": "https://ioflood.com/blog/n-flag-in-bash/"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:bash-alias",
+      "topic_slug": "bash-alias",
+      "node_id": "LlxpR2LiAr9uKMXEXTk0H",
+      "title": "Bash Alias",
+      "description": "A Bash alias is a shortcut or a custom name you assign to a command or a sequence of commands. Instead of typing a long command every time, you can create an alias that represents it. When you type the alias in the terminal, Bash replaces it with the original command before executing it. This simplifies command-line usage and improves efficiency.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Alias",
+          "url": "https://www.w3schools.com/bash/bash_alias.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - Bash Aliases",
+          "url": "https://www.youtube.com/watch?v=Ok_kD_sgNcs"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:bash-data-types",
+      "topic_slug": "bash-data-types",
+      "node_id": "vM0Y4fao-pNjNjWYCJve3",
+      "title": "Bash Data Types",
+      "description": "Bash, unlike some other programming languages, doesn't have explicit data types like integers, floats, or strings that you need to declare. Instead, everything is treated as a string. However, Bash can perform arithmetic operations on strings that contain numbers, effectively treating them as numerical values when needed. Arrays are also supported, allowing you to store collections of string value",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Data Types",
+          "url": "https://www.w3schools.com/bash/bash_data_types.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Type System of Bash",
+          "url": "https://www.celantur.com/blog/bash-type-system/"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:bash-debug",
+      "topic_slug": "bash-debug",
+      "node_id": "6hXvAV0R7FlJ8UkQzRzMZ",
+      "title": "Bash Debug",
+      "description": "The Bash Debug extension for VS Code, powered by `bashdb`, allows you to debug Bash scripts directly within the VS Code editor. It provides features like breakpoints, stepping through code, inspecting variables, and evaluating expressions, making it easier to identify and fix errors in your Bash scripts. This helps streamline the debugging process, offering a more visual and interactive experience",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "vscode-bash-debug",
+          "url": "https://github.com/rogalmic/vscode-bash-debug"
+        },
+        {
+          "raw_type": "official",
+          "title": "Bash Debug",
+          "url": "https://marketplace.visualstudio.com/items?itemName=rogalmic.bash-debug"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:bash-operators",
+      "topic_slug": "bash-operators",
+      "node_id": "Co0k7A7MyQoELnPwPU10m",
+      "title": "Bash Operators",
+      "description": "Bash operators are special symbols or characters that perform specific actions or comparisons within a Bash script or command line. They are fundamental building blocks for controlling program flow, manipulating data, and performing various operations like arithmetic calculations, string comparisons, file manipulations, and logical evaluations. Understanding and using these operators effectively i",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Operators",
+          "url": "https://www.w3schools.com/bash/bash_operators.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Operators",
+          "url": "https://tldp.org/LDP/abs/html/ops.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:bash-script-anatomy",
+      "topic_slug": "bash-script-anatomy",
+      "node_id": "nMFXyeZ8I5jAPfs16Jixn",
+      "title": "Bash Script Anatomy",
+      "description": "A Bash script is essentially a plain text file containing a series of commands that the Bash interpreter executes sequentially. It typically starts with a shebang line specifying the interpreter to use, followed by comments explaining the script's purpose, and then the actual commands that perform the desired actions, including variable assignments, control structures (like loops and conditional s",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Bash Scripting",
+          "url": "https://linuxhandbook.com/courses/bash/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Script",
+          "url": "https://www.w3schools.com/bash/bash_script.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Scripting Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=tK9Oc6AEnR4"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:bash",
+      "topic_slug": "bash",
+      "node_id": "EqgAG1t05RuiAO1TXRq4Y",
+      "title": "Bash",
+      "description": "Bash, short for Bourne Again Shell, is a command-line interpreter and a shell scripting language. It's a program that allows users to interact with the operating system by typing commands. Bash interprets these commands and instructs the operating system to perform specific actions, making it a fundamental tool for system administration, automation, and software development.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "https://en.wikipedia.org/wiki/Bash_(Unix_shell)#:~:text=Bash (short for \"Bourne Again,Chet Ramey)",
+          "url": "https://en.wikipedia.org/wiki/Bash_(Unix_shell"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Tutorial",
+          "url": "https://www.w3schools.com/bash/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Scripting Full Course 3 Hours",
+          "url": "https://www.youtube.com/watch?v=e7BufAVwDiM"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Scripting Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=tK9Oc6AEnR4"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:basic-editor-ops",
+      "topic_slug": "basic-editor-ops",
+      "node_id": "WbZu0zM2d56LiGauOp8ub",
+      "title": "Basic Editor Operations",
+      "description": "Basic editor operations involve fundamental actions performed within a text editor to create, modify, and manage files. These operations include opening, saving, and closing files, as well as inserting, deleting, copying, and pasting text. Navigating through a file, searching for specific content, and replacing text are also key components of basic editor operations.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Beginner's Guide to Nano Text Editor",
+          "url": "https://itsfoss.com/nano-editor-guide/"
+        },
+        {
+          "raw_type": "article",
+          "title": "GNU Emacs - Guided Tour",
+          "url": "https://www.gnu.org/software/emacs/tour/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - nano (command-line text editor)",
+          "url": "https://www.youtube.com/watch?v=DLeATFgGM-A"
+        },
+        {
+          "raw_type": "video",
+          "title": "The Basics of Emacs as a Text Editor",
+          "url": "https://www.youtube.com/watch?v=jPkIaqSh3cA"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:basic-regex-syntax",
+      "topic_slug": "basic-regex-syntax",
+      "node_id": "qNsNJrqwsGtumOM2STB8u",
+      "title": "Basic Regex Syntax",
+      "description": "Regular expressions (regex) are sequences of characters that define a search pattern. They are used to match, locate, and manipulate text based on patterns. Basic regex syntax involves using special characters and metacharacters to represent different types of patterns, such as specific characters, character classes, repetitions, and anchors within a string. These patterns are then used by tools l",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Regular expressions",
+          "url": "https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_04_01.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Regular expressions",
+          "url": "https://computing.stat.berkeley.edu/tutorial-using-bash/regex.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Regex Tutorial for Beginners (regular expressions)",
+          "url": "https://www.fullstackfoundations.com/blog/bash-regex"
+        },
+        {
+          "raw_type": "video",
+          "title": "Regular Expressions for Beginners",
+          "url": "https://www.youtube.com/watch?v=NhcaKdt3NdM"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:bc",
+      "topic_slug": "bc",
+      "node_id": "B2g_optsVEtw-5vRYIpgb",
+      "title": "bc",
+      "description": "`bc` is a command-line utility for arbitrary-precision arithmetic. It allows you to perform calculations with numbers of any size and with a specified level of decimal precision, making it suitable for tasks where standard shell arithmetic is insufficient. `bc` can be used interactively or non-interactively, reading expressions from standard input or from files.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Linux Handbook | bc command in Linux",
+          "url": "https://linuxhandbook.com/bc-command/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Linux bc Command with Examples",
+          "url": "https://phoenixnap.com/kb/linux-bc"
+        },
+        {
+          "raw_type": "video",
+          "title": "Shell Scripting Tutorial for Beginners 11 - Floating point math operations in bash | bc Command",
+          "url": "https://www.youtube.com/watch?v=yqpY-Wk-i9k"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:break-continue",
+      "topic_slug": "break-continue",
+      "node_id": "Wl39zpLh6alsMkn0YZ9-N",
+      "title": "Break and Continue in Loops",
+      "description": "`break` and `continue` are control flow statements used within loops to alter their execution. The `break` statement immediately terminates the loop, transferring control to the next statement after the loop. The `continue` statement skips the rest of the current iteration of the loop and proceeds to the next iteration.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Loops",
+          "url": "https://www.w3schools.com/bash/bash_loops.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash break and continue",
+          "url": "https://linuxize.com/post/bash-break-continue/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Break and continue",
+          "url": "https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_05.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Shell Scripting Tutorial - Break & Continue Statement",
+          "url": "https://www.youtube.com/watch?v=3Dg6j_zSk_0"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:brew",
+      "topic_slug": "brew",
+      "node_id": "d8jGE833q0Wf6gB3DZil4",
+      "title": "Homebrew",
+      "description": "Homebrew is a package manager for macOS (and Linux). It simplifies the installation of software on these operating systems by automating the process of downloading, compiling, and installing software packages from the command line. It's often used to install tools and utilities that aren't included by default in the operating system.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "brew",
+          "url": "https://brew.sh/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Install and Use Homebrew on Linux",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-linux"
+        },
+        {
+          "raw_type": "video",
+          "title": "Homebrew Tutorial: Simplify Software Installation on Mac Using This Package Manager",
+          "url": "https://www.youtube.com/watch?v=SELYgZvAZbU"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:bzip2-xz",
+      "topic_slug": "bzip2-xz",
+      "node_id": "qedrcO4QA2ZxV24l0Q6Or",
+      "title": "bzip2 and xz",
+      "description": "`bzip2` and `xz` are command-line tools used for file compression in Unix-like operating systems. They reduce the size of files, making them easier to store and transfer. `bzip2` generally offers higher compression than `gzip` but is slower, while `xz` provides even better compression ratios and is often used for distributing software packages, though it can be slower than both `gzip` and `bzip2`.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Guide to the Linux bzip2 Command With Examples",
+          "url": "https://www.baeldung.com/linux/bzip2-guide"
+        },
+        {
+          "raw_type": "article",
+          "title": "Learn XZ (Lossless Data Compression Tool) in Linux with Examples",
+          "url": "https://www.tecmint.com/xz-command-examples-in-linux/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn About These Tools!! Compressing and Archiving Files in the Linux Console (tar, xz, bzip2, zip)",
+          "url": "https://www.youtube.com/watch?v=d4PAEbHcLVg"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:case-conversion",
+      "topic_slug": "case-conversion",
+      "node_id": "cBJbM6nl0Dy9Ru5hruzpK",
+      "title": "Case Conversion",
+      "description": "Case conversion involves changing the case of characters within a string. This typically means converting lowercase letters to uppercase, uppercase letters to lowercase, or applying title case (where the first letter of each word is capitalized). It's a common operation for standardizing data, improving readability, or fulfilling specific formatting requirements.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Shell Convert Uppercase to Lowercase in Linux",
+          "url": "https://www.cyberciti.biz/faq/linux-unix-shell-programming-converting-lowercase-uppercase/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Transform Text Case in Bash",
+          "url": "https://labex.io/tutorials/shell-how-to-transform-text-case-in-bash-391560"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Shell Scripting For Beginners - Case Statement",
+          "url": "https://www.youtube.com/watch?v=DA-Ilf15_r8"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:case",
+      "topic_slug": "case",
+      "node_id": "SSSVVAve99X8FZX9vtHlo",
+      "title": "Case Statements",
+      "description": "Case statements provide a way to execute different blocks of code based on the value of a variable or expression. They offer a structured alternative to multiple `if-elif-else` statements, making code more readable and maintainable when dealing with several possible conditions. Each condition is associated with a specific pattern, and when the variable's value matches a pattern, the corresponding ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Case statements",
+          "url": "https://linuxize.com/post/bash-case-statement/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using case statements",
+          "url": "https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Shell Scripting For Beginners - Case Statement",
+          "url": "https://www.youtube.com/watch?v=DA-Ilf15_r8"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:cat",
+      "topic_slug": "cat",
+      "node_id": "Zom0OpBLi153i8hkoYLj5",
+      "title": "cat",
+      "description": "`cat` is a command-line utility that is primarily used to display the contents of one or more files on the standard output (usually your terminal screen). It can also be used to concatenate files, meaning to combine them into a single output stream. The name \"cat\" is short for \"concatenate.\"",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash cat Command - Concatenate and Display Files",
+          "url": "https://www.w3schools.com/bash/bash_cat.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "The cat Command in Linux (Featuring Real Cats) - Linux Crash Course Series",
+          "url": "https://www.youtube.com/watch?v=z3nJlyrJYW4"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:cd",
+      "topic_slug": "cd",
+      "node_id": "9A6SE89by-1I2HmpGarLj",
+      "title": "cd",
+      "description": "`cd` is a fundamental command used to change the current working directory in a shell environment. It allows you to navigate through the file system, moving from one directory to another. By specifying a target directory as an argument, `cd` updates the shell's internal record of the current location, affecting subsequent commands that operate relative to that location.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash cd - Change Directory",
+          "url": "https://www.w3schools.com/bash/bash_cd.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "There's more to learn about the \"cd\" command. Lil' Linux Lesson!",
+          "url": "https://www.youtube.com/watch?v=ZRlQxx1rmng"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:chgrp",
+      "topic_slug": "chgrp",
+      "node_id": "zaXwK7xPsrULce1yJwhB_",
+      "title": "chgrp",
+      "description": "`chgrp` is a command-line utility used to change the group ownership of a file or directory. It allows you to specify a new group that should be associated with the file, controlling which users have specific access rights based on group membership. This is a fundamental tool for managing file access and security in Unix-like operating systems.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Permissions",
+          "url": "https://linuxcommand.org/lc3_lts0090.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - Understanding File Permissions",
+          "url": "https://www.youtube.com/watch?v=4N4Q576i3zA"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:chmod",
+      "topic_slug": "chmod",
+      "node_id": "qrqPo-pgzupCK0IxlGn7S",
+      "title": "chmod",
+      "description": "`chmod` is a command-line utility used to change the access permissions of files or directories. These permissions determine who can read, write, or execute a file. It allows you to control access to your files, ensuring security and proper functionality within a system.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Permissions",
+          "url": "https://linuxcommand.org/lc3_lts0090.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - Understanding File Permissions",
+          "url": "https://www.youtube.com/watch?v=4N4Q576i3zA"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:chown",
+      "topic_slug": "chown",
+      "node_id": "w95b7f3-7Q8qtTpyJih6B",
+      "title": "chown",
+      "description": "`chown` is a command-line utility used to change the ownership of files or directories. It allows you to modify the user and/or group associated with a file, effectively controlling who has access and what they can do with it. This is crucial for managing security and access control within a Linux or Unix-like operating system.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Permissions",
+          "url": "https://linuxcommand.org/lc3_lts0090.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - Understanding File Permissions",
+          "url": "https://www.youtube.com/watch?v=4N4Q576i3zA"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:cli-vs-gui",
+      "topic_slug": "cli-vs-gui",
+      "node_id": "86QR-PVqgvvyvJvgTIer-",
+      "title": "CLI vs GUI",
+      "description": "A Command Line Interface (CLI) is a text-based interface used to interact with a computer system by typing commands. A Graphical User Interface (GUI), on the other hand, utilizes visual elements such as windows, icons, and menus to enable users to interact with the system using a mouse, touchpad, or touchscreen.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is a CLI (Command Line Interface)?",
+          "url": "https://aws.amazon.com/what-is/cli/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Is a GUI?",
+          "url": "https://www.coursera.org/articles/gui"
+        },
+        {
+          "raw_type": "video",
+          "title": "What's the difference between a GUI and a CLI?",
+          "url": "https://www.youtube.com/watch?v=w9u0d4C95Zs"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:cmd",
+      "topic_slug": "cmd",
+      "node_id": "C7HE5jpaSIUqm6L8b9orY",
+      "title": "cmd",
+      "description": "cmd, also known as the Command Prompt, is the default command-line interpreter on Windows operating systems. It allows users to interact with the operating system by entering text-based commands. These commands can be used to navigate the file system, execute programs, and perform various system administration tasks.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Command Line Commands \u2013 CLI Tutorial",
+          "url": "https://www.freecodecamp.org/news/command-line-commands-cli-tutorial/"
+        },
+        {
+          "raw_type": "article",
+          "title": "cmd",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:command-substitution",
+      "topic_slug": "command-substitution",
+      "node_id": "BuOM-A5110MPv8325EQnM",
+      "title": "Command Substitution",
+      "description": "Command substitution allows you to use the output of a command as an argument to another command. It essentially captures the standard output of a command and inserts it into the command line of another command, enabling you to dynamically generate arguments or values based on the results of other commands. This is useful for tasks like assigning the output of a command to a variable, using the ou",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Command substitution",
+          "url": "https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Command substitution - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Command_substitution"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to use Command Substitution in Bash",
+          "url": "https://www.youtube.com/watch?v=b8U_fz0pc-g"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:comments",
+      "topic_slug": "comments",
+      "node_id": "sYzelzBxQUcz5bK1HVWam",
+      "title": "Comments",
+      "description": "Comments are explanatory notes added to code to make it easier to understand. They are ignored by the interpreter or compiler, meaning they don't affect how the program runs. They are primarily for human readers to understand the purpose and logic behind the code.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Writing Comments in Bash Scripts",
+          "url": "https://linuxize.com/post/bash-comments/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Comment in Bash",
+          "url": "https://phoenixnap.com/kb/bash-comment"
+        },
+        {
+          "raw_type": "video",
+          "title": "Comments - Bash Scripting",
+          "url": "https://www.youtube.com/watch?v=Ky9AiwIeORA"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:comparison",
+      "topic_slug": "comparison",
+      "node_id": "XUDkgfURAsI_A3v3EPZA_",
+      "title": "Comparison Operators in Bash",
+      "description": "Comparison operators in Bash are used to compare values, typically numbers or strings. These operators allow you to create conditional statements within your scripts, enabling different code blocks to execute based on whether a comparison is true or false. They are fundamental for making decisions and controlling the flow of execution in your Bash scripts.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Other Comparison Operators",
+          "url": "https://tldp.org/LDP/abs/html/comparison-ops.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Operators",
+          "url": "https://www.w3schools.com/bash/bash_operators.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Shell Scripting: Comparison Operators and If Statements",
+          "url": "https://medium.com/@kadimasam/shell-scripting-comparison-operators-and-if-statements-9e0277fd60b8"
+        },
+        {
+          "raw_type": "video",
+          "title": "Comparison Operators and Square Brackets - Bash Programming Tutorial",
+          "url": "https://www.youtube.com/watch?v=XSLj65wnP90"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:conditionals",
+      "topic_slug": "conditionals",
+      "node_id": "tEaYnBeI5tO8NT-a1PG3B",
+      "title": "Conditionals",
+      "description": "Conditionals in shell scripting allow you to execute different blocks of code based on whether a certain condition is true or false. This enables your scripts to make decisions and respond dynamically to different situations, making them more versatile and powerful. Common conditional statements include `if`, `elif` (else if), and `else`, which are used to control the flow of execution based on th",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Conditional Expressions (Bash Reference Manual)",
+          "url": "https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash If...Else",
+          "url": "https://www.w3schools.com/bash/bash_conditions.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "How To Write Bash Scripts In Linux - Complete Guide (Part 5 - If Statements)",
+          "url": "https://www.youtube.com/watch?v=YrE1Qg-Aw0Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:cp",
+      "topic_slug": "cp",
+      "node_id": "gCPCTm96RrFeNM_Ok4TAY",
+      "title": "cp Command",
+      "description": "The `cp` command in Unix-like operating systems is used to copy files and directories from one location to another. It creates an exact duplicate of the source file or directory at the specified destination, leaving the original intact. The command can be used to copy single files, multiple files, or entire directory structures.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash cp - Copy Files and Directories",
+          "url": "https://www.w3schools.com/bash/bash_cp.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Command Line Tutorial For Beginners 8 - cp command",
+          "url": "https://www.youtube.com/watch?v=Bnx_GAHM0wo"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:create-print-modify",
+      "topic_slug": "create-print-modify",
+      "node_id": "4leZS9_-GAbx5ycMQosOX",
+      "title": "Variables in Shell Scripting",
+      "description": "Variables in shell scripting are named storage locations that hold data. You can create a variable by assigning a value to a name. Printing a variable displays its stored value, and modifying a variable involves changing the value it holds, allowing you to update data within your scripts dynamically.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understanding Shell Script Variables - The Shell Scripting Tutorial",
+          "url": "https://www.shellscript.sh/variables1.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Unix Tutorial #4: Shells and Path Variables \u2014 Andy's Brain Book 1.0 documentation",
+          "url": "https://andysbrainbook.readthedocs.io/en/latest/unix/Unix_04_ShellsVariables.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Unix / Linux - Using Shell Variables",
+          "url": "https://www.tutorialspoint.com/unix/unix-using-variables.htm"
+        },
+        {
+          "raw_type": "video",
+          "title": "How To Use Shell Environment Variables",
+          "url": "https://www.youtube.com/watch?v=9ZpL8iDU7LY"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:cron-crontab",
+      "topic_slug": "cron-crontab",
+      "node_id": "QGDwieDblgpS6U0n_Ivt8",
+      "title": "cron and crontab",
+      "description": "cron is a time-based job scheduler in Unix-like operating systems. It allows users to schedule tasks (commands or scripts) to run automatically at specific times, dates, or intervals. The crontab (cron table) is a file that contains the schedule of cron jobs for a user. Each user has their own crontab file, and the system also has a system-wide crontab for administrative tasks.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash crontab Command - Schedule Tasks",
+          "url": "https://www.w3schools.com/bash/bash_cron.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is a cron job: understanding cron syntax and how to configure cron jobs",
+          "url": "https://www.hostinger.com/tutorials/cron-job"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - Scheduling Tasks with Cron",
+          "url": "https://www.youtube.com/watch?v=7cbP7fzn0D8"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:curl",
+      "topic_slug": "curl",
+      "node_id": "ZWMGvUxnohv6-dzsaSHuB",
+      "title": "curl",
+      "description": "curl is a command-line tool used to transfer data with URLs. It supports various protocols like HTTP, HTTPS, FTP, and more, allowing you to download files, send data to servers, and interact with APIs directly from the command line. It's a versatile tool for automating tasks involving network communication.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "The Art Of Scripting HTTP Requests Using curl",
+          "url": "https://curl.se/docs/httpscripting.html"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "curl",
+          "url": "https://github.com/curl/curl"
+        },
+        {
+          "raw_type": "video",
+          "title": "Supercharge Your Workflow with cURL | Understanding The cURL Command-Line Tool",
+          "url": "https://www.youtube.com/watch?v=-nnJ82uc2ic"
+        },
+        {
+          "raw_type": "video",
+          "title": "You NEED to know how to use CURL!",
+          "url": "https://www.youtube.com/watch?v=q2sqkvXzsw8"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:cut-paste",
+      "topic_slug": "cut-paste",
+      "node_id": "EU-UAaRVY2s_PLZHJWf9z",
+      "title": "cut and paste",
+      "description": "`cut` and `paste` are command-line utilities used for manipulating text files. `cut` extracts specific sections (columns) from each line of a file based on delimiters or character positions. `paste` merges lines from multiple files into a single output stream, typically by concatenating corresponding lines side-by-side.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Cut Command in Linux | Linuxize",
+          "url": "https://linuxize.com/post/linux-cut-command/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Paste Command in Linux (Merge Lines) | Linuxize",
+          "url": "https://linuxize.com/post/paste-command-in-linux/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The cut Command",
+          "url": "https://www.youtube.com/watch?v=GYP2T34v56E"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Tutorials | paste command",
+          "url": "https://www.youtube.com/watch?v=ilV6dcTJzzE"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:dash",
+      "topic_slug": "dash",
+      "node_id": "BP7hfSSD13DM2np0zaGBB",
+      "title": "dash",
+      "description": "dash (Debian Almquist Shell) is a Unix shell that is smaller, faster, and requires fewer resources compared to Bash. It's often used as the default `/bin/sh` on Debian-based systems and is designed to be POSIX-compliant, focusing on speed and efficiency in script execution. This makes it suitable for boot scripts and other system-level tasks where resource usage is critical.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Dash - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Almquist_shell#dash"
+        },
+        {
+          "raw_type": "article",
+          "title": "Dash",
+          "url": "https://wiki.archlinux.org/title/Dash"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Dash Shell in Linux?",
+          "url": "https://linuxhandbook.com/dash-shell/"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:debugging",
+      "topic_slug": "debugging",
+      "node_id": "fR3sok0EJTGHELbPO6MAW",
+      "title": "Debugging",
+      "description": "Debugging is the process of identifying and removing errors or defects from software code. It involves systematically testing, analyzing, and correcting issues that cause a program to behave unexpectedly or produce incorrect results. Effective debugging relies on using tools and techniques to trace the flow of execution, inspect variable values, and pinpoint the source of the problem.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Debugging Bash scripts",
+          "url": "https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_02_03.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:df-du",
+      "topic_slug": "df-du",
+      "node_id": "rmSSz2ka9e1nQwx18Ofy8",
+      "title": "df and du Commands",
+      "description": "`df` (disk free) and `du` (disk usage) are command-line utilities used to monitor disk space on Unix-like operating systems. `df` provides a summary of available and used disk space on mounted file systems, while `du` estimates the file space usage of files and directories. Together, they help system administrators understand how storage is being utilized and identify potential space issues.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash df Command - File System Disk Space Usage",
+          "url": "https://www.w3schools.com/bash/bash_df.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash du Command - File Space Usage",
+          "url": "https://www.w3schools.com/bash/bash_du.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The df and du Commands",
+          "url": "https://www.youtube.com/watch?v=ZRs5zVv_1UU"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:direct-execution",
+      "topic_slug": "direct-execution",
+      "node_id": "9xn7KfHZYPseAixtw_dtG",
+      "title": "Direct Execution",
+      "description": "Direct execution involves running a shell script by specifying its path directly to the shell. This method requires the script to have execute permissions set. When you directly execute a script, the operating system uses the shebang line (e.g., `#!/bin/bash`) at the beginning of the script to determine which interpreter should be used to execute the script's commands.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Sourcing vs Executing Script Directly",
+          "url": "https://dillionmegida.com/p/sourcing-vs-executing-script-directly/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Source Shell Script vs Executing Shell Script - The Real Difference",
+          "url": "https://www.youtube.com/watch?v=ZIqRmp-XBRY"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:disown",
+      "topic_slug": "disown",
+      "node_id": "Qs07iAbFbJk97xHpo10dO",
+      "title": "disown",
+      "description": "`disown` is a shell built-in command used to remove jobs from the shell's job control. When you start a process in the background (using `&`), the shell keeps track of it. If you close the terminal, the shell usually sends a SIGHUP signal to these background processes, which often causes them to terminate. `disown` removes a process from this job control, preventing the shell from sending that sig",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Linux / Unix: disown Command Examples",
+          "url": "https://www.cyberciti.biz/faq/unix-linux-disown-command-examples-usage-syntax/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use Disown Command in Linux",
+          "url": "https://phoenixnap.com/kb/disown-command-linux"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux | Background Process Basics and Signals | & , disown, nohup",
+          "url": "https://www.youtube.com/watch?v=OQpnQgvmbhY"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to use the disown command: 2-Minute Linux Tipsv",
+          "url": "https://www.youtube.com/watch?v=B66HKmP03Xo"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:dnf",
+      "topic_slug": "dnf",
+      "node_id": "iE263510iTgm3OEeB9b77",
+      "title": "dnf",
+      "description": "dnf is a package manager for RPM-based Linux distributions, serving as the successor to YUM (Yellowdog Updater, Modified). It is used to install, update, and remove software packages, as well as manage dependencies. dnf aims to improve upon YUM by offering better performance, more features, and a more modern architecture.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using the DNF software package manager",
+          "url": "https://docs.fedoraproject.org/en-US/quick-docs/dnf/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The dnf Command",
+          "url": "https://www.youtube.com/watch?v=mL1hMBYP1bQ&t=1529s"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:echo",
+      "topic_slug": "echo",
+      "node_id": "k45FWrNrRuIp6HEN3ysTd",
+      "title": "Echo",
+      "description": "`echo` is a fundamental command-line utility used to display lines of text. It essentially prints its arguments to standard output, which is typically your terminal screen. This makes it useful for displaying messages, variable values, or the output of other commands within shell scripts.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash echo Command - Display Text",
+          "url": "https://www.w3schools.com/bash/bash_echo.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "The Echo Command | Linux Essential Commands",
+          "url": "https://www.youtube.com/watch?v=Tj-9tahWvok"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:emacs",
+      "topic_slug": "emacs",
+      "node_id": "AiDr7sOJkSN6p346jcDpJ",
+      "title": "Emacs",
+      "description": "Emacs is a highly customizable and extensible text editor, known for its powerful features and extensive ecosystem of extensions. It's more than just a text editor; it's often described as an operating system within an operating system due to its ability to handle tasks like file management, email, and even web browsing, all within its environment. Emacs is favored by programmers and power users w",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "GNU Emacs",
+          "url": "https://www.gnu.org/software/emacs/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Use the Emacs Editor in Linux | DigitalOcean",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-the-emacs-editor-in-linux"
+        },
+        {
+          "raw_type": "video",
+          "title": "The Absolute Beginner's Guide to Emacs",
+          "url": "https://www.youtube.com/watch?v=48JlgiBpw_I"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:environment-vs-shell-vars",
+      "topic_slug": "environment-vs-shell-vars",
+      "node_id": "1mBAGIrg4ohvJcJ-y8Kbl",
+      "title": "Environment vs. Shell Variables",
+      "description": "Environment variables are a set of dynamic named values that can affect the way running processes will behave on a computer. They are part of the environment in which a process runs. Shell variables, on the other hand, are variables that are specific to the current shell session and are not automatically inherited by child processes. They are used to store temporary values or configure the shell's",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Environment and Shell variables In Linux",
+          "url": "https://www.futurelearn.com/info/courses/linux-for-bioinformatics/0/steps/201724"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Read and Set Environmental and Shell Variables on Linux",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux"
+        },
+        {
+          "raw_type": "video",
+          "title": "shell vs environment variables (and env, export, etc.) (intermediate) anthony explains",
+          "url": "https://www.youtube.com/watch?v=h36Xc38SDHg"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:error-handling",
+      "topic_slug": "error-handling",
+      "node_id": "aNpvGNnV0q-7emxJVJow2",
+      "title": "Error Handling",
+      "description": "Error handling in shell scripting refers to the methods and techniques used to detect, manage, and respond to errors that occur during the execution of a script. It involves checking the exit status of commands, using conditional statements to handle different error scenarios, and implementing mechanisms to gracefully exit or recover from errors, ensuring the script's reliability and preventing un",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Error handling in Bash scripts",
+          "url": "https://www.redhat.com/en/blog/error-handling-bash-scripting"
+        },
+        {
+          "raw_type": "article",
+          "title": "Writing Bash Scripts Like A Pro - Part 2 - Error Handling",
+          "url": "https://dev.to/unfor19/writing-bash-scripts-like-a-pro-part-2-error-handling-46ff"
+        },
+        {
+          "raw_type": "video",
+          "title": "Shell Script Error Handling: Master Bash Scripting for Robust Code",
+          "url": "https://www.youtube.com/watch?v=uFJiDD1B5I4"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:error-logging",
+      "topic_slug": "error-logging",
+      "node_id": "Qs5jcx6d643cJDdhkPPxD",
+      "title": "Error Logging",
+      "description": "Error logging is the process of recording errors that occur during the execution of a script or program. This involves capturing information about the error, such as the type of error, the time it occurred, and the location in the code where it happened. Effective error logging facilitates debugging, troubleshooting, and monitoring application health by providing a historical record of issues.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Logging and Error Reporting Exercises, Solutions & Explanation",
+          "url": "https://www.w3resource.com/bash-script-exercises/logging-and-error-reporting.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Standard Error and Logging in Shell Scripts",
+          "url": "https://codesignal.com/learn/courses/bash-script-error-handling/lessons/standard-error-and-logging-in-shell-scripts"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:error-redirection",
+      "topic_slug": "error-redirection",
+      "node_id": "zu0hsOt8GVlARhbepjQ1A",
+      "title": "Error Redirection",
+      "description": "Error redirection in shell scripting involves capturing and managing error messages generated by commands. By default, standard error (stderr) is displayed on the terminal. Error redirection allows you to redirect these error messages to a file, discard them, or pipe them to another command for further processing, providing better control over script output and debugging.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to Redirect Standard (stderr) Error in Bash",
+          "url": "https://www.geeksforgeeks.org/linux-unix/how-to-redirect-standard-stderr-error-in-bash/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding stdin, stdout, stderr in Python",
+          "url": "https://www.youtube.com/watch?v=4HY0VBBY7ok"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:exit-codes",
+      "topic_slug": "exit-codes",
+      "node_id": "fG4D7iuiCDlV1PFwMfAdM",
+      "title": "Exit Codes",
+      "description": "Exit codes are numerical values returned by a program or script upon completion. These codes signal whether the execution was successful or if any errors occurred. By convention, an exit code of 0 typically indicates success, while any non-zero value signifies a failure or specific error condition. These codes are crucial for scripting and automation, allowing scripts to make decisions based on th",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Linux bash exit status and how to set exit status in bash",
+          "url": "https://www.cyberciti.biz/faq/linux-bash-exit-status-set-exit-statusin-bash/"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:exit",
+      "topic_slug": "exit",
+      "node_id": "JB_FThjpxO-7G01XrKDPi",
+      "title": "Exit Codes",
+      "description": "Exit codes are numerical values returned by a program or script upon completion. These codes signal whether the execution was successful or if any errors occurred. By convention, an exit code of 0 typically indicates success, while any non-zero value signifies a failure or specific error condition. These codes are crucial for scripting and automation, allowing scripts to make decisions based on th",
+      "resources": []
+    },
+    {
+      "skill_id": "shell-bash:expr",
+      "topic_slug": "expr",
+      "node_id": "VOYYJUqKqkTRaxqUip8yr",
+      "title": "Expr",
+      "description": "`expr` is a command-line utility used to evaluate expressions. It can perform arithmetic operations, string manipulations, and logical comparisons. The `expr` command takes arguments as operands and operators, evaluates the expression, and writes the result to standard output. It's often used in shell scripts for performing calculations and making decisions based on numerical or string values.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Practical examples of \u201cexpr\u201d command in Linux",
+          "url": "https://tecadmin.net/expr-command-examples/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Tutorial for Beginners | expr command | Evaluate Expressions in Linux",
+          "url": "https://www.youtube.com/watch?v=6LbMLSBoLGY"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:extended-regex",
+      "topic_slug": "extended-regex",
+      "node_id": "6IzuWNaMVjjyQV-KLqRlX",
+      "title": "Extended Regular Expressions",
+      "description": "Extended regular expressions (EREs) are a more powerful and flexible version of basic regular expressions. They offer additional metacharacters and features that simplify pattern matching and make complex searches easier to express. EREs are commonly used with tools like `grep -E`, `awk`, and `sed -E` in shell scripting.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Extended Regular Expressions",
+          "url": "https://pressbooks.senecapolytechnic.ca/uli101/chapter/extended-regular-expressions/"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:fg-bg",
+      "topic_slug": "fg-bg",
+      "node_id": "Ey38pCn0vlhZXLrJChtIW",
+      "title": "fg and bg",
+      "description": "`fg` and `bg` are shell commands used to manage processes. `bg` moves a process to the background, allowing you to continue using the terminal while the process runs. `fg` brings a background process to the foreground, giving it control of the terminal. This is useful for managing long-running tasks or temporarily pausing a process.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Linux Commands: jobs, bg, and fg",
+          "url": "https://www.redhat.com/en/blog/jobs-bg-fg"
+        },
+        {
+          "raw_type": "article",
+          "title": "Job Control Commands",
+          "url": "https://tldp.org/LDP/abs/html/x9644.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Use Bash's Job Control to Manage Foreground and Background Processes",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-bash-s-job-control-to-manage-foreground-and-background-processes"
+        },
+        {
+          "raw_type": "video",
+          "title": "Master the Linux Command Line: Background & Foreground Jobs to Swap Tasks with the fg and bg Command",
+          "url": "https://www.youtube.com/watch?v=Ak7cFJ1-Ewo"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:file-permissions",
+      "topic_slug": "file-permissions",
+      "node_id": "zxdwDMOVAoP8IgUqrggKq",
+      "title": "File Permissions",
+      "description": "File permissions in Unix-like operating systems, such as Linux and macOS, control who can access and modify files and directories. These permissions are typically represented by three categories: owner, group, and others. Each category can have read, write, and execute permissions, determining what actions users in that category can perform on the file or directory.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "File permissions",
+          "url": "https://linuxcommand.org/lc3_lts0090.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux File Permissions in 5 Minutes | MUST Know!",
+          "url": "https://www.youtube.com/watch?v=LnKoncbQBsM"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:file-test",
+      "topic_slug": "file-test",
+      "node_id": "PuV5XtaeKgb9vdFIKta5M",
+      "title": "File Test Operators",
+      "description": "File test operators in Bash are used to check the type and attributes of files. These operators allow you to determine if a file exists, if it's a regular file or a directory, if it's readable, writable, or executable, and other file-related properties. The result of a file test is a boolean value (true or false), which can be used in conditional statements to control the flow of a script.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "File test operators",
+          "url": "https://tldp.org/LDP/abs/html/fto.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Tests",
+          "url": "https://docs.rockylinux.org/10/books/learning_bash/05-tests/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Shell Scripting Tutorial for Beginners 6 - File test operators",
+          "url": "https://www.youtube.com/watch?v=uVi5o38NGi0"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:files--directories",
+      "topic_slug": "files--directories",
+      "node_id": "DUUstDjzKKAXN1IXzbqjt",
+      "title": "Files & Directories",
+      "description": "Files and directories are fundamental building blocks of a file system. Files store data, such as text, images, or executable code. Directories, also known as folders, organize files and other directories in a hierarchical structure, allowing users to navigate and manage their data effectively.",
+      "resources": []
+    },
+    {
+      "skill_id": "shell-bash:find",
+      "topic_slug": "find",
+      "node_id": "pAb3O3Isca9u6yK5mqWQ2",
+      "title": "Find",
+      "description": "The `find` command is a powerful utility used to locate files and directories within a file system hierarchy. It allows you to search based on various criteria, such as name, size, modification time, permissions, and file type. The `find` command recursively traverses directories, making it suitable for locating files across an entire file system or within specific subdirectories.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "10 ways to use the Linux find command",
+          "url": "https://www.redhat.com/en/blog/linux-find-command"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The find command",
+          "url": "https://www.youtube.com/watch?v=skTiK_6DdqU"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:find",
+      "topic_slug": "find",
+      "node_id": "ud8fTxgvvbhCyyAxJA6lc",
+      "title": "Find",
+      "description": "`find` is a command-line utility for searching files and directories within a specified directory hierarchy. It allows you to locate files based on various criteria, such as name, type, size, modification time, permissions, and more. The `find` command recursively traverses the directory structure, applying the specified search criteria to each file and directory it encounters, and then displays t",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "10 ways to use the Linux find command",
+          "url": "https://www.redhat.com/en/blog/linux-find-command"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The find command",
+          "url": "https://www.youtube.com/watch?v=skTiK_6DdqU"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:fish",
+      "topic_slug": "fish",
+      "node_id": "LjkmfTYWMrOKLSqtpyKGk",
+      "title": "fish",
+      "description": "fish is a user-friendly command-line shell for UNIX-like operating systems. It focuses on providing a more interactive and discoverable experience compared to traditional shells like Bash or Zsh. Key features include autosuggestions, syntax highlighting, and a simplified scripting language.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "fish-shell",
+          "url": "https://github.com/fish-shell/fish-shell"
+        },
+        {
+          "raw_type": "article",
+          "title": "Finally, a command line shell for the 90s",
+          "url": "https://fishshell.com/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Why I use Fish Shell",
+          "url": "https://medium.com/@desjoerdhaan/why-i-use-fish-shell-e5272e0770bf"
+        },
+        {
+          "raw_type": "video",
+          "title": "FISH (Friendly Interactive Shell) by Bash Boomer",
+          "url": "https://www.youtube.com/watch?v=C2a7jJTh3kU"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:for",
+      "topic_slug": "for",
+      "node_id": "zE7sS5VNUbEbt1y2iSvEi",
+      "title": "For Loops",
+      "description": "A \"for\" loop is a control flow statement that allows you to repeatedly execute a block of code a specific number of times or for each item in a list. It's a fundamental programming construct used to automate repetitive tasks and iterate over collections of data. The loop continues until a specified condition is met, making it a powerful tool for processing data and performing actions multiple time",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Loops",
+          "url": "https://www.w3schools.com/bash/bash_loops.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash For Loop Examples",
+          "url": "https://www.cyberciti.biz/faq/bash-for-loop/"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:free",
+      "topic_slug": "free",
+      "node_id": "8Ll6sByPqMnjVms5J1ns5",
+      "title": "Free",
+      "description": "`free` is a command-line utility used to display the amount of free and used physical and swap memory in a system. It provides a snapshot of the memory usage at a given point in time, showing total memory, used memory, free memory, shared memory, buffer/cache memory, and available memory. This information is crucial for understanding how efficiently a system is utilizing its memory resources and i",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash free Command - Display Free and Used Memory",
+          "url": "https://www.w3schools.com/bash/bash_free.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Free Command in Linux",
+          "url": "https://linuxize.com/post/free-command-in-linux/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using the Linux Free Command With Examples",
+          "url": "https://www.turing.com/kb/how-to-use-the-linux-free-command"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:function-scopes",
+      "topic_slug": "function-scopes",
+      "node_id": "lil5vo78g474F1yomar9y",
+      "title": "Function Scopes",
+      "description": "Function scope determines the visibility and accessibility of variables within a function. In shell scripting, variables can have either global or local scope. Global variables are accessible from anywhere in the script, including within functions, while local variables are only accessible within the function where they are defined. Understanding scope is crucial for avoiding naming conflicts and ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Functions",
+          "url": "https://linuxize.com/post/bash-functions/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Functions \u2013 Declaration, Scope, Arguments, etc",
+          "url": "https://www.webservertalk.com/bash-functions/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Crash-Course! Functions in Bash quickly explained and demystified!",
+          "url": "https://www.youtube.com/watch?v=0tycTrpbWKs"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:functions",
+      "topic_slug": "functions",
+      "node_id": "peZDR615PgGw7TQalyG_2",
+      "title": "Functions",
+      "description": "Functions in shell scripting are reusable blocks of code that perform a specific task. They allow you to organize your scripts, avoid repetition, and make your code more readable and maintainable. You can define a function, give it a name, and then call it multiple times throughout your script, passing arguments if needed.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Functions",
+          "url": "https://www.w3schools.com/bash/bash_functions.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Crash-Course! Functions in Bash quickly explained and demystified!",
+          "url": "https://www.youtube.com/watch?v=0tycTrpbWKs"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:grep",
+      "topic_slug": "grep",
+      "node_id": "ZqAwAme_yvasmYHEZID1G",
+      "title": "grep",
+      "description": "`grep` is a command-line utility used for searching plain-text data sets for lines matching a regular expression. It outputs the lines that contain the specified pattern, making it a powerful tool for filtering and locating specific information within files or streams of data. Its name comes from the ed command `g/re/p` (globally search a regular expression and print).",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Mastering Grep command in Linux/Unix: A Beginner's Tutorial",
+          "url": "https://www.digitalocean.com/community/tutorials/grep-command-in-linux-unix"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash grep Command - Search Text Using Patterns",
+          "url": "https://www.w3schools.com/bash/bash_grep.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The grep Command",
+          "url": "https://www.youtube.com/watch?v=Tc_jntovCM0"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:gzip-gunzip",
+      "topic_slug": "gzip-gunzip",
+      "node_id": "b8ph0RGUpVWrgEQ05Wvgy",
+      "title": "gzip and gunzip",
+      "description": "`gzip` is a command-line utility used to compress files, reducing their size and making them easier to store or transmit. The compressed files typically have a `.gz` extension. `gunzip` is the corresponding command used to decompress files that have been compressed with `gzip`, restoring them to their original state.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using gzip and gunzip in Linux",
+          "url": "https://www.baeldung.com/linux/gzip-and-gunzip"
+        },
+        {
+          "raw_type": "article",
+          "title": "Linux gzip and gunzip: How to work with compressed files",
+          "url": "https://alvinalexander.com/blog/post/linux-unix/how-work-compressed-files-gzip-zgrep-zcat/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Archive Folders in Linux (tar and gzip tutorial) - Linux Crash Course Series",
+          "url": "https://www.youtube.com/watch?v=2iwumBcfd58&t"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:head-tail",
+      "topic_slug": "head-tail",
+      "node_id": "WSxairrSGlV0LEps2xeIC",
+      "title": "head and tail",
+      "description": "`head` and `tail` are command-line utilities used to display the beginning or end of a file, respectively. `head` shows the first few lines of a file, while `tail` shows the last few lines. They are useful for quickly inspecting log files, configuration files, or any text-based data without opening the entire file in a text editor.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash head Command - Display the beginning of a file",
+          "url": "https://www.w3schools.com/bash/bash_head.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash tail Command - Display Last Part of Files",
+          "url": "https://www.w3schools.com/bash/bash_tail.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The head and tail Commands",
+          "url": "https://www.youtube.com/watch?v=5EqL6Fc7NNw"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:help-commands",
+      "topic_slug": "help-commands",
+      "node_id": "4yRwCKzvCctFpMD2mYiky",
+      "title": "Help Commands",
+      "description": "Help commands in a shell environment provide users with information about available commands, their syntax, and options. They are essential tools for understanding how to use commands effectively and discovering new functionalities within the shell. These commands allow users to quickly access documentation and usage examples directly from the command line.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash man Command - User Manual",
+          "url": "https://www.w3schools.com/bash/bash_man.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to get help in Bash",
+          "url": "https://nipunarat1997.medium.com/how-to-get-help-in-bash-9b101ee7d65a"
+        },
+        {
+          "raw_type": "video",
+          "title": "07 The Help Command Linux Shell Tutorials",
+          "url": "https://www.youtube.com/watch?v=D4bSUqqaX3c"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:here-documents",
+      "topic_slug": "here-documents",
+      "node_id": "WOoTpi1vAZpktjtQgG9GK",
+      "title": "Here Documents",
+      "description": "Here documents (or \"heredocs\") are a way to redirect multiple lines of input to a command. Instead of typing input directly into the terminal or reading from a file, you can embed the input directly within your script. This is particularly useful for passing multi-line strings or configuration data to commands.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Here documents",
+          "url": "https://tldp.org/LDP/abs/html/here-docs.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Heredoc: A Deep Dive",
+          "url": "https://medium.com/@oduwoledare/heredoc-a-deep-dive-23c82992e522"
+        },
+        {
+          "raw_type": "video",
+          "title": "Heredocs in Bash! Understanding how they work and a few gotchas. You Suck at Programming",
+          "url": "https://www.youtube.com/watch?v=-a1VAole01s"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:here-strings",
+      "topic_slug": "here-strings",
+      "node_id": "D0VV5UpW2X4mMghpp2fdo",
+      "title": "Here Strings",
+      "description": "Here strings provide a way to pass strings to commands as standard input. They are a simplified form of here documents, designed for single-line input. Instead of redirecting a file or typing input directly, you can embed the string directly within the command using the `<<<` operator. This is particularly useful for commands that expect input from stdin but you want to provide it inline within yo",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Here Strings",
+          "url": "https://tldp.org/LDP/abs/html/x17837.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Here Strings in Bash! Redirecting a string into stdin. You Suck at Programming",
+          "url": "https://www.youtube.com/watch?v=0cWuZvw8lXc"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:if",
+      "topic_slug": "if",
+      "node_id": "fz9XJLGkMPpq6TRJn3Hsh",
+      "title": "Conditionals - if",
+      "description": "The `if` statement in shell scripting allows you to execute different blocks of code based on whether a certain condition is true or false. It's a fundamental control flow mechanism that enables scripts to make decisions and behave differently depending on the input or state of the system. The `if` statement evaluates an expression, and if the expression is true, a specific set of commands is exec",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash If...Else",
+          "url": "https://www.w3schools.com/bash/bash_conditions.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "How To Write Bash Scripts In Linux - Complete Guide (Part 5 - If Statements)",
+          "url": "https://www.youtube.com/watch?v=YrE1Qg-Aw0Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:ifconfig-ip",
+      "topic_slug": "ifconfig-ip",
+      "node_id": "q-41zNMAJ-BYwrz_fZP60",
+      "title": "ifconfig and ip Commands",
+      "description": "`ifconfig` and `ip` are command-line utilities used to configure and manage network interfaces on Unix-like operating systems. They allow you to view, configure, and control network interfaces, including assigning IP addresses, setting network masks, and enabling or disabling interfaces. While `ifconfig` is an older tool, `ip` is the modern replacement offering more features and flexibility.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Linux ifconfig Command With Examples",
+          "url": "https://phoenixnap.com/kb/linux-ifconfig"
+        },
+        {
+          "raw_type": "article",
+          "title": "Linux ip Command with Examples",
+          "url": "https://phoenixnap.com/kb/linux-ip-command-examples"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use the ip Command in Linux: A Beginner\u2019s Guide",
+          "url": "https://www.youtube.com/watch?v=wHfIFZlDxtU"
+        },
+        {
+          "raw_type": "video",
+          "title": "Using IPCONFIG for Network Troubleshooting",
+          "url": "https://www.youtube.com/watch?v=k1qgpqQ0Mo4"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:input-redirection",
+      "topic_slug": "input-redirection",
+      "node_id": "Chfv9Fyy-Mk2zpOrYNbjV",
+      "title": "Input Redirection",
+      "description": "Input redirection enables a command to obtain its input from a source other than the standard input (typically the keyboard). Instead of typing input directly, a command can read data from a file or another command's output. This is achieved using operators like `<` to specify the input source.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Unix / Linux - Shell Input/Output Redirections",
+          "url": "https://www.tutorialspoint.com/unix/unix-io-redirections.htm"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Basics: How to use Linux Standard Input and Output",
+          "url": "https://www.youtube.com/watch?v=YYz8Y_UBrvw&t=116s"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:inputoutput",
+      "topic_slug": "inputoutput",
+      "node_id": "n0sesqABTmbGYmcqlpH4b",
+      "title": "Input/Output",
+      "description": "Input/Output (I/O) refers to the communication between a computer program and the outside world. This involves receiving data (input) from sources like the keyboard, files, or other programs, and sending data (output) to destinations such as the terminal, files, or other programs. In essence, it's how a program interacts with its environment to receive instructions and display results.",
+      "resources": []
+    },
+    {
+      "skill_id": "shell-bash:introduction",
+      "topic_slug": "introduction",
+      "node_id": "lzzQWCFqpOnN2J_3Jck_3",
+      "title": "Introduction",
+      "description": "Shell, often referred to as Bash (Bourne Again Shell), is a command-line interpreter. It acts as an interface between the user and the operating system, allowing users to execute commands, run scripts, and manage files. It interprets the commands entered by the user and instructs the operating system to perform the corresponding actions.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Shell - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Shell_(computing"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Shell Scripting Tutorial",
+          "url": "https://www.shellscript.sh/philosophy.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "What Is a Shell ? | Learn How Shell Commands Work in the Terminal",
+          "url": "https://www.youtube.com/watch?v=-qLrgCFynzE"
+        },
+        {
+          "raw_type": "video",
+          "title": "Shell Scripting Tutorial for Beginners 1 - Introduction",
+          "url": "https://www.youtube.com/watch?v=cQepf9fY6cE&list=PLS1QulWo1RIYmaxcEqw5JhK3b-6rgdWO_"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:iostat-vmstat",
+      "topic_slug": "iostat-vmstat",
+      "node_id": "lwul2wUhhCnXxKO6-ysX2",
+      "title": "iostat and vmstat",
+      "description": "`iostat` and `vmstat` are command-line utilities used for system monitoring. `iostat` reports CPU utilization and disk I/O statistics, providing insights into storage device performance. `vmstat` reports virtual memory statistics, including information about processes, memory, paging, block I/O, traps, and CPU activity, helping to identify performance bottlenecks related to memory and CPU usage.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Linux Performance Monitoring with Vmstat and Iostat Commands",
+          "url": "https://www.tecmint.com/linux-performance-monitoring-with-vmstat-and-iostat-commands/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Linux Performance Monitoring: Using Tools Like top, vmstat, and iostat",
+          "url": "https://www.linuxjournal.com/content/linux-performance-monitoring-using-tools-top-vmstat-and-iostat"
+        },
+        {
+          "raw_type": "article",
+          "title": "Linux Performance Monitoring with Vmstat and Iostat Commands",
+          "url": "https://www.tutorialspoint.com/linux-performance-monitoring-with-vmstat-and-iostat-commands"
+        },
+        {
+          "raw_type": "video",
+          "title": "037 Performance Monitoring with Vmstat and lostat",
+          "url": "https://www.youtube.com/watch?v=c_My7gRuDb8"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:jobs",
+      "topic_slug": "jobs",
+      "node_id": "Sn7RlXc5dgD1gqDGikco-",
+      "title": "Jobs",
+      "description": "In a shell environment, a job represents a process or a group of processes that are running in the background or foreground. The `jobs` command provides a way to list the currently active jobs, check their status (running, stopped, terminated), and manage them, such as bringing them to the foreground or terminating them. It's a crucial tool for controlling and monitoring processes initiated from t",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Job Control Basics",
+          "url": "https://www.gnu.org/software/bash/manual/html_node/Job-Control-Basics.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Jobs and Job Control in Bash Shell",
+          "url": "https://www.baeldung.com/linux/jobs-job-control-bash"
+        },
+        {
+          "raw_type": "video",
+          "title": "099 Bash Jobs & Signals - Bringing Jobs Back To The Command Line",
+          "url": "https://www.youtube.com/watch?v=xu2lGV-kISI"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:join-split",
+      "topic_slug": "join-split",
+      "node_id": "rtzApgTlDTfC_rdCnU6xx",
+      "title": "Join and Split",
+      "description": "`join` and `split` are command-line utilities used for manipulating text files. `join` combines lines from two files based on a common field, creating a new file with the merged data. `split`, conversely, divides a single file into multiple smaller files, either by line count, file size, or a custom pattern.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Use Join Command in Linux: A Detailed Guide",
+          "url": "https://linuxconfig.org/join"
+        },
+        {
+          "raw_type": "article",
+          "title": "Linux split Command {13 Examples}",
+          "url": "https://phoenixnap.com/kb/linux-split"
+        },
+        {
+          "raw_type": "video",
+          "title": "LPIC-1 101 Using the join command",
+          "url": "https://www.youtube.com/watch?v=b3Ybtr6xti4"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux - How to split larger files into smaller parts",
+          "url": "https://www.youtube.com/watch?v=DaC5AWjmQXk"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:ksh",
+      "topic_slug": "ksh",
+      "node_id": "BnblV98Tul3QlyA1nIB63",
+      "title": "ksh",
+      "description": "ksh, or the Korn shell, is an interactive command language and scripting language. It's designed to be backward-compatible with the Bourne shell (sh) while incorporating many features from other shells like csh. ksh offers improvements in scripting capabilities, command-line editing, and job control, making it a powerful tool for both interactive use and automating tasks.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "ksh",
+          "url": "http://www.kornshell.com/"
+        },
+        {
+          "raw_type": "article",
+          "title": "ksh - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/KornShell"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:less-more",
+      "topic_slug": "less-more",
+      "node_id": "kW_sjWK-rtGokfL_OByhM",
+      "title": "less and more",
+      "description": "`less` and `more` are command-line utilities used to view the contents of text files, one screen at a time. They allow users to navigate through the file, search for specific patterns, and perform other basic text manipulation tasks directly from the terminal. `less` is generally preferred over `more` because it offers more features, including the ability to scroll backwards.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "More Command",
+          "url": "https://www.ibm.com/docs/en/aix/7.2.0?topic=m-more-command"
+        },
+        {
+          "raw_type": "article",
+          "title": "Less Command in Linux",
+          "url": "https://linuxize.com/post/less-command-in-linux/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use Unix MORE Command",
+          "url": "https://www.youtube.com/watch?v=at7l0REMi04"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Command Line Tutorial For Beginners 10 - less command",
+          "url": "https://www.youtube.com/watch?v=06GsFVeuWNk"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:let",
+      "topic_slug": "let",
+      "node_id": "oI019HqH9UO_tQRe2xebi",
+      "title": "Let Command",
+      "description": "The `let` command in Bash is used to perform arithmetic operations. It allows you to evaluate arithmetic expressions and assign the result to a variable. It's a way to do integer calculations directly within your shell scripts without needing external commands like `expr`.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to Use the Bash let Command {with Examples}",
+          "url": "https://phoenixnap.com/kb/bash-let"
+        },
+        {
+          "raw_type": "article",
+          "title": "Arithmetic",
+          "url": "https://ryanstutorials.net/bash-scripting-tutorial/bash-arithmetic.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash: The \"let\" builtin command",
+          "url": "https://www.youtube.com/watch?v=OmZVThsrdp0"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:logical",
+      "topic_slug": "logical",
+      "node_id": "tRwO9DC_ZUD4g5iSVC40u",
+      "title": "Logical Operators in Bash",
+      "description": "Logical operators in Bash are used to combine or modify conditional expressions. They allow you to create more complex tests within your scripts, enabling you to execute commands based on multiple conditions being true or false. The primary logical operators are `&&` (AND), `||` (OR), and `!` (NOT). These operators are essential for controlling the flow of your scripts based on the evaluation of d",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to program with Bash: Logical operators and shell expansions",
+          "url": "https://opensource.com/article/19/10/programming-bash-logical-operators-shell-expansions"
+        },
+        {
+          "raw_type": "video",
+          "title": "Logical Operators - Bash Programming Tutorial 8",
+          "url": "https://www.youtube.com/watch?v=sDRHmbRlNT8"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:loops",
+      "topic_slug": "loops",
+      "node_id": "1rIFm5ROQ8b1rsWeD9h4x",
+      "title": "Loops",
+      "description": "Loops are programming constructs that allow you to repeatedly execute a block of code. They automate repetitive tasks by iterating over a sequence of values or until a certain condition is met. This avoids writing the same code multiple times and makes scripts more efficient and easier to maintain.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Loops",
+          "url": "https://www.w3schools.com/bash/bash_loops.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:ls",
+      "topic_slug": "ls",
+      "node_id": "Kn_EQciiD_Fjj308aF_j0",
+      "title": "ls",
+      "description": "`ls` is a command-line utility used to list files and directories within a specified directory. By default, it displays the contents of the current working directory. It offers various options to control the output, such as displaying file sizes, modification dates, permissions, and hidden files.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash ls Command - List Directory Contents",
+          "url": "https://www.w3schools.com/bash/bash_ls.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn the \"ls\" command! Lil' Linux Lesson!",
+          "url": "https://www.youtube.com/watch?v=gwo--XHaz7s"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:mkdir",
+      "topic_slug": "mkdir",
+      "node_id": "pwP3U4zz9Jtpnp2ZRgajh",
+      "title": "mkdir",
+      "description": "`mkdir` is a command-line utility used to create new directories (folders) in a file system. It allows users to organize files by grouping them into logical structures. The command takes the name(s) of the directory(s) to be created as arguments, and it can also be used to create multiple directories at once or create parent directories if they don't already exist.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash mkdir Command - Make Directories",
+          "url": "https://www.w3schools.com/bash/bash_mkdir.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Command Line Tutorial For Beginners 6 - mkdir Command",
+          "url": "https://www.youtube.com/watch?v=qixSaXSUs-U"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:mv",
+      "topic_slug": "mv",
+      "node_id": "zN32jR8SNm5P1txqQsyCv",
+      "title": "mv Command",
+      "description": "The `mv` command in Unix-like operating systems is used to move or rename files and directories. It allows you to relocate files from one directory to another, effectively changing their location within the file system. Additionally, `mv` can be used to change the name of a file or directory without altering its location.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash mv Command - Move or Rename Files",
+          "url": "https://www.w3schools.com/bash/bash_mv.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Commands for Beginners 06 - Moving and Renaming Files",
+          "url": "https://www.youtube.com/watch?v=cSBYvSA9rDM"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:nano",
+      "topic_slug": "nano",
+      "node_id": "NtjrVcEHf8wuh771U2AMI",
+      "title": "Nano",
+      "description": "Nano is a simple, beginner-friendly text editor for Unix-like operating systems. It's designed to be easy to use, with a straightforward interface that displays command shortcuts at the bottom of the screen. Nano is often pre-installed on many systems, making it readily available for quick text editing tasks.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "nano \u2013 Text editor",
+          "url": "https://www.nano-editor.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use Nano, the Linux Command Line Text Editor",
+          "url": "https://linuxize.com/post/how-to-use-nano-text-editor/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use Nano | Command Line Text Editor",
+          "url": "https://www.youtube.com/watch?v=PDWHxh9HUF8"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:navigate-between-dirs",
+      "topic_slug": "navigate-between-dirs",
+      "node_id": "QnC0gCoBj_559CgaTQgr4",
+      "title": "Navigate Between Directories",
+      "description": "Navigating between directories in a shell environment involves moving from one location in the file system to another. This is primarily achieved using the `cd` (change directory) command, which allows users to specify the destination directory, whether it's a relative path from the current location or an absolute path from the root directory. Special notations like `.` (current directory), `..` (",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What are the differences between absolute and relative paths?",
+          "url": "https://www.redhat.com/en/blog/linux-path-absolute-relative"
+        },
+        {
+          "raw_type": "article",
+          "title": "Navigating the file system with Terminal",
+          "url": "https://gomakethings.com/navigating-the-file-system-with-terminal/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is the difference between absolute and relative paths?",
+          "url": "https://www.youtube.com/watch?v=bxr4p5Ik4js"
+        },
+        {
+          "raw_type": "video",
+          "title": "Absolute and Relative Paths",
+          "url": "https://www.youtube.com/watch?v=ephId3mYu9o"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:netstat-ss",
+      "topic_slug": "netstat-ss",
+      "node_id": "bX48eoEWdUFeL2rYXuzG5",
+      "title": "netstat and ss",
+      "description": "`netstat` and `ss` are command-line tools used to display network connections, routing tables, interface statistics, masquerade connections, and multicast memberships. They provide insights into the network activity of a system, allowing users to diagnose network issues, monitor connections, and understand network traffic patterns. While `netstat` has been a long-standing tool, `ss` (socket statis",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How To Use Linux SS Command",
+          "url": "https://phoenixnap.com/kb/ss-command"
+        },
+        {
+          "raw_type": "article",
+          "title": "Netstat Command in Linux - 25 Commands with Examples",
+          "url": "https://phoenixnap.com/kb/netstat-command"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Use the ss Command (Linux Crash Course Series)",
+          "url": "https://www.youtube.com/watch?v=phY8Q7Woxsw"
+        },
+        {
+          "raw_type": "video",
+          "title": "Netstat Commands - Network Administration Tutorial",
+          "url": "https://www.youtube.com/watch?v=bxFwpm4IobU"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:nl",
+      "topic_slug": "nl",
+      "node_id": "TZEmlwTGBWAZ6w8jZ-p8U",
+      "title": "nl",
+      "description": "`nl` is a command-line utility that numbers the lines of a file or standard input. It reads lines, adds line numbers, and writes the result to standard output. You can customize the numbering style, starting number, and increment between numbers. It's useful for adding line numbers to code, documents, or any text file for easier reference.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Use nl Command in Linux - Step-by-Step Guide",
+          "url": "https://linuxconfig.org/nl"
+        },
+        {
+          "raw_type": "video",
+          "title": "nl command in Linux with Examples",
+          "url": "https://www.youtube.com/watch?v=WqrRKfJWqqM"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:nohup",
+      "topic_slug": "nohup",
+      "node_id": "7-4WglSAbhBZUpP8HS6xY",
+      "title": "nohup",
+      "description": "`nohup` is a command-line utility used to run a command immune to hangups, with output redirected to a file. This allows a process to continue running in the background even after the user who started the process logs out or closes the terminal. It's particularly useful for long-running tasks that shouldn't be interrupted by a terminal disconnection.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to use the nohup command in Linux",
+          "url": "https://www.hostinger.com/tutorials/nohup-command-in-linux"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use the nohup Command in Linux",
+          "url": "https://www.digitalocean.com/community/tutorials/nohup-command-in-linux"
+        },
+        {
+          "raw_type": "video",
+          "title": "Nohup - Hangup Immune Commands - Commands for Linux",
+          "url": "https://www.youtube.com/watch?v=rTB-HuuszLs"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to use the nohup command",
+          "url": "https://www.youtube.com/watch?v=E96yxNUS84c"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:numeric",
+      "topic_slug": "numeric",
+      "node_id": "a5cz3ZGg-JQKzdJdihCtO",
+      "title": "Numeric Data in Bash",
+      "description": "Bash, by default, treats all variables as strings. However, Bash can perform arithmetic operations on variables that contain numeric values. While Bash doesn't have explicit data types like integers or floats in the same way as other programming languages, it interprets strings as numbers when used in arithmetic contexts. This allows you to perform calculations, comparisons, and other numeric mani",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Arithmetic - Bash Scripting Tutorial",
+          "url": "https://ryanstutorials.net/bash-scripting-tutorial/bash-arithmetic.php"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:output-redirection",
+      "topic_slug": "output-redirection",
+      "node_id": "MpSnq-W8z4QA8-oU_tbRC",
+      "title": "Output Redirection",
+      "description": "Output redirection in shell scripting allows you to control where the output of a command is sent. Instead of displaying on the terminal, you can redirect it to a file, either overwriting the file or appending to it. This is achieved using special operators like `>`, `>>`, `2>`, and `&>`. These operators provide a way to manage standard output (stdout), standard error (stderr), and both, making it",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Unix / Linux - Shell Input/Output Redirections",
+          "url": "https://www.tutorialspoint.com/unix/unix-io-redirections.htm#:~:text=The%20output%20from%20a%20command,is%20known%20as%20output%20redirection."
+        },
+        {
+          "raw_type": "article",
+          "title": "Linux Question: What is /dev/null 2\\>&1 ?",
+          "url": "https://hemantjain.medium.com/linux-question-what-is-dev-null-2-1-82d75a156b5c"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Commands for Beginners 16 - Output Redirection",
+          "url": "https://www.youtube.com/watch?v=NUjpOLlYv7Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:package-management",
+      "topic_slug": "package-management",
+      "node_id": "Kwr37_gNDhkwSkg49bg35",
+      "title": "Package Management",
+      "description": "Package management is the process of installing, updating, configuring, and removing software packages on a computer system. It provides a standardized way to handle software dependencies, ensuring that all necessary components are present and compatible. Package managers also simplify the process of keeping software up-to-date and removing unwanted applications cleanly.",
+      "resources": []
+    },
+    {
+      "skill_id": "shell-bash:pattern-replacement",
+      "topic_slug": "pattern-replacement",
+      "node_id": "aYQlgbgFt250MW1nLYvFK",
+      "title": "Pattern Replacement",
+      "description": "Pattern replacement in shell scripting involves finding specific patterns within strings and substituting them with other strings. This is a fundamental text processing technique used to modify and transform data, allowing for tasks like cleaning up input, standardizing formats, or extracting relevant information. Shell tools like `sed`, parameter expansion, and `awk` are commonly used to achieve ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Parameter Substitution",
+          "url": "https://tldp.org/LDP/abs/html/parameter-substitution.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use Bash String Substitution Effectively",
+          "url": "https://labex.io/tutorials/shell-how-to-use-bash-string-substitution-effectively-398333"
+        },
+        {
+          "raw_type": "video",
+          "title": "sed: Easily replace strings across files | #7 Practical Bash",
+          "url": "https://www.youtube.com/watch?v=91msRzo0VYw"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:ping",
+      "topic_slug": "ping",
+      "node_id": "D-sgMFB-IhNw41hNJsSF6",
+      "title": "Ping",
+      "description": "Ping is a command-line utility used to test the reachability of a host on an Internet Protocol (IP) network. It works by sending Internet Control Message Protocol (ICMP) \"echo request\" packets to the target host and waiting for ICMP \"echo reply\" packets. The ping command measures the round-trip time (RTT) for these packets, indicating the latency of the connection, and also reports any packet loss",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash ping Command - Send Request to Network Hosts",
+          "url": "https://www.w3schools.com/bash/bash_ping.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Ping Command in Linux",
+          "url": "https://linuxize.com/post/linux-ping-command/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Simple PING commands",
+          "url": "https://www.youtube.com/watch?v=KYmtMBsuA50"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ping Command Explained | Real World Example",
+          "url": "https://www.youtube.com/watch?v=7sv5pL-XgSg"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:pipes",
+      "topic_slug": "pipes",
+      "node_id": "YyCvxYgFzobwF_vMQXunZ",
+      "title": "Pipes",
+      "description": "Pipes in shell scripting are a form of redirection that allows you to send the output of one command as the input to another command. This creates a chain of commands where the data flows from one process to the next, enabling you to perform complex data manipulation and filtering concisely and efficiently. The pipe operator, represented by the vertical bar `|`, connects the standard output of the",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Pipelines",
+          "url": "https://www.gnu.org/software/bash/manual/html_node/Pipelines.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash shell basics \u2014 pipes, redirection, and coprocesses",
+          "url": "https://paulguerin.medium.com/bash-shell-basics-pipe-and-redirection-fbb4c2c1c0ed"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Shell Scripting for Beginners - Using Pipes",
+          "url": "https://www.youtube.com/watch?v=FICwAKYc0Pg"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:popular-shells",
+      "topic_slug": "popular-shells",
+      "node_id": "IYlYUnQh2iZrdpyUsMxg0",
+      "title": "Popular Shells",
+      "description": "A shell is a command-line interpreter that provides a user interface for interacting with an operating system. Different shells offer varying features, syntax, and capabilities, leading to the existence of several popular choices. These shells determine how you interact with the system, execute commands, and automate tasks.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "8 Types of Linux Shells",
+          "url": "https://phoenixnap.com/kb/linux-shells"
+        },
+        {
+          "raw_type": "article",
+          "title": "What are the Different Types of Shells in Linux?",
+          "url": "https://www.digitalocean.com/community/tutorials/different-types-of-shells-in-linux"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:powershell",
+      "topic_slug": "powershell",
+      "node_id": "y4mIT9yer85CrU_KlRxGk",
+      "title": "PowerShell",
+      "description": "PowerShell is a cross-platform task automation and configuration management framework, consisting of a command-line shell and associated scripting language. It's built on the .NET Common Language Runtime (CLR) and accepts and returns .NET objects, which allows for more complex and structured data manipulation compared to traditional text-based shells. PowerShell is designed to be extensible and ca",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "What is PowerShell?",
+          "url": "https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.5"
+        },
+        {
+          "raw_type": "official",
+          "title": "PowerShell Docs",
+          "url": "https://learn.microsoft.com/en-us/powershell/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "PowerShell",
+          "url": "https://github.com/PowerShell/PowerShell"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn PowerShell in Less Than 2 Hours",
+          "url": "https://www.youtube.com/watch?v=ZOoCaWyifmI"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:printf-formatting",
+      "topic_slug": "printf-formatting",
+      "node_id": "XCCuDzGE-5LPhHEPGvVMj",
+      "title": "printf Formatting",
+      "description": "`printf` is a command-line utility used to format and print text in a specific way. It allows you to control the appearance of output by using format specifiers, which define how different types of data (strings, numbers, etc.) should be displayed. This includes specifying the width, precision, alignment, and other attributes of the output.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash printf Command",
+          "url": "https://linuxize.com/post/bash-printf-command/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash printf",
+          "url": "https://www.warp.dev/terminus/bash-printf"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash: printf usage and example",
+          "url": "https://www.youtube.com/watch?v=_mi0O52_gwU"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:process-management",
+      "topic_slug": "process-management",
+      "node_id": "ZTJrnx12KSrcyUfd0RfPu",
+      "title": "Process Management",
+      "description": "Process management involves controlling and monitoring the execution of programs within an operating system. It includes tasks such as creating new processes, scheduling their execution, allocating resources, and handling inter-process communication. Effective process management ensures efficient utilization of system resources and prevents conflicts between running programs.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Managing processes",
+          "url": "https://computing.stat.berkeley.edu/tutorial-using-bash/managing-processes.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "ProcessManagement - Greg's Wiki  Greg's",
+          "url": "https://mywiki.wooledge.org/ProcessManagement"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Process Management: How to Tame Your Shell Like a Pro",
+          "url": "https://itldc.com/en/blog/bash-process-management-how-to-tame-your-shell-like-a-pro/"
+        },
+        {
+          "raw_type": "video",
+          "title": "#4 - Bash command for Process Management",
+          "url": "https://www.youtube.com/watch?v=O4C6_TJ-iws"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:process-substitution",
+      "topic_slug": "process-substitution",
+      "node_id": "Oc80VSBDYTHkGOV4Jqo19",
+      "title": "Process Substitution",
+      "description": "Process substitution allows you to treat the output of a process as if it were a file. It achieves this by creating a temporary file (or using a pipe in some systems) and connecting the standard output of a command to it. This temporary file's name is then substituted into the command line, allowing commands that expect file arguments to read the output of another command. This is particularly use",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Process Substitution",
+          "url": "https://tldp.org/LDP/abs/html/process-sub.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Handy Bash feature: Process Substitution",
+          "url": "https://medium.com/@joewalnes/handy-bash-feature-process-substitution-8eb6dce68133"
+        },
+        {
+          "raw_type": "video",
+          "title": "Command vs. Process substitution in Bash - explaining the difference. You Suck at Programming #073",
+          "url": "https://www.youtube.com/watch?v=f3eIK5xk4vg"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:process-substitution",
+      "topic_slug": "process-substitution",
+      "node_id": "uk7TEHUqTIjmH4MJToxPe",
+      "title": "Process Substitution",
+      "description": "Process substitution allows you to treat the output of a process as if it were a file. It provides a way to pass the output of one command as input to another command, without using temporary files or named pipes. This is achieved by creating a temporary file-like object (either a named pipe or a file in `/dev/fd`) that the command writes its output to, and then passing the name of this object to ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Process Substitution",
+          "url": "https://tldp.org/LDP/abs/html/process-sub.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Handy Bash feature: Process Substitution",
+          "url": "https://medium.com/@joewalnes/handy-bash-feature-process-substitution-8eb6dce68133"
+        },
+        {
+          "raw_type": "video",
+          "title": "Command vs. Process substitution in Bash - explaining the difference.",
+          "url": "https://www.youtube.com/watch?v=f3eIK5xk4vg"
+        },
+        {
+          "raw_type": "video",
+          "title": "Process Substitution in BASH - Commands for Linux",
+          "url": "https://www.youtube.com/watch?v=dR0X0-B9ObA"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:ps",
+      "topic_slug": "ps",
+      "node_id": "gOdW5k4fRu9P-3D3ze8aA",
+      "title": "ps",
+      "description": "`ps` is a command-line utility that displays information about active processes running on a Linux or Unix-like operating system. It provides a snapshot of the current processes, including their process IDs (PIDs), resource usage, and other relevant details. This allows users and administrators to monitor system activity and identify processes that may be consuming excessive resources or causing i",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash ps Command - Snapshot of Current Processes",
+          "url": "https://www.w3schools.com/bash/bash_ps.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "List Processes Linux: ps command for beginners",
+          "url": "https://www.fullstackfoundations.com/blog/list-processes-linux"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The ps Command",
+          "url": "https://www.youtube.com/watch?v=wYwGNgsfN3I"
+        },
+        {
+          "raw_type": "video",
+          "title": "Process and System Management on Linux and Mac (Bash)",
+          "url": "https://www.youtube.com/watch?v=lfN2RE8720E"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:pwd",
+      "topic_slug": "pwd",
+      "node_id": "ng5ySgj1HQmD_gfQ4TSPI",
+      "title": "pwd",
+      "description": "`pwd` (print working directory) is a command-line utility that displays the absolute path of the current directory you are working in. It essentially tells you where you are located within the file system hierarchy from the root directory. This is useful for navigating and understanding your position within the directory structure.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How To Use pwd Command In Linux / UNIX {with examples}",
+          "url": "https://www.cyberciti.biz/faq/pwd-linux-unix-command-examples/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash pwd Command - Print Working Directory",
+          "url": "https://www.w3schools.com/bash/bash_pwd.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to use the pwd command: 2-Minute Linux Tips",
+          "url": "https://www.youtube.com/watch?v=bBM_flm2Ths"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:read-user-input",
+      "topic_slug": "read-user-input",
+      "node_id": "o2vQXl9WDOO4NAsLjYv_4",
+      "title": "Read User Input",
+      "description": "Reading user input in a shell script allows the script to interact with the person running it. This is achieved by pausing the script's execution and waiting for the user to type something and press Enter. The entered text can then be stored in a variable and used later in the script for various purposes, such as making decisions or providing customized output.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "User Input!",
+          "url": "https://ryanstutorials.net/bash-scripting-tutorial/bash-input.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Reading User Input",
+          "url": "https://www.warp.dev/terminus/bash-reading-user-input"
+        },
+        {
+          "raw_type": "video",
+          "title": "How do I read user input into a variable in Bash | Shell Scripting Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=Sc2v6Dj3Z4M"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:recursive-functions",
+      "topic_slug": "recursive-functions",
+      "node_id": "X4-kdfaVimq5VP_gPTWR0",
+      "title": "Recursive Functions",
+      "description": "Recursive functions are functions that call themselves within their own definition. This allows a function to repeat a process until a specific condition is met, breaking down a complex problem into smaller, self-similar subproblems. Each call adds a new layer to the execution stack, and it's crucial to have a base case to prevent infinite loops.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Recursive function",
+          "url": "https://bash.cyberciti.biz/guide/Recursive_function"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to implement a recursive function in a Bash script?",
+          "url": "https://labex.io/questions/how-to-implement-a-recursive-function-in-a-bash-script-18293"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Recursion in bash (Bash 23)",
+          "url": "https://www.youtube.com/watch?v=K_BgGxtK2gE"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:redirects--pipelines",
+      "topic_slug": "redirects--pipelines",
+      "node_id": "reLvp_PnKqpyWWtnuICPj",
+      "title": "Redirects & Pipelines",
+      "description": "Redirects and pipelines are fundamental features in the shell that allow you to control the flow of data between commands. Redirects change where a command's input comes from or where its output goes, allowing you to read from files or write to files. Pipelines connect the output of one command directly to the input of another, enabling you to chain commands together to perform complex operations ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Redirections",
+          "url": "https://www.gnu.org/software/bash/manual/html_node/Redirections.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Unix / Linux - Shell Input/Output Redirections",
+          "url": "https://www.tutorialspoint.com/unix/unix-io-redirections.htm"
+        },
+        {
+          "raw_type": "video",
+          "title": "IO Redirection in Bash EXPLAINED",
+          "url": "https://www.youtube.com/watch?v=7VaO2dxs_kg"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:regular-expressions",
+      "topic_slug": "regular-expressions",
+      "node_id": "W7NlQoj0EDxvuMVj4MKXc",
+      "title": "Regular Expressions",
+      "description": "Regular expressions (regex) are sequences of characters that define a search pattern. They are used to match, locate, and manipulate text based on specific patterns. Regex provides a powerful way to search for strings that match a certain format, such as email addresses, phone numbers, or specific keywords within a larger body of text.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Regular expressions",
+          "url": "https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_04_01.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Regex: How to Use Regex in a Shell Script",
+          "url": "https://kodekloud.com/blog/regex-shell-script/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Beginners Guide to Bash Regex (With Code Examples)",
+          "url": "https://zerotomastery.io/blog/bash-regex/"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:repeat-commands",
+      "topic_slug": "repeat-commands",
+      "node_id": "tu3NFc76-j6VVysFdk8Kd",
+      "title": "Repeat Commands",
+      "description": "In the shell, you can easily access and reuse previously executed commands. The most common way to do this is using the up and down arrow keys to navigate through your command history. Alternatively, you can use the `history` command to view a numbered list of past commands, and then execute a specific command by typing `!n`, where `n` is the command's number in the history list. You can also use ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How To Use Bash History Commands and Expansions on a Linux VPS",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash History | Your Linux Command History Explained",
+          "url": "https://www.youtube.com/watch?v=Bth-1rLKjGU"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:rm",
+      "topic_slug": "rm",
+      "node_id": "uS5HS_4a-lk3AtXaMyAlp",
+      "title": "rm Command",
+      "description": "The `rm` command in Unix-like operating systems is used to remove files or directories. It permanently deletes the specified files, so caution is advised when using it. By default, `rm` does not remove directories; specific options are needed to remove directories and their contents recursively.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash rm Command - Remove Files or Directories",
+          "url": "https://www.w3schools.com/bash/bash_rm.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Command Line Tutorial For Beginners 7 - rm and rmdir commands for linux",
+          "url": "https://www.youtube.com/watch?v=yrw6Uxs-yJk"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:rmdir",
+      "topic_slug": "rmdir",
+      "node_id": "cqZP-2xfil-1Zq3TD7qiN",
+      "title": "rmdir",
+      "description": "`rmdir` is a command-line utility used to remove empty directories. It's a straightforward tool that helps in cleaning up directory structures by deleting directories that no longer contain any files or subdirectories. The command will return an error if the directory is not empty.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Deleting or removing directories (rmdir command)",
+          "url": "https://www.ibm.com/docs/en/aix/7.2.0?topic=directories-deleting-removing-rmdir-command"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Command Line Tutorial For Beginners 7 - rm and rmdir commands for linux",
+          "url": "https://www.youtube.com/watch?v=yrw6Uxs-yJk"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:rsync",
+      "topic_slug": "rsync",
+      "node_id": "mImvR0TfLjDqj_Td4G7Gy",
+      "title": "rsync",
+      "description": "rsync is a command-line utility for efficiently transferring and synchronizing files between a computer and an external hard drive or across networked computers. It minimizes data transfer by only copying the differences between the source and destination, making it faster than simple copy commands, especially for large files or directories. rsync is commonly used for backups, mirroring data, and ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Rsync Command in Linux with Examples",
+          "url": "https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Use Rsync to Sync Local and Remote Directories",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash rsync Command - Remote (and local) File-copying",
+          "url": "https://www.w3schools.com/bash/bash_rsync.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux File Transfers Made Easy with rsync",
+          "url": "https://www.youtube.com/watch?v=KG78O53u8rY"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:running-shell-scripts",
+      "topic_slug": "running-shell-scripts",
+      "node_id": "dj3KiBtPjRK2DF5HeuoYZ",
+      "title": "Running Shell Scripts",
+      "description": "Running a shell script involves executing a file containing a series of commands that the shell interprets and performs. This allows you to automate tasks, create reusable tools, and manage system operations by grouping commands into a single executable unit. The script is typically a plain text file with a `.sh` extension, and it needs execute permissions to be run directly.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to run the .sh file in Linux",
+          "url": "https://www.hostinger.com/tutorials/how-to-run-sh-file-in-linux"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Run the .sh File Shell Script In Linux / UNIX",
+          "url": "https://www.cyberciti.biz/faq/run-execute-sh-shell-script/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to run bash script in Linux | Linux in a Minute",
+          "url": "https://www.youtube.com/watch?v=iViofyFir9o"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:running-with-bash",
+      "topic_slug": "running-with-bash",
+      "node_id": "aZ7WGLUZyejFRbfWtSyhB",
+      "title": "Running with Bash",
+      "description": "Running a shell script with Bash involves explicitly invoking the Bash interpreter to execute the commands within the script. This is typically done by using the `bash` command followed by the script's filename as an argument. This method ensures that the script is interpreted and executed using the Bash shell, regardless of the script's shebang line or the user's default shell.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Scripting Tutorial \u2013 Linux Shell Script and Command Line for Beginners",
+          "url": "https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to run bash script in Linux | Linux in a Minute",
+          "url": "https://www.youtube.com/watch?v=iViofyFir9o"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:running-with-source",
+      "topic_slug": "running-with-source",
+      "node_id": "ZBYzPltaUePoOldJ6zRj8",
+      "title": "Running Shell Scripts with Source",
+      "description": "Sourcing a shell script executes the commands within the script in the _current_ shell environment, rather than in a subshell. This means that any variables, functions, or aliases defined or modified within the script will directly affect the shell you're currently working in. This is in contrast to simply executing a script, which creates a new process and any changes are isolated to that process",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "https://dillionmegida.com/p/sourcing-vs-executing-script-directly/",
+          "url": "https://dillionmegida.com/p/sourcing-vs-executing-script-directly/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Source Shell Script vs Executing Shell Script - The Real Difference",
+          "url": "https://www.youtube.com/watch?v=ZIqRmp-XBRY"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:rwx",
+      "topic_slug": "rwx",
+      "node_id": "M27BJ6fgVdaBxyWE-OdNl",
+      "title": "rwx File Permissions",
+      "description": "In Unix-like operating systems, file permissions control who can access and modify files and directories. The \"rwx\" notation represents the three fundamental permission types: \"r\" for read, allowing users to view the contents of a file or list the contents of a directory; \"w\" for write, allowing users to modify a file or create/delete files within a directory; and \"x\" for execute, allowing users t",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Permissions",
+          "url": "https://linuxcommand.org/lc3_lts0090.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - Understanding File Permissions",
+          "url": "https://www.youtube.com/watch?v=4N4Q576i3zA"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:scp",
+      "topic_slug": "scp",
+      "node_id": "PzRwOkhukRE1cTHXOXUTu",
+      "title": "scp",
+      "description": "`scp`, short for secure copy, is a command-line utility that allows you to securely transfer files between a local host and a remote host or between two remote hosts. It uses the SSH protocol for data transfer, ensuring that the data is encrypted during transmission, thus protecting it from eavesdropping. `scp` is commonly used for tasks like uploading website files to a server, backing up data to",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to Use SCP Command to Securely Transfer Files",
+          "url": "https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to use SCP command to copy and transfer files in Linux",
+          "url": "https://www.hostinger.com/tutorials/linux-scp-command"
+        },
+        {
+          "raw_type": "video",
+          "title": "Transferring files with the scp Command (Linux Crash Course Series)",
+          "url": "https://www.youtube.com/watch?v=Aa7tKMmeFZI"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:script-arguments",
+      "topic_slug": "script-arguments",
+      "node_id": "BCkD0b9unC1lfjUThU3hX",
+      "title": "Script Arguments",
+      "description": "Script arguments are values passed to a shell script when it is executed. These arguments allow you to customize the script's behavior without modifying the script's code directly. They are accessed within the script using positional parameters like `$1`, `$2`, `$3`, and so on, where `$1` represents the first argument, `$2` the second, and so forth. The special variable `$0` holds the name of the ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using Arguments in Bash Scripts",
+          "url": "https://refine.dev/blog/bash-script-arguments/#introduction"
+        },
+        {
+          "raw_type": "article",
+          "title": "Adding arguments and options to your Bash scripts",
+          "url": "https://www.redhat.com/en/blog/arguments-options-bash-scripts"
+        },
+        {
+          "raw_type": "video",
+          "title": "Passing Arguments to the Script | Shell Scripting Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=Gexu9M7p5aU"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:sed",
+      "topic_slug": "sed",
+      "node_id": "4XfvvrFQoV0X7dfaKYFlv",
+      "title": "sed",
+      "description": "`sed` (Stream EDitor) is a powerful command-line utility used for text transformation. It operates on a stream of text, performing operations like searching, replacing, deleting, and inserting text based on patterns or line numbers. `sed` is commonly used in shell scripting for automating text editing tasks and manipulating data within files or pipelines.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash sed Command - Stream Editor",
+          "url": "https://www.w3schools.com/bash/bash_sed.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering sed Command in Linux: A Comprehensive Guide | DigitalOcean",
+          "url": "https://www.digitalocean.com/community/tutorials/linux-sed-command"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The sed Command",
+          "url": "https://www.youtube.com/watch?v=nXLnx8ncZyE"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:set--e",
+      "topic_slug": "set--e",
+      "node_id": "I-N9SM8ZVcOTVQs8_vtJm",
+      "title": "set -e",
+      "description": "`set -e` is a shell command that instructs the shell to exit immediately if a command exits with a non-zero status. This is a way to ensure that your script stops executing as soon as an error occurs, preventing subsequent commands from running based on potentially incorrect or incomplete results. It's a common practice to include `set -e` at the beginning of a script to enforce stricter error che",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Executing Code after an Error Occurs with Bash When Using set e",
+          "url": "https://nickjanetakis.com/blog/executing-code-after-an-error-occurs-with-bash-when-using-set-e"
+        },
+        {
+          "raw_type": "article",
+          "title": "Allowing for Errors in Bash When You Have set -e Defined",
+          "url": "https://nickjanetakis.com/blog/allowing-for-errors-in-bash-when-you-have-set-e-defined"
+        },
+        {
+          "raw_type": "video",
+          "title": "Shell Script Error Handling: Master Bash Scripting for Robust Code",
+          "url": "https://www.youtube.com/watch?v=uFJiDD1B5I4"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:set--o",
+      "topic_slug": "set--o",
+      "node_id": "OOskpOLWFe1rN0XMuabAS",
+      "title": "set -o",
+      "description": "The `set -o` command in shell scripting is used to modify shell options, which control the behavior of the shell. These options can affect how the shell interprets commands, handles errors, and performs other tasks. By using `set -o` with specific option names, you can customize the shell's environment to suit your needs, enabling features like error handling, debugging, and more strict command ex",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Prevent Unset Variables in Your Shell / Bash Scripts with set nounset",
+          "url": "https://nickjanetakis.com/blog/prevent-unset-variables-in-your-shell-bash-scripts-with-set-nounset"
+        },
+        {
+          "raw_type": "article",
+          "title": "set -e, -u, -o, -x pipefail explanation",
+          "url": "https://gist.github.com/mohanpedala/1e2ff5661761d3abd0385e8223e16425"
+        },
+        {
+          "raw_type": "video",
+          "title": "Prevent Unset Variables in Your Shell / Bash Scripts with set -o nounset",
+          "url": "https://www.youtube.com/watch?v=Kly_6DhfHwE"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:set--u",
+      "topic_slug": "set--u",
+      "node_id": "HrzalKXWVmqD-8SfdQJVu",
+      "title": "set -u",
+      "description": "The `set -u` command in shell scripting treats unset variables as an error. When this option is enabled, the script will exit immediately if it tries to use a variable that has not been assigned a value. This helps to catch potential bugs caused by typos or missing variable assignments, making scripts more robust.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "set -e, -u, -o, -x pipefail explanation",
+          "url": "https://gist.github.com/mohanpedala/1e2ff5661761d3abd0385e8223e16425"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:set--x",
+      "topic_slug": "set--x",
+      "node_id": "8Q1FCxKYYl-HnMGkwdK6h",
+      "title": "set -x",
+      "description": "`set -x` is a debugging tool used in shell scripts to trace the execution of commands. When enabled, the shell will print each command to standard error (stderr) before it is executed, preceded by a `+` symbol. This allows you to see exactly what commands are being run and in what order, making it easier to identify errors or unexpected behavior in your scripts.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Mastering Selective Debugging in Bash/Shell Scripts with set -x and set +x",
+          "url": "https://medium.com/@maheshwar.ramkrushna/mastering-selective-debugging-in-bash-shell-scripts-with-set-x-and-set-x-ef6b7e83fb37"
+        },
+        {
+          "raw_type": "article",
+          "title": "Difference between bash -x and set -x",
+          "url": "https://how.dev/answers/bash--x-and-set--x"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using set -x and set -e in Shell Scripting: A Guide for Enhanced Debugging and Error Handling",
+          "url": "https://www.hackerone.com/blog/using-set-x-and-set-e-shell-scripting-guide-enhanced-debugging-and-error-handling"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Debug Bash - Using bash -x or set -x in bash - You Suck at Programming #044",
+          "url": "https://www.youtube.com/watch?v=4TAx3Z9OgPs"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:setting-up-bash",
+      "topic_slug": "setting-up-bash",
+      "node_id": "6SR4c75dEKoFxZ88sDtfi",
+      "title": "Setting Up Bash",
+      "description": "Setting up Bash involves configuring your shell environment to suit your preferences and workflow. This includes customizing the appearance of your command prompt, defining aliases for frequently used commands, setting environment variables to control program behavior, and creating custom functions to automate tasks. Properly setting up Bash can significantly improve your productivity and make wor",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Setting up the Bash Environment",
+          "url": "https://letsdefend.io/blog/how-to-install-bash-on-windows"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to configure or customize Bash: My first steps for my setup",
+          "url": "https://www.youtube.com/watch?v=wy1q5egFW6I"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:shellcheck",
+      "topic_slug": "shellcheck",
+      "node_id": "r_G62Mx-S8wBcxduFbPMh",
+      "title": "Shellcheck",
+      "description": "Shellcheck is a static analysis tool for shell scripts. It helps identify and fix common syntax errors, semantic issues, and stylistic problems in your Bash/Shell scripts before you even run them. By analyzing your code, shellcheck can suggest improvements and help prevent potential bugs, resulting in more robust and maintainable scripts.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Shellcheck",
+          "url": "https://www.shellcheck.net/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "Shellcheck",
+          "url": "https://github.com/koalaman/shellcheck"
+        },
+        {
+          "raw_type": "article",
+          "title": "ShellCheck: Script Analysis Tool for Shell Scripts",
+          "url": "https://trunk.io/linters/shell/shellcheck"
+        },
+        {
+          "raw_type": "video",
+          "title": "Fix Your Shell Scripts With Shellcheck",
+          "url": "https://www.youtube.com/watch?v=X3BIc9EHBuk"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:shift",
+      "topic_slug": "shift",
+      "node_id": "u_kpVb3V8Xp-0fex_5-yG",
+      "title": "Shift",
+      "description": "The `shift` command in shell scripting renames the command-line arguments. Specifically, it moves each argument one position to the left. The value of `$2` becomes `$1`, the value of `$3` becomes `$2`, and so on. The original value of `$1` is lost. This is particularly useful when you need to process a variable number of arguments passed to a script.",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "BASH Shifting Argument Variables Linux Shell Tutorial",
+          "url": "https://www.youtube.com/watch?v=fJSUVGlQ1E8"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:sort",
+      "topic_slug": "sort",
+      "node_id": "P9pwqBvPDhcvVIj8fNhGX",
+      "title": "Sort",
+      "description": "`sort` is a command-line utility that arranges lines of text in a specific order. It can sort alphabetically, numerically, by month, or even based on custom criteria. By default, `sort` treats each line as a string and sorts them in ascending ASCII order, but its behavior can be modified using various options to handle different data types and sorting preferences.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash sort Command - Sort Lines of Text Files",
+          "url": "https://www.w3schools.com/bash/bash_sort.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash sort Command - Sort Lines of Text Files",
+          "url": "https://www.youtube.com/watch?v=2B16aYGzIEQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:special-variables",
+      "topic_slug": "special-variables",
+      "node_id": "_BzADQXji4lVY620U4cZa",
+      "title": "Special Variables",
+      "description": "Special variables in shell scripting are predefined variables that automatically hold specific values related to the shell's operation or the script's execution environment. These variables provide access to information like the script's name, the number of arguments passed to it, the exit status of the last command, and process IDs. They are read-only in most cases, meaning you can't directly mod",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Special variables",
+          "url": "https://www.tutorialspoint.com/unix/unix-special-variables.htm"
+        },
+        {
+          "raw_type": "article",
+          "title": "Special Variable Types",
+          "url": "https://tldp.org/LDP/abs/html/othertypesv.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Special Variables | Shell Scripting Tutorial For Beginners",
+          "url": "https://www.youtube.com/watch?v=PfxzX4XNYRE"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:ssh",
+      "topic_slug": "ssh",
+      "node_id": "eVbx1WsfeHcVaFs-vXpwF",
+      "title": "SSH",
+      "description": "SSH (Secure Shell) is a cryptographic network protocol that enables secure communication between two computers over an insecure network. It's commonly used for remote command-line access, remote execution of commands, and secure file transfer. SSH encrypts the data transmitted between the client and the server, protecting it from eavesdropping and tampering.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "SSH Essentials: Working with SSH Servers, Clients, and Keys",
+          "url": "https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys"
+        },
+        {
+          "raw_type": "article",
+          "title": "A beginner\u2019s guide to SSH for remote connection on Linux",
+          "url": "https://opensource.com/article/20/9/ssh"
+        },
+        {
+          "raw_type": "video",
+          "title": "SSH for Beginners: The Ultimate Getting Started Guide",
+          "url": "https://www.youtube.com/watch?v=YS5Zh7KExvE"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn SSH In 6 Minutes - Beginners Guide to SSH Tutorial",
+          "url": "https://www.youtube.com/watch?v=v45p_kJV9i4"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:stdin-stdout-stderr",
+      "topic_slug": "stdin-stdout-stderr",
+      "node_id": "3VulHH-Y-VdMRM6VBVWar",
+      "title": "stdin, stdout, and stderr",
+      "description": "In computing, standard streams are preconnected input and output communication channels between a computer program and its environment. Specifically, _stdin_ (standard input) is the channel through which a program receives input, typically from the keyboard or another program. _stdout_ (standard output) is the channel through which a program writes its normal output, usually displayed on the scree",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Standard Streams - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Standard_streams"
+        },
+        {
+          "raw_type": "article",
+          "title": "stdin, stdout, stderr",
+          "url": "https://www.learnlinux.org.za/courses/build/shell-scripting/ch01s04"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - Data Streams (stdin, stdout & stderr)",
+          "url": "https://www.youtube.com/watch?v=zMKacHGuIHI"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:stop-execution",
+      "topic_slug": "stop-execution",
+      "node_id": "Ydqpp_YYujdHyYraNEt4h",
+      "title": "Stop Execution",
+      "description": "Stopping execution in a shell script refers to halting the script's progress, often due to an error, a specific condition being met, or a user's request. This can be achieved through various commands and techniques that control the flow of the script, ensuring that it doesn't continue running when it shouldn't. Properly stopping execution is crucial for preventing unintended consequences and maint",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash kill Command - Terminate Processes",
+          "url": "https://www.w3schools.com/bash/bash_kill.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to exit from Bash script",
+          "url": "https://linuxconfig.org/how-to-exit-from-bash-script"
+        },
+        {
+          "raw_type": "video",
+          "title": "Killing Processes Linux Shell Tutorial",
+          "url": "https://www.youtube.com/watch?v=03umJo33aQg"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:string-length",
+      "topic_slug": "string-length",
+      "node_id": "sBI1aCY7XmXBwqTrokt9F",
+      "title": "String Length",
+      "description": "Determining the length of a string is a common task in scripting. It involves finding the number of characters present in a given string, which can be useful for validation, formatting, or other string processing operations. In shell scripting, there are several ways to achieve this, each with its own syntax and potential use cases.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash String Manipulation Examples \u2013 Length, Substring, Find and Replace",
+          "url": "https://www.thegeekstuff.com/2010/07/bash-string-manipulation/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Counting Characters in a Bash String - Quick Tip",
+          "url": "https://www.youtube.com/watch?v=mK7hutk2yCE"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:string-manipulation",
+      "topic_slug": "string-manipulation",
+      "node_id": "PS9R8AX-_dgeqYL2Y67Ff",
+      "title": "String Manipulation",
+      "description": "String manipulation involves modifying or extracting parts of text data. This can include tasks like finding specific characters, replacing substrings, changing the case of letters, or extracting portions of a string based on delimiters or patterns. These operations are fundamental for processing and transforming textual information.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Manipulating Strings",
+          "url": "https://tldp.org/LDP/abs/html/string-manipulation.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:string-operators",
+      "topic_slug": "string-operators",
+      "node_id": "ryZ2MI4blZCwfuNC_TeUe",
+      "title": "String Operators",
+      "description": "String operators in Bash are symbols or keywords used to perform operations on strings, such as checking if a string is empty, comparing strings, extracting substrings, or determining the length of a string. These operators are essential for manipulating and evaluating string values within shell scripts, enabling conditional logic and data processing based on string content.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash String Comparison: The Comprehensive Guide",
+          "url": "https://www.namehero.com/blog/bash-string-comparison-the-comprehensive-guide/"
+        },
+        {
+          "raw_type": "article",
+          "title": "String Operators",
+          "url": "https://www.oreilly.com/library/view/learning-the-bash/1565923472/ch04s03.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:strings",
+      "topic_slug": "strings",
+      "node_id": "Sz2F519WqEhkKZE0NBveH",
+      "title": "Strings in Bash",
+      "description": "In Bash, strings are sequences of characters. They can be enclosed in single quotes (`'...'`) or double quotes (`\"...\"`). Single quotes treat everything literally, meaning no variable substitution or command execution happens within them. Double quotes, on the other hand, allow for variable expansion and command substitution. Suppose you want to include a literal single quote within a single-quote",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Data Types",
+          "url": "https://www.w3schools.com/bash/bash_data_types.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Scripting - String",
+          "url": "https://www.geeksforgeeks.org/linux-unix/bash-scripting-string/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Manipulating Strings",
+          "url": "https://tldp.org/LDP/abs/html/string-manipulation.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:substring-extraction",
+      "topic_slug": "substring-extraction",
+      "node_id": "6TonvFzr_nmoFsATwuZK7",
+      "title": "Substring Extraction",
+      "description": "Substring extraction involves selecting a portion of a string based on its position within the string. This is done by specifying the starting point and the length of the desired substring. It allows you to isolate and work with specific parts of a larger text string.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Extracting a Substring in Bash",
+          "url": "https://www.baeldung.com/linux/bash-substring"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Extract Bash Substring",
+          "url": "https://kodekloud.com/blog/bash-substring/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Creating substrings in Bash - Basic String Manipulation - You Suck at Programming #045",
+          "url": "https://www.youtube.com/watch?v=KPVm06L55gc"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:success-vs-failure",
+      "topic_slug": "success-vs-failure",
+      "node_id": "wKMq5G8cmqo3JnHG4Z-c1",
+      "title": "Exit Codes: Success vs. Failure",
+      "description": "Exit codes are numerical values returned by a program or script upon completion, signaling whether it executed successfully or encountered an error. A zero (0) exit code typically indicates success, while any non-zero value signifies failure, with different non-zero codes often representing specific types of errors. These codes are crucial for scripting and automation, allowing scripts to make dec",
+      "resources": []
+    },
+    {
+      "skill_id": "shell-bash:systemd-timers",
+      "topic_slug": "systemd-timers",
+      "node_id": "ResodrV_p7zK1dJbqT0us",
+      "title": "Systemd Timers",
+      "description": "Systemd timers are a systemd feature that allows you to schedule tasks to run at specific times or intervals, similar to cron. They provide a more flexible and powerful alternative to cron, offering features like dependency management, event-based activation, and integration with systemd's logging and service management capabilities. Systemd timers are defined using unit files, just like systemd s",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Working with systemd timers",
+          "url": "https://yieldcode.blog/post/working-with-systemd-timers/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Systemd timers \u2014 The alternative to cron jobs",
+          "url": "https://medium.com/@tolulinux/systemd-timers-the-alternative-to-cron-jobs-be479172ae12"
+        },
+        {
+          "raw_type": "video",
+          "title": "Automate Your Tasks with systemd Timers: A Step-by-Step Guide",
+          "url": "https://www.youtube.com/watch?v=n6BuUgkZ5T0"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:tab-completion",
+      "topic_slug": "tab-completion",
+      "node_id": "HESaq3OyuouEqjpZITYUd",
+      "title": "Tab Completion",
+      "description": "Tab completion is a feature in command-line interfaces that automatically completes commands, filenames, or other input based on what you've already typed. By pressing the Tab key, the shell attempts to fill in the rest of the word you're typing, saving you time and reducing errors. If multiple possibilities exist, pressing Tab twice usually displays a list of options.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "https://www.gnu.org/software/gnuastro/manual/html_node/Bash-TAB-completion-tutorial.html",
+          "url": "https://www.gnu.org/software/gnuastro/manual/html_node/Bash-TAB-completion-tutorial.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:tar",
+      "topic_slug": "tar",
+      "node_id": "ESjj2b8Hk0Irj4E2Gmj6w",
+      "title": "tar",
+      "description": "`tar` (Tape Archive) is a command-line utility in Unix-like operating systems used for archiving and extracting files. It combines multiple files into a single archive file, often referred to as a \"tarball.\" While `tar` itself doesn't compress the archive, it's commonly used in conjunction with compression tools like gzip or bzip2 to create compressed archives (e.g., `.tar.gz` or `.tar.bz2` files)",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash tar Command - An archiving utility",
+          "url": "https://www.w3schools.com/bash/bash_tar.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to use the tar command in Linux",
+          "url": "https://www.hostinger.com/tutorials/linux-tar-command-with-examples"
+        },
+        {
+          "raw_type": "article",
+          "title": "Linux tar Command with Practical Examples",
+          "url": "https://labex.io/es/tutorials/linux-linux-tar-command-with-practical-examples-422951"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Archive Folders in Linux (tar and gzip tutorial) - Linux Crash Course Series",
+          "url": "https://www.youtube.com/watch?v=2iwumBcfd58"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:tcsh",
+      "topic_slug": "tcsh",
+      "node_id": "SHD2pc0D5QjDpEwzsFWz-",
+      "title": "tcsh",
+      "description": "tcsh is an enhanced version of the C shell (csh), a Unix shell program. It's designed as an interactive login shell and a shell script command processor. tcsh provides features like command-line editing, filename completion, and a history mechanism, making it more user-friendly than its predecessor.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "tcsh",
+          "url": "https://www.tcsh.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "tcsh - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tcsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:text-editors",
+      "topic_slug": "text-editors",
+      "node_id": "it421LC-vLFNmTcWxrsX6",
+      "title": "Text Editors",
+      "description": "Text editors are software programs that allow users to create, open, view, and modify plain text files. They are fundamental tools for writing code, scripts, configuration files, and general text-based documents. Unlike word processors, text editors focus on the raw text content without applying rich formatting or styles.",
+      "resources": []
+    },
+    {
+      "skill_id": "shell-bash:top-htop",
+      "topic_slug": "top-htop",
+      "node_id": "M2afRR6yY8iq85_MnfGKV",
+      "title": "top and htop",
+      "description": "`top` and `htop` are command-line utilities used for real-time system monitoring. They display a dynamic, ordered list of processes running on a system, along with information about CPU usage, memory consumption, and other system resources. `htop` is an enhanced, interactive version of `top`, offering features like color-coding, improved process management, and horizontal scrolling.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash top Command - Display Linux Tasks",
+          "url": "https://www.w3schools.com/bash/bash_top.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to use top and htop Linux command for Process Management",
+          "url": "https://www.layerstack.com/resources/tutorials/How-to-use-top-and-htop-Linux-command-for-Process-Management"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding Linux System Performance | The Top Command",
+          "url": "https://www.youtube.com/watch?v=3r_PBLaZoFQ"
+        },
+        {
+          "raw_type": "video",
+          "title": "The htop Command | Linux Essentials Tutorial",
+          "url": "https://www.youtube.com/watch?v=bKWZJ3_5ODc"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:touch",
+      "topic_slug": "touch",
+      "node_id": "fssn0pz6ooqG-EE8rZl-L",
+      "title": "touch",
+      "description": "The `touch` command is a fundamental utility used to update the access and modification times of files and directories. If a file doesn't exist, `touch` creates an empty file with the specified name. It's commonly used to create new, empty files or to quickly update the timestamps of existing files without modifying their content.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash touch Command - Change File Timestamps",
+          "url": "https://www.w3schools.com/bash/bash_touch.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "Touch Command Made Easy (Linux Crash Course)",
+          "url": "https://www.youtube.com/watch?v=bP0dwXU8B64"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:tr",
+      "topic_slug": "tr",
+      "node_id": "YJblaz_GKC5sH7ntFe5ls",
+      "title": "tr Command",
+      "description": "The `tr` command in Unix-like operating systems is a command-line utility that translates or deletes characters. It reads standard input, performs the specified transformations, and writes the result to standard output. `tr` is often used for tasks like converting uppercase to lowercase, deleting specific characters, or replacing one set of characters with another.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Linux tr Command with Examples",
+          "url": "https://phoenixnap.com/kb/linux-tr"
+        },
+        {
+          "raw_type": "video",
+          "title": "Linux Crash Course - The tr Command",
+          "url": "https://www.youtube.com/watch?v=4qP5xA_epXo"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:trap",
+      "topic_slug": "trap",
+      "node_id": "c0F44DSG7eVcqwaOfk2Z-",
+      "title": "Trap",
+      "description": "`trap` is a shell command used to specify actions to be taken upon receiving signals. Signals are notifications sent to a process to indicate an event, such as termination, interruption, or an error. The `trap` command allows you to define custom handlers that execute when a specific signal is received, enabling you to gracefully handle errors, clean up resources, or perform other necessary action",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash trap Command Explained",
+          "url": "https://phoenixnap.com/kb/bash-trap-command"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Bash Trap Command",
+          "url": "https://www.linuxjournal.com/content/bash-trap-command"
+        },
+        {
+          "raw_type": "video",
+          "title": "Trapping signals with trap in Bash! Responding to Unix signals. You Suck at Programming #064",
+          "url": "https://www.youtube.com/watch?v=aXovP1sUtoE"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:uniq",
+      "topic_slug": "uniq",
+      "node_id": "4pygQshD_WdP0i6xq3Kc8",
+      "title": "uniq",
+      "description": "`uniq` is a command-line utility that filters adjacent matching lines from an input file (or standard input) and writes a single copy of the matching line to the output. It's primarily used to remove duplicate lines, but it requires that the duplicates be next to each other to be effective. Options allow you to count the number of occurrences of each line, display unique lines, or display only dup",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to use the uniq command to process lists in Linux",
+          "url": "https://www.redhat.com/en/blog/uniq-command-lists"
+        },
+        {
+          "raw_type": "video",
+          "title": "Uniq utility (commands for linux)",
+          "url": "https://www.youtube.com/watch?v=VRrd9ErU13w"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:until",
+      "topic_slug": "until",
+      "node_id": "51xww3YG_O8O7y8CUum83",
+      "title": "Until Loops",
+      "description": "An `until` loop in shell scripting repeatedly executes a block of code as long as a specified condition is false. The loop continues to iterate until the condition becomes true, at which point the loop terminates. It's essentially the opposite of a `while` loop, providing a way to execute commands until a desired state is reached.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash Until Loop",
+          "url": "https://linuxize.com/post/bash-until-loop/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash until Loop",
+          "url": "https://www.youtube.com/watch?v=8x2EfVSGwQc"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:uptime",
+      "topic_slug": "uptime",
+      "node_id": "R57tdCBI0rLmzWEuJeBTW",
+      "title": "Uptime",
+      "description": "Uptime is a command-line utility that displays how long the system has been running. It provides a concise summary of the current time, how long the system has been up, the number of users currently logged in, and the system's load average over the past 1, 5, and 15 minutes. This information is useful for quickly assessing the system's stability and resource utilization.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash uptime Command - System Runtime",
+          "url": "https://www.w3schools.com/bash/bash_uptime.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Uptime Command in Linux",
+          "url": "https://linuxize.com/post/linux-uptime-command/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Uptime command in Linux with Examples - How to Check Uptime in Linux Command Line",
+          "url": "https://www.youtube.com/watch?v=slf7GAuzIQ4"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:variable-scopes",
+      "topic_slug": "variable-scopes",
+      "node_id": "ivcDgpa1kMPxcOt1OCjba",
+      "title": "Variable Scopes",
+      "description": "Variable scope determines the region of a program where a declared variable can be accessed. It defines the visibility and lifetime of a variable. Understanding variable scope is crucial for writing clean, maintainable, and bug-free shell scripts, as it helps prevent naming conflicts and ensures that variables are used in the intended context.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash shell basics \u2014 scoping",
+          "url": "https://paulguerin.medium.com/bash-shell-basics-scoping-d59c8e1468b4"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Work with Shell Variables and Functions",
+          "url": "https://labex.io/fr/tutorials/shell-how-to-work-with-shell-variables-and-functions-392774"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Shell Scripting For Beginners - Local and Global Variables",
+          "url": "https://www.youtube.com/watch?v=4GR0wum_pOQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:variables-best-practices",
+      "topic_slug": "variables-best-practices",
+      "node_id": "9-PPCJDdGh5SWKT4jT6Zs",
+      "title": "Variables Best Practices",
+      "description": "Using variables effectively in shell scripts involves following certain guidelines to improve readability, maintainability, and prevent errors. This includes choosing descriptive names, initializing variables before use, using appropriate scoping, and quoting variables to avoid unexpected behavior due to word splitting and globbing. Adhering to these practices leads to more robust and understandab",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Guide to Naming Conventions for Shell Variables",
+          "url": "https://www.baeldung.com/linux/shell-variable-naming-conventions"
+        },
+        {
+          "raw_type": "article",
+          "title": "Shell Script Best Practices",
+          "url": "https://sharats.me/posts/shell-script-best-practices/"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:vi",
+      "topic_slug": "vi",
+      "node_id": "QZXUYcr1vvbvxRmPSsK53",
+      "title": "Vi",
+      "description": "Vi is a powerful text editor that's been a standard part of Unix-like systems for decades. It operates in different modes, primarily command mode for issuing instructions and insert mode for typing text. Vi is known for its efficiency and keyboard-centric approach, allowing users to perform complex editing tasks without relying heavily on a mouse.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "An introduction to the vi editor",
+          "url": "https://www.redhat.com/en/blog/introduction-vi-editor"
+        },
+        {
+          "raw_type": "video",
+          "title": "Basics of VI editor in under 8 minutes | Vi editor Tutorial",
+          "url": "https://www.youtube.com/watch?v=-_DvfdgR-LA"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:vim",
+      "topic_slug": "vim",
+      "node_id": "jPAHVLBC87n4TIyiAZJue",
+      "title": "Vim",
+      "description": "Vim is a highly configurable text editor built to enable efficient text editing. It's an improved version of the vi editor distributed with most UNIX systems. Vim is known for its modal editing, allowing users to switch between different modes for inserting, deleting, and navigating text, making it a powerful tool for developers and system administrators.",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "OpenVim - Interactive Vim Tutorial",
+          "url": "https://openvim.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Vim",
+          "url": "https://www.vim.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting started with Vim: The basics",
+          "url": "https://opensource.com/article/19/3/getting-started-vim"
+        },
+        {
+          "raw_type": "video",
+          "title": "Vim As Your Editor - Introduction",
+          "url": "https://www.youtube.com/watch?v=X6AR2RMB5tE"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:wc",
+      "topic_slug": "wc",
+      "node_id": "mg5f-DAezgwmwflmncSsO",
+      "title": "wc",
+      "description": "`wc` is a command-line utility that displays the number of lines, words, and bytes (or characters) in a file. It's a simple yet powerful tool for quickly getting a summary of the size and content of text files. You can use it to count the number of lines in a log file, the number of words in a document, or the size of a configuration file.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Wc Command - Count Number of Lines, Words, and Characters",
+          "url": "https://www.tecmint.com/wc-command-examples/"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:wget",
+      "topic_slug": "wget",
+      "node_id": "F5w3pYH5Z58NAJ81p5q8n",
+      "title": "wget",
+      "description": "`wget` is a command-line utility used to retrieve files from the internet. It supports downloading files using HTTP, HTTPS, and FTP protocols. `wget` is non-interactive, meaning it can work in the background without user intervention, making it suitable for scripting and automation.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "GNU Wget",
+          "url": "https://www.gnu.org/software/wget/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is the wget command and how to use it (12 examples included)",
+          "url": "https://www.hostinger.com/tutorials/wget-command-examples"
+        },
+        {
+          "raw_type": "video",
+          "title": "The wget Command | How to Download Files From a Server",
+          "url": "https://www.youtube.com/watch?v=zszbBJ81_YU"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:what-is-bash",
+      "topic_slug": "what-is-bash",
+      "node_id": "GdSViKr5r3uHxzihSjdYV",
+      "title": "What is Bash?",
+      "description": "Bash, short for Bourne Again Shell, is a command-line interpreter and a shell scripting language. It's essentially a program that allows users to interact with the operating system by typing commands. Bash interprets these commands and instructs the operating system to perform specific actions, such as running programs, manipulating files, and managing system resources. It also provides features f",
+      "resources": [
+        {
+          "raw_type": "book",
+          "title": "Bash Guide for Beginners",
+          "url": "https://tldp.org/LDP/Bash-Beginners-Guide/Bash-Beginners-Guide.pdf"
+        },
+        {
+          "raw_type": "official",
+          "title": "Bash Docs",
+          "url": "https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Tutorial",
+          "url": "https://www.w3schools.com/bash/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Scripting Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=tK9Oc6AEnR4"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:what-is-scripting",
+      "topic_slug": "what-is-scripting",
+      "node_id": "LloORF-pz-sbfuzNj1WjG",
+      "title": "What is Scripting?",
+      "description": "Scripting is the process of writing a series of commands that are executed in a specific order by a program or scripting engine. These commands, often written in a simple, human-readable language, automate tasks, control software applications, or interact with operating systems. Instead of manually entering commands one by one, a script allows you to run a sequence of instructions with a single co",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is scripting?",
+          "url": "https://coralogix.com/blog/what-is-scripting/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What's the difference between Programming and Scripting?",
+          "url": "https://www.youtube.com/watch?v=7-0iBZxNq74"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Scripting Tutorial \u2013 Linux Shell Script and Command Line for Beginners",
+          "url": "https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bash Scripting on Linux",
+          "url": "https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:while",
+      "topic_slug": "while",
+      "node_id": "yX-SskrRyFAUFpyIYG7BU",
+      "title": "While Loops",
+      "description": "A `while` loop in shell scripting repeatedly executes a block of code as long as a specified condition remains true. It's a fundamental control flow statement that allows you to automate repetitive tasks based on a dynamic condition that can change during the loop's execution. The loop continues iterating until the condition becomes false.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash While Loop Examples",
+          "url": "https://www.cyberciti.biz/faq/bash-while-loop/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash Loops",
+          "url": "https://www.w3schools.com/bash/bash_loops.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "How To Write Bash Scripts In Linux - Complete Guide (Part 7 - While Loops)",
+          "url": "https://www.youtube.com/watch?v=R0tTsdQ_9Vw"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:yum",
+      "topic_slug": "yum",
+      "node_id": "_p6LP0uvp9QpBISr1t4KX",
+      "title": "yum",
+      "description": "yum (Yellowdog Updater, Modified) is a command-line package management tool for systems using the RPM Package Manager. It automates the process of installing, updating, removing, and searching for software packages and their dependencies from configured repositories. yum simplifies software management by resolving dependencies automatically, ensuring that all required components are installed for ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to install Yum on Linux",
+          "url": "https://linuxconfig.org/how-to-install-yum-on-linux"
+        },
+        {
+          "raw_type": "article",
+          "title": "Linux package management with YUM and RPM",
+          "url": "https://www.redhat.com/en/blog/how-manage-packages"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:zip-unzip",
+      "topic_slug": "zip-unzip",
+      "node_id": "hOtzJ9tH4OcB2uI2T_si5",
+      "title": "zip and unzip",
+      "description": "`zip` and `unzip` are command-line utilities used for compressing and decompressing files and directories. `zip` packages files into a single archive, reducing their size and making them easier to share or store. `unzip` extracts the contents of a zip archive, restoring the original files and directories.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Bash zip Command - Package and compress (archive) files",
+          "url": "https://www.w3schools.com/bash/bash_zip.php"
+        },
+        {
+          "raw_type": "article",
+          "title": "Bash unzip Command - Extract from ZIP archive",
+          "url": "https://www.w3schools.com/bash/bash_unzip.php"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Unzip and Zip Files on Linux (Desktop and Command Line)",
+          "url": "https://www.youtube.com/watch?v=xqcHiuQK9lY"
+        }
+      ]
+    },
+    {
+      "skill_id": "shell-bash:zsh",
+      "topic_slug": "zsh",
+      "node_id": "m-sOOaGyhQg3bgmWsXtOH",
+      "title": "zsh",
+      "description": "Zsh, also known as the Z shell, is a Unix shell that can be used as an interactive login shell and as a shell script command interpreter. It's designed to be highly customizable and offers features like improved tab completion, shared command history across multiple terminal windows, and powerful theming options. Zsh is often considered an alternative to Bash, offering enhanced functionality and a",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Z Shell - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Z_shell"
+        },
+        {
+          "raw_type": "article",
+          "title": "zsh - The Z shell",
+          "url": "https://www.ibm.com/docs/en/zos/3.1.0?topic=descriptions-zsh-z-shell"
+        },
+        {
+          "raw_type": "video",
+          "title": "Zsh: The Developer's Dream Shell! Say Goodbye to Bash! \ud83d\udcbb\u2728",
+          "url": "https://www.youtube.com/watch?v=5F4T_iTeN08"
+        }
+      ]
+    }
+  ]
+}

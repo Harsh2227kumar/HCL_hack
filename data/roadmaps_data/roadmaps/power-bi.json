@@ -1,0 +1,2809 @@
+{
+  "roadmap": "power-bi",
+  "topic_count": 149,
+  "topics": [
+    {
+      "skill_id": "power-bi:access-control",
+      "topic_slug": "access-control",
+      "node_id": "TB7tcRXwbvJ16fV6BHXPt",
+      "title": "Access Control",
+      "description": "Access control covers the mechanisms that determine who can see or interact with specific data and content in Power BI, spanning row-level security, object-level security, and workspace roles. It works at multiple levels, from restricting entire reports to filtering which rows a specific user can see within the same report. Proper access control is essential once Power BI content contains sensitiv",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:accessibility",
+      "topic_slug": "accessibility",
+      "node_id": "Qido2kFzf3UoW3LLu3QT-",
+      "title": "Accessibility",
+      "description": "Accessibility in Power BI covers making reports usable for people with visual, motor, or cognitive impairments, including features like keyboard navigation, screen reader support, and color choices that work for color blindness. Report authors can add alt text to visuals and check contrast ratios to meet these needs. Building with accessibility in mind also tends to make reports clearer for all us",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Overview of accessibility in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-overview"
+        },
+        {
+          "raw_type": "official",
+          "title": "Design Power BI reports for accessibility",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Report Design for Maximum Accessibility",
+          "url": "https://www.youtube.com/watch?v=gNCTjoCu6k4"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:advanced-dax",
+      "topic_slug": "advanced-dax",
+      "node_id": "4j2CBBcLxNnE060LMnDTc",
+      "title": "Advanced DAX",
+      "description": "Advanced DAX covers techniques beyond the core functions, such as quick measures, field parameters, visual calculations, and calculation groups, which solve more specialized reporting problems. These features often exist to reduce the amount of manual DAX needed for common but complex patterns. They are typically introduced only after the fundamentals of context and filtering are solid.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "20 Advanced DAX Secrets For Supercharging Data Models Like A Pro",
+          "url": "https://www.sigmacomputing.com/blog/advanced-data-analysis-expressions-dax"
+        },
+        {
+          "raw_type": "article",
+          "title": "Deep dive into advanced DAX and semantic model concepts",
+          "url": "https://www.sqlbi.com/deepdive/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Advanced DAX Tutorial",
+          "url": "https://www.youtube.com/playlist?list=PLJH3IJAeLguKvY8Ll6tqBSHTH2MDI3CrI"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:advanced-editor",
+      "topic_slug": "advanced-editor",
+      "node_id": "U8ZpXzVc0xFZ-A74a_yuZ",
+      "title": "Advanced Editor",
+      "description": "The Advanced Editor is a text view in Power Query that shows and lets users directly edit the full M code behind a query. It is used to write custom logic, fix errors that the interface cannot show clearly, or copy queries between files. Changes made here update the applied steps shown in the standard interface.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Advanced Editor",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-query-overview#advanced-editor"
+        },
+        {
+          "raw_type": "video",
+          "title": "Getting Started with the Power Query Advanced Editor & M CODE for Beginners",
+          "url": "https://www.youtube.com/watch?v=gqPheAPEuH8"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:advanced-visuals",
+      "topic_slug": "advanced-visuals",
+      "node_id": "js9MnMCVPoWWb9wLf_csS",
+      "title": "Advanced Visuals",
+      "description": "Advanced visuals are analytical tools that go beyond standard charts, including the decomposition tree, key influencers, small multiples, and the Q&A visual, each aimed at deeper exploration of the data rather than simple presentation. They are often used for exploratory analysis rather than a fixed, polished dashboard. These visuals tend to have more configuration options than basic chart types.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:aggregation-functions",
+      "topic_slug": "aggregation-functions",
+      "node_id": "LCVPHuTjQ4zTi0tT77h9y",
+      "title": "Aggregation Functions",
+      "description": "Aggregation functions in DAX, such as SUM, AVERAGE, COUNT, and MIN, combine values across rows into a single number. They form the basis of most measures, often summing or averaging a column across whatever rows are visible given the current filter context. Many other DAX functions build on top of these basic aggregations.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Aggregation functions in DAX",
+          "url": "https://learn.microsoft.com/en-us/dax/aggregation-functions-dax"
+        },
+        {
+          "raw_type": "article",
+          "title": "Aggregation Functions",
+          "url": "https://dax.guide/functions/aggregation/"
+        },
+        {
+          "raw_type": "video",
+          "title": "DAX Aggregate Functions in Power BI",
+          "url": "https://www.youtube.com/watch?v=MCWfdifGMpg"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:aggregations",
+      "topic_slug": "aggregations",
+      "node_id": "KeyKztPuGQrZpG4WR3VOX",
+      "title": "Aggregations",
+      "description": "Aggregations in Power BI store pre-summarized versions of a large, detailed table, allowing queries at high summary levels to hit the smaller aggregated table instead of the full detail. This speeds up report performance significantly for very large DirectQuery or Import datasets. Power BI can automatically detect when a query can use an aggregation table instead of the base table.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "User-defined aggregations",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/aggregations-advanced"
+        },
+        {
+          "raw_type": "article",
+          "title": "Power BI Aggregations - The Ultimate Guide!",
+          "url": "https://datamozart.substack.com/p/power-bi-aggregations-the-ultimate"
+        },
+        {
+          "raw_type": "video",
+          "title": "The How and Why of Power BI Aggregations",
+          "url": "https://www.youtube.com/watch?v=EhGF372t0sU"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:apis",
+      "topic_slug": "apis",
+      "node_id": "HWj-k3pc5_80dk793CVnX",
+      "title": "APIs",
+      "description": "Power BI can pull data from web APIs that return structured data, usually in JSON or XML format, using the web connector or custom M queries. This lets reports pull in live data from services that expose an API endpoint, such as internal systems or SaaS platforms. Authentication for APIs often needs API keys, OAuth, or other credentials configured in the connection settings.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to Connect API to Power BI: Step-by-Step Guide 2026",
+          "url": "https://blog.coupler.io/api-to-power-bi/"
+        },
+        {
+          "raw_type": "video",
+          "title": "3 Ways to Connect API to Power BI with Pros & Cons \ud83d\udd253 Ways to Connect API to Power BI with Pros & Cons \ud83d\udd25",
+          "url": "https://www.youtube.com/watch?v=O5DiEDJAhgk"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:appending-tables",
+      "topic_slug": "appending-tables",
+      "node_id": "w0p5SoSn4_YGeARz7Ll0O",
+      "title": "Appending Tables",
+      "description": "Appending tables stacks two or more tables with matching columns on top of each other, combining their rows into a single table. It works like a union in SQL and is common when combining monthly files or data pulled from multiple similar sources into one query. Power Query handles column matching automatically when column names align, and flags mismatches when they don't.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Append queries",
+          "url": "https://learn.microsoft.com/en-us/power-query/append-queries"
+        },
+        {
+          "raw_type": "video",
+          "title": "MERGE and APPEND inside POWER QUERY in Power BI",
+          "url": "https://www.youtube.com/watch?v=77POcNaCrcI"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:applied-steps",
+      "topic_slug": "applied-steps",
+      "node_id": "Jys8-vqPreAJwjDUWqqNF",
+      "title": "Applied Steps",
+      "description": "Applied Steps is the panel in Power Query that lists every transformation applied to a query, in the order they were performed. Each step can be renamed, edited, reordered, or deleted, which makes it possible to build a query gradually and adjust earlier steps without starting over. Clicking on a step shows a preview of the data at that exact point in the transformation.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Using the Applied Steps list",
+          "url": "https://learn.microsoft.com/en-us/power-query/applied-steps"
+        },
+        {
+          "raw_type": "article",
+          "title": "What are Applied Steps in Power BI?",
+          "url": "https://www.graphed.com/blog/what-are-applied-steps-in-power-bi"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding Applied Steps in Power Query",
+          "url": "https://www.youtube.com/watch?v=OlDfVnrmnLg"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:apps",
+      "topic_slug": "apps",
+      "node_id": "Y2k8hmM3HVhNx-_UB9fOz",
+      "title": "Apps",
+      "description": "Apps in Power BI package a workspace's reports and dashboards into a single, polished experience for end users to consume, without giving them access to the underlying workspace itself. They are published separately from the workspace and can be updated on a controlled schedule rather than reflecting every workspace change instantly. Apps are the typical way Power BI content gets distributed to a ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Apps in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/explore-reports/end-user-apps"
+        },
+        {
+          "raw_type": "article",
+          "title": "Power BI Apps: Everything You Need to Know",
+          "url": "https://thereportinghub.com/power-bi/power-bi-apps"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Create an app in Power BI service",
+          "url": "https://www.youtube.com/watch?v=ZhOOUi3PPMM"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:audit-logs",
+      "topic_slug": "audit-logs",
+      "node_id": "JnFJK_sqz710ANX_gwzjZ",
+      "title": "Audit Logs",
+      "description": "Audit logs record user activity across the Power BI tenant, such as who viewed, edited, or shared specific content and when. Administrators use these logs to investigate security incidents, monitor usage patterns, or meet compliance requirements. Logs can be accessed through the Microsoft Purview compliance portal or pulled programmatically for further analysis.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:bar--column-charts",
+      "topic_slug": "bar--column-charts",
+      "node_id": "WXIP35S-K0YPPrArosikv",
+      "title": "Bar & Column Charts",
+      "description": "Bar and column charts represent values as horizontal or vertical bars, sized proportionally to the value they represent, making them well suited for comparing values across categories. Column charts are generally preferred for showing change over time, while bar charts work better with long category labels. They are among the most commonly used visuals because most audiences read them easily.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create and use column charts in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-column-charts?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "article",
+          "title": "Power BI Stacked Column Charts: A Full Guide",
+          "url": "https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/blog/power-bi-stacked-column-charts-a-full-guide"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Bar Charts: From A - Z in 1 Hour | Step by Step Tutorial",
+          "url": "https://www.youtube.com/watch?v=Z8D60cn-ecE"
+        },
+        {
+          "raw_type": "video",
+          "title": "MASTERING Bar Charts in Power BI | No more Cut Labels",
+          "url": "https://www.youtube.com/watch?v=EiIAkJ9R7mM"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:bookmarks",
+      "topic_slug": "bookmarks",
+      "node_id": "Tu0lUGB1a-b89x1qnM7Qc",
+      "title": "Bookmarks",
+      "description": "Bookmarks capture the current state of a report page, including filters, slicer selections, and visual visibility, so that state can be restored later with a single click. They are often combined with buttons to build guided navigation, such as toggling between different views of the same data. Bookmarks are also used to simulate features Power BI does not natively support, like a simple tab-based",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create report bookmarks in Power BI to share insights and build stories",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-bookmarks"
+        },
+        {
+          "raw_type": "article",
+          "title": "Power BI Bookmarks",
+          "url": "https://iterationinsights.com/article/power-bi-bookmarks/"
+        },
+        {
+          "raw_type": "video",
+          "title": "5 WAYS to use BOOKMARKS in Power BI",
+          "url": "https://www.youtube.com/watch?v=_HTF7Ph7Eqc"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:buttons--navigation",
+      "topic_slug": "buttons--navigation",
+      "node_id": "bBLfNjB3IC2oNgQN4SSoE",
+      "title": "Buttons & Navigation",
+      "description": "Buttons in Power BI can trigger actions like navigating to another page, applying a bookmark, or opening a web URL, letting report builders create custom navigation beyond the default page tabs. This is commonly used to build a menu-style navigation system across a multi-page report. Buttons can also be set up as visual toggles combined with bookmarks to show or hide specific elements.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create and configure buttons in Power BI reports",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-buttons?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "official",
+          "title": "Customize buttons in Power BI reports",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/power-bi-customize-button"
+        },
+        {
+          "raw_type": "video",
+          "title": "Make navigation easier with Power BI buttons",
+          "url": "https://www.youtube.com/watch?v=nCEMM6Ryees"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:calculate-function",
+      "topic_slug": "calculate-function",
+      "node_id": "BAeCGnhY7PBsazIY5ywf4",
+      "title": "CALCULATE Function",
+      "description": "CALCULATE is the function in DAX that modifies the filter context under which an expression is evaluated, by adding, removing, or replacing filters. It underlies most non-trivial DAX formulas, including time intelligence functions, which are internally built using CALCULATE with date-based filter arguments. Learning how CALCULATE's filter arguments interact with existing report filters is a key st",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "CALCULATE Function",
+          "url": "https://learn.microsoft.com/en-us/dax/calculate-function-dax"
+        },
+        {
+          "raw_type": "video",
+          "title": "DAX CALCULATE Function Made Easy to Understand",
+          "url": "https://www.youtube.com/watch?v=40xO1MD_CCs"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI DAX: How to Use the CALCULATE Function",
+          "url": "https://www.youtube.com/watch?v=T_hFMQdqhzY"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:calculated-tables--columns",
+      "topic_slug": "calculated-tables--columns",
+      "node_id": "wZlFN13uuS1MxAoLVoDZU",
+      "title": "Calculated Tables & Columns",
+      "description": "Calculated tables and columns are new tables or columns created using DAX formulas rather than loaded directly from a data source. They are computed at data refresh time and stored in the model, unlike measures which calculate on the fly when a visual is rendered. They are useful for things like generating a date table or adding a static classification column, but they increase model size since th",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create calculated tables in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-tables"
+        },
+        {
+          "raw_type": "official",
+          "title": "Create calculated columns in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculated-columns"
+        },
+        {
+          "raw_type": "video",
+          "title": "Measures vs. calculated columns in DAX and Power BI",
+          "url": "https://www.youtube.com/watch?v=ePPi1LLX0sA"
+        },
+        {
+          "raw_type": "video",
+          "title": "Creating calculated tables in Power BI",
+          "url": "https://www.youtube.com/watch?v=RMXYXpZOKTM"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:calculation-groups",
+      "topic_slug": "calculation-groups",
+      "node_id": "6oh5sxYqEqm-jSBNmCnmF",
+      "title": "Calculation Groups",
+      "description": "Calculation groups let a set of DAX logic, such as time intelligence patterns, be applied to any measure without duplicating that logic per measure. Instead of writing separate year-over-year measures for every existing measure, a single calculation item can apply that transformation to whichever measure a user selects. They are set up through external tools like Tabular Editor rather than Power B",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:certified-datasets",
+      "topic_slug": "certified-datasets",
+      "node_id": "dWu0GbXzXaYYgmWTOL1di",
+      "title": "Certified Datasets",
+      "description": "Certified datasets are datasets that have been reviewed and approved by a designated authority within an organization, marked with a badge that signals to other users that the data is trustworthy and ready for reuse. Certification helps prevent duplicate, inconsistent versions of the same dataset from spreading across an organization. Users building new reports are encouraged to build on certified",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:changing-dates",
+      "topic_slug": "changing-dates",
+      "node_id": "vZQjiMqgSc2HtWCPYHvnb",
+      "title": "Changing Dates",
+      "description": "Date transformations in Power Query let users extract parts of a date, such as year, month, or day of week, and calculate differences between dates. This is useful for building time-based fields needed later in reports, like fiscal year or quarter. Power Query recognizes date and datetime types, which unlocks these transformation options in the ribbon.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Power Query: Get all dates between the Start and End date",
+          "url": "https://amitchandak.medium.com/power-query-get-all-dates-between-the-start-and-end-date-9ad6a84cf5f2"
+        },
+        {
+          "raw_type": "video",
+          "title": "Extract Dates From Text Strings in Power Query",
+          "url": "https://www.youtube.com/watch?v=JJFiPtmqPAg"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:changing-numbers",
+      "topic_slug": "changing-numbers",
+      "node_id": "jji5jm1oT6SImHaBXwOJI",
+      "title": "Changing Numbers",
+      "description": "Numeric transformations in Power Query cover operations like rounding, changing sign, calculating percentages, and applying arithmetic between columns. These are used to standardize numeric data or derive new values, such as converting a raw amount into a percentage of total. The transformations can be applied to a single column or between multiple selected columns.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Use Power Query to transform data",
+          "url": "https://learn.microsoft.com/en-us/power-query/power-query-ui"
+        },
+        {
+          "raw_type": "article",
+          "title": "Common Power Query transformations",
+          "url": "https://exceloffthegrid.com/power-query-basic-transformations/"
+        },
+        {
+          "raw_type": "video",
+          "title": "ES  Skip navigation data transforamtion power query     Create   Avatar image Power Query for Beginners",
+          "url": "https://www.youtube.com/watch?v=QXzopqpHlSs"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:changing-text",
+      "topic_slug": "changing-text",
+      "node_id": "OpTzX9_MCnMIf3nwDrCO9",
+      "title": "Changing Text",
+      "description": "Power Query includes text transformation functions for tasks like changing case, trimming whitespace, extracting substrings, and replacing characters within a column. These operations are common when cleaning inconsistent text data coming from different sources, such as mismatched capitalization or extra spaces. Most of them are available directly from the ribbon without writing M code manually.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to Transform Text with Power Query",
+          "url": "https://www.xelplus.com/excel-text-transformation-power-query/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Text Transformations in Power Query: 6 Steps You\u2019ll Use Most Often",
+          "url": "https://analytics.bi/en/text-transformations-power-query/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Top 5 Text Transformations in Excel Using Power Query",
+          "url": "https://www.youtube.com/watch?v=IYIQnM5EqLs"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:clouds",
+      "topic_slug": "clouds",
+      "node_id": "FdE4ix0XyZq_yhv8HRELs",
+      "title": "Clouds",
+      "description": "Power BI includes connectors for cloud platforms such as Azure, Google services, Amazon Web Services, and Salesforce. These connectors handle the authentication and data structure specific to each cloud provider, so users do not need to write custom code to reach the data. Cloud connectors are common in organizations that already store their data in a cloud warehouse or SaaS platform.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Azure and Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-azure-and-power-bi"
+        },
+        {
+          "raw_type": "official",
+          "title": "Connectivity to other cloud providers",
+          "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-other-providers"
+        },
+        {
+          "raw_type": "article",
+          "title": "Connecting Power BI to Cloud Data Sources Tutorial",
+          "url": "https://medium.com/microsoft-power-bi/connecting-power-bi-to-cloud-data-sources-tutorial-5af3e579d211"
+        },
+        {
+          "raw_type": "video",
+          "title": "Connect Power BI to Cloud Databases using MySQL",
+          "url": "https://www.youtube.com/watch?v=ISdyFhGQV4g"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:collaboration",
+      "topic_slug": "collaboration",
+      "node_id": "oeN3BijT2OCGbv4hk7tz_",
+      "title": "Collaboration",
+      "description": "Collaboration features in Power BI Service support teams working together on the same content, including commenting on reports, sharing within workspaces, and coordinating through Microsoft Teams integration. These features are aimed at making Power BI usable as a shared analytics platform rather than a single-author tool. They matter more as the number of people using and building reports within ",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:columns-vs-measures",
+      "topic_slug": "columns-vs-measures",
+      "node_id": "dKb9XtExyQqapcR9ccafy",
+      "title": "Columns vs Measures",
+      "description": "Calculated columns compute a value for every row in a table and store the result physically in the model, while measures calculate a value on the fly based on the current filter context of a visual. Columns are useful when a value needs to be sliced or filtered on directly, while measures are used for aggregations that should respond dynamically to whatever is selected in a report. Choosing the wr",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Measures vs Calculated Columns in DAX and Power BI",
+          "url": "https://endjin.com/blog/measures-vs-calculated-columns-in-dax"
+        },
+        {
+          "raw_type": "article",
+          "title": "Calculated Columns and Measures in DAX",
+          "url": "https://www.sqlbi.com/articles/calculated-columns-and-measures-in-dax/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Measures vs. calculated columns in DAX and Power BI",
+          "url": "https://www.youtube.com/watch?v=ePPi1LLX0sA"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:combination-charts",
+      "topic_slug": "combination-charts",
+      "node_id": "_3_v4fesS5FZTj-KAeSDq",
+      "title": "Combination Charts",
+      "description": "Combination charts overlay two different visual types, most commonly a column chart and a line chart, sharing the same category axis but often using separate value axes. They are used to compare two related measures with different scales, such as sales volume and profit margin, in a single visual. This avoids forcing two very different metrics onto the same axis scale.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create and use combo charts in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-combo-chart?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "article",
+          "title": "Power BI Combo Chart: Tips & Best Features",
+          "url": "https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/blog/power-bi-combo-chart-tips-best-features"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Combo Chart",
+          "url": "https://www.youtube.com/watch?v=vQaoJFL3l40"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:composite-keys",
+      "topic_slug": "composite-keys",
+      "node_id": "v0_8BKYjUiEmQyb71ntr3",
+      "title": "Composite Keys",
+      "description": "A composite key uses more than one column together to uniquely identify a row and to form a relationship between tables, used when no single column is unique on its own. Power BI supports this by allowing a relationship built on a concatenated key column created during data transformation. It is common when a natural single-column key does not exist in the source data.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:conditional-columns",
+      "topic_slug": "conditional-columns",
+      "node_id": "X3j-XFMXKLjwvEMgDGbPQ",
+      "title": "Conditional Columns",
+      "description": "Conditional columns let a user create a new column based on if-then-else logic applied to existing columns, without writing M code by hand. The interface lets you define multiple conditions and their corresponding outputs, similar to a nested if statement. This is often used to bucket values into categories, such as labeling sales figures as high, medium, or low.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Add a conditional column (Power Query)",
+          "url": "https://support.microsoft.com/en-us/excel/add-a-conditional-column-power-query"
+        },
+        {
+          "raw_type": "article",
+          "title": "Power BI Conditional Column Tutorial:No Custom Column Needed",
+          "url": "https://community.fabric.microsoft.com/t5/Power-BI-Community-Blog/Power-BI-Conditional-Column-Tutorial-No-Custom-Column-Needed/ba-p/4714707"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Make Conditional Columns with Power Query",
+          "url": "https://www.youtube.com/watch?v=9ArQULV2u-k"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:conditional-formatting",
+      "topic_slug": "conditional-formatting",
+      "node_id": "Q39QDWBQlZ0CXJby4-nBw",
+      "title": "Conditional Formatting",
+      "description": "Conditional formatting changes the appearance of values in a visual, such as cell background color in a table, based on rules tied to the underlying data. It is commonly used to highlight values above or below a target, using color scales, rules, or icons like arrows. This makes patterns in the data easier to notice at a glance without reading every number.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Apply conditional formatting in tables and matrices",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-conditional-table-formatting"
+        },
+        {
+          "raw_type": "official",
+          "title": "Conditional formatting in Power BI visuals",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-conditional-formatting"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to use Conditional Formatting in Power BI",
+          "url": "https://www.youtube.com/watch?v=m0h3Ghl6mgY"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:connection-modes",
+      "topic_slug": "connection-modes",
+      "node_id": "4gaa2THeYhi2Z45kSX42t",
+      "title": "Connection Modes",
+      "description": "Connection mode determines how Power BI interacts with a data source: whether it copies the data into its own storage or queries the source live each time a report runs. The main modes are Import, DirectQuery, Dual Storage, and Direct Lake, each with different trade-offs between performance, data freshness, and source load. Choosing a mode affects report speed, refresh strategy, and how large a da",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Connection Modes in Power BI",
+          "url": "https://techcommunity.microsoft.com/blog/nonprofittechies/connection-modes-in-power-bi/4101152"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Power BI Connection Types",
+          "url": "https://www.useready.com/blog/understanding-power-bi-connection-types"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Choose? Import vs DirectQuery vs Live Connection in Power BI",
+          "url": "https://www.youtube.com/watch?v=ROLhrYkUQhc"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:context--filtering",
+      "topic_slug": "context--filtering",
+      "node_id": "l-vk3xwURU8AOHoGlu0iT",
+      "title": "Context and Filtering",
+      "description": "Context and filtering describes how DAX determines which rows are considered when evaluating a formula, based on filters applied by slicers, visuals, and the formula itself. Getting consistent results in DAX depends on correctly understanding what context a measure is being evaluated in. This is often considered the hardest concept for people learning DAX.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:context-and-filtering",
+      "topic_slug": "context-and-filtering",
+      "node_id": "l-vk3xwURU8AOHoGlu0iT",
+      "title": "Context and Filtering",
+      "description": "Context and filtering describes how DAX determines which rows are considered when evaluating a formula, based on filters applied by slicers, visuals, and the formula itself. Getting consistent results in DAX depends on correctly understanding what context a measure is being evaluated in. This is often considered the hardest concept for people learning DAX.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:context-transition",
+      "topic_slug": "context-transition",
+      "node_id": "62ecBOZmKPo56zRGd6GIQ",
+      "title": "Context Transition",
+      "description": "Context transition happens when CALCULATE turns the current row context into an equivalent filter context, which occurs whenever CALCULATE is used inside a row context, such as within a calculated column. This mechanism explains behavior that otherwise seems inconsistent, like a measure returning different results depending on where it is called from. It is one of the more subtle but important beh",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Context transition in DAX explained visually",
+          "url": "https://www.sqlbi.com/articles/context-transition-in-dax-explained-visually/"
+        },
+        {
+          "raw_type": "article",
+          "title": "DAX 101: Understanding context transition in DAX",
+          "url": "https://www.sqlbi.com/articles/understanding-context-transition-in-dax/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understanding context transition",
+          "url": "https://www.youtube.com/watch?v=lMuDz6ViU1w"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:cross-filter-direction",
+      "topic_slug": "cross-filter-direction",
+      "node_id": "bLEolh1ucu3NzdYcB8gei",
+      "title": "Cross Filter Direction",
+      "description": "Cross filter direction determines whether filtering flows only from the one side to the many side of a relationship, or in both directions. Single direction is the default and usually the safer choice, while bidirectional filtering is used carefully in specific cases like many-to-many relationships. Setting it incorrectly can cause unexpected results or circular filtering issues in more complex mo",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Enable bidirectional cross-filtering for DirectQuery in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-bidirectional-filtering"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Is Cross Filter Direction Power BI?",
+          "url": "https://www.coursera.org/articles/cross-filter-direction-power-bi"
+        },
+        {
+          "raw_type": "video",
+          "title": "Cross Filter direction in Power BI desktop",
+          "url": "https://www.youtube.com/watch?v=30OrlrKbXsw"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:cross-filtering",
+      "topic_slug": "cross-filtering",
+      "node_id": "vTsD-oWa4vwEhfC5-Ax5Y",
+      "title": "Cross-filtering",
+      "description": "Cross-filtering is the default behavior in Power BI where clicking on a data point in one visual filters the other visuals on the same page automatically. It happens because visuals on a page interact with each other based on shared fields in the data model, without needing extra configuration. This interaction can be adjusted or turned off for specific visual pairs through the edit interactions s",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "How visuals cross-filter each other in a Power BI report",
+          "url": "https://learn.microsoft.com/en-us/power-bi/explore-reports/end-user-interactions"
+        },
+        {
+          "raw_type": "official",
+          "title": "Enable bidirectional cross-filtering for DirectQuery in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-bidirectional-filtering"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to use the CROSSHIGHLIGHT and CROSSFILTER",
+          "url": "https://www.youtube.com/watch?v=-fwjqEWbr1c"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:custom-columns",
+      "topic_slug": "custom-columns",
+      "node_id": "UPQ6Y-jT39MkrM1Rg3Dip",
+      "title": "Custom Columns",
+      "description": "Custom columns are new columns created in Power Query using a formula written in the M language, giving more flexibility than the conditional column builder. They allow calculations that reference multiple columns or use M functions not exposed in the standard UI. This is a common entry point for users moving from the graphical interface into writing M code directly.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Add a custom column in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-add-custom-column"
+        },
+        {
+          "raw_type": "video",
+          "title": "These 5 Custom Column Tricks Make Power Query Easier",
+          "url": "https://www.youtube.com/watch?v=FoW0iDGy7ag"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:custom-tooltips",
+      "topic_slug": "custom-tooltips",
+      "node_id": "SIMaqZRxACO-f25KPPbFl",
+      "title": "Custom Tooltips",
+      "description": "Custom tooltips replace the default hover text on a visual with a separate report page designed specifically to show extra detail, such as a small chart or additional metrics. They are built as a normal report page but marked as a tooltip page and sized accordingly. This lets a report show richer context on hover without cluttering the main visual itself.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Visual tooltips in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-visual-tooltips?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "official",
+          "title": "Create report tooltips in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-tooltips"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to create Tooltip Pages in Power BI - Easy Tutorial",
+          "url": "https://www.youtube.com/watch?v=npaQ42K1sTs"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI - Custom Tooltips Tutorial\ud83d\udcca",
+          "url": "https://www.youtube.com/watch?v=agXP27yKduI"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:custom-visuals",
+      "topic_slug": "custom-visuals",
+      "node_id": "CJnGG-Q_I_pfS7YsoCR0a",
+      "title": "Custom Visuals",
+      "description": "Custom visuals are chart types built by Microsoft or third parties beyond the default set included in Power BI, imported from the AppSource marketplace or a local file. They extend what can be shown beyond the built-in visual gallery, covering things like specialized chart types or interactive widgets. Custom visuals can carry their own performance and security considerations since they run custom",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Power BI custom visuals",
+          "url": "https://learn.microsoft.com/en-us/power-bi/developer/visuals/develop-power-bi-visuals"
+        },
+        {
+          "raw_type": "official",
+          "title": "What are custom visuals in Power BI and where can I get them?",
+          "url": "https://learn.microsoft.com/en-us/power-bi/developer/visuals/power-bi-custom-visuals"
+        },
+        {
+          "raw_type": "video",
+          "title": "Top 5 FREE Custom Power BI Visuals Try Now! Game Changer",
+          "url": "https://www.youtube.com/watch?v=h9HDQaGwWtk&list=PLcwrIWK7WBcQOIFCFPAIpQpWPBCj5BCab"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:dashboards-vs-reports",
+      "topic_slug": "dashboards-vs-reports",
+      "node_id": "u1-WPMNoMpouC5EuKDgk6",
+      "title": "Dashboards vs Reports",
+      "description": "A report in Power BI is a multi-page collection of interactive visuals connected to a single dataset, while a dashboard is a single page of pinned tiles that can pull from multiple different reports and datasets. Dashboards are meant for a high-level, at-a-glance summary, while reports support deeper interactive exploration. Tiles on a dashboard link back to the report or visual they were pinned f",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Introduction to dashboards for Power BI designers",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/service-dashboards"
+        },
+        {
+          "raw_type": "article",
+          "title": "https://www.catchr.io/university/power-bi-lessons/dashboard-vs-report",
+          "url": "https://www.catchr.io/university/power-bi-lessons/dashboard-vs-report"
+        },
+        {
+          "raw_type": "video",
+          "title": "POWER BI Dashboard vs Report",
+          "url": "https://www.youtube.com/watch?v=fqKheazewbo"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:data--infrastructure",
+      "topic_slug": "data--infrastructure",
+      "node_id": "uX7eakwKpWUhQwV8j8JaT",
+      "title": "Data & Infrastructure",
+      "description": "Data and infrastructure covers the backend components that support Power BI's data connectivity and refresh, including gateways, refresh scheduling, and datasets or dataflows. These pieces operate behind the scenes to keep published reports connected to their data sources reliably. They matter most to whoever administers data sources for an organization, rather than to report authors themselves.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:data-categorization",
+      "topic_slug": "data-categorization",
+      "node_id": "UfdiQrzMT5uQ7AGEa1gMH",
+      "title": "Data Categorization",
+      "description": "Data categorization tags a column with a specific type of real-world data, such as geographic coordinates, web URLs, or barcodes. This lets Power BI apply appropriate default behaviors, like recognizing a column as a city name so it can be used correctly on a map visual. It does not change the underlying data, only how Power BI interprets and displays it.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:data-loss-prevention",
+      "topic_slug": "data-loss-prevention",
+      "node_id": "AAIDmBDueCTKYnuJugDEf",
+      "title": "Data Loss Prevention",
+      "description": "Data loss prevention policies scan Power BI content for sensitive information, such as credit card numbers or personal data, and can flag or block reports that expose it inappropriately. These policies typically integrate with Microsoft Purview's broader data loss prevention framework used across Microsoft 365. They act as an automated safeguard against sensitive data being shared beyond its inten",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:data-profiling",
+      "topic_slug": "data-profiling",
+      "node_id": "_tWAz0_PV6Pr5Ey2ZXYL1",
+      "title": "Data Profiling",
+      "description": "Data profiling in Power Query shows statistics about a column's contents, such as the distribution of values, the percentage of errors, and the percentage of empty values. It helps catch data quality problems before they reach the model, like unexpected nulls or outliers. The feature includes column quality, column distribution, and column profile views, each showing a different angle on the data.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Using the data profiling tools",
+          "url": "https://learn.microsoft.com/en-us/power-query/data-profiling-tools"
+        },
+        {
+          "raw_type": "article",
+          "title": "Unveiling Your Data\u2019s Secrets: A Comprehensive Guide to Data Profiling in Power BI",
+          "url": "https://medium.com/@dossieranalysis/unveiling-your-datas-secrets-a-comprehensive-guide-to-data-profiling-in-power-bi-5c44d092fa56"
+        },
+        {
+          "raw_type": "video",
+          "title": "Data Profiling in Power BI",
+          "url": "https://www.youtube.com/watch?v=pSCc_T7k328"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:data-source-types",
+      "topic_slug": "data-source-types",
+      "node_id": "M5B4mq5vv5PcGaBdQmNdf",
+      "title": "Data Source Types",
+      "description": "Power BI can connect to many kinds of data sources, grouped broadly into databases, files, APIs, web and open data, and cloud services. Each source type uses its own connector inside Power BI, with settings for authentication and query options specific to that source. Picking the right source type and connector is the first step before any transformation work begins.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Get data in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-data-sources?tabs=new-experience"
+        },
+        {
+          "raw_type": "video",
+          "title": "How To Connect Data Sources In Power BI?",
+          "url": "https://www.youtube.com/watch?v=ZDuQvyZ8stM"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:data-types--casting",
+      "topic_slug": "data-types--casting",
+      "node_id": "y-FeyeZ6tqZmF_8wzrTuX",
+      "title": "Data Types & Casting",
+      "description": "Setting data types in Power Query tells Power BI how to interpret each column, such as whole number, decimal, date, or text. Correct typing affects both storage size and what operations are available later, since date functions or numeric aggregations only work if the column has the matching type. Casting a column to the wrong type, like reading a date as text, can cause errors or slow down the mo",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Data types in Power Query",
+          "url": "https://learn.microsoft.com/en-us/power-query/data-types"
+        },
+        {
+          "raw_type": "video",
+          "title": "Preparing data in Power Query | POWER BI Course",
+          "url": "https://www.youtube.com/watch?v=C47X8Vr74lo"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:databases",
+      "topic_slug": "databases",
+      "node_id": "0a0caDbMmm71t9h9l1boP",
+      "title": "Databases",
+      "description": "Power BI connects to relational and analytical databases such as SQL Server, PostgreSQL, MySQL, and Oracle through native connectors. These connectors typically support both import and DirectQuery modes, letting the choice depend on data volume and refresh needs. Database connections often require credentials and, for on-premises systems, a gateway to reach the data securely.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Refresh data from an on-premises SQL Server database",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial"
+        },
+        {
+          "raw_type": "article",
+          "title": "Connecting Power BI to SQL Databases: A Practical Guide for Data Analysts",
+          "url": "https://dev.to/lawrence_murithi/connecting-power-bi-to-sql-databases-a-practical-guide-for-data-analysts-5745"
+        },
+        {
+          "raw_type": "video",
+          "title": "ES  Skip navigation databases powerbi     Create   Avatar image Microsoft Power BI | How to get data from SQL server?",
+          "url": "https://www.youtube.com/watch?v=K690u_FkL4A"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:datasets--dataflows",
+      "topic_slug": "datasets--dataflows",
+      "node_id": "hEx3FLGHzXOmGcZ-js24r",
+      "title": "Datasets & Dataflows",
+      "description": "A dataset in the Power BI Service is the data model behind a published report, including its tables, relationships, and measures. A dataflow is a separate, reusable set of Power Query transformations stored in the cloud, which multiple datasets can reference instead of duplicating the same transformation logic in each report. Dataflows help centralize data preparation across many reports built by ",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:dax-performance",
+      "topic_slug": "dax-performance",
+      "node_id": "mNUrtl-18tZnFSaMSnJm3",
+      "title": "DAX Performance",
+      "description": "DAX performance concerns how efficiently a formula executes, influenced by factors like the choice between iterators and aggregations, the size of tables being filtered, and how CALCULATE's filters are constructed. Poorly written DAX can turn a simple report into a slow one, even on a small dataset. Tools like Performance Analyzer and DAX Studio help identify which specific measures are the bottle",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Advanced DAX: Performance Optimization & Memory Considerations",
+          "url": "https://medium.com/@briankimanzi28/advanced-dax-performance-optimization-memory-considerations-fa2195dc8c32"
+        },
+        {
+          "raw_type": "video",
+          "title": "DAX Performance Optimization",
+          "url": "https://www.youtube.com/watch?v=MGkCCbK86qw&list=PLPh0ysvJE3dgJDL2dByQ-qYAmAJ_XgSCI&pp=0gcJCfMCOCosWNin"
+        },
+        {
+          "raw_type": "video",
+          "title": "Boost DAX Performance in Power BI with Dual Mode",
+          "url": "https://www.youtube.com/watch?v=TgAXt1ifdhs"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:dax-syntax",
+      "topic_slug": "dax-syntax",
+      "node_id": "Qu-C8yEqb30gZ0Po8Vmbt",
+      "title": "DAX Syntax",
+      "description": "DAX syntax follows a formula structure similar to Excel, starting with a name and an equals sign, followed by functions and references to columns or tables written in a specific notation. Table names are typically written in plain reference and column references use the table name followed by the column name in brackets. Getting the syntax right, including matching parentheses and correct referenc",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "DAX syntax",
+          "url": "https://learn.microsoft.com/en-us/dax/dax-syntax-reference"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn DAX Fundamentals in 10 Minutes | Step-by-Step Guide",
+          "url": "https://www.youtube.com/watch?v=-QOtL_LOc40"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:dax-vs-m-language",
+      "topic_slug": "dax-vs-m-language",
+      "node_id": "5p5jlratghZBaZUe0zfgi",
+      "title": "DAX vs. M Language",
+      "description": "DAX and M serve different purposes in Power BI: M transforms and shapes data before it is loaded into the model, while DAX calculates values within the model itself, used for measures, calculated columns, and calculated tables. M operates on the whole table during a query or refresh, whereas DAX often calculates based on the current filter context in a report. Knowing which language applies to whi",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Power Query M vs DAX: Getting the Best of Both",
+          "url": "https://powerpartners.pro/en/power-query-vs-dax/"
+        },
+        {
+          "raw_type": "video",
+          "title": "DAX vs M Language in Power BI:",
+          "url": "https://www.youtube.com/watch?v=UuMX_RAIZXE"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:decomposition-tree",
+      "topic_slug": "decomposition-tree",
+      "node_id": "Ru7LLosG6dqriZjqf_eIs",
+      "title": "Decomposition Tree",
+      "description": "The decomposition tree is a visual that lets users break down a total into its contributing parts across multiple dimensions, choosing which dimension to expand at each step or letting Power BI's AI find the highest or lowest contributing value automatically. It is used for root-cause style exploration, such as figuring out which product or region is driving a change in a metric. Each branch of th",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create and view decomposition tree visuals in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-decomposition-tree"
+        },
+        {
+          "raw_type": "official",
+          "title": "Tutorial: Create a decomposition tree with a Power BI sample",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/sample-tutorial-decomp-tree"
+        },
+        {
+          "raw_type": "video",
+          "title": "Use the Power BI Decomposition Tree to Explore and Analyze Your Data",
+          "url": "https://www.youtube.com/watch?v=5_wN-kUIcGs"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:deployment-pipelines",
+      "topic_slug": "deployment-pipelines",
+      "node_id": "gWj5LnHcNZBNu-nMnzi5Y",
+      "title": "Deployment Pipelines",
+      "description": "Deployment pipelines let teams manage separate development, test, and production environments for their Power BI content, promoting reports and datasets through each stage in a controlled way. This mirrors common software development practices, catching issues in a test environment before they reach production users. Pipelines also support rules for automatically swapping data sources or parameter",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:design-principles",
+      "topic_slug": "design-principles",
+      "node_id": "8-t2HOH7KFWV79gpfhjXn",
+      "title": "Design Principles",
+      "description": "Design principles in Power BI cover general practices for making reports clear and effective, such as using consistent color schemes, avoiding chart clutter, and prioritizing the most important information. Good design guides the viewer's attention to what matters rather than decorating the report unnecessarily. These principles borrow heavily from general data visualization and UX design practice",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Tips for designing a great Power BI dashboard",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/service-dashboards-design-tips"
+        },
+        {
+          "raw_type": "article",
+          "title": "10 Essential Data Visualization Design Principles for Clearer Insights",
+          "url": "https://www.tenscope.com/post/data-visualization-design-principles-for-clarity"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI for Beginners: Video #3 - Report Design Principles",
+          "url": "https://www.youtube.com/watch?v=E-dlpelYJWo"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:desktop",
+      "topic_slug": "desktop",
+      "node_id": "aItdGZ817gzRevj1bZnQz",
+      "title": "Desktop",
+      "description": "Power BI Desktop is the free Windows application used to connect to data sources, transform data with Power Query, build the data model, write DAX measures, and design report pages. Most of the development work happens here before a file is published to the Power BI Service. It supports local development without needing an internet connection until publishing time.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Power BI Desktop",
+          "url": "https://www.microsoft.com/power-platform/products/power-bi/desktop?market=af"
+        },
+        {
+          "raw_type": "video",
+          "title": "Microsoft Power BI Desktop for Beginners: In 4 Steps!",
+          "url": "https://www.youtube.com/watch?v=wM0Vpq5Vu_I"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=VaOhNqNtGGE"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:direct-lake",
+      "topic_slug": "direct-lake",
+      "node_id": "80ujylMVAMN9Tn0qPR7uf",
+      "title": "Direct Lake",
+      "description": "Direct Lake is a storage mode built for Microsoft Fabric that reads data directly from files in a data lake without importing or duplicating it, while still delivering query speed close to Import mode. It avoids the usual DirectQuery performance penalty because it reads the lake's columnar file format natively. This mode is specific to datasets built on OneLake within Microsoft Fabric.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Direct Lake overview",
+          "url": "https://learn.microsoft.com/en-us/fabric/fundamentals/direct-lake-overview"
+        },
+        {
+          "raw_type": "official",
+          "title": "Tutorial: Create a Direct Lake semantic model and Power BI report",
+          "url": "https://learn.microsoft.com/en-us/fabric/data-warehouse/tutorial-power-bi-report"
+        },
+        {
+          "raw_type": "article",
+          "title": "Creating and editing Direct Lake semantic models",
+          "url": "https://www.datazoe.blog/post/creating-and-editing-direct-lake-semantic-models"
+        },
+        {
+          "raw_type": "video",
+          "title": "Dive into Microsoft Fabric's Power BI Direct Lake",
+          "url": "https://www.youtube.com/watch?v=Tw-n4o5LErw"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:directquery",
+      "topic_slug": "directquery",
+      "node_id": "GHE4CuN9ajm08_RZ1Fy7p",
+      "title": "DirectQuery",
+      "description": "DirectQuery is a connection mode where Power BI sends queries directly to the source database each time a report visual is viewed or filtered, rather than storing a copy of the data. This keeps the report always in sync with the source but depends on the source database's performance to respond quickly. It is often used for very large datasets that are impractical to import in full.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Use DirectQuery in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-use-directquery"
+        },
+        {
+          "raw_type": "official",
+          "title": "DirectQuery in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-directquery-about"
+        },
+        {
+          "raw_type": "video",
+          "title": "ES  Skip navigation Search    Create   Avatar image Power BI Direct Query (Explained Visually)",
+          "url": "https://www.youtube.com/watch?v=QR03oeguXF8"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:drill-through--drill-down",
+      "topic_slug": "drill-through--drill-down",
+      "node_id": "o65MsjBczUD_m7DYBFr_y",
+      "title": "Drill-through & Drill-down",
+      "description": "Drill-through lets a user right-click a data point and jump to a separate detail page filtered to that specific selection, while drill-down lets a user click into a hierarchy within the same visual to see a more granular level, like moving from year to month. Both give users a way to go from a summary view into more detail without cluttering the main report with every level at once. They rely on e",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Use drill mode to explore visuals in the Power BI service",
+          "url": "https://learn.microsoft.com/en-us/power-bi/explore-reports/end-user-drill"
+        },
+        {
+          "raw_type": "article",
+          "title": "Drill Through vs Drill Down in Power BI: Know the Difference",
+          "url": "https://medium.com/@Santhanalakshmip/drill-through-vs-drill-down-in-power-bi-know-the-difference-26036a8549d8"
+        },
+        {
+          "raw_type": "video",
+          "title": "DRILLDOWN and DRILLTHROUGH in Power BI",
+          "url": "https://www.youtube.com/watch?v=O7aL5v1r6Q4"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:dual-storage-mode",
+      "topic_slug": "dual-storage-mode",
+      "node_id": "8DKQH0CbRmtuAW3tE_ke6",
+      "title": "Dual Storage Mode",
+      "description": "Dual storage mode lets a table be configured to use both Import and DirectQuery, switching between them depending on the type of query Power BI needs to run. It is commonly used for large fact tables where recent data stays in DirectQuery for freshness while historical data is imported for speed. This setup requires careful design of aggregation tables to work well.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Table storage mode in Power BI semantic models",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-storage-mode"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Dual Storage Mode in Power BI?",
+          "url": "https://www.graphed.com/blog/what-is-dual-storage-mode-in-power-bi"
+        },
+        {
+          "raw_type": "video",
+          "title": "Boost DAX Performance in Power BI with Dual Mode",
+          "url": "https://www.youtube.com/watch?v=TgAXt1ifdhs"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:explore-feature",
+      "topic_slug": "explore-feature",
+      "node_id": "M8o5vABTrb0yRSctPX7oG",
+      "title": "Explore Feature",
+      "description": "The Explore feature lets report viewers open a visual into a larger, dedicated analysis view where they can add or remove fields, change the visual type, and dig deeper without editing the original report. It gives non-report-builders a way to do lightweight self-service analysis on top of an existing report. Changes made in Explore mode do not affect the original report unless explicitly saved ba",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Use Explore (preview) in the Power BI service",
+          "url": "https://learn.microsoft.com/en-us/power-bi/explore-reports/explore-data-service"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:facts--dimensions",
+      "topic_slug": "facts--dimensions",
+      "node_id": "UsiTXTUkAS5w6IeJ0nBJ-",
+      "title": "Facts & Dimensions",
+      "description": "Fact tables hold measurable, numeric data such as sales amounts or transaction counts, usually at a fine level of detail with many rows. Dimension tables hold descriptive attributes, like product names or customer regions, that get connected to facts through relationships and used to filter or group them. Separating facts from dimensions is the core idea behind a star schema.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Dimensions and fact tables",
+          "url": "https://exceltown.com/en/tutorials/power-bi/powerbi-com-and-power-bi-desktop/data-model-in-power-bi/dimensions-and-fact-tables-how-to-work-with-them-and-what-is-it/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Fact & Dimension tables in Power BI | Data Modelling",
+          "url": "https://www.youtube.com/watch?v=PMSN7evZFFE"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:field-parameters",
+      "topic_slug": "field-parameters",
+      "node_id": "-dhGA5wUkvycHl30ZZELE",
+      "title": "Field Parameters",
+      "description": "Field parameters let report users switch which field or measure a visual displays through a slicer, without needing a separate visual for each option. They are implemented as a special calculated table that lists the available fields, referenced dynamically inside the visual. This makes reports more flexible, letting one chart serve for multiple different metrics.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Use field parameters to let report readers change visuals",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/power-bi-field-parameters"
+        },
+        {
+          "raw_type": "article",
+          "title": "Fields parameters in Power BI",
+          "url": "https://www.sqlbi.com/articles/fields-parameters-in-power-bi/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Field Parameters - Why & how to use them?",
+          "url": "https://www.youtube.com/watch?v=IR62y8Q_k-o"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:field-visibility",
+      "topic_slug": "field-visibility",
+      "node_id": "2tXtiVyl0LiUDldc-dYOL",
+      "title": "Field Visibility",
+      "description": "Field visibility settings let modelers hide columns or tables from the report view while keeping them available for calculations. This is used to declutter the field list for report builders, hiding technical or intermediate fields that should not be dragged directly into a visual. Hidden fields can still be referenced inside measures.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:files",
+      "topic_slug": "files",
+      "node_id": "fMGZRXVaryZ25kjE-4e5x",
+      "title": "Files",
+      "description": "Power BI can import data directly from files such as Excel workbooks, CSV files, text files, XML, JSON, and PDF tables. File-based sources are common for smaller or ad hoc datasets that are not stored in a formal database. Power Query reads the file structure and lets the user select which sheets or tables to load.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Get data from files for Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-get-data-from-files"
+        },
+        {
+          "raw_type": "official",
+          "title": "Get data from comma separated value (CSV) files",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-comma-separated-value-files"
+        },
+        {
+          "raw_type": "official",
+          "title": "Import Excel workbooks into Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-import-excel-workbooks"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:formatting--filtering",
+      "topic_slug": "formatting--filtering",
+      "node_id": "OSDmzLdt4rdVU2TFKazh1",
+      "title": "Formatting & Filtering",
+      "description": "Formatting and filtering covers the set of features used to control how a report looks and what data it displays, including themes, conditional formatting, sorting, and slicers. These tools shape both the visual presentation and the interactivity available to report viewers. They are typically applied after the core visuals and data model are already in place.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:formatting--themes",
+      "topic_slug": "formatting--themes",
+      "node_id": "PzH_pS8MZsfWNia-6LHYv",
+      "title": "Formatting & Themes",
+      "description": "Formatting and themes control the visual appearance of a report, including colors, fonts, and visual styling, either set individually per visual or applied consistently across a whole report using a theme file. A theme is a JSON file that defines a color palette and style rules, letting an organization apply consistent branding across multiple reports at once. Manual formatting on individual visua",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Use report themes in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes"
+        },
+        {
+          "raw_type": "official",
+          "title": "Create custom report themes in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/report-themes-create-custom"
+        },
+        {
+          "raw_type": "video",
+          "title": "Themes in Power BI",
+          "url": "https://www.youtube.com/watch?v=C_K0H9Kv2k8"
+        },
+        {
+          "raw_type": "video",
+          "title": "Build THIS! Report DESIGN in Power BI | FULL TUTORIAL",
+          "url": "https://www.youtube.com/watch?v=cYwioeHu_OU&list=PL7YWaPR3USciiD4I-f-NPEoGd6z6C5Lfl"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:formatting-and-filtering",
+      "topic_slug": "formatting-and-filtering",
+      "node_id": "OSDmzLdt4rdVU2TFKazh1",
+      "title": "Formatting & Filtering",
+      "description": "Formatting and filtering covers the set of features used to control how a report looks and what data it displays, including themes, conditional formatting, sorting, and slicers. These tools shape both the visual presentation and the interactivity available to report viewers. They are typically applied after the core visuals and data model are already in place.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:fundamentals",
+      "topic_slug": "fundamentals",
+      "node_id": "cGLTxw45dWZbKwJ_L7v2z",
+      "title": "Fundamentals",
+      "description": "DAX fundamentals cover the basic building blocks needed to write formulas in Power BI: syntax, function categories, and the difference between columns and measures. Getting these basics solid is necessary before tackling more advanced concepts like context and filtering. Most DAX formulas are built by combining a handful of core functions in different ways.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Learn DAX basics in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-gb/power-bi/transform-model/desktop-quickstart-learn-dax-basics"
+        },
+        {
+          "raw_type": "official",
+          "title": "DAX overview",
+          "url": "https://learn.microsoft.com/en-us/dax/dax-overview"
+        },
+        {
+          "raw_type": "article",
+          "title": "The DAX language",
+          "url": "https://dax.guide/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI DAX Tutorial for Beginners (2025): Master DAX in ONE Course!",
+          "url": "https://www.youtube.com/watch?v=b0yWfnb2Vbw"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:gauges-cards--kpis",
+      "topic_slug": "gauges-cards--kpis",
+      "node_id": "P0XqGgwc6zKGRyXwnvMwD",
+      "title": "Gauges, Cards, & KPIs",
+      "description": "Gauges, cards, and KPI visuals display a single value prominently, often compared against a target or goal. Cards show one number plainly, gauges represent it on a dial with a target marker, and KPI visuals combine a value, trend, and goal into one compact visual. These are common on dashboards meant to give an at-a-glance status check.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create key performance indicator (KPI) visualizations",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-kpi?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "official",
+          "title": "Create a card visual in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-card"
+        },
+        {
+          "raw_type": "official",
+          "title": "Radial gauge charts in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-radial-gauge-charts?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "video",
+          "title": "NEW Power BI Card Visual",
+          "url": "https://www.youtube.com/watch?v=KzGmpyHl-K4"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to create a KPI visual in Power BI",
+          "url": "https://www.youtube.com/watch?v=AnrGyoYsTmI"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:governance",
+      "topic_slug": "governance",
+      "node_id": "d3-VRo0ZX_inzVEnUtFDl",
+      "title": "Governance",
+      "description": "Governance in Power BI covers the policies and processes an organization puts in place to manage data quality, security, and consistency across all Power BI content, including standards for certified datasets, sensitivity labeling, and monitoring usage. It becomes more important as the number of reports and users grows within an organization. Administrators typically oversee governance through ten",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:granularity",
+      "topic_slug": "granularity",
+      "node_id": "hGinFciFMdIiFv7VQle_e",
+      "title": "Granularity",
+      "description": "Granularity refers to the level of detail represented by each row in a fact table, such as one row per transaction versus one row per day. Choosing the right granularity affects both performance and what kinds of calculations are possible, since aggregating up is easier than breaking data down further after the fact. Mismatched granularity between related tables is a common source of modeling prob",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Granularity in Power BI?",
+          "url": "https://www.graphed.com/blog/what-is-granularity-in-power-bi"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Data Granularity? | BI For Beginners",
+          "url": "https://www.youtube.com/watch?v=hiSHHTcA8Os"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:handling-errors",
+      "topic_slug": "handling-errors",
+      "node_id": "cqLk4gpK_Ex7SvpcR-EyX",
+      "title": "Handling Errors",
+      "description": "Power Query flags rows where a transformation fails, such as a text value that cannot convert to a number, and marks them as errors rather than stopping the whole query. These errors can be removed, replaced with a default value, or kept for review, depending on how the discrepancy should be handled. Left unresolved, errors will cause the refresh to fail once the query tries to load that data into",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Dealing with errors in Power Query",
+          "url": "https://learn.microsoft.com/en-us/power-query/dealing-with-errors"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI - Introduction to Handling Errors",
+          "url": "https://www.youtube.com/watch?v=eC9U5nhQmno"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:hierarchies",
+      "topic_slug": "hierarchies",
+      "node_id": "teGp4rdsa8O-Au8mHbrkH",
+      "title": "Hierarchies",
+      "description": "Hierarchies in Power BI let you navigate data across multiple levels of detail, such as year to quarter to month to day. Built from related columns or tables, they enable drill-up and drill-down in reports and can be defined in the data model or directly in Power Query.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:hierarchies",
+      "topic_slug": "hierarchies",
+      "node_id": "wbhSoBY2VjAUcnAYT8wm4",
+      "title": "Hierarchies",
+      "description": "A hierarchy in the data model groups related columns into a drill path, such as Year, Quarter, Month, and Day, so users can navigate from a summary level down to detail in a single visual. Hierarchies are built by dragging one column onto another in the model view or fields pane. They make it easier for report users to explore data without needing separate visuals for each level of detail.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Get started with hierarchies in Power BI scorecards",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/service-goals-get-started-hierarchies"
+        },
+        {
+          "raw_type": "article",
+          "title": "Creating hierarchies in Power BI",
+          "url": "https://help.zebrabi.com/kb/power-bi/hierarchies/"
+        },
+        {
+          "raw_type": "video",
+          "title": "ES  Skip navigation Search    Create   Avatar image Easily Create Hierarchies in Power BI Desktop",
+          "url": "https://www.youtube.com/watch?v=1Y0T_KkeWyQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:how-data-flows",
+      "topic_slug": "how-data-flows",
+      "node_id": "Hk1qf_oY4SxVsjuoOd9nL",
+      "title": "How Data Flows",
+      "description": "Data in Power BI moves through a pipeline: it gets pulled from a source using a connector, cleaned and reshaped in Power Query, loaded into a data model, and then visualized in reports. Depending on the connection mode, data can be imported and stored inside Power BI or queried live from the source at report load time. Understanding this flow helps in deciding where to fix an issue, whether at the",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:import-mode",
+      "topic_slug": "import-mode",
+      "node_id": "4UXIwHGpILCTfs7lLoxou",
+      "title": "Import Mode",
+      "description": "Import mode loads a copy of the source data into Power BI's own compressed in-memory storage, called VertiPaq. Once imported, report visuals query this local copy, which makes interactions fast regardless of the original source's speed. The trade-off is that data is only as current as the last scheduled or manual refresh.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Import Mode",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand#import-mode"
+        },
+        {
+          "raw_type": "video",
+          "title": "Import vs DirectQuery in Power BI",
+          "url": "https://www.youtube.com/watch?v=tDIsCVB7mnI"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:incremental-refresh",
+      "topic_slug": "incremental-refresh",
+      "node_id": "qABASsA3GLMJITuKqH0Te",
+      "title": "Incremental Refresh",
+      "description": "Incremental refresh configures a dataset to only reload recent data on each refresh, rather than reprocessing the entire history every time. It uses date-based partitions defined with parameters, refreshing a small recent window while leaving older partitions untouched. This significantly cuts refresh time and resource use for large, growing datasets.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Configure incremental refresh and real-time data for Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview"
+        },
+        {
+          "raw_type": "video",
+          "title": "Configuring Incremental Refresh in Power BI",
+          "url": "https://www.youtube.com/watch?v=Kui_1G6kQIQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:installing-power-bi",
+      "topic_slug": "installing-power-bi",
+      "node_id": "4S5zKmpa29_re_rOZD9mt",
+      "title": "Installing Power BI",
+      "description": "Installing Power BI Desktop involves downloading it from the Microsoft Store or the Power BI website and running the setup file; most users require no special configuration. The Service and Mobile app do not need to be installed in the same sense: the Service runs in a browser, and Mobile is installed like any other app from an app store. Organizations sometimes manage Desktop installation through",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Download Microsoft Power BI Desktop",
+          "url": "https://www.microsoft.com/es-es/download/details.aspx?id=58494"
+        },
+        {
+          "raw_type": "video",
+          "title": "Install Power BI Desktop the RIGHT WAY!",
+          "url": "https://www.youtube.com/watch?v=qIt2n46Qa7s"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:integrations",
+      "topic_slug": "integrations",
+      "node_id": "Tg7TuqzUQrGpWm2LJej2-",
+      "title": "Integrations",
+      "description": "Integrations cover the ways Power BI connects with other tools and platforms beyond its own ecosystem, including Excel, Python and R, Microsoft Fabric, Power BI Embedded, and the REST API. These integrations extend what Power BI can do or let its content be used inside other applications. They are relevant to more advanced or custom use cases beyond typical report building.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:interactivity",
+      "topic_slug": "interactivity",
+      "node_id": "Ts5wEmq3U761ObsaLVCsE",
+      "title": "Interactivity",
+      "description": "Interactivity refers to the features that let report viewers explore data dynamically rather than viewing a static image, including cross-filtering between visuals, drill-through, bookmarks, and buttons. These features turn a report into a tool for investigation rather than just a summary. Designing good interactivity requires thinking about how a viewer will naturally want to explore the data.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Change how visuals interact in a Power BI report",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/service-reports-visual-interactions?tabs=powerbi-desktop"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:introduction",
+      "topic_slug": "introduction",
+      "node_id": "2QB2qNbr8IHv4YbB-hYqf",
+      "title": "Introduction",
+      "description": "Power BI is a business intelligence tool from Microsoft for connecting to data, transforming it, and building interactive reports and dashboards. It combines a desktop authoring app, a cloud service for publishing and sharing, and a mobile app for viewing reports on the go. Analysts and business users use it to turn raw data from spreadsheets, databases, and cloud services into visual insights wit",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "What is Power BI?",
+          "url": "https://learn.microsoft.com/en-us/power-bi/fundamentals/power-bi-overview"
+        },
+        {
+          "raw_type": "official",
+          "title": "Get started with Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-getting-started"
+        },
+        {
+          "raw_type": "official",
+          "title": "Training for Power BI",
+          "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn Power BI in Under 3 Hours",
+          "url": "https://www.youtube.com/watch?v=I0vQ_VLZTWg"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:iterator-functions",
+      "topic_slug": "iterator-functions",
+      "node_id": "GdcUdMG8C62PeVe0hJaJZ",
+      "title": "Iterator Functions",
+      "description": "Iterator functions in DAX, such as SUMX, AVERAGEX, and FILTER, loop through a table row by row, evaluating an expression for each row before combining the results. They are needed when a calculation cannot be expressed as a simple aggregation of an existing column, such as multiplying quantity by price for each row before summing. Iterators are one of the more powerful but performance-sensitive to",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "Power BI DAX for Beginners #8: Iterative Functions",
+          "url": "https://www.youtube.com/watch?v=nBmsDnvh-Ao"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:joins",
+      "topic_slug": "joins",
+      "node_id": "OUo1KyRG-Qc5I6GWZR2pp",
+      "title": "Joins",
+      "description": "Joins in Power Query, called merges, combine two tables side by side based on matching values in one or more key columns. Users choose a join type such as inner, left outer, right outer, or full outer, which determines which rows are kept when matches are found or missing. This is the main way to bring related tables together before loading them into the data model.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Shape and combine data in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-shape-and-combine-data"
+        },
+        {
+          "raw_type": "article",
+          "title": "Power Query Basics: Merge Queries",
+          "url": "https://iterationinsights.com/article/power-query-basics-merge-queries-and-the-differences-of-join-types/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power Query Secrets: How to Merge Tables Like a Pro!",
+          "url": "https://www.youtube.com/watch?v=m4feUpoDpVI"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:key-influencers",
+      "topic_slug": "key-influencers",
+      "node_id": "uoFvTcMDDIkYHz_d7ZeX-",
+      "title": "Key Influencers",
+      "description": "The key influencers visual analyzes what factors are most strongly associated with a change in a chosen metric, using a statistical model behind the scenes to identify contributing variables. It ranks factors by their relative influence and shows how each one affects the outcome, such as which customer attributes are associated with churn. This visual automates a type of analysis that would otherw",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create key influencers visualizations",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-influencers?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "article",
+          "title": "Key Influencers in Power BI",
+          "url": "https://medium.com/@f.jtundeadedipe/key-influencers-in-power-bi-c92baf696d16"
+        },
+        {
+          "raw_type": "video",
+          "title": "Find Hidden Insights Fast with Power BI Key Influencers Visual",
+          "url": "https://www.youtube.com/watch?v=jTB3ror4QF8"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:language-layer",
+      "topic_slug": "language-layer",
+      "node_id": "v6n_uRreDYk3NnwD4GLKN",
+      "title": "Language Layer",
+      "description": "The language layer in Power Query refers to the underlying M language that powers every transformation, whether built through the graphical interface or written by hand. Every point-and-click action in Power Query generates M code behind the scenes, visible in the Advanced Editor. Understanding this layer lets users go beyond what the UI exposes.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:layout-frameworks",
+      "topic_slug": "layout-frameworks",
+      "node_id": "UEO1KVLCqK4NbhnYa7mS6",
+      "title": "Layout Frameworks",
+      "description": "Layout frameworks are structured approaches to arranging visuals on a report page, such as grid-based layouts or a defined visual hierarchy that guides the eye from summary to detail. They help keep reports consistent across pages and easier to build quickly once a template pattern is established. Many teams develop a standard layout framework to apply across all their reports for a unified look.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:licensing-tiers",
+      "topic_slug": "licensing-tiers",
+      "node_id": "y9CTbobwkPNDUDDkJLdQX",
+      "title": "Licensing Tiers",
+      "description": "Power BI is offered through a few licensing tiers: Free, Pro, Premium Per User, and Premium capacity, each unlocking a different set of features and limits. Free covers basic report building and viewing, Pro adds sharing and collaboration, and the Premium tiers add larger dataset sizes, more frequent refreshes, and dedicated capacity for an organization. Choosing the right plan depends on how many",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Power BI Pricing",
+          "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing"
+        },
+        {
+          "raw_type": "official",
+          "title": "Licenses and subscriptions for business users",
+          "url": "https://learn.microsoft.com/en-us/power-bi/fundamentals/end-user-license"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:line--area-charts",
+      "topic_slug": "line--area-charts",
+      "node_id": "JEudXkog9r0szwd6RMw1L",
+      "title": "Line & Area Charts",
+      "description": "Line charts connect data points with a continuous line, making them the standard choice for showing trends over a continuous axis like time. Area charts are a variation that fills the space beneath the line, which can help emphasize volume or make it easier to compare multiple stacked series. Both work best when there are enough data points to show a clear trend rather than isolated values.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Line charts in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-line-chart"
+        },
+        {
+          "raw_type": "official",
+          "title": "Create and use basic area charts",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-basic-area-chart"
+        },
+        {
+          "raw_type": "video",
+          "title": "Your Power BI Line Chart Is Missing This (Most People Don't Know It)",
+          "url": "https://www.youtube.com/watch?v=nAopHkQDH2w"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to create and Customize Area Chart in Power BI",
+          "url": "https://www.youtube.com/watch?v=NTDjUXKX-0g"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:logical-functions",
+      "topic_slug": "logical-functions",
+      "node_id": "KVOe7N9mpfqbAvF_bQxYB",
+      "title": "Logical Functions",
+      "description": "Logical functions in DAX, such as IF, AND, OR, and SWITCH, evaluate conditions and return different results depending on whether they are true or false. They are used to build conditional logic within a measure or calculated column, similar to conditional statements in other languages. SWITCH is commonly preferred over nested IF statements once there are more than two or three conditions.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Logical functions in DAX",
+          "url": "https://learn.microsoft.com/en-us/dax/logical-functions-dax"
+        },
+        {
+          "raw_type": "article",
+          "title": "Logical functions",
+          "url": "https://dax.guide/functions/logical/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI DAX Part 3 - Logical Functions",
+          "url": "https://www.youtube.com/watch?v=YTdxWVyYNkU"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:m-language-basics",
+      "topic_slug": "m-language-basics",
+      "node_id": "7JeXBAYhv_3ZZr3niaIhd",
+      "title": "M Language Basics",
+      "description": "M is the functional language used by Power Query to define data transformations. Every query is a sequence of steps expressed as M expressions, with each step referencing the result of the one before it. Learning its syntax, such as let and in blocks, lets users write custom logic beyond what the graphical interface supports.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Quick tour of the Power Query M formula language",
+          "url": "https://learn.microsoft.com/en-us/powerquery-m/quick-tour-of-the-power-query-m-formula-language"
+        },
+        {
+          "raw_type": "official",
+          "title": "Understanding Power Query M functions",
+          "url": "https://learn.microsoft.com/en-us/powerquery-m/understanding-power-query-m-functions"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power query M language",
+          "url": "https://www.youtube.com/playlist?list=PL2Wq16IU3XbmLZrb68YTFTamQnaFzZu-d"
+        },
+        {
+          "raw_type": "video",
+          "title": "M Query Tutorial for Beginners",
+          "url": "https://www.youtube.com/playlist?list=PL69uhGeC7jeMmekYE1K8eJ8JH_A4xI3HA"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:maps",
+      "topic_slug": "maps",
+      "node_id": "VWVF938IZeNS2E1SrS29l",
+      "title": "Maps",
+      "description": "Map visuals plot data geographically, using either points on a map for specific locations or shaded regions for values tied to areas like states or countries. Power BI supports a few map types, including standard maps, filled maps, and ArcGIS-based maps for more advanced geographic analysis. They rely on location data being correctly recognized, often helped along by setting the right data categor",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Map visualizations in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-map-visualizations-overview"
+        },
+        {
+          "raw_type": "article",
+          "title": "A deep dive into map visualisations in Power BI",
+          "url": "https://medium.com/digital-and-innovation-at-british-red-cross/a-deep-dive-into-map-visualisations-in-power-bi-1e57c5a3e701"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI MAP Visualization: Must-Know PBI MasterClass!!!",
+          "url": "https://www.youtube.com/watch?v=LFMn3wnruNc"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:matrix--table-visuals",
+      "topic_slug": "matrix--table-visuals",
+      "node_id": "fwUzkj_cd8tQWM_du19i1",
+      "title": "Matrix & Table Visuals",
+      "description": "Table visuals display data in rows and columns similar to a spreadsheet, while matrix visuals add the ability to group rows and columns into a pivot-table style structure with expandable hierarchies. Both are used when users need to see exact numbers rather than a visual summary, or need to drill into totals and subtotals. Matrix visuals in particular support features like row and column grouping ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create a matrix visual in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-matrix-visual"
+        },
+        {
+          "raw_type": "official",
+          "title": "Create and format table visualizations in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-tables?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ultimate Guide to MATRIX Tables in Power BI",
+          "url": "https://www.youtube.com/watch?v=qphVQdI5rQs"
+        },
+        {
+          "raw_type": "video",
+          "title": "Make your tables look AMAZINGLY beautiful with these two tricks in Power BI",
+          "url": "https://www.youtube.com/watch?v=97M-D5WXaqI"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:microsoft-fabric",
+      "topic_slug": "microsoft-fabric",
+      "node_id": "ls626i2TukzHY0Q_LnlVs",
+      "title": "Microsoft Fabric",
+      "description": "Microsoft Fabric is Microsoft's unified data platform that brings together data engineering, data warehousing, and data science alongside Power BI, all built on a shared storage layer called OneLake. Power BI datasets within Fabric can use Direct Lake mode to query data stored in OneLake without a separate import step. Fabric represents a shift toward Power BI being one part of a broader integrate",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:mobile-app",
+      "topic_slug": "mobile-app",
+      "node_id": "6Evp-E8U-n3EutKt2cqnX",
+      "title": "Mobile App",
+      "description": "The Power BI mobile app, in the context of the Service, is where published reports and dashboards become available for viewing on phones and tablets once a user has access through the Service. It supports features like push notifications for data alerts and offline access to recently opened reports. Reports viewed on mobile can automatically adjust to phone-friendly layouts if one has been designe",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:mobile",
+      "topic_slug": "mobile",
+      "node_id": "H8vRATlg1hX8iPwLJdeOR",
+      "title": "Mobile",
+      "description": "Power BI Mobile is the app for iOS and Android that lets users view reports and dashboards on their phone or tablet. It supports touch-optimized layouts, offline caching of recently viewed reports, and alerts when a metric crosses a threshold. It is meant for consuming reports rather than building them.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Insights anywhere with Power BI Mobile",
+          "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi/mobile"
+        },
+        {
+          "raw_type": "official",
+          "title": "What are the Power BI mobile apps?",
+          "url": "https://learn.microsoft.com/en-us/power-bi/explore-reports/mobile/mobile-apps-for-mobile-devices"
+        },
+        {
+          "raw_type": "video",
+          "title": "Publish and view your Dashboard on your Mobile device",
+          "url": "https://www.youtube.com/watch?v=syq1ltNI0u8"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:model-objects",
+      "topic_slug": "model-objects",
+      "node_id": "vBimOM-ayzWiwGFPRZqW4",
+      "title": "Model Objects",
+      "description": "Model objects refer to the different building blocks that make up a Power BI data model: tables, columns, calculated columns and tables, measures, hierarchies, and aggregations. Each object type serves a different purpose, from storing raw data to defining calculations. Understanding what each object does is necessary for structuring a model correctly.",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "Exploring the SEMANTIC MODEL in Power BI",
+          "url": "https://www.youtube.com/watch?v=LIbPQfACfKY"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:model-optimization",
+      "topic_slug": "model-optimization",
+      "node_id": "jAkxBHWrRTFnhs9deON6b",
+      "title": "Model Optimization",
+      "description": "Model optimization covers techniques to reduce a data model's size and improve its query speed, such as removing unused columns, choosing efficient data types, and reducing cardinality where possible. Since Power BI's in-memory engine compresses data based on column cardinality, fewer unique values in a column generally means better compression. Optimization matters most as datasets grow into the ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Optimization guide for Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/guidance/power-bi-optimization"
+        },
+        {
+          "raw_type": "video",
+          "title": "10 Steps to Optimize Your Data Model in Power BI",
+          "url": "https://www.youtube.com/watch?v=MGkCCbK86qw"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:model-organization",
+      "topic_slug": "model-organization",
+      "node_id": "vMqaPgnbF_ouOvBBgrRpk",
+      "title": "Model Organization",
+      "description": "Model organization covers how tables, columns, and measures are structured and displayed to make a data model easy to navigate for report builders. This includes grouping related measures, hiding technical columns, and setting up clear folders within the model view. A well-organized model reduces confusion for anyone building reports on top of it.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:naming-conventions",
+      "topic_slug": "naming-conventions",
+      "node_id": "xeJEDCBsv3XyfOC_SClR7",
+      "title": "Naming Conventions",
+      "description": "Naming conventions are consistent rules for how tables, columns, and measures are named within a model, such as using clear business terms instead of database field names. Consistent naming makes a model easier to understand for anyone building reports, especially in larger organizations with many contributors. This often includes deciding on casing style, abbreviations, and how to group related f",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:object-level-security",
+      "topic_slug": "object-level-security",
+      "node_id": "l7_l2lM0A0Z6jNt-ypRR-",
+      "title": "Object-Level Security",
+      "description": "Object-level security restricts access to entire tables or columns in the data model, hiding them completely from certain users rather than just filtering rows. It is used when specific columns, like salary or other sensitive fields, should not be visible to some users at all, regardless of row-level filters. This is set up through external tools like Tabular Editor rather than the standard Power ",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:on-premises-data-gateway",
+      "topic_slug": "on-premises-data-gateway",
+      "node_id": "7CyF7zG9yRiJWq2XmEKVG",
+      "title": "On-premises Data Gateway",
+      "description": "The on-premises data gateway is software installed on a local machine that lets the Power BI Service securely connect to data sources that live inside a private network, such as an on-premises SQL Server. It acts as a bridge, forwarding queries from the cloud to the source without exposing the source directly to the internet. A gateway is required whenever a scheduled refresh or DirectQuery needs ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "What is an on-premises data gateway?",
+          "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-onprem"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to configure Gateway Connection in Power BI Service",
+          "url": "https://www.youtube.com/watch?v=i4OALAQ7qz4"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:paginated-reports-rdl",
+      "topic_slug": "paginated-reports-rdl",
+      "node_id": "ryiwhhGAviD-QFlD-c5If",
+      "title": "Paginated Reports (RDL)",
+      "description": "Paginated reports are print-ready, pixel-perfect reports built with Report Builder and defined in RDL format, designed to render consistently across page sizes for printing or PDF export. Unlike regular Power BI reports, they are built for exact layout control rather than interactive exploration. They are often used for things like invoices, regulatory documents, or operational reports that need a",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "What are paginated reports in Power BI?",
+          "url": "https://learn.microsoft.com/en-us/power-bi/paginated-reports/paginated-reports-report-builder-power-bi"
+        },
+        {
+          "raw_type": "official",
+          "title": "Create a paginated report from a Power BI report or dataset",
+          "url": "https://learn.microsoft.com/en-us/power-bi/paginated-reports/paginated-reports-download-rdl"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Publish and Migrate RDL Files",
+          "url": "https://www.youtube.com/watch?v=58rLq8MF2mc"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:parameters--functions",
+      "topic_slug": "parameters--functions",
+      "node_id": "_vIHVUkhy9Cu-WGdg59fi",
+      "title": "Parameters & Functions",
+      "description": "Parameters in Power Query are named values that can be reused across queries, such as a file path or a date range, making it easy to update many queries at once by changing a single value. Custom functions extend this by wrapping a query into a reusable block of logic that can be called with different inputs. Together they support building scalable, repeatable transformation logic instead of dupli",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Using parameters",
+          "url": "https://learn.microsoft.com/en-us/power-query/power-query-query-parameters"
+        },
+        {
+          "raw_type": "official",
+          "title": "Use custom functions",
+          "url": "https://learn.microsoft.com/en-us/power-query/custom-function"
+        },
+        {
+          "raw_type": "video",
+          "title": "Using Parameters in Power BI",
+          "url": "https://www.youtube.com/watch?v=LDWEoWoabAI"
+        },
+        {
+          "raw_type": "video",
+          "title": "ES  Skip navigation Search    Create    Power Query Custom Functions",
+          "url": "https://www.youtube.com/watch?v=Z4HrYGZUjuw"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:performance-analyzer",
+      "topic_slug": "performance-analyzer",
+      "node_id": "c4Ca3HejJsCRvu2BgHzlP",
+      "title": "Performance Analyzer",
+      "description": "Performance Analyzer is a built-in Power BI Desktop tool that records how long each visual takes to render, broken down by DAX query time, visual display time, and other processing. It helps pinpoint whether a slow report is caused by an inefficient measure, a heavy visual, or the underlying data model. Recorded traces can also be exported for deeper analysis in external tools.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Use Performance Analyzer to examine report performance",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/performance-analyzer"
+        },
+        {
+          "raw_type": "article",
+          "title": "Advanced Power BI Performance Analyser by SmartPowerBI",
+          "url": "https://smartpowerbi.co.uk/2021/10/12/advanced-power-bi-performance-analyser-by-smartpowerbi/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Use PERFORMANCE ANALYZER to look for bottlenecks",
+          "url": "https://www.youtube.com/watch?v=VFcDCls0la4"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:pie--donut-charts",
+      "topic_slug": "pie--donut-charts",
+      "node_id": "EJKYzHDG2YQawVpiqL-jU",
+      "title": "Pie & Donut Charts",
+      "description": "Pie and donut charts show how a total is divided into parts, with each slice sized proportionally to its share of the whole. They are best used with only a handful of categories, since too many slices become hard to read and compare accurately. A donut chart is the same concept with a hole in the middle, often used to also display a total value.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create and use pie and donut charts in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-pie-donut-chart?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to make Pie Charts",
+          "url": "https://www.youtube.com/watch?v=oxz4IRELtJ4"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Just Unlocked Donut Chart INSANITY",
+          "url": "https://www.youtube.com/watch?v=2VJxYNIzjuM"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:pivot--transpose",
+      "topic_slug": "pivot--transpose",
+      "node_id": "zRLfg-lJsWkNsZoY-Lqid",
+      "title": "Pivot & Transpose",
+      "description": "Pivoting turns unique values in one column into multiple new columns, reshaping data from a long format into a wide format, while transpose flips rows into columns and vice versa entirely. These operations are used to reshape data that arrives in a structure unsuited for reporting, such as a table where dates run down instead of across. Unpivoting, the reverse of pivoting, is often needed just as ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Pivot columns",
+          "url": "https://learn.microsoft.com/en-gb/power-query/pivot-columns"
+        },
+        {
+          "raw_type": "official",
+          "title": "Transpose a table",
+          "url": "https://learn.microsoft.com/en-us/power-query/transpose-table"
+        },
+        {
+          "raw_type": "video",
+          "title": "Transpose, pivot or unpivot in Power Query?",
+          "url": "https://www.youtube.com/watch?v=hGj2axffxHo"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:power-automate",
+      "topic_slug": "power-automate",
+      "node_id": "X5zgzF1ld5zGUnf4fMHLF",
+      "title": "Power Automate",
+      "description": "Power Automate integrates with Power BI to trigger automated workflows based on events in a report, such as a button click that kicks off an approval process or sends a notification. It connects Power BI to hundreds of other services and apps without needing custom code. This turns a report from a passive viewing experience into something that can initiate real business processes.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:power-bi-ecosystem",
+      "topic_slug": "power-bi-ecosystem",
+      "node_id": "n2m-xo1wfcluM5iF54tmu",
+      "title": "Power BI Ecosystem",
+      "description": "The Power BI ecosystem is made up of three main components: Desktop for building reports, Service for publishing and collaborating in the cloud, and Mobile for viewing content on phones and tablets. Each piece serves a different stage of the workflow, from authoring to consumption. Together they cover the full cycle from raw data to a report someone checks on their phone.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "What is Power BI?",
+          "url": "https://learn.microsoft.com/en-us/power-bi/fundamentals/power-bi-overview"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to Power BI ecosystem",
+          "url": "https://www.youtube.com/watch?v=onL5sgfL24k"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:power-bi-embedded",
+      "topic_slug": "power-bi-embedded",
+      "node_id": "AX-mV_fge1qcDOjeREIvJ",
+      "title": "Power BI Embedded",
+      "description": "Power BI Embedded lets developers embed Power BI reports and dashboards into their own applications or websites, using a dedicated Azure capacity rather than requiring end users to have their own Power BI license. It is aimed at software vendors who want to include analytics inside their own product. The embedding is done through APIs and SDKs that control the report's appearance and behavior with",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:power-bi-with-excel",
+      "topic_slug": "power-bi-with-excel",
+      "node_id": "CkG-llpmpyF9jIe5G6zrq",
+      "title": "Power BI with Excel",
+      "description": "Power BI integrates with Excel in a couple of directions: Excel workbooks can connect to a Power BI dataset to analyze it using PivotTables, and Power BI reports can be exported to Excel for further ad hoc analysis. This lets users work in whichever tool suits a particular task while sharing the same underlying data. It is useful for users more comfortable with Excel who still want access to a cen",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:power-query-vs-data-model",
+      "topic_slug": "power-query-vs-data-model",
+      "node_id": "8OG0BC-13asJ6Faxej27_",
+      "title": "Power Query vs. Data Model",
+      "description": "This distinguishes the two stages of Power BI's pipeline: Power Query, which happens before data is loaded, and the data model, which is where the loaded tables, relationships, and measures live. Some transformations can be done in either place, but Power Query changes affect the row-level data at refresh time, while the model layer, through calculated columns and measures, works with data already",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:power-query",
+      "topic_slug": "power-query",
+      "node_id": "P1t4cTjmCHILyc6jkAHWH",
+      "title": "Power Query",
+      "description": "Power Query is the data transformation engine inside Power BI used to connect, shape, and clean data before it is loaded into the model. It provides a graphical interface for common operations like filtering rows, renaming columns, and merging tables, and it records each step so the transformation is repeatable. Behind the scenes, it generates M code that runs whenever the data is refreshed.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "What is Power Query?",
+          "url": "https://learn.microsoft.com/en-us/power-query/power-query-what-is-power-query"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to use Power Query in Power BI",
+          "url": "https://www.youtube.com/watch?v=gP-AxNi6uxo"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power Query Tutorial for Power BI Desktop",
+          "url": "https://www.youtube.com/watch?v=i66yyAl5_Jc"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:publishing--sharing",
+      "topic_slug": "publishing--sharing",
+      "node_id": "rVwlH4DTClyXbTewOdmn3",
+      "title": "Publishing and Sharing",
+      "description": "Publishing and sharing covers the process of moving a report from Power BI Desktop into the cloud service and making it available to others. This includes choosing a workspace to publish to, setting permissions, and deciding whether to share individual reports, dashboards, or a packaged app. It is the step that turns a local file into something colleagues can access.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Share and collaborate on Power BI reports and dashboards",
+          "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-share-dashboards"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:publishing-and-sharing",
+      "topic_slug": "publishing-and-sharing",
+      "node_id": "rVwlH4DTClyXbTewOdmn3",
+      "title": "Publishing and Sharing",
+      "description": "Publishing and sharing covers the process of moving a report from Power BI Desktop into the cloud service and making it available to others. This includes choosing a workspace to publish to, setting permissions, and deciding whether to share individual reports, dashboards, or a packaged app. It is the step that turns a local file into something colleagues can access.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:publishing-reports",
+      "topic_slug": "publishing-reports",
+      "node_id": "rNxp8buIqSZNd6_FDKWmf",
+      "title": "Publishing Reports",
+      "description": "Publishing a report uploads it from Power BI Desktop to a chosen workspace in the Service, making the report and its underlying dataset available in the cloud. Once published, the report can be shared, scheduled for refresh, and viewed through a browser without needing Desktop installed. Any changes made in Desktop need to be republished to update the version in the Service.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Share and collaborate on Power BI reports and dashboards",
+          "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-share-dashboards"
+        },
+        {
+          "raw_type": "official",
+          "title": "Publish semantic models and reports from Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-upload-desktop-files"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Publish Report to Power BI Service",
+          "url": "https://www.youtube.com/watch?v=_3YAB6dNQ18"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ditch the Publish Button in Power BI Desktop",
+          "url": "https://www.youtube.com/watch?v=FtsYYZpH6S4"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:python--r",
+      "topic_slug": "python--r",
+      "node_id": "NCo_m2VAuWFxyMgscH5TN",
+      "title": "Python & R",
+      "description": "Power BI supports using Python and R scripts both inside Power Query for data transformation and as visuals for custom charts not available in the standard visual gallery. This requires a local Python or R installation and library setup on the machine running Desktop. It is used when a specific statistical technique or chart type falls outside what Power BI natively provides.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:python-in-power-query",
+      "topic_slug": "python-in-power-query",
+      "node_id": "KPv8ilVsBsxnyLzhu3yxy",
+      "title": "Python in Power Query",
+      "description": "Power BI allows running Python scripts as a transformation step inside Power Query, which requires a local Python installation. This lets users apply Python libraries for tasks that go beyond M's built-in capabilities, such as certain statistical operations or custom parsing logic. The output of the script becomes a table that Power Query can continue transforming.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:qa-visual",
+      "topic_slug": "qa-visual",
+      "node_id": "y4hjUDSyg1ewVtU9_IsU4",
+      "title": "Q&A Visual",
+      "description": "The Q&A visual lets report viewers type a question in natural language and get an automatically generated chart in response, using Power BI's natural language query engine. It relies on well-named fields and synonyms configured in the model to correctly interpret what is being asked. This gives less technical users a way to explore data without needing to know how to build a visual manually.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create a Q&A visual in a report in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-q-and-a?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "official",
+          "title": "Use Power BI Q&A in a report to explore your data and create visuals",
+          "url": "https://learn.microsoft.com/en-us/power-bi/natural-language/power-bi-tutorial-q-and-a"
+        },
+        {
+          "raw_type": "video",
+          "title": "Q&A Visual Full Tutorial",
+          "url": "https://www.youtube.com/watch?v=2YT5X3-nfMA"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:query-folding",
+      "topic_slug": "query-folding",
+      "node_id": "hsM7w-le7b_JXnAMB419W",
+      "title": "Query Folding",
+      "description": "Query folding is when Power Query translates its transformation steps back into a query that runs on the source system, such as SQL, instead of pulling all the raw data and transforming it locally. This pushes the processing work to the source, which is usually faster and lighter on memory. Not all steps fold, and checking the native query lets you see how far folding goes before it breaks.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Query folding guidance in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/guidance/power-query-folding"
+        },
+        {
+          "raw_type": "official",
+          "title": "Overview of query evaluation and query folding in Power Query",
+          "url": "https://learn.microsoft.com/en-us/power-query/query-folding-basics"
+        },
+        {
+          "raw_type": "video",
+          "title": "Enable Query Folding for Native Queries in Power BI Desktop",
+          "url": "https://www.youtube.com/watch?v=8hjdOCni_ZY"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:quick-measures",
+      "topic_slug": "quick-measures",
+      "node_id": "GXZhNdoiWoKZW9RstuxW1",
+      "title": "Quick Measures",
+      "description": "Quick measures are pre-built DAX calculations generated automatically through a dialog interface, covering common patterns like running totals, year-over-year change, or weighted averages. They are useful for users who need a common calculation without writing DAX from scratch, and the generated formula can be viewed and edited afterward. They serve as a learning tool as well, since users can see ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Use quick measures for common calculations",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-quick-measures"
+        },
+        {
+          "raw_type": "video",
+          "title": "Get started with DAX using QUICK MEASURES in Power BI",
+          "url": "https://www.youtube.com/watch?v=pEgOdBkWv4k"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:refresh--change-detection",
+      "topic_slug": "refresh--change-detection",
+      "node_id": "SdJi9eYWA9khpKam53Qgk",
+      "title": "Refresh & Change Detection",
+      "description": "Refresh settings determine how often a dataset in the Service pulls updated data from its source, on a schedule or triggered manually. Change detection is a feature that checks a lightweight query first to see whether the underlying data has actually changed before running a full, more expensive refresh. This reduces unnecessary load on the source system when data has not changed since the last ch",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Automatic page refresh in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-automatic-page-refresh"
+        },
+        {
+          "raw_type": "article",
+          "title": "Auto Page Refresh in Power BI \u2013 Everything you need to know!",
+          "url": "https://data-mozart.com/auto-page-refresh-in-power-bi-everything-you-need-to-know/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Incremental Refresh - Understanding Detect Data Changes",
+          "url": "https://www.youtube.com/watch?v=JsJWBr1_ktQ"
+        },
+        {
+          "raw_type": "video",
+          "title": "Refresh on Change in Power BI with real-time data",
+          "url": "https://www.youtube.com/watch?v=gD6wCP1sTMM"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:relationships-and-cardinality",
+      "topic_slug": "relationships-and-cardinality",
+      "node_id": "hcCWf3YQqD6YeF_aBa2zI",
+      "title": "Relationships and Cardinality",
+      "description": "Cardinality describes the relationship between the number of matching rows on each side of a relationship, such as one-to-many, many-to-many, or one-to-one. Power BI needs to know the cardinality to correctly propagate filters between tables. Most well-designed models rely on one-to-many relationships between a dimension and a fact table.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understanding Cardinality of Relationships in Power BI",
+          "url": "https://www.edureka.co/blog/cardinality-in-power-bi/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Data Model Design || Relationships Cardinality in POWER BI",
+          "url": "https://www.youtube.com/watch?v=4IwfJq8XYBw"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:relationships",
+      "topic_slug": "relationships",
+      "node_id": "m5Kh5qQtFZ7Xh-3BXeBY6",
+      "title": "Relationships",
+      "description": "Relationships connect tables in the data model, defining how filtering on one table affects another. Power BI infers relationships based on matching column names when possible, but they can also be set manually with the specific keys and direction chosen by the modeler. A well-designed set of relationships is what allows a single slicer to filter across multiple visuals correctly.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create and manage relationships in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-create-and-manage-relationships"
+        },
+        {
+          "raw_type": "official",
+          "title": "Model relationships in Power BI Desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Create and Manage Relationships in Power BI",
+          "url": "https://www.youtube.com/watch?v=sW5LoDA1ssM"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:removing-duplicates",
+      "topic_slug": "removing-duplicates",
+      "node_id": "jY6JPvP0QPjmnPL2tBUus",
+      "title": "Removing Duplicates",
+      "description": "Removing duplicates in Power Query eliminates rows that repeat identical values across selected columns, keeping the dataset clean for accurate counts and aggregations. This is done through a built-in step that compares rows and drops repeats, based on the columns chosen for comparison. It matters especially when combining data from multiple sources that might overlap.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Working with duplicate values",
+          "url": "https://learn.microsoft.com/en-us/power-query/working-with-duplicates"
+        },
+        {
+          "raw_type": "video",
+          "title": "Removing Duplicate Records in the Microsoft Power BI Query Editor",
+          "url": "https://www.youtube.com/watch?v=u3RT7Ib_2YM"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:rest-api",
+      "topic_slug": "rest-api",
+      "node_id": "rc3kmU1DvTbkqFW39BkpT",
+      "title": "REST API",
+      "description": "The Power BI REST API lets developers interact with Power BI programmatically, covering tasks like refreshing a dataset, managing workspace content, or embedding reports, without using the standard user interface. It is commonly used to automate repetitive administrative tasks or integrate Power BI actions into custom applications. Authentication to the API typically uses Azure Active Directory to",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:role-playing-dimensions",
+      "topic_slug": "role-playing-dimensions",
+      "node_id": "_pT_-I07MtFVEN3uvkl2w",
+      "title": "Role-Playing Dimensions",
+      "description": "A role-playing dimension is a single dimension table used in multiple different contexts within the same fact table, such as a date table used for both order date and ship date. Since Power BI only allows one active relationship between two tables at a time, extra relationships must be set inactive and activated within DAX using USERELATIONSHIP, or duplicated as separate tables. This pattern comes",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:row-level-security",
+      "topic_slug": "row-level-security",
+      "node_id": "hbnBEikjm_fsQjhjZDJJm",
+      "title": "Row-Level Security",
+      "description": "Row-level security restricts which rows of data a user can see within a report, based on rules defined in the data model and tied to the user's identity. Roles are set up in Power BI Desktop with DAX filter expressions, then assigned to specific users or groups in the Service. This lets a single report be shared broadly while each viewer only sees the data relevant to them, such as their own regio",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:row-vs-filter-context",
+      "topic_slug": "row-vs-filter-context",
+      "node_id": "-d1bS8y-wYnVO8z-Ogb4M",
+      "title": "Row vs Filter Context",
+      "description": "Row context is the context that exists when a formula evaluates one row at a time, such as inside a calculated column or an iterator function, while filter context is the set of filters currently applied from visuals, slicers, and other measures. A single formula can be affected by both at once, and confusing the two is a frequent source of unexpected results. Functions like CALCULATE are what let",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Row Context and Filter Context in DAX",
+          "url": "https://www.sqlbi.com/articles/row-context-and-filter-context-in-dax/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering the DAX: Row Context vs Filter Context",
+          "url": "https://medium.com/@ashisharora2204/mastering-the-dax-row-context-vs-filter-context-part-2-670ccdf14b09"
+        },
+        {
+          "raw_type": "video",
+          "title": "Row Context vs Filter Context in Power BI | BI Tricks",
+          "url": "https://www.youtube.com/watch?v=eWJ9S7jUDjQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:scatter--bubble-charts",
+      "topic_slug": "scatter--bubble-charts",
+      "node_id": "urDcAE6II1QzHBydBQ0o9",
+      "title": "Scatter & Bubble Charts",
+      "description": "Scatter charts plot two numeric values against each other on separate axes, revealing relationships or clusters between the two variables. Bubble charts extend this by adding a third dimension, represented by the size of each point. Both are used to explore correlation or distribution patterns that bar or line charts cannot easily show.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Scatter charts, bubble charts, and dot plot charts in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-scatter"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building better scatterplots in Power BI reports",
+          "url": "https://tabulareditor.com/blog/building-better-scatterplots-in-power-bi-reports"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bubble/Scatterplot Custom Visual",
+          "url": "https://www.youtube.com/watch?v=AkF-UgkrmyY"
+        },
+        {
+          "raw_type": "video",
+          "title": "ES  Skip navigation scatter plot powerbi     Create   Avatar image Scatter Plot in Power BI",
+          "url": "https://www.youtube.com/watch?v=6l0JexRBI1c"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:schema-design",
+      "topic_slug": "schema-design",
+      "node_id": "oYreeOD0hUcg-P_edX7CX",
+      "title": "Schema Design",
+      "description": "Schema design is the process of deciding how tables in a data model relate to each other and how data is organized for reporting. Good schema design balances query performance, ease of writing DAX, and the ability of the model to scale as more data or relationships are added. Star schema is the most common target design in Power BI models.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Schemas and Data Modelling in Power BI",
+          "url": "https://dev.to/karen_langat_299784e2c330/schemas-and-data-modelling-in-power-bi-3n3b"
+        },
+        {
+          "raw_type": "article",
+          "title": "Schema Design Basics for Power BI",
+          "url": "https://www.mssqltips.com/sqlservertip/11496/schema-design-basics-for-power-bi/"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:sensitivity-labels",
+      "topic_slug": "sensitivity-labels",
+      "node_id": "MYHrkcRDnawWI7aK33GlF",
+      "title": "Sensitivity Labels",
+      "description": "Sensitivity labels classify Power BI content, such as reports or datasets, according to its confidentiality level, using the same labeling system as Microsoft Purview across other Microsoft 365 apps. These labels can carry protection settings, like restricting export or requiring encryption when the content is exported to a file. They help organizations track and control sensitive data as it moves",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:service",
+      "topic_slug": "service",
+      "node_id": "-i6X0KZW6CZfgzgQ2QMvH",
+      "title": "Service",
+      "description": "Power BI Service is the cloud-based platform, accessed through a browser, where published reports live. It handles workspaces, sharing, scheduled refresh, dashboards, and collaboration features that Desktop alone cannot provide. Once a report is published from Desktop, users manage its distribution and permissions from the Service.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Power BI service basics",
+          "url": "https://learn.microsoft.com/en-us/power-bi/fundamentals/service-basic-concepts"
+        },
+        {
+          "raw_type": "official",
+          "title": "Tutorial: Get started creating in the Power BI service",
+          "url": "https://learn.microsoft.com/en-us/power-bi/fundamentals/service-get-started"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Service Introduction",
+          "url": "https://www.youtube.com/playlist?list=PLjNd3r1KLjQvi8p21uS522Xi3qEiFQH2r"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:sharing--permissions",
+      "topic_slug": "sharing--permissions",
+      "node_id": "-EIV_JN7sgNvZ0ycoEq-q",
+      "title": "Sharing & Permissions",
+      "description": "Sharing and permissions control who can view or edit Power BI content, managed through workspace roles, direct sharing links, and row-level security for data-specific restrictions. Permissions can be set at different levels, from an entire workspace down to an individual report or dataset. Getting this right balances making data accessible to the people who need it while restricting it from those ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Share and collaborate on Power BI reports and dashboards",
+          "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-share-dashboards"
+        },
+        {
+          "raw_type": "official",
+          "title": "Request or grant access to shared dashboards or reports",
+          "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-request-access"
+        },
+        {
+          "raw_type": "video",
+          "title": "BEGINNERS GUIDE to SHARING REPORTS in Power BI",
+          "url": "https://www.youtube.com/watch?v=d2b2btjoMhQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:slicers-and-filters",
+      "topic_slug": "slicers-and-filters",
+      "node_id": "YyJm9VI23xGcYgICxkoO0",
+      "title": "Slicers and Filters",
+      "description": "Slicers are visual controls placed directly on a report page that let viewers filter the data interactively, such as choosing a specific year or category. Filters serve a similar purpose but are configured through a separate filter pane and can apply at the visual, page, or entire report level rather than as a visible control. Together they give report viewers control over what data they see witho",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-slicers?tabs=powerbi-desktop",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-slicers?tabs=powerbi-desktop"
+        },
+        {
+          "raw_type": "article",
+          "title": "Power BI Slicers vs. Filters: The Difference and When to Use Them",
+          "url": "https://www.phdata.io/blog/slicers-vs-filters-power-bi/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Slicers - A Step-by-Step Tutorial",
+          "url": "https://www.youtube.com/watch?v=kQ-yUKE_KHE"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:small-multiples",
+      "topic_slug": "small-multiples",
+      "node_id": "7EqmxQwupr7b3Op_tovNz",
+      "title": "Small Multiples",
+      "description": "Small multiples splits a single visual into a grid of smaller versions, one per category, all sharing the same axis scale for easy comparison. This lets users compare a trend or pattern across many categories at once without needing a separate visual for each one. It is useful when comparing something like sales trends across many regions on a single page.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Create small multiples in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-small-multiples"
+        },
+        {
+          "raw_type": "article",
+          "title": "Creating Small Multiples in Power BI",
+          "url": "https://www.thedataschool.co.uk/holly-jones/creating-small-multiples-in-power-bi/"
+        },
+        {
+          "raw_type": "video",
+          "title": "SMALL MULTIPLES in Power BI | All you need to know!",
+          "url": "https://www.youtube.com/watch?v=fYogZa7xOa8"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:sorting-data",
+      "topic_slug": "sorting-data",
+      "node_id": "a30f0oSq96dKAjTSQChcC",
+      "title": "Sorting Data",
+      "description": "Sorting controls the order in which categories or rows appear within a visual, whether alphabetically, by value, or by a custom sort order defined through a separate sort-by column. Getting sort order right matters especially for categorical axes where a meaningful order, like months or a defined ranking, needs to be preserved rather than defaulting to alphabetical. Sort settings can be adjusted p",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Change how a chart is sorted in a Power BI report",
+          "url": "https://learn.microsoft.com/en-us/power-bi/explore-reports/end-user-change-sort"
+        },
+        {
+          "raw_type": "official",
+          "title": "Sort one column by another column in Power BI",
+          "url": "http://learn.microsoft.com/en-us/power-bi/create-reports/desktop-sort-by-column"
+        },
+        {
+          "raw_type": "video",
+          "title": "Custom Sorting in 3 Easy Steps!",
+          "url": "https://www.youtube.com/watch?v=4xapOrfLvbg"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:splitting-columns",
+      "topic_slug": "splitting-columns",
+      "node_id": "kKbKZ1sMBNaQUoX4Vf95j",
+      "title": "Splitting Columns",
+      "description": "Splitting columns divides a single column into multiple columns, based on a delimiter, a fixed number of characters, or by position. This is useful for cases like separating a full name into first and last name, or breaking apart a combined date and time field. Power Query keeps track of the split as one of the applied steps, so it can be adjusted later.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Split columns by delimiter",
+          "url": "https://learn.microsoft.com/en-us/power-query/split-columns-delimiter"
+        },
+        {
+          "raw_type": "video",
+          "title": "Splitting Column Values in Power Query",
+          "url": "https://www.youtube.com/watch?v=BNlPAjsUn_o"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:star-vs-snowflake-schema",
+      "topic_slug": "star-vs-snowflake-schema",
+      "node_id": "DZuLutU2cYCJZwR39xD8c",
+      "title": "Star vs Snowflake Schema",
+      "description": "A star schema connects a central fact table directly to each dimension table, keeping dimensions flat and denormalized. A snowflake schema instead breaks dimensions into further related sub-tables, normalizing them, which adds extra joins the model has to traverse. Star schema is generally preferred in Power BI because it performs better and simplifies DAX writing.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Understand star schema and the importance for Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema"
+        },
+        {
+          "raw_type": "article",
+          "title": "Power BI Data Modeling: Star vs Snowflake Schema",
+          "url": "https://www.hexstream.com/tech-corner/power-bi-data-modeling-star-vs-snowflake-schema"
+        },
+        {
+          "raw_type": "video",
+          "title": "Why Power BI loves a Star Schema",
+          "url": "https://www.youtube.com/watch?v=vZndrBBPiQc"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to model data in Power BI (Star vs Snowflake schema)",
+          "url": "https://www.youtube.com/watch?v=e984cS23nrk"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:subscriptions-and-alerts",
+      "topic_slug": "subscriptions-and-alerts",
+      "node_id": "PSmaLgRiqwFKnQ3pUuZrm",
+      "title": "Subscriptions and Alerts",
+      "description": "Subscriptions send scheduled snapshots of a report or dashboard by email, while alerts notify a user when a specific metric on a dashboard tile crosses a threshold they define. Both features let users stay informed without needing to actively check the report themselves. Alerts are only available on dashboard tiles with numeric values like cards and gauges, not on every visual type.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Email subscriptions for reports and dashboards",
+          "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/end-user-subscribe?tabs=creator"
+        },
+        {
+          "raw_type": "official",
+          "title": "Data alerts in the Power BI service",
+          "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/service-set-data-alerts"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Dynamic Subscriptions - The New Way!",
+          "url": "https://www.youtube.com/watch?v=J0CAiFQh7oo"
+        },
+        {
+          "raw_type": "video",
+          "title": "How To Set Up Alerts And Notifications In Power Bi",
+          "url": "https://www.youtube.com/watch?v=Kh3OHNESj_g&t=75s"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:table-manipulation",
+      "topic_slug": "table-manipulation",
+      "node_id": "D-LFpO99i1MttUa1MTmCa",
+      "title": "Table Manipulation",
+      "description": "Table manipulation functions in DAX, such as FILTER, ALL, VALUES, and SUMMARIZE, return or transform entire tables rather than single values, which are then used inside other functions like calculations or iterators. They let a formula work with a modified version of a table, such as removing a filter or reducing it to unique values. These functions are central to writing more advanced DAX beyond ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Table manipulation functions",
+          "url": "https://learn.microsoft.com/en-us/dax/table-manipulation-functions-dax"
+        },
+        {
+          "raw_type": "article",
+          "title": "Table manipulation functions in DAX",
+          "url": "https://dax.guide/functions/table-manipulation/"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:tenant-settings",
+      "topic_slug": "tenant-settings",
+      "node_id": "A899eeb9R_z5uLgkJpHr1",
+      "title": "Tenant Settings",
+      "description": "Tenant settings are organization-wide configuration options managed by Power BI administrators, controlling things like whether users can share content externally, use certain features, or install custom visuals. These settings apply across the entire organization rather than a single workspace. They are the main lever administrators have for balancing user flexibility against organizational risk.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:time-intelligence",
+      "topic_slug": "time-intelligence",
+      "node_id": "AAob1TBlOoIoEELilx3Mc",
+      "title": "Time Intelligence",
+      "description": "Time intelligence functions in DAX, such as DATEADD, SAMEPERIODLASTYEAR, and TOTALYTD, handle calculations that compare or accumulate values across time periods. They rely on having a proper date table marked as such in the model, with a continuous range of dates. These functions are behind common report needs like year-over-year growth or year-to-date totals.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Time intelligence functions in DAX",
+          "url": "https://learn.microsoft.com/en-us/dax/time-intelligence-functions-dax"
+        },
+        {
+          "raw_type": "article",
+          "title": "Time Intelligence Functions",
+          "url": "https://dax.guide/functions/time-intelligence/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI DAX Time Intelligence",
+          "url": "https://www.youtube.com/playlist?list=PLzN99cpDw6oCrTUbV7qlHlea1Yz2Z1rR9"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:variables-in-dax",
+      "topic_slug": "variables-in-dax",
+      "node_id": "_wnNd9mVmSFRgeODlkwX0",
+      "title": "Variables in DAX",
+      "description": "Variables in DAX, defined with VAR and used with RETURN, let a formula store an intermediate result and reuse it later in the same expression instead of recalculating it. This improves both readability, since the logic is broken into named steps, and performance, since the value is computed only once. Variables have become the standard way to structure any DAX formula beyond the simplest one-liner",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Use variables to improve your DAX formulas",
+          "url": "https://learn.microsoft.com/en-us/dax/best-practices/dax-variables"
+        },
+        {
+          "raw_type": "article",
+          "title": "DAX 101: Variables in DAX",
+          "url": "https://www.sqlbi.com/articles/variables-in-dax/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Variables in DAX",
+          "url": "https://www.youtube.com/watch?v=JG8ngbSe5WU"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:visual-calculations",
+      "topic_slug": "visual-calculations",
+      "node_id": "Dh8pL5URdr-Fv6sVW3HfB",
+      "title": "Visual Calculations",
+      "description": "Visual calculations are a newer type of DAX calculation defined directly on a visual rather than in the model, evaluated on the data already aggregated and displayed in that visual. They simplify certain patterns, like running totals or rank within a visual, that would otherwise need more complex model-level DAX. Because they operate after the visual's own aggregation, their syntax and behavior di",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Visual calculations",
+          "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-visual-calculations-overview"
+        },
+        {
+          "raw_type": "video",
+          "title": "DAX REVOLUTION!? Visual Calculations in Power BI",
+          "url": "https://www.youtube.com/watch?v=ZWooHoshXv4"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:visualization-basics",
+      "topic_slug": "visualization-basics",
+      "node_id": "HUB5LvEuE_qxOjfxu-_mE",
+      "title": "Visualization Basics",
+      "description": "Visualization basics cover the standard chart types available in Power BI and how to choose the right one for a given kind of data or comparison. Each chart type suits certain scenarios better than others, such as bar charts for category comparisons or line charts for trends over time. Picking the right visual type is often more important to communication than any formatting applied afterward.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Visualizations overview in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualizations-overview"
+        },
+        {
+          "raw_type": "article",
+          "title": "Power BI - Visualization Charts",
+          "url": "https://www.tutorialspoint.com/power_bi/power_bi_visualization_charts.htm"
+        },
+        {
+          "raw_type": "video",
+          "title": "Popular Visualizations in Power BI | Microsoft Power BI for Beginners",
+          "url": "https://www.youtube.com/watch?v=3NV5Jtbhfcw"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Bro: Data Visualization Tutorials!",
+          "url": "https://www.youtube.com/playlist?list=PLTmfDr_N69qRgqEmJYIlKJDfnUnwvayXS"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:web--open-data",
+      "topic_slug": "web--open-data",
+      "node_id": "COxqpY6LmJI6S6saCFZEw",
+      "title": "Web & Open Data",
+      "description": "This category covers connecting to data published on the open web, including HTML tables scraped from web pages and open data portals from governments or organizations. Power BI's web connector can parse a webpage and detect tables it can extract automatically. It is useful for pulling in public datasets that do not have a dedicated API or database.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:window-functions",
+      "topic_slug": "window-functions",
+      "node_id": "M8BbSZ4EqJSHN_2CMUIlG",
+      "title": "Window Functions",
+      "description": "Window functions in DAX, like OFFSET, INDEX, and WINDOW, let a calculation reference rows relative to the current one within an ordered set, such as the previous row or a moving range. They are newer additions to DAX aimed at simplifying calculations that previously needed more complex workarounds, such as running totals or period-over-period comparisons. They work closely with the concept of orde",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "WINDOW function",
+          "url": "https://learn.microsoft.com/dax/window-function-dax"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introducing window functions in DAX",
+          "url": "https://www.sqlbi.com/articles/introducing-window-functions-in-dax/"
+        },
+        {
+          "raw_type": "video",
+          "title": "WINDOW Function in ACTION I Examples in Power BI",
+          "url": "https://www.youtube.com/watch?v=eib5X5xRlz8"
+        }
+      ]
+    },
+    {
+      "skill_id": "power-bi:workflow--lifecycle",
+      "topic_slug": "workflow--lifecycle",
+      "node_id": "vdUmB0z9O3ucYpvaHIAno",
+      "title": "Workflow & Lifecycle",
+      "description": "Workflow and lifecycle covers the processes used to manage Power BI content as it moves from development to production, including automation through Power Automate and structured promotion through deployment pipelines. These practices bring more discipline to how reports are built, tested, and released, similar to software development practices. They matter most in larger organizations managing ma",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:workspace-roles",
+      "topic_slug": "workspace-roles",
+      "node_id": "vYaqmbNLFmP-CNRs6rGav",
+      "title": "Workspace Roles",
+      "description": "Workspace roles define what a user can do within a specific workspace, ranging from admin, with full control, down to viewer, with read-only access. These roles determine actions like who can publish new reports, manage workspace settings, or simply view existing content. Assigning the right role for each person balances collaboration needs against the risk of unintended changes.",
+      "resources": []
+    },
+    {
+      "skill_id": "power-bi:workspaces",
+      "topic_slug": "workspaces",
+      "node_id": "wmtOYjTkzKhIRlh9n__PZ",
+      "title": "Workspaces",
+      "description": "Workspaces are containers in the Power BI Service that hold related reports, dashboards, datasets, and dataflows, typically organized around a team or project. Access to a workspace is controlled through roles like admin, member, contributor, and viewer, which determine what each user can do inside it. Content is usually developed and shared within a workspace before being packaged into an app for",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Workspaces in Power BI",
+          "url": "https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-new-workspaces"
+        },
+        {
+          "raw_type": "video",
+          "title": "Power BI Workspaces Explained:",
+          "url": "https://www.youtube.com/watch?v=1fS8MvcaBGE"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1384 @@
+{
+  "roadmap": "design-system",
+  "topic_count": 124,
+  "topics": [
+    {
+      "skill_id": "design-system:ab-tests--experiments",
+      "topic_slug": "ab-tests--experiments",
+      "node_id": "ILRDAnpfGHCZq-FBlbfDO",
+      "title": "A/B Tests and Experiments",
+      "description": "Understand how the team implements A/B tests and experiments on different screens and if the new design system should accommodate any necessary requirements.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:accessibility-testing",
+      "topic_slug": "accessibility-testing",
+      "node_id": "yhP8EhyCWWRBLkYPyOFeg",
+      "title": "Accessibility Testing",
+      "description": "Design systems should cover accessibility as much as possible. Making this automatic reduces the risk of inaccessible components or user flows in the product.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:accessibility",
+      "topic_slug": "accessibility",
+      "node_id": "DhrnZwQODG0P7D-27_3ec",
+      "title": "Accessibility",
+      "description": "For icons that convey a meaning or serve a function, add the necessary support for screen readers. You can skip this for decorative icons.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:accessibility",
+      "topic_slug": "accessibility",
+      "node_id": "aLtOGjNFxaRzg0PI-ed99",
+      "title": "Accessibility",
+      "description": "Guidelines for how you approach accessibility and how you leverage colour, hierarchy and assistive technologies to help your users.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Introduction to Web Accessibility",
+          "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Accessibility? by Mozilla",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility"
+        },
+        {
+          "raw_type": "article",
+          "title": "Accessibility Principles",
+          "url": "https://www.w3.org/WAI/fundamentals/accessibility-principles/"
+        },
+        {
+          "raw_type": "article",
+          "title": "WebAIMs Website (Web Accessibility In Mind)",
+          "url": "https://webaim.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "WAVE Web Accessibility Evaluation Tool",
+          "url": "https://wave.webaim.org/"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Accessibility",
+          "url": "https://app.daily.dev/tags/accessibility?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:accessibility",
+      "topic_slug": "accessibility",
+      "node_id": "fW0cEy2SB0HDbiF7QA7Ev",
+      "title": "Accessibility",
+      "description": "Make sure to have accessible pairings between the main colours in your palette. More importantly, make sure that your background and text colours have at least an AA standard contrast ratio between them.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:avatar",
+      "topic_slug": "avatar",
+      "node_id": "_dIMuXWI73ogboGjnLIpT",
+      "title": "Avatar",
+      "description": "Avatars represent users or entities in interfaces. They should support multiple shapes (circular, square), various sizes, handle missing images with initials or default icons, include status indicators, maintain image quality standards, ensure accessibility, provide loading states, and support group arrangements with proper interactive feedback.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:avatar",
+      "topic_slug": "avatar",
+      "node_id": "h3TZY1yBkzLYUK6W7K7xs",
+      "title": "Avatar",
+      "description": "Avatars are used to show a thumbnail of a user photo or a visual representation of any other type of content. - **Image:** Avatars should mask an image into their shape and work with any image size since they may get this image from unknown data sources. - **Image Fallback:** There should be fallbacks when there\u2019s no image available. This can be done with placeholder images or initials. - **Access",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:badge",
+      "topic_slug": "badge",
+      "node_id": "LNsXQI8sE_5kzSD_iMLJA",
+      "title": "Badge",
+      "description": "Badges are elements that represent the status of an object or user input value. - **Appearance:** Badges may play various roles in your product and having a predefined colour for each role should help users understand their meaning. When changing colours, make sure the text has enough contrast ratio with the background according to the WCAG AA standard. - **Dismissible Action:** Badges can be used",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:badges",
+      "topic_slug": "badges",
+      "node_id": "UG4AIgJBfZpuhia4Y1K5v",
+      "title": "Badges",
+      "description": "Badges are small status indicators that communicate information about objects or actions. Effective design should include numeric indicators for notifications, status badges with distinct colors, category labels, interactive states, multiple sizes, semantic color integration, consistent positioning, content guidelines, and proper accessibility.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:banner",
+      "topic_slug": "banner",
+      "node_id": "kkqRIgdXWaJbX9CjLpwha",
+      "title": "Banner",
+      "description": "Banners display an actionable message used as a prominent way of communicating with your users. - **Appearance:** Banners are used to display different types of messages and it\u2019s important to differentiate their visual appearance based on the role they\u2019re playing. If you\u2019re using background colours for role differentiation, make sure there\u2019s enough contrast ratio with the content according to the ",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:banners",
+      "topic_slug": "banners",
+      "node_id": "5DUobzueMZbScyTZTHpCS",
+      "title": "Banners",
+      "description": "Banners communicate important information at the top of pages. They should support different message types with distinct visuals, various positioning options, clear dismissal mechanisms, relevant actions, consistent iconography, mobile adaptations, subtle animations, content guidelines, proper accessibility, and stacking rules for multiple banners.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:breakpoints",
+      "topic_slug": "breakpoints",
+      "node_id": "djwnJq9Y_Hx1Ynw01wr_u",
+      "title": "Breakpoints",
+      "description": "Predefine the screen sizes and orientations your grid will adapt to.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:button",
+      "topic_slug": "button",
+      "node_id": "LWihkf4q5UawjLd84KQxN",
+      "title": "Button",
+      "description": "Buttons are interactive elements used for single-step actions. - **Hover State:** Clearly show that the button is interactive when it gets hovered with a mouse cursor. - **Active State:** Used when a button gets pressed. The same state can be used to represent the button responsible for toggling another element on the page while that element is visibly opened. - **Focused State:** Used when a butt",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:buttons",
+      "topic_slug": "buttons",
+      "node_id": "s6oqvHgwK4Cwyx-JENBbY",
+      "title": "Buttons",
+      "description": "Buttons enable user actions and require clear visual hierarchy (primary, secondary, tertiary), comprehensive interactive states, multiple sizes, icon support, content guidelines, minimum 44px touch targets, loading indicators, responsive behavior, proper accessibility with ARIA labels, and subtle animations.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:card",
+      "topic_slug": "card",
+      "node_id": "rZ7d1C9swiqlRTbdJLZ0R",
+      "title": "Card",
+      "description": "Cards are used to group information about subjects and their related actions. - **Supports any type of content:** Cards are one of the most used components in the product, so they have to be flexible enough to support any other components placed in them. - **Information structure:** No matter how flexible cards are, it\u2019s important for cards to have a specific structure for its elements for product",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:cards",
+      "topic_slug": "cards",
+      "node_id": "yLLAUGbGUHBTEDkZNK0fm",
+      "title": "Cards",
+      "description": "Cards are flexible content containers that group related information and actions. They require clear content hierarchy, consistent elevation systems, responsive behavior, distinct interactive states, media support, defined action areas, content variants, loading states, proper accessibility, and consistent spacing aligned with the design system.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:carousel",
+      "topic_slug": "carousel",
+      "node_id": "yWEXfjzuzk99dxjZlG4Cq",
+      "title": "Carousel",
+      "description": "Carousels stack the same type of items and allows scrolling through them horizontally. - **Navigation Controls:** Carousels should have easy-to-find navigation controls for scrolling through content. - **Supports any content:** Carousels can be used in different contexts and shouldn\u2019t be limited to a specific child component. In some scenarios you might want items within the same carousel to diffe",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:code-style",
+      "topic_slug": "code-style",
+      "node_id": "zEqFAuH9zmKTLwwgx54pW",
+      "title": "Code Style",
+      "description": "Having a defined code style helps align the way code\u2019s written in the system and increases development velocity. It should be automated with the tools provided for each platform.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:color",
+      "topic_slug": "color",
+      "node_id": "2prUeRYbSJTYjo2quJIKs",
+      "title": "Color",
+      "description": "Color establishes brand identity and visual hierarchy in design systems. A comprehensive color system should organize colors logically, meet WCAG accessibility standards, support light/dark themes, create semantic categories, establish systematic naming, balance brand expression with function, and provide multiple formats.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:commit-guidelines",
+      "topic_slug": "commit-guidelines",
+      "node_id": "IVYe8oh1IWbUbxMZRxVQA",
+      "title": "Commit Guidelines",
+      "description": "Automate the generation of your changelog by adopting a commit message guidelines that categorise and define the changes being made.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:communication-channel",
+      "topic_slug": "communication-channel",
+      "node_id": "LWrrKrhwXfMDKgbFW5DuO",
+      "title": "Communication Channel",
+      "description": "Most product development work happens digitally, so create a digital channel where people can reach out and ask questions.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:community-meetings",
+      "topic_slug": "community-meetings",
+      "node_id": "eG8ranXuINtcqWfeMH5GW",
+      "title": "Community Meetings",
+      "description": "Arrange community meetings with everyone who uses the design system. Share your knowledge and make proposals to improve the sense of community.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:component-analytics",
+      "topic_slug": "component-analytics",
+      "node_id": "G8dOkM_4hP7wPF3QJ8y4g",
+      "title": "Component Analytics",
+      "description": "Track the usage of your components. For development you can use built-in tools like Figma\u2019s Design System Analytics. For the end product you can have a separate way of tracking per platform depending on the technology.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:component-catalog",
+      "topic_slug": "component-catalog",
+      "node_id": "VeLiPzbGr22_Mh_8T2Gnf",
+      "title": "Component Catalog",
+      "description": "Isolate your UI components\u2019 environment outside of your product codebase to make sure they\u2019re not dependent on any global dependencies and can be easily reused.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:component-library",
+      "topic_slug": "component-library",
+      "node_id": "vJ4WytrzY7j10mo8S3O1u",
+      "title": "Component Library",
+      "description": "A component library is a collection of all the components used in a website, software or app. Some of the common tools to showcase and browse components in a component library include are given below:",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Pattern Lab",
+          "url": "https://patternlab.io/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Fractal",
+          "url": "https://fractal.build/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Storybook",
+          "url": "https://storybook.js.org/"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:component",
+      "topic_slug": "component",
+      "node_id": "97cpJyKBKNAq1P_pQZH-t",
+      "title": "Component",
+      "description": "Components are the reusable building blocks of a design system. Each component meets a specific interaction or UI needs, and is specifically created to work together to create patterns and intuitive user experiences.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:contribution-guidelines",
+      "topic_slug": "contribution-guidelines",
+      "node_id": "TiCNCRpMPgZUhn7JdaIZA",
+      "title": "Contribution Guidelines",
+      "description": "Define the process of contributing to the UI and UX of the design system and document it in a discoverable place to make it easier for everyone to contribute.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:contribution-guidelines",
+      "topic_slug": "contribution-guidelines",
+      "node_id": "xJ1LAAhiZvbZOLRVc1HZa",
+      "title": "Contribution Guidelines",
+      "description": "Define the process of contributing to the code of the design system. Document everything in a discoverable place to make it easier for everyone to contribute.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:creating-core-components",
+      "topic_slug": "creating-core-components",
+      "node_id": "Hw_LQInG6OtSwDXch3Lvg",
+      "title": "Core Components",
+      "description": "Components are the main building blocks for user interfaces. Building a reusable component library enhances your product development workflow by reducing design and tech debt and speeding up the process. Core components can\u2019t be broken down into granular pieces without losing their meaning.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:creating-design-language",
+      "topic_slug": "creating-design-language",
+      "node_id": "JnaNZ9MfMrXQrjW2wABzB",
+      "title": "Design Language",
+      "description": "Like any language, a design language is a methodical way of communicating with your audience through your approach to product design. It\u2019s the cornerstone of consistent customer experiences.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is a Design Language.. really?",
+          "url": "https://medium.com/thinking-design/what-is-a-design-language-really-cd1ef87be793"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Develop a Design Language",
+          "url": "https://xd.adobe.com/ideas/principles/web-design/how-to-develop-design-language/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Actually Constitutes Design Language?",
+          "url": "https://www.uxpin.com/studio/blog/design-language/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Visual Design Language: The Building Blocks Of Design",
+          "url": "https://www.smashingmagazine.com/2020/03/visual-design-language-building-blocks/"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:dark-mode",
+      "topic_slug": "dark-mode",
+      "node_id": "kxUnqpydDwB73IwrCPZM0",
+      "title": "Dark Mode",
+      "description": "Preparing a dark mode version of your colour palette will allow your design system to adapt to dark mode and respect what your user wants to see.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:defining-design-tokens",
+      "topic_slug": "defining-design-tokens",
+      "node_id": "a53cl6ZKvYXxG25Ii2_zu",
+      "title": "Design Tokens",
+      "description": "Variables that store values for the base layer of your design system, like colour and typography. They\u2019re used in components, so changes on this level will resonate throughout the whole system.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What Are Design Tokens?",
+          "url": "https://xd.adobe.com/ideas/principles/design-systems/what-are-design-tokens/"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:design-editor",
+      "topic_slug": "design-editor",
+      "node_id": "ccpT9MPFbc3Ewjm1tFMsZ",
+      "title": "Design Editor",
+      "description": "There are many design editors available in the market today with the most popular names being Sketch, Figma and Adobe XD. If you're unsure which route to go down it's often best to speak with your team.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:design-language",
+      "topic_slug": "design-language",
+      "node_id": "fPUuXrlchna3K00KcY4O6",
+      "title": "Design Language",
+      "description": "A design language or design vocabulary is an overarching scheme or style that guides the design of a complement of products or architectural settings, creating a coherent design system for styling.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is a Design Language.. really?",
+          "url": "https://medium.com/thinking-design/what-is-a-design-language-really-cd1ef87be793"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Develop a Design Language",
+          "url": "https://xd.adobe.com/ideas/principles/web-design/how-to-develop-design-language/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Actually Constitutes Design Language?",
+          "url": "https://www.uxpin.com/studio/blog/design-language/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Visual Design Language: The Building Blocks Of Design",
+          "url": "https://www.smashingmagazine.com/2020/03/visual-design-language-building-blocks/"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:design-principles",
+      "topic_slug": "design-principles",
+      "node_id": "1RJrMVJf_3clM7E5OML-f",
+      "title": "Design Principles",
+      "description": "The considerations that guide the basis of your practice. They outline how you approach design from a philosophical perspective and help with everyday decisions.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:design-system-examples",
+      "topic_slug": "design-system-examples",
+      "node_id": "hauTvrBOAHgrUnO_m_kDM",
+      "title": "Design System Examples",
+      "description": "",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Material Design (Google)",
+          "url": "https://material.io/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Carbon Design System (IBM)",
+          "url": "https://carbondesignsystem.com/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Atlassian Design System",
+          "url": "https://atlassian.design/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Polaris Design System (Shopify)",
+          "url": "https://polaris.shopify.com/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Gov.uk Design System",
+          "url": "https://design-system.service.gov.uk/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "Collection of Open Source Design Systems",
+          "url": "https://github.com/alexpate/awesome-design-systems"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:design-system-vs-component-library",
+      "topic_slug": "design-system-vs-component-library",
+      "node_id": "J5mU0v491qrm-mr1W3Msd",
+      "title": "Design System vs Component Library",
+      "description": "A component library is just a collection of visuals i.e. colours, button stylings, fonts, etc. A Design System takes it to the next level by including standards and documentation around the look and usage of each component. The Design System acts as the single source of truth.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "A Design System: So Much More Than A Component Library",
+          "url": "https://www.architech.ca/a-design-system-so-much-more-than-a-component-library"
+        },
+        {
+          "raw_type": "article",
+          "title": "Design System vs UI Component Library vs Brand Style Guide",
+          "url": "https://prototype.net/blog/design-system-component-library-style-guide"
+        },
+        {
+          "raw_type": "article",
+          "title": "Design Systems vs Pattern Libraries vs Style Guides vs Component Libraries",
+          "url": "https://www.uxpin.com/studio/blog/design-systems-vs-pattern-libraries-vs-style-guides-whats-difference/"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:documentation",
+      "topic_slug": "documentation",
+      "node_id": "-b4GjLpL_ppDMJSiChTef",
+      "title": "Documentation",
+      "description": "Organize and document the results of visual audit, design elements, components with variations, states, patterns found, any existing documentation, current design process, and considerations. This documentation will be shared across the team and act as a guide when building the new design system.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:documentation",
+      "topic_slug": "documentation",
+      "node_id": "k1Lwk_b6cLIeyQwc4RUh1",
+      "title": "Documentation",
+      "description": "Having your code documented is key to driving adoption and reducing the load on the contributors.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:dropdown",
+      "topic_slug": "dropdown",
+      "node_id": "MtBSvKoyjdLd6DIdolLRi",
+      "title": "Dropdown",
+      "description": "Dropdowns are used to display a contextual subview with a list of actions or content related to the area where the dropdown is. - **Supports any type of content:** Dropdowns may be used in a lot of contexts like date pickers, language selection or other product features. - **Action Menu:** One of the most used scenarios for dropdowns is providing an action menu for the user, so it\u2019s useful to have",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:dropdowns",
+      "topic_slug": "dropdowns",
+      "node_id": "hzVwLVzAij6TgPTcNHyhv",
+      "title": "Dropdowns",
+      "description": "Dropdowns reveal option lists when activated to save space. They need clear triggers with visual indicators, organized options with grouping, search/filtering for long lists, multi-select support, smart positioning, full keyboard navigation, loading states, mobile adaptations, proper accessibility, and performance optimization.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:existing-design-analysis",
+      "topic_slug": "existing-design-analysis",
+      "node_id": "8eWhvW2zDIxMGHaXl0Y9i",
+      "title": "Existing Design Analysis",
+      "description": "First step in creating a design system from an existing design is performing a design analysis and understanding what you will be working with to identify the requirements and prepare a plan. Performing the analysis may consist of: - Understanding the Existing Design Process - Performing Visual Audit - Identifying Design Elements - Identify Common Components - Understanding the A/B Testing and Exp",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:faqs",
+      "topic_slug": "faqs",
+      "node_id": "cpAeotBxN8BCsU9RqTEue",
+      "title": "FAQs",
+      "description": "To save everyone time, define which questions are asked frequently by your audience and document them in a discoverable place.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:file-formats",
+      "topic_slug": "file-formats",
+      "node_id": "-6LPUMRm-SqvRVEWPDFl8",
+      "title": "Different File Formats",
+      "description": "Providing a variety of formats for the vector version of your logo will make it easier for others to work and prevent anyone from redrawing it.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is a Vector Logo and Why You Need It",
+          "url": "https://www.renderforest.com/blog/vector-logo"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:forms",
+      "topic_slug": "forms",
+      "node_id": "5LCMzBnnS206t5EtgaUx8",
+      "title": "Forms",
+      "description": "Forms collect user input and require standardized input components, comprehensive validation systems, effective labeling strategies, consistent layouts, clear error handling, progressive disclosure, required field indicators, auto-complete integration, proper accessibility, and mobile optimization.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:functional-colors",
+      "topic_slug": "functional-colors",
+      "node_id": "__Pv19gRr2SFknVnfm0Mr",
+      "title": "Functional Colors",
+      "description": "Besides your brand colours, make sure to have colours defined and made into variables for functions like disabled states, backgrounds, actions and high contrast text.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:governance",
+      "topic_slug": "governance",
+      "node_id": "kifE3JE2immnU1O3-toZf",
+      "title": "Governance",
+      "description": "Governance is a framework for clarifying roles, responsibilities, and authority over decisions. Having that clarity ensures that decisions for the design system funnel smoothly through the governance process",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Governance is a design system\u2019s friend",
+          "url": "https://zeroheight.com/blog/governance-is-a-design-systems-friend"
+        },
+        {
+          "raw_type": "article",
+          "title": "Design System Governance \u2013 Scale Your Design",
+          "url": "https://www.uxpin.com/studio/blog/design-system-governance/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Governance by design: Building successful design systems",
+          "url": "https://rangle.io/blog/governance-by-design-building-successful-design-systems/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Team Models for Scaling a Design System",
+          "url": "https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:grid-relation",
+      "topic_slug": "grid-relation",
+      "node_id": "6Hmj_TeQ563jshqAAl__I",
+      "title": "Grid Relation",
+      "description": "Draw your icons in a bounding box that plays well with your grid. This makes for a better pairing with other UI elements. A good example of this would be icons with bounding boxes paired with text.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:grid-relation",
+      "topic_slug": "grid-relation",
+      "node_id": "Zl7MVllzJgObruYtlibKf",
+      "title": "Grid Relation",
+      "description": "Font sizes and leading should match your grid to allow better pairing between text and other UI elements. A good example of this is text paired with icons with bounding boxes.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:grid",
+      "topic_slug": "grid",
+      "node_id": "8f2V-rM7soorTTvNo5Vcx",
+      "title": "Grid",
+      "description": "Every layout should sit on a grid that brings order and hierarchy to the interface. Define a grid separately for mobile, tablet and desktop devices with columns, gutters, and margins so your interface can adapt to any platform easily.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:guidelines",
+      "topic_slug": "guidelines",
+      "node_id": "Jab5LO0mGhTy1cU61Catu",
+      "title": "Guidelines",
+      "description": "Provide guidelines on how and when to use the pairings in your typography scale, what to keep in mind when working with them and how not to use them.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:guidelines",
+      "topic_slug": "guidelines",
+      "node_id": "XDfxs5cgjSuTEprZi2Z5b",
+      "title": "Guidelines",
+      "description": "Provide guidelines on how and when to use the colours in your palette, what to keep in mind when working with them and how not to use them.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:guidelines",
+      "topic_slug": "guidelines",
+      "node_id": "eTxhpC3AQIMcUax6WFU9U",
+      "title": "Guidelines",
+      "description": "Provide guidelines on how and when to use icons, what to keep in mind when working with them and how not to use them.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:guidelines",
+      "topic_slug": "guidelines",
+      "node_id": "mlBzJ2YvBr9QuOthKdj0p",
+      "title": "Guidelines",
+      "description": "Design guidelines are sets of recommendations on how to apply design principles to provide a positive user experience. Designers use such guidelines to judge how to adopt principles such as intuitiveness, learnability, efficiency and consistency so they can create compelling designs and meet and exceed user needs.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Design Guidelines",
+          "url": "https://www.interaction-design.org/literature/topics/design-guidelines"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:icon",
+      "topic_slug": "icon",
+      "node_id": "bzY_iXRnotct_WnNRTlbd",
+      "title": "Icon",
+      "description": "The icon component is a way to align the way iconography static assets are displayed in the product. - **Sizes:** Icons should have a number of predefined sizes to provide a holistic experience across the product. Typography pairings may be used for these size values to ensure that they are aligned with the text sizes. - **Colors:** Icons should be using values from the design system colour palett",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:icons",
+      "topic_slug": "icons",
+      "node_id": "aak3227IDDJMh0MquQX6m",
+      "title": "Icons",
+      "description": "Icons are visual symbols that communicate meaning quickly. They should maintain consistent style, use a grid system, provide multiple sizes, organize into semantic categories, ensure accessibility, consider cultural neutrality, be available in multiple formats, include interactive states, and follow systematic versioning.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:identify-existing-design-process",
+      "topic_slug": "identify-existing-design-process",
+      "node_id": "CnsDoZ3gIaPeNbwHuZXYJ",
+      "title": "Existing Design Process",
+      "description": "To better understand the kind of design system you would like to implement, you need to start by reviewing and analyzing the current approach for design at your company. Find the answers to the following questions: - What is the design process that your company follows? - What are the existing tools that your company uses? It\u2019s also recommended to evaluate the level of design maturity of the produ",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:input-checkbox",
+      "topic_slug": "input-checkbox",
+      "node_id": "F5_sxUnnGEdgF6BkA5T5x",
+      "title": "Input Checkbox",
+      "description": "An input checkbox is a form element used for selecting one or multiple options. - **Checked State:** Used when the checkbox is selected and will use its value for the form submission. - **Disabled State:** Prevents checkbox interactions and removes its value from the form submission. - **Intermediate State:** Used when the checkbox has children selectable elements and only some of them are selecte",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:input-radio",
+      "topic_slug": "input-radio",
+      "node_id": "rN-_plAA5FkcQl03wsL18",
+      "title": "Input Radio",
+      "description": "An input radio is a form element used for selecting one option from a list. - **Checked State:** Used when the radio is selected and will use its value for the form submission. A radio input can\u2019t be unselected by pressing it again. - **Disabled State:** Prevents radio interactions and removes its value from the form submission. - **Label:** There should be a text label linked with the radio field",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:input-switch",
+      "topic_slug": "input-switch",
+      "node_id": "NISeaJUlDtQ0kSuyxmrOT",
+      "title": "Input Switch",
+      "description": "Input switches toggle the state of a single item. Compared to the input checkbox, their changes usually apply without any additional submission. - **Checked State:** Used when an input switch is turned on. It\u2019s better to provide an additional way to indicate the checked state besides changing its colour when applicable. - **Disabled State:** Prevents interacting with an input switch. - **Label:** ",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:input-text",
+      "topic_slug": "input-text",
+      "node_id": "hjiJJg4KNr8lyktFQd868",
+      "title": "Input Text",
+      "description": "Input text lets users enter and edit text. - **Disabled State:** Prevents input interactions and removes its value from the form submission. - **Placeholder:** When there\u2019s no value entered, show a placeholder with a potential value example. Don\u2019t use placeholders as labels for the inputs. - **Label:** There should be a text label linked with the text field. Clicking the label should move the focu",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:keywords",
+      "topic_slug": "keywords",
+      "node_id": "HDf2L4F1f8uUGpVaf7Y7z",
+      "title": "Keywords",
+      "description": "Adding keywords will improve the discoverability of each icon and provide a better user experience for anyone using your system.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:list",
+      "topic_slug": "list",
+      "node_id": "2T7tiM3Ew3H1U5iJR2TDb",
+      "title": "List",
+      "description": "Lists define the layout of the page content or groups of elements stacking them vertically or horizontally. - **Support any type of content:** Lists can be used in any context from page-level layout to managing offsets between granular components. hey should work with any component used inside. - **Horizontal Stacking:** Lists can be used for inline elements and they have to manage how they\u2019re sta",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:loading-indicator",
+      "topic_slug": "loading-indicator",
+      "node_id": "JhnHOMIlU6mQcwvIpErUY",
+      "title": "Loading Indicator",
+      "description": "The loading indicator shows that an operation\u2019s being performed and how long the process will take. - **Linear and non-linear Variants:** Depending on the context and the component it\u2019s used for, the loading indicator can be represented either with linear or with a non-linear (e.g. circular) variant. - **Determinate or indeterminate wait time:** In some cases, the wait time can\u2019t be determined. Th",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:logging",
+      "topic_slug": "logging",
+      "node_id": "xYqDmDpjwkShtL86nt-vY",
+      "title": "Error Logging",
+      "description": "Implement a way to track and pinpoint component-related outages in your product.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:making-a-design-system",
+      "topic_slug": "making-a-design-system",
+      "node_id": "dUaoMARPabiD4DRqdkaer",
+      "title": "Making a Design System",
+      "description": "First step in building a design system is identifying [if you even need a design system](https://sparkbox.com/foundry/when_not_to_use_a_design_system).",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "Introducing Design Systems Into Chaos - Diana Mounter, GitHub",
+          "url": "https://www.youtube.com/watch?v=FZSi1bK-BRM"
+        },
+        {
+          "raw_type": "video",
+          "title": "Design Systems, when and how much?",
+          "url": "https://www.youtube.com/watch?v=Hx02SaL_IH0"
+        },
+        {
+          "raw_type": "article",
+          "title": "Design Systems: Step-by-Step Guide to Creating Your Own",
+          "url": "https://www.uxpin.com/create-design-system-guide/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Does My Organization Need a Design System?",
+          "url": "https://www.method.com/insights/does-my-organization-need-a-design-system/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Create a Design System with Figma - Full Course",
+          "url": "https://www.youtube.com/watch?v=RYDiDpW2VkM"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:making-it-from-existing-design",
+      "topic_slug": "making-it-from-existing-design",
+      "node_id": "z5gBy7BjlBKwbYbxXtoDA",
+      "title": "From Existing Design",
+      "description": "If you are creating a Design System from pre-existing product design, there is an additional step to perform the existing design analysis, understand the existing design process, perform a visual audit, identify design elements and components and so on.",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "Create a Design System with Figma - Full Course",
+          "url": "https://www.youtube.com/watch?v=RYDiDpW2VkM"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:making-it-from-scratch",
+      "topic_slug": "making-it-from-scratch",
+      "node_id": "-9I3fTpnQlmcZmIIuQiPe",
+      "title": "From Scratch",
+      "description": "If you are building a Design System from Scratch, you may skip the \"Existing Design Analysis\" node of the roadmap and start with \"Creating Design Language\".",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "Create a Design System with Figma - Full Course",
+          "url": "https://www.youtube.com/watch?v=RYDiDpW2VkM"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:microcopy-guidelines",
+      "topic_slug": "microcopy-guidelines",
+      "node_id": "bD-DjUbAA6l2eK1R9ITcK",
+      "title": "Microcopy Guidelines",
+      "description": "The standard way to write for the components in your design system. These take platform conventions and best practices for writing all into consideration.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:milestones",
+      "topic_slug": "milestones",
+      "node_id": "ruPXxVwmD9vSlS7rBZmA-",
+      "title": "Milestones",
+      "description": "Define milestones that act as bigger epics in your project management with the help of your roadmap. These will help you understand your progress.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:modal",
+      "topic_slug": "modal",
+      "node_id": "IjNitkG25vNo30rB4ckNV",
+      "title": "Modal",
+      "description": "Modals are containers appearing in front of the main content to provide critical information or an actionable piece of content. - **Supports any type of Content:** Like any other container, modals can be used in different scenarios and you should be able to use it with any other component inside. - **Supplementary Actions:** Since content in the modal may be actionable, it\u2019s important to have an a",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:monochrome-version",
+      "topic_slug": "monochrome-version",
+      "node_id": "Wn8CylBz-hyl9-iXcUVTO",
+      "title": "Monochrome Version",
+      "description": "A monochrome version of your logo that looks good on top of photography or when it\u2019s printed with a poor quality printer.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:naming",
+      "topic_slug": "naming",
+      "node_id": "wiclAEEYioRgLmXFcKQ4E",
+      "title": "Naming",
+      "description": "Name your icons based on what they are, not what they represent. For instance, a trash icon should be named trash, not delete. You can still add related keywords to improve discoverability.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:need-of-design-system",
+      "topic_slug": "need-of-design-system",
+      "node_id": "2rlmLn_yQQV-7DpX1qT98",
+      "title": "Need of design system",
+      "description": "Having a solid design system speeds up your work by making the product team more efficient, and it creates consistency and harmony within the product and brand ecosystem. A strong design system takes the burden off individual designers to think through commonly recurring design problems. With a full library of pre-approved elements, designers can focus on bigger problems like creating seamless, in",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "Design Systems, when and how much?",
+          "url": "https://www.youtube.com/watch?v=Hx02SaL_IH0"
+        },
+        {
+          "raw_type": "article",
+          "title": "Why You Need a Strong Design System (and How to Build One)",
+          "url": "https://www.drawbackwards.com/blog/why-you-need-a-strong-design-system-and-how-to-build-one"
+        },
+        {
+          "raw_type": "article",
+          "title": "On Design Systems: Sell The Output, Not The Workflow",
+          "url": "https://www.smashingmagazine.com/2016/05/design-systems-responsive-design-sell-output-not-workflow/"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:open-hours",
+      "topic_slug": "open-hours",
+      "node_id": "YWoPoO9IW3vLZyxLL2fnT",
+      "title": "Open Hours",
+      "description": "Create open hours in which you can engage your audience in a more private setting where you can discuss things in more detail. You can also use these as peer coding or peer design opportunities.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:other",
+      "topic_slug": "other",
+      "node_id": "Ia1gYzepJOTvTro961eSj",
+      "title": "Other Components",
+      "description": "Specialized elements beyond core components include badges for notifications, breadcrumbs for navigation, progress indicators, tooltips for help, pagination for browsing, tab systems, accordions for collapsible content, modals for focused interactions, notification systems, and basic data visualization elements.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:pattern",
+      "topic_slug": "pattern",
+      "node_id": "7xPT8rUX3hjSWbxH_FfQs",
+      "title": "Pattern",
+      "description": "Patterns are best practice design solutions for specific user-focused tasks and page types. Patterns often use one or more components and explain how to adapt them to the context. Some sample patterns could be user signing in to the application or performing the checkout operation.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:performance",
+      "topic_slug": "performance",
+      "node_id": "wFL9axjaPcVvI8XWduxgz",
+      "title": "Performance",
+      "description": "Custom fonts need to be downloaded before they can be displayed, especially on the web. Make sure that you have sensible fallbacks and fast loading time for your typography assets. Using system fonts solves this performance problem.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:performing-a-visual-audit",
+      "topic_slug": "performing-a-visual-audit",
+      "node_id": "NKm-gXbt5Y7dDwKVkPHjX",
+      "title": "Visual Audit",
+      "description": "Take screenshots of your current product with the help of your team. You can use any presentation software like Google Slides or print and pin them on foam-core boards. Group the screenshots into categories like buttons, navigation, forms, tables, charts, lists etc. Now, review each category to find inconsistencies and note areas for improvement with your team. Use a tool like [CSS Stats](https://",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:pilot",
+      "topic_slug": "pilot",
+      "node_id": "4dzoZmkNHPedgLqLy93t8",
+      "title": "Pilot",
+      "description": "Pilots are one of the best ways to put your design system through its paces, especially before the design system even gets to a v1. Like television pilots help test audience reactions to a series concept without investing significant resources to create the whole thing, application pilots are a good foundation for ensuring your design system\u2019s design and code are battle-tested.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Design Systems: Pilots & Scorecards",
+          "url": "https://danmall.com/posts/design-systems-pilots-scorecards/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to run a design system pilot",
+          "url": "https://university.obvious.in/product-design/design-system/how-to-run-a-design-system-pilot"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:placement-guidance",
+      "topic_slug": "placement-guidance",
+      "node_id": "7n61402xwhIgJ7dPHg8q7",
+      "title": "Placement Guidance",
+      "description": "Logo placement guidance ensures consistent brand representation through clear positioning, sizing, and clearance rules. Effective guidelines should define minimum clearance areas, establish preferred positions for different contexts, provide size specifications, define background treatments, and account for platform-specific requirements.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:plugins",
+      "topic_slug": "plugins",
+      "node_id": "uO-2O0Jwh_DxrMAB9wxp1",
+      "title": "Plugins",
+      "description": "Most popular Design Editors (Sketch and Figma, especially) come with third-party plugin support. Whilst it's best to use the editors in-built tools for laying out your components, plugins can bring in a range of useful data to populate them.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:pr-templates",
+      "topic_slug": "pr-templates",
+      "node_id": "wd9ZHZmqV7wbLN-9V4EQy",
+      "title": "Pull Request Templates",
+      "description": "Create pull request templates that outline the change being proposed to facilitate productive discussions.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:project-management",
+      "topic_slug": "project-management",
+      "node_id": "JfXwzkN29UGz17FYHHE3A",
+      "title": "Project Management",
+      "description": "Design systems are no different than any other project your team might take on. In order to successfully build and maintain one, you need a clear strategy that\u2019s well executed daily, and you\u2018ll need to create opportunities for your colleagues to give feedback to help share your design system together.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:readability",
+      "topic_slug": "readability",
+      "node_id": "L2NHddsv5RGR_BW0I3f4T",
+      "title": "Readability",
+      "description": "Optimising the letter spacing (tracking), line height (leading) and line length for your typography scale will help with the readability of text.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:regional-requirements",
+      "topic_slug": "regional-requirements",
+      "node_id": "pRJ9wEPNfFx_6EYB501vk",
+      "title": "Regional Requirements",
+      "description": "Understand any regional requirements such as LTR or any other UX variations that your design system should accommodate.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:release-strategy",
+      "topic_slug": "release-strategy",
+      "node_id": "CfWCQNaCJGL-egRhFhc4B",
+      "title": "Release Strategy",
+      "description": "Design system releases should be automated and ideally use scripts ran locally or in remote CI pipelines to prevent broken releases.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:reserved-icons",
+      "topic_slug": "reserved-icons",
+      "node_id": "Y0KxHVrcNGHDao-38Oz3w",
+      "title": "Reserved Icons",
+      "description": "Reserving icons that represent common actions will prevent their use in any other context. System icons for navigation or adding and deleting are a good example. This leads to a more intuitive user experience.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:responsiveness",
+      "topic_slug": "responsiveness",
+      "node_id": "8YVCtgYRHR3VcpUJXMVwP",
+      "title": "Responsiveness",
+      "description": "Desktop devices can usually afford to have bigger font sizes compared to mobile devices. Creating a typography scale that adapts to the viewport size will help with a more meaningful hierarchy and layout.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:roadmap",
+      "topic_slug": "roadmap",
+      "node_id": "gMrX5600JqFDplriq-eU3",
+      "title": "Roadmap",
+      "description": "Setting your short and long term vision and mapping things out helps you decide the steps to take, understand your place in the bigger picture and prioritise day-to-day tasks.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:select",
+      "topic_slug": "select",
+      "node_id": "n1nUkMqGtPobZPJHCvPsk",
+      "title": "Select",
+      "description": "Select lets user select a value from a list of values in a form context: - **Disabled State:** Prevents input interactions and removes its value from the form submission. - **Placeholder:** When there\u2019s no value entered, show a placeholder with a potential value example. Don\u2019t use placeholders as labels for the inputs. - **Label:** There should be a text label linked with the text field. Clicking ",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:semantic-versioning",
+      "topic_slug": "semantic-versioning",
+      "node_id": "ZLt1yJqinC8OSpqucC2dV",
+      "title": "Semantic Versioning",
+      "description": "Version your code with semantic versioning that dictates how version numbers are assigned and incremented.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:service-and-health-metrics",
+      "topic_slug": "service-and-health-metrics",
+      "node_id": "5znnOkpf9G9tdiMWB6Rut",
+      "title": "Service and Health Metrics",
+      "description": "Define service and health metrics for your design system to set a benchmark on how well you\u2019re doing. Common examples can be the number of tickets closed, improvements made or bugs fixed.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:sizes",
+      "topic_slug": "sizes",
+      "node_id": "w3LS85eFerscaxb2Xp-dP",
+      "title": "Sizes",
+      "description": "Provide different sizes for icons that correlate to your grid. Provide a minimum size and remove unnecessary detail for your icons for smaller sizes.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:sizing",
+      "topic_slug": "sizing",
+      "node_id": "78RsPhsWpl00AbkwKXUxL",
+      "title": "Sizing",
+      "description": "Sizing tokens establish consistent dimensions across components and layouts. An effective system should establish a foundational unit, create predefined size variations, ensure minimum accessibility requirements, define standard icon sizes, establish container dimensions, implement fluid sizing, and account for platform-specific requirements.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:small-use-guidance",
+      "topic_slug": "small-use-guidance",
+      "node_id": "FA3JsZgNhKrgNHVtVreol",
+      "title": "Small Use Guidance",
+      "description": "Your logo must perform well and be recognisable at all sizes. Tips for using your logo in these cases will minimise the risk of it being misused.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Everything You Need to Know About Logo Usage Guidelines",
+          "url": "https://www.tailorbrands.com/blog/logo-usage-guidelines"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:spaces",
+      "topic_slug": "spaces",
+      "node_id": "GtLYBPJjdZwG0qgA7erk7",
+      "title": "Spacing",
+      "description": "Spacing tokens define white space between elements, creating visual rhythm and clear relationships. An effective system should establish a foundational unit, create systematic scales, define consistent internal spacing, establish layout guidelines, implement fluid spacing, create meaningful categories, and ensure cross-platform consistency.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:spacking",
+      "topic_slug": "spacking",
+      "node_id": "dXaYOwTAnYSlipNEBSV9l",
+      "title": "Spacing",
+      "description": "Horizontal and vertical rhythm plays a big role in a layout. You should provide easy methods for adding space between interface elements independent of your grid.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:stakeholders-involved-in-building",
+      "topic_slug": "stakeholders-involved-in-building",
+      "node_id": "_3_tFOpQisx6DSP4Yc2E2",
+      "title": "Stakeholders",
+      "description": "Building an effective design system is not an individual responsibility, you need more than just designers. Here\u2019s a quick list of the disciplines that can be represented in your team to create an effective design system: - **Designers:** to define the visual elements of the system - **Frontend Developers:** To create modular efficient code - **Accessibility Experts:** Accessibility experts to ens",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Designing the Design System",
+          "url": "https://www.designbetter.co/design-systems-handbook/designing-design-system"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:style",
+      "topic_slug": "style",
+      "node_id": "SPK1i0XuHpNEWyi1iIxrV",
+      "title": "Style",
+      "description": "Make sure that your icon family makes visual sense as a whole. Picking an outlined or filled style and sticking with it will lead to better visual consistency and predictability.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:tabs",
+      "topic_slug": "tabs",
+      "node_id": "1vYR1EMyZhJA-znxnFBBb",
+      "title": "Tabs",
+      "description": "Tabs organise navigation between multiple pages or content sections. - **Active Button State:** There should be a clear differentiation between selected and unselected tab buttons. - **Button Icon Support:** Icons help show the purpose of the tab buttons when used next to its label. - **Equally-sized tab buttons:** Tabs can be used in a relatively small-sized container where you need to switch bet",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:terminology",
+      "topic_slug": "terminology",
+      "node_id": "Zspu1SsuTE34PVmYePcs4",
+      "title": "Terminology",
+      "description": "Create the standard terms and phrases that need to be kept the same throughout the user experience, speeding up the design process and unifying your voice.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:terminology",
+      "topic_slug": "terminology",
+      "node_id": "de0TKvmFTDmKGZc5X7iFq",
+      "title": "Terminology",
+      "description": "Design systems can be tricky if you don\u2019t know what certain words mean. Have a look at the roadmap nodes as well as follow the link below to read the glossary.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Design Systems Glossary",
+          "url": "https://web.archive.org/web/20220620075140/https://superfriendly.com/design-systems/glossary/"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:textarea",
+      "topic_slug": "textarea",
+      "node_id": "iusI39fxcu2rbMXiosaM6",
+      "title": "Textarea",
+      "description": "Text area lets users enter and edit text. - **Disabled State:** Prevents input interactions and removes its value from the form submission. - **Placeholder:** When there\u2019s no value entered, show a placeholder with a potential value example. Don\u2019t use placeholders as labels for the inputs. - **Label:** There should be a text label linked with the text field. Clicking the label should move the focus",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:ticketing",
+      "topic_slug": "ticketing",
+      "node_id": "i39J0fk4DaPeNFIMbH0ap",
+      "title": "Ticketing",
+      "description": "Make it easier to track your day-to-day progress by using ticketing software like Jira, Trello or GitHub. This\u2019ll make it easier for others to submit feature proposals or bug reports.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:toast",
+      "topic_slug": "toast",
+      "node_id": "-T7uL6a3lJ5-IIcDaG6IN",
+      "title": "Toast",
+      "description": "Toasts provide short meaningful feedback messages about the action results. - **Dismissed Automatically:** Toast messages shouldn\u2019t interrupt the user flow, block the screen for a long time or require additional action from the user. - **Action Support:** Besides displaying the message, toasts may also provide an action related to the message like undoing an action. - **Handles Multiple Instances:",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:token",
+      "topic_slug": "token",
+      "node_id": "jETJVuS_EczJiQASLqaQr",
+      "title": "Token",
+      "description": "Design system tokens are the style values of UI elements such as color, typography, spacing, shadows, etc., that are used across products and capable of being converted to a format for any platform (web, mobile, desktop). Tokens are building blocks of the design system\u2014think of them as sub atoms, the smallest pieces of style values that allow designers to create styles for a product.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What Are Design Tokens?",
+          "url": "https://xd.adobe.com/ideas/principles/design-systems/what-are-design-tokens/"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:tone-of-voice",
+      "topic_slug": "tone-of-voice",
+      "node_id": "fnlVIgsmyxj2UVCCjM-8g",
+      "title": "Tone of Voice",
+      "description": "A clear tone of voice defines how you speak to your audience at every moment in their journey, helping them get wherever they want to go.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:tooling-analytics",
+      "topic_slug": "tooling-analytics",
+      "node_id": "qiJGYYWL4naJX-MgZA9Ms",
+      "title": "Tooling Analytics",
+      "description": "Track what tools are being used for your design system. Find out which ones are used the most and which features are the most popular.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:tooling",
+      "topic_slug": "tooling",
+      "node_id": "jggrr5nZOe6FY3ZrZJTOw",
+      "title": "Tooling",
+      "description": "Design system tooling encompasses technical infrastructure and workflows. Effective tooling should integrate with design tools, provide component libraries for frameworks, implement token management, utilize documentation platforms, establish automated versioning, create testing infrastructure, and enable collaboration workflows.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:tooltip",
+      "topic_slug": "tooltip",
+      "node_id": "2oCAzsk_y2Y2oHUi467dp",
+      "title": "Tooltip",
+      "description": "Tooltips are desktop-only components that display additional information when hovering over or focusing on an element. - **Keyboard Hover Support:** Tooltips should be accessible when an element is focused using the keyboard. - **Dynamic Positioning:** Tooltip content should be displayed based on the current position of the trigger element on the screen and always visible to the user. - **Hover Ti",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:typography",
+      "topic_slug": "typography",
+      "node_id": "ODQ8zrHc2rsc8PN-APKvz",
+      "title": "Typography",
+      "description": "Typography establishes hierarchy, readability, and brand personality. An effective system should develop harmonious scales using mathematical ratios, choose appropriate typefaces, implement fluid typography, establish consistent line-heights, define font weight hierarchy, ensure accessibility compliance, and provide clear usage guidelines.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:ui-kit",
+      "topic_slug": "ui-kit",
+      "node_id": "lUObv2N7eH3Jdnwwd5vmI",
+      "title": "UI Kit",
+      "description": "As it relates to a design system, a UI Kit is a representation of coded components created in a way that designers who don\u2019t know code can create interface mockups. Examples of UI kits are Sketch libraries and [Figma design systems](https://www.figma.com/blog/how-to-build-your-design-system-in-figma/).",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Design System vs UI Kit",
+          "url": "https://uigstudio.com/insights/design-system-vs-ui-kit"
+        },
+        {
+          "raw_type": "article",
+          "title": "Your sketch library is not a design system",
+          "url": "http://bradfrost.com/blog/post/your-sketch-library-is-not-a-design-system/"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:understand-the-basics",
+      "topic_slug": "understand-the-basics",
+      "node_id": "uvnV1IjE8RV-FKDxHntUU",
+      "title": "Design System Basics",
+      "description": "A design system is a set of standards to manage design at scale by reducing redundancy while creating a shared language and visual consistency across different pages and channels.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Design Systems 101",
+          "url": "https://www.nngroup.com/articles/design-systems-101/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is a Design System? Design Systems 101 for Designers",
+          "url": "https://www.youtube.com/watch?v=wc5krC28ynQ"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to build your design system",
+          "url": "https://www.figma.com/blog/design-systems-102-how-to-build-your-design-system/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Everything you need to know about Design Systems",
+          "url": "https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:unit-testing",
+      "topic_slug": "unit-testing",
+      "node_id": "y8No8I0MltA91j4Q2toT0",
+      "title": "Unit Testing",
+      "description": "Every part of the design system should be covered with unit tests. Once your system\u2019s adopted, any change in the isolated environment may affect how the product works.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:units",
+      "topic_slug": "units",
+      "node_id": "wQbMhC7q3qdKYf_pX5qL4",
+      "title": "Units",
+      "description": "Units are the most granular building blocks for layout. Defining a set of values with consistent increments (such as 4, 8, 12 and 16 for a 4-point system) will provide you with the foundation when you\u2019re designing your grid and spacing values.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:usage-guidance",
+      "topic_slug": "usage-guidance",
+      "node_id": "RmSFwKqL9yXXxGKZusKWX",
+      "title": "Usage Guidance",
+      "description": "Logo usage guidance provides rules for proper implementation to maintain brand consistency. Effective guidance should establish clear examples of proper usage and mistakes to avoid, define logo variations, specify color requirements, prohibit unauthorized alterations, and include approval processes for new contexts.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Logo Usage Best Practices",
+          "url": "https://99designs.com/blog/tips/logo-usage-guidelines/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Brand Guidelines Development",
+          "url": "https://designsystem.digital.gov/design-tokens/logo/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Trademark and Logo Legal Guidelines",
+          "url": "https://www.uspto.gov/trademarks-getting-started/trademark-basics"
+        },
+        {
+          "raw_type": "article",
+          "title": "Brand Identity Protection",
+          "url": "https://www.brandfolder.com/blog/brand-guidelines"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Brand Management",
+          "url": "https://app.daily.dev/tags/branding?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:user-onboarding",
+      "topic_slug": "user-onboarding",
+      "node_id": "PlW8mHnOTyYnbtl0zUSG9",
+      "title": "User Onboarding",
+      "description": "How you onboard your users to your product or a new feature and give them a great experience from the start.",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "What is user onboarding?",
+          "url": "https://www.youtube.com/watch?v=PatIqbGEQe4"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:version-control",
+      "topic_slug": "version-control",
+      "node_id": "CYY6nbQiC2pu5ATWmO6wA",
+      "title": "Version Control",
+      "description": "Having your design versioned with semantic versioning will allow you to easily align design with development, roll back faulty changes and release changes in code and design at the same time.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:vision",
+      "topic_slug": "vision",
+      "node_id": "cMfsRtvzvDZZJ0TqeUOxm",
+      "title": "Vision",
+      "description": "Brand vision serves as the foundation for design system decisions, providing purpose and direction. An effective vision should articulate organizational purpose, identify core values, visualize future success, prioritize user needs, clarify brand uniqueness, account for cultural considerations, and connect to measurable goals.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Creating Brand Vision",
+          "url": "https://www.interaction-design.org/literature/article/branding-in-ux"
+        },
+        {
+          "raw_type": "article",
+          "title": "Vision-Driven Design Systems",
+          "url": "https://bradfrost.com/blog/post/the-design-system-ecosystem/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Brand Strategy for Design",
+          "url": "https://alistapart.com/article/creating-a-brand-identity/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Purpose-Driven Design",
+          "url": "https://designsystem.digital.gov/design-tokens/brand/"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Brand Strategy",
+          "url": "https://app.daily.dev/tags/branding?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:visual-forms",
+      "topic_slug": "visual-forms",
+      "node_id": "-MrrapoyFWKhSeE2PZ9mb",
+      "title": "Visual Forms",
+      "description": "Visual forms focus on aesthetic and interactive design aspects of form components. Effective design should establish clear information architecture, create consistent field styling, develop harmonious label positioning, design clear error communication, implement progressive enhancement, prioritize mobile-first design, and ensure cross-platform consistency.",
+      "resources": []
+    },
+    {
+      "skill_id": "design-system:what-is-a-design-system",
+      "topic_slug": "what-is-a-design-system",
+      "node_id": "4PrkkoZ5fY-oow0O-bVhu",
+      "title": "What is Design System",
+      "description": "A Design System is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Everything you need to know about Design Systems",
+          "url": "https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969"
+        },
+        {
+          "raw_type": "article",
+          "title": "Design Systems 101",
+          "url": "https://www.nngroup.com/articles/design-systems-101/"
+        },
+        {
+          "raw_type": "article",
+          "title": "A comprehensive guide to design systems",
+          "url": "https://www.invisionapp.com/inside-design/guide-to-design-systems/"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:what-is-atomic-design",
+      "topic_slug": "what-is-atomic-design",
+      "node_id": "6r9XbwlBtHmJrhviG2cTD",
+      "title": "Atomic Design",
+      "description": "Atomic design (by Brad Frost) is a mental model to help you think of user interfaces as a cohesive whole and a collection of parts at the same time. Through the comparison to atoms, molecules, and organisms, we can think of the design of our UI as a composition of self-containing modules put together.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Atomic Design Principles & Methodology 101",
+          "url": "https://xd.adobe.com/ideas/process/ui-design/atomic-design-principles-methodology-101/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Atomic Design Methodology",
+          "url": "https://atomicdesign.bradfrost.com/chapter-2/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Atomic Design and UI Components: Theory to Practice",
+          "url": "https://blog.bitsrc.io/atomic-design-and-ui-components-theory-to-practice-f200db337c24"
+        }
+      ]
+    },
+    {
+      "skill_id": "design-system:writing-guidelines",
+      "topic_slug": "writing-guidelines",
+      "node_id": "toyNbBB5tbyiJZkzuklIv",
+      "title": "Writing Guidelines",
+      "description": "Every consistent experience needs watertight writing. Laying down the foundations for your house style early keeps everything in line with consistent grammar, style choices and action-oriented language to help your design.",
+      "resources": []
+    }
+  ]
+}

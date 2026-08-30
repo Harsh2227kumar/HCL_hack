@@ -28,20 +28,48 @@ export default function OnboardingPage() {
     setIsLoading(true);
 
     try {
+      let currentUserId = localStorage.getItem('userId');
+      if (!currentUserId) {
+        currentUserId = `user-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+        localStorage.setItem('userId', currentUserId);
+      }
+
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: newMessages }),
+        body: JSON.stringify({ 
+          userId: currentUserId,
+          message: text,
+          conversationHistory: messages.map(m => ({ role: m.sender === 'user' ? 'user' : 'assistant', content: m.text }))
+        }),
       });
       
       const data = await res.json();
       
       if (data.done) {
+        // Generate or retrieve a dynamic user ID
+        let currentUserId = localStorage.getItem('userId');
+        if (!currentUserId) {
+          currentUserId = `user-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+          localStorage.setItem('userId', currentUserId);
+        }
+
         await fetch('/api/profile/extract', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ transcript: newMessages }),
+          body: JSON.stringify({ 
+            userId: currentUserId, 
+            text: newMessages.map(m => `${m.sender}: ${m.text}`).join('\n') 
+          }),
         });
+
+        // Generate the learning path
+        await fetch('/api/path/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ userId: currentUserId }),
+        });
+
         router.push('/dashboard');
         return;
       }
@@ -49,7 +77,7 @@ export default function OnboardingPage() {
       setMessages([...newMessages, { 
         id: (Date.now() + 1).toString(), 
         sender: 'ai', 
-        text: data.reply || 'Tell me more.' 
+        text: data.message || 'Tell me more.' 
       }]);
     } catch (error) {
       console.error(error);

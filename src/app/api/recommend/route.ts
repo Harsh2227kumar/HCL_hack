@@ -36,19 +36,20 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ recommendations: [], readinessScore });
     }
 
-    // Embed the gap description to find semantic matches
-    const gapDescription = gaps.map(g => g.skillName).join(', ');
-    const queryVector = await generateEmbedding(gapDescription);
-    const formattedVector = `[${queryVector.join(',')}]`;
-
-    // Fetch top 20 matches using pgvector cosine distance
+    // With 20k+ resources, we rely on exact skill mapping rather than vector search 
+    // to avoid rate limits and improve performance.
+    const gapSkillsArray = gaps.map(g => g.skillName);
+    const gapSkillsFormatted = gapSkillsArray.map(s => `'${s.replace(/'/g, "''")}'`).join(',');
+    
     const rawResources = await prisma.$queryRawUnsafe<any[]>(`
-      SELECT id, title, type, provider, description, url, "skillsTaught", "prerequisiteSkills", difficulty, "durationHours", format,
-             1 - (embedding <=> '${formattedVector}'::vector) as similarity
+      SELECT id, title, type, provider, description, url, "skillsTaught", "prerequisiteSkills", difficulty, "durationHours", format
       FROM "LearningResource"
-      WHERE embedding IS NOT NULL
-      ORDER BY embedding <=> '${formattedVector}'::vector
-      LIMIT 20
+      WHERE EXISTS (
+        SELECT 1 
+        FROM jsonb_array_elements_text("skillsTaught") as skill 
+        WHERE skill IN (${gapSkillsFormatted})
+      )
+      LIMIT 100
     `);
 
     // We only need the resources themselves for scoring

@@ -1,0 +1,3924 @@
+{
+  "roadmap": "golang",
+  "topic_count": 172,
+  "topics": [
+    {
+      "skill_id": "golang:anonymous-functions",
+      "topic_slug": "anonymous-functions",
+      "node_id": "cEQ9NQX7ZkKLwz_hg9L_7",
+      "title": "Anonymous Functions",
+      "description": "Functions declared without names, also called function literals or lambdas. Can be assigned to variables, passed as arguments, or executed immediately. Useful for short operations, callbacks, goroutines, and closures. Access enclosing scope variables. Common in event handlers and functional patterns.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Anonymous Functions",
+          "url": "https://golangdocs.com/anonymous-functions-in-golang"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Anonymous Functions in Go: A Practical Guide",
+          "url": "https://dev.to/abstractmusa/understanding-anonymous-functions-in-go-a-practical-guide-57hd"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:array-to-slice-conversion",
+      "topic_slug": "array-to-slice-conversion",
+      "node_id": "s1E4PQVVSlBeyNn7xBikW",
+      "title": "Array to Slice Conversion",
+      "description": "Convert arrays to slices using expressions like `array[:]` or `array[start:end]`. Creates slice header pointing to array memory - no data copying. Modifications through slice affect original array. Efficient way to use arrays with slice-based APIs.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Slice Arrays Correctly",
+          "url": "https://labex.io/tutorials/go-how-to-slice-arrays-correctly-418936"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go - Create Slice From Array - 3 Examples",
+          "url": "https://www.tutorialkart.com/golang-tutorial/golang-create-slice-from-array/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:arrays",
+      "topic_slug": "arrays",
+      "node_id": "Eu8JV-_W-P_bCx_PglIW0",
+      "title": "Arrays",
+      "description": "Fixed-size sequences of same-type elements. Size is part of the type, so different sizes are different types. Declared with specific length, initialized to zero values. Value types (copied when assigned/passed). Slices are more commonly used due to flexibility. Foundation for understanding Go's type system.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Arrays",
+          "url": "https://go.dev/tour/moretypes/6"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Complete Guide to Arrays in Golang",
+          "url": "https://www.kelche.co/blog/go/golang-arrays/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:beego",
+      "topic_slug": "beego",
+      "node_id": "p7yeYkbQKAjr2aA_eUno4",
+      "title": "beego",
+      "description": "Beego is a full-stack web framework providing MVC architecture, ORM, session management, caching, and admin interface generation. Follows convention over configuration with extensive tooling for rapid development of enterprise applications requiring comprehensive features.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Arrays",
+          "url": "https://go.dev/tour/moretypes/6"
+        },
+        {
+          "raw_type": "official",
+          "title": "beego package",
+          "url": "https://pkg.go.dev/github.com/beego/beego"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "beego/beego",
+          "url": "https://github.com/beego/beego"
+        },
+        {
+          "raw_type": "article",
+          "title": "Exploring Golang and Beego: A Beginner's Guide with Examples",
+          "url": "https://medium.com/@vijeshomen/exploring-golang-and-beego-a-beginners-guide-with-examples-part-1-79619f0db1ac"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:benchmarks",
+      "topic_slug": "benchmarks",
+      "node_id": "t9xOuLBrAzEvv2-bOU2hF",
+      "title": "Benchmarks",
+      "description": "Benchmarks measure code performance by timing repeated executions. Functions start with `Benchmark` and use `*testing.B` parameter. Run with `go test -bench=.` to identify bottlenecks, compare implementations, and track performance changes over time.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Add a Test",
+          "url": "https://go.dev/doc/tutorial/add-a-test"
+        },
+        {
+          "raw_type": "article",
+          "title": "Benchmarking in Go: A Comprehensive Handbook",
+          "url": "https://betterstack.com/community/guides/scaling-go/golang-benchmarking/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Benchmarking in Golang: Improving Function Performance",
+          "url": "https://blog.logrocket.com/benchmarking-golang-improve-function-performance/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:boolean",
+      "topic_slug": "boolean",
+      "node_id": "PRTou83_rD0u7p2elGG4s",
+      "title": "Boolean",
+      "description": "The `bool` type represents `true` or `false` values with default zero value of `false`. Essential for conditional logic, control flow, and binary states. Results from comparison (`==`, `!=`) and logical operations (`&&`, `||`, `!`).",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Booleans in Golang",
+          "url": "https://golangdocs.com/booleans-in-golang"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Boolean Logic in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/understanding-boolean-logic-in-go"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:break",
+      "topic_slug": "break",
+      "node_id": "IWdAJ1BXqJv8EMYvFWRaH",
+      "title": "break",
+      "description": "Immediately exits innermost loop or switch statement. In nested loops, only exits immediate loop unless used with labels to break outer loops. Essential for early termination when conditions are met. Helps write efficient loops that don't continue unnecessarily.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using Break and Continue Statements When Working with Loop",
+          "url": "https://www.digitalocean.com/community/tutorials/using-break-and-continue-statements-when-working-with-loops-in-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "Demystifying the Break and Continue Statements in Golang",
+          "url": "https://medium.com/@kiruu1238/break-continue-bc35e9f3802d"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:bubbletea",
+      "topic_slug": "bubbletea",
+      "node_id": "x9hDkF73rmvbewrgRgyOv",
+      "title": "bubbletea",
+      "description": "Bubble Tea is a framework for building terminal UIs based on The Elm Architecture. Uses model-update-view pattern for interactive CLI applications with keyboard input, styling, and component composition. Excellent for sophisticated terminal tools and dashboards.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "charmbracelet/bubbletea",
+          "url": "https://github.com/charmbracelet/bubbletea"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building UI of Golang CLI app with Bubble Tea",
+          "url": "https://medium.com/@originalrad50/building-ui-of-golang-cli-app-with-bubble-tea-68b61e25445e"
+        },
+        {
+          "raw_type": "article",
+          "title": "Intro to Bubble Tea in Go",
+          "url": "https://dev.to/andyhaskell/intro-to-bubble-tea-in-go-21lg"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:buffered-vs-unbuffered",
+      "topic_slug": "buffered-vs-unbuffered",
+      "node_id": "4_nvU_YOs9Psey5TZLQFb",
+      "title": "Buffered vs Unbuffered",
+      "description": "Unbuffered channels provide synchronous communication - sender blocks until receiver ready. Buffered channels allow asynchronous communication up to capacity. Unbuffered for coordination/sequencing, buffered for performance/decoupling. Critical distinction for concurrent system design.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Advanced Insights into Go Channels",
+          "url": "https://medium.com/@aditimishra_541/advanced-insights-into-go-channels-unbuffered-and-buffered-channels-d76d705bcc24"
+        },
+        {
+          "raw_type": "article",
+          "title": "Buffered vs Unbuffered Channels in Golang",
+          "url": "https://dev.to/akshitzatakia/buffered-vs-unbuffered-channels-in-golang-a-developers-guide-to-concurrency-3m75"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:bufio",
+      "topic_slug": "bufio",
+      "node_id": "Z8j6Zkg1LYEYcoRgs23Ms",
+      "title": "bufio",
+      "description": "Provides buffered I/O operations wrapping io.Reader/Writer interfaces for better performance. Reduces system calls by reading/writing larger chunks. Includes Scanner for line reading, Reader for buffered reading, Writer for buffered writing. Essential for efficient large file/network operations.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Bufio",
+          "url": "https://go.dev/src/bufio/bufio.go"
+        },
+        {
+          "raw_type": "official",
+          "title": "Bufio Package",
+          "url": "https://pkg.go.dev/bufio"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go Fast with bufio: Unlocking the Power of Buffered I/O",
+          "url": "https://medium.com/@emusbeny/mastering-bufio-in-go-the-art-of-buffered-i-o-17cae584ee4b"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:build-constraints--tags",
+      "topic_slug": "build-constraints--tags",
+      "node_id": "zmBYvecc5zSoLCinH68gc",
+      "title": "Build Constraints & Tags",
+      "description": "Special comments controlling which files are included when building. Use `//go:build` directive for platform-specific code, environment builds, or feature toggles. Common for different OS/architectures or debug vs production builds. Essential for portable Go applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Build Package",
+          "url": "https://pkg.go.dev/go/build"
+        },
+        {
+          "raw_type": "article",
+          "title": "Advanced Go Build Techniques",
+          "url": "https://dev.to/jacktt/go-build-in-advance-4o8n"
+        },
+        {
+          "raw_type": "article",
+          "title": "Customizing Go Binaries with Build Tags",
+          "url": "https://www.digitalocean.com/community/tutorials/customizing-go-binaries-with-build-tags"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:build-tags",
+      "topic_slug": "build-tags",
+      "node_id": "Jxt4HD2iA6lRXNRJIVCLs",
+      "title": "Build Tags",
+      "description": "Build tags control file inclusion using `//go:build` directives based on conditions like OS, architecture, or custom tags. Enable conditional compilation for platform-specific code, feature flags, and environment-specific builds without runtime overhead.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Build Package",
+          "url": "https://pkg.go.dev/go/build"
+        },
+        {
+          "raw_type": "article",
+          "title": "Advanced Go Build Techniques",
+          "url": "https://dev.to/jacktt/go-build-in-advance-4o8n"
+        },
+        {
+          "raw_type": "article",
+          "title": "Customizing Go Binaries with Build Tags",
+          "url": "https://www.digitalocean.com/community/tutorials/customizing-go-binaries-with-build-tags"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:building-clis",
+      "topic_slug": "building-clis",
+      "node_id": "2fk1ewM42WnFlDejVETys",
+      "title": "Building CLIs",
+      "description": "Go excels at CLI development due to fast compilation, single binary distribution, and rich ecosystem. Use standard `flag` package or frameworks like Cobra, urfave/cli, Bubble Tea. Cross-compilation support for multiple platforms. Great for learning Go while building useful tools.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Command-line Interfaces (CLIs)",
+          "url": "https://go.dev/solutions/clis"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building a Command Line Interface (CLI) tool in Golang",
+          "url": "https://medium.com/@mgm06bm/building-a-command-line-interface-cli-tool-in-golang-a-step-by-step-guide-44a7aad488e4"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building a feature rich Command Line Interface (CLI) in GO",
+          "url": "https://blog.stackademic.com/building-a-feature-rich-command-line-interface-cli-in-go-42a127b090c8"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:building-executables",
+      "topic_slug": "building-executables",
+      "node_id": "zCUmPIGVslLfECqfUgAr2",
+      "title": "Building Executables",
+      "description": "The `go build` command compiles source code into standalone native executables with static linking. Creates self-contained binaries including all dependencies, requiring no Go installation on target systems. Control builds with various optimization flags.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Build Package",
+          "url": "https://pkg.go.dev/go/build"
+        },
+        {
+          "raw_type": "official",
+          "title": "Compile and Install Application",
+          "url": "https://go.dev/doc/tutorial/compile-install"
+        },
+        {
+          "raw_type": "article",
+          "title": "Advanced Go Build Techniques",
+          "url": "https://dev.to/jacktt/go-build-in-advance-4o8n"
+        },
+        {
+          "raw_type": "article",
+          "title": "Customizing Go Binaries with Build Tags",
+          "url": "https://www.digitalocean.com/community/tutorials/customizing-go-binaries-with-build-tags"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Build and Install Go Programs",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:call-by-value",
+      "topic_slug": "call-by-value",
+      "node_id": "z8-8nt-3GA7uN-cvOI-Qn",
+      "title": "Call by Value",
+      "description": "Go creates copies of values when passing to functions, not references to originals. Applies to all types including structs and arrays. Provides safety but can be expensive for large data. Use pointers, slices, maps for references. Critical for performance optimization.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Golang Call by Reference and Call by Value",
+          "url": "https://www.scaler.com/topics/golang/golang-call-by-reference-and-call-by-value"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go Call by Value",
+          "url": "https://www.includehelp.com/golang/go-call-by-value.aspx"
+        },
+        {
+          "raw_type": "article",
+          "title": "Parameter Passing in Golang: The Ultimate Truth",
+          "url": "https://dev.to/mahdifardi/parameter-passing-in-golang-the-ultimate-truth-1h0o"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:capacity-and-growth",
+      "topic_slug": "capacity-and-growth",
+      "node_id": "qUykEUH1-9Dzotc_ltV3g",
+      "title": "Capacity and Growth",
+      "description": "Slice capacity determines when reallocation occurs during append operations. Go typically doubles capacity for smaller slices. Pre-allocate with `make([]T, length, capacity)` to optimize memory usage and minimize allocations in performance-critical code.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understanding Go's Slice Data Structure and Its Growth Pattern",
+          "url": "https://medium.com/@arjun.devb25/understanding-gos-slice-data-structure-and-its-growth-pattern-48fe6dd914b4"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Increase Slice Capacity in Go",
+          "url": "https://thekoreanguy.medium.com/how-does-the-capacity-change-when-you-append-to-a-slice-in-go-46289dad4730"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Manage Slice Length and Capacity",
+          "url": "https://labex.io/tutorials/go-how-to-manage-slice-length-and-capacity-418932"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:centrifugo",
+      "topic_slug": "centrifugo",
+      "node_id": "LOl-7BtdmYrBS0PTtHI1I",
+      "title": "Centrifugo",
+      "description": "Centrifugo is a real-time messaging server providing WebSocket services for Go applications. It offers channels, presence info, message history, and Redis scalability. Supports WebSocket, Server-Sent Events, and HTTP streaming while handling complex real-time patterns.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Centrifugo",
+          "url": "https://centrifugal.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting Started with Centrifugo",
+          "url": "https://centrifugal.dev/docs/getting-started/introduction"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "centrifugal/centrifuge",
+          "url": "https://github.com/centrifugal/centrifuge"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:cgo-basics",
+      "topic_slug": "cgo-basics",
+      "node_id": "mxbs96wFJ5XGDoETA0fU_",
+      "title": "CGO Basics",
+      "description": "CGO allows Go programs to call C code and vice versa using special comments. Enables C library integration but disables cross-compilation, reduces performance, and complicates deployment. Useful for legacy integration but pure Go is preferred.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "CGO",
+          "url": "https://go.dev/wiki/cgo"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understand How to use C libraries in Go with CGO",
+          "url": "https://dev.to/metal3d/understand-how-to-use-c-libraries-in-go-with-cgo-3dbn"
+        },
+        {
+          "raw_type": "article",
+          "title": "Calling C Functions from Go: A Quick Guide",
+          "url": "https://www.codingexplorations.com/blog/calling-c-functions-from-go-a-quick-guide"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:channels",
+      "topic_slug": "channels",
+      "node_id": "EgXagvLpJkXUI2od5K1FD",
+      "title": "Channels",
+      "description": "Primary mechanism for goroutine communication following \"share memory by communicating\" principle. Typed conduits created with `make()`. Come in buffered and unbuffered varieties. Used for synchronization, data passing, and coordinating concurrent operations. Essential for concurrent programming.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Channels in Golang",
+          "url": "https://golangdocs.com/channels-in-golang"
+        },
+        {
+          "raw_type": "article",
+          "title": "Concurrency in Go: Channels and WaitGroups",
+          "url": "https://medium.com/goturkiye/concurrency-in-go-channels-and-waitgroups-25dd43064d1"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go Channels Explained: More than Just a Beginner's Guide",
+          "url": "https://blog.devtrovert.com/p/go-channels-explained-more-than-just"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:closures",
+      "topic_slug": "closures",
+      "node_id": "ZSiNvYDTW2RYyPttls5iz",
+      "title": "Closures",
+      "description": "Functions capturing variables from surrounding scope, accessible even after outer function returns. \"Close over\" external variables for specialized functions, callbacks, state maintenance. Useful for event handling, iterators, functional programming. Important for flexible, reusable code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Closures in Golang",
+          "url": "https://go.dev/tour/moretypes/25"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Closures in Go",
+          "url": "https://code101.medium.com/understanding-closures-in-go-encapsulating-state-and-behaviour-558ac3617671"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:cobra",
+      "topic_slug": "cobra",
+      "node_id": "3frPZLeFXnHroY7_Uk5Dn",
+      "title": "Cobra",
+      "description": "Powerful library for modern CLI applications. Used by kubectl, Hugo, GitHub CLI. Provides nested subcommands, flags, intelligent suggestions, auto help generation, shell completion. Follows POSIX standards with clean API. Includes command generator for quick bootstrapping.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Cobra",
+          "url": "https://cobra.dev/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Use the Cobra Package in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-the-cobra-package-in-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started with Cobra",
+          "url": "https://dev.to/frasnym/getting-started-with-cobra-creating-multi-level-command-line-interfaces-in-golang-2j3k"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:comma-ok-idiom",
+      "topic_slug": "comma-ok-idiom",
+      "node_id": "dMdOz2kUc8If3LcLZEfYf",
+      "title": "Comma-Ok Idiom",
+      "description": "Pattern for safely testing map key existence or type assertion success using `value, ok := map[key]` or `value, ok := interface.(Type)`. Returns both value and boolean status, preventing panics and distinguishing zero values from missing keys.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "The Comma Ok Idiom",
+          "url": "https://dev.to/saurabh975/comma-ok-in-go-l4f"
+        },
+        {
+          "raw_type": "article",
+          "title": "How the Comma Ok Idiom and Package System Work in Go",
+          "url": "https://www.freecodecamp.org/news/how-the-comma-ok-idiom-and-package-system-work-in-go/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Statement Idioms in Go",
+          "url": "https://medium.com/@nateogbonna/statement-idioms-in-go-writing-clean-idiomatic-go-code-6fe92e6e8ab4"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:commands--docs",
+      "topic_slug": "commands--docs",
+      "node_id": "ywiNCAAvpSVXTwWwguxSZ",
+      "title": "Commands & Docs",
+      "description": "Go provides built-in documentation tools including `go doc` for terminal documentation and `godoc` for web interface. Documentation uses special comments. `go help` provides command information. Essential for exploring standard library and writing well-documented code.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "A Guide to Effective Go Documentation",
+          "url": "https://nirdoshgautam.medium.com/a-guide-to-effective-go-documentation-952f346d073f"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:common-usecases",
+      "topic_slug": "common-usecases",
+      "node_id": "gChqUzY3SbPJH0H0jcoAp",
+      "title": "Common Usecases",
+      "description": "Context package common uses: HTTP timeouts, database deadlines, goroutine cancellation coordination, and request-scoped values. Essential for web servers, microservices, circuit breakers, and building responsive APIs that handle cancellation gracefully.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Use Cases",
+          "url": "https://go.dev/solutions/use-cases"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Versatility of Go: Ideal Use Cases for the Golang Programming",
+          "url": "https://dev.to/adityabhuyan/the-versatility-of-go-ideal-use-cases-for-the-golang-programming-language-7co"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:compiler--linker-flags",
+      "topic_slug": "compiler--linker-flags",
+      "node_id": "xsjUeyxweN2GbcjknDjT8",
+      "title": "Compiler & Linker Flags",
+      "description": "Build flags control compilation and linking. Common flags include `-ldflags` for linker options, `-gcflags` for compiler settings, `-tags` for build tags, and `-race` for race detection. Help optimize builds, reduce binary size, and embed build information.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Flag Package",
+          "url": "https://pkg.go.dev/flag"
+        },
+        {
+          "raw_type": "article",
+          "title": "Leveraging Compiler Optimization Flags",
+          "url": "https://goperf.dev/01-common-patterns/comp-flags/o"
+        },
+        {
+          "raw_type": "article",
+          "title": "Compiler Optimization Flags",
+          "url": "https://diginode.in/go/compiler-optimization-flags/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:complex-numbers",
+      "topic_slug": "complex-numbers",
+      "node_id": "Mn-M7kxOKEublJGitgjNA",
+      "title": "Complex Numbers",
+      "description": "Built-in support with `complex64` and `complex128` types. Create using `complex()` function or literals like `3+4i`. Provides `real()`, `imag()`, `abs()` functions. Useful for mathematical computations, signal processing, and scientific applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Complex Numbers",
+          "url": "https://go.dev/ref/spec"
+        },
+        {
+          "raw_type": "article",
+          "title": "Complex Numbers in Golang",
+          "url": "https://golangdocs.com/complex-numbers-in-golang"
+        },
+        {
+          "raw_type": "article",
+          "title": "Complex Data Types in Golang",
+          "url": "https://dev.to/diwakarkashyap/complex-data-types-in-golang-go-328l"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:concurrency-patterns",
+      "topic_slug": "concurrency-patterns",
+      "node_id": "2yKVKaCXrcv5X4o2d6oqm",
+      "title": "Concurrency Patterns",
+      "description": "Established design approaches for structuring concurrent programs using goroutines and channels. Key patterns: fan-in (merging inputs), fan-out (distributing work), pipelines (chaining operations), worker pools, pub-sub communication. Help build efficient, scalable apps while avoiding race conditions and deadlocks.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Go Concurrency Patterns: Pipelines and Cancellation",
+          "url": "https://go.dev/blog/pipelines"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go Concurrency Patterns: A Deep Dive",
+          "url": "https://medium.com/@gopinathr143/go-concurrency-patterns-a-deep-dive-a2750f98a102"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Concurrency in Go",
+          "url": "https://dev.to/santoshanand/mastering-concurrency-in-go-a-comprehensive-guide-5chi"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:conditionals",
+      "topic_slug": "conditionals",
+      "node_id": "C7wzT161ytHsCpO2zfmXo",
+      "title": "Conditionals",
+      "description": "Control program flow based on conditions. `if` for basic logic, `if-else` for binary decisions, `switch` for multiple conditions. `if` supports optional initialization, no parentheses needed but braces required. `switch` supports expressions, type switches, fallthrough. Fundamental for business logic.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Flow Control",
+          "url": "https://go.dev/tour/flowcontrol/6"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Write Conditional Statements in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-write-conditional-statements-in-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to handle conditional logic in Go",
+          "url": "https://labex.io/tutorials/go-how-to-handle-conditional-logic-in-go-418319"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:const-and-iota",
+      "topic_slug": "const-and-iota",
+      "node_id": "-M-qrXwVt7HfJv0CSRNGS",
+      "title": "const and iota",
+      "description": "Constants declared with `const` represent unchanging compile-time values. `iota` creates successive integer constants starting from zero, resetting per `const` block. Useful for enumerations, bit flags, and constant sequences without manual values.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Iota",
+          "url": "https://go.dev/wiki/Iota"
+        },
+        {
+          "raw_type": "article",
+          "title": "Constants",
+          "url": "https://webreference.com/go/basics/constants/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:context-package",
+      "topic_slug": "context-package",
+      "node_id": "vxB3aGreqWBrNhiu8hcPE",
+      "title": "context package",
+      "description": "Carries deadlines, cancellation signals, and request-scoped values across API boundaries. Essential for robust concurrent applications, especially web services. Enables cancelling long-running operations, setting timeouts, passing request data. Typically first parameter passed down call stack.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Go Concurrency Patterns: Context",
+          "url": "https://go.dev/blog/context"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Complete Guide to Context in Golang",
+          "url": "https://medium.com/@jamal.kaksouri/the-complete-guide-to-context-in-golang-efficient-concurrency-management-43d722f6eaea"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:continue",
+      "topic_slug": "continue",
+      "node_id": "BRKryB5HawXyXeBWM4QqU",
+      "title": "continue",
+      "description": "Skips rest of current iteration and jumps to next loop iteration. Only affects innermost loop unless used with labels. Useful for filtering elements, handling special cases early, avoiding nested conditionals. Makes loops cleaner and more efficient.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using Break and Continue Statements When Working with Loop",
+          "url": "https://www.digitalocean.com/community/tutorials/using-break-and-continue-statements-when-working-with-loops-in-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "Demystifying the Break and Continue Statements in Golang",
+          "url": "https://medium.com/@kiruu1238/break-continue-bc35e9f3802d"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:coverage",
+      "topic_slug": "coverage",
+      "node_id": "27lhNAdKwRrc2S2ha3QNG",
+      "title": "Coverage",
+      "description": "Test coverage measures code execution during testing using `go test -cover` and `-coverprofile`. Visualize with `go tool cover -html` to identify untested code paths. Helps maintain quality standards and guide testing efforts for more reliable applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Coverage Profiling",
+          "url": "https://go.dev/doc/build-cover"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Beginner's Guide to Code Coverage for Go Integration Tests",
+          "url": "https://hackernoon.com/a-beginners-guide-to-code-coverage-for-go-integration-tests"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:cross-compilation",
+      "topic_slug": "cross-compilation",
+      "node_id": "mvcWcecHA_jyQY1txFgL_",
+      "title": "Cross-compilation",
+      "description": "Build executables for different OS and architectures using `GOOS` and `GOARCH` environment variables. Example: `GOOS=linux GOARCH=amd64 go build` creates Linux binaries. Enables multi-platform development without separate build environments.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "GccgoCrossCompilation",
+          "url": "https://go.dev/wiki/GccgoCrossCompilation"
+        },
+        {
+          "raw_type": "article",
+          "title": "Cross-compiling made easy with Golang",
+          "url": "https://medium.com/@keployio/understanding-go-coverage-a-guide-to-test-coverage-in-go-0c6e5ac8ba81"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:data-types",
+      "topic_slug": "data-types",
+      "node_id": "0FJxELyk7_IiVHvZFFVm2",
+      "title": "Data Types",
+      "description": "Rich set of built-in types: integers (int8-64), unsigned integers (uint8-64), floats (float32/64), complex numbers, booleans, strings, runes. Statically typed - types determined at compile time for early error detection and performance. Crucial for efficient, reliable programs.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Go Basics",
+          "url": "https://go.dev/tour/basics/11"
+        },
+        {
+          "raw_type": "article",
+          "title": "Basic Data Types in Go",
+          "url": "https://golangbot.com/types/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Data Types in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/understanding-data-types-in-go"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:deadlines--cancellations",
+      "topic_slug": "deadlines--cancellations",
+      "node_id": "p5u2tWRmRtyfBgKcSUHFU",
+      "title": "Deadlines & Cancellations",
+      "description": "Context package mechanisms for controlling operation lifetime and propagating cancellation signals. Supports deadlines (absolute time) or timeouts (duration). Functions should check `ctx.Done()` and return early when cancelled. Essential for robust concurrent applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Canceling in-progress Operations",
+          "url": "https://go.dev/doc/database/cancel-operations"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Golang Context: Cancellation, Timeouts",
+          "url": "https://webdevstation.com/posts/understanding-golang-context/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Context in Golang",
+          "url": "https://medium.com/better-programming/understanding-context-in-golang-7f574d9d94e0"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to use the context.Done() method in Go",
+          "url": "https://dev.to/mcaci/how-to-use-the-context-done-method-in-go-22me"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:echo",
+      "topic_slug": "echo",
+      "node_id": "1qhqEYf6wYf5sfXgTUnmi",
+      "title": "echo",
+      "description": "High-performance, minimalist web framework focusing on ease and speed. Provides routing, middleware, data binding, validation, rendering. Features automatic TLS, HTTP/2, WebSocket support. Built-in middleware for CORS, JWT, logging, compression. Popular for RESTful APIs and microservices.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "High Performance, Extensible, Minimalist Go Web framework",
+          "url": "https://echo.labstack.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Echo Documentation",
+          "url": "https://echo.labstack.com/docs"
+        },
+        {
+          "raw_type": "article",
+          "title": "Best Practices for Structuring Scalable Golang APIs with Echo",
+          "url": "https://medium.com/@OTS415/structuring-golang-echo-apis-8d657de5dc7c"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:embedding-interfaces",
+      "topic_slug": "embedding-interfaces",
+      "node_id": "wK7GNTbOsMNs0N_1N4-dU",
+      "title": "Embedding Interfaces",
+      "description": "Create new interfaces by combining existing ones, promoting composition and reusability. Embedded interface methods automatically included. Enables interface hierarchies from simpler, focused interfaces. Supports composition over inheritance for modular, extensible systems.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Struct Embedding",
+          "url": "https://gobyexample.com/struct-embedding"
+        },
+        {
+          "raw_type": "article",
+          "title": "Interfaces and Embedding in Golang (Go)",
+          "url": "https://dev.to/diwakarkashyap/interfaces-and-embedding-in-golang-go-2em4"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:embedding-structs",
+      "topic_slug": "embedding-structs",
+      "node_id": "XLj16RmCe4-nKHW52Ebhf",
+      "title": "Embedding Structs",
+      "description": "Struct embedding includes one struct inside another without field names, making embedded fields directly accessible. Provides composition-based design following Go's philosophy of composition over inheritance. Enables flexible, reusable components.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Struct Embedding",
+          "url": "https://gobyexample.com/struct-embedding"
+        },
+        {
+          "raw_type": "article",
+          "title": "Interfaces and Embedding in Golang (Go)",
+          "url": "https://dev.to/diwakarkashyap/interfaces-and-embedding-in-golang-go-2em4"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:empty-interfaces",
+      "topic_slug": "empty-interfaces",
+      "node_id": "ueJ7ndK2SKniDVjN2aUlO",
+      "title": "Empty Interface",
+      "description": "The empty interface `interface{}` can hold values of any type since every type implements at least zero methods. Used for generic programming before Go 1.18 generics. Requires type assertions or type switches to access underlying values. Common in APIs handling unknown data types.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Empty Interface",
+          "url": "https://go.dev/tour/methods/14"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding the empty interface in Go",
+          "url": "https://dev.to/flrnd/understanding-the-empty-interface-in-go-4652"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:encodingjson",
+      "topic_slug": "encodingjson",
+      "node_id": "uB1fE15OprBcwN7p7ffJF",
+      "title": "Encoding / JSON",
+      "description": "This package provides robust and efficient functionalities for marshaling (encoding) Go data structures into JSON and unmarshaling (decoding) JSON into Go data structures. This process is largely handled through the json.Marshal and json.Unmarshal functions. For a Go struct to be properly encoded or decoded, its fields must be exported (start with an uppercase letter). Developers can control the J",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Encoding/json package",
+          "url": "https://pkg.go.dev/encoding/json"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go by Example: JSON",
+          "url": "https://gobyexample.com/json"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Use JSON in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-json-in-go"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:error-handling-basics",
+      "topic_slug": "error-handling-basics",
+      "node_id": "7EKUfKx7_7lZOs3d84iyL",
+      "title": "Error Handling Basics",
+      "description": "Go uses explicit error handling with error return values. Functions return error as last value. Check `if err != nil` pattern. Create errors with `errors.New()` or `fmt.Errorf()`. No exceptions - errors are values to be handled explicitly.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Error Handling and Go",
+          "url": "https://go.dev/blog/error-handling-and-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Error Handling in Go: A Comprehensive Guide",
+          "url": "https://medium.com/hprog99/mastering-error-handling-in-go-a-comprehensive-guide-fac34079833f"
+        },
+        {
+          "raw_type": "article",
+          "title": "Errors and Exception Handling in Golang",
+          "url": "https://golangdocs.com/errors-exception-handling-in-golang"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:error-interface",
+      "topic_slug": "error-interface",
+      "node_id": "0mMP6QR0V-Zi25njD1TFT",
+      "title": "error interface",
+      "description": "Built-in interface with single `Error() string` method. Any type implementing this method can represent an error. Central to Go's error handling philosophy, providing consistent error representation across all Go code. Fundamental for effective error handling.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Error Handling and Go",
+          "url": "https://go.dev/blog/error-handling-and-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Error Interface",
+          "url": "https://golang.ntxm.org/docs/error-handling-in-go/the-error-interface/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Error Handling in Go: A Comprehensive Guide",
+          "url": "https://medium.com/hprog99/mastering-error-handling-in-go-a-comprehensive-guide-fac34079833f"
+        },
+        {
+          "raw_type": "article",
+          "title": "Errors and Exception Handling in Golang",
+          "url": "https://golangdocs.com/errors-exception-handling-in-golang"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:errorsnew",
+      "topic_slug": "errorsnew",
+      "node_id": "dHk6Y0zFqxtCuDiQcHQsi",
+      "title": "errors.New",
+      "description": "Simplest way to create error values by taking a string message and returning an error implementing the error interface. Useful for simple, static error messages. Often combined with error wrapping or used for predefined error constants.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Error Handling and Go",
+          "url": "https://go.dev/blog/error-handling-and-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Error Interface",
+          "url": "https://golang.ntxm.org/docs/error-handling-in-go/the-error-interface/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Error Handling in Go: A Comprehensive Guide",
+          "url": "https://medium.com/hprog99/mastering-error-handling-in-go-a-comprehensive-guide-fac34079833f"
+        },
+        {
+          "raw_type": "article",
+          "title": "Creating Custom Errors in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/creating-custom-errors-in-go"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:escape-analysis",
+      "topic_slug": "escape-analysis",
+      "node_id": "ixoXVtRlrvTittqQq-Bgo",
+      "title": "Escape Analysis",
+      "description": "Compile-time optimization determining whether variables are allocated on stack (fast) or heap (GC required). Variables that \"escape\" their scope need heap allocation. Use `go build -gcflags=\"-m\"` to view decisions. Understanding helps minimize heap allocations and reduce GC pressure.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Escape Analysis in Go: Stack vs Heap Allocation Explained",
+          "url": "https://dev.to/abstractmusa/escape-analysis-in-go-stack-vs-heap-allocation-explained-506a"
+        },
+        {
+          "raw_type": "article",
+          "title": "Escape Analysis in Golang",
+          "url": "https://medium.com/@trinad536/escape-analysis-in-golang-fc81b78f3550"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:fan-in",
+      "topic_slug": "fan-in",
+      "node_id": "8BrnnM7HM-bijbUDgnW49",
+      "title": "Fan-in",
+      "description": "Concurrency pattern merging multiple input channels into single output channel. Allows collecting results from multiple goroutines. Typically implemented with select statement or separate goroutines for each input. Useful for aggregating parallel processing results.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Fan Out Fan In Concurrency Pattern Explained",
+          "url": "https://www.golinuxcloud.com/go-fan-out-fan-in/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Golang Concurrency Patterns: Fan in, Fan out",
+          "url": "https://medium.com/geekculture/golang-concurrency-patterns-fan-in-fan-out-1ee43c6830c4"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:fan-out",
+      "topic_slug": "fan-out",
+      "node_id": "pN8EsuKUPDUKyskodu_sC",
+      "title": "Fan-out",
+      "description": "Concurrency pattern distributing work from single source to multiple workers. Typically uses one input channel feeding multiple goroutines. Each worker processes items independently. Useful for parallelizing CPU-intensive tasks and increasing throughput through parallel processing.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Fan Out Fan In Concurrency Pattern Explained",
+          "url": "https://www.golinuxcloud.com/go-fan-out-fan-in/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Golang Concurrency Patterns: Fan in, Fan out",
+          "url": "https://medium.com/geekculture/golang-concurrency-patterns-fan-in-fan-out-1ee43c6830c4"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:fiber",
+      "topic_slug": "fiber",
+      "node_id": "5lJPsJwgy0_T7Xl6eQxuB",
+      "title": "fiber",
+      "description": "Fiber is an Express-inspired web framework built on fasthttp for exceptional performance. Provides familiar API with middleware, routing, templates, and WebSocket support. Popular for high-performance REST APIs and microservices requiring speed and simplicity.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Fiber",
+          "url": "https://gofiber.io/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Fiber Documentation",
+          "url": "https://docs.gofiber.io/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "gofiber/fiber",
+          "url": "https://github.com/gofiber/fiber"
+        },
+        {
+          "raw_type": "article",
+          "title": "Fiber Framework in Golang",
+          "url": "https://medium.com/@uzairahmed01/fiber-framework-in-golang-b5158499c9ad"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go Fiber: Start Building RESTful APIs on Golang",
+          "url": "https://dev.to/percoguru/getting-started-with-apis-in-golang-feat-fiber-and-gorm-2n34"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:flag",
+      "topic_slug": "flag",
+      "node_id": "-8E79Ns4q-uAgcxtghPzf",
+      "title": "flag",
+      "description": "Standard library package for parsing command-line flags. Supports string, int, bool, duration flags with default values and descriptions. Automatically generates help text. Simple API for basic CLI argument parsing before using frameworks like Cobra.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Flag",
+          "url": "https://go-language.org/go-docs/flag/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Use the Flag Package",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-the-flag-package-in-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "Advanced Golang Flag Techniques",
+          "url": "https://www.golinuxcloud.com/golang-flags-examples/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:floating-points",
+      "topic_slug": "floating-points",
+      "node_id": "EzaH378F3kOdQbczhVjhA",
+      "title": "Floating Points",
+      "description": "Two types: `float32` (single precision) and `float64` (double precision, default). Represent real numbers using IEEE 754 standard. Can introduce precision errors, not suitable for exact financial calculations. Essential for scientific computing and graphics.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Floating Points",
+          "url": "https://golangdocs.com/floating-point-numbers-in-golang"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Perform Float Point Calculations",
+          "url": "https://labex.io/tutorials/go-how-to-perform-float-point-calculations-419745"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:fmterrorf",
+      "topic_slug": "fmterrorf",
+      "node_id": "LVaWjZfij6-z_uwkAc0MK",
+      "title": "fmt.Errorf",
+      "description": "Creates formatted error messages using printf-style verbs. Supports `%w` verb for error wrapping (Go 1.13+) to create error chains preserving original errors while adding context. Essential for descriptive errors with dynamic values and debugging information.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "fmt",
+          "url": "https://pkg.go.dev/fmt"
+        },
+        {
+          "raw_type": "official",
+          "title": "Error Handling and Go",
+          "url": "https://go.dev/blog/error-handling-and-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Error Handling in Golang: The Power of fmt.Errorf ()",
+          "url": "https://thelinuxcode.com/mastering-error-handling-in-golang-the-power-of-fmt-errorf/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding the fmt.Errorf Function in Golang",
+          "url": "https://www.zetcode.com/golang/fmt-errorf/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:for-loop",
+      "topic_slug": "for-loop",
+      "node_id": "ijS-b400c9BldRO6PlrC1",
+      "title": "for loop",
+      "description": "Go's only looping construct, incredibly flexible for all iteration needs. Classic form: initialization, condition, post statements. Omit components for different behaviors (infinite, while-like). Use with `break`, `continue`, labels for nested loops. `for range` for convenient collection iteration.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "for",
+          "url": "https://go.dev/tour/flowcontrol/1"
+        },
+        {
+          "raw_type": "article",
+          "title": "Learn for loops in Go with Examples",
+          "url": "https://golangbot.com/loops/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:for-range",
+      "topic_slug": "for-range",
+      "node_id": "j0w6e8Pksh30PKDvXj3yk",
+      "title": "for-range",
+      "description": "Special form of for loop for iterating over arrays, slices, maps, strings, and channels. Returns index/key and value. For strings, returns rune index and rune value. For channels, returns only values. Use blank identifier `_` to ignore unwanted return values.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Range",
+          "url": "https://go.dev/wiki/Range"
+        },
+        {
+          "raw_type": "official",
+          "title": "for",
+          "url": "https://go.dev/tour/flowcontrol/1"
+        },
+        {
+          "raw_type": "article",
+          "title": "Select & For Range Channel in Go",
+          "url": "https://blog.devtrovert.com/p/select-and-for-range-channel-i-bet"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:functions-basics",
+      "topic_slug": "functions-basics",
+      "node_id": "MBafBhpEV_7qgDNPOIBBs",
+      "title": "Function Basics",
+      "description": "Reusable code blocks declared with `func` keyword. Support parameters, return values, multiple returns. First-class citizens - can be assigned to variables, passed as arguments. Fundamental building blocks for organizing code logic.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Functions",
+          "url": "https://go.dev/tour/basics/4"
+        },
+        {
+          "raw_type": "article",
+          "title": "Functions in Golang: Complete Guide with Examples",
+          "url": "https://medium.com/backend-forge/functions-in-golang-complete-guide-with-examples-2025-e07db0f98fd3"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:functions",
+      "topic_slug": "functions",
+      "node_id": "axhcEfCEoFkLey4AbA84A",
+      "title": "Functions",
+      "description": "First-class citizens in Go. Declared with `func` keyword, support parameters and return values. Can be assigned to variables, passed as arguments, returned from other functions. Support multiple return values, named returns, and variadic parameters. Building blocks of modular code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Functions",
+          "url": "https://go.dev/tour/basics/4"
+        },
+        {
+          "raw_type": "article",
+          "title": "Functions in Golang: Complete Guide with Examples",
+          "url": "https://medium.com/backend-forge/functions-in-golang-complete-guide-with-examples-2025-e07db0f98fd3"
+        },
+        {
+          "raw_type": "article",
+          "title": "Learn Go Functions",
+          "url": "https://www.learn-golang.org/en/Functions"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:garbage-collection",
+      "topic_slug": "garbage-collection",
+      "node_id": "GG0j6MNVudvITHEOXUxim",
+      "title": "Garbage Collection",
+      "description": "Go's GC automatically reclaims unreachable memory using concurrent, tri-color mark-and-sweep collector designed for minimal pause times. Runs concurrently with your program. Understanding GC helps write efficient programs that work well with automatic memory management.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Garbage Collections",
+          "url": "https://tip.golang.org/doc/gc-guide"
+        },
+        {
+          "raw_type": "article",
+          "title": "Garbage Collection In Go",
+          "url": "https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Go's Garbage Collection",
+          "url": "https://bwoff.medium.com/understanding-gos-garbage-collection-415a19cc485c"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:generic-functions",
+      "topic_slug": "generic-functions",
+      "node_id": "p7L4EUsjMnJlrbb-oDvlf",
+      "title": "Generic Functions",
+      "description": "Write functions working with multiple types using type parameters in square brackets like `func FunctionName[T any](param T) T`. Enable reusable algorithms maintaining type safety. Particularly useful for utility functions and data processing that don't depend on specific types.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Generic Functions",
+          "url": "https://go.dev/doc/tutorial/generics"
+        },
+        {
+          "raw_type": "article",
+          "title": "Generic Functions Comprehensive Guide",
+          "url": "https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:generic-types--interfaces",
+      "topic_slug": "generic-types--interfaces",
+      "node_id": "eWZzradMaH57H4mI7Qw6n",
+      "title": "Generic Types / Interfaces",
+      "description": "Create reusable data structures and interface definitions working with multiple types. Define with type parameters like `type Container[T any] struct { value T }`. Enable type-safe containers, generic slices, maps, and custom structures while maintaining Go's strong typing.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Generic Functions",
+          "url": "https://go.dev/doc/tutorial/generics"
+        },
+        {
+          "raw_type": "article",
+          "title": "Interfaces",
+          "url": "https://golangdocs.com/interfaces-in-golang"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding the Power of Go Interfaces",
+          "url": "https://medium.com/@jamal.kaksouri/understanding-the-power-of-go-interfaces-a-comprehensive-guide-835954101b7e"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:generics",
+      "topic_slug": "generics",
+      "node_id": "uEpTANOBHlFwCg5p44Lh0",
+      "title": "Generics",
+      "description": "Introduced in Go 1.18, allow functions and types to work with different data types while maintaining type safety. Enable reusable code without sacrificing performance. Use type parameters (square brackets) and constraints. Reduce code duplication while preserving strong typing.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Generic Functions",
+          "url": "https://go.dev/doc/tutorial/generics"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Generics",
+          "url": "https://blog.logrocket.com/understanding-generics-go-1-18/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:gin",
+      "topic_slug": "gin",
+      "node_id": "xM1uUCXNrJwfTgi9E75KV",
+      "title": "gin",
+      "description": "Popular HTTP web framework emphasizing performance and productivity. Lightweight foundation for APIs/web services with minimal boilerplate. Fast routing, middleware, JSON validation, error management, built-in rendering. Clean API for RESTful services. Includes parameter binding, uploads, static files.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Gin Web Framework",
+          "url": "https://gin-gonic.com/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building a RESTful API in Go Using the Gin Framework",
+          "url": "https://medium.com/@godusan/building-a-restful-api-in-go-using-the-gin-framework-a-step-by-step-tutorial-part-1-2-70372ebfa988"
+        },
+        {
+          "raw_type": "article",
+          "title": "Developing a RESTful API with Go and Gin",
+          "url": "https://go.dev/doc/tutorial/web-service-gin"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-build",
+      "topic_slug": "go-build",
+      "node_id": "LXqEJwGA_0cVUbF6DVwBG",
+      "title": "go build",
+      "description": "Compiles Go packages and dependencies into executable binaries. Supports cross-compilation for different OS/architectures via GOOS/GOARCH. Includes build constraints, custom flags, optimization levels. Produces statically linked binaries by default. Essential for deployment and distribution.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Compile and Install the Application",
+          "url": "https://go.dev/doc/tutorial/compile-install"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Build and Run Go Programs",
+          "url": "https://go-tutorial.com/build-and-run"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Build and Install Go Programs",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-clean",
+      "topic_slug": "go-clean",
+      "node_id": "bxXzXM0zUm1vux1DKOLyf",
+      "title": "go clean",
+      "description": "Removes object files and cached files from build process. Options include `-cache` for build cache and `-modcache` for module downloads. Useful for troubleshooting build issues, freeing disk space, and ensuring clean builds.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Clean",
+          "url": "https://golang.google.cn/cmd/go/internal/clean/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Make sure to clean your Go build cache",
+          "url": "https://www.adityathebe.com/how-to-clean-go-build-cache/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Golang Clean Architecture",
+          "url": "https://www.youtube.com/watch?v=F5KLmp6aB5Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-command",
+      "topic_slug": "go-command",
+      "node_id": "_3_tFOpQisx6DSP4Yc2E2",
+      "title": "go command",
+      "description": "Primary tool for managing Go source code with unified interface for compiling, testing, formatting, and managing dependencies. Includes subcommands like `build`, `run`, `test`, `fmt`, `mod`. Handles the entire development workflow automatically.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Command Documentation",
+          "url": "https://go.dev/doc/cmd"
+        },
+        {
+          "raw_type": "official",
+          "title": "Go Package",
+          "url": "https://pkg.go.dev/cmd/go"
+        },
+        {
+          "raw_type": "official",
+          "title": "Go Test",
+          "url": "https://go.dev/doc/tutorial/add-a-test"
+        },
+        {
+          "raw_type": "official",
+          "title": "Compile and Install Application",
+          "url": "https://go.dev/doc/tutorial/compile-install"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-doc",
+      "topic_slug": "go-doc",
+      "node_id": "SoD0P5k4aSVRN96XxR5on",
+      "title": "go doc",
+      "description": "Prints documentation for Go packages, types, functions, and methods extracted from specially formatted comments. Use `go doc package` or `go doc package.Function` to view specific documentation. Essential for exploring APIs and verifying documentation formatting.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go doc",
+          "url": "https://tip.golang.org/doc/comment"
+        },
+        {
+          "raw_type": "official",
+          "title": "go package",
+          "url": "https://pkg.go.dev/cmd/go"
+        },
+        {
+          "raw_type": "article",
+          "title": "Documenting Your Go Code with go doc",
+          "url": "https://go-cookbook.com/snippets/tools/go-doc"
+        },
+        {
+          "raw_type": "official",
+          "title": "Godoc: Documenting Go Code",
+          "url": "https://go.dev/blog/godoc"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-fmt",
+      "topic_slug": "go-fmt",
+      "node_id": "CPFiclXXVQCsbooA0iCEy",
+      "title": "go fmt",
+      "description": "Automatically formats Go source code according to official style guidelines. Standardizes indentation, spacing, alignment for consistent code style. Opinionated and non-configurable, eliminating formatting debates. Essential for clean, readable, community-standard code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go fmt",
+          "url": "https://go.dev/blog/gofmt"
+        },
+        {
+          "raw_type": "official",
+          "title": "fmt package",
+          "url": "https://pkg.go.dev/fmt"
+        },
+        {
+          "raw_type": "article",
+          "title": "go fmt Command Examples",
+          "url": "https://www.thegeekdiary.com/go-fmt-command-examples/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-generate",
+      "topic_slug": "go-generate",
+      "node_id": "TstTkc_-2RZMOqtSIklEM",
+      "title": "go generate",
+      "description": "The `go generate` command executes commands specified in `//go:generate` directives to generate Go source code. Used for code generation from templates, string methods, embedded resources, and running tools like protobuf compilers for build automation.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go generate",
+          "url": "https://go.dev/blog/generate"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use //go:generate",
+          "url": "https://blog.carlana.net/post/2016-11-27-how-to-use-go-generate/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Metaprogramming with Go",
+          "url": "https://dev.to/hlubek/metaprogramming-with-go-or-how-to-build-code-generators-that-parse-go-code-2k3j"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-install",
+      "topic_slug": "go-install",
+      "node_id": "k35Ogbvr9yTdJPo4RV4tM",
+      "title": "go install",
+      "description": "Compiles and installs packages and dependencies. Creates executables in `$GOPATH/bin` for main packages. Use `go install package@version` to install specific versions of tools. Commonly used for installing CLI tools system-wide.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go install",
+          "url": "https://go.dev/doc/install"
+        },
+        {
+          "raw_type": "official",
+          "title": "Managing Go Installations",
+          "url": "https://go.dev/doc/manage-install"
+        },
+        {
+          "raw_type": "article",
+          "title": "Golang: How To Use the Go Install Command",
+          "url": "https://thenewstack.io/golang-how-to-use-the-go-install-command/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-mod-init",
+      "topic_slug": "go-mod-init",
+      "node_id": "zWXJOXo8dRnuTvYlWOL6r",
+      "title": "go mod init",
+      "description": "Initializes new Go module by creating `go.mod` file with specified module path (typically repository URL). Marks directory as module root and enables module-based dependency management. First step for any new Go project.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go mod",
+          "url": "https://go.dev/doc/tutorial/create-module"
+        },
+        {
+          "raw_type": "official",
+          "title": "go mod reference",
+          "url": "https://go.dev/ref/mod"
+        },
+        {
+          "raw_type": "official",
+          "title": "Initiating Go Modules with Go Mod Init Explained Simply",
+          "url": "https://go.dev/blog/using-go-modules"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-mod-tidy",
+      "topic_slug": "go-mod-tidy",
+      "node_id": "6rwVq1bMSHoGatEfm9hkp",
+      "title": "go mod tidy",
+      "description": "Ensures `go.mod` matches source code by adding missing requirements and removing unused dependencies. Updates `go.sum` with checksums. Essential for maintaining clean dependency management and ensuring reproducible builds before production deployment.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go mod create",
+          "url": "https://go.dev/doc/tutorial/create-module"
+        },
+        {
+          "raw_type": "official",
+          "title": "go mod reference",
+          "url": "https://go.dev/ref/mod"
+        },
+        {
+          "raw_type": "article",
+          "title": "go mod commands",
+          "url": "https://blog.devtrovert.com/p/go-get-go-mod-tidy-commands"
+        },
+        {
+          "raw_type": "article",
+          "title": "What does go mod tidy do?",
+          "url": "https://golangbyexamples.com/go-mod-tidy/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-mod-vendor",
+      "topic_slug": "go-mod-vendor",
+      "node_id": "jOiAk5coeDNVXP2QiwQis",
+      "title": "go mod vendor",
+      "description": "Creates `vendor` directory with dependency copies for bundling with source code. Ensures builds work without internet access. Useful for deployment, air-gapped environments, and complete control over dependency availability.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Vendoring, or go mod vendor: What Is It?",
+          "url": "https://victoriametrics.com/blog/vendoring-go-mod-vendor/"
+        },
+        {
+          "raw_type": "article",
+          "title": "go mod commands",
+          "url": "https://blog.devtrovert.com/p/go-get-go-mod-tidy-commands"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go Modules and Vendors: Simplify Dependency Management",
+          "url": "https://mahmoudaljadan.medium.com/go-modules-and-vendors-simplify-dependency-management-in-your-golang-project-a29689eb26b1"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-mod",
+      "topic_slug": "go-mod",
+      "node_id": "5hnaPrYSBzxEIxFeg5tCK",
+      "title": "go mod",
+      "description": "Command-line tool for module management. `go mod init` creates module, `go mod tidy` cleans dependencies, `go mod download` fetches modules. Manages go.mod and go.sum files. Essential commands for dependency management and version control.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go mod",
+          "url": "https://go.dev/doc/tutorial/create-module"
+        },
+        {
+          "raw_type": "article",
+          "title": "go mod commands",
+          "url": "https://blog.devtrovert.com/p/go-get-go-mod-tidy-commands"
+        },
+        {
+          "raw_type": "article",
+          "title": "What does go mod tidy do?",
+          "url": "https://golangbyexamples.com/go-mod-tidy/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-run",
+      "topic_slug": "go-run",
+      "node_id": "rW4QPWIS2TWzFY0Ljny2N",
+      "title": "go run",
+      "description": "Compiles and executes Go programs in one step without creating executable files. Useful for testing, development, and running scripts. Takes Go source files as arguments. Convenient for quick execution during development without build artifacts.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go run",
+          "url": "https://go.dev/doc/tutorial/getting-started"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Build and Run Go Programs",
+          "url": "https://go-tutorial.com/build-and-run"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Build and Install Go Programs",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-test",
+      "topic_slug": "go-test",
+      "node_id": "EskFmwCwOmZHcVzedPOJI",
+      "title": "go test",
+      "description": "Command for running tests in Go packages. Automatically finds and executes functions starting with `Test`. Supports benchmarks (`Benchmark`), examples (`Example`), and sub-tests. Includes coverage analysis, parallel execution, and various output formats. Essential for TDD and quality assurance.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go test",
+          "url": "https://go.dev/doc/tutorial/add-a-test"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Write Unit Tests in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-write-unit-tests-in-go-using-go-test-and-the-testing-package"
+        },
+        {
+          "raw_type": "article",
+          "title": "Testing and Benchmarking in Go",
+          "url": "https://medium.com/hyperskill/testing-and-benchmarking-in-go-e33a54b413e"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-version",
+      "topic_slug": "go-version",
+      "node_id": "LnhQJVsEaS_gSijCUqAMq",
+      "title": "go version",
+      "description": "Displays the currently installed Go version, target OS, and architecture. Essential for verifying installation, troubleshooting environment issues, and ensuring compatibility across different development environments and teams.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Go Versions",
+          "url": "https://go.dev/dl/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Updating Go Version",
+          "url": "https://www.golang101.com/questions/how-to-update-golang-version/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Check My Golang Version (Win, MacOS, Linux)",
+          "url": "https://blog.finxter.com/how-to-check-my-golang-version-win-macos-linux/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:go-vet",
+      "topic_slug": "go-vet",
+      "node_id": "qoQ6_5MgTu3ur1mkEgqG5",
+      "title": "go vet",
+      "description": "Built-in tool analyzing Go source code for suspicious constructs likely to be bugs. Checks for unreachable code, incorrect printf formats, struct tag mistakes, and potential nil pointer dereferences. Automatically run by `go test`.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go vet",
+          "url": "https://pkg.go.dev/cmd/vet"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go: Vet Command Is More Powerful Than You Think",
+          "url": "https://medium.com/a-journey-with-go/go-vet-command-is-more-powerful-than-you-think-563e9fdec2f5"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using go vet for Code Analysis",
+          "url": "https://medium.com/a-journey-with-go/go-vet-command-is-more-powerful-than-you-think-563e9fdec2f5"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:goembed-for-embedding",
+      "topic_slug": "goembed-for-embedding",
+      "node_id": "iIPk-jK1vBCG_rKI_MPiu",
+      "title": "go:embed for embedding",
+      "description": "The `go:embed` directive embeds files and directories into Go binaries at compile time using `//go:embed` comments. Useful for including static assets, configs, and templates directly in executables, creating self-contained binaries that don't require external files.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go embed",
+          "url": "https://pkg.go.dev/embed"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Guide to Embedding Static Files in Go",
+          "url": "https://www.iamyadav.com/blogs/a-guide-to-embedding-static-files-in-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use go:embed in Go?",
+          "url": "https://www.scaler.com/topics/golang/golang-embed/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:goimports",
+      "topic_slug": "goimports",
+      "node_id": "6RpfXYHnOGmM6pZ6ZBb29",
+      "title": "goimports",
+      "description": "Tool automatically managing Go import statements by adding missing imports and removing unused ones while formatting code. More convenient than manual import management, integrates with editors for automatic execution on save.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go import",
+          "url": "https://go.dev/tour/basics/2"
+        },
+        {
+          "raw_type": "article",
+          "title": "An introduction to Packages, Imports and Modules in Go",
+          "url": "https://www.alexedwards.net/blog/an-introduction-to-packages-imports-and-modules"
+        },
+        {
+          "raw_type": "article",
+          "title": "Unraveling Packages and Imports in Golang",
+          "url": "https://medium.com/hprog99/unraveling-packages-and-imports-in-golang-a-comprehensive-guide-8f0ea320562a"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:golangci-lint",
+      "topic_slug": "golangci-lint",
+      "node_id": "hgiNcGh3ggf8dBJ8C0HCL",
+      "title": "golangci-lint",
+      "description": "Fast, parallel runner for multiple Go linters including staticcheck, go vet, and revive. Provides unified configuration, output formatting, and performance optimization. Streamlines code quality workflows through a single comprehensive tool.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "golangci-lint",
+          "url": "https://golangci-lint.run/"
+        },
+        {
+          "raw_type": "official",
+          "title": "golangci-linters",
+          "url": "https://golangci-lint.run/usage/linters/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "golangci/golangci-lint",
+          "url": "https://github.com/golangci/golangci-lint"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:gorm",
+      "topic_slug": "gorm",
+      "node_id": "fJdZIbAgOAB8nOEHQNsq6",
+      "title": "GORM",
+      "description": "Popular Object-Relational Mapping library for Go. Provides database abstraction with struct-based models, automatic migrations, associations, and query building. Supports multiple databases (MySQL, PostgreSQL, SQLite, SQL Server). Features hooks, transactions, and connection pooling.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "GORM - The fantastic ORM library for Golang",
+          "url": "https://gorm.io/"
+        },
+        {
+          "raw_type": "official",
+          "title": "gorm package",
+          "url": "https://pkg.go.dev/gorm.io/gorm"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started on Golang Gorm",
+          "url": "https://medium.com/@itskenzylimon/getting-started-on-golang-gorm-af49381caf3f"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:goroutines",
+      "topic_slug": "goroutines",
+      "node_id": "08QOxnF3rKEDekrkX7w1j",
+      "title": "Goroutines",
+      "description": "Lightweight threads managed by Go runtime enabling concurrent function execution. Created with `go` keyword prefix. Minimal memory overhead, can run thousands/millions concurrently. Runtime handles scheduling across CPU cores. Communicate through channels, fundamental to Go's concurrency.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Goroutines",
+          "url": "https://go.dev/tour/concurrency/1"
+        },
+        {
+          "raw_type": "article",
+          "title": "Goroutines - Concurrency in Golang",
+          "url": "https://golangbot.com/goroutines/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Goroutines in Golang: Understanding and Implementing",
+          "url": "https://medium.com/@jamal.kaksouri/goroutines-in-golang-understanding-and-implementing-concurrent-programming-in-go-600187bcfaa2"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:goto-discouraged",
+      "topic_slug": "goto-discouraged",
+      "node_id": "O29VoTfPiU8GZ_c16ZJIp",
+      "title": "goto (discouraged)",
+      "description": "Go includes `goto` statement but discourages its use. Can only jump to labels within same function. Creates unstructured code flow making programs hard to read, debug, and maintain. Use structured control flow (loops, functions, conditionals) instead. Rarely needed in modern Go programming.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Label scopes",
+          "url": "https://go.dev/ref/spec#Label_scopes"
+        },
+        {
+          "raw_type": "official",
+          "title": "Goto statements",
+          "url": "https://go.dev/ref/spec#Goto_statements"
+        },
+        {
+          "raw_type": "article",
+          "title": "Goto Statement Usage",
+          "url": "https://labex.io/tutorials/go-goto-statement-usage-149074"
+        },
+        {
+          "raw_type": "article",
+          "title": "GoLang \u2014 Jumping in the code using goto",
+          "url": "https://medium.com/@rajasoni1995/golang-jumping-in-the-code-using-goto-a36116831396"
+        },
+        {
+          "raw_type": "article",
+          "title": "Goto Hell With Labels in Golang",
+          "url": "https://programmingpercy.tech/blog/goto-hell-with-labels-in-golang/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:govulncheck",
+      "topic_slug": "govulncheck",
+      "node_id": "K__satcG2ETNRFBpPqrLw",
+      "title": "govulncheck",
+      "description": "Go's official vulnerability scanner checking code and dependencies for known security vulnerabilities. Reports packages with vulnerabilities from Go database, provides severity info and remediation advice. Essential for maintaining secure applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "govulncheck",
+          "url": "https://go.dev/doc/tutorial/govulncheck"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using govulncheck to Detect Vulnerable Dependencies in Go",
+          "url": "https://medium.com/@caring_smitten_gerbil_914/%EF%B8%8F-using-govulncheck-to-detect-vulnerable-dependencies-in-go-627a634f1edd"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:grpc--protocol-buffers",
+      "topic_slug": "grpc--protocol-buffers",
+      "node_id": "tBY6UB3gWZAxHPCFHoU_d",
+      "title": "gRPC & Protocol Buffers",
+      "description": "gRPC is a high-performance RPC framework using Protocol Buffers for serialization. Provides streaming, authentication, load balancing, and code generation from `.proto` files. Excellent for microservices with type safety, efficient binary format, and cross-language compatibility.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "gRPC package",
+          "url": "https://pkg.go.dev/google.golang.org/grpc"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building a GRPC Micro-Service in Go: A Comprehensive Guide",
+          "url": "https://medium.com/@leodahal4/building-a-grpc-micro-service-in-go-a-comprehensive-guide-82b6812ed253"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding gRPC in Golang: A Comprehensive Guide",
+          "url": "https://dev.to/madhusgowda/understanding-grpc-in-golang-a-comprehensive-guide-with-examples-84c"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:hello-world-in-go",
+      "topic_slug": "hello-world-in-go",
+      "node_id": "PHHviBSqhYDSNuHBFbw3l",
+      "title": "Hello World in Go",
+      "description": "Traditional first program demonstrating basic structure: `package main`, importing `fmt`, and `main()` function using `fmt.Println()`. Teaches Go syntax, compilation, execution, and verifies development environment setup. Entry point for learning Go.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Go Documentation",
+          "url": "https://go.dev/doc/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Get Started with Go",
+          "url": "https://go.dev/doc/tutorial/getting-started"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started with Go and the Web",
+          "url": "https://dev.to/markmunyaka/getting-started-with-go-and-the-web-hello-world-nal"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Golang: A Comprehensive Guide",
+          "url": "https://www.learn-golang.org/en/Hello%2C_World%21"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:history-of-go",
+      "topic_slug": "history-of-go",
+      "node_id": "2rlmLn_yQQV-7DpX1qT98",
+      "title": "History of Go",
+      "description": "Created at Google in 2007 by Griesemer, Pike, and Thompson. Announced publicly in 2009, version 1.0 in 2012. Key milestones include modules (Go 1.11) and generics (Go 1.18). Designed for large-scale software development combining efficiency and simplicity.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Go Documentation",
+          "url": "https://go.dev/doc/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go \u2014 How It All Began. A look back at the beginning of Go",
+          "url": "https://medium.com/geekculture/learn-go-part-1-the-beginning-723746f2e8b0"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Golang: A Comprehensive Guide",
+          "url": "https://www.learn-golang.org/en/Hello%2C_World%21"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:httptest--for-http-tests",
+      "topic_slug": "httptest--for-http-tests",
+      "node_id": "Zt4FpqCEVlpMzclJeDiMs",
+      "title": "httptest for HTTP Tests",
+      "description": "The `httptest` package provides utilities for testing HTTP servers and clients without network connections. Includes `httptest.Server`, `ResponseRecorder`, and helpers for creating test requests. Essential for testing handlers, middleware, and HTTP services.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "httptest package",
+          "url": "https://pkg.go.dev/net/http/httptest"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using httptest.Server in Go to Mock and Test External API Calls",
+          "url": "https://medium.com/@ullauri.byron/using-httptest-server-in-go-to-mock-and-test-external-api-calls-68ce444cf934"
+        },
+        {
+          "raw_type": "article",
+          "title": "Httptest Example",
+          "url": "https://golang.cafe/blog/golang-httptest-example.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:if-else",
+      "topic_slug": "if-else",
+      "node_id": "2XaDvTJ5pyChgt1GFZF8W",
+      "title": "if-else",
+      "description": "Basic conditional statements for binary decision making. `if` tests condition, `else` handles alternative path. Can include optional initialization statement. No parentheses needed around condition but braces required. Foundation of program control flow.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "if else",
+          "url": "https://go.dev/tour/flowcontrol/7"
+        },
+        {
+          "raw_type": "article",
+          "title": "If-else: Gobyexample",
+          "url": "https://gobyexample.com/if-else"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:if",
+      "topic_slug": "if",
+      "node_id": "dC-1LotbW29C4zZJv6ak6",
+      "title": "if",
+      "description": "Basic conditional statement for executing code based on boolean conditions. Supports optional initialization statement before condition check. No parentheses required around condition but braces mandatory. Can be chained with else if for multiple conditions. Foundation of control flow.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "if else",
+          "url": "https://go.dev/tour/flowcontrol/7"
+        },
+        {
+          "raw_type": "article",
+          "title": "If-else: Gobyexample",
+          "url": "https://gobyexample.com/if-else"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding the If Statement in Golang",
+          "url": "https://www.zetcode.com/golang/if-else-keywords/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:integers-signed-unsigned",
+      "topic_slug": "integers-signed-unsigned",
+      "node_id": "EAqL8Up3J63AWCZnqQph0",
+      "title": "Integers (Signed, Unsigned)",
+      "description": "Signed integers (int8, int16, int32, int64) handle positive/negative numbers. Unsigned (uint8, uint16, uint32, uint64) handle only non-negative but larger positive range. `int`/`uint` are platform-dependent. Choose based on range and memory needs.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Integers",
+          "url": "https://golangdocs.com/integers-in-golang"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Integer Types in Go",
+          "url": "https://medium.com/@LukePetersonAU/understanding-integer-types-in-go-a55453f5ae00"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:interfaces-basics",
+      "topic_slug": "interfaces-basics",
+      "node_id": "nkONsPlFYCMqzWHTm_EPB",
+      "title": "Interfaces Basics",
+      "description": "Define contracts through method signatures. Types automatically satisfy interfaces by implementing required methods. Declared with `type InterfaceName interface{}` syntax. Enable polymorphism and flexible, testable code depending on behavior rather than concrete types.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Understanding Interfaces in Go",
+          "url": "https://golang.ntxm.org/docs/structs-and-interfaces/understanding-interfaces-in-go/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Interfaces - Go by Example",
+          "url": "https://gobyexample.com/interfaces"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Go Interfaces: From Basics to Best Practices",
+          "url": "https://abubakardev0.medium.com/mastering-go-interfaces-from-basics-to-best-practices-36912b65aa3d"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:interfaces",
+      "topic_slug": "interfaces",
+      "node_id": "hIRMnPyHRGh8xCU8BTS2n",
+      "title": "Interfaces",
+      "description": "Define contracts specifying method signatures without implementation. Types satisfy interfaces implicitly by implementing required methods. Enable polymorphism and loose coupling. Empty interface `interface{}` accepts any type. Foundation of Go's type system and composition patterns.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Interfaces - Go by Example",
+          "url": "https://gobyexample.com/interfaces"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Go Interfaces: From Basics to Best Practices",
+          "url": "https://abubakardev0.medium.com/mastering-go-interfaces-from-basics-to-best-practices-36912b65aa3d"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:interpreted-string-literals",
+      "topic_slug": "interpreted-string-literals",
+      "node_id": "7h08RUNC_uAMI6vnGdcZ1",
+      "title": "Interpreted String Literals",
+      "description": "Enclosed in double quotes (`\"`) and process escape sequences like `\\n`, `\\t`, `\\\"`. Support Unicode characters and formatting. Most common string type, ideal for text needing control characters but requiring escaping of special characters.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to handle string literal syntax",
+          "url": "https://www.digitalocean.com/community/tutorials/an-introduction-to-working-with-strings-in-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "Lexical elements: Interpreted string literals",
+          "url": "https://boldlygo.tech/archive/2023-01-30-lexical-elements-interpreted-string-literals/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:introduction-to-go",
+      "topic_slug": "introduction-to-go",
+      "node_id": "WwLLyHL5psm0GOI9bmOne",
+      "title": "Introduction to Go",
+      "description": "Statically typed, compiled programming language developed at Google. Designed for simplicity, concurrency, and performance. Features garbage collection, strong typing, efficient compilation, built-in concurrency with goroutines and channels. Excellent for backend services, CLI tools, and distributed systems.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Go",
+          "url": "https://go.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Go Documentation",
+          "url": "https://go.dev/doc/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Get Started with Go",
+          "url": "https://go.dev/doc/tutorial/getting-started"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started with Go and the Web",
+          "url": "https://dev.to/markmunyaka/getting-started-with-go-and-the-web-hello-world-nal"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:io--file-handling",
+      "topic_slug": "io--file-handling",
+      "node_id": "7SYEXD5r9WKEDfecQdO5d",
+      "title": "I/O & File Handling",
+      "description": "Go's I/O system provides comprehensive file and stream handling through `io` package interfaces (Reader, Writer, Closer) and `os` package file operations. The interface-based design allows working with files, network connections, and buffers using consistent patterns.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Building High-Performance File Processing Pipelines in Go",
+          "url": "https://dev.to/aaravjoshi/building-high-performance-file-processing-pipelines-in-go-a-complete-guide-3opm"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering File I/O in Go: A Complete Guide",
+          "url": "https://thelinuxcode.com/golang-os-open/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Golang Fundamentals: File Handling and I/O",
+          "url": "https://medium.com/@nagarjun_nagesh/golang-fundamentals-file-handling-and-i-o-502d50b96795"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:iterating-maps",
+      "topic_slug": "iterating-maps",
+      "node_id": "Q6ic-AGG_gnXEOdmqom89",
+      "title": "Iterating Maps",
+      "description": "Use `for range` to iterate over maps, returns key and value pairs. Iteration order is random for security reasons. Use blank identifier `_` to ignore key or value. Cannot modify map during iteration unless creating new map. Safe to delete during iteration.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Iterating Over Maps in Go: Methods, Order, and Best Practices",
+          "url": "https://leapcell.io/blog/iterating-over-maps-in-go-methods-order-and-best-practices"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to iterate over and order a map in Go",
+          "url": "https://freshman.tech/snippets/go/iterate-over-map/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:iterating-strings",
+      "topic_slug": "iterating-strings",
+      "node_id": "PC-azlCZ6wDCn1_nRyhUn",
+      "title": "Iterating Strings",
+      "description": "Iterate over strings with `for range` to get runes (Unicode code points) not bytes. Returns index and rune value. Direct indexing `str[i]` gives bytes. Use `[]rune(str)` to convert to rune slice for random access. Important for Unicode handling.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Iterators in GoLang",
+          "url": "https://blog.alexoglou.com/posts/iterators-golang/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to iterate string in Go",
+          "url": "https://labex.io/tutorials/go-how-to-iterate-string-in-go-446115"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Golang String Manipulation: Functions and Examples",
+          "url": "https://learngolanguage.com/mastering-golang-string-manipulation-essential-functions-and-techniques-for-2024/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:logging",
+      "topic_slug": "logging",
+      "node_id": "mGia5cJ7HFVXM0Fx5xhQE",
+      "title": "Logging",
+      "description": "Essential for monitoring, debugging, maintaining production applications. Standard `log` package and `slog` (Go 1.21+) for structured logging. Popular libraries: Zap (high-performance), Zerolog (zero-allocation), Logrus (feature-rich). Use appropriate log levels and structured messages.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Structured Logging with slog",
+          "url": "https://go.dev/blog/slog"
+        },
+        {
+          "raw_type": "article",
+          "title": "Logging in Go with Slog: The Ultimate Guide",
+          "url": "https://betterstack.com/community/guides/logging/logging-in-go/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Effective Logging in Go: Best Practices and Implementation",
+          "url": "https://dev.to/fazal_mansuri_/effective-logging-in-go-best-practices-and-implementation-guide-23hp"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:loops",
+      "topic_slug": "loops",
+      "node_id": "orpxzKHFcf1BDQSefHl6O",
+      "title": "Loops",
+      "description": "Go has only one looping construct: the flexible `for` loop. Basic form has initialization, condition, post statement. Supports `for range` for arrays, slices, maps, strings, channels. Can create infinite loops or while-style loops. Control with `break` and `continue`.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Loops",
+          "url": "https://go.dev/tour/flowcontrol/1"
+        },
+        {
+          "raw_type": "article",
+          "title": "Loops in GoLang. GoLang Loops, For Loop, While loop",
+          "url": "https://nitish08.medium.com/loops-in-golang-d44fb39b08e"
+        },
+        {
+          "raw_type": "article",
+          "title": "Everything You Need to Know About for Loops in Go",
+          "url": "https://www.bytesizego.com/blog/golang-for-loop"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:make",
+      "topic_slug": "make",
+      "node_id": "PWrfmYnOJRlwgdFat91bC",
+      "title": "make()",
+      "description": "Creates and initializes slices, maps, and channels. Unlike `new()`, returns usable values. Examples: `make([]int, 5, 10)` for slices, `make(map[string]int)` for maps, `make(chan int)` for channels. Essential for initializing reference types.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "make",
+          "url": "https://go.dev/tour/moretypes/13"
+        },
+        {
+          "raw_type": "article",
+          "title": "The new() vs make() Functions in Go",
+          "url": "https://www.freecodecamp.org/news/new-vs-make-functions-in-go/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Make vs New in Golang - Video",
+          "url": "https://www.youtube.com/watch?v=1rBhOCh7ojg"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding the make Function in Golang",
+          "url": "https://www.zetcode.com/golang/builtins-make/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:maps",
+      "topic_slug": "maps",
+      "node_id": "XupDuVRsM5VjdaNs7JaT5",
+      "title": "Maps",
+      "description": "Built-in associative data type mapping keys to values. Reference types created with `make(map[KeyType]ValueType)` or map literals. Keys must be comparable types. Support insertion, deletion, lookup operations. Check existence with comma ok idiom: `value, ok := map[key]`.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Maps",
+          "url": "https://go.dev/blog/maps"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Go Maps: Best Practices & Pro Tips",
+          "url": "https://blog.stackademic.com/golang-use-maps-like-pro-the-proper-way-to-use-maps-in-golang-7a20c805540c"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding HashMaps in DSA",
+          "url": "https://medium.com/@nikhil.cse16/understanding-hashmaps-in-dsa-5450c6ec2e75"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:melody",
+      "topic_slug": "melody",
+      "node_id": "N0EG-7sU9lGFwgidXuPkV",
+      "title": "Melody",
+      "description": "Melody is a minimalist WebSocket framework for Go providing simple session management, message broadcasting, and connection handling. Features include rooms, automatic ping/pong, message limits, and clean integration with existing web frameworks for real-time apps.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Melody Package",
+          "url": "https://pkg.go.dev/github.com/olahol/melody"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "olahol/melody: Minimalist websocket framework",
+          "url": "https://github.com/olahol/melody"
+        },
+        {
+          "raw_type": "article",
+          "title": "Build a Realtime Chat Server With Go and WebSockets",
+          "url": "https://gabrieltanner.org/blog/realtime-chat-go-websockets/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:memory-management",
+      "topic_slug": "memory-management",
+      "node_id": "ItMgLOzaUCCdiTk221pAF",
+      "title": "Memory Management",
+      "description": "Largely automatic through garbage collection. Runtime decides stack (fast, auto-cleaned) vs heap (slower, GC required) allocation via escape analysis. Understanding allocation patterns and avoiding memory leaks helps write efficient, scalable Go programs.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "The Go Memory Model",
+          "url": "https://go.dev/ref/mem"
+        },
+        {
+          "raw_type": "article",
+          "title": "An overview of memory management in Go",
+          "url": "https://medium.com/safetycultureengineering/an-overview-of-memory-management-in-go-9a72ec7c76a8"
+        },
+        {
+          "raw_type": "article",
+          "title": "How Go Manages Memory and Why It's So Efficient",
+          "url": "https://medium.com/@siddharthnarayan/how-go-manages-memory-and-why-its-so-efficient-68c13133ba1c"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:memory-mgmt-in-depth",
+      "topic_slug": "memory-mgmt-in-depth",
+      "node_id": "_2JpTdzmXxszFCauJONCi",
+      "title": "Memory Management in Depth",
+      "description": "Deep memory management involves understanding garbage collection, escape analysis, allocation patterns, and optimization techniques. Covers stack vs heap allocation, memory pooling, reducing allocations, and GC interaction for high-performance applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "The Go Memory Model",
+          "url": "https://go.dev/ref/mem"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Deep Dive into Golang Memory",
+          "url": "https://mtardy.com/posts/memory-golang/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How Go Manages Memory and Why It's So Efficient",
+          "url": "https://medium.com/@siddharthnarayan/how-go-manages-memory-and-why-its-so-efficient-68c13133ba1c"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:methods-vs-functions",
+      "topic_slug": "methods-vs-functions",
+      "node_id": "jx1vln8hqRJqVZfJi6CST",
+      "title": "Methods vs Functions",
+      "description": "Methods are functions with receiver arguments, defined outside type declaration. Enable object-like behavior on types. Functions are standalone, methods belong to specific types. Methods can have value or pointer receivers. Both can accept parameters and return values.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Methods",
+          "url": "https://go.dev/tour/methods/1"
+        },
+        {
+          "raw_type": "article",
+          "title": "Golang Functions vs Methods, why and when to use them",
+          "url": "https://medium.com/@yuseferi/golang-functions-vs-methods-why-and-when-to-use-them-5b63fa1dc7f3"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:mocks-and-stubs",
+      "topic_slug": "mocks-and-stubs",
+      "node_id": "LjLbm4JEZ19howOkju7zQ",
+      "title": "Mocks and Stubs",
+      "description": "Mocks and stubs replace dependencies with controlled implementations for isolated testing. Stubs provide predefined responses while mocks verify method calls. Go's interfaces make mocking natural. Essential for testing without external dependencies.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Test-Driven Development in Golang: Stubbing vs Mocking vs Not Mocking",
+          "url": "https://blog.stackademic.com/test-driven-development-in-golang-stubbing-vs-mocking-vs-not-mocking-5f23f25b3a63"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mock Solutions for Golang Unit Test",
+          "url": "https://laiyuanyuan-sg.medium.com/mock-solutions-for-golang-unit-test-a2b60bd3e157"
+        },
+        {
+          "raw_type": "article",
+          "title": "Writing unit tests in Golang Part 2: Mocking",
+          "url": "https://medium.com/nerd-for-tech/writing-unit-tests-in-golang-part-2-mocking-d4fa1701a3ae"
+        },
+        {
+          "raw_type": "video",
+          "title": "Mocks (Mocking), Stubs, and Fakes in Software Testing",
+          "url": "https://www.youtube.com/watch?v=Ir7dl7XX9r4"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:modules--dependencies",
+      "topic_slug": "modules--dependencies",
+      "node_id": "kep_536v13aS1V9XwHKSr",
+      "title": "Modules & Dependencies",
+      "description": "Go modules are the dependency management system introduced in Go 1.11. Define module with `go.mod` file containing module path and dependencies. Use `go get` to add dependencies, `go mod tidy` to clean up. Supports semantic versioning and replacement directives. Essential for modern Go development.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "go mod",
+          "url": "https://go.dev/doc/tutorial/create-module"
+        },
+        {
+          "raw_type": "official",
+          "title": "go mod reference",
+          "url": "https://go.dev/ref/mod"
+        },
+        {
+          "raw_type": "article",
+          "title": "go mod commands",
+          "url": "https://blog.devtrovert.com/p/go-get-go-mod-tidy-commands"
+        },
+        {
+          "raw_type": "article",
+          "title": "What does go mod tidy do?",
+          "url": "https://golangbyexamples.com/go-mod-tidy/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:multiple-return-values",
+      "topic_slug": "multiple-return-values",
+      "node_id": "ai2s1bwiTcPzrXQTxFDwV",
+      "title": "Multiple Return Values",
+      "description": "Go functions can return multiple values, commonly used for returning result and error. Syntax: `func name() (Type1, Type2)`. Caller receives all returned values or uses blank identifier `_` to ignore unwanted values. Idiomatic for error handling pattern.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to manage Go function multiple returns",
+          "url": "https://labex.io/tutorials/go-how-to-manage-go-function-multiple-returns-419825"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:mutexes",
+      "topic_slug": "mutexes",
+      "node_id": "6ydgmac11Zu9Ithe0kKj9",
+      "title": "Mutexes",
+      "description": "Mutual exclusion locks from sync package ensuring only one goroutine accesses shared resource at a time. Use `Lock()` before and `Unlock()` after critical section. RWMutex allows multiple readers or single writer. Essential for protecting shared data from race conditions.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Mutex and How to Use it in Golang?",
+          "url": "https://dev.to/lincemathew/what-is-mutex-and-how-to-use-it-in-golang-1m1i"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Mutex in Go Introduction",
+          "url": "https://kamnagarg-10157.medium.com/understanding-mutex-in-go-5f41199085b9"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:named-return-values",
+      "topic_slug": "named-return-values",
+      "node_id": "HIvwT8Dcr6B2NjOjy9hFv",
+      "title": "Named Return Values",
+      "description": "Function return parameters can be named and treated as variables within function. Initialized to zero values. `return` statement without arguments returns current values of named parameters. Improves readability and enables easier refactoring but use judiciously.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Named Return Values",
+          "url": "https://yourbasic.org/golang/named-return-values-parameters/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Named Return Values in Go",
+          "url": "https://golang.ntxm.org/docs/functions-in-go/named-return-values/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Named Parameters in Go: Use Cases and Cautions",
+          "url": "https://medium.com/@adamszpilewicz/named-parameters-in-go-use-cases-and-cautions-e0e462cafdaa"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:nethttp-standard",
+      "topic_slug": "nethttp-standard",
+      "node_id": "NMLmbKjfMSqz-Iz2CooCl",
+      "title": "net/http Standard",
+      "description": "Standard library package for HTTP client/server functionality. Provides HTTP server with routing, middleware support, client for making requests. Handles TLS, HTTP/2, cookies, multipart forms. Foundation for web development without external frameworks.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "http package",
+          "url": "https://pkg.go.dev/net/http"
+        },
+        {
+          "raw_type": "article",
+          "title": "net/http package in Go",
+          "url": "https://medium.com/@emonemrulhasan35/net-http-package-in-go-e178c67d87f1"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Make an HTTP Server in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-make-an-http-server-in-go"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:orms--db-access",
+      "topic_slug": "orms--db-access",
+      "node_id": "VcHHuIZ4lGzTxOoTwxA3e",
+      "title": "ORMs & DB Access",
+      "description": "Go offers multiple database access approaches: raw SQL with database/sql, ORMs like GORM/Ent, and query builders. Choose based on complexity needs - raw SQL for performance, ORMs for rapid development, query builders for balance. Consider connection pooling and migrations.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Go ORMs Compared",
+          "url": "https://dev.to/encore/go-orms-compared-2c8g"
+        },
+        {
+          "raw_type": "article",
+          "title": "Master Data Management in Go: ORM & Libraries Guide",
+          "url": "https://medium.com/@romulo.gatto/master-data-management-in-go-orm-libraries-guide-cd30cd65cba0"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:os",
+      "topic_slug": "os",
+      "node_id": "9S1gkzBvt32uLy0IFZjrg",
+      "title": "os",
+      "description": "Standard library package providing operating system interface. Handles file operations, environment variables, process management, and system information. Includes functions for file I/O, directory operations, process control, and cross-platform OS interactions. Essential for system programming.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "os package",
+          "url": "https://pkg.go.dev/os"
+        },
+        {
+          "raw_type": "article",
+          "title": "An Overview of Go's os and io Packages",
+          "url": "https://reintech.io/blog/an-overview-of-gos-os-and-io-packages"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:package-import-rules",
+      "topic_slug": "package-import-rules",
+      "node_id": "dA8SMhCev1NWNM1Tsxu57",
+      "title": "Package Import Rules",
+      "description": "Key rules: no circular imports, main package for executables, lowercase package names, exported identifiers start with capitals. Import paths are unique identifiers. Understanding ensures proper structure and follows Go conventions.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "os package",
+          "url": "https://pkg.go.dev/os"
+        },
+        {
+          "raw_type": "article",
+          "title": "Importing Packages in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/importing-packages-in-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Comprehensive Guide to Importing and Using Packages",
+          "url": "https://learnscripting.org/a-comprehensive-guide-to-importing-and-using-packages-in-go/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:packages",
+      "topic_slug": "packages",
+      "node_id": "AcYzrGFrwmeVYFEfhEiSZ",
+      "title": "Packages",
+      "description": "Fundamental unit of code organization in Go. Group related functions, types, and variables. Defined by package declaration at file top. Exported names start with capital letters. Import with `import` statement. Enable modularity, reusability, and namespace management.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "os package",
+          "url": "https://pkg.go.dev/os"
+        },
+        {
+          "raw_type": "article",
+          "title": "Importing Packages in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/importing-packages-in-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Comprehensive Guide to Importing and Using Packages",
+          "url": "https://learnscripting.org/a-comprehensive-guide-to-importing-and-using-packages-in-go/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:panic-and-recover",
+      "topic_slug": "panic-and-recover",
+      "node_id": "2KyzUjcMiMgo_AvlPjYbx",
+      "title": "panic and recover",
+      "description": "`panic()` stops execution and unwinds stack, `recover()` catches panics in deferred functions. Use sparingly for unrecoverable errors. While Go emphasizes explicit errors, panic/recover serve as safety net for exceptional situations.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Defer, Panic, and Recover",
+          "url": "https://go.dev/blog/defer-panic-and-recover"
+        },
+        {
+          "raw_type": "article",
+          "title": "Handling Panics in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/handling-panics-in-go"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:pgx",
+      "topic_slug": "pgx",
+      "node_id": "cOj6klfBzTQQ8G75umLQZ",
+      "title": "pgx",
+      "description": "pgx is a pure Go PostgreSQL driver providing both database/sql compatibility and native PostgreSQL features. Offers better performance than lib/pq, includes arrays, JSON support, connection pooling, and PostgreSQL-specific features like LISTEN/NOTIFY.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pgx package",
+          "url": "https://pkg.go.dev/github.com/jackc/pgx"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started with PostgreSQL in Go using PGX",
+          "url": "https://betterstack.com/community/guides/scaling-go/postgresql-pgx-golang/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:pipeline",
+      "topic_slug": "pipeline",
+      "node_id": "loozcCzPzkni7BOdcvt1S",
+      "title": "Pipeline",
+      "description": "Concurrency pattern chaining processing stages where output of one stage becomes input of next. Each stage runs concurrently using goroutines and channels. Enables parallel processing and separation of concerns. Common in data processing, transformation workflows, and streaming applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Concurrency Pipelines",
+          "url": "https://go.dev/blog/pipelines"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pipeline Pattern in Go: A Practical Guide",
+          "url": "https://dev.to/leapcell/pipeline-pattern-in-go-a-practical-guide-5dmm"
+        },
+        {
+          "raw_type": "article",
+          "title": "Applying Modern Go Concurrency Patterns to Data Pipelines",
+          "url": "https://medium.com/amboss/applying-modern-go-concurrency-patterns-to-data-pipelines-b3b5327908d4"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:plugins--dynamic-loading",
+      "topic_slug": "plugins--dynamic-loading",
+      "node_id": "NlkrCAdUCJ7kU9meQJM5_",
+      "title": "Plugins & Dynamic Loading",
+      "description": "Go's plugin system allows loading shared libraries (.so files) at runtime using the `plugin` package. Built with `go build -buildmode=plugin`. Enables modular architectures but has limitations: Unix-only, version compatibility issues, and complexity.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "plugin package",
+          "url": "https://pkg.go.dev/plugin"
+        },
+        {
+          "raw_type": "article",
+          "title": "Plugins with Go How to use Go's standard",
+          "url": "https://medium.com/profusion-engineering/plugins-with-go-7ea1e7a280d3"
+        },
+        {
+          "raw_type": "article",
+          "title": "Plugin in Golang",
+          "url": "https://dev.to/jacktt/plugin-in-golang-4m67"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:pointer-receivers",
+      "topic_slug": "pointer-receivers",
+      "node_id": "6NKgb-OjGdT3QsMrDU05b",
+      "title": "Pointer Receivers",
+      "description": "Methods receive pointer to struct rather than copy using `func (p *Type) methodName()` syntax. Necessary when method modifies receiver state or struct is large. Go automatically handles value/pointer conversion when calling methods.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Pointer Receivers",
+          "url": "https://go.dev/tour/methods/4"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Value and Pointer Receivers in Golang",
+          "url": "https://medium.com/the-bug-shots/understanding-value-and-pointer-receivers-in-golang-82dd73a3eef9"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to define methods with pointer receivers",
+          "url": "https://labex.io/tutorials/go-how-to-define-methods-with-pointer-receivers-437937"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:pointers-basics",
+      "topic_slug": "pointers-basics",
+      "node_id": "P0fUxEbb3bVYg35VWyg8R",
+      "title": "Pointer Basics",
+      "description": "Variables storing memory addresses of other variables. Declared with `*Type`, dereferenced with `*ptr`, address obtained with `&var`. Enable efficient memory usage and allow functions to modify caller's data. Essential for performance and reference semantics.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Pointers",
+          "url": "https://go.dev/tour/moretypes/1"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:pointers-with-structs",
+      "topic_slug": "pointers-with-structs",
+      "node_id": "NfYlEY8f_YPITT6Exp3Iw",
+      "title": "Pointers with Structs",
+      "description": "Pointers to structs enable efficient passing of large structures and allow modification of struct fields. Access fields with `(*ptr).field` or shorthand `ptr.field`. Common for method receivers and when structs need to be modified by functions. Essential for memory efficiency.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Pointers to structs",
+          "url": "https://go.dev/tour/moretypes/4"
+        },
+        {
+          "raw_type": "article",
+          "title": "When should I use pointer and struct in golang?",
+          "url": "https://medium.com/@wasiualhasib/working-with-structs-and-pointers-in-go-32a00a460cea"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:pointers",
+      "topic_slug": "pointers",
+      "node_id": "naBjKGrTBzlpapXzLHfvG",
+      "title": "Pointers",
+      "description": "Variables storing memory addresses of other variables. Enable efficient memory usage and allow functions to modify values. Declared with `*Type`, address obtained with `&`. No pointer arithmetic for safety. Essential for performance and building data structures.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Pointers",
+          "url": "https://go.dev/tour/moretypes/1"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Value and Pointer Receivers in Golang",
+          "url": "https://medium.com/the-bug-shots/understanding-value-and-pointer-receivers-in-golang-82dd73a3eef9"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:pprof",
+      "topic_slug": "pprof",
+      "node_id": "Blz9cpgKhuqtY75oUQw6I",
+      "title": "pprof",
+      "description": "Built-in profiling tool for analyzing program performance. Profiles CPU usage, memory allocation, goroutines, blocking operations. Import `net/http/pprof` for web interface or use `go tool pprof` for analysis. Essential for performance optimization and bottleneck identification.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "pprof package",
+          "url": "https://pkg.go.dev/runtime/pprof"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go Profiling with pprof: A Step-by-Step Guide",
+          "url": "https://medium.com/@jhathnagoda/go-profiling-with-pprof-a-step-by-step-guide-a62323915cb0"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:publishing-modules",
+      "topic_slug": "publishing-modules",
+      "node_id": "CysLmwRqmQzOGAKM01AKF",
+      "title": "Publishing Modules",
+      "description": "Share Go code through version control systems using semantic versioning tags. Go proxy system automatically discovers and serves modules. Follow Go conventions, maintain documentation, and ensure backward compatibility to contribute to the ecosystem.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Publishing Modules",
+          "url": "https://go.dev/doc/modules/publishing"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Create & Publish a Go Public Package",
+          "url": "https://medium.com/the-godev-corner/how-to-create-publish-a-go-public-package-9034e6bfe4a9"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:race-detection",
+      "topic_slug": "race-detection",
+      "node_id": "GoV8yaQARJmO47e0_l_GY",
+      "title": "Race Detection",
+      "description": "Built-in tool for detecting race conditions in concurrent programs. Enabled with `-race` flag during build/test/run. Detects unsynchronized access to shared variables from multiple goroutines. Performance overhead in race mode. Essential for debugging concurrent code safety.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Race Detection",
+          "url": "https://go.dev/doc/articles/race_detector"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go: Race Detector with ThreadSanitizer",
+          "url": "https://medium.com/a-journey-with-go/go-race-detector-with-threadsanitizer-8e497f9e42db"
+        },
+        {
+          "raw_type": "article",
+          "title": "Data Race Detection and Data Race Patterns in Golang",
+          "url": "https://www.sobyte.net/post/2022-06/go-data-race/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:race-detector",
+      "topic_slug": "race-detector",
+      "node_id": "7aTYeCd915F3UHqb6j0Az",
+      "title": "Race Detector",
+      "description": "Runtime tool detecting data races in concurrent programs using the `-race` flag. Tracks memory accesses and reports conflicts with detailed information including stack traces. Essential for finding concurrency bugs during development and testing.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Race Detection",
+          "url": "https://go.dev/doc/articles/race_detector"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go: Race Detector with ThreadSanitizer",
+          "url": "https://medium.com/a-journey-with-go/go-race-detector-with-threadsanitizer-8e497f9e42db"
+        },
+        {
+          "raw_type": "article",
+          "title": "Data Race Detection and Data Race Patterns in Golang",
+          "url": "https://www.sobyte.net/post/2022-06/go-data-race/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:raw-string-literals",
+      "topic_slug": "raw-string-literals",
+      "node_id": "nzPe6XVqhtOZFbea6f2Hg",
+      "title": "Raw String Literals",
+      "description": "Enclosed in backticks (\\`) and interpret characters literally without escape sequences. Preserve formatting including newlines. Ideal for regex, file paths, SQL queries, JSON templates, and multi-line text where escaping would be extensive.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Strings in Go",
+          "url": "https://go.dev/blog/strings#what-is-a-string"
+        },
+        {
+          "raw_type": "article",
+          "title": "Golang Quick Reference: Strings. Introduction",
+          "url": "https://medium.com/@golangda/golang-quick-reference-strings-0d68bb036c29"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:realtime-communication",
+      "topic_slug": "realtime-communication",
+      "node_id": "o2EYfm1WSd8Eq_ZcXYreo",
+      "title": "Realtime Communication",
+      "description": "Realtime communication in Go enables instant bidirectional updates using WebSockets, Server-Sent Events, and messaging patterns. Go's concurrency makes it ideal for handling multiple connections. Essential for chat apps, live dashboards, and interactive applications requiring immediate synchronization.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "http package",
+          "url": "https://pkg.go.dev/net/http"
+        },
+        {
+          "raw_type": "article",
+          "title": "Implementing WebSockets in Golang",
+          "url": "https://medium.com/wisemonks/implementing-websockets-in-golang-d3e8e219733b"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:reflection",
+      "topic_slug": "reflection",
+      "node_id": "GO50AoBOjO-EaK3s36jSS",
+      "title": "Reflection",
+      "description": "Reflection allows runtime inspection and manipulation of types and values using the `reflect` package. Enables dynamic method calls and type examination but has performance overhead. Used in JSON marshaling, ORMs, and frameworks.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "reflect package",
+          "url": "https://pkg.go.dev/reflect"
+        },
+        {
+          "raw_type": "official",
+          "title": "The Laws of Reflection",
+          "url": "https://go.dev/blog/laws-of-reflection"
+        },
+        {
+          "raw_type": "article",
+          "title": "Reflection in Go: Use cases and tutorial",
+          "url": "https://blog.logrocket.com/reflection-go-use-cases-tutorial/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:regexp",
+      "topic_slug": "regexp",
+      "node_id": "9K5ffACdKNPJiWPq4tUWD",
+      "title": "regexp",
+      "description": "Standard library package for regular expression functionality. Implements RE2 syntax for safe, efficient pattern matching. Provides functions for matching, finding, replacing text patterns. Supports compiled expressions for performance. Essential for text processing, validation, parsing.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "regexp package",
+          "url": "https://pkg.go.dev/regexp"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Regular Expressions in Golang",
+          "url": "https://labex.io/tutorials/go-golang-regular-expression-tutorial-15502"
+        },
+        {
+          "raw_type": "article",
+          "title": "A deep dive into regular expressions with Golang",
+          "url": "https://blog.logrocket.com/deep-dive-regular-expressions-golang/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:revive",
+      "topic_slug": "revive",
+      "node_id": "ksimJz7uvSh80ZIekSn_-",
+      "title": "revive",
+      "description": "Fast, configurable Go linter providing rich formatting and many rules for code analysis. Drop-in replacement for golint with better performance, configurable rules, and various output formats. Helps maintain consistent code quality across projects.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "revive - fast & configurable linter for Go",
+          "url": "https://revive.run/docs"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "mgechev/revive",
+          "url": "https://github.com/mgechev/revive"
+        },
+        {
+          "raw_type": "article",
+          "title": "Level Up Your Go Style with revive",
+          "url": "https://medium.com/@caring_smitten_gerbil_914/%EF%B8%8F-level-up-your-go-style-with-revive-the-fast-configurable-community-friendly-linter-78dacbe74191"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:runes",
+      "topic_slug": "runes",
+      "node_id": "IAXI7OAAAG4fU6JvVNSZI",
+      "title": "Runes",
+      "description": "Represent Unicode code points as `int32` type. Enable proper handling of international characters and emojis. Use single quotes like `'A'` or `'\u4e2d'`. Essential for internationalized applications and correctly processing global text content beyond ASCII.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Characters in Go",
+          "url": "https://go.dev/blog/strings"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Runes in Go",
+          "url": "https://dev.to/jeseekuya/understanding-runes-in-go-4ie5"
+        },
+        {
+          "raw_type": "article",
+          "title": "Demystifying Runes: A Complete Guide to Using Runes in Go",
+          "url": "https://thelinuxcode.com/golang-rune/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:scope-and-shadowing",
+      "topic_slug": "scope-and-shadowing",
+      "node_id": "xUKsD2eTP9-RszHvKYp9Y",
+      "title": "Scope and Shadowing",
+      "description": "Scope determines variable accessibility from universe to block level. Shadowing occurs when inner scope variables hide outer ones with same names. Go has package, function, and block scopes. Understanding prevents bugs from accidentally creating new variables.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Variable Shadowing in Go: Best Practices",
+          "url": "https://medium.com/@shahpershahin/variable-shadowing-in-go-best-practices-to-avoid-confusions-and-bugs-61e03022b54d"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:select-statement",
+      "topic_slug": "select-statement",
+      "node_id": "RBr1uAdngIsvSpIdHHOyV",
+      "title": "Select Statement",
+      "description": "Multiplexer for channel operations. Waits on multiple channel operations simultaneously, executing first one ready. Supports send/receive operations, default case for non-blocking behavior. Essential for coordinating multiple goroutines and implementing timeouts.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Select Statement",
+          "url": "https://go.dev/tour/concurrency/5"
+        },
+        {
+          "raw_type": "article",
+          "title": "Select Statement in Go (Golang)",
+          "url": "https://golangbyexamples.com/select-statement-golang/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go (Golang) Select Tutorial with Practical Examples",
+          "url": "https://golangbot.com/select/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:sentinel-errors",
+      "topic_slug": "sentinel-errors",
+      "node_id": "vjfqq1XVS25FVe9smtel0",
+      "title": "Sentinel Errors",
+      "description": "Predefined error values representing specific conditions, defined as package-level variables. Check using `errors.Is()` or direct comparison. Examples: `io.EOF`. Enable predictable APIs where callers handle specific errors differently.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Golang Sentinel Error",
+          "url": "https://www.tiredsg.dev/blog/golang-sentinel-error/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Writing Clean Code in Go: Sentinel Errors",
+          "url": "https://medium.com/gopher-time/writing-clean-code-in-go-sentinel-errors-5ad93a30bc8e"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:setting-up-the-environment",
+      "topic_slug": "setting-up-the-environment",
+      "node_id": "J5mU0v491qrm-mr1W3Msd",
+      "title": "Setting up the Environment",
+      "description": "Install Go from official website, configure PATH, and set up workspace. Configure editor with Go support (VS Code, GoLand, Vim/Emacs). Use modules for dependency management. Verify installation with `go version` and test with simple program.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Golang",
+          "url": "https://go.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Setting up the Environment",
+          "url": "https://go.dev/doc/install"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Set Up a Go Development Environment?",
+          "url": "https://medium.com/codex/how-to-set-up-a-go-development-environment-67b4b002182e"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:slice-to-array-conversion",
+      "topic_slug": "slice-to-array-conversion",
+      "node_id": "j0zmfpaufr5TAZa_Bh8Vu",
+      "title": "Slice to Array Conversion",
+      "description": "Convert slice to array using `[N]T(slice)` (Go 1.17+). Copies data from slice to fixed-size array. Panics if slice has fewer than N elements. Useful when array semantics or specific size guarantees are needed.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Slice Arrays Correctly",
+          "url": "https://labex.io/tutorials/go-how-to-slice-arrays-correctly-418936"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go - Create Slice From Array - 3 Examples",
+          "url": "https://www.tutorialkart.com/golang-tutorial/golang-create-slice-from-array/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:slices",
+      "topic_slug": "slices",
+      "node_id": "3aoMFQXIh3Qdo04isHwe_",
+      "title": "Slices",
+      "description": "Dynamic arrays built on top of arrays. Reference types with length and capacity. Created with `make()` or slice literals. Support append, copy operations. More flexible than arrays - most commonly used sequence type in Go.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "make",
+          "url": "https://go.dev/tour/moretypes/13"
+        },
+        {
+          "raw_type": "article",
+          "title": "The new() vs make() Functions in Go",
+          "url": "https://www.freecodecamp.org/news/new-vs-make-functions-in-go/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Slice Arrays Correctly",
+          "url": "https://labex.io/tutorials/go-how-to-slice-arrays-correctly-418936"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:slog",
+      "topic_slug": "slog",
+      "node_id": "hFlbSSBMcJtjXNL8jAcbc",
+      "title": "slog",
+      "description": "Structured logging package introduced in Go 1.21. Provides leveled, structured logging with JSON output support. Better than basic log package for production use. Supports custom handlers, context integration, and performance optimization. Modern replacement for traditional logging.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Structured Logging with slog",
+          "url": "https://go.dev/blog/slog"
+        },
+        {
+          "raw_type": "article",
+          "title": "Logging in Go with Slog: The Ultimate Guide",
+          "url": "https://betterstack.com/community/guides/logging/logging-in-go/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Effective Logging in Go: Best Practices and Implementation",
+          "url": "https://dev.to/fazal_mansuri_/effective-logging-in-go-best-practices-and-implementation-guide-23hp"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:stack-traces--debugging",
+      "topic_slug": "stack-traces--debugging",
+      "node_id": "rR_BIgiSR63rVlO2Igzin",
+      "title": "Stack Traces & Debugging",
+      "description": "Go automatically prints stack traces on panic showing call chain. Tools include Delve debugger, pprof profiling, and race detection. Stack traces show function calls, file locations, and line numbers for effective troubleshooting.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Diagnostics",
+          "url": "https://go.dev/doc/diagnostics"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Comprehensive Guide to Debugging Go Code for Developers",
+          "url": "https://dev.to/adityabhuyan/a-comprehensive-guide-to-debugging-go-code-for-developers-h9d"
+        },
+        {
+          "raw_type": "article",
+          "title": "Reading Go Stack Traces - Go Debugging Example",
+          "url": "https://go-cookbook.com/snippets/debugging/reading-go-stack-traces"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:standard-library",
+      "topic_slug": "standard-library",
+      "node_id": "-Qy9DEWVYUNRHWiXXhIWU",
+      "title": "Standard Library",
+      "description": "Comprehensive collection of packages providing core functionality. Includes I/O, networking, text processing, cryptography, testing, JSON handling, HTTP client/server. Rich ecosystem reducing need for external dependencies. Well-documented, tested, and performance-optimized packages.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "std package",
+          "url": "https://pkg.go.dev/stds"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building Robust APIs with Go's Standard Library",
+          "url": "https://dev.to/aaravjoshi/building-robust-apis-with-gos-standard-library-a-comprehensive-guide-3036"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to use standard library packages in Golang",
+          "url": "https://labex.io/tutorials/go-how-to-use-standard-library-packages-in-golang-446140"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:staticcheck",
+      "topic_slug": "staticcheck",
+      "node_id": "954ffF8CmXYX-L36Lfl44",
+      "title": "staticcheck",
+      "description": "State-of-the-art Go linter catching bugs, performance issues, and style problems through static analysis. Provides more comprehensive checking than go vet with very few false positives. Detects unused code, incorrect API usage, and subtle bugs.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Staticcheck",
+          "url": "https://staticcheck.dev/docs/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "dominikh/go-tools: Staticcheck",
+          "url": "https://github.com/dominikh/go-tools"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:strings",
+      "topic_slug": "strings",
+      "node_id": "ZxZpReGdPq8ziSlYmf2nj",
+      "title": "Strings",
+      "description": "Immutable sequences of bytes representing UTF-8 encoded text. String operations create new strings rather than modifying existing ones. Iterate by bytes (indexing) or runes (for range). Convert between strings and byte slices. Understanding strings helps with text manipulation and performance.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "String",
+          "url": "https://go.dev/blog/strings"
+        },
+        {
+          "raw_type": "official",
+          "title": "Go Speculation",
+          "url": "https://go.dev/ref/spec"
+        },
+        {
+          "raw_type": "article",
+          "title": "Golang Quick Reference: Strings. Introduction",
+          "url": "https://medium.com/@golangda/golang-quick-reference-strings-0d68bb036c29"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:struct-tags--json",
+      "topic_slug": "struct-tags--json",
+      "node_id": "SW2uMlhfC-dnQakShs2km",
+      "title": "Struct Tags & JSON",
+      "description": "Struct tags provide metadata about fields using backticks with key-value pairs. JSON tags control field names, omit empty fields, or skip fields. Example: `json:\"name,omitempty\"`. Essential for APIs and data serialization formats.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Well known struct tags",
+          "url": "https://go.dev/wiki/Well-known-struct-tags"
+        },
+        {
+          "raw_type": "article",
+          "title": "Working with JSON and Struct Tags",
+          "url": "https://medium.com/@sanyamdubey28/working-with-json-and-struct-tags-in-go-0e6a7c4fc6b0"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Struct Tags and JSON Encoding in Go",
+          "url": "https://towardsdev.com/understanding-struct-tags-and-json-encoding-in-go-9e51d551c0ce"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:structs",
+      "topic_slug": "structs",
+      "node_id": "wRwt9JHZPmq8uapxMjn0a",
+      "title": "Structs",
+      "description": "Custom data types grouping related fields under single name. Similar to classes but methods defined separately. Create complex data models, organize information, define application data structure. Access fields with dot notation, pass to functions. Fundamental for object-oriented designs.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Structs",
+          "url": "https://go.dev/tour/moretypes/2"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go Struct: A Deep Dive",
+          "url": "https://leapcell.medium.com/deep-dive-into-go-struct-103961431c64"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:switch",
+      "topic_slug": "switch",
+      "node_id": "ZmPhiTrB8EK0LDdaJOhc8",
+      "title": "switch",
+      "description": "Clean way to compare variable against multiple values and execute corresponding code blocks. No break statements needed (no fall-through by default). Works with any comparable type, supports multiple values per case, expression/type switches. More readable than if-else chains.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Switch",
+          "url": "https://go.dev/wiki/Switch"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go by Example: Switch",
+          "url": "https://gobyexample.com/switch"
+        },
+        {
+          "raw_type": "article",
+          "title": "Learn Switch Statement in Go (Golang) with Examples",
+          "url": "https://golangbot.com/switch/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:sync-package",
+      "topic_slug": "sync-package",
+      "node_id": "nOI0juYhqJXNTiJBU4bKH",
+      "title": "sync Package",
+      "description": "Provides synchronization primitives for coordinating goroutines and safe concurrent access. Includes Mutex (mutual exclusion), RWMutex (reader-writer locks), WaitGroup (waiting on goroutines), Once (one-time init). Essential for avoiding race conditions.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "sync package",
+          "url": "https://pkg.go.dev/sync"
+        },
+        {
+          "raw_type": "article",
+          "title": "Golang Sync Package",
+          "url": "https://medium.com/@asgrr/golang-sync-4787b18fee41"
+        },
+        {
+          "raw_type": "article",
+          "title": "Use of synchronization techniques in Golang",
+          "url": "https://lebum.medium.com/use-of-synchronization-techniques-in-golang-53d75bc0a646"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:table-driven-tests",
+      "topic_slug": "table-driven-tests",
+      "node_id": "6-mr65JzXbRzIukE7jzoZ",
+      "title": "Table-driven Tests",
+      "description": "Table-driven tests use slices of test cases to test multiple scenarios with the same logic. Each case contains inputs and expected outputs. Makes adding test cases easy and provides comprehensive coverage with minimal code duplication.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "TableDrivenTests",
+          "url": "https://go.dev/wiki/TableDrivenTests"
+        },
+        {
+          "raw_type": "article",
+          "title": "Table Driven Unit Tests in Go",
+          "url": "https://dev.to/boncheff/table-driven-unit-tests-in-go-407b"
+        },
+        {
+          "raw_type": "article",
+          "title": "Testing in Go with table drive tests and Testify",
+          "url": "https://dev.to/zpeters/testing-in-go-with-table-drive-tests-and-testify-kd4"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:testing-package-basics",
+      "topic_slug": "testing-package-basics",
+      "node_id": "nZkLFmm2GENL81y5LB0c1",
+      "title": "Testing Package Basics",
+      "description": "Standard library package for writing tests. Test functions start with `Test` and take `*testing.T` parameter. Use `t.Error()`, `t.Fatal()` for failures. Test files end with `_test.go`. Run with `go test`. Supports benchmarks and examples.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "testing package",
+          "url": "https://pkg.go.dev/testing"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to manage testing package setup",
+          "url": "https://labex.io/tutorials/go-how-to-manage-testing-package-setup-451557"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go Unit Testing: A Practical Guide for Writing Reliable Tests",
+          "url": "https://www.ceos3c.com/golang/go-unit-testing-a-practical-guide-for-writing-reliable-tests/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:time",
+      "topic_slug": "time",
+      "node_id": "aK9EQO1JR9hYIMkS3mdai",
+      "title": "time",
+      "description": "Standard library package for time and date operations. Handles parsing, formatting, arithmetic, timers, tickers, and timezone operations. Key types: Time, Duration, Location. Supports RFC3339 format, custom layouts, time zones. Essential for scheduling, timeouts, timestamps.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "time package",
+          "url": "https://pkg.go.dev/time"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Use Dates and Times in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-dates-and-times-in-go"
+        },
+        {
+          "raw_type": "article",
+          "title": "Time in Go: Overview with Examples",
+          "url": "https://medium.com/@rakeshmirji/time-in-go-overview-with-examples-ebb9e30cdb45"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:trace",
+      "topic_slug": "trace",
+      "node_id": "RE2jfECHkWvy3ldDZL938",
+      "title": "trace",
+      "description": "The Go trace tool captures execution traces showing goroutine execution, system calls, GC, and scheduling. Generate traces with `runtime/trace` package, analyze with `go tool trace`. Provides web interface for diagnosing concurrency issues and performance bottlenecks.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Execution Traces",
+          "url": "https://go.dev/blog/execution-traces-2024"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to Tracing in Go with Jaeger & OpenTelemetry",
+          "url": "https://medium.com/@nairouasalaton/introduction-to-tracing-in-go-with-jaeger-opentelemetry-71955c2afa39"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go: Discovery of the Trace Package",
+          "url": "https://medium.com/a-journey-with-go/go-discovery-of-the-trace-package-e5a821743c3c"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:type-assertions",
+      "topic_slug": "type-assertions",
+      "node_id": "4EJ4WnH2HA3ci2uoqmNex",
+      "title": "Type Assertions",
+      "description": "Extract underlying concrete value from interface. Syntax: `value.(Type)` or `value, ok := value.(Type)` for safe assertion. Panics if type assertion fails without ok form. Essential for working with interfaces and empty interfaces.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Type Assertions",
+          "url": "https://go.dev/tour/methods/15"
+        },
+        {
+          "raw_type": "article",
+          "title": "Type assertions and type switches in Golang",
+          "url": "https://www.educative.io/answers/type-assertions-and-type-switches-in-golang"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Type Assertion in Go",
+          "url": "https://medium.com/@jamal.kaksouri/mastering-type-assertion-in-go-a-comprehensive-guide-216864b4ea4d"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:type-constraints",
+      "topic_slug": "type-constraints",
+      "node_id": "8o6A2kGnupGYaaTwgsTDp",
+      "title": "Type Constraints",
+      "description": "Specify which types can be used as type arguments for generics. Defined using interfaces with method signatures or type sets. Common constraints include `any`, `comparable`, and custom constraints. Enable writing generic code that safely operates on type parameters.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Generics",
+          "url": "https://go.dev/doc/tutorial/generics"
+        },
+        {
+          "raw_type": "article",
+          "title": "A walkthrough of type constraints in Go",
+          "url": "https://simonklee.dk/type-constraints"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Type Assertion in Go",
+          "url": "https://medium.com/@jamal.kaksouri/mastering-type-assertion-in-go-a-comprehensive-guide-216864b4ea4d"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:type-conversion",
+      "topic_slug": "type-conversion",
+      "node_id": "2IFxz3sFqDvUvzWNVwlWC",
+      "title": "Type Conversion",
+      "description": "Convert values between different types using `Type(value)` syntax. Go requires explicit conversion even between related types like `int` and `int64`. Essential for working with different data types and ensuring type compatibility in programs.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Type Conversion",
+          "url": "https://go.dev/tour/basics/13"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Comprehensive Guide to Type Casting and Conversions in Go",
+          "url": "https://dev.to/zakariachahboun/a-comprehensive-guide-to-type-casting-and-conversions-in-go-26di"
+        },
+        {
+          "raw_type": "article",
+          "title": "Safe Go Type Conversions: Comprehensive Guide",
+          "url": "https://medium.com/lyonas/go-type-casting-starter-guide-a9c1811670c5"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:type-inference",
+      "topic_slug": "type-inference",
+      "node_id": "36gt0FmNDxuIIV47aqBeH",
+      "title": "Type Inference",
+      "description": "Allows compiler to automatically determine generic type arguments based on function arguments or context. Reduces need for explicit type specification while maintaining type safety. Makes generic functions cleaner and more readable by eliminating redundant type specifications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Type Inference",
+          "url": "https://go.dev/blog/type-inference"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Is Type Inference? What It Is and How It Work",
+          "url": "https://hackernoon.com/what-is-type-inference-what-it-is-and-how-it-works"
+        },
+        {
+          "raw_type": "article",
+          "title": "Chapter 4: Interface and Type Systems in Go",
+          "url": "https://medium.com/@omidahn/chapter-4-interface-and-type-systems-in-go-75b52392cc38"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:type-switch",
+      "topic_slug": "type-switch",
+      "node_id": "6r9XbwlBtHmJrhviG2cTD",
+      "title": "Type Switch",
+      "description": "Special form of switch statement that operates on types rather than values. Syntax: `switch v := i.(type)`. Used with interfaces to determine underlying concrete type. Each case specifies types to match. Essential for handling interface{} and polymorphic code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Type Switch",
+          "url": "https://go.dev/tour/methods/16"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Comprehensive Guide to Type Switches in Go",
+          "url": "https://thelinuxcode.com/golang-type-switch-examples/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Chapter 4: Interface and Type Systems in Go",
+          "url": "https://medium.com/@omidahn/chapter-4-interface-and-type-systems-in-go-75b52392cc38"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:unsafe-package",
+      "topic_slug": "unsafe-package",
+      "node_id": "tM-AAWqMJsYZ1i6DCfBeD",
+      "title": "Unsafe Package",
+      "description": "The `unsafe` package bypasses Go's type and memory safety for direct memory manipulation and pointer arithmetic. Powerful but dangerous - can cause crashes and vulnerabilities. Used for systems programming and performance-critical code. Use with extreme caution.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "unsafe package",
+          "url": "https://pkg.go.dev/unsafe"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go: What is the Unsafe Package?",
+          "url": "https://medium.com/a-journey-with-go/go-what-is-the-unsafe-package-d2443da36350"
+        },
+        {
+          "raw_type": "article",
+          "title": "Unsafe Package Usage in Go",
+          "url": "https://go-cookbook.com/snippets/standard-library-packages/unsafe-package"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:urfavecli",
+      "topic_slug": "urfavecli",
+      "node_id": "bmNLSk-XuK2EuLxPR1Sxh",
+      "title": "urfave/cli",
+      "description": "urfave/cli is a simple package for building command-line applications with intuitive API for commands, flags, and arguments. Features automatic help generation, bash completion, nested subcommands, and environment variable integration for lightweight CLI tools.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "urfave/cli",
+          "url": "https://cli.urfave.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Building Command Line Tools in Go with urfave/cli",
+          "url": "https://zetcode.com/golang/urfave-cli/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:using-3rd-party-packages",
+      "topic_slug": "using-3rd-party-packages",
+      "node_id": "eBv3i2cNA7vc01jLAbB8m",
+      "title": "Using 3rd Party Packages",
+      "description": "Import external libraries using `go get package-url` which updates `go.mod`. Consider maintenance status, documentation, license, and security when choosing packages. Go modules handle version management and ensure reproducible builds.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Import and Use a Third-Party Package in Golang",
+          "url": "https://thenewstack.io/import-and-use-a-third-party-package-in-golang/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using Third-Party Packages and Libraries in Golang",
+          "url": "https://medium.com/@bramahendramahendra1/using-third-party-packages-and-libraries-in-golang-efbf0046f574"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:value-receivers",
+      "topic_slug": "value-receivers",
+      "node_id": "99a4irV044ybZN-boMgHv",
+      "title": "Value Receivers",
+      "description": "Methods receive copy of struct rather than pointer. Use `func (v Type) methodName()` syntax. Appropriate when method doesn't modify receiver or struct is small. Can be called on both values and pointers with Go automatically dereferencing.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Value Receivers",
+          "url": "https://go.dev/tour/methods/8"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Value and Pointer Receivers in Go Interfaces",
+          "url": "https://afdz.medium.com/understanding-value-and-pointer-receivers-in-go-interfaces-e97a824fdded"
+        },
+        {
+          "raw_type": "article",
+          "title": "Go Method Receivers: Understanding Value vs. Pointer and When to Use",
+          "url": "https://blog.stackademic.com/go-method-receivers-understanding-value-vs-pointer-and-when-to-use-each-74ef82d66a5c"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:var-vs",
+      "topic_slug": "var-vs",
+      "node_id": "pJUkMcrUvcxuR_w89-eEq",
+      "title": "var vs :=",
+      "description": "Go provides two main ways to declare variables: using `var` and using the short declaration operator `:=`. The `var` keyword is used for explicit variable declarations. You can use it to define a variable with or without assigning a value. If no value is provided, Go assigns a default _zero value_ based on the variable type. `var` can be used both inside and outside functions. The `:=` syntax is a",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Go Tour: Short variable declarations",
+          "url": "https://go.dev/tour/basics/10"
+        },
+        {
+          "raw_type": "official",
+          "title": "Go Specification: Short Variable Declarations",
+          "url": "https://go.dev/ref/spec#Short_variable_declarations"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:variables--constants",
+      "topic_slug": "variables--constants",
+      "node_id": "BZKSsTgm28WV4nA74NYHO",
+      "title": "Variables & Constants",
+      "description": "Variables store changeable values declared with `var` or `:=` (short declaration). Constants store unchangeable values declared with `const`. Variables can be explicitly typed or use type inference. Constants must be compile-time determinable. Both support block declarations and package/function scope.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Shorthand Assignment",
+          "url": "https://go.dev/tour/basics/10"
+        },
+        {
+          "raw_type": "official",
+          "title": "Var Assignment",
+          "url": "https://go.dev/tour/basics/8"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Use Variables and Constants in Go",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-variables-and-constants-in-go"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:variadic-functions",
+      "topic_slug": "variadic-functions",
+      "node_id": "MUJfa0jIL_S_b2ndNpVVw",
+      "title": "Variadic Functions",
+      "description": "Functions accepting variable number of arguments of same type. Syntax: `func name(args ...Type)`. Arguments treated as slice inside function. Call with multiple args or slice with `...` operator. Common in functions like `fmt.Printf()` and `append()`.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Unpacking Go Variadic Functions: Clever Ways to Use Them",
+          "url": "https://dev.to/shrsv/unpacking-go-variadic-functions-clever-ways-to-use-them-4p25"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Use Variadic Functions in Go -",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-variadic-functions-in-go"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:waitgroups",
+      "topic_slug": "waitgroups",
+      "node_id": "amqOwSgVFDymAsDIobwiK",
+      "title": "WaitGroups",
+      "description": "Synchronization primitive from sync package for waiting on multiple goroutines to complete. Use `Add()` to increment counter, `Done()` when goroutine finishes, `Wait()` to block until counter reaches zero. Essential for coordinating goroutine completion in concurrent programs.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "WaitGroup in Go - How and when to use WaitGroup",
+          "url": "https://medium.com/@dmytro.misik/waitgroup-in-go-df8f068e646f"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Concurrency in Golang",
+          "url": "https://thelinuxcode.com/mastering-concurrency-in-golang-a-deep-dive-into-the-waitgroup/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:web-development",
+      "topic_slug": "web-development",
+      "node_id": "CwGw3CDVLqErQGTwjzhmL",
+      "title": "Web Development",
+      "description": "Excellent for web development with built-in HTTP server support, efficient concurrency, rich ecosystem. Standard `net/http` package provides powerful tools for servers, requests/responses, RESTful APIs. Performance, simple deployment (single binary), and concurrency make it ideal for scalable web apps.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "http package",
+          "url": "https://pkg.go.dev/net/http"
+        },
+        {
+          "raw_type": "article",
+          "title": "net/http package in Go",
+          "url": "https://medium.com/@emonemrulhasan35/net-http-package-in-go-e178c67d87f1"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Concurrency in Golang",
+          "url": "https://thelinuxcode.com/mastering-concurrency-in-golang-a-deep-dive-into-the-waitgroup/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:why-generics",
+      "topic_slug": "why-generics",
+      "node_id": "9EdDI0vJaEmz3XxXMrpX9",
+      "title": "Why Generics?",
+      "description": "Introduced in Go 1.18 to solve code duplication when working with multiple types. Before generics: separate functions per type, empty interfaces (losing type safety), or code generation. Enable type-safe, reusable code maintaining compile-time checking.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Generics",
+          "url": "https://go.dev/doc/tutorial/generics"
+        },
+        {
+          "raw_type": "article",
+          "title": "A walkthrough of type constraints in Go",
+          "url": "https://simonklee.dk/type-constraints"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mastering Type Assertion in Go",
+          "url": "https://medium.com/@jamal.kaksouri/mastering-type-assertion-in-go-a-comprehensive-guide-216864b4ea4d"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:why-use-go",
+      "topic_slug": "why-use-go",
+      "node_id": "4PrkkoZ5fY-oow0O-bVhu",
+      "title": "Why use Go",
+      "description": "Go offers exceptional performance with single binary deployment, built-in concurrency, fast compilation, and comprehensive standard library. Simple language that's easy to learn and maintain. Excels at web services, microservices, CLI tools, and system software.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Why Go - The Go Programming Language",
+          "url": "https://go.dev/solutions/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Why Go: The benefits of Golang",
+          "url": "https://medium.com/@julienetienne/why-go-the-benefits-of-golang-6c39ea6cff7e"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Is Golang Used For? 7 Examples of Go Applications",
+          "url": "https://trio.dev/what-is-golang-used-for/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:with-maps--slices",
+      "topic_slug": "with-maps--slices",
+      "node_id": "oAvCO3GOKktkbmPahkPlT",
+      "title": "Pointers with Maps & Slices",
+      "description": "Maps and slices are reference types - passing them to functions doesn't copy underlying data. Modifications inside functions affect original. No need for explicit pointers. However, reassigning the slice/map variable itself won't affect caller unless using pointer.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Maps",
+          "url": "https://go.dev/blog/maps"
+        },
+        {
+          "raw_type": "official",
+          "title": "Pointers",
+          "url": "https://go.dev/tour/moretypes/1"
+        },
+        {
+          "raw_type": "article",
+          "title": "Slice Arrays Correctly",
+          "url": "https://labex.io/tutorials/go-how-to-slice-arrays-correctly-418936"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:worker-pools",
+      "topic_slug": "worker-pools",
+      "node_id": "z8ItWHAupaastLcXY3npY",
+      "title": "Worker Pools",
+      "description": "Concurrency pattern using fixed number of goroutines to process tasks from shared queue. Controls resource usage while maintaining parallelism. Typically implemented with buffered channels for task distribution and WaitGroups for synchronization. Ideal for CPU-bound tasks and rate limiting.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "GO: How to Write a Worker Pool",
+          "url": "https://dev.to/justlorain/go-how-to-write-a-worker-pool-1h3b"
+        },
+        {
+          "raw_type": "article",
+          "title": "Efficient Concurrency in Go: A Deep Dive into the Worker Pool",
+          "url": "https://rksurwase.medium.com/efficient-concurrency-in-go-a-deep-dive-into-the-worker-pool-pattern-for-batch-processing-73cac5a5bdca"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:wrappingunwrapping-errors",
+      "topic_slug": "wrappingunwrapping-errors",
+      "node_id": "s2WlOMMKNXf6O2Qiqcm_m",
+      "title": "Wrapping/Unwrapping Errors",
+      "description": "Create error chains preserving original errors while adding context using `fmt.Errorf()` with `%w` verb. Use `errors.Unwrap()`, `errors.Is()`, and `errors.As()` to work with wrapped errors. Enables rich error contexts for easier debugging.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Golang: error wrapping / unwrapping",
+          "url": "https://medium.com/@vajahatkareem/golang-error-wrapping-multierror-759d04bdbfaf"
+        },
+        {
+          "raw_type": "article",
+          "title": "Error Wrapping in Go - Go Error Handling Example",
+          "url": "https://go-cookbook.com/snippets/error-handling/error-wrapping"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:zap",
+      "topic_slug": "zap",
+      "node_id": "4D8QsZVAUB9vGbVFgRHt4",
+      "title": "Zap",
+      "description": "Zap is a high-performance structured logging library by Uber offering both structured and printf-style APIs. Features include JSON/console formats, configurable levels, sampling, and production-optimized performance through careful memory management.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "zap package - go.uber.org/zap",
+          "url": "https://pkg.go.dev/go.uber.org/zap"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Comprehensive Guide to Zap Logging in Go",
+          "url": "https://betterstack.com/community/guides/logging/go/zap/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Structured Logging in Golang with Zap",
+          "url": "https://codewithmukesh.com/blog/structured-logging-in-golang-with-zap/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:zero-values",
+      "topic_slug": "zero-values",
+      "node_id": "QWixUXjC8YG-i1gsKVY1v",
+      "title": "Zero Values",
+      "description": "Default values for uninitialized variables: `0` for numbers, `false` for booleans, `\"\"` for strings, `nil` for pointers/slices/maps. Ensures predictable initial state and reduces initialization errors. Fundamental for reliable Go code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Zero Values",
+          "url": "https://go.dev/tour/basics/12"
+        },
+        {
+          "raw_type": "article",
+          "title": "Golang Zero Values (0 and Beyond)",
+          "url": "https://golangprojectstructure.com/default-zero-values-in-go-code/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Zero Values in Golang",
+          "url": "https://www.scaler.com/topics/golang/golang-zero-values/"
+        }
+      ]
+    },
+    {
+      "skill_id": "golang:zerolog",
+      "topic_slug": "zerolog",
+      "node_id": "TR7N68_evDMu3qWHbGJcz",
+      "title": "Zerolog",
+      "description": "Zerolog is a zero-allocation JSON logger focusing on performance and simplicity. Provides structured logging with fluent API, various log levels, and no memory allocations during operations, making it ideal for high-throughput production applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "zerolog package",
+          "url": "https://pkg.go.dev/github.com/rs/zerolog"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Complete Guide to Logging in Go with Zerolog",
+          "url": "https://betterstack.com/community/guides/logging/zerolog/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Zerolog Golang - Complete Guide to Logging",
+          "url": "https://signoz.io/guides/zerolog-golang/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3100 @@
+{
+  "roadmap": "frontend",
+  "topic_count": 121,
+  "topics": [
+    {
+      "skill_id": "frontend:accessibility",
+      "topic_slug": "accessibility",
+      "node_id": "e-k6EhoxYG9h0x6vWOrDh",
+      "title": "Accessibility",
+      "description": "Website accessibility ensures sites are usable by everyone, including people with disabilities. Involves alt text for images, keyboard navigation, color contrast, and captions. Benefits all users, supports legal compliance, and expands audience reach.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Accessibility for Developers by Google",
+          "url": "https://web.dev/accessibility"
+        },
+        {
+          "raw_type": "video",
+          "title": "Complete Playlist on Accessibility",
+          "url": "https://youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:agents",
+      "topic_slug": "agents",
+      "node_id": "e4j6u0e_WqK1vfrUwJJ4M",
+      "title": "AI Agents",
+      "description": "AI agents are autonomous programs designed to help developers write code more efficiently. These agents can automate repetitive tasks, suggest code completions, identify errors, and even generate entire code blocks based on natural language descriptions or existing code patterns. They leverage machine learning models to understand code syntax, semantics, and context, enabling them to provide intel",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated AI Agents Roadmap",
+          "url": "https://roadmap.sh/ai-agents"
+        },
+        {
+          "raw_type": "article",
+          "title": "What are AI Agents? - IBM",
+          "url": "https://www.ibm.com/think/topics/ai-agents"
+        },
+        {
+          "raw_type": "video",
+          "title": "From Zero to Your First AI Agent in 25 Minutes (No Coding)",
+          "url": "https://www.youtube.com/watch?v=EH5jx5qPabU"
+        },
+        {
+          "raw_type": "video",
+          "title": "What are AI Agents?",
+          "url": "https://www.youtube.com/watch?v=F8NKVhkZZWI"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:ai-assisted-coding",
+      "topic_slug": "ai-assisted-coding",
+      "node_id": "ipcNHz8KbfpE57kNP15hP",
+      "title": "AI-Assisted Coding",
+      "description": "AI-assisted coding involves using artificial intelligence tools to help developers write code more efficiently and effectively. These tools can provide real-time suggestions, automate repetitive tasks, identify potential errors, and even generate code snippets based on natural language descriptions, ultimately speeding up development and improving code quality.",
+      "resources": [
+        {
+          "raw_type": "book",
+          "title": "AI-Assisted Programming",
+          "url": "https://www.hkdca.com/wp-content/uploads/2025/06/ai-assisted-programming-oreilly.pdf"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Become an Expert in AI-Assisted Coding",
+          "url": "https://www.freecodecamp.org/news/how-to-become-an-expert-in-ai-assisted-coding-a-handbook-for-developers/"
+        },
+        {
+          "raw_type": "article",
+          "title": "The 10 Best Vibe Coding Tools in 2026: Our Choices",
+          "url": "https://roadmap.sh/vibe-coding/best-tools"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to elevate software development with AI-assisted coding",
+          "url": "https://www.youtube.com/watch?v=S2GqQ4gJAH0"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:ai-vs-traditional-coding",
+      "topic_slug": "ai-vs-traditional-coding",
+      "node_id": "IZKl6PxbvgNkryAkdy3-p",
+      "title": "AI vs. Traditional Software Development",
+      "description": "Traditional software development relies on developers explicitly writing code to instruct computers on how to perform tasks. This involves defining every step and logic manually. AI-assisted coding, however, leverages machine learning models trained on vast amounts of code to automate parts of the development process. Instead of writing all the code from scratch, developers can use AI to generate ",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated Vibe Coding Roadmap",
+          "url": "https://roadmap.sh/vibe-coding"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is vibe coding?",
+          "url": "https://www.ibm.com/think/topics/vibe-coding"
+        },
+        {
+          "raw_type": "article",
+          "title": "How AI is transforming work at Anthropic",
+          "url": "https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic"
+        },
+        {
+          "raw_type": "video",
+          "title": "AI Systems vs Traditional Coding",
+          "url": "https://www.youtube.com/watch?v=P7lryCIvxgA"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:angular",
+      "topic_slug": "angular",
+      "node_id": "-bHFIiXnoUQSov64WI9yo",
+      "title": "Angular",
+      "description": "Angular is Google's TypeScript framework for building single-page applications (SPAs). Features reusable components, two-way data binding, dependency injection, and robust template system. Includes testing tools, routing, and state management. Ideal for large, complex enterprise applications.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Angular Roadmap",
+          "url": "https://roadmap.sh/angular"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting started with Angular",
+          "url": "https://angular.dev/tutorials/learn-angular"
+        },
+        {
+          "raw_type": "video",
+          "title": "Angular for Beginners Course",
+          "url": "https://www.youtube.com/watch?v=3qBXWUpoPHo"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:angular",
+      "topic_slug": "angular",
+      "node_id": "k6rp6Ua9qUEW_DA_fOg5u",
+      "title": "Angular",
+      "description": "Angular is a popular tool from Google for building websites and web apps. It uses TypeScript (a type of JavaScript) to create large, efficient single-page applications (SPAs), where content loads in one go without needing to reload the whole page. Angular builds UIs with reusable components, like building blocks. It has features like two-way data binding (data updates automatically in different pl",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Angular Roadmap",
+          "url": "https://roadmap.sh/angular"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting started with Angular",
+          "url": "https://angular.dev/tutorials/learn-angular"
+        },
+        {
+          "raw_type": "video",
+          "title": "Angular for Beginners Course",
+          "url": "https://www.youtube.com/watch?v=3qBXWUpoPHo"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:anthropic",
+      "topic_slug": "anthropic",
+      "node_id": "Lw2nR7x8PYgq1P5CxPAxi",
+      "title": "Anthropic",
+      "description": "Anthropic is an AI safety and research company focused on developing reliable, interpretable, and steerable AI systems. They create AI models, like Claude, that are designed to be helpful, harmless, and honest, prioritizing safety through techniques like Constitutional AI, where the AI is guided by a set of principles during its training and operation. They can be integrated via APIs to add functi",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Anthropic Academy",
+          "url": "https://www.anthropic.com/learn"
+        },
+        {
+          "raw_type": "official",
+          "title": "Anthropic Tutorials",
+          "url": "https://claude.com/resources/tutorials"
+        },
+        {
+          "raw_type": "article",
+          "title": "Anthropic: What We Know About the Company Behind Claude AI",
+          "url": "https://builtin.com/articles/anthropic"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:antigravity",
+      "topic_slug": "antigravity",
+      "node_id": "E7-LveK7jO2npxVTLUDfw",
+      "title": "Antigravity",
+      "description": "Antigravity is an AI-powered code completion tool designed to enhance developer productivity. Created by Google, it learns from your coding style and project context to provide intelligent suggestions, autocompletions, and code generation snippets directly within your integrated development environment (IDE). This allows developers to write code faster and more efficiently, reducing errors and str",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Google Antigravity",
+          "url": "https://antigravity.google/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting Started with Google Antigravity",
+          "url": "https://codelabs.developers.google.com/getting-started-google-antigravity#0"
+        },
+        {
+          "raw_type": "article",
+          "title": "Hands-On With Antigravity: Google\u2019s Newest AI Coding Experiment",
+          "url": "https://thenewstack.io/hands-on-with-antigravity-googles-newest-ai-coding-experiment/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Welcome to Google Antigravity \ud83d\ude80",
+          "url": "https://www.youtube.com/watch?v=SVCBA-pBgt0"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:apollo",
+      "topic_slug": "apollo",
+      "node_id": "5eUbDdOTOfaOhUlZAmmXW",
+      "title": "Apollo",
+      "description": "Apollo GraphQL is a comprehensive platform for GraphQL applications. Apollo Client handles caching, data fetching, and state management. Apollo Server builds GraphQL APIs. Includes tools for schema management, performance monitoring, and developer tooling for faster, scalable apps.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated GraphQL Roadmap",
+          "url": "https://roadmap.sh/graphql"
+        },
+        {
+          "raw_type": "official",
+          "title": "Apollo Website",
+          "url": "https://www.apollographql.com"
+        },
+        {
+          "raw_type": "official",
+          "title": "Apollo Docs",
+          "url": "https://www.apollographql.com/docs/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:applications",
+      "topic_slug": "applications",
+      "node_id": "Nx7mjvYgqLpmJ0_iSx5of",
+      "title": "AI Applications in Frontend Development",
+      "description": "AI is increasingly being used to automate tasks, improve user interfaces, and enhance the overall development process in frontend. It can help with code generation, intelligent suggestions, automated testing, and creating personalized user experiences through features like dynamic content and adaptive layouts. This integration aims to make development faster, more efficient, and more user-centric.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "AI in software development",
+          "url": "https://www.ibm.com/think/topics/ai-in-software-development"
+        },
+        {
+          "raw_type": "article",
+          "title": "AI in software development: How to use it, benefits, and key trends",
+          "url": "https://appfire.com/resources/blog/ai-in-software-development"
+        },
+        {
+          "raw_type": "article",
+          "title": "AI-Assisted Software Development: A Comprehensive Guide with Practical Prompts (Part 1/3)",
+          "url": "https://aalapdavjekar.medium.com/ai-assisted-software-development-a-comprehensive-guide-with-practical-prompts-part-1-3-989a529908e0"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:astro",
+      "topic_slug": "astro",
+      "node_id": "iUxXq7beg55y76dkwhM13",
+      "title": "Astro",
+      "description": "Astro is a static site generator supporting multiple frameworks (React, Vue, Svelte) with partial hydration. Renders components to static HTML, sending JavaScript only when needed. Features file-based routing and markdown support. Ideal for blogs, documentation, and marketing sites.",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Astro Web Framework Crash Course",
+          "url": "https://www.youtube.com/watch?v=e-hTm5VmofI"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting Started with Astro",
+          "url": "https://docs.astro.build/en/getting-started/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Astro?",
+          "url": "https://www.contentful.com/blog/what-is-astro/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:astro",
+      "topic_slug": "astro",
+      "node_id": "wA2fSYsbBYU02VJXAvUz8",
+      "title": "Astro",
+      "description": "Astro is a static site generator supporting multiple frameworks (React, Vue, Svelte) with partial hydration. Renders components to static HTML, sending JavaScript only when needed. Features file-based routing and markdown support. Ideal for blogs, documentation, and marketing sites.",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Astro Web Framework Crash Course",
+          "url": "https://www.youtube.com/watch?v=e-hTm5VmofI"
+        },
+        {
+          "raw_type": "official",
+          "title": "Astro Website",
+          "url": "https://astro.build/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Astro?",
+          "url": "https://www.contentful.com/blog/what-is-astro/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:auth-strategies",
+      "topic_slug": "auth-strategies",
+      "node_id": "U5mD5FmVx7VWeKxDpQxB5",
+      "title": "Authentication Strategies",
+      "description": "Authentication strategies verify a user's identity to grant access. Common methods include Basic Auth (username/password), Session-based (server remembers login), Token-based (like JWT, a secure digital key), OAuth (for third-party access like \"Login with Google\"), and SSO (Single Sign-On, one login for many apps). Knowing these helps choose the right security for your app.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Basic Authentication",
+          "url": "https://roadmap.sh/guides/basic-authentication"
+        },
+        {
+          "raw_type": "article",
+          "title": "Session Based Authentication",
+          "url": "https://roadmap.sh/guides/session-based-authentication-visually-explained"
+        },
+        {
+          "raw_type": "article",
+          "title": "Token Based Authentication",
+          "url": "https://roadmap.sh/guides/token-authentication"
+        },
+        {
+          "raw_type": "article",
+          "title": "JWT Authentication",
+          "url": "https://roadmap.sh/guides/jwt-authentication"
+        },
+        {
+          "raw_type": "article",
+          "title": "OAuth",
+          "url": "https://roadmap.sh/guides/oauth"
+        },
+        {
+          "raw_type": "article",
+          "title": "SSO - Single Sign On",
+          "url": "https://roadmap.sh/guides/sso"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:biome",
+      "topic_slug": "biome",
+      "node_id": "UvCVChB6NZ_yUg0RdIJ2o",
+      "title": "Biome",
+      "description": "Biome is a high-performance tool for web projects, designed to format and lint code. It aims to replace a suite of existing tools like Prettier, ESLint, and others, offering a unified solution for code quality and consistency. Biome supports languages like JavaScript, TypeScript, JSX, and JSON, helping developers maintain a clean and standardized codebase.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Biome",
+          "url": "https://biomejs.dev/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "biome",
+          "url": "https://github.com/biomejs/biome"
+        },
+        {
+          "raw_type": "article",
+          "title": "Biome: The All-in-One Toolchain for Modern Frontend Projects",
+          "url": "https://blog.openreplay.com/biome-toolchain-modern-frontend-projects/"
+        },
+        {
+          "raw_type": "video",
+          "title": "The EASIEST Way To Switch to Biome",
+          "url": "https://www.youtube.com/watch?v=lEkXbneUnWg"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:browsers-and-how-they-work",
+      "topic_slug": "browsers-and-how-they-work",
+      "node_id": "P82WFaTPgQEPNp5IIuZ1Y",
+      "title": "Browsers",
+      "description": "Web browsers request and display websites by interpreting HTML, CSS, and JavaScript. Use rendering engines (Blink, Gecko) for display and JavaScript engines (V8) for code execution. Handle security, bookmarks, history, and user interactions for web navigation.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How Browsers Work",
+          "url": "https://www.ramotion.com/blog/what-is-web-browser/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Populating the Page: How Browsers Work",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work"
+        },
+        {
+          "raw_type": "video",
+          "title": "How Do Web Browsers Work?",
+          "url": "https://www.youtube.com/watch?v=5rLFYtXHo9s"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:bun",
+      "topic_slug": "bun",
+      "node_id": "j2H1qGosbveayviOCVkUs",
+      "title": "Bun",
+      "description": "Bun is a JavaScript runtime, bundler, transpiler, and package manager, all-in-one. It's designed to be a faster, more efficient alternative to Node.js and npm, aiming to improve performance and developer experience through its speed and comprehensive toolset. Bun uses JavaScriptCore, Apple's JavaScript engine, which is known for its performance.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Bun Docs",
+          "url": "https://bun.com/docs"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "bun",
+          "url": "https://github.com/oven-sh/bun"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Is Bun? An All-in-One Runtime Taking on Node.js",
+          "url": "https://kinsta.com/blog/bun-sh/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Bun Crash Course | JavaScript Runtime, Bundler & Transpiler",
+          "url": "https://www.youtube.com/watch?v=U4JVw8K19uY"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:cache-control",
+      "topic_slug": "cache-control",
+      "node_id": "tWDmeXItfQDxB8Jij_V4L",
+      "title": "Cache-Control",
+      "description": "Cache-Control is an HTTP header used to specify caching directives in HTTP requests and responses. These directives control how browsers and other intermediaries (like CDNs) should cache content. By setting appropriate Cache-Control headers, developers can influence whether a resource is stored, for how long, and under what conditions, ultimately impacting website loading speed and reducing server",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Cache-Control header",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is cache-control? | Cache explained",
+          "url": "https://www.cloudflare.com/en-gb/learning/cdn/glossary/what-is-cache-control/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Two-Minute Tech Tuesdays - Cache-Control Header",
+          "url": "https://www.youtube.com/watch?v=8TBWJo094yA"
+        },
+        {
+          "raw_type": "video",
+          "title": "Deep Dive into HTTP Caching",
+          "url": "https://www.youtube.com/watch?v=Cy2ZJOBgk84"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:claude-code",
+      "topic_slug": "claude-code",
+      "node_id": "RcC1fVuePQZ59AsJfeTdR",
+      "title": "Claude Code",
+      "description": "Claude Code is a family of large language models designed for code generation and understanding. It excels at tasks like code completion, bug finding, documentation, and even translating code between different programming languages. Essentially, it's a tool that helps developers write, understand, and maintain code more efficiently by leveraging artificial intelligence.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated Claude Code Roadmap",
+          "url": "https://roadmap.sh/claude-code"
+        },
+        {
+          "raw_type": "official",
+          "title": "Claude Code Overview",
+          "url": "https://code.claude.com/docs/en/overview"
+        },
+        {
+          "raw_type": "article",
+          "title": "Vibe coding tutorial: Build your first app with Claude Code",
+          "url": "https://roadmap.sh/vibe-coding/tutorial"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introducing Claude Code",
+          "url": "https://www.youtube.com/watch?v=AJpK3YTTKZ4"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:cloudflare",
+      "topic_slug": "cloudflare",
+      "node_id": "_Uh-UFNe2wP2TV0x2lKY_",
+      "title": "Cloudflare",
+      "description": "Cloudflare is a service that sits between your website and its visitors, acting as a reverse proxy. It provides a range of features including a content delivery network (CDN) to speed up website loading times by caching content closer to users, DDoS protection to safeguard against malicious attacks, and SSL/TLS encryption to secure data transmission. It essentially helps improve website performanc",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated Cloudflare Roadmap",
+          "url": "https://roadmap.sh/cloudflare"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting started",
+          "url": "https://developers.cloudflare.com/pages/get-started/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Cloudflare?",
+          "url": "https://www.youtube.com/watch?v=XHvmX3FhTwU"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn Cloudflare Workers 101 - Full Course for Beginners",
+          "url": "https://www.youtube.com/watch?v=H7Qe96fqg1M"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:code-reviews",
+      "topic_slug": "code-reviews",
+      "node_id": "0TMdly8yiqnNR8sx36iqc",
+      "title": "AI-Powered Code Reviews",
+      "description": "AI-powered code reviews leverage machine learning models to analyze source code and identify potential issues, such as bugs, security vulnerabilities, code style violations, and performance bottlenecks. These tools can automate parts of the code review process, freeing up developers to focus on more complex problems and improving the overall quality and maintainability of the codebase.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Common workflows - Claude Code",
+          "url": "https://code.claude.com/docs/en/common-workflows"
+        },
+        {
+          "raw_type": "article",
+          "title": "AI Code Reviews",
+          "url": "https://github.com/resources/articles/ai-code-reviews"
+        },
+        {
+          "raw_type": "article",
+          "title": "AI Code Review: How to Make it Work for You",
+          "url": "https://www.startearly.ai/post/ai-code-review-how-to-make-it-work-for-you"
+        },
+        {
+          "raw_type": "video",
+          "title": "Automatic code reviews with OpenAI Codex",
+          "url": "https://www.youtube.com/watch?v=HwbSWVg5Ln4&t=83s"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:copilot",
+      "topic_slug": "copilot",
+      "node_id": "HQrxxDxKN8gizvXRU5psW",
+      "title": "GitHub Copilot",
+      "description": "GitHub Copilot is an AI-powered code-completion tool that helps developers write code faster and with fewer errors. It uses a combination of machine learning algorithms and access to GitHub's vast repository of open-source code to provide context-aware suggestions for coding tasks. Copilot can generate entire functions, methods, or even entire classes based on the context of the code being written",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Quickstart for GitHub Copilot",
+          "url": "https://docs.github.com/en/copilot/quickstart"
+        },
+        {
+          "raw_type": "official",
+          "title": "Tutorials for GitHub Copilot",
+          "url": "https://docs.github.com/en/copilot/tutorials"
+        },
+        {
+          "raw_type": "article",
+          "title": "Github Copilot Tutorial",
+          "url": "https://www.tutorialspoint.com/github-copilot/index.htm"
+        },
+        {
+          "raw_type": "video",
+          "title": "Intro to GitHob Copilot in Visual Studio",
+          "url": "https://www.youtube.com/watch?v=z1ycDvspv8U"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:cors",
+      "topic_slug": "cors",
+      "node_id": "AfH2zCbqzw0Nisg1yyISS",
+      "title": "CORS",
+      "description": "CORS (Cross-Origin Resource Sharing) controls web page access to resources from different domains through HTTP headers. Servers specify allowed origins while browsers send preflight requests for permission. Prevents unauthorized access while enabling legitimate cross-origin requests for modern multi-domain applications.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Cross-Origin Resource Sharing (CORS)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding CORS",
+          "url": "https://rbika.com/blog/understanding-cors"
+        },
+        {
+          "raw_type": "video",
+          "title": "CORS in 6 minutes",
+          "url": "https://www.youtube.com/watch?v=PNtFSVU-YTI"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:csp",
+      "topic_slug": "csp",
+      "node_id": "rmcm0CZbtNVC9LZ14-H6h",
+      "title": "Content Security Policy",
+      "description": "Content Security Policy (CSP) prevents XSS and clickjacking attacks by specifying trusted content sources through HTTP headers. Website creators define safe sources for scripts, styles, images, and other resources. Limits malicious code execution and provides violation reporting for security monitoring.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "MDN Content Security Policy (CSP)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+        },
+        {
+          "raw_type": "article",
+          "title": "Web.dev - Content Security Policy (CSP)",
+          "url": "https://web.dev/csp/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:css-frameworks",
+      "topic_slug": "css-frameworks",
+      "node_id": "XDTD8el6OwuQ55wC-X4iV",
+      "title": "Modern CSS",
+      "description": "Modern CSS creates responsive designs using media queries, flexible typography, CSS-in-JS, and frameworks like Tailwind. Features CSS Logical Properties for internationalization and CSS Houdini for custom styling. Goals: performance, maintainability, and accessible designs across all devices.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated CSS Roadmap",
+          "url": "https://roadmap.sh/css"
+        },
+        {
+          "raw_type": "article",
+          "title": "Modern CSS: A Comprehensive Guide",
+          "url": "https://moderncss.dev/"
+        },
+        {
+          "raw_type": "article",
+          "title": "CSS-Tricks: Modern CSS",
+          "url": "https://css-tricks.com/modern-css/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:css",
+      "topic_slug": "css",
+      "node_id": "ZhJhf1M2OphYbEmduFq-9",
+      "title": "CSS",
+      "description": "CSS (Cascading Style Sheets) styles HTML documents, controlling layout, colors, and fonts. Separates design from content using selectors to target elements. Features responsive design with media queries, cascade rules, inheritance, and specificity. Modern CSS includes Flexbox, Grid, animations, and transitions.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated CSS Roadmap",
+          "url": "https://roadmap.sh/css"
+        },
+        {
+          "raw_type": "course",
+          "title": "Responsive Web Design Certification",
+          "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Web.dev by Google \u2014 Learn CSS",
+          "url": "https://web.dev/learn/css/"
+        },
+        {
+          "raw_type": "video",
+          "title": "CSS Complete Course",
+          "url": "https://youtu.be/n4R2E7O-Ngo"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:cursor",
+      "topic_slug": "cursor",
+      "node_id": "CKlkVK_7GZ7xzIUHJqZr8",
+      "title": "Cursor",
+      "description": "Cursor is an AI-powered code editor designed to enhance developer productivity. It leverages large language models to offer features like code completion, generation, and refactoring suggestions. By understanding code context, Cursor aims to automate repetitive tasks and provide intelligent assistance throughout the development process.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Cursor Docs",
+          "url": "https://cursor.com/docs"
+        },
+        {
+          "raw_type": "article",
+          "title": "Claude Code vs Cursor: Which AI Coding Tool To Choose",
+          "url": "https://roadmap.sh/claude-code/vs-cursor"
+        },
+        {
+          "raw_type": "video",
+          "title": "Cursor AI Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=3289vhOUdKA"
+        },
+        {
+          "raw_type": "video",
+          "title": "Cursor Tutorial for Beginners (AI Code Editor)",
+          "url": "https://www.youtube.com/watch?v=ocMOZpuAMw4"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:custom-elements",
+      "topic_slug": "custom-elements",
+      "node_id": "VxiQPgcYDFAT6WgSRWpIA",
+      "title": "Custom Elements",
+      "description": "Custom Elements enable creating your own HTML tags as part of Web Components. Build reusable webpage components with custom behavior instead of nested standard HTML. Keeps HTML cleaner and components more manageable with encapsulated functionality.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using Custom Elements - MDN",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements"
+        },
+        {
+          "raw_type": "video",
+          "title": "Web Components | Custom Elements",
+          "url": "https://www.youtube.com/watch?v=1GT35DSdZbI"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Web Development",
+          "url": "https://app.daily.dev/tags/webdev?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:cypress",
+      "topic_slug": "cypress",
+      "node_id": "DaynCz5RR26gjT6N6gTDL",
+      "title": "Cypress",
+      "description": "Cypress is a JavaScript end-to-end testing framework running tests directly in browsers. Built on Mocha with excellent asynchronous testing support. Features time-travel debugging, automatic waiting, and real-time reloading. Supports BDD/TDD approaches for comprehensive web application testing.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Cypress Website",
+          "url": "https://www.cypress.io/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Cypress Documentation",
+          "url": "https://docs.cypress.io/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Cypress End-to-End Testing",
+          "url": "https://www.youtube.com/watch?v=BQqzfHQkREo"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:deployment",
+      "topic_slug": "deployment",
+      "node_id": "A1ZUy16cVRYqmHxoCtUb0",
+      "title": "Deployment",
+      "description": "Deployment is the process of making a website or web application available for users to access on the internet. It involves taking the code, assets (like images and fonts), and configuration files and placing them on a server or hosting platform. This process often includes steps like bundling the code, optimizing assets for performance, and configuring the server to properly serve the application",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "A Beginner\u2019s Guide To Web Deployment",
+          "url": "https://medium.com/devjavu/a-beginners-guide-to-web-deployment-b4ce704fe097"
+        },
+        {
+          "raw_type": "article",
+          "title": "Deploying frontend applications\u200a\u2014\u200athe fun way",
+          "url": "https://hackernoon.com/deploying-frontend-applications-the-fun-way-bc3f69e15331"
+        },
+        {
+          "raw_type": "article",
+          "title": "Top 5 Platforms to Deploy Your Frontend Projects",
+          "url": "https://strapi.io/blog/top-platforms-for-frontend-projects"
+        },
+        {
+          "raw_type": "video",
+          "title": "How To Deploy a Website (to the internet)",
+          "url": "https://www.youtube.com/watch?v=NBrQp6-721c"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:design-systems",
+      "topic_slug": "design-systems",
+      "node_id": "ap4h4v5Sr4jBH3GwWSH8x",
+      "title": "Design Systems",
+      "description": "A design system is a structured collection of reusable components, guidelines, standards, and best practices that ensure consistency across an application's visual design and user experience. It typically includes typography, colors, spacing, icons, UI components, interaction patterns, and documentation on how to use everything correctly.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated Design System Roadmap",
+          "url": "https://roadmap.sh/design-system"
+        },
+        {
+          "raw_type": "article",
+          "title": "Design system 101: What is a design system?",
+          "url": "https://www.figma.com/blog/design-systems-101-what-is-a-design-system/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Design Systems 101",
+          "url": "https://www.nngroup.com/articles/design-systems-101/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Welcome to design systems - Lesson 1 : Introduction to design systems",
+          "url": "https://www.youtube.com/watch?v=YLo6g58vUm0"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:desktop-apps",
+      "topic_slug": "desktop-apps",
+      "node_id": "KMA7NkxFbPoUDtFnGBFnj",
+      "title": "Desktop Applications in JavaScript",
+      "description": "JavaScript builds desktop apps using Electron, NW.js, or Tauri for cross-platform development (Windows, Mac, Linux). Electron powers VS Code and Discord. Provides file system access and native integration. Trade-offs: faster development vs. performance and resource usage compared to native apps.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Electron Website",
+          "url": "https://www.electronjs.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "NW.js Website",
+          "url": "https://nwjs.io/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Tauri Website",
+          "url": "https://tauri.app/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:devtools-usage",
+      "topic_slug": "devtools-usage",
+      "node_id": "JWU9jc12_ewaIKt3qWLcp",
+      "title": "DevTools Usage",
+      "description": "DevTools are a set of web developer tools built directly into web browsers. They allow you to inspect and debug HTML, CSS, and JavaScript, monitor network activity, analyze performance bottlenecks, and more. By using DevTools, frontend developers can understand how their code is executed in the browser and identify areas for optimization.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What are browser developer tools?",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools"
+        },
+        {
+          "raw_type": "article",
+          "title": "What are Developer Tools?",
+          "url": "https://aws.amazon.com/what-is/developer-tools/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Google DevTools",
+          "url": "https://developer.chrome.com/docs/devtools"
+        },
+        {
+          "raw_type": "video",
+          "title": "Understand Browser Dev Tools Network Tab (and avoid these mistakes...)",
+          "url": "https://www.youtube.com/watch?v=2CC0fugc_2o"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:dns-and-how-it-works",
+      "topic_slug": "dns-and-how-it-works",
+      "node_id": "hkxw9jPGYphmjhTjw8766",
+      "title": "DNS",
+      "description": "DNS (Domain Name System) translates human-readable domain names into IP addresses through a global, decentralized server network. Enables easy internet navigation by converting names like [www.example.com](http://www.example.com) to numeric addresses browsers can connect to.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is DNS?",
+          "url": "https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Mess with DNS - DNS Playground",
+          "url": "https://messwithdns.net/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How DNS works (comic)",
+          "url": "https://howdns.works/"
+        },
+        {
+          "raw_type": "video",
+          "title": "DNS and How does it Work?",
+          "url": "https://www.youtube.com/watch?v=Wj0od2ag5sk"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:docs-generation",
+      "topic_slug": "docs-generation",
+      "node_id": "q7NpwqQXUp4wt2to-yFiP",
+      "title": "Documentation Generation with AI",
+      "description": "AI-powered documentation generation leverages machine learning models to automatically create and maintain software documentation. These tools can analyze code, comments, and other project artifacts to produce API references, tutorials, and other types of documentation, reducing the manual effort required and ensuring accuracy and consistency. This helps developers by freeing them from manual task",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "AI code documentation: Benefits and top tips",
+          "url": "https://www.ibm.com/think/insights/ai-code-documentation-benefits-top-tips"
+        },
+        {
+          "raw_type": "article",
+          "title": "AI Code Documentation Generators: A Guide",
+          "url": "https://overcast.blog/ai-code-documentation-generators-a-guide-b6cd72cd0ec4"
+        },
+        {
+          "raw_type": "article",
+          "title": "Automate Your Docs with Claude Code & GitHub Actions",
+          "url": "https://medium.com/@fra.bernhardt/automate-your-documentation-with-claude-code-github-actions-a-step-by-step-guide-2be2d315ed45"
+        },
+        {
+          "raw_type": "video",
+          "title": "How I Built a Tool to Auto-Generate GitHub docs",
+          "url": "https://www.youtube.com/watch?v=QYchuz6nBR8"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:electron",
+      "topic_slug": "electron",
+      "node_id": "mQHpSyMR4Rra4mqAslgiS",
+      "title": "Electron",
+      "description": "Electron builds cross-platform desktop apps using web technologies (HTML, CSS, JavaScript) with Chromium and Node.js. Provides native OS access and powers apps like VS Code. Enables rapid development but can be resource-intensive. Popular choice for web developers.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Electron Website",
+          "url": "https://www.electronjs.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Electron Docs",
+          "url": "https://www.electronjs.org/docs/latest/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Create a Desktop App With JavaScript & Electron",
+          "url": "https://www.youtube.com/watch?v=ML743nrkMHw"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:eleventy",
+      "topic_slug": "eleventy",
+      "node_id": "io0RHJWIcVxDhcYkV9d38",
+      "title": "Eleventy",
+      "description": "Eleventy (11ty) is a flexible static site generator supporting multiple template languages (HTML, Markdown, JavaScript). Creates pages from data sources, adds no client-side JavaScript for fast loading. Highly customizable with useful plugins for navigation and image processing.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Eleventy",
+          "url": "https://www.11ty.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "A collection of 11ty starters, projects, plugins, and resources",
+          "url": "https://11ty.rocks/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introduction to Eleventy",
+          "url": "https://www.youtube.com/watch?v=-dM6AmNmMFA"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:esbuild",
+      "topic_slug": "esbuild",
+      "node_id": "4W7UXfdKIUsm1bUrjdTVT",
+      "title": "esbuild",
+      "description": "esbuild is an extremely fast JavaScript bundler and minifier written in Go. Handles modern JavaScript, TypeScript, and JSX with near-instant bundling. Simple API with excellent performance for development and as foundation for other tools. Trades some advanced features for speed.",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Let's Learn esbuild! (with Sunil Pai) \u2014 Learn With Jason",
+          "url": "https://www.youtube.com/watch?v=KLdF1yu_bmI"
+        },
+        {
+          "raw_type": "official",
+          "title": "Esbuild Website",
+          "url": "https://esbuild.github.io/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What Is ESBuild?",
+          "url": "https://www.youtube.com/watch?v=ZY8Vu8cbWF0"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:eslint",
+      "topic_slug": "eslint",
+      "node_id": "NFjsI712_qP0IOmjuqXar",
+      "title": "ESLint",
+      "description": "ESLint is a JavaScript linter checking code for problems, maintains consistent style, and finds errors. Highly configurable with custom or preset rules. Supports modern JavaScript, JSX, and TypeScript. Integrates with editors and builds tools, offering automatic fixing for team consistency.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "ESLint Website",
+          "url": "https://eslint.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is ESLint and How to Use it",
+          "url": "https://2coffee.dev/en/articles/what-is-eslint-and-how-to-use-eslint-to-detect-fix-code-for-javascript-projects"
+        },
+        {
+          "raw_type": "video",
+          "title": "ESLint Quickstart - find errors automatically",
+          "url": "https://www.youtube.com/watch?v=qhuFviJn-es"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:flutter",
+      "topic_slug": "flutter",
+      "node_id": "2MRvAK9G9RGM_auWytcKh",
+      "title": "Flutter",
+      "description": "Flutter is Google's cross-platform framework building apps for iOS, Android, web, desktop from single Dart codebase. Features rich widget library, hot reload, and custom rendering engine for consistent UI. Popular for mobile development, expanding to web and desktop platforms.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Flutter Roadmap",
+          "url": "https://roadmap.sh/flutter"
+        },
+        {
+          "raw_type": "course",
+          "title": "Flutter course for beginners",
+          "url": "https://www.youtube.com/watch?v=VPvVD8t02U8"
+        },
+        {
+          "raw_type": "official",
+          "title": "Flutter for Desktop",
+          "url": "https://flutter.dev/multi-platform/desktop"
+        },
+        {
+          "raw_type": "article",
+          "title": "12 Ways Flutter Streamlines App Development",
+          "url": "https://thenewstack.io/12-ways-flutter-streamlines-app-development/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:flutter",
+      "topic_slug": "flutter",
+      "node_id": "dIQXjFEUAJAGxxfAYceHU",
+      "title": "Flutter",
+      "description": "Flutter is Google's cross-platform framework building apps for iOS, Android, web, desktop from single Dart codebase. Features rich widget library, hot reload, and custom rendering engine for consistent UI. Popular for mobile development, expanding to web and desktop platforms.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Flutter Roadmap",
+          "url": "https://roadmap.sh/flutter"
+        },
+        {
+          "raw_type": "course",
+          "title": "Flutter course for beginners",
+          "url": "https://www.youtube.com/watch?v=VPvVD8t02U8"
+        },
+        {
+          "raw_type": "official",
+          "title": "Flutter for Desktop",
+          "url": "https://flutter.dev/multi-platform/desktop"
+        },
+        {
+          "raw_type": "article",
+          "title": "12 Ways Flutter Streamlines App Development",
+          "url": "https://thenewstack.io/12-ways-flutter-streamlines-app-development/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:gemini",
+      "topic_slug": "gemini",
+      "node_id": "Bic4PHhz-YqzPWRimJO83",
+      "title": "Gemini",
+      "description": "Gemini is a family of multimodal large language models (LLMs) developed by Google. These models are designed to handle and understand different types of data, including text, code, images, audio, and video. They are used to build AI-powered features by providing capabilities such as natural language understanding, content generation, and complex reasoning.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Google Gemini",
+          "url": "https://gemini.google.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Google Gemini Docs",
+          "url": "https://workspace.google.com/solutions/ai/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Welcome to the Gemini era",
+          "url": "https://www.youtube.com/watch?v=_fuimO6ErKI"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:git",
+      "topic_slug": "git",
+      "node_id": "R_I4SGYqLk5zze5I1zS_E",
+      "title": "Git",
+      "description": "Git is a distributed version control system tracking code changes and enabling collaborative development. Features branching, merging, and complete project history. Allows offline work with local repositories. Fast, flexible, and the most popular VCS for software projects.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Git & GitHub Roadmap",
+          "url": "https://roadmap.sh/git-github"
+        },
+        {
+          "raw_type": "course",
+          "title": "Why use Git? (Interactive Lesson)",
+          "url": "https://inter-git.com/lessons/introduction"
+        },
+        {
+          "raw_type": "article",
+          "title": "Tutorial: Git for Absolutely Everyone",
+          "url": "https://thenewstack.io/tutorial-git-for-absolutely-everyone/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Git & GitHub Crash Course For Beginners",
+          "url": "https://www.youtube.com/watch?v=SWYqp7iY_Tc"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:github-pages",
+      "topic_slug": "github-pages",
+      "node_id": "vpzh9bNXCxgdDFQLsot2_",
+      "title": "GitHub Pages",
+      "description": "GitHub Pages is a free static site hosting service that takes HTML, CSS, and JavaScript files directly from a GitHub repository and publishes them as a website. It's ideal for hosting project documentation, portfolios, blogs, and other static websites. Pages supports custom domains, HTTPS, and Jekyll for automatic site generation. Each repository can have one project site, while user and organizat",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "GitHub Pages Documentation",
+          "url": "https://docs.github.com/en/pages"
+        },
+        {
+          "raw_type": "official",
+          "title": "GitHub Pages Quickstart",
+          "url": "https://docs.github.com/en/pages/quickstart"
+        },
+        {
+          "raw_type": "article",
+          "title": "How do I use GitHub Pages?",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages"
+        },
+        {
+          "raw_type": "video",
+          "title": "GitHub Pages - Full Tutorial",
+          "url": "https://www.youtube.com/watch?v=o5g-lUuFgpg"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:github",
+      "topic_slug": "github",
+      "node_id": "qmTVMJDsEhNIkiwE_UTYu",
+      "title": "GitHub",
+      "description": "GitHub is the leading Git repository hosting platform for open-source and private projects. Owned by Microsoft since 2018, it's essential for modern software development, project showcasing, and open-source contributions. Central hub for developer collaboration and code sharing.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Git & GitHub Roadmap",
+          "url": "https://roadmap.sh/git-github"
+        },
+        {
+          "raw_type": "official",
+          "title": "GitHub: Quickstart",
+          "url": "https://docs.github.com/en/get-started/quickstart/hello-world"
+        },
+        {
+          "raw_type": "official",
+          "title": "Learn GitHub by doing",
+          "url": "https://skills.github.com/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is GitHub?",
+          "url": "https://www.youtube.com/watch?v=w3jLJU7DT5E"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:gitlab",
+      "topic_slug": "gitlab",
+      "node_id": "zIoSJMX3cuzCgDYHjgbEh",
+      "title": "GitLab",
+      "description": "GitLab is a comprehensive DevOps platform offering integrated development tools including Git hosting, CI/CD, issue tracking, and deployment. Available as cloud service or self-hosted solution. Popular with enterprises seeking unified development workflows and built-in automation capabilities.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "GitLab Website",
+          "url": "https://gitlab.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "GitLab Documentation",
+          "url": "https://docs.gitlab.com/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Development: Connect git to GitLab for Small Projects",
+          "url": "https://thenewstack.io/development-connect-git-to-gitlab-for-small-projects/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:graphql",
+      "topic_slug": "graphql",
+      "node_id": "L7AllJfKvClaam3y-u6DP",
+      "title": "Graphql",
+      "description": "GraphQL is Facebook's query language for APIs allowing clients to request exactly the data needed. Reduces over-fetching and under-fetching compared to REST. Ideal for mobile applications, complex APIs, and rapidly changing requirements with strong typing.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated GraphQL Roadmap",
+          "url": "https://roadmap.sh/graphql"
+        },
+        {
+          "raw_type": "official",
+          "title": "Introduction to GraphQL",
+          "url": "https://graphql.org/learn/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to GraphQL",
+          "url": "https://thenewstack.io/introduction-to-graphql/"
+        },
+        {
+          "raw_type": "video",
+          "title": "GraphQL Course for Beginners",
+          "url": "https://www.youtube.com/watch?v=ed8SzALpx1Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:how-does-the-internet-work",
+      "topic_slug": "how-does-the-internet-work",
+      "node_id": "yCnn-NfSxIybUQ2iTuUGq",
+      "title": "How Does The Internet Work",
+      "description": "The internet is a global network connecting computers and devices for information sharing. Enables browsing, email, streaming, and communication through interconnected systems. Acts as worldwide infrastructure facilitating access to online resources and services.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Introduction to Internet",
+          "url": "https://roadmap.sh/guides/what-is-internet"
+        },
+        {
+          "raw_type": "article",
+          "title": "How does the Internet Work?",
+          "url": "https://cs.fyi/guide/how-does-internet-work"
+        },
+        {
+          "raw_type": "article",
+          "title": "How Does the Internet Work? MDN Docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work"
+        },
+        {
+          "raw_type": "video",
+          "title": "How the Internet Works in 5 Minutes",
+          "url": "https://www.youtube.com/watch?v=7_LPdttKXPc"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:how-llms-work",
+      "topic_slug": "how-llms-work",
+      "node_id": "yKNdBbahm_h81xdMDT-qx",
+      "title": "How LLMs Work",
+      "description": "LLMs, or Large Language Models, are advanced AI models trained on vast datasets to understand and generate human-like text. They can perform a wide range of natural language processing tasks, such as text generation, translation, summarization, and question answering. LLMs function as sophisticated prediction engines that process text sequentially, predicting the next token based on relationships ",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated AI Engineer Roadmap",
+          "url": "https://roadmap.sh/ai-engineer"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is a large language model (LLM)?",
+          "url": "https://www.cloudflare.com/en-gb/learning/ai/what-is-large-language-model/"
+        },
+        {
+          "raw_type": "article",
+          "title": "New to LLMs? Start Here",
+          "url": "https://towardsdatascience.com/new-to-llms-start-here/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How Large Language Models Work",
+          "url": "https://www.youtube.com/watch?v=5sLYAQS9sWQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:html-templates",
+      "topic_slug": "html-templates",
+      "node_id": "Hk8AVonOd693_y1sykPqd",
+      "title": "HTML Templates",
+      "description": "The `<template>` HTML element holds hidden content for later use by JavaScript. Acts as a reusable blueprint for creating dynamic page elements. Enables efficient content templating and component-based development patterns in web applications.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using Templates and Slots - MDN",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about HTML",
+          "url": "https://app.daily.dev/tags/html?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:html",
+      "topic_slug": "html",
+      "node_id": "yWG2VUkaF5IJVVut6AiSy",
+      "title": "HTML",
+      "description": "HTML (Hypertext Markup Language) is the standard for creating web pages, structuring content with elements and attributes. Browsers interpret HTML tags to render pages. HTML5, the current standard, adds semantic elements, multimedia support, and form controls. It works with CSS for styling and JavaScript for interactivity, forming web development's foundation.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated HTML Roadmap",
+          "url": "https://roadmap.sh/html"
+        },
+        {
+          "raw_type": "course",
+          "title": "Responsive Web Design Certification",
+          "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+        },
+        {
+          "raw_type": "video",
+          "title": "HTML Full Course for Beginners",
+          "url": "https://youtu.be/mJgBOIoGihA"
+        },
+        {
+          "raw_type": "video",
+          "title": "HTML Full Course - Build a Website Tutorial",
+          "url": "https://www.youtube.com/watch?v=pQN-pnXPaVg"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:https",
+      "topic_slug": "https",
+      "node_id": "uum7vOhOUR38vLuGZy8Oa",
+      "title": "HTTPS",
+      "description": "HTTPS (Hypertext Transfer Protocol Secure) is HTTP's encrypted version, securing data transmission between browsers and websites. Essential for protecting sensitive information like banking and email. Ensures privacy and security through data encryption for online communications.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is HTTPS?",
+          "url": "https://www.cloudflare.com/en-gb/learning/ssl/what-is-https/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Why HTTPS Matters",
+          "url": "https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https"
+        },
+        {
+          "raw_type": "article",
+          "title": "Enabling HTTPS on Your Servers",
+          "url": "https://web.dev/enable-https/"
+        },
+        {
+          "raw_type": "video",
+          "title": "SSL, TLS, HTTP, HTTPS Explained",
+          "url": "https://www.youtube.com/watch?v=hExRDVZHhig"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:implementing-ai",
+      "topic_slug": "implementing-ai",
+      "node_id": "MdYPIf_9ezbIp6Dm5Fyme",
+      "title": "Implementing AI",
+      "description": "Implementing AI in frontend development involves integrating artificial intelligence capabilities directly into user interfaces and workflows. This can range from simple tasks like intelligent form validation to complex features such as personalized content recommendations or AI-powered chatbots. Several major providers offer generative AI solutions that can be leveraged for frontend implementatio",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Anthropic vs OpenAI vs Gemini",
+          "url": "https://www.aqedigital.com/blog/anthropic-vs-openai-vs-gemini/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:internet",
+      "topic_slug": "internet",
+      "node_id": "VlNNwIEDWqQXtqkHWJYzC",
+      "title": "Internet",
+      "description": "The Internet is a global network of interconnected computers using TCP/IP protocols, connecting billions of devices worldwide. Revolutionized communication, commerce, education, and entertainment. Enables web browsing, streaming, and diverse applications while presenting privacy and security challenges.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Introduction to Internet",
+          "url": "https://roadmap.sh/guides/what-is-internet"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Internet",
+          "url": "https://en.wikipedia.org/wiki/Internet"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:ionic",
+      "topic_slug": "ionic",
+      "node_id": "Pxyk3nBlWbgmMjsA93E70",
+      "title": "Ionic",
+      "description": "Ionic is an open-source mobile toolkit that allows developers to build high-quality cross-platform applications for iOS, Android, and the web using a single codebase. It leverages web technologies like HTML, CSS, and JavaScript, and integrates seamlessly with popular frameworks such as Angular, React, and Vue. By providing a rich library of pre-designed UI components and native mobile features, it",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Ionic Docs",
+          "url": "https://ionicframework.com/docs"
+        },
+        {
+          "raw_type": "video",
+          "title": "Ionic Tutorial",
+          "url": "https://www.youtube.com/watch?v=5Gj4Y8zvl-s&list=PLlyAM-8-I7S9iNcZRfP4SQJhm4Mw5q5ku"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:javascript",
+      "topic_slug": "javascript",
+      "node_id": "ODcfFEorkfJNupoQygM53",
+      "title": "JavaScript",
+      "description": "JavaScript is a versatile programming language that makes websites interactive. Runs in browsers, servers (Node.js), and desktop applications. Features dynamic typing, event-driven programming, and constant evolution. Essential for modern web development across frontend and backend.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated JavaScript Roadmap",
+          "url": "https://roadmap.sh/javascript"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Modern JavaScript Tutorial",
+          "url": "https://javascript.info/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Build 30 Javascript projects in 30 days",
+          "url": "https://javascript30.com/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:jest",
+      "topic_slug": "jest",
+      "node_id": "g5itUjgRXd9vs9ujHezFl",
+      "title": "Jest",
+      "description": "Jest is Facebook's JavaScript testing framework for unit testing with auto mocking, code coverage, and snapshot testing. Works with React, Angular, Vue. Features parallel test execution, watch mode, and built-in assertion library. Top choice for JavaScript developers.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Jest Website",
+          "url": "https://jestjs.io/"
+        },
+        {
+          "raw_type": "video",
+          "title": "JavaScript Testing With Jest",
+          "url": "https://youtu.be/IPiUDhwnZxA?si=2_lE2bDo2fRuo2CU"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:learn-a-framework",
+      "topic_slug": "learn-a-framework",
+      "node_id": "eXezX7CVNyC1RuyU_I4yP",
+      "title": "Pick a Framework",
+      "description": "Web frameworks are development toolkits providing libraries, structure, rules, and tools for building applications. Different frameworks offer varying features based on project needs. Popular examples include React, Angular, and Vue, each with unique strengths and capabilities.",
+      "resources": [
+        {
+          "raw_type": "video",
+          "title": "15 Crazy New JS Framework Features You Don't Know Yet",
+          "url": "https://www.youtube.com/watch?v=466U-2D86bc"
+        },
+        {
+          "raw_type": "video",
+          "title": "Which JS Framework is Best?",
+          "url": "https://www.youtube.com/watch?v=cuHDQhDhvPE"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:learn-the-basics",
+      "topic_slug": "learn-the-basics",
+      "node_id": "UTupdqjOyLh7-56_0SXJ8",
+      "title": "Generative AI for Frontend Development",
+      "description": "Generative AI uses algorithms to create new content, like code or designs, based on the data it's trained on. This means it can help frontend developers by automatically generating things like UI elements, suggesting code snippets, or even creating entire webpage layouts based on specific requirements and examples. Essentially, it's a tool that can automate repetitive tasks and inspire new ideas i",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "AI in software development - IBM",
+          "url": "https://www.ibm.com/think/topics/ai-in-software-development"
+        },
+        {
+          "raw_type": "article",
+          "title": "AI in software development",
+          "url": "https://github.com/resources/articles/ai-in-software-development"
+        },
+        {
+          "raw_type": "article",
+          "title": "The right way to implement AI into your frontend workflow",
+          "url": "https://blog.logrocket.com/frontend-ai-tools-for-developers/"
+        },
+        {
+          "raw_type": "article",
+          "title": "5 Best AI Models For Frontend Development and UI Design",
+          "url": "https://www.index.dev/blog/ai-models-frontend-development-ui-generation"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:lighthouse",
+      "topic_slug": "lighthouse",
+      "node_id": "dz7_QXoO7X0WmS5xuAhhJ",
+      "title": "Lighthouse",
+      "description": "Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO, and more. Lighthouse provides reports with actionable insights to help developers improve their website's user experience.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Introduction to Lighthouse",
+          "url": "https://developer.chrome.com/docs/lighthouse/overview"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "lighthouse",
+          "url": "https://github.com/GoogleChrome/lighthouse"
+        },
+        {
+          "raw_type": "article",
+          "title": "Google Lighthouse: What It Is & How to Use It",
+          "url": "https://www.semrush.com/blog/google-lighthouse/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What Is Google Lighthouse and How to Use It?",
+          "url": "https://www.youtube.com/watch?v=VyaHwvPWuZU"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:linters--formatters",
+      "topic_slug": "linters--formatters",
+      "node_id": "9VcGfDBBD8YcKatj4VcH1",
+      "title": "Linters formatters",
+      "description": "Linters and formatters improve code quality by finding errors, bugs, and style issues (linters) and automatically fixing formatting like indentation and spacing (formatters). Ensure consistency, readability, and early error detection. Examples: ESLint, Prettier.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What Is a Linter?",
+          "url": "https://www.testim.io/blog/what-is-a-linter-heres-a-definition-and-quick-start-guide/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:mcp",
+      "topic_slug": "mcp",
+      "node_id": "XFy2gj7DmXeaCoc6MZo_j",
+      "title": "Model Context Protocol (MCP)",
+      "description": "Model Context Protocol (MCP) is a rulebook that tells an AI agent how to pack background information before it sends a prompt to a language model. It lists what pieces go into the prompt\u2014things like the system role, the user\u2019s request, past memory, tool calls, or code snippets\u2014and fixes their order. Clear tags mark each piece, so both humans and machines can see where one part ends and the next be",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "MCP: Build Rich-Context AI Apps with Anthropic",
+          "url": "https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Model Context Protocol",
+          "url": "https://modelcontextprotocol.io/introduction"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "modelcontexprotocol",
+          "url": "https://github.com/modelcontextprotocol/modelcontextprotocol"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Ultimate Guide to MCP",
+          "url": "https://guangzhengli.com/blog/en/model-context-protocol"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:mobile-apps",
+      "topic_slug": "mobile-apps",
+      "node_id": "VOGKiG2EZVfCBAaa7Df0W",
+      "title": "Mobile Apps",
+      "description": "Mobile applications are software programs designed to run specifically on smartphones, tablets, and other portable handheld devices. They are typically accessed through dedicated app stores and are developed to leverage device-specific features like GPS, cameras, and push notifications to provide an optimized user experience. While native apps are built with platform-specific languages, developers",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "React Native",
+          "url": "https://reactnative.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Flutter",
+          "url": "https://flutter.dev"
+        },
+        {
+          "raw_type": "official",
+          "title": "Ionic",
+          "url": "https://ionicframework.com"
+        },
+        {
+          "raw_type": "official",
+          "title": "NativeScript",
+          "url": "https://nativescript.org/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:module-bundlers",
+      "topic_slug": "module-bundlers",
+      "node_id": "hkSc_1x09m7-7BO7WzlDT",
+      "title": "Module Bundlers",
+      "description": "Module bundlers combine multiple JavaScript files into optimized bundles for browsers. Handle dependencies, code transformation, and splitting for performance. Examples: Webpack, Rollup, Parcel. Enable modern JavaScript features, improve load times, and streamline development workflows.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Rollup Bundler",
+          "url": "https://rollupjs.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Webpack Website",
+          "url": "https://webpack.js.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Complete JavaScript Module Bundlers Guide",
+          "url": "https://snipcart.com/blog/javascript-module-bundler"
+        },
+        {
+          "raw_type": "video",
+          "title": "Module Bundlers Explained",
+          "url": "https://www.youtube.com/watch?v=5IG4UmULyoA"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:netlify",
+      "topic_slug": "netlify",
+      "node_id": "o8GstE5gxcGByh-D7lwqT",
+      "title": "Netlify",
+      "description": "Netlify is a web development platform that simplifies building, deploying, and hosting websites and web applications. It automates the process of deploying static sites and single-page applications by directly connecting to your Git repository. When changes are pushed to the repository, Netlify automatically builds and deploys the updated version of your site. It also offers features like continuo",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Netlify Docs",
+          "url": "https://docs.netlify.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Get Started with Netlify",
+          "url": "https://docs.netlify.com/start/get-started-guide/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Getting started with Netlify Edge Functions",
+          "url": "https://www.youtube.com/watch?v=6pEVhH37xQE&list=PLzlG0L9jlhEPMR8haUPkxj2hJ_3jh5qa6"
+        },
+        {
+          "raw_type": "video",
+          "title": "Netlify Dev Crash Course | Easy Dev & Deploy",
+          "url": "https://www.youtube.com/watch?v=FMhVXOA54x8"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:nextjs",
+      "topic_slug": "nextjs",
+      "node_id": "V70884VcuXkfrfHyLGtUg",
+      "title": "Next.js",
+      "description": "Next.js is a React framework supporting server-side rendering and static site generation. Features automatic code splitting, file-based routing, CSS support, API routes, and optimized performance. Includes live updates, smart preloading, and easy deployment. Ideal for SEO-friendly applications.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated Next.js Roadmap",
+          "url": "https://roadmap.sh/nextjs"
+        },
+        {
+          "raw_type": "official",
+          "title": "Next.js Website",
+          "url": "https://nextjs.org/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js for Beginners - Full Course at freeCodeCamp YouTube Channel",
+          "url": "https://youtu.be/1WmNXEVia8I"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:nextjs",
+      "topic_slug": "nextjs",
+      "node_id": "zNFYAJaSq0YZXL5Rpx1NX",
+      "title": "Next.js",
+      "description": "Next.js is a React framework supporting server-side rendering and static site generation. Features automatic code splitting, file-based routing, CSS support, API routes, and optimized performance. Includes live updates, smart preloading, and easy deployment. Ideal for SEO-friendly applications.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit the Dedicated Next.js Roadmap",
+          "url": "https://roadmap.sh/nextjs"
+        },
+        {
+          "raw_type": "official",
+          "title": "Official Website",
+          "url": "https://nextjs.org/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Next.js for Beginners",
+          "url": "https://youtu.be/1WmNXEVia8I"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:npm",
+      "topic_slug": "npm",
+      "node_id": "ib_FHinhrw8VuSet-xMF7",
+      "title": "npm",
+      "description": "npm (Node Package Manager) is the primary JavaScript package manager for finding, sharing, and managing code dependencies. Uses package.json to track project requirements and enables consistent builds across environments. Remains the most popular choice despite alternatives like Yarn and pnpm.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "NPM Documentation",
+          "url": "https://docs.npmjs.com/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Modern JavaScript for Dinosaurs",
+          "url": "https://peterxjang.com/blog/modern-javascript-explained-for-dinosaurs.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "NPM Tutorial for Beginners",
+          "url": "https://www.youtube.com/watch?v=2V1UUhBJ62Y"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:nuxtjs",
+      "topic_slug": "nuxtjs",
+      "node_id": "BBsXxkbbEG-gnbM1xXKrj",
+      "title": "Nuxt.js",
+      "description": "Nuxt.js is a Vue.js framework providing structure, automatic routing, and server-side rendering. Supports static site generation, code splitting, and data fetching. Offers flexible rendering options with focus on developer experience and performance. Popular for SEO-friendly Vue applications with plugin ecosystem.",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Nuxt.js Fundamentals",
+          "url": "https://vueschool.io/courses/nuxtjs-fundamentals"
+        },
+        {
+          "raw_type": "official",
+          "title": "Nuxt Website",
+          "url": "https://nuxtjs.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Get Started with Nuxt",
+          "url": "https://explorers.netlify.com/learn/get-started-with-nuxt"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:nuxtjs",
+      "topic_slug": "nuxtjs",
+      "node_id": "XWJxV42Dpu2D3xDK10Pn3",
+      "title": "Nuxt.js",
+      "description": "Nuxt.js is a Vue.js framework providing structure, automatic routing, and server-side rendering. Supports static site generation, code splitting, and data fetching. Offers flexible rendering options with focus on developer experience and performance. Popular for SEO-friendly Vue applications with plugin ecosystem.",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Nuxt.js Fundamentals",
+          "url": "https://vueschool.io/courses/nuxtjs-fundamentals"
+        },
+        {
+          "raw_type": "official",
+          "title": "Nuxt Website",
+          "url": "https://nuxtjs.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Get Started with Nuxt",
+          "url": "https://explorers.netlify.com/learn/get-started-with-nuxt"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:openai",
+      "topic_slug": "openai",
+      "node_id": "-ye5ZtYFDoYGpj-UJaBP8",
+      "title": "OpenAI",
+      "description": "OpenAI provides a suite of artificial intelligence models and tools accessible through an API. These models can perform tasks like generating text, translating languages, writing different kinds of creative content, and answering your questions in an informative way. Developers can integrate these powerful AI capabilities into their applications by sending requests to OpenAI's API endpoints and re",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "OpenAI",
+          "url": "https://platform.openai.com/docs/overview"
+        },
+        {
+          "raw_type": "official",
+          "title": "OpenAI Models",
+          "url": "https://platform.openai.com/docs/models"
+        },
+        {
+          "raw_type": "official",
+          "title": "OpenAI Academy",
+          "url": "https://academy.openai.com/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:owasp-risks",
+      "topic_slug": "owasp-risks",
+      "node_id": "JanR7I_lNnUCXhCMGLdn-",
+      "title": "OWASP Security Risks",
+      "description": "OWASP (Open Web Application Security Project) identifies top web application security risks including injection attacks, broken authentication, data exposure, and vulnerable dependencies. Provides guidance on secure coding practices, regular security testing, and comprehensive protection strategies for web applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "OWASP Website",
+          "url": "https://owasp.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "OWASP Cheatsheets",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/AJAX_Security_Cheat_Sheet.html"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "OWASP Web Application Security Testing Checklist",
+          "url": "https://github.com/0xRadi/OWASP-Web-Checklist"
+        },
+        {
+          "raw_type": "article",
+          "title": "OWASP Top 10: A Guide to the Worst Software Vulnerabilities",
+          "url": "https://thenewstack.io/owasp-top-10-a-guide-to-the-worst-software-vulnerabilities/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:package-managers",
+      "topic_slug": "package-managers",
+      "node_id": "IqvS1V-98cxko3e9sBQgP",
+      "title": "Package Managers",
+      "description": "Package managers automate software package installation, updates, and dependency management. Examples include npm (JavaScript), pip (Python), and yarn. Enable code sharing, reuse, and consistent project setups. Essential for modern development workflows and team collaboration.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PNPM: The Faster, More Performant NPM",
+          "url": "https://pnpm.io/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Yarn - Getting Started",
+          "url": "https://yarnpkg.com/en/docs/getting-started"
+        },
+        {
+          "raw_type": "article",
+          "title": "An Absolute Beginners Guide to Using npm",
+          "url": "https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/"
+        },
+        {
+          "raw_type": "video",
+          "title": "NPM Crash Course",
+          "url": "https://www.youtube.com/watch?v=jHDhaSSKmB0"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:parcel",
+      "topic_slug": "parcel",
+      "node_id": "NS-hwaWa5ebSmNNRoxFDp",
+      "title": "Parcel",
+      "description": "Parcel is a zero-configuration web app bundler handling JavaScript, CSS, HTML automatically. Features dependency resolution, code transformation, optimization, live reloading, code splitting, and tree-shaking by default. Known for simplicity and speed, ideal for rapid prototyping.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Parcel Website",
+          "url": "https://parceljs.org/plugin-system/bundler/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Build a Web App with Parcel.js",
+          "url": "https://www.youtube.com/watch?v=R02ehdTzi3I"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:performance",
+      "topic_slug": "performance",
+      "node_id": "6d8cjWZ4BuUjwT0seiuzJ",
+      "title": "Performance",
+      "description": "Performance, in the context of web development, refers to how quickly and efficiently a website or web application loads and responds to user interactions. It encompasses various aspects like loading times, rendering speed, and overall responsiveness. Optimizing performance ensures a smooth and enjoyable user experience, leading to increased engagement and satisfaction.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Web performance",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Performance"
+        },
+        {
+          "raw_type": "article",
+          "title": "9 Essential Strategies for Web Performance Optimization",
+          "url": "https://www.shopify.com/enterprise/blog/web-performance-optimization"
+        },
+        {
+          "raw_type": "video",
+          "title": "The ultimate guide to web performance",
+          "url": "https://www.youtube.com/watch?v=0fONene3OIA"
+        },
+        {
+          "raw_type": "video",
+          "title": "Frontend System Design: The 2025 Web Performance Roadmap",
+          "url": "https://www.youtube.com/watch?v=KUdqbIHn8Ic"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:playwright",
+      "topic_slug": "playwright",
+      "node_id": "jramLk8FGuaEH4YpHIyZT",
+      "title": "Playwright",
+      "description": "Playwright is Microsoft's cross-browser automation testing framework supporting Chromium, Firefox, WebKit across platforms. Works with JavaScript, TypeScript, Python, .NET. Features auto-waiting, network control, mobile simulation. Excellent for modern web app testing with debugging tools.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Playwright Website",
+          "url": "https://playwright.dev/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Playwright, a Time-Saving End-to-End Testing Framework",
+          "url": "https://thenewstack.io/playwright-a-time-saving-end-to-end-testing-framework/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Get started with end-to-end testing: Playwright",
+          "url": "https://www.youtube.com/playlist?list=PLQ6Buerc008ed-F9OksF7ek37wR3y916p"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:pnpm",
+      "topic_slug": "pnpm",
+      "node_id": "SLxA5qJFp_28TRzr1BjxZ",
+      "title": "pnpm",
+      "description": "pnpm (performant npm) is a fast, disk-efficient JavaScript package manager using global storage with symlinks. Saves disk space, ensures strict package.json compliance, supports monorepos, and provides better security through dependency isolation. Growing popularity for speed and efficiency.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PNPM Website",
+          "url": "https://pnpm.io"
+        },
+        {
+          "raw_type": "article",
+          "title": "Meet PNPM: The Faster, More Performant NPM",
+          "url": "https://blog.bitsrc.io/pnpm-javascript-package-manager-4b5abd59dc9"
+        },
+        {
+          "raw_type": "video",
+          "title": "Get started with pnpm",
+          "url": "https://www.youtube.com/watch?v=MvbReZDSKHI"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:prettier",
+      "topic_slug": "prettier",
+      "node_id": "zbkpu_gvQ4mgCiZKzS1xv",
+      "title": "Prettier",
+      "description": "Prettier automatically formats code for consistency across JavaScript, TypeScript, CSS, and other languages. Enforces opinionated style rules, eliminating style debates and saving time. Integrates with editors and pre-commit hooks. Popular for maintaining uniform code appearance across teams.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Prettier Website",
+          "url": "https://prettier.io"
+        },
+        {
+          "raw_type": "official",
+          "title": "Why Prettier",
+          "url": "https://prettier.io/docs/en/why-prettier.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to set up Prettier",
+          "url": "https://www.youtube.com/watch?v=DqfQ4DPnRqI"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:prompting-techniques",
+      "topic_slug": "prompting-techniques",
+      "node_id": "Gv_g4gK6pZK6l_0xAn34X",
+      "title": "Prompt Engineering",
+      "description": "Prompt engineering is the process of crafting effective inputs (prompts) to guide AI models to generate desired outputs. It involves strategically designing prompts to optimize the model\u2019s performance by providing clear instructions, context, and examples. Effective prompt engineering can improve the quality, relevance, and accuracy of responses, making it essential for applications like chatbots,",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Prompt Engineering Roadmap",
+          "url": "https://roadmap.sh/prompt-engineering"
+        },
+        {
+          "raw_type": "course",
+          "title": "Introduction to Prompt Engineering",
+          "url": "https://learnprompting.org/courses/intro-to-prompt-engineering"
+        },
+        {
+          "raw_type": "article",
+          "title": "Prompt engineering techniques",
+          "url": "https://www.ibm.com/think/topics/prompt-engineering-techniques"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Prompt Engineering?",
+          "url": "https://www.youtube.com/watch?v=nf1e-55KKbg"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:pwas",
+      "topic_slug": "pwas",
+      "node_id": "PoM77O2OtxPELxfrW1wtl",
+      "title": "Progressive Web Apps",
+      "description": "Progressive Web Apps (PWAs) are web applications behaving like native apps using HTML, CSS, JavaScript. Feature offline functionality, push notifications, home screen installation, and service workers for caching. Cross-platform, discoverable, and cost-effective alternative to native apps.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Learn PWA",
+          "url": "https://web.dev/learn/pwa/"
+        },
+        {
+          "raw_type": "article",
+          "title": "MDN - Progressive Web Apps",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Progressive Web Apps in 2024",
+          "url": "https://www.youtube.com/watch?v=3ODP6tTpjqA"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:railway",
+      "topic_slug": "railway",
+      "node_id": "PJRsqg5Vx9gQTodxaeZfz",
+      "title": "Railway",
+      "description": "Railway is a cloud platform that simplifies deploying web applications and services. It allows developers to deploy directly from their Git repositories, automatically handling infrastructure concerns like server provisioning, networking, and scaling. It supports various languages and frameworks, making it a versatile option for deploying frontend projects.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Railway",
+          "url": "https://railway.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Quick Start Tutorial",
+          "url": "https://docs.railway.com/quick-start"
+        },
+        {
+          "raw_type": "video",
+          "title": "Fastest Way to Deploy a Full Stack Web App (Railway)",
+          "url": "https://www.youtube.com/watch?v=JQIKobOcQ9k"
+        },
+        {
+          "raw_type": "video",
+          "title": "Intro to Railway - Config Free Deploys",
+          "url": "https://www.youtube.com/watch?v=DyQz2DgSToU"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:react-native",
+      "topic_slug": "react-native",
+      "node_id": "dsTegXTyupjS8iU6I7Xiv",
+      "title": "React Native",
+      "description": "React Native enables building native mobile apps for iOS and Android using JavaScript and React. Compiles to native components for authentic look and performance. Features code sharing, hot reloading, and device API access. Ideal for React developers transitioning to mobile development.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated React Roadmap",
+          "url": "https://roadmap.sh/react-native"
+        },
+        {
+          "raw_type": "official",
+          "title": "React Native Website",
+          "url": "https://reactnative.dev/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:react-router",
+      "topic_slug": "react-router",
+      "node_id": "KJRkrFZIihCUBrOf579EU",
+      "title": "react-router",
+      "description": "React Router enables client-side routing in React applications, creating single-page apps with multiple views. Handles URL management, provides route definition components, and supports lazy loading and route guards. The standard navigation solution for React applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "React Router Website",
+          "url": "https://reactrouter.com/en/main"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Complete Guide to Routing in React",
+          "url": "https://hygraph.com/blog/routing-in-react"
+        },
+        {
+          "raw_type": "video",
+          "title": "React Router - Complete tutorial",
+          "url": "https://www.youtube.com/watch?v=oTIJunBa6MA"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:react",
+      "topic_slug": "react",
+      "node_id": "SGDf_rbfmFSHlxI-Czzlz",
+      "title": "React",
+      "description": "React is Facebook's JavaScript library for building user interfaces with reusable components. Uses virtual DOM for performance and one-way data flow. Features component-based architecture, works with Redux for state management and React Native for mobile. Popular for its clarity, speed, and ecosystem.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated React Roadmap",
+          "url": "https://roadmap.sh/react"
+        },
+        {
+          "raw_type": "course",
+          "title": "Full Stack React Developer Course",
+          "url": "https://www.youtube.com/watch?v=Bvwq_S0n2pk"
+        },
+        {
+          "raw_type": "official",
+          "title": "React Website",
+          "url": "https://react.dev"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:react",
+      "topic_slug": "react",
+      "node_id": "tG5v3O4lNIFc2uCnacPak",
+      "title": "React",
+      "description": "React is a JavaScript tool from Facebook for building UIs, especially for single-page apps. It lets you create reusable UI parts that update when data changes. React uses a virtual DOM for speed and has a one-way data flow. This component style makes code neat and reusable. React also works with tools like Redux for data management and React Native for mobile apps. It's popular because it's clear,",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated React Roadmap",
+          "url": "https://roadmap.sh/react"
+        },
+        {
+          "raw_type": "course",
+          "title": "Full Stack React Developer Course",
+          "url": "https://www.youtube.com/watch?v=Bvwq_S0n2pk"
+        },
+        {
+          "raw_type": "official",
+          "title": "React Website",
+          "url": "https://react.dev"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:refactoring",
+      "topic_slug": "refactoring",
+      "node_id": "EYT2rTLZ8tUW2u8DOnAWF",
+      "title": "Refactoring with AI",
+      "description": "Refactoring, in the context of software development, is the process of restructuring existing computer code\u2014changing its internal structure\u2014without changing its external behavior. AI tools can assist in this process by analyzing code for potential improvements in readability, performance, and maintainability. They can automatically suggest or even implement changes like simplifying complex logic, ",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is AI code refactoring? - IBM",
+          "url": "https://www.ibm.com/think/topics/ai-code-refactoring"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is AI code refactoring?",
+          "url": "https://graphite.com/guides/what-is-ai-code-refactoring"
+        },
+        {
+          "raw_type": "video",
+          "title": "Using AI to Refactor Legacy Code:",
+          "url": "https://www.youtube.com/watch?v=B7Yt-WmlW2I"
+        },
+        {
+          "raw_type": "video",
+          "title": "AI-Driven Code Refactoring: Improving Legacy Codebases",
+          "url": "https://www.youtube.com/watch?v=u8tvVxUOwvY"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:relay-modern",
+      "topic_slug": "relay-modern",
+      "node_id": "0moPO23ol33WsjVXSpTGf",
+      "title": "Relay Modern",
+      "description": "Relay is Facebook's JavaScript library for data-heavy React applications using GraphQL. Co-locates data requirements with components, enabling efficient fetching and updates. Handles caching, real-time updates, and optimistic UI changes. Ideal for complex applications requiring sophisticated data management.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Relay Website",
+          "url": "https://relay.dev/"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "facebook/relay",
+          "url": "https://github.com/facebook/relay"
+        },
+        {
+          "raw_type": "video",
+          "title": "ELI5 - Relay",
+          "url": "https://www.youtube.com/watch?v=A4POd93GI_I"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:render",
+      "topic_slug": "render",
+      "node_id": "wfGz8pshGQARZ7qStGoSD",
+      "title": "Render",
+      "description": "Render is a unified cloud platform that simplifies the process of deploying and hosting web applications, static websites, and backend services. It automates infrastructure management, allowing developers to focus on writing code rather than configuring servers. Render supports various programming languages and frameworks, offering features like automatic scaling, continuous deployment, and SSL ce",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Render",
+          "url": "https://render.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Render Docs + Quickstarts",
+          "url": "https://render.com/docs"
+        },
+        {
+          "raw_type": "article",
+          "title": "Render: Cloud Deployment with Less Engineering",
+          "url": "https://thenewstack.io/render-cloud-deployment-with-less-engineering/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Deploy any application with one click using Render",
+          "url": "https://www.youtube.com/watch?v=yWxBUcG_C7g"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:rolldown",
+      "topic_slug": "rolldown",
+      "node_id": "hE-DbpBpYrfB8tmBEjTnG",
+      "title": "Rolldown",
+      "description": "Rolldown is a fast JavaScript bundler written in Rust, designed to be a drop-in replacement for Rollup. It takes your JavaScript and related assets (like CSS and images) and packages them into optimized bundles that can be efficiently loaded in a web browser. Rolldown aims to improve build performance and provide a smoother development experience compared to existing JavaScript bundlers.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Rolldown Docs",
+          "url": "https://rolldown.rs/guide/getting-started"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting Started",
+          "url": "https://rolldown.rs/guide/getting-started"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "rolldown",
+          "url": "https://github.com/rolldown/rolldown"
+        },
+        {
+          "raw_type": "video",
+          "title": "Rolldown: How Vite bundles at the speed of Rust",
+          "url": "https://www.youtube.com/watch?v=3PFLeteDuyQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:rollup",
+      "topic_slug": "rollup",
+      "node_id": "sCjErk7rfWAUvhl8Kfm3n",
+      "title": "Rollup",
+      "description": "Rollup is a JavaScript bundler creating efficient bundles from ES modules. Excels at tree-shaking to remove unused code and supports multiple output formats. Produces smaller bundles than alternatives, ideal for libraries and modern JavaScript projects requiring optimization.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Rollup Website and Docs",
+          "url": "https://rollupjs.org/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Set Up JavaScript Bundling Using Rollup",
+          "url": "https://www.youtube.com/watch?v=ICYLOZuFMz8"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:service-workers",
+      "topic_slug": "service-workers",
+      "node_id": "66ya3WdtlkjQyBTc3Lein",
+      "title": "Service Workers",
+      "description": "Service Workers are JavaScript files that act as proxy servers between web browsers and web servers. They can intercept network requests, cache resources, and deliver push notifications, even when the user is offline. This allows for improved performance and offline capabilities for web applications.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Service Worker API",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+        },
+        {
+          "raw_type": "article",
+          "title": "Service workers",
+          "url": "https://web.dev/learn/pwa/service-workers"
+        },
+        {
+          "raw_type": "article",
+          "title": "Service worker overview - Chrome",
+          "url": "https://developer.chrome.com/docs/workbox/service-worker-overview"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is a service workers",
+          "url": "https://www.youtube.com/watch?v=A6MHtKkA0CA"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:shadow-dom",
+      "topic_slug": "shadow-dom",
+      "node_id": "-SpsNeOZBkQfDA-rwzgPg",
+      "title": "Shadow DOM",
+      "description": "Shadow DOM creates private, encapsulated DOM trees inside elements, isolating HTML, CSS, and JavaScript from the main page. Prevents style and script conflicts, enabling cleaner, reusable components. Essential for web components requiring self-contained functionality.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Using shadow DOM | MDN web docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM"
+        },
+        {
+          "raw_type": "video",
+          "title": "DOM vs Virtual DOM vs Shadow DOM",
+          "url": "https://youtu.be/7Tok22qxPzQ?si=2cw36PNSgFTcNHWx"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about DOM",
+          "url": "https://app.daily.dev/tags/dom?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:skills",
+      "topic_slug": "skills",
+      "node_id": "xL8d-uHMpJKwUvT8z-Jia",
+      "title": "Skills",
+      "description": "AI coding assistants can leverage \"skills\" \u2013 pre-defined functions or tools exposed to the AI that allow it to perform specific actions. Instead of relying solely on their internal knowledge and large language models, these assistants can call upon these skills (like running tests, deploying code, or querying databases) when needed. This allows the AI to interact with the development environment a",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Agent Skills with Anthropic",
+          "url": "https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Agent Skills: The Universal Standard Transforming AI Agents",
+          "url": "https://medium.com/@richardhightower/agent-skills-the-universal-standard-transforming-how-ai-agents-work-fc7397406e2e"
+        },
+        {
+          "raw_type": "video",
+          "title": "Claude Agent Skills Explained",
+          "url": "https://www.youtube.com/watch?v=fOxC44g8vig"
+        },
+        {
+          "raw_type": "video",
+          "title": "Agent Skills Explained",
+          "url": "https://www.youtube.com/watch?v=Ihoxov5x66k"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:solid-js",
+      "topic_slug": "solid-js",
+      "node_id": "DxOSKnqAjZOPP-dq_U7oP",
+      "title": "SolidJS",
+      "description": "SolidJS is a JavaScript tool for building website interfaces that is known for being very fast and efficient. It updates only the parts of the page that change, which makes it perform well. SolidJS doesn't use a virtual DOM; instead, it directly changes the real DOM. Its syntax is like React, so many developers find it familiar. It supports JSX, has built-in ways to manage data, and is small in si",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "SolidJS Website",
+          "url": "https://www.solidjs.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "SolidJS Tutorial",
+          "url": "https://www.solidjs.com/tutorial/introduction_basics"
+        },
+        {
+          "raw_type": "video",
+          "title": "SolidJS in 100 Seconds",
+          "url": "https://www.youtube.com/watch?v=hw3Bx5vxKl0"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:ssg",
+      "topic_slug": "ssg",
+      "node_id": "n0q32YhWEIAUwbGXexoqV",
+      "title": "Static Site Generators",
+      "description": "Static Site Generators (SSGs) build websites as pre-generated HTML files from content and templates. Make sites fast, secure, and easy to host. Examples: Jekyll, Hugo, Eleventy. Ideal for blogs, documentation, and content-focused sites with excellent performance.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is a Static Site Generator?",
+          "url": "https://www.cloudflare.com/learning/performance/static-site-generator/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Get Back to Basics With Static Website Generators",
+          "url": "https://thenewstack.io/get-back-basics-static-website-generators/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is a static site generator",
+          "url": "https://www.youtube.com/watch?v=Qms4k6y7OgI"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:ssr",
+      "topic_slug": "ssr",
+      "node_id": "Cxspmb14_0i1tfw-ZLxEu",
+      "title": "Server-side rendering",
+      "description": "Server-side rendering (SSR) generates complete HTML on the server before sending to browsers. Improves initial load times, SEO, and performance on slow devices. Frameworks: Next.js (React), Nuxt.js (Vue). Increases server load but enhances user experience.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Server-Side Rendering (SSR)",
+          "url": "https://vuejs.org/guide/scaling-up/ssr.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "What are SSR & CSR",
+          "url": "https://www.youtube.com/watch?v=ObrSuDYMl1s"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is server-side rendering for web development?",
+          "url": "https://www.youtube.com/watch?v=okvg3MRAPs0"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:streamed-responses",
+      "topic_slug": "streamed-responses",
+      "node_id": "FyNXhHq1VIASNq-LI7JIu",
+      "title": "Streamed Responses",
+      "description": "Streamed responses involve sending data from a server to a client in chunks, rather than waiting for the entire response to be ready before sending anything. This allows the browser to start processing and rendering content sooner, improving perceived performance and user experience, especially for large datasets or long-running processes. Instead of a single, large download, the data arrives incr",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Streams API",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Streams_API"
+        },
+        {
+          "raw_type": "article",
+          "title": "Streaming API responses for AI - OpenAI",
+          "url": "https://platform.openai.com/docs/guides/streaming-responses"
+        },
+        {
+          "raw_type": "article",
+          "title": "Streaming Responses in AI",
+          "url": "https://dev.to/pranshu_kabra_fe98a73547a/streaming-responses-in-ai-how-ai-outputs-are-generated-in-real-time-18kb"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:svelte-kit",
+      "topic_slug": "svelte-kit",
+      "node_id": "P4st_telfCwKLSAU2WsQP",
+      "title": "SvelteKit",
+      "description": "SvelteKit is a full-stack framework for building websites and applications with Svelte. Features file-based routing, code splitting, server-side rendering, and static site generation. Designed for simplicity and performance with excellent developer experience and easy deployment options.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Svelte Kit",
+          "url": "https://kit.svelte.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Svelte Kit Docs",
+          "url": "https://kit.svelte.dev/docs/introduction"
+        },
+        {
+          "raw_type": "video",
+          "title": "Sveltekit in 100 Seconds",
+          "url": "https://www.youtube.com/watch?v=H1eEFfAkIik"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:svelte",
+      "topic_slug": "svelte",
+      "node_id": "OL8I6nOZ8hGGWmtxg_Mv8",
+      "title": "Svelte",
+      "description": "Svelte is a compile-time JavaScript framework building UIs with minimal runtime overhead. Compiles components to optimized vanilla JavaScript without virtual DOM. Features simple syntax, built-in state management, styling, and animations. Known for small bundle sizes and fast performance.",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Svelte Course Playlist for beginners",
+          "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9hlbrVO_2QFVqVPhlZmz7tO"
+        },
+        {
+          "raw_type": "official",
+          "title": "Svelte Website",
+          "url": "https://svelte.dev/"
+        },
+        {
+          "raw_type": "article",
+          "title": "All About Svelte, the Much-Loved, State-Driven Web Framework",
+          "url": "https://thenewstack.io/all-about-svelte-the-much-loved-state-driven-web-framework/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Svelte and the Future of Frontend Development",
+          "url": "https://thenewstack.io/svelte-and-the-future-of-front-end-development/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:svelte",
+      "topic_slug": "svelte",
+      "node_id": "ZR-qZ2Lcbu3FtqaMd3wM4",
+      "title": "Svelte",
+      "description": "Svelte is a JavaScript tool for building UIs. Unlike others, Svelte does its main work during build time, not in the browser. It turns your code into small, fast, plain JavaScript. Svelte uses components and has a simple syntax, so you write less code. It includes features for managing data, styling, and animations. Because Svelte doesn't use a virtual DOM, pages load and update quickly. It's like",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Svelte Course Playlist for beginners",
+          "url": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9hlbrVO_2QFVqVPhlZmz7tO"
+        },
+        {
+          "raw_type": "official",
+          "title": "Svelte Website",
+          "url": "https://svelte.dev/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Svelte and the Future of Frontend Development",
+          "url": "https://thenewstack.io/svelte-and-the-future-of-front-end-development/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:sveltekit",
+      "topic_slug": "sveltekit",
+      "node_id": "P4st_telfCwKLSAU2WsQP",
+      "title": "SvelteKit",
+      "description": "SvelteKit is a full-stack framework for building websites and applications with Svelte. Features file-based routing, code splitting, server-side rendering, and static site generation. Designed for simplicity and performance with excellent developer experience and easy deployment options.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Svelte Kit",
+          "url": "https://kit.svelte.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Svelte Kit Docs",
+          "url": "https://kit.svelte.dev/docs/introduction"
+        },
+        {
+          "raw_type": "video",
+          "title": "Sveltekit in 100 Seconds",
+          "url": "https://www.youtube.com/watch?v=H1eEFfAkIik"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:swc",
+      "topic_slug": "swc",
+      "node_id": "h26uS3muFCabe6ekElZcI",
+      "title": "SWC (Speedy Web Compiler)",
+      "description": "SWC (Speedy Web Compiler) is a Rust-based JavaScript/TypeScript compiler and bundler, much faster than Babel. Supports modern JavaScript features, JSX, and TypeScript compilation. Popular for large projects and as performance foundation for other build tools.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "SWC Website",
+          "url": "https://swc.rs/"
+        },
+        {
+          "raw_type": "official",
+          "title": "SWC Documentation",
+          "url": "https://swc.rs/docs/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Introduction to Speedy Web Compiler",
+          "url": "https://www.youtube.com/watch?v=RXQlPpbdn_E"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:tailwind",
+      "topic_slug": "tailwind",
+      "node_id": "eghnfG4p7i-EDWfp3CQXC",
+      "title": "Tailwind CSS",
+      "description": "Tailwind CSS is a utility-first CSS framework providing small, composable classes for rapid custom design development. Features mobile-first approach, automatic unused style removal (purging), and flexible customization. Enables quick responsive design prototyping without writing custom CSS.",
+      "resources": [
+        {
+          "raw_type": "course",
+          "title": "Tailwind CSS Full Course for Beginners",
+          "url": "https://www.youtube.com/watch?v=lCxcTsOHrjo"
+        },
+        {
+          "raw_type": "official",
+          "title": "Tailwind Website",
+          "url": "https://tailwindcss.com"
+        },
+        {
+          "raw_type": "official",
+          "title": "Online Playground",
+          "url": "https://play.tailwindcss.com"
+        },
+        {
+          "raw_type": "video",
+          "title": "Official Screencasts",
+          "url": "https://www.youtube.com/c/TailwindLabs/videos"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:tanstack-start",
+      "topic_slug": "tanstack-start",
+      "node_id": "f9zlP6lGhfe6HBHVYiySu",
+      "title": "Tanstack Start",
+      "description": "Tanstack Start is a full-stack framework built on React that simplifies the process of creating web applications with server-side rendering (SSR). It provides tools and conventions for routing, data fetching, and deployment, allowing developers to focus on building features rather than configuring infrastructure. It aims to streamline the development workflow for React-based SSR applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Tanstack Start Docs",
+          "url": "https://tanstack.com/start/latest/docs/framework/react/overview"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting Started",
+          "url": "https://tanstack.com/start/latest/docs/framework/react/getting-started"
+        },
+        {
+          "raw_type": "article",
+          "title": "An introduction to the TanStack Start framework",
+          "url": "https://blog.logrocket.com/tanstack-start-overview/"
+        },
+        {
+          "raw_type": "video",
+          "title": "TanStack Start Full Course 2025",
+          "url": "https://www.youtube.com/watch?v=s4I4JtOZNgg"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:tauri",
+      "topic_slug": "tauri",
+      "node_id": "GJctl0tVXe4B70s35RkLT",
+      "title": "Tauri",
+      "description": "Tauri builds small, secure desktop apps using web technologies with Rust backend. Uses system webview instead of bundled browser, resulting in smaller apps. Features strong security and JavaScript framework compatibility. Focuses on performance and minimal resource usage compared to Electron.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Tauri Website",
+          "url": "https://tauri.app/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Tauri Docs",
+          "url": "https://tauri.app/v1/guides/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How Tauri Turns Web Designs into Compact Native Apps",
+          "url": "https://thenewstack.io/how-tauri-turns-web-designs-into-compact-native-apps/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:testing",
+      "topic_slug": "testing",
+      "node_id": "igg4_hb3XE3vuvY8ufV-4",
+      "title": "Testing your apps",
+      "description": "Testing verifies software functionality and quality through unit, integration, functional, UI/UX, performance, security, accessibility, and compatibility testing. Modern approaches use automated tools, CI/CD pipelines, TDD, and BDD methodologies. Early bug detection improves application reliability.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "The Different Types of Software Tests",
+          "url": "https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Test Web Applications - dotJS 2024",
+          "url": "https://www.youtube.com/watch?v=l3qjQpYBR8c"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:type-checkers",
+      "topic_slug": "type-checkers",
+      "node_id": "NQ95TJCe3E1IwEuBa__D6",
+      "title": "Type Checkers",
+      "description": "Type checkers are tools that analyze code to verify that the types of values used in a program are consistent with their declared or inferred types. They help catch type-related errors during development, before the code is run, by identifying mismatches between expected and actual data types. This process ensures that operations are performed on compatible data, reducing the likelihood of runtime",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Type checking",
+          "url": "https://finchtrade.com/glossary/type-checking"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:vcs-hosting",
+      "topic_slug": "vcs-hosting",
+      "node_id": "MXnFhZlNB1zTsBFDyni9H",
+      "title": "Repo Hosting Services",
+      "description": "Repository hosting services (GitHub, GitLab, Bitbucket) provide platforms for storing, managing, and collaborating on software projects using Git version control. Facilitate teamwork, code sharing, project tracking, and distributed software development workflows.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Git & GitHub Roadmap",
+          "url": "https://roadmap.sh/git-github"
+        },
+        {
+          "raw_type": "official",
+          "title": "GitHub Website",
+          "url": "https://github.com"
+        },
+        {
+          "raw_type": "official",
+          "title": "GitLab Website",
+          "url": "https://about.gitlab.com"
+        },
+        {
+          "raw_type": "official",
+          "title": "BitBucket Website",
+          "url": "https://bitbucket.com"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:vercel",
+      "topic_slug": "vercel",
+      "node_id": "kPJ0jZo5AbOzvZgv0zwp0",
+      "title": "Vercel",
+      "description": "Vercel is a platform designed for deploying and hosting web applications, particularly those built with modern frontend frameworks and static site generators. It provides features like automatic deployments from Git repositories, serverless functions, and a global content delivery network (CDN) to ensure fast and reliable performance. Vercel simplifies the process of taking a frontend project from",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Vercel Documentation",
+          "url": "https://vercel.com/docs"
+        },
+        {
+          "raw_type": "official",
+          "title": "Vercel Quick Start",
+          "url": "https://vercel.com/docs/getting-started-with-vercel"
+        },
+        {
+          "raw_type": "video",
+          "title": "Vercel Tutorial - Host a Website for Free",
+          "url": "https://www.youtube.com/watch?v=Vx5nPGdsFaU"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:version-control",
+      "topic_slug": "version-control",
+      "node_id": "NIY7c4TQEEHx0hATu-k5C",
+      "title": "Version Control Systems",
+      "description": "Version Control Systems (VCS) like Git track code changes and enable developer collaboration through modification history. Features include branching, merging, reverting, remote repositories, pull requests, and code reviews. Essential for modern software development productivity, quality, and teamwork.",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Git & GitHub Roadmap",
+          "url": "https://roadmap.sh/git-github"
+        },
+        {
+          "raw_type": "course",
+          "title": "Why version control? (Interactive Lesson)",
+          "url": "https://inter-git.com/lessons/introduction"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is version control?",
+          "url": "https://www.atlassian.com/git/tutorials/what-is-version-control"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is a Version Control System and why you should always use it",
+          "url": "https://www.youtube.com/watch?v=IeXhYROClZk"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:vite",
+      "topic_slug": "vite",
+      "node_id": "0Awx3zEI5_gYEIrD7IVX6",
+      "title": "Vite",
+      "description": "Vite is a modern build tool using native ES modules for instant server starts and fast Hot Module Replacement. Supports Vue, React, Svelte with Rollup for production builds. Features CSS pre-processors and TypeScript integration. Enhances developer experience with faster development cycles.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Vite - The Build Tool for the Web",
+          "url": "https://vite.dev"
+        },
+        {
+          "raw_type": "official",
+          "title": "Vite Documentation",
+          "url": "https://vite.dev/guide/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Vite Crash Course",
+          "url": "https://youtu.be/LQQ3CR2JTX8"
+        },
+        {
+          "raw_type": "video",
+          "title": "Vite Tutorial Video",
+          "url": "https://www.youtube.com/watch?v=VAeRhmpcWEQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:vitest",
+      "topic_slug": "vitest",
+      "node_id": "hVQ89f6G0LXEgHIOKHDYq",
+      "title": "Vitest",
+      "description": "Vitest is a fast JavaScript/TypeScript testing framework optimized for Vite with Jest-compatible API. Features live test updates, snapshot testing, mocking, code coverage, parallel execution, and watch mode. Designed for Vite projects but works with any JavaScript project.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Vitest - Next Generation Testing Framework",
+          "url": "https://vitest.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Vitest Documentation",
+          "url": "https://vitest.dev/guide/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Vitest Simplified",
+          "url": "https://www.youtube.com/watch?v=snCLQmINqCU"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:vuejs",
+      "topic_slug": "vuejs",
+      "node_id": "3TE_iYvbklXK0be-5f2M7",
+      "title": "Vue.js",
+      "description": "Vue.js is a progressive JavaScript framework for building user interfaces. Features template syntax, virtual DOM, and component-based architecture. Easy to learn and incrementally adoptable. Works well with ecosystem tools for routing and state management. Known for flexibility, performance, and gentle learning curve.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Vue.js Website",
+          "url": "https://vuejs.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Meet Vue.js, the Flexible JavaScript Framework",
+          "url": "https://thenewstack.io/meet-vue-js-flexible-javascript-framework/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Vue.js Course for Beginners",
+          "url": "https://www.youtube.com/watch?v=VeNfHj6MhgA"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:vuejs",
+      "topic_slug": "vuejs",
+      "node_id": "ERAdwL1G9M1bnx-fOm5ZA",
+      "title": "Vue.js",
+      "description": "Vue.js is a JavaScript framework for building website interfaces. It's easy to start with and can be added to projects bit by bit. Vue uses templates and a virtual DOM (a lightweight copy of the real page) to show things on screen efficiently. It has a system of reusable components, making code organized. While Vue mainly handles what users see, it works well with other tools for things like manag",
+      "resources": [
+        {
+          "raw_type": "roadmap",
+          "title": "Visit Dedicated Vue Roadmap",
+          "url": "https://roadmap.sh/vue"
+        },
+        {
+          "raw_type": "official",
+          "title": "Vue.js Website",
+          "url": "https://vuejs.org/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Vue.js Course for Beginners",
+          "url": "https://www.youtube.com/watch?v=VeNfHj6MhgA"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:vuepress",
+      "topic_slug": "vuepress",
+      "node_id": "CMrss8E2W0eA6DVEqtPjT",
+      "title": "Vuepress",
+      "description": "VuePress is a Vue.js-powered static site generator optimized for documentation. Creates fast, SEO-friendly sites with Vue-based theming, syntax highlighting, and Markdown support with Vue components. Features built-in search, responsive layouts, and plugin/theme customization. Ideal for documentation and simple websites.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Vuepress",
+          "url": "https://vuepress.vuejs.org/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is VuePress?",
+          "url": "https://www.youtube.com/watch?v=iRhRdY7SQJg"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:web-apis",
+      "topic_slug": "web-apis",
+      "node_id": "3HgiMfqihjWceSxd6ei8s",
+      "title": "Web APIs",
+      "description": "Web APIs are interfaces provided by web browsers that allow JavaScript code to interact with the browser environment and the wider web. These APIs provide access to functionalities like manipulating the Document Object Model (DOM), handling user input, making network requests, managing browser history, and accessing device hardware like the camera or microphone. They essentially bridge the gap bet",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Web APIs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API"
+        },
+        {
+          "raw_type": "article",
+          "title": "Web APIs - Introduction",
+          "url": "https://www.w3schools.com/js/js_api_intro.asp"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is a Web API?",
+          "url": "https://www.youtube.com/watch?v=_7rT-ixivWU"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:web-components",
+      "topic_slug": "web-components",
+      "node_id": "ruoFa3M4bUE3Dg6GXSiUI",
+      "title": "Web Components",
+      "description": "Web Components create reusable HTML elements using Custom Elements, Shadow DOM, and HTML Templates. Work across browsers and frameworks with encapsulated styles and structure. Enable modular, shareable code with reduced style conflicts. Standard for building interoperable web parts.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Web Components - MDN",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+        },
+        {
+          "raw_type": "article",
+          "title": "WebComponents.org",
+          "url": "https://webcomponents.github.io/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Web Components Crash Course",
+          "url": "https://www.youtube.com/watch?v=PCWaFLy3VUo"
+        },
+        {
+          "raw_type": "feed",
+          "title": "Explore top posts about Web Components",
+          "url": "https://app.daily.dev/tags/web-components?ref=roadmapsh"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:web-security",
+      "topic_slug": "web-security",
+      "node_id": "RDWbG3Iui6IPgp0shvXtg",
+      "title": "Web Security Knowledge",
+      "description": "Web security protects websites from cyber threats through HTTPS/TLS, XSS/SQL injection/CSRF prevention, CSP, secure authentication, input validation, and regular updates. Involves understanding OWASP Top Ten vulnerabilities, access controls, secure coding practices, and threat awareness for comprehensive protection.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "OWASP Website",
+          "url": "https://owasp.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "OWASP Cheatsheets",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/AJAX_Security_Cheat_Sheet.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Content Security Policy (CSP)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+        },
+        {
+          "raw_type": "video",
+          "title": "OWASP ZAP Step-by-Step Tutorial",
+          "url": "https://www.youtube.com/playlist?list=PLH8n_ayg-60J9i3nsLybper-DR3zJw6Z5"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:what-is-domain-name",
+      "topic_slug": "what-is-domain-name",
+      "node_id": "ZhSuu2VArnzPDp6dPQQSC",
+      "title": "Domain Name",
+      "description": "Domain names are human-friendly web addresses (e.g., [google.com](http://google.com)) substituting numerical IP addresses. Comprise second-level (\"google\") and top-level (\".com\") domains. Registered through registrars, essential for branding and online presence. DNS translates names to IP addresses for accessibility.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is a Domain Name?",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_domain_name"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is a Domain Name? | Domain name vs. URL",
+          "url": "https://www.cloudflare.com/en-gb/learning/dns/glossary/what-is-a-domain-name/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is a Domain Name?",
+          "url": "https://www.youtube.com/watch?v=lMHzpBwPuG8"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:what-is-hosting",
+      "topic_slug": "what-is-hosting",
+      "node_id": "aqMaEY8gkKMikiqleV5EP",
+      "title": "Hosting",
+      "description": "Web hosting stores website files on servers, making sites accessible online. Types include shared (multiple sites per server) and dedicated (exclusive server) hosting. Providers offer additional services like email, domains, and security certificates. Critical for website performance and accessibility.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Web Hosting?",
+          "url": "https://www.namecheap.com/hosting/what-is-web-hosting-definition/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Different Types of Web Hosting Explained",
+          "url": "https://www.youtube.com/watch?v=AXVZYzw8geg"
+        },
+        {
+          "raw_type": "video",
+          "title": "Where to Host a Fullstack Project on a Budget",
+          "url": "https://www.youtube.com/watch?v=Kx_1NYYJS7Q"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:what-is-http",
+      "topic_slug": "what-is-http",
+      "node_id": "R12sArWVpbIs_PHxBqVaR",
+      "title": "What is HTTP?",
+      "description": "HTTP (Hypertext Transfer Protocol) enables browser-server communication through requests and responses. Stateless protocol using methods like GET and POST. HTTPS provides encrypted security. Newer versions (HTTP/2, HTTP/3) offer improved performance. Fundamental for web development understanding.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Everything you need to know about HTTP",
+          "url": "https://cs.fyi/guide/http-in-depth"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is HTTP?",
+          "url": "https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How HTTPS Works",
+          "url": "https://howhttps.works"
+        },
+        {
+          "raw_type": "article",
+          "title": "HTTP/3 Is Now a Standard: Why Use It and How to Get Started",
+          "url": "https://thenewstack.io/http-3-is-now-a-standard-why-use-it-and-how-to-get-started/"
+        }
+      ]
+    },
+    {
+      "skill_id": "frontend:yarn",
+      "topic_slug": "yarn",
+      "node_id": "yrq3nOwFREzl-9EKnpU-e",
+      "title": "Yarn",
+      "description": "Yarn is Facebook's JavaScript package manager offering fast, reliable, secure alternative to npm. Features lockfile consistency, parallel installations, offline mode, and checksum verification. Yarn Berry with Plug'n'Play improves performance for large projects.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Yarn - Getting Started",
+          "url": "https://yarnpkg.com/en/docs/getting-started"
+        },
+        {
+          "raw_type": "video",
+          "title": "Yarn Crash Course",
+          "url": "https://www.youtube.com/watch?v=g9_6KmiBISk"
+        }
+      ]
+    }
+  ]
+}

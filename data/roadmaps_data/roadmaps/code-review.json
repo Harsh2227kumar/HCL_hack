@@ -1,0 +1,140 @@
+{
+  "roadmap": "code-review",
+  "topic_count": 6,
+  "topics": [
+    {
+      "skill_id": "code-review:api-semantics",
+      "topic_slug": "api-semantics",
+      "node_id": "",
+      "title": "Questions to Ask",
+      "description": "- API as small as possible, as large as needed? - Is there one way of doing one thing, not multiple ones? - Is it consistent, does it follow the principle of least surprise? - Clean split of API/internals without internals leaking into the API? - Are there no breaking changes to user-facing parts (API classes, configuration, metrics, log formats, etc)? - Is a new API generally useful and not overl",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "API Design Best Practices Guide - Fern",
+          "url": "https://buildwithfern.com/post/api-design-best-practices-guide"
+        },
+        {
+          "raw_type": "article",
+          "title": "RESTful API Resource Naming",
+          "url": "https://restfulapi.net/resource-naming/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Web API Design Best Practices - Microsoft Azure",
+          "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design"
+        }
+      ]
+    },
+    {
+      "skill_id": "code-review:code-style",
+      "topic_slug": "code-style",
+      "node_id": "",
+      "title": "Questions to Ask",
+      "description": "- Is the project's formatting style applied? - Does it adhere to the agreed-upon naming conventions? - Is it DRY? - Is the code sufficiently \"readable\" (method lengths, etc.)? Learn more from the following resources:",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "The Standard of Code Review - Google",
+          "url": "https://google.github.io/eng-practices/review/reviewer/standard.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Creating a Coding Style Guide for Your Team - Graphite",
+          "url": "https://graphite.com/guides/creating-coding-style-guide"
+        },
+        {
+          "raw_type": "article",
+          "title": "Code Smells - Refactoring Guru",
+          "url": "https://refactoring.guru/refactoring/smells"
+        }
+      ]
+    },
+    {
+      "skill_id": "code-review:documentation",
+      "topic_slug": "documentation",
+      "node_id": "",
+      "title": "Questions to Ask",
+      "description": "- Are the new features reasonably documented? - Are all relevant types of documentation covered, such as README, API docs, user guide, reference docs, etc? - Is the documentation understandable and free of significant typos and grammar mistakes? Learn more from the following resources:",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "How to Write Software Documentation - Write the Docs",
+          "url": "https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/"
+        },
+        {
+          "raw_type": "article",
+          "title": "8 Essential Code Documentation Best Practices - Heretto",
+          "url": "https://www.heretto.com/blog/best-practices-for-writing-code-documentation"
+        },
+        {
+          "raw_type": "article",
+          "title": "Looking for Things in a Code Review - Google",
+          "url": "https://google.github.io/eng-practices/review/reviewer/looking-for.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "code-review:implementation-semantics",
+      "topic_slug": "implementation-semantics",
+      "node_id": "",
+      "title": "Questions to Ask",
+      "description": "- Does it satisfy the original requirements? - Is it logically correct? - Is there no unnecessary complexity? - Is it robust (i.e., no concurrency issues, proper error handling, etc.)? - Is it performant? - Is it secure (i.e., no SQL injections, etc.)? - Is it observable (i.e., metrics, logging, tracing, etc.)? - Do newly added dependencies pull their weight? Is their license acceptable? Learn mor",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Three Pillars of Observability: Logs, Metrics and Traces - IBM",
+          "url": "https://www.ibm.com/think/insights/observability-pillars"
+        },
+        {
+          "raw_type": "article",
+          "title": "Security Code Review Checklist - Redwerk",
+          "url": "https://redwerk.com/blog/security-code-review-checklist/"
+        },
+        {
+          "raw_type": "article",
+          "title": "What Is Clean Code? - Codacy",
+          "url": "https://blog.codacy.com/what-is-clean-code"
+        }
+      ]
+    },
+    {
+      "skill_id": "code-review:index",
+      "topic_slug": "index",
+      "node_id": "",
+      "title": "",
+      "description": "Learn more from the following resources:",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Google Engineering Practices",
+          "url": "https://github.com/google/eng-practices"
+        }
+      ]
+    },
+    {
+      "skill_id": "code-review:tests",
+      "topic_slug": "tests",
+      "node_id": "",
+      "title": "Questions to Ask",
+      "description": "- Are all tests passing? - Are new features reasonably tested? - Are corner cases tested? - Is it using unit tests where possible, integration tests where necessary? - Are there tests for NFRs, e.g. performance? Learn more from the following resources:",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Unit Testing Best Practices - IBM",
+          "url": "https://www.ibm.com/think/insights/unit-testing-best-practices"
+        },
+        {
+          "raw_type": "article",
+          "title": "Integration Testing - Microsoft Engineering Playbook",
+          "url": "https://microsoft.github.io/code-with-engineering-playbook/automated-testing/integration-testing/"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Practical Test Pyramid - Martin Fowler",
+          "url": "https://martinfowler.com/articles/practical-test-pyramid.html"
+        }
+      ]
+    }
+  ]
+}

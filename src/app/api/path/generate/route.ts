@@ -33,16 +33,19 @@ export async function POST(request: NextRequest) {
     const { gaps, readinessScore } = calculateSkillGaps(skills as any, profile.goalTemplate as any);
 
     // 2. Retrieve & Score Candidates (Internal recommend logic)
-    const gapDescription = gaps.map(g => g.skillName).join(', ');
-    const queryVector = await generateEmbedding(gapDescription || profile.goal);
-    const formattedVector = `[${queryVector.join(',')}]`;
-
+    // With 20k+ resources, we rely on exact skill mapping rather than vector search 
+    const gapSkillsArray = gaps.map(g => g.skillName);
+    const gapSkillsFormatted = gapSkillsArray.map(s => `'${s.replace(/'/g, "''")}'`).join(',');
+    
     const rawResources = await prisma.$queryRawUnsafe<any[]>(`
       SELECT id, title, type, provider, description, url, "skillsTaught", "prerequisiteSkills", difficulty, "durationHours", format
       FROM "LearningResource"
-      WHERE embedding IS NOT NULL
-      ORDER BY embedding <=> '${formattedVector}'::vector
-      LIMIT 30
+      WHERE EXISTS (
+        SELECT 1 
+        FROM jsonb_array_elements_text("skillsTaught") as skill 
+        WHERE skill IN (${gapSkillsFormatted})
+      )
+      LIMIT 100
     `);
 
     const candidates = rawResources.map(r => ({ ...r }));

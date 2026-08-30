@@ -1,0 +1,462 @@
+[
+  {
+    "roadmap": "ai-agents",
+    "topic_count": 101,
+    "resource_link_count": 305
+  },
+  {
+    "roadmap": "ai-data-scientist",
+    "topic_count": 9,
+    "resource_link_count": 20
+  },
+  {
+    "roadmap": "ai-engineer",
+    "topic_count": 194,
+    "resource_link_count": 486
+  },
+  {
+    "roadmap": "ai-product-builder",
+    "topic_count": 51,
+    "resource_link_count": 123
+  },
+  {
+    "roadmap": "ai-red-teaming",
+    "topic_count": 64,
+    "resource_link_count": 199
+  },
+  {
+    "roadmap": "android",
+    "topic_count": 114,
+    "resource_link_count": 207
+  },
+  {
+    "roadmap": "angular",
+    "topic_count": 159,
+    "resource_link_count": 455
+  },
+  {
+    "roadmap": "api-design",
+    "topic_count": 99,
+    "resource_link_count": 251
+  },
+  {
+    "roadmap": "aspnet-core",
+    "topic_count": 146,
+    "resource_link_count": 403
+  },
+  {
+    "roadmap": "aws",
+    "topic_count": 101,
+    "resource_link_count": 121
+  },
+  {
+    "roadmap": "backend",
+    "topic_count": 156,
+    "resource_link_count": 529
+  },
+  {
+    "roadmap": "backend-beginner",
+    "topic_count": 27,
+    "resource_link_count": 118
+  },
+  {
+    "roadmap": "bi-analyst",
+    "topic_count": 203,
+    "resource_link_count": 284
+  },
+  {
+    "roadmap": "blockchain",
+    "topic_count": 127,
+    "resource_link_count": 455
+  },
+  {
+    "roadmap": "c",
+    "topic_count": 147,
+    "resource_link_count": 337
+  },
+  {
+    "roadmap": "claude-code",
+    "topic_count": 116,
+    "resource_link_count": 346
+  },
+  {
+    "roadmap": "cloudflare",
+    "topic_count": 97,
+    "resource_link_count": 212
+  },
+  {
+    "roadmap": "code-review",
+    "topic_count": 6,
+    "resource_link_count": 16
+  },
+  {
+    "roadmap": "computer-science",
+    "topic_count": 188,
+    "resource_link_count": 626
+  },
+  {
+    "roadmap": "cpp",
+    "topic_count": 127,
+    "resource_link_count": 157
+  },
+  {
+    "roadmap": "css",
+    "topic_count": 104,
+    "resource_link_count": 243
+  },
+  {
+    "roadmap": "cyber-security",
+    "topic_count": 301,
+    "resource_link_count": 671
+  },
+  {
+    "roadmap": "data-analyst",
+    "topic_count": 102,
+    "resource_link_count": 198
+  },
+  {
+    "roadmap": "data-engineer",
+    "topic_count": 190,
+    "resource_link_count": 405
+  },
+  {
+    "roadmap": "datastructures-and-algorithms",
+    "topic_count": 107,
+    "resource_link_count": 124
+  },
+  {
+    "roadmap": "design-system",
+    "topic_count": 124,
+    "resource_link_count": 72
+  },
+  {
+    "roadmap": "devops",
+    "topic_count": 138,
+    "resource_link_count": 417
+  },
+  {
+    "roadmap": "devops-beginner",
+    "topic_count": 13,
+    "resource_link_count": 75
+  },
+  {
+    "roadmap": "devrel",
+    "topic_count": 142,
+    "resource_link_count": 134
+  },
+  {
+    "roadmap": "devsecops",
+    "topic_count": 94,
+    "resource_link_count": 303
+  },
+  {
+    "roadmap": "django",
+    "topic_count": 112,
+    "resource_link_count": 446
+  },
+  {
+    "roadmap": "docker",
+    "topic_count": 56,
+    "resource_link_count": 148
+  },
+  {
+    "roadmap": "elasticsearch",
+    "topic_count": 113,
+    "resource_link_count": 433
+  },
+  {
+    "roadmap": "engineering-manager",
+    "topic_count": 133,
+    "resource_link_count": 16
+  },
+  {
+    "roadmap": "flutter",
+    "topic_count": 108,
+    "resource_link_count": 269
+  },
+  {
+    "roadmap": "forward-deployed-engineer",
+    "topic_count": 99,
+    "resource_link_count": 238
+  },
+  {
+    "roadmap": "frontend",
+    "topic_count": 121,
+    "resource_link_count": 401
+  },
+  {
+    "roadmap": "frontend-beginner",
+    "topic_count": 9,
+    "resource_link_count": 38
+  },
+  {
+    "roadmap": "full-stack",
+    "topic_count": 37,
+    "resource_link_count": 89
+  },
+  {
+    "roadmap": "game-developer",
+    "topic_count": 144,
+    "resource_link_count": 269
+  },
+  {
+    "roadmap": "git-github",
+    "topic_count": 155,
+    "resource_link_count": 342
+  },
+  {
+    "roadmap": "git-github-beginner",
+    "topic_count": 5,
+    "resource_link_count": 19
+  },
+  {
+    "roadmap": "golang",
+    "topic_count": 172,
+    "resource_link_count": 474
+  },
+  {
+    "roadmap": "graphql",
+    "topic_count": 65,
+    "resource_link_count": 91
+  },
+  {
+    "roadmap": "html",
+    "topic_count": 88,
+    "resource_link_count": 194
+  },
+  {
+    "roadmap": "ios",
+    "topic_count": 170,
+    "resource_link_count": 380
+  },
+  {
+    "roadmap": "java",
+    "topic_count": 86,
+    "resource_link_count": 204
+  },
+  {
+    "roadmap": "javascript",
+    "topic_count": 126,
+    "resource_link_count": 250
+  },
+  {
+    "roadmap": "kotlin",
+    "topic_count": 153,
+    "resource_link_count": 348
+  },
+  {
+    "roadmap": "kubernetes",
+    "topic_count": 67,
+    "resource_link_count": 213
+  },
+  {
+    "roadmap": "laravel",
+    "topic_count": 104,
+    "resource_link_count": 384
+  },
+  {
+    "roadmap": "leetcode",
+    "topic_count": 155,
+    "resource_link_count": 490
+  },
+  {
+    "roadmap": "linux",
+    "topic_count": 102,
+    "resource_link_count": 290
+  },
+  {
+    "roadmap": "machine-learning",
+    "topic_count": 150,
+    "resource_link_count": 330
+  },
+  {
+    "roadmap": "mlops",
+    "topic_count": 62,
+    "resource_link_count": 283
+  },
+  {
+    "roadmap": "mongodb",
+    "topic_count": 106,
+    "resource_link_count": 284
+  },
+  {
+    "roadmap": "network-engineer",
+    "topic_count": 201,
+    "resource_link_count": 463
+  },
+  {
+    "roadmap": "nextjs",
+    "topic_count": 94,
+    "resource_link_count": 195
+  },
+  {
+    "roadmap": "nodejs",
+    "topic_count": 113,
+    "resource_link_count": 254
+  },
+  {
+    "roadmap": "openclaw",
+    "topic_count": 122,
+    "resource_link_count": 244
+  },
+  {
+    "roadmap": "php",
+    "topic_count": 120,
+    "resource_link_count": 139
+  },
+  {
+    "roadmap": "postgresql-dba",
+    "topic_count": 170,
+    "resource_link_count": 373
+  },
+  {
+    "roadmap": "power-bi",
+    "topic_count": 149,
+    "resource_link_count": 301
+  },
+  {
+    "roadmap": "product-design",
+    "topic_count": 118,
+    "resource_link_count": 228
+  },
+  {
+    "roadmap": "product-manager",
+    "topic_count": 172,
+    "resource_link_count": 517
+  },
+  {
+    "roadmap": "prompt-engineering",
+    "topic_count": 46,
+    "resource_link_count": 89
+  },
+  {
+    "roadmap": "python",
+    "topic_count": 85,
+    "resource_link_count": 222
+  },
+  {
+    "roadmap": "python-data-analysis",
+    "topic_count": 113,
+    "resource_link_count": 303
+  },
+  {
+    "roadmap": "qa",
+    "topic_count": 146,
+    "resource_link_count": 304
+  },
+  {
+    "roadmap": "r",
+    "topic_count": 129,
+    "resource_link_count": 116
+  },
+  {
+    "roadmap": "react",
+    "topic_count": 81,
+    "resource_link_count": 256
+  },
+  {
+    "roadmap": "react-native",
+    "topic_count": 94,
+    "resource_link_count": 152
+  },
+  {
+    "roadmap": "redis",
+    "topic_count": 162,
+    "resource_link_count": 240
+  },
+  {
+    "roadmap": "ruby",
+    "topic_count": 112,
+    "resource_link_count": 405
+  },
+  {
+    "roadmap": "ruby-on-rails",
+    "topic_count": 109,
+    "resource_link_count": 330
+  },
+  {
+    "roadmap": "rust",
+    "topic_count": 122,
+    "resource_link_count": 356
+  },
+  {
+    "roadmap": "scala",
+    "topic_count": 165,
+    "resource_link_count": 381
+  },
+  {
+    "roadmap": "server-side-game-developer",
+    "topic_count": 156,
+    "resource_link_count": 486
+  },
+  {
+    "roadmap": "shell-bash",
+    "topic_count": 174,
+    "resource_link_count": 453
+  },
+  {
+    "roadmap": "software-architect",
+    "topic_count": 112,
+    "resource_link_count": 290
+  },
+  {
+    "roadmap": "software-design-architecture",
+    "topic_count": 94,
+    "resource_link_count": 165
+  },
+  {
+    "roadmap": "spring-boot",
+    "topic_count": 46,
+    "resource_link_count": 145
+  },
+  {
+    "roadmap": "sql",
+    "topic_count": 112,
+    "resource_link_count": 168
+  },
+  {
+    "roadmap": "swift-ui",
+    "topic_count": 156,
+    "resource_link_count": 483
+  },
+  {
+    "roadmap": "system-design",
+    "topic_count": 147,
+    "resource_link_count": 255
+  },
+  {
+    "roadmap": "technical-writer",
+    "topic_count": 84,
+    "resource_link_count": 8
+  },
+  {
+    "roadmap": "terraform",
+    "topic_count": 110,
+    "resource_link_count": 277
+  },
+  {
+    "roadmap": "typescript",
+    "topic_count": 93,
+    "resource_link_count": 120
+  },
+  {
+    "roadmap": "ux-design",
+    "topic_count": 94,
+    "resource_link_count": 67
+  },
+  {
+    "roadmap": "vibe-coding",
+    "topic_count": 54,
+    "resource_link_count": 167
+  },
+  {
+    "roadmap": "vue",
+    "topic_count": 84,
+    "resource_link_count": 161
+  },
+  {
+    "roadmap": "wordpress",
+    "topic_count": 115,
+    "resource_link_count": 456
+  }
+]

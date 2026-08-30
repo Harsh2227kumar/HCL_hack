@@ -24,25 +24,47 @@ export async function POST(request: NextRequest) {
     // 1. AI Extraction
     const extracted = await callAI('understanding', text, aiExtractedProfileSchema, EXTRACT_SYSTEM_PROMPT);
 
-    // 2. Map to Goal Template (find closest match or use generic)
-    const goalTemplate = await prisma.goalTemplate.findFirst({
-      where: { goalName: { equals: extracted.goal, mode: 'insensitive' } }
+    // 2. Map to GoalTemplate (Semantic search using pgvector)
+    const { generateEmbedding } = await import('@/lib/ai/embeddings');
+    const queryVector = await generateEmbedding(`Role: ${extracted.goal}`);
+    const formattedVector = `[${queryVector.join(',')}]`;
+
+    const templates = await prisma.$queryRawUnsafe<any[]>(`
+      SELECT id, "goalName", 
+             1 - (embedding <=> '${formattedVector}'::vector) as similarity
+      FROM "GoalTemplate"
+      WHERE embedding IS NOT NULL
+      ORDER BY embedding <=> '${formattedVector}'::vector
+      LIMIT 1
+    `);
+
+    let goalTemplateId = null;
+    let finalGoalName = extracted.goal;
+    
+    if (templates.length > 0 && templates[0].similarity > 0.6) {
+      goalTemplateId = templates[0].id;
+      finalGoalName = templates[0].goalName;
+    }
+
+    // 3. Ensure User exists before creating profile
+    await prisma.user.upsert({
+      where: { id: userId },
+      update: {},
+      create: { id: userId }
     });
 
-    const goalTemplateId = goalTemplate ? goalTemplate.id : null;
-
-    // 3. Upsert LearnerProfile
+    // 4. Upsert LearnerProfile
     const profile = await prisma.learnerProfile.upsert({
       where: { userId },
       update: {
-        goal: extracted.goal,
+        goal: finalGoalName,
         goalTemplateId,
         weeklyHours: extracted.weeklyHours || 10,
         learningStyle: extracted.learningStyle || 'mixed',
       },
       create: {
         userId,
-        goal: extracted.goal,
+        goal: finalGoalName,
         goalTemplateId,
         weeklyHours: extracted.weeklyHours || 10,
         learningStyle: extracted.learningStyle || 'mixed',

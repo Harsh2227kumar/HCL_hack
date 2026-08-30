@@ -9,33 +9,16 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
   let resource;
   
   try {
-    resource = await prisma.resource.findUnique({
+    resource = await prisma.learningResource.findUnique({
       where: { id: params.id },
-      include: {
-        skills: true,
-        prereqs: true,
-      }
+      // Prisma doesn't have 'skills' or 'prereqs' relations on LearningResource since they are Json arrays
     });
   } catch (error) {
-    // Fallback or handle Prisma errors (e.g., if DB is not connected yet)
     console.error('Failed to fetch resource from DB:', error);
   }
 
   if (!resource) {
-    // If we're mocking data for UI development before DB is populated:
-    if (process.env.NODE_ENV === 'development') {
-      resource = {
-        id: params.id,
-        title: 'Introduction to Advanced React Patterns',
-        difficulty: 'Intermediate',
-        duration: 120,
-        description: 'Deep dive into React components, hooks, and performance optimization techniques for modern web applications. This course will cover everything from the basic concepts to advanced patterns like Compound Components and Render Props.',
-        skills: [{ id: '1', name: 'React' }, { id: '2', name: 'Hooks' }, { id: '3', name: 'Performance' }],
-        prereqs: [{ id: '1', title: 'Basic React Fundamentals' }],
-      };
-    } else {
-      notFound();
-    }
+    notFound();
   }
 
   return (
@@ -64,14 +47,14 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-gray-800">Skills Taught</h2>
-            {resource.skills && resource.skills.length > 0 ? (
+            {resource.skillsTaught && (resource.skillsTaught as string[]).length > 0 ? (
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {resource.skills.map((skill: any) => (
-                  <li key={skill.id} className="flex items-center text-gray-700 bg-gray-50 p-3 rounded-lg border border-gray-100">
+                {(resource.skillsTaught as string[]).map((skillName: string, idx: number) => (
+                  <li key={idx} className="flex items-center text-gray-700 bg-gray-50 p-3 rounded-lg border border-gray-100">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    {skill.name}
+                    {skillName}
                   </li>
                 ))}
               </ul>
@@ -82,12 +65,12 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-gray-800">Prerequisites</h2>
-            {resource.prereqs && resource.prereqs.length > 0 ? (
+            {resource.prerequisiteSkills && (resource.prerequisiteSkills as string[]).length > 0 ? (
               <ul className="space-y-3 text-gray-700">
-                {resource.prereqs.map((prereq: any) => (
-                  <li key={prereq.id} className="flex items-start">
+                {(resource.prerequisiteSkills as string[]).map((prereq: string, idx: number) => (
+                  <li key={idx} className="flex items-start">
                     <span className="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-yellow-100 text-yellow-600 mr-3 text-sm font-bold">!</span>
-                    <span className="pt-0.5">{prereq.title}</span>
+                    <span className="pt-0.5">{prereq}</span>
                   </li>
                 ))}
               </ul>

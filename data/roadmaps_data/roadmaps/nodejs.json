@@ -1,0 +1,2291 @@
+{
+  "roadmap": "nodejs",
+  "topic_count": 113,
+  "topics": [
+    {
+      "skill_id": "nodejs:--watch",
+      "topic_slug": "--watch",
+      "node_id": "812bVEzxwTsYzLG_PmLqN",
+      "title": "--watch",
+      "description": "The `--watch` flag in Node.js is a powerful feature introduced in Node.js version 19 that enables automatic reloading of your Node.js application whenever changes are detected in the specified files. Here's How it works: *   You run your Node.js script with the `--watch` flag: `$ node --watch your_script.js` *   Node.js starts watching the specified file (or directory) for changes. *   Whenever a ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Node.js CLI",
+          "url": "https://nodejs.org/api/cli.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Node.js --watch Docs",
+          "url": "https://nodejs.org/api/cli.html#--watch"
+        },
+        {
+          "raw_type": "article",
+          "title": "Medium - Watch Mode",
+          "url": "https://medium.com/@khaled.smq/built-in-nodejs-watch-mode-52ffadaec8a8"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:__dirname",
+      "topic_slug": "__dirname",
+      "node_id": "1AaGG660rvZlNYMOA35qO",
+      "title": "__dirname",
+      "description": "The `__dirname` in a node script returns the path of the folder where the current JavaScript file resides. `__filename` and `__dirname` are used to get the filename and directory name of the currently executing file.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "__dirname",
+          "url": "https://nodejs.org/docs/latest/api/modules.html#__dirname"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to use __dirname",
+          "url": "https://www.digitalocean.com/community/tutorials/nodejs-how-to-use__dirname"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:__filename",
+      "topic_slug": "__filename",
+      "node_id": "P2gdwx1qCxvg1Ppfw0aqQ",
+      "title": "__filename",
+      "description": "The `__filename` in Node.js returns the filename of the executed code. It gives the absolute path of the code file. The following approach covers implementing `__filename` in the Node.js project.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "__filename",
+          "url": "https://nodejs.org/docs/latest/api/modules.html#__filename"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:assertion-errors",
+      "topic_slug": "assertion-errors",
+      "node_id": "do-tdCUfDtiZHBg4ZO3dC",
+      "title": "Assertion Errors",
+      "description": "An `AssertionError` in Node.js is an error that is thrown when the `assert` module determines that a given expression is not truthy. The `assert` module is a built-in Node.js module that provides a simple set of assertion tests that can be used to test the behavior of your code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Node.js Assert",
+          "url": "https://nodejs.org/api/assert.html#new-assertassertionerroroptions"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:async-programming",
+      "topic_slug": "async-programming",
+      "node_id": "uE7fvHSTSdebMf5RsNyaY",
+      "title": "Async Programming",
+      "description": "Asynchronous code means that things can happen independently of the main program flow, async functions in JavaScript are processed in the background without blocking other requests. It ensures non-blocking code execution. Asynchronous code executes without having any dependency and no order. This improves the system efficiency and throughput. Making web apps requires knowledge of asynchronous conc",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Introduction to Async JS",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Asynchronous Vs Synchronous Programming",
+          "url": "https://www.youtube.com/watch?v=Kpn2ajSa92c"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:asyncawait",
+      "topic_slug": "asyncawait",
+      "node_id": "a26qNCyMcT5GsVzxeNCLk",
+      "title": "Async/Await",
+      "description": "Async/Await is a special syntax to work with promises in a more comfortable fashion. It's easy to understand and use. Adding the keyword async before a function ensures that the function returns a promise and the keyword await makes JavaScript wait until that promise settles and returns the result.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Async/Await Documentation",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"
+        },
+        {
+          "raw_type": "article",
+          "title": "More on async await",
+          "url": "https://javascript.info/async-await"
+        },
+        {
+          "raw_type": "video",
+          "title": "Using async await",
+          "url": "https://www.youtube.com/watch?v=V_Kr9OSfDeU"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:axios",
+      "topic_slug": "axios",
+      "node_id": "BOLiZg8YDKADMwP01U5ph",
+      "title": "Axios",
+      "description": "Axios is a promise-based HTTP Client for node.js and the browser. Used for making requests to web servers. On the server-side it uses the native node.js http module, while on the client (browser) it uses XMLHttpRequests.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Axios Documentation",
+          "url": "https://axios-http.com/docs/intro"
+        },
+        {
+          "raw_type": "video",
+          "title": "Axios Tutorial",
+          "url": "https://www.youtube.com/watch?v=6LyagkoRWYA"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:building--consuming-apis",
+      "topic_slug": "building--consuming-apis",
+      "node_id": "fFVCb6aZWRHdNDFt5C09R",
+      "title": "Building  Consuming Apis",
+      "description": "Node.js is commonly used to build HTTP APIs that other clients consume, as well as to consume external APIs from within your application. Building an API involves defining routes, handling requests, and returning responses. Consuming an API involves making HTTP requests and processing the returned data.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is an API?",
+          "url": "https://aws.amazon.com/what-is/api/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is an API (in 5 minutes)",
+          "url": "https://youtu.be/ByGJQzlzxQg?si=9EB9lgRvEOgt3xPJ"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:callbacks",
+      "topic_slug": "callbacks",
+      "node_id": "GwInWcbQn18PnzKGXzmln",
+      "title": "Callbacks",
+      "description": "Node.js, being an asynchronous platform, doesn't wait around for things like file I/O to finish - Node.js uses callbacks. A callback is a function called at the completion of a given task; this prevents any blocking, and allows other code to be run in the meantime.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Asynchronicity in Programming Languages",
+          "url": "https://nodejs.org/en/learn/asynchronous-work/javascript-asynchronous-programming-and-callbacks"
+        },
+        {
+          "raw_type": "article",
+          "title": "What are Callbacks?",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Callback_function"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:callstack--stack-trace",
+      "topic_slug": "callstack--stack-trace",
+      "node_id": "wIieXdFtoZWJ-ht8qqWbp",
+      "title": "Stack Trace",
+      "description": "The stack trace is used to trace the active stack frames at a particular instance during the execution of a program. The stack trace is useful while debugging code as it shows the exact point that has caused an error.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Multiple Ways to Log The Stack Trace in Node.js",
+          "url": "https://www.cloudhadoop.com/nodejs-print-stack-trace-error/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:chalk-package",
+      "topic_slug": "chalk-package",
+      "node_id": "V4OWIC1cnw8EFyu26Y_dA",
+      "title": "chalk package",
+      "description": "`chalk` is an npm package for styling terminal output with colors and formatting like bold, underline, and italic. It is used to make CLI output more readable by highlighting errors in red, success messages in green, and so on. It works across different terminal environments.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "Chalk Docs",
+          "url": "https://github.com/chalk/chalk#readme"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:child-process",
+      "topic_slug": "child-process",
+      "node_id": "lzPrWD3pxQmpbqgYPL-zW",
+      "title": "Child Process",
+      "description": "The child\\_process module gives the node the ability to run the child process, established through IPC (inter-process communication) by accessing operating system commands. The three main methods inside this module are : `child_process.spawn()` `child_process.fork()` `child_process.exec()`",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Child Process Docs",
+          "url": "https://nodejs.org/api/child_process.html#child-process"
+        },
+        {
+          "raw_type": "article",
+          "title": "Securing Node.js Against Command Injection",
+          "url": "https://www.nodejs-security.com/blog/securing-your-nodejs-apps-by-analyzing-real-world-command-injection-examples"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:chokidar",
+      "topic_slug": "chokidar",
+      "node_id": "een1zhvgN_33Cu6OiWtyX",
+      "title": "chokidar",
+      "description": "Chokidar is an npm package for watching file system changes. It wraps Node.js's native `fs.watch` and `fs.watchFile` with a more reliable and consistent API. It is widely used in development tools like Webpack and Vite to trigger rebuilds when files change.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "chokidar",
+          "url": "https://www.npmjs.com/package/chokidar"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:cli-progress",
+      "topic_slug": "cli-progress",
+      "node_id": "iW9je5Pq7bjxWZDERv_p5",
+      "title": "cli-progress",
+      "description": "`cli-progress` is an npm package for displaying progress bars in the terminal. It is useful for long-running operations like file downloads, database migrations, or batch processing where you want to show completion percentage. It supports multiple bars and customizable styles.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "CLI-Progress Documentation",
+          "url": "https://www.npmjs.com/package/cli-progress"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:cluster",
+      "topic_slug": "cluster",
+      "node_id": "PkQ_sQ0YFPCZGx4BRgG0t",
+      "title": "Cluster",
+      "description": "The Cluster module allows you to easily create child processes that each runs simultaneously on their own single thread, to handle workloads among their application threads.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Node.js Cluster",
+          "url": "https://nodejs.org/api/cluster.html#cluster"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:command-line-apps",
+      "topic_slug": "command-line-apps",
+      "node_id": "Ce-dP-OXu0mEm30rzp2hW",
+      "title": "Command Line Applications",
+      "description": "Command Line Applications are applications that can be run from the command line. They are also called CLI (Command Line Interface) applications. Users can interact with clients entirely by terminal commands. They are very useful for automation and building tools.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Build a Command Line Application with Node.js",
+          "url": "https://developer.okta.com/blog/2019/06/18/command-line-app-with-nodejs"
+        },
+        {
+          "raw_type": "video",
+          "title": "5-Minute Node.js CLI Project",
+          "url": "https://www.youtube.com/watch?v=_oHByo8tiEY"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:commander",
+      "topic_slug": "commander",
+      "node_id": "BxxLQUI7JcQgF6TK3L5uU",
+      "title": "Commander.js",
+      "description": "Commander is a light-weight, expressive, and powerful command-line framework for node.js. with Commander.js you can create your own command-line interface (CLI).",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "commander package",
+          "url": "https://www.npmjs.com/package/commander"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:common-built-in-modules",
+      "topic_slug": "common-built-in-modules",
+      "node_id": "M62lAWBOrTe99TfpFOQ-Y",
+      "title": "Nodejs core modules",
+      "description": "These are the core modules that come with `Node.js` out of the box. This module provides tools or APIs for performing out certain standard `Node.js` operations. like interacting with the file system, url parsing, or logging information to the console.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "fs module",
+          "url": "https://nodejs.org/api/fs.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "url module",
+          "url": "https://nodejs.org/api/url.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "console module",
+          "url": "https://nodejs.org/api/console.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "util module",
+          "url": "https://nodejs.org/api/util.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "events module",
+          "url": "https://nodejs.org/api/events.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "os module",
+          "url": "https://nodejs.org/api/os.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "worker threads module",
+          "url": "https://nodejs.org/api/worker_threads.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "child process module",
+          "url": "https://nodejs.org/api/child_process.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "process object",
+          "url": "https://nodejs.org/api/process.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "crypto module",
+          "url": "https://nodejs.org/api/crypto.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:commonjs",
+      "topic_slug": "commonjs",
+      "node_id": "mhjswf17nhq075NTYV5gE",
+      "title": "CommonJS vs ESM",
+      "description": "CommonJS and ES (EcmaScript) are module systems used in Node. CommonJS is the default module system. However, a new module system was recently added to NodeJS - ES modules. CommonJS modules use the require() statement for module imports and module.exports for module exports while it's import and export for ES.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "CommonJS vs ESM",
+          "url": "https://blog.logrocket.com/commonjs-vs-es-modules-node-js/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using CommonJS",
+          "url": "https://www.javascripttutorial.net/nodejs-tutorial/nodejs-modules/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using ES Modules",
+          "url": "https://blog.logrocket.com/es-modules-in-node-today/"
+        },
+        {
+          "raw_type": "article",
+          "title": "CommonJS vs. ES Modules: Modules and Imports in NodeJS",
+          "url": "https://reflectoring.io/nodejs-modules-imports/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Using Modules",
+          "url": "https://www.youtube.com/watch?v=pP4kjXykbio"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:creating--importing",
+      "topic_slug": "creating--importing",
+      "node_id": "EEnmOcDKPZzY_O1NwP_5j",
+      "title": "Creating & Importing",
+      "description": "Creating a module means writing JavaScript in a file and exporting the parts you want to share. Importing means pulling those exports into another file using `require()` in CommonJS or `import` in ESM. This mechanism is how Node.js applications are structured into separate, connected files.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "CommonJS vs ESM in Node.js",
+          "url": "https://blog.logrocket.com/commonjs-vs-es-modules-node-js/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Modules and Imports in Node.js",
+          "url": "https://reflectoring.io/nodejs-modules-imports/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Creating a Module in Node.js",
+          "url": "https://www.youtube.com/watch?v=Cxo4UKpHv5s"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:creating-packages",
+      "topic_slug": "creating-packages",
+      "node_id": "Uh9hmEy7o1EJLg4E--ku2",
+      "title": "Creating Packages",
+      "description": "npm packages allow you to bundle some specific functionality into a reusable package which can then be uploaded to some package registry such as npm or GitHub packages and then be installed and reused in projects using npm.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Best practices for creating a modern npm package",
+          "url": "https://snyk.io/blog/best-practices-create-modern-npm-package/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:cypress",
+      "topic_slug": "cypress",
+      "node_id": "3Fh3-V1kCZtlUTvEoloIO",
+      "title": "Cypress",
+      "description": "Cypress is an end-to-end testing framework designed for web applications. It runs tests directly in the browser and provides a visual test runner for debugging. It is primarily used for testing user interactions in the browser rather than pure Node.js code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Cypress",
+          "url": "https://www.cypress.io/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Cypress Documentation",
+          "url": "https://docs.cypress.io/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:debugging",
+      "topic_slug": "debugging",
+      "node_id": "ZLNUuDKhJ03Kw7xMVc7IR",
+      "title": "Debugging",
+      "description": "Debugging is the process of identifying and fixing issues in a Node.js application. Node.js provides built-in debugging capabilities via the `--inspect` flag, which connects to Chrome DevTools. Effective debugging involves using breakpoints, inspecting variables at runtime, and understanding the call stack.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Node.js - Getting Started",
+          "url": "https://nodejs.org/en/learn/getting-started/debugging"
+        },
+        {
+          "raw_type": "article",
+          "title": "Wikipedia - What is Debugging?",
+          "url": "https://en.wikipedia.org/wiki/Debugging"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:dotenv-package",
+      "topic_slug": "dotenv-package",
+      "node_id": "fE9C7Resn4EcL-hYHbsaZ",
+      "title": "Dotenv Package",
+      "description": "`dotenv` is an npm package that loads environment variables from a `.env` file into `process.env`. It is commonly used in development to manage configuration like API keys and database URLs without hardcoding them in source code. The `.env` file should not be committed to version control.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "process.env Documentation",
+          "url": "https://nodejs.org/docs/latest/api/process.html#process_process_env"
+        },
+        {
+          "raw_type": "official",
+          "title": "Dotenv package",
+          "url": "https://www.npmjs.com/package/dotenv"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "dotenv Docs",
+          "url": "https://github.com/motdotla/dotenv#readme"
+        },
+        {
+          "raw_type": "article",
+          "title": "The Twelve-Factor App Methodology",
+          "url": "https://12factor.net/config"
+        },
+        {
+          "raw_type": "article",
+          "title": "Dotenv tutorial",
+          "url": "https://zetcode.com/javascript/dotenv/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:drizzle",
+      "topic_slug": "drizzle",
+      "node_id": "JXQF9H4_N0rM7ZDKcCZNn",
+      "title": "Drizzle",
+      "description": "Drizzle lets you build your project the way you want, without interfering with your project or structure. Using Drizzle you can define and manage database schemas in TypeScript, access your data in a SQL-like or relational way, and take advantage of opt-in tools to make your developer experience amazing.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Drizzle Documentation",
+          "url": "https://orm.drizzle.team/docs/overview"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "Drizzle GitHub",
+          "url": "https://github.com/drizzle-team/drizzle-orm"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:ejs",
+      "topic_slug": "ejs",
+      "node_id": "L-_N7OxxuHCXsdWYBgZGu",
+      "title": "EJS",
+      "description": "EJS is a template language or engine that allows you to generate HTML markup with pure JavaScript. And this is what makes it perfect for Nodejs applications. In simple words, the EJS template engine helps to embed JavaScript into your HTML template easily.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "EJS Documentation",
+          "url": "https://ejs.co/#docs"
+        },
+        {
+          "raw_type": "official",
+          "title": "EJS Package",
+          "url": "https://www.npmjs.com/package/ejs"
+        },
+        {
+          "raw_type": "article",
+          "title": "Try EJS Online",
+          "url": "https://ionicabizau.github.io/ejs-playground/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to use EJS",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-use-ejs-to-template-your-node-application"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:error-handling",
+      "topic_slug": "error-handling",
+      "node_id": "t_kfKdNSKVBPYQ9zF9VqQ",
+      "title": "Error Handling",
+      "description": "Error handling is a way to find bugs and solve them as quickly as humanly possible. The errors in Node.js can be either operation or programmer errors. Read the articles linked below to understand how to handle different types of errors in Node.js",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Node.js Error Handling Best Practices",
+          "url": "https://sematext.com/blog/node-js-error-handling"
+        },
+        {
+          "raw_type": "article",
+          "title": "Error handling in Node.js",
+          "url": "https://blog.logrocket.com/error-handling-node-js/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:esm",
+      "topic_slug": "esm",
+      "node_id": "mKccfWOhC1Aj4VnaOqryA",
+      "title": "ESM",
+      "description": "ESM (ECMAScript Modules) is a standardized module system in JavaScript that allows for the organized, maintainable, and reusable structuring of code. It uses import and export statements for including and sharing functions, objects, or primitives between files. ESM supports static analysis, enabling better optimization and tooling, and is always in strict mode to reduce common JavaScript issues. N",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "ESM Documentation",
+          "url": "https://nodejs.org/api/esm.html"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:event-emitter",
+      "topic_slug": "event-emitter",
+      "node_id": "bgEHTBYzRDJqZ6gLqLbsz",
+      "title": "Event Emitter",
+      "description": "In Node.js, an event can be described simply as a string with a corresponding callback. An event can be \"emitted\" (or, in other words, the corresponding callback be called) multiple times or you can choose to only listen for the first time it is emitted.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "What are Event Emitters?",
+          "url": "https://nodejs.org/en/learn/asynchronous-work/the-nodejs-event-emitter"
+        },
+        {
+          "raw_type": "article",
+          "title": "Using Event Emitters in Node.js",
+          "url": "https://www.digitalocean.com/community/tutorials/using-event-emitters-in-node-js"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:event-loop",
+      "topic_slug": "event-loop",
+      "node_id": "b679H8gEBuvrHQ8ik7e96",
+      "title": "Event Loop",
+      "description": "The Event Loop is one of the most critical aspects of Node.js. Why is this so important? Because it explains how Node.js can be asynchronous and have non-blocking I/O, it explains the \"killer feature\" of Node.js, which made it this successful.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "The Node.JS Event Loop",
+          "url": "https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick"
+        },
+        {
+          "raw_type": "official",
+          "title": "Don't Block the Event Loop",
+          "url": "https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop"
+        },
+        {
+          "raw_type": "article",
+          "title": "JavaScript Visualized: Event Loop",
+          "url": "https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif"
+        },
+        {
+          "raw_type": "article",
+          "title": "Event Loop in Node.js - Mixu's Node book",
+          "url": "https://book.mixu.net/node/ch2.html#the-event-loop-understanding-how-node-executes-javascript-code"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:exiting--exit-codes",
+      "topic_slug": "exiting--exit-codes",
+      "node_id": "XteNExIZN3_g95_dPCopY",
+      "title": "Exiting / Exit Codes",
+      "description": "When a Node.js process finishes, it exits with a numeric exit code that signals whether it succeeded or failed. An exit code of `0` means success; any non-zero code indicates an error. You can set the exit code explicitly using `process.exit(code)` or by setting `process.exitCode`.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Exit Documentation",
+          "url": "https://nodejs.org/api/process.html#event-exit"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Exit a Process in Node.js",
+          "url": "https://betterstack.com/community/questions/how-to-exit-in-node-js/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:expressjs",
+      "topic_slug": "expressjs",
+      "node_id": "1vq_KcYR_pkfp1MtXaL75",
+      "title": "Express.js",
+      "description": "Express.js is the most widely used Node.js web framework. It provides a minimal set of features for routing HTTP requests and adding middleware. Its simplicity and large ecosystem of plugins make it a popular choice for building APIs and web applications of all sizes.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Express.js",
+          "url": "https://expressjs.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Getting Started Guide",
+          "url": "https://expressjs.com/en/starter/installing.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Express Full Guide",
+          "url": "https://www.tutorialspoint.com/nodejs/nodejs_express_framework.htm"
+        },
+        {
+          "raw_type": "article",
+          "title": "Sample Project",
+          "url": "https://auth0.com/blog/create-a-simple-and-stylish-node-express-app/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:fastify",
+      "topic_slug": "fastify",
+      "node_id": "WkU_rI4i-UmNSxb5F9TI-",
+      "title": "fastify",
+      "description": "Fastify is a high-performance web framework for Node.js. It is designed to have low overhead and high throughput, making it one of the fastest Node.js HTTP frameworks available. It includes a built-in schema-based validation and serialization system and has a plugin architecture for extending functionality.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Fastify Documentation",
+          "url": "https://www.fastify.io/docs/latest/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Beginner Fastify Tutorial",
+          "url": "https://www.youtube.com/watch?v=Lk-uVEVGxOA"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:fetch",
+      "topic_slug": "fetch",
+      "node_id": "B_3rTGQxJneMREXoi2gQn",
+      "title": "fetch",
+      "description": "The `fetch()` method in JavaScript is used to request to the server and load the information on the webpages. The request can be of any APIs that return the data of the format JSON or XML. This method returns a promise.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "MDN - Using the Fetch API",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"
+        },
+        {
+          "raw_type": "official",
+          "title": "NodeJS globals: fetch",
+          "url": "https://nodejs.org/api/globals.html#fetch"
+        },
+        {
+          "raw_type": "official",
+          "title": "MDN - Promise",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+        },
+        {
+          "raw_type": "article",
+          "title": "freeCodeCamp on avoiding callback hell",
+          "url": "https://www.freecodecamp.org/news/how-to-deal-with-nested-callbacks-and-avoid-callback-hell-1bc8dc4a2012/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:figlet-package",
+      "topic_slug": "figlet-package",
+      "node_id": "PHLdJylzNZDJBGi8FFsfO",
+      "title": "figlet package",
+      "description": "`figlet` is an npm package that renders text as ASCII art using large, decorative fonts. It is typically used in CLI tools to display a stylized application name or welcome message at startup. The output is plain text made up of characters arranged to form letters.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "figlet",
+          "url": "https://github.com/patorjk/figlet.js"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:fs-extra",
+      "topic_slug": "fs-extra",
+      "node_id": "zDmWGRrgwq3Gjfkyk6crK",
+      "title": "fs-extra",
+      "description": "fs-extra adds file system methods that aren't included in the native fs module and adds promise support to the fs methods. It also uses graceful-fs to prevent EMFILE errors. It should be a drop in replacement for fs.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "fs-extra package",
+          "url": "https://www.npmjs.com/package/fs-extra"
+        },
+        {
+          "raw_type": "article",
+          "title": "fs-extra vs fs",
+          "url": "https://ar.al/2021/03/07/fs-extra-to-fs/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:fs-module",
+      "topic_slug": "fs-module",
+      "node_id": "b1r1X3XCoPSayQjDBcy54",
+      "title": "fs module",
+      "description": "File System or `fs` module is a built in module in Node that enables interacting with the file system using JavaScript. All file system operations have synchronous, callback, and promise-based forms, and are accessible using both CommonJS syntax and ES6 Modules.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "fs module",
+          "url": "https://nodejs.org/api/fs.html"
+        },
+        {
+          "raw_type": "video",
+          "title": "Using fs",
+          "url": "https://www.youtube.com/watch?v=ZySsdm576wE"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:garbage-collection",
+      "topic_slug": "garbage-collection",
+      "node_id": "SJ01N7vMZkNiIuMYQhdpj",
+      "title": "Garbage Collection",
+      "description": "Memory management in JavaScript is performed automatically and invisibly to us. We create primitives, objects, functions\u2026 All that takes memory. The main concept of memory management in JavaScript is reachability.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "JavaScript Garbage Collection",
+          "url": "https://javascript.info/garbage-collection"
+        },
+        {
+          "raw_type": "article",
+          "title": "Memory Management in JavaScript",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:glob",
+      "topic_slug": "glob",
+      "node_id": "CWH0ZsxJ8beLvwMYJyH52",
+      "title": "glob",
+      "description": "`glob` is an npm package for matching files using shell-style wildcard patterns. For example, `**/*.js` matches all JavaScript files in all subdirectories. It is used in build tools, test runners, and any script that needs to find files matching a pattern.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "NPM Glob",
+          "url": "https://www.npmjs.com/package/glob"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:global-installation",
+      "topic_slug": "global-installation",
+      "node_id": "l24OMkPAEDnEDAVAMrMuG",
+      "title": "Global Installation",
+      "description": "A global npm installation places a package in a system-wide location, making it available as a command-line tool from any directory. You use it for tools you want to run across multiple projects, like CLI utilities. It is done with the `-g` flag: `npm install -g <package>`.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Downloading and installing packages locally",
+          "url": "https://docs.npmjs.com/downloading-and-installing-packages-locally"
+        },
+        {
+          "raw_type": "official",
+          "title": "Downloading and installing packages globally",
+          "url": "https://docs.npmjs.com/downloading-and-installing-packages-globally"
+        },
+        {
+          "raw_type": "official",
+          "title": "NPM Install Docs",
+          "url": "https://docs.npmjs.com/cli/commands/npm-install"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:global-keyword",
+      "topic_slug": "global-keyword",
+      "node_id": "PEGHvFT2Eg-1OyfhxYu22",
+      "title": "global keyword",
+      "description": "In browsers, the top-level scope is the global scope, and its global object is called the `window` object. Within the browser, `var something` will define a new global variable inside the `window` object. In Node.js, this is different. The top-level scope is **not** the global scope; `var something` inside a Node.js module will be local to that module.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "global Keyword in Node.js",
+          "url": "https://nodejs.org/api/globals.html#global"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is the 'global' object in NodeJS",
+          "url": "https://stackoverflow.com/questions/43627622/"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Global Object?",
+          "url": "https://www.youtube.com/watch?v=jn8PZNBmKm0"
+        },
+        {
+          "raw_type": "video",
+          "title": "Global Object in Node",
+          "url": "https://www.youtube.com/watch?v=PY-AycMkEAg"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:globby",
+      "topic_slug": "globby",
+      "node_id": "HYTw74rrd7kkOemCxfT9I",
+      "title": "globby",
+      "description": "`globby` is a modern alternative to `glob` that supports promises and multiple patterns at once. It builds on top of `fast-glob` and provides a cleaner API. It is used when you need to match files asynchronously or want a more ergonomic interface than the original `glob` package.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "NPM Globby",
+          "url": "https://www.npmjs.com/package/globby"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "GitHub Globby",
+          "url": "https://github.com/sindresorhus/globby"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:got-package",
+      "topic_slug": "got-package",
+      "node_id": "6stiDKubT6XVAOGiJ6wsx",
+      "title": "Got",
+      "description": "Got is a lighter, human-friendly, and powerful HTTP request library explicitly designed to work with Node.js. It supports pagination, RFC compliant caching, makes an API request again if it fails, supports cookies out of the box, etc.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Got Documentation",
+          "url": "https://www.npmjs.com/package/got"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to consume APIs using GOT in Node.js?",
+          "url": "https://rapidapi.com/guides/call-apis-got"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:handling-async-errors",
+      "topic_slug": "handling-async-errors",
+      "node_id": "3MpxV23lNpuKg0--e_9m7",
+      "title": "Async errors",
+      "description": "Errors must always be handled. If you are using synchronous programming you could use a try catch. But this does not work if you work asynchronous! Async errors will only be handled inside the callback function!",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Async Errors",
+          "url": "https://www.mariokandut.com/handling-errors-in-asynchronous-functions-node-js/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:history-of-nodejs",
+      "topic_slug": "history-of-nodejs",
+      "node_id": "Vrcv5px-3fqmyJnQv3WBK",
+      "title": "History of Node.js",
+      "description": "Node.js was first released in 2009 by Ryan Dahl, who wanted a way to build scalable network applications using JavaScript. The project was eventually forked in 2014 to create io.js, which was later merged back in 2015 under the Node.js Foundation. Since then, it has grown into one of the most widely used server-side runtimes.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Rising Stack - History of Node.js on a Timeline",
+          "url": "https://blog.risingstack.com/history-of-node-js/"
+        },
+        {
+          "raw_type": "article",
+          "title": "SAP Press - How Did Node.js Come About?",
+          "url": "https://blog.sap-press.com/how-did-node.js-come-about"
+        },
+        {
+          "raw_type": "video",
+          "title": "Node.js: The Documentary | An Origin Story",
+          "url": "https://youtu.be/LB8KwiiUGy0"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:hono",
+      "topic_slug": "hono",
+      "node_id": "Xa-lA1wbZ9JZ_XpXfhhw5",
+      "title": "Hono",
+      "description": "Hono is a lightweight, simple, and fast web framework for Cloudflare Workers, Deno, Bun, and other applications. It is a modern web application that is both fast and flexible. It offers inbuilt support for TypeScript, and easy development in a local environment. Using Hono, It is easy to create publishable web applications with Deno, Bun, and Cloudflare Workers.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Hono Documentation",
+          "url": "https://hono.dev/docs/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Build a web application with Hono",
+          "url": "https://blog.logrocket.com/build-web-application-hono/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:http-module",
+      "topic_slug": "http-module",
+      "node_id": "Sjc1YDtbzXyLQH711_3nj",
+      "title": "http module",
+      "description": "The `http` module is Node.js's built-in module for creating HTTP servers and making HTTP requests. It provides low-level access to the HTTP protocol, giving you full control over request and response handling. Most developers use a framework like Express or a library like Axios on top of it.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Node.js http.get() documentation",
+          "url": "https://nodejs.org/docs/latest-v16.x/api/http.html#httpgeturl-options-callback"
+        },
+        {
+          "raw_type": "official",
+          "title": "Node.js http.request() documentation",
+          "url": "https://nodejs.org/docs/latest-v16.x/api/http.html#httprequesturl-options-callback"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Create an HTTP Client with Core HTTP in Node.js",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-create-an-http-client-with-core-http-in-node-js"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:inquirer-package",
+      "topic_slug": "inquirer-package",
+      "node_id": "WFJJtIqVoBIhK10XY-d7l",
+      "title": "Inquirer Package",
+      "description": "Inquirer.js is a popular npm package for building rich, interactive command-line interfaces. It supports many input types including text, passwords, lists, checkboxes, and confirmations. It is a good choice for CLIs that require multi-step input flows.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "Inquirer",
+          "url": "https://github.com/SBoudrias/Inquirer.js#readme"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Create Interactive Command-line Prompts with Inquirer.js",
+          "url": "https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to make a CLI in Node.js with Inquirer",
+          "url": "https://www.youtube.com/watch?v=0xjfkl9nODQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:introduction-to-nodejs",
+      "topic_slug": "introduction-to-nodejs",
+      "node_id": "KDd40JOAvZ8O1mfhTYB3K",
+      "title": "Introduction to Node.js",
+      "description": "Node.js is a runtime environment that lets you run JavaScript on the server side. It is built on Chrome's V8 JavaScript engine and uses an event-driven, non-blocking I/O model. It is widely used to build web servers, APIs, and command-line tools.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Node.js",
+          "url": "https://nodejs.org/en/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Node.js Documentation",
+          "url": "https://nodejs.org/en/docs/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:javascript-errors",
+      "topic_slug": "javascript-errors",
+      "node_id": "Wg7KSpAPxjeFMxC6PBnHO",
+      "title": "JavaScript Errors",
+      "description": "JavaScript errors are runtime errors thrown by the language itself, such as `TypeError`, `RangeError`, and `ReferenceError`. These occur when code tries to perform an invalid operation, like calling a method on `undefined`. They can be caught using try/catch blocks or error event listeners.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "JavaScript error reference - MDN",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:jest",
+      "topic_slug": "jest",
+      "node_id": "5xrbKv2stKPJRv7Vzf9nM",
+      "title": "Jest",
+      "description": "Jest is a delightful JavaScript Testing Framework with a focus on simplicity. It works with projects using: Babel, TypeScript, Node, React, Angular, Vue and more!",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Jest",
+          "url": "https://jestjs.io"
+        },
+        {
+          "raw_type": "official",
+          "title": "Jest Documentation",
+          "url": "https://jestjs.io/docs/getting-started"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:jsonwebtoken",
+      "topic_slug": "jsonwebtoken",
+      "node_id": "7u2WMxjLx3mMtn0cha4M7",
+      "title": "JSON Web Token",
+      "description": "JWT, or JSON-Web-Token, is an open standard for sharing security information between two parties \u2014 a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "JSON Package Documentation",
+          "url": "https://www.npmjs.com/package/jsonwebtoken"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is JWT",
+          "url": "https://www.akana.com/blog/what-is-jwt"
+        },
+        {
+          "raw_type": "video",
+          "title": "JWT Implementation",
+          "url": "https://www.youtube.com/watch?v=mbsmsi7l3r4"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:keep-app-running",
+      "topic_slug": "keep-app-running",
+      "node_id": "af7n-J7VvbdpZh9lwA773",
+      "title": "Keep your app running in Production",
+      "description": "PM2 lets you run your nodejs scripts forever. In the event that your application crashes, PM2 will also restart it for you.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Running Node.js Apps with PM2 (Complete Guide)",
+          "url": "https://betterstack.com/community/guides/scaling-nodejs/pm2-guide/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:knex",
+      "topic_slug": "knex",
+      "node_id": "HDDnt79_PCB5JU-KnHKUh",
+      "title": "Knex",
+      "description": "Knex.js is a \"batteries included\" SQL query builder for PostgreSQL, CockroachDB, MSSQL, MySQL, MariaDB, SQLite3, Better-SQLite3, Oracle, and Amazon Redshift designed to be flexible, portable, and fun to use.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Knex.js",
+          "url": "https://knexjs.org"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:ky",
+      "topic_slug": "ky",
+      "node_id": "-_2letLUta5Ymc5eEOKhn",
+      "title": "Ky",
+      "description": "Ky is a tiny and elegant HTTP client based on the browser Fetch API. Ky targets modern browsers and Deno.For older browsers, you will need to transpile and use a fetch polyfill.For Node.js, check out Got.. 1 KB (minified & gzipped), one file, and no dependencies.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Ky Package",
+          "url": "https://www.npmjs.com/package/ky/v/0.9.0"
+        },
+        {
+          "raw_type": "opensource",
+          "title": "Ky Docs",
+          "url": "https://github.com/sindresorhus/ky"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:local-installation",
+      "topic_slug": "local-installation",
+      "node_id": "oYeux7PbveYaVwXRzAg5x",
+      "title": "Local Installation",
+      "description": "Locally installed packages are available only to the project where the packages are installed, while the globally installed packages can be used any where without installing them into a project. Another use case of the global packages is when using CLI tools.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Downloading and installing packages locally",
+          "url": "https://docs.npmjs.com/downloading-and-installing-packages-locally"
+        },
+        {
+          "raw_type": "official",
+          "title": "Downloading and installing packages globally",
+          "url": "https://docs.npmjs.com/downloading-and-installing-packages-globally"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:logging",
+      "topic_slug": "logging",
+      "node_id": "b7ZAEqo0ZU6TNf18Bo0mI",
+      "title": "Node.js Logging",
+      "description": "**Logging** is an essential part of understanding the complete application life cycle of the `Node.js` application. We can much more easily and quickly fix errors by looking at logs throughout the development process, from creating to debugging to designing new features. **Error**, **warn**, **info**, and **debug** are the four basic logging levels in `Node.js`. Logging involves persistently colle",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Node.js Logging",
+          "url": "https://stackify.com/node-js-logging/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Logging best practices",
+          "url": "https://blog.appsignal.com/2021/09/01/best-practices-for-logging-in-nodejs.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Logging",
+          "url": "https://stackify.com/node-js-logging/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:marko",
+      "topic_slug": "marko",
+      "node_id": "f2DyjBIglAZ6NoHaRnlzt",
+      "title": "Marko",
+      "description": "Marko is a fast and lightweight HTML-based templating engine that compiles templates to CommonJS modules and supports streaming, async rendering, and custom tags. It is HTML re-imagined as a language for building dynamic and reactive user interfaces.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Marko Documentation",
+          "url": "https://markojs.com/docs/guides-overview/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:memory-leaks",
+      "topic_slug": "memory-leaks",
+      "node_id": "oU9I7KBZoTSXXFmYscEIq",
+      "title": "Memory Leaks",
+      "description": "Memory leaks are caused when your Node.js app\u2019s CPU and memory usage increases over time for no apparent reason. In simple terms, a Node.js memory leak is an orphan block of memory on the Heap that is no longer used by your app because it has not been released by the garbage collector. It\u2019s a useless block of memory. These blocks can grow over time and lead to your app crashing because it runs out",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Memory Leaks in Node.js",
+          "url": "https://sematext.com/blog/nodejs-memory-leaks/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Memory Leaks Causes",
+          "url": "https://sematext.com/blog/nodejs-memory-leaks/#what-causes-them-common-node-js-memory-leaks"
+        },
+        {
+          "raw_type": "article",
+          "title": "Memory Leaks Detectors",
+          "url": "https://sematext.com/blog/nodejs-memory-leaks/#node-js-memory-leak-detectors"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:modules",
+      "topic_slug": "modules",
+      "node_id": "mbGFT6S7mL3bHHEZv0_s2",
+      "title": "Node.js Modules",
+      "description": "We split our code into different files to maintain, organize and reuse code whenever possible. A module system allows us to split and include code and import code written by other developers whenever required. In simple terms, a module is nothing but a JavaScript file. Node.js has many built-in modules that are part of the platform and comes with Node.js installation, for example, HTTP, fs, path, ",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Modules: CommonJS modules",
+          "url": "https://nodejs.org/api/modules.html#modules-commonjs-modules"
+        },
+        {
+          "raw_type": "article",
+          "title": "CommonJS vs. ES Modules in Node.js",
+          "url": "https://blog.logrocket.com/commonjs-vs-es-modules-node-js/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Modules in Node.js",
+          "url": "https://www.youtube.com/watch?v=9Amxzvq5LY8&"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:mongoose",
+      "topic_slug": "mongoose",
+      "node_id": "NDf-o-WECK02mVnZ8IFxy",
+      "title": "Mongoose",
+      "description": "Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Mongoose",
+          "url": "https://mongoosejs.com"
+        },
+        {
+          "raw_type": "official",
+          "title": "Mongoose Documentation",
+          "url": "https://mongoosejs.com/docs/guide.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started with MongoDB and Mongoose",
+          "url": "https://www.mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:monitor-changes-dev",
+      "topic_slug": "monitor-changes-dev",
+      "node_id": "swp4wBgA7z-sd64VDkMrw",
+      "title": "Keep App Running",
+      "description": "In Node.js, you need to restart the process to make changes take effect. This adds an extra step to your workflow. You can eliminate this extra step by using `nodemon` to restart the process automatically. Since Node.js 18.11.0, you can run Node with the `--watch` flag to reload your app every time a file is changed. So you don't need to use `nodemon` anymore.",
+      "resources": []
+    },
+    {
+      "skill_id": "nodejs:morgan",
+      "topic_slug": "morgan",
+      "node_id": "CTHFGgtXFpke4aPhh5vRY",
+      "title": "Morgan",
+      "description": "Morgan is a NodeJS and express.js middleware to log the HTTP request and error, simplifying the debugging process. It provides flexibility in defining the format of log messages and helps override the output destination for your logs.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "morgan package",
+          "url": "https://www.npmjs.com/package/morgan"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Use Morgan | DigitalOcean",
+          "url": "https://www.digitalocean.com/community/tutorials/nodejs-getting-started-morgan"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:native-drivers",
+      "topic_slug": "native-drivers",
+      "node_id": "5WqLm53CHDT5uBoMH-iPl",
+      "title": "Native Drivers (NoSQL)",
+      "description": "Native database drivers are npm packages provided by database vendors that let Node.js communicate directly with a NoSQL database. For example, the official MongoDB driver connects to MongoDB and lets you run queries against it. Using a native driver gives you full control but requires writing raw query logic yourself.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "MongoDB Drivers",
+          "url": "https://www.mongodb.com/docs/drivers/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:native-drivers",
+      "topic_slug": "native-drivers",
+      "node_id": "KpC-QYKalUp7VUvnMKBoW",
+      "title": "Native Drivers (Relational)",
+      "description": "Native drivers for relational databases let Node.js connect to databases like PostgreSQL or MySQL directly. Examples include the `pg` package for PostgreSQL and `mysql2` for MySQL. They give you direct access to the database and let you run raw SQL queries.",
+      "resources": []
+    },
+    {
+      "skill_id": "nodejs:nestjs",
+      "topic_slug": "nestjs",
+      "node_id": "tGD8XLHnfspfv8CbguGwV",
+      "title": "NestJS",
+      "description": "NestJS is a framework for building server-side Node.js applications. It uses TypeScript by default and draws heavily from Angular's architecture, using decorators, modules, and dependency injection. It is designed for building scalable, maintainable applications and is well-suited for complex, enterprise-grade APIs.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "NestJS Documentations",
+          "url": "https://docs.nestjs.com"
+        },
+        {
+          "raw_type": "video",
+          "title": "Beginner NestJS Tutorial",
+          "url": "https://www.youtube.com/watch?v=GHTA143_b-s"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:node---inspect",
+      "topic_slug": "node---inspect",
+      "node_id": "DcmGcVlEHL4IV7yPMDpVa",
+      "title": "node --inspect",
+      "description": "The `--inspect` flag starts the Node.js process with a debugging interface enabled. You can then connect to it using Chrome DevTools or a compatible IDE like VS Code to set breakpoints, step through code, and inspect variables. Appending `--inspect-brk` pauses execution immediately, letting you debug from the very start of the process.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Debugging Node.js with Chrome DevTools",
+          "url": "https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:nodejs-vs-browser",
+      "topic_slug": "nodejs-vs-browser",
+      "node_id": "ebVb0anYmbD1Y9ZTFXKFp",
+      "title": "Node.js vs Browser",
+      "description": "Node.js and the browser both run JavaScript but in different environments with different APIs. The browser provides access to the DOM, window, and browser-specific APIs, while Node.js provides access to the file system, operating system, and network. Code written for one environment does not always work in the other without adjustments.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Differences between Node.js and the Browser",
+          "url": "https://nodejs.org/en/learn/getting-started/differences-between-nodejs-and-the-browser/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:nodemon",
+      "topic_slug": "nodemon",
+      "node_id": "2Ym2jMvov0lZ79aJFaw29",
+      "title": "Nodemon",
+      "description": "In Node.js, you need to restart the process to make changes take effect. This adds an extra step to your workflow. You can eliminate this extra step by using nodemon or PM2 to restart the process automatically. `nodemon` is a command-line interface (CLI) utility developed by rem that wraps your Node app, watches the file system, and automatically restarts the process.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Nodemon",
+          "url": "https://nodemon.io/"
+        },
+        {
+          "raw_type": "article",
+          "title": "PM2",
+          "url": "https://pm2.keymetrics.io/docs/usage/quick-start/"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Restart Your Node.js Apps Automatically with nodemon",
+          "url": "https://www.digitalocean.com/community/tutorials/workflow-nodemon"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:nodetest",
+      "topic_slug": "nodetest",
+      "node_id": "oSLpy31XEcA2nRq9ks_LJ",
+      "title": "node:test",
+      "description": "`node:test` is Node.js's built-in test runner, added in version 18. It provides a simple API for writing and running tests without any additional dependencies. For projects that want minimal tooling, it is a practical alternative to third-party frameworks.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Test Runner API Docs",
+          "url": "https://nodejs.org/api/test.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Node.js Test Runner",
+          "url": "https://nodejs.org/en/learn/test-runner/using-test-runner"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:npm-workspaces",
+      "topic_slug": "npm-workspaces",
+      "node_id": "WvxCGVKLvTUVEHeOcUQPg",
+      "title": "npm workspaces",
+      "description": "npm workspaces allow you to manage multiple packages within a single repository (monorepo). You define workspace packages in the root `package.json`, and npm handles linking them together during installation. This makes it easier to share code between packages and run scripts across the whole project.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "npm workspaces",
+          "url": "https://docs.npmjs.com/cli/using-npm/workspaces"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started with Npm Workspaces",
+          "url": "https://ruanmartinelli.com/blog/npm-7-workspaces-1/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:npm",
+      "topic_slug": "npm",
+      "node_id": "jQJ9aOKtg-O-GhWk5OgCK",
+      "title": "npm",
+      "description": "npm (Node Package Manager) is the default package manager for Node.js. It lets you install, update, and manage third-party libraries and tools for your project. npm also provides a registry at npmjs.com where developers publish and share their packages.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "NPM Documentation",
+          "url": "https://docs.npmjs.com/"
+        },
+        {
+          "raw_type": "official",
+          "title": "What is npm?",
+          "url": "https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
+        },
+        {
+          "raw_type": "official",
+          "title": "An introduction to the npm package manager",
+          "url": "https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
+        },
+        {
+          "raw_type": "video",
+          "title": "NPM Crash Course",
+          "url": "https://www.youtube.com/watch?v=jHDhaSSKmB0"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:npx",
+      "topic_slug": "npx",
+      "node_id": "YdpJ-DUo8Q5ATRmF4s4YS",
+      "title": "npx",
+      "description": "npx is a tool that comes with npm and lets you run Node.js packages without installing them globally. It downloads and executes the package in a temporary environment, which is useful for running CLI tools like scaffolding scripts or code generators. It avoids cluttering your global environment with one-off tools.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "npx",
+          "url": "https://docs.npmjs.com/cli/commands/npx/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Introduction to the npx Node.js Package Runner",
+          "url": "https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:passportjs",
+      "topic_slug": "passportjs",
+      "node_id": "mIyv6S9a5dCHkk-JhhjKV",
+      "title": "Passport js",
+      "description": "Passport.js is authentication middleware for Node.js. It makes implementing authentication in express apps really easy and fast. It is extremely flexible and modular. It uses \"strategies\" to support authentication using a username and password, Facebook, Twitter, and a lot of other sites.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "PassportJS",
+          "url": "https://www.passportjs.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "PassportJS Documentation",
+          "url": "https://www.passportjs.org/docs/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Implementation of OAuth using passportjs",
+          "url": "https://www.youtube.com/watch?v=sakQbeRjgwg&list=PL4cUxeGkcC9jdm7QX143aMLAqyM-jTZ2x"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:path-module",
+      "topic_slug": "path-module",
+      "node_id": "Blzb-fdQZMu6Xq5JDJW0_",
+      "title": "path module",
+      "description": "The `path` module provides utilities for working with file and directory paths. It's built-in to Node.js core and can simply be used by requiring it.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Path Documentation",
+          "url": "https://nodejs.org/api/path.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Learn Node.js File Paths",
+          "url": "https://nodejs.org/en/learn/manipulating-files/nodejs-file-paths"
+        },
+        {
+          "raw_type": "video",
+          "title": "Path Module in Node.js",
+          "url": "https://youtu.be/j95Lwxvi9JY"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:playwright",
+      "topic_slug": "playwright",
+      "node_id": "Ix-g9pgJjEI04bSfROvlq",
+      "title": "Playwright",
+      "description": "Playwright is a browser automation and end-to-end testing tool developed by Microsoft. It supports multiple browsers (Chromium, Firefox, WebKit) and allows you to write tests that simulate real user behavior. It can also be used for scraping and automating web-based workflows.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Playwright",
+          "url": "https://playwright.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Playwright Docs",
+          "url": "https://playwright.dev/docs/getting-started-vscode"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting Started with Playwright",
+          "url": "https://learn.microsoft.com/en-us/shows/getting-started-with-end-to-end-testing-with-playwright/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:pm2",
+      "topic_slug": "pm2",
+      "node_id": "7WAuMMyelUbgwEHtnMmJv",
+      "title": "Pm2",
+      "description": "PM2 is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Pm2",
+          "url": "https://pm2.keymetrics.io/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Pm2 Documentation",
+          "url": "https://pm2.keymetrics.io/docs/usage/quick-start/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:prisma",
+      "topic_slug": "prisma",
+      "node_id": "3Qxtf8n6gJYdnRsuqa52Q",
+      "title": "Prisma",
+      "description": "Prisma provides an open source next-generation ORM in the TypeScript ecosystem. It offers a dedicated API for relation filters. It provides an abstraction layer that makes you more productive compared to writing SQL. Prisma currently supports `PostgreSQL`, `MySQL`, `SQL Server`, `SQLite`, `MongoDB` and `CockroachDB`.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Prisma",
+          "url": "https://www.prisma.io/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Prisma & MongoDB Youtube Tutorial",
+          "url": "https://www.youtube.com/watch?v=-7r4whMKt1s"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:prisma",
+      "topic_slug": "prisma",
+      "node_id": "O7Cy2g_GPxKU6vPfEmNyi",
+      "title": "Prisma",
+      "description": "Prisma is an ORM that helps app developers build faster and make fewer errors. Combined with its Data Platform developers gain reliability and visibility when working with databases.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Prisma",
+          "url": "https://www.prisma.io/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Prisma Documentation",
+          "url": "https://www.prisma.io/docs/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:processargv",
+      "topic_slug": "processargv",
+      "node_id": "lT2DDRtbFfEjb_cmsQx8i",
+      "title": "process.argv",
+      "description": "`process.argv` is an array containing the command-line arguments passed to the Node.js process. The first two elements are the path to Node.js and the script file; the remaining elements are the arguments provided by the user. Parsing `process.argv` manually is the lowest-level way to read CLI input.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "process.argv",
+          "url": "https://nodejs.org/docs/latest/api/process.html#processargv"
+        },
+        {
+          "raw_type": "video",
+          "title": "Command Line Arguments - Cave of Programming",
+          "url": "https://youtu.be/nr7i2HOAjeE"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:processcwd",
+      "topic_slug": "processcwd",
+      "node_id": "QT2QE2FLkyUDpwMKYkFQL",
+      "title": "process.cwd()",
+      "description": "`process.cwd()` returns the current working directory of the Node.js process, which is the directory from which the script was launched. Unlike `__dirname`, it reflects the shell's working directory, not the file's location. It is useful when your application needs to resolve paths relative to where it was started.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "process.cwd()",
+          "url": "https://nodejs.org/api/process.html#processcwd"
+        },
+        {
+          "raw_type": "article",
+          "title": "What's the difference between process.cwd() vs __dirname?",
+          "url": "https://stackoverflow.com/questions/9874382/whats-the-difference-between-process-cwd-vs-dirname"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:processenv",
+      "topic_slug": "processenv",
+      "node_id": "wthXp2YGg3eTMbxsek77C",
+      "title": "process.env",
+      "description": "`process.env` is a Node.js object that contains all environment variables available to the current process. These can be set in the shell, in a `.env` file via a library like dotenv, or by the deployment platform. Configuration values like port numbers, API keys, and database URLs are commonly stored and accessed this way.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Node.js Learn Environment Variables",
+          "url": "https://nodejs.org/en/learn/command-line/how-to-read-environment-variables-from-nodejs"
+        },
+        {
+          "raw_type": "article",
+          "title": "Process.env Node",
+          "url": "https://www.knowledgehut.com/blog/web-development/node-environment-variables"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:processnexttick",
+      "topic_slug": "processnexttick",
+      "node_id": "ATu9-29yJWcDOik5FTOgf",
+      "title": "process.nextTick()",
+      "description": "Every time the event loop takes a full trip, we call it a tick. When we pass a function to `process.nextTick()`, we instruct the engine to invoke this function at the end of the current operation before the next event loop tick starts.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Understanding Process.NextTick()",
+          "url": "https://nodejs.org/en/learn/asynchronous-work/understanding-processnexttick"
+        },
+        {
+          "raw_type": "video",
+          "title": "The process.nextTick Function",
+          "url": "https://www.youtube.com/watch?v=-niA5XOlCWI"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:processstdin",
+      "topic_slug": "processstdin",
+      "node_id": "betuntelnEMSHdatO6VPl",
+      "title": "process.stdin",
+      "description": "`process.stdin` is a stream in Node.js that represents the standard input, typically the keyboard. It allows your Node.js programs to receive text input from the command line. The `readline` module provides a convenient interface for reading input from `process.stdin` line by line, making it easier to handle user input in interactive command-line applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "process.stdin",
+          "url": "https://nodejs.org/api/process.html#processstdin"
+        },
+        {
+          "raw_type": "official",
+          "title": "Accept input from the command line in Node.js",
+          "url": "https://nodejs.org/en/learn/command-line/accept-input-from-the-command-line-in-nodejs#accept-input-from-the-command-line-in-nodejs"
+        },
+        {
+          "raw_type": "article",
+          "title": "Node.js Process stdin & stdout",
+          "url": "https://nodecli.com/node-stdin-stdout"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:promises",
+      "topic_slug": "promises",
+      "node_id": "QcOqhuKWOUUUBSiu5Oelv",
+      "title": "Promises",
+      "description": "A promise is an object representing the eventual result of an async operation. It can be in one of three states: pending, fulfilled, or rejected. Promises provide `.then()` and `.catch()` methods for chaining operations, and they are the foundation for `async/await`.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Promises",
+          "url": "https://www.promisejs.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Promise Methods",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+        },
+        {
+          "raw_type": "video",
+          "title": "Asynchronous JavaScript - Promises",
+          "url": "https://www.youtube.com/watch?v=a_8nrslImo4/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:prompts-package",
+      "topic_slug": "prompts-package",
+      "node_id": "xgsKrUdfB0g0DMQCLK3aY",
+      "title": "prompts package",
+      "description": "`prompts` is a lightweight npm package for building interactive command-line interfaces. It provides a simple API for prompting users with questions and collecting their answers in various formats, like text input, confirmations, and selections. It supports keyboard navigation and works well in scripts that need user input.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Prompts",
+          "url": "https://www.npmjs.com/package/prompts"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:pug",
+      "topic_slug": "pug",
+      "node_id": "O67e2qyhxP5joR5LGyZ2N",
+      "title": "Pug",
+      "description": "Pug is a JavaScript template engine. It is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers. Pug was formerly called Jade. Pug is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Getting started with PugJs",
+          "url": "https://pugjs.org/api/getting-started.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Pug.js tutorial",
+          "url": "https://zetcode.com/javascript/pugjs/"
+        },
+        {
+          "raw_type": "video",
+          "title": "Node.js + Express - Tutorial - PugJS Templating Engine",
+          "url": "https://www.youtube.com/watch?v=DSp9ExFw3Ig"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:running-nodejs-code",
+      "topic_slug": "running-nodejs-code",
+      "node_id": "uPJqdMQQJRkTMMhNORDeH",
+      "title": "Running Node.js Code",
+      "description": "You can run Node.js code from the terminal using the `node` command followed by a filename. For quick experiments, Node.js also includes a REPL (Read-Eval-Print Loop) that lets you execute JavaScript interactively. Understanding how to run scripts and interpret output is the starting point for working with Node.js.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Run Node.js from Command Line",
+          "url": "https://nodejs.org/en/learn/command-line/run-nodejs-scripts-from-the-command-line/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:running-scripts",
+      "topic_slug": "running-scripts",
+      "node_id": "64pgc7rcgboFcNYuOlX8e",
+      "title": "Running Scripts",
+      "description": "In Node.js, npm scripts are used for the purpose of initiating a server, starting the build of a project, and also for running the tests. We can define this scripts in the package.json file of the folder. Also, we can split the huge scripts into many smaller parts if it is needed.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Running Scripts",
+          "url": "https://docs.npmjs.com/cli/using-npm/scripts"
+        },
+        {
+          "raw_type": "article",
+          "title": "Example of Running Scripts",
+          "url": "https://riptutorial.com/node-js/example/4592/running-scripts"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:semantic-versioning",
+      "topic_slug": "semantic-versioning",
+      "node_id": "dOlzIXBfAPmbY542lNOe6",
+      "title": "Semantic Versioning",
+      "description": "Semantic versioning (SemVer) is a versioning convention used by npm packages. Version numbers follow the format MAJOR.MINOR.PATCH, where breaking changes increment the major number, new features increment the minor, and bug fixes increment the patch. Understanding SemVer helps you manage dependency updates without introducing breaking changes.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Semver.org",
+          "url": "https://semver.org/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Medium - Understanding Semantic Versioning",
+          "url": "https://medium.com/codex/understanding-semantic-versioning-a-guide-for-developers-dad5f2b70583"
+        },
+        {
+          "raw_type": "article",
+          "title": "Devopedia - Semver",
+          "url": "https://devopedia.org/semantic-versioning"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:sequelize",
+      "topic_slug": "sequelize",
+      "node_id": "fOm-ktIaLqrmA0zln0Bga",
+      "title": "Sequelize",
+      "description": "Sequelize is a mature ORM for Node.js that supports PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL. It provides model definitions, associations, query building, and migration support. It uses a promise-based API and has been in the ecosystem for many years.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Sequelize",
+          "url": "https://sequelize.org/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Sequelize - NPM Package",
+          "url": "https://www.npmjs.com/package/sequelize"
+        },
+        {
+          "raw_type": "official",
+          "title": "Sequelize Docs",
+          "url": "https://sequelize.org/docs/v6/getting-started/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Getting started with Sequelize",
+          "url": "https://levelup.gitconnected.com/the-ultimate-guide-to-get-started-with-sequelize-orm-238588d3516e"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:setimmediate",
+      "topic_slug": "setimmediate",
+      "node_id": "YvTPpoIiSqjDYi0Q10kWh",
+      "title": "setImmediate",
+      "description": "`setImmediate()` schedules a callback to run in the check phase of the event loop, after I/O events have been processed. It is similar to `setTimeout(fn, 0)` but is guaranteed to run before any timers in some cases. It is used when you want to yield control to the event loop before continuing execution.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Understanding setImmediate",
+          "url": "https://nodejs.org/en/learn/asynchronous-work/understanding-setimmediate"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding setImmediate",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:setinterval",
+      "topic_slug": "setinterval",
+      "node_id": "T5I-mFKK6bKzXrzkECI0P",
+      "title": "setInterval",
+      "description": "`setInterval()` repeatedly executes a callback function at a fixed time interval, in milliseconds. It keeps running until cleared with `clearInterval()`. It is commonly used for polling, health checks, or any task that needs to run on a schedule.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Scheduling: setTimeout and setInterval",
+          "url": "https://javascript.info/settimeout-setinterval"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:settimeout",
+      "topic_slug": "settimeout",
+      "node_id": "W2Dbj4Y78Bgdx7og5xkrg",
+      "title": "setTimeout",
+      "description": "`setTimeout()` executes a callback function once, after a specified delay in milliseconds. It does not block other code from running while waiting. It is one of the simplest ways to introduce asynchronous behavior in Node.js.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "JavaScript MDN Docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/setTimeout"
+        },
+        {
+          "raw_type": "video",
+          "title": "setInterval and setTimeout: timing events",
+          "url": "https://www.youtube.com/watch?v=kOcFZV3c75I"
+        },
+        {
+          "raw_type": "video",
+          "title": "Learn JavaScript setTimeout() in 6 minutes!",
+          "url": "https://www.youtube.com/watch?v=shWr5DNVeCI"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:stdout--stderr",
+      "topic_slug": "stdout--stderr",
+      "node_id": "N2vR1_NyDn4rYLXJzxWBZ",
+      "title": "Process stdout",
+      "description": "The `process.stdout` property is an inbuilt application programming interface of the process module which is used to send data out of our program. A Writable Stream to stdout. It implements a `write()` method. `console.log()` prints to the `process.stdout.write()` with formatted output or new line.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "process.stdout",
+          "url": "https://nodejs.org/api/process.html#processstdout"
+        },
+        {
+          "raw_type": "article",
+          "title": "process.stdout vs console.log",
+          "url": "https://stackoverflow.com/questions/4976466/difference-between-process-stdout-write-and-console-log-in-node-js/4984464#4984464"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:streams",
+      "topic_slug": "streams",
+      "node_id": "WrnjjUDXQwwMXQjmgK72U",
+      "title": "Streams",
+      "description": "Streams in Node.js are objects that let you read or write data in chunks, rather than loading everything into memory at once. They are useful for handling large files, HTTP requests, or any data that comes in over time. There are four types: readable, writable, duplex (both), and transform (modifies data as it passes through).",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Stream API Documentation",
+          "url": "https://nodejs.org/api/stream.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "Understanding Streams in Node.js",
+          "url": "https://nodesource.com/blog/understanding-streams-in-nodejs"
+        },
+        {
+          "raw_type": "video",
+          "title": "Node.js Streams tutorial",
+          "url": "https://www.youtube.com/watch?v=GlybFFMXXmQ"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:system-errors",
+      "topic_slug": "system-errors",
+      "node_id": "05YY-AhLKzn4Ypr4eow5E",
+      "title": "System Errors",
+      "description": "System errors occur when Node.js interacts with the underlying operating system and the operation fails. Examples include trying to read a file that does not exist or a network connection being refused. These errors are instances of the `SystemError` class and include properties like `code` and `syscall` to help identify the cause.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Node.js Errors",
+          "url": "https://nodejs.org/api/errors.html#errors_class_systemerror"
+        },
+        {
+          "raw_type": "article",
+          "title": "16 Common Errors in Node.js and How to Fix Them",
+          "url": "https://betterstack.com/community/guides/scaling-nodejs/nodejs-errors/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:template-engines",
+      "topic_slug": "template-engines",
+      "node_id": "J0ErCAZT5B97ZMogU2JHd",
+      "title": "Template Engines",
+      "description": "Template engines allow you to generate HTML dynamically by combining HTML structure with data. In Node.js, they are used in server-side rendered applications to produce HTML pages on the server before sending them to the client. Common template engines include EJS, Pug, and Marko.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Getting Started with Pug",
+          "url": "https://pugjs.org/api/getting-started.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Handlebars Package",
+          "url": "https://www.npmjs.com/package/handlebars"
+        },
+        {
+          "raw_type": "official",
+          "title": "EJS Package",
+          "url": "https://www.npmjs.com/package/ejs"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:testing",
+      "topic_slug": "testing",
+      "node_id": "90NIFfbWjTbyKZKwyJlfI",
+      "title": "Testing",
+      "description": "Software testing is the process of verifying that what we create is doing exactly what we expect it to do. The tests are created to prevent bugs and improve code quality. The two most common testing approaches are unit testing and end-to-end testing. In the first, we examine small snippets of code, in the second, we test an entire user flow.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Vitest",
+          "url": "https://vitest.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Jest",
+          "url": "https://jest.io"
+        },
+        {
+          "raw_type": "article",
+          "title": "Software Testing",
+          "url": "https://en.wikipedia.org/wiki/Software_testing"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:threads",
+      "topic_slug": "threads",
+      "node_id": "KzUmXkwrmU_ssVBjSHAiY",
+      "title": "Nodejs Threads",
+      "description": "Node.js is a single-threaded language and gives us ways to work parallelly to our main process. Taking note of nowadays multicore system single threading is very memory efficient.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "Single Thread vs Child Process vs Worker Threads vs Cluster in Node.js",
+          "url": "https://alvinlal.netlify.app/blog/single-thread-vs-child-process-vs-worker-threads-vs-cluster-in-nodejs"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:typeorm",
+      "topic_slug": "typeorm",
+      "node_id": "rk5FtAPDi1TpvWd0yBbtl",
+      "title": "TypeORM",
+      "description": "TypeORM is an ORM that can run in NodeJS, Browser, Cordova, PhoneGap, Ionic, React Native, NativeScript, Expo, and Electron platforms and can be used with TypeScript and JavaScript (ES5, ES6, ES7, ES8). Its goal is to always support the latest JavaScript features and provide additional features that help you to develop any kind of application that uses databases - from small applications with a fe",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "TypeORM Docs",
+          "url": "https://typeorm.io"
+        },
+        {
+          "raw_type": "video",
+          "title": "TypeORM Crash Course",
+          "url": "https://www.youtube.com/watch?v=JaTbzPcyiOE"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:uncaught-exceptions",
+      "topic_slug": "uncaught-exceptions",
+      "node_id": "uzOmaTZrHhBxx5plb345Z",
+      "title": "Uncaught Exceptions",
+      "description": "An uncaught exception is an error that is not handled anywhere in the application, causing the Node.js process to crash. You can listen for these with the `process.on('uncaughtException', ...)` event, though it should be used carefully and mainly for logging before shutting down gracefully. Relying on it as a catch-all is considered bad practice.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Uncaught Exception Error Events",
+          "url": "https://nodejs.org/api/process.html#event-uncaughtexception"
+        },
+        {
+          "raw_type": "article",
+          "title": "Let It Crash: Best Practices for Handling Node.js Errors on Shutdown",
+          "url": "https://blog.heroku.com/best-practices-nodejs-errors"
+        },
+        {
+          "raw_type": "article",
+          "title": "Uncaught Exceptions in Node.js",
+          "url": "https://shapeshed.com/uncaught-exceptions-in-node/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:updating-packages",
+      "topic_slug": "updating-packages",
+      "node_id": "bYBz12FUiJ1qLgdQSGyGK",
+      "title": "Updating Packages",
+      "description": "npm provides various features to help install and maintain the project's dependencies. Dependencies get updates with new features and fixes, so upgrading to a newer version is recommended. We use `npm update` commands for this.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Updating packages downloaded from the registry",
+          "url": "https://docs.npmjs.com/updating-packages-downloaded-from-the-registry"
+        },
+        {
+          "raw_type": "article",
+          "title": "How to Update Npm Packages Safely With Npm Check Updates",
+          "url": "https://chrispennington.blog/blog/how-to-update-npm-packages-safely-with-npm-check-updates/"
+        },
+        {
+          "raw_type": "video",
+          "title": "How to Update All NPM Dependencies At Once",
+          "url": "https://www.youtube.com/watch?v=Ghdfdq17JAY"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:user-specified-errors",
+      "topic_slug": "user-specified-errors",
+      "node_id": "wQ4i6_a1EFk9HHc6Sll-3",
+      "title": "User Specified Errors",
+      "description": "User specified errors can be created by extending the base Error object, a built-in error class. When creating errors in this manner, you should pass a message string that describes the error. This message can be accessed through the message property on the object. The Error object also contains a name and a stack property that indicate the name of the error and the point in the code at which it i",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "A Comprehensive Guide To Error Handling In Node.js",
+          "url": "https://www.honeybadger.io/blog/errors-nodejs/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:using-apm",
+      "topic_slug": "using-apm",
+      "node_id": "CvkjlOpT34lOHgzQHL40s",
+      "title": "Using APM",
+      "description": "APM (Application Performance Monitoring) tools provide real-time visibility into the performance of a Node.js application in production. They track metrics like response times, error rates, memory usage, and database query performance. Popular APM tools for Node.js include Datadog, New Relic, and Elastic APM.",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "APM Logs: How to Get Started for Faster Debugging",
+          "url": "https://last9.io/blog/apm-logs-for-faster-debugging/"
+        },
+        {
+          "raw_type": "article",
+          "title": "Debugging using APM",
+          "url": "https://stackify.com/node-js-debugging-tips/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:using-debugger",
+      "topic_slug": "using-debugger",
+      "node_id": "XEGTeGWw05xWYOfUo3POE",
+      "title": "Using Debugger",
+      "description": "Node.js includes a built-in debugger that can be activated with the `--inspect` flag or the `debugger` keyword in code. It lets you pause execution, step through code, and inspect variables at runtime using Chrome DevTools or a compatible IDE. Using a debugger is more efficient than adding `console.log` statements throughout the code.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Debugger",
+          "url": "https://nodejs.org/api/debugger.html"
+        },
+        {
+          "raw_type": "official",
+          "title": "Inspect Docs",
+          "url": "https://nodejs.org/en/learn/getting-started/debugging"
+        },
+        {
+          "raw_type": "article",
+          "title": "Freecodecamp.org - Debugging",
+          "url": "https://www.freecodecamp.org/news/how-to-debug-node-js-applications/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:vitest",
+      "topic_slug": "vitest",
+      "node_id": "qjToBaMenW3SDtEfoCbQ6",
+      "title": "Vitest",
+      "description": "Vitest is a Vite-native unit testing framework that's Jest-compatible. Vitest is a powerful testing library built on top of Vite that is growing in popularity. You can use Vitest for a range of testing needs, such as unit, integration, end-to-end (E2E), snapshot, and performance testing of functions and components. ESM, TypeScript, JSX. Out-of-box ESM, TypeScript and JSX support powered by esbuild",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Vitest",
+          "url": "https://vitest.dev/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Vitest Documentation",
+          "url": "https://vitest.dev/guide/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:what-is-nodejs",
+      "topic_slug": "what-is-nodejs",
+      "node_id": "Mp056kNnwsRWeEXuhGPy-",
+      "title": "What is Node.js?",
+      "description": "Node.js is a cross-platform, open-source JavaScript runtime that executes code outside of a browser. It was created by Ryan Dahl in 2009 to allow JavaScript to be used for server-side scripting. Unlike traditional server environments, Node.js processes requests asynchronously, making it well-suited for I/O-heavy applications.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Node.js",
+          "url": "https://nodejs.org/en/about/"
+        },
+        {
+          "raw_type": "official",
+          "title": "Node.js - Getting Started",
+          "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs"
+        },
+        {
+          "raw_type": "video",
+          "title": "What is Node.js?",
+          "url": "https://www.youtube.com/watch?v=uVwtVBpw7RQ"
+        },
+        {
+          "raw_type": "video",
+          "title": "How Node.js Works?",
+          "url": "https://www.youtube.com/watch?v=jOupHNvDIq8"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:why-use-nodejs",
+      "topic_slug": "why-use-nodejs",
+      "node_id": "ex8FOKrUlbu4MuEq2czyW",
+      "title": "Why use Node.js?",
+      "description": "Node.js is a good choice when you need high-throughput, real-time applications like chat servers, APIs, or streaming services. Its non-blocking architecture means it can handle many concurrent connections without spawning a new thread for each one. The npm ecosystem also gives access to a large library of reusable packages.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Learn Node.js",
+          "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs"
+        },
+        {
+          "raw_type": "article",
+          "title": "Why Choose Node.js?",
+          "url": "https://medium.com/selleo/why-choose-node-js-b0091ad6c3fc"
+        },
+        {
+          "raw_type": "article",
+          "title": "5 Reasons to Choose Node.js",
+          "url": "https://www.bitovi.com/blog/5-reasons-to-choose-nodejs"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:winston",
+      "topic_slug": "winston",
+      "node_id": "Oe9cQCz2lwSaot7miZOta",
+      "title": "Winston",
+      "description": "winston is designed to be a simple and universal logging library with support for multiple transports. A transport is essentially a storage device for your logs. Each winston logger can have multiple transports configured at different levels. For example, one may want error logs to be stored in a persistent remote location (like a database), but all logs output to the console or a local file.",
+      "resources": [
+        {
+          "raw_type": "opensource",
+          "title": "winston",
+          "url": "https://github.com/winstonjs/winston?tab=readme-ov-file#readme"
+        },
+        {
+          "raw_type": "article",
+          "title": "A Complete Guide to Winston Logging in Node.js",
+          "url": "https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-winston-and-morgan-to-log-node-js-applications/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:worker-threads",
+      "topic_slug": "worker-threads",
+      "node_id": "bH2Iv3BX0ZiWD3lOmC_m_",
+      "title": "Worker Threads",
+      "description": "Worker thread is a continuous parallel thread that runs and accepts messages until it is explicitly closed or terminated. With worker threads, we can achieve a much efficient application without creating a deadlock situation. Workers, unlike children's processes, can exchange memory.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "Worker Threads",
+          "url": "https://nodejs.org/api/worker_threads.html#worker-threads"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:working-with-databases",
+      "topic_slug": "working-with-databases",
+      "node_id": "5l-lZ8gwVLqqAF_n99vIO",
+      "title": "What is Database",
+      "description": "A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS).",
+      "resources": [
+        {
+          "raw_type": "article",
+          "title": "What is Database?",
+          "url": "https://en.wikipedia.org/wiki/Database"
+        },
+        {
+          "raw_type": "article",
+          "title": "What is Database - AWS",
+          "url": "https://aws.amazon.com/what-is/database/"
+        }
+      ]
+    },
+    {
+      "skill_id": "nodejs:working-with-files",
+      "topic_slug": "working-with-files",
+      "node_id": "wEK77A6MPQBCBUSJKMiaY",
+      "title": "Working with Files",
+      "description": "You can programmatically manipulate files in Node.js with the built-in `fs` module. The name is short for \u201cfile system,\u201d and the module contains all the functions you need to read, write, and delete files on the local machine.",
+      "resources": [
+        {
+          "raw_type": "official",
+          "title": "File System Module",
+          "url": "https://nodejs.org/docs/latest/api/fs.html"
+        },
+        {
+          "raw_type": "article",
+          "title": "How To Work with Files using the fs Module in Node.js",
+          "url": "https://www.digitalocean.com/community/tutorials/how-to-work-with-files-using-the-fs-module-in-node-js"
+        }
+      ]
+    }
+  ]
+}
