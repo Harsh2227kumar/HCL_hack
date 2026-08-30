@@ -101,3 +101,10 @@ export const aiExplanationSchema = z.object({
 export const aiCounterfactualSchema = z.object({
   comparison: z.string(),
 });
+
+export const aiChatResponseSchema = z.object({
+  message: z.string(),
+  quick_replies: z.array(z.string()).optional(),
+  done: z.boolean(),
+});
+
