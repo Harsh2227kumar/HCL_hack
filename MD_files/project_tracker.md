@@ -17,6 +17,14 @@ One entry per person per push. Add new entries at the **top** of the log (newest
 
 ## Log
 
+### 2026-08-30 — Rudrakshi & Sameera (via Yash)
+- What I built/changed: Completed Phase 2 (Deterministic Core Intelligence) - implemented all 7 pure TypeScript engines including skill reconciliation, bottleneck detection, hybrid scoring, and prerequisite path generation. No LLMs are used for this logic.
+- Files touched: `src/lib/core/reconciliation.ts`, `src/lib/core/diagnosticSelection.ts`, `src/lib/core/skillGap.ts`, `src/lib/core/bottleneckDetection.ts`, `src/lib/core/hybridScoring.ts`, `src/lib/core/prerequisiteSort.ts`, `src/lib/core/impactEvaluator.ts`
+- Blocked on: None
+- Next up: Phase 3 — API Routes
+
+---
+
 ### 2026-08-30 — Yash
 - What I built/changed: Completed Phase 1 (Foundation Layer) setup including Prisma/Supabase clients, Gemini/Groq AI clients, callAI implementation with failover, validation schemas, and database seed script.
 - Files touched: `src/lib/prisma.ts`, `src/lib/supabase/client.ts`, `src/lib/ai/gemini.ts`, `src/lib/ai/groq.ts`, `src/lib/ai/embeddings.ts`, `src/lib/ai/callAI.ts`, `src/lib/validation/schemas.ts`, `src/lib/validation/groundingCheck.ts`, `data/*.json`, `scripts/seed.ts`
