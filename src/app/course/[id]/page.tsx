@@ -4,6 +4,7 @@ import { PrismaClient } from '@prisma/client';
 // Usually instantiated in a lib/prisma.ts file to avoid multiple instances in dev,
 // but placed here as requested for direct usage if no global exists.
 const prisma = new PrismaClient();
+import DiagnosticWrapper from '@/components/resource/DiagnosticWrapper';
 
 export default async function CourseDetailPage({ params }: { params: { id: string } }) {
   let resource;
@@ -82,15 +83,7 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
 
         {/* Sidebar */}
         <div className="space-y-6">
-          <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 shadow-sm">
-            <h3 className="text-xl font-bold mb-2 text-blue-900">Diagnostic Check</h3>
-            <p className="text-sm text-blue-800 mb-6 leading-relaxed">
-              Not sure if you need this? Take a quick diagnostic to assess your current knowledge level and see if you can skip ahead.
-            </p>
-            <button className="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors shadow-sm">
-              Take Diagnostic
-            </button>
-          </div>
+          <DiagnosticWrapper skillsTaught={(resource.skillsTaught as string[]) || []} />
 
           <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm">
             <h3 className="text-xl font-bold mb-2 text-gray-900">Alternative Paths</h3>

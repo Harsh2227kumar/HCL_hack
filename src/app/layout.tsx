@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: 'Phase 4 Adaptive Learning App',
 };
 
+import FloatingAdvisor from '@/components/chat/FloatingAdvisor';
+
 export default function RootLayout({
   children,
 }: {
@@ -36,6 +38,7 @@ export default function RootLayout({
         <main className="flex-1 flex flex-col">
           {children}
         </main>
+        <FloatingAdvisor />
       </body>
     </html>
   );
