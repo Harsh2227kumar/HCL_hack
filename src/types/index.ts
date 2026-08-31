@@ -91,10 +91,22 @@ export interface Diagnostic {
   difficulty: number;
 }
 
+export interface SkillDependency {
+  id?: string;
+  skillName: string;
+  dependsOnSkillName: string;
+}
+
+export interface GoalTemplate {
+  id: string;
+  goalName: string;
+  requiredSkills: Array<{ skill: string; min_level: number }> | any;
+}
+
 export interface ProgressUpdate {
   userId: string;
   resourceId: string;
-  eventType: 'started' | 'completed' | 'too_easy' | 'too_hard' | 'skipped' | 'diagnostic_taken';
+  eventType: 'started' | 'completed' | 'too_easy' | 'too_hard' | 'skipped' | 'diagnostic_taken' | 'goal_change';
   score?: number;
   timestamp: Date;
 }
@@ -104,3 +116,4 @@ export interface GoalChangeRequest {
   newGoal: string;
   newGoalTemplateId?: string;
 }
+

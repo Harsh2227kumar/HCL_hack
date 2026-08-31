@@ -6,21 +6,26 @@ import DecisionTraceModal from './DecisionTraceModal';
 interface Resource {
   id: string;
   title: string;
-  type: string;
-  difficulty: string;
-  duration: number;
+  type?: string;
+  difficulty?: string | number;
+  duration?: number;
+  durationHours?: number | null;
 }
 
 interface ResourceCardProps {
   resource: Resource;
-  status: string;
+  status?: string;
   reason?: string;
   trace?: any;
 }
 
-export default function ResourceCard({ resource, status, reason, trace }: ResourceCardProps) {
+export default function ResourceCard({ resource, status = 'pending', reason, trace }: ResourceCardProps) {
   const [showReason, setShowReason] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const displayDuration = resource.durationHours 
+    ? `${resource.durationHours} hrs` 
+    : (resource.duration ? `${resource.duration} mins` : 'Self-paced');
 
   return (
     <div className="border rounded-lg p-4 shadow-sm bg-white text-black">
@@ -28,7 +33,7 @@ export default function ResourceCard({ resource, status, reason, trace }: Resour
         <div>
           <h3 className="text-lg font-semibold">{resource.title}</h3>
           <p className="text-sm text-gray-500">
-            {resource.type} • {resource.difficulty} • {resource.duration} mins
+            {resource.type || 'Resource'} • Level {resource.difficulty ?? 1} • {displayDuration}
           </p>
         </div>
         <ProgressToggle resourceId={resource.id} currentStatus={status} />

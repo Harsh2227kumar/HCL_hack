@@ -30,7 +30,7 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
             Difficulty: {resource.difficulty}
           </span>
           <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full font-medium">
-            Duration: {resource.duration} mins
+            Duration: {resource.durationHours ? `${resource.durationHours} hrs` : 'Self-paced'}
           </span>
         </div>
       </header>

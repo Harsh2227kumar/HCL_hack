@@ -14,7 +14,7 @@ export interface PathwayMetrics {
 export function calculatePathwayMetrics(
   phases: PathPhase[],
   readinessBefore: number,
-  weeklyHours: number,
+  weeklyHours: number | null | undefined,
   resourceMap: Map<string, Resource>
 ): PathwayMetrics {
   let totalHours = 0;
@@ -30,7 +30,8 @@ export function calculatePathwayMetrics(
     }
   }
 
-  const estimatedWeeks = weeklyHours > 0 ? Math.ceil(totalHours / weeklyHours) : 0;
+  const hoursPerWeek = (weeklyHours && weeklyHours > 0) ? weeklyHours : 10;
+  const estimatedWeeks = Math.ceil(totalHours / hoursPerWeek);
   const readinessAfter = 1.0; // By definition, completing the path meets all required skills
   const readinessImprovement = Number(((readinessAfter - readinessBefore) * 100).toFixed(1));
 

@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
     const evidence = await prisma.skillEvidence.findMany({
       where: { userId, skillName },
-      orderBy: { createdAt: 'desc' }
+      orderBy: { timestamp: 'desc' }
     });
 
     return NextResponse.json({ evidence });
