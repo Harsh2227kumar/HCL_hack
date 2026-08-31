@@ -110,7 +110,7 @@ export default function DiagnosticModal({ skillName, userId, onClose, onComplete
                   </p>
                   <div className="space-y-3 pl-9">
                     {q.options.map((opt: string, j: number) => (
-                      <label key={j} className={\`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all \${answers[q.id] === opt ? 'bg-indigo-50 border-indigo-300 ring-1 ring-indigo-500' : 'bg-white border-gray-200 hover:border-indigo-200 hover:bg-gray-50'}\`}>
+                      <label key={j} className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all ${answers[q.id] === opt ? 'bg-indigo-50 border-indigo-300 ring-1 ring-indigo-500' : 'bg-white border-gray-200 hover:border-indigo-200 hover:bg-gray-50'}`}>
                         <input 
                           type="radio" 
                           name={q.id} 

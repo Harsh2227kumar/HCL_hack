@@ -54,13 +54,13 @@ export default function FloatingAdvisor() {
       {/* Floating Button */}
       <button 
         onClick={() => setIsOpen(true)}
-        className={\`fixed bottom-6 right-6 p-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-2xl hover:shadow-indigo-500/50 transition-all duration-300 transform hover:scale-110 z-40 \${isOpen ? 'opacity-0 scale-0 pointer-events-none' : 'opacity-100 scale-100'}\`}
+        className={`fixed bottom-6 right-6 p-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-2xl hover:shadow-indigo-500/50 transition-all duration-300 transform hover:scale-110 z-40 ${isOpen ? 'opacity-0 scale-0 pointer-events-none' : 'opacity-100 scale-100'}`}
       >
         <MessageCircle size={28} />
       </button>
 
       {/* Chat Window */}
-      <div className={\`fixed bottom-6 right-6 w-96 h-[32rem] bg-white/80 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl flex flex-col z-50 transition-all duration-300 transform origin-bottom-right \${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}\`}>
+      <div className={`fixed bottom-6 right-6 w-96 h-[32rem] bg-white/80 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl flex flex-col z-50 transition-all duration-300 transform origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}>
         {/* Header */}
         <div className="flex justify-between items-center p-4 border-b border-gray-200/50 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-t-2xl">
           <div className="flex items-center gap-2">
@@ -83,8 +83,8 @@ export default function FloatingAdvisor() {
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {messages.map((msg, idx) => (
-             <div key={idx} className={\`flex \${msg.role === 'user' ? 'justify-end' : 'justify-start'}\`}>
-               <div className={\`max-w-[85%] rounded-2xl p-3 shadow-sm \${msg.role === 'user' ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-br-none' : 'bg-white border border-gray-100 text-gray-800 rounded-bl-none'}\`}>
+             <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+               <div className={`max-w-[85%] rounded-2xl p-3 shadow-sm ${msg.role === 'user' ? 'bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-br-none' : 'bg-white border border-gray-100 text-gray-800 rounded-bl-none'}`}>
                   <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
                </div>
              </div>
